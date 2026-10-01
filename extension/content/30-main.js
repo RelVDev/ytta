@@ -7,7 +7,9 @@
   let scanTimer = null;
 
   function isRespondentPage() {
-    return location.pathname.includes("/forms/") && /\/viewform\/?$/.test(location.pathname) && !location.pathname.includes("/edit");
+    return location.pathname.includes("/forms/")
+      && /\/(?:viewform|formResponse)\/?$/.test(location.pathname)
+      && !location.pathname.includes("/edit");
   }
 
   async function handleAsk(control) {
