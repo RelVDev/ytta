@@ -76,20 +76,39 @@
     return error.message || "Koneksi gagal, coba lagi.";
   }
 
+  function removeControl(control) {
+    if (control.requestId) {
+      const requestId = control.requestId;
+      const shouldSendCancel = control.sentRequest === true;
+      control.requestId = null;
+      control.sentRequest = false;
+      if (shouldSendCancel) sendMessage({ type: "CANCEL", requestId }).catch(() => {});
+    }
+    control.host.remove();
+    control.removePanel();
+  }
+
   async function scan() {
     if (!isRespondentPage()) return;
     const settings = await getSettings();
     const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)];
     for (const block of blocks) {
+      const question = global.FormHelperParser.parseQuestion(block);
+      const fingerprint = question ? JSON.stringify(question) : "";
       const existing = controls.get(block);
       if (existing) {
-        if (!settings.enabled && existing.host.isConnected) { existing.host.remove(); existing.removePanel(); controls.delete(block); }
-        else if (existing.host.isConnected) continue;
-        else { existing.removePanel(); controls.delete(block); }
+        if (!settings.enabled) {
+          removeControl(existing);
+          controls.delete(block);
+          continue;
+        }
+        if (existing.host.isConnected && existing.questionFingerprint === fingerprint) continue;
+        removeControl(existing);
+        controls.delete(block);
       }
-      if (!settings.enabled || block.closest(".fh-ui-host, .fh-question-host, .fh-answer-host")) continue;
-      if (!global.FormHelperParser.parseQuestion(block)) continue;
+      if (!settings.enabled || !question || block.closest(".fh-ui-host, .fh-question-host, .fh-answer-host")) continue;
       const control = global.FormHelperUI.questionControl(block, handleAsk);
+      control.questionFingerprint = fingerprint;
       controls.set(block, control);
     }
   }
@@ -102,13 +121,27 @@
   function startObserver() {
     const target = document.body;
     observer = new MutationObserver((records) => {
-      const external = records.some((record) => [...record.addedNodes].some((node) => {
-        if (node.nodeType !== Node.ELEMENT_NODE) return false;
-        return !node.classList.contains("fh-question-host") && !node.classList.contains("fh-answer-host") && node.id !== "fh-settings-host";
-      }));
+      const external = records.some((record) => {
+        if (record.type === "childList") {
+          const changedNodes = [...record.addedNodes, ...record.removedNodes];
+          return changedNodes.some((node) => {
+            if (node.nodeType !== Node.ELEMENT_NODE) return true;
+            return !node.matches(".fh-ui-host, .fh-question-host, .fh-answer-host")
+              && !node.closest(".fh-ui-host, .fh-question-host, .fh-answer-host");
+          });
+        }
+        const targetNode = record.target.nodeType === Node.ELEMENT_NODE ? record.target : record.target.parentElement;
+        return !targetNode?.closest(".fh-ui-host, .fh-question-host, .fh-answer-host");
+      });
       if (external) scheduleScan();
     });
-    observer.observe(target, { childList: true, subtree: true });
+    observer.observe(target, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["aria-hidden", "aria-label", "class", "data-params", "role", "style"],
+      characterData: true
+    });
   }
 
   function refresh() { scheduleScan(); }
