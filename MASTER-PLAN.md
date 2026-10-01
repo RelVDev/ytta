@@ -1,8 +1,8 @@
-# MASTER PLAN — Form Helper (Ekstensi Mobile + API Vercel + Gemini)
+# MASTER PLAN — Form Helper (Ekstensi Mobile + API Vercel + Harbor AI)
 
 > Dokumen ini adalah **sumber kebenaran tunggal** untuk Codex.
 > Baca seluruh dokumen sebelum menulis kode. Kerjakan **per fase**, centang checklist, jangan loncat fase.
-> Dokumentasi API Gemini dan Harbor Token (sebagai API UTAMA) ada di **`API-DOCS.txt`** (disediakan pemilik proyek). Jika ada konflik antara asumsi di dokumen ini dan `API-DOCS.md` soal pemanggilan Gemini, **`API-DOCS.txt` yang menang**.
+> Dokumentasi API Gemini dan Token Harbor (provider utama) ada di **`API-DOCS.txt`** (disediakan pemilik proyek). Untuk detail yang belum lengkap, gunakan dokumentasi resmi provider sebagai pelengkap.
 
 ---
 
@@ -12,7 +12,7 @@ Ekstensi browser untuk ponsel. Saat pengguna membuka Google Form, ekstensi aktif
 
 1. Ekstensi membaca pertanyaan itu (teks, tipe, pilihan jawaban, gambar bila ada).
 2. Data dikirim ke **API di Vercel** (milik kita).
-3. API memanggil **Gemini (Google AI Studio)** dan mengembalikan jawaban terstruktur.
+3. API mencoba **Harbor AI** dan beralih ke **Gemini AI Studio** jika Harbor mengalami kegagalan sementara.
 4. Jawaban ditampilkan **tepat di bawah soal**, target ±3 detik, contoh: `D. CH3COOH`.
 
 Ekstensi **tidak mengisi form otomatis**. Ia hanya menampilkan jawaban saran.
@@ -21,8 +21,8 @@ Ekstensi **tidak mengisi form otomatis**. Ia hanya menampilkan jawaban saran.
 
 - Alat ini ditujukan untuk **belajar, latihan soal, dan membahas kuis**.
 - **Dilarang** menambahkan fitur penyamaran atau anti-deteksi (menyembunyikan dari pengawas/proctor, memalsukan fokus tab, menghapus jejak, dsb.).
-- Tombol harus berupa **tombol kecil yang terlihat**, bisa dimatikan lewat popup. Bukan elemen yang disembunyikan.
-- Tampilkan catatan singkat di popup: *"Gunakan sesuai aturan dosen/penyelenggara ujian."*
+- Tombol saran harus kecil dan terlihat, serta dapat dimatikan lewat panel pengaturan di halaman Google Forms. Tidak ada popup toolbar di Android.
+- Panel menampilkan catatan: *"Gunakan sesuai aturan dosen/penyelenggara ujian."*
 
 ---
 
@@ -65,26 +65,26 @@ Pemilik mengembangkan dari **ponsel (Termux)**, jadi:
 │   └─ Content Script                            │
 │        • parser: baca pertanyaan di DOM        │
 │        • ui: tombol + panel jawaban            │
+│        • panel pengaturan inline (tanpa popup) │
 │        • kirim pesan ke background             │
 │ Background (event page / service worker)       │
 │   • fetch gambar → base64 (bypass CORS)        │
 │   • POST ke Vercel API (bebas CSP halaman)     │
-│ Popup: toggle on/off, Base URL, token, bahasa  │
 └───────────────────────┬────────────────────────┘
                         │ HTTPS  POST /api/answer
 ┌───────────────────────▼────────────────────────┐
 │ Vercel Serverless (Node)                       │
 │   validate → rate-limit → build prompt         │
-│   → Gemini (structured JSON) → normalize       │
+│   → Harbor utama → Gemini fallback → normalize │
 └───────────────────────┬────────────────────────┘
                         ▼
-              Google AI Studio (Gemini)
+          Token Harbor / Google AI Studio
 ```
 
 **Kenapa lewat background, bukan fetch langsung dari content script?**
 CSP halaman Google Forms dapat memblokir request dari content script ke domain luar (terutama di Firefox). Background punya `host_permissions` sendiri, jadi aman dari CSP halaman dan CORS. Background juga dipakai untuk mengambil gambar dari `googleusercontent.com`.
 
-**Aturan keamanan inti:** `GEMINI_API_KEY` **hanya** ada di environment Vercel. Tidak boleh ada di kode ekstensi, repo, atau log.
+**Aturan keamanan inti:** `TOKENHARBOR_API_KEY` dan `GEMINI_API_KEY` hanya disimpan sebagai environment Vercel. Jangan masukkan keduanya ke kode ekstensi, source yang dilacak Git, atau log.
 
 ---
 
@@ -93,7 +93,7 @@ CSP halaman Google Forms dapat memblokir request dari content script ke domain l
 ```
 form-helper/
 ├─ MASTER-PLAN.md
-├─ API-DOCS.md                 # dari pemilik, jangan diubah
+├─ API-DOCS.txt                # referensi dari pemilik, jangan diubah
 ├─ README.md                   # cara setup & deploy singkat
 ├─ package.json
 ├─ vercel.json
@@ -107,7 +107,7 @@ form-helper/
 │  ├─ auth.js                  # cek X-Client-Token
 │  ├─ validate.js              # validasi payload
 │  ├─ prompt.js                # susun system & user prompt per tipe soal
-│  ├─ gemini.js                # pemanggil Gemini (ikuti API-DOCS.md)
+│  ├─ providers.js             # Harbor utama + Gemini fallback
 │  ├─ normalize.js             # rapikan output → format "D. CH3COOH"
 │  ├─ images.js                # fallback fetch gambar dari URL (allowlist)
 │  └─ ratelimit.js
@@ -120,11 +120,7 @@ form-helper/
 │  │  ├─ 20-ui.js              # tombol & panel jawaban
 │  │  ├─ 30-main.js            # observer, orkestrasi
 │  │  └─ styles.css
-│  ├─ popup/
-│  │  ├─ popup.html
-│  │  ├─ popup.css
-│  │  └─ popup.js
-│  └─ icons/ (16, 32, 48, 128 px)
+│  └─ icons/                    # ikon ekstensi (opsional)
 └─ tests/
    ├─ fixtures/                # potongan HTML Google Forms hasil simpan manual
    ├─ parser.test.js
@@ -169,6 +165,10 @@ X-Client-Token: <token statis dari env CLIENT_TOKEN>
 ```json
 {
   "lang": "id",
+  "models": {
+    "harbor": "qwen3.8-flash:free",
+    "gemini": "gemini-3.8-flash"
+  },
   "question": {
     "id": "q_3",
     "type": "multiple_choice",
@@ -196,6 +196,7 @@ Aturan:
 - `scale`: `{ "min": 1, "max": 5, "minLabel": "...", "maxLabel": "..." }` untuk `linear_scale`.
 - `rows` / `columns`: array string untuk grid.
 - `images[]`: pakai `base64` bila ekstensi berhasil mengambil gambar; jika tidak, kirim `url` saja dan server mencoba mengambilnya (lihat §8).
+- `models.harbor` dan `models.gemini` opsional; jika diberikan harus cocok dengan allowlist §7. Harbor tetap provider pertama.
 - Batas: payload ≤ **3,5 MB** total (batas body Vercel ±4,5 MB), maksimal **4 gambar** per soal.
 
 **Response sukses (200)**
@@ -217,6 +218,7 @@ Aturan:
 
 Untuk `short_answer`/`paragraph`: `keys: []`, `texts: ["..."]`, `display` = jawaban.
 Untuk grid: `rows: [{ "row": "...", "picks": ["..."] }]`, `display` = ringkasan multi-baris.
+Response sukses juga mencantumkan `provider` dan `model`; `warning: "IMAGE_UNAVAILABLE"` muncul jika ada gambar yang tidak terbaca.
 
 **Response error**
 ```json
@@ -230,40 +232,41 @@ Untuk grid: `rows: [{ "row": "...", "picks": ["..."] }]`, `display` = ringkasan 
 | `PAYLOAD_TOO_LARGE` | 413 | Terlalu besar |
 | `UNSUPPORTED_TYPE` | 422 | Tipe tidak didukung |
 | `RATE_LIMITED` | 429 | Kena batas |
-| `MODEL_ERROR` | 502 | Gemini gagal / output tak valid |
+| `MODEL_ERROR` | 502 | Provider gagal / output tak valid |
 | `TIMEOUT` | 504 | Melebihi batas waktu |
 | `INTERNAL` | 500 | Lainnya |
 
 ### `GET /api/health`
-Mengembalikan `{ "ok": true, "time": "<ISO>" }`. Dipakai tombol "Tes koneksi" di popup.
+Mengembalikan `{ "ok": true, "time": "<ISO>", "providers": { "harbor": true, "gemini": true } }`. Dipakai tombol "Tes koneksi" di panel pengaturan.
 
 ### CORS
 Background tidak terkena CORS, tetapi tetap pasang header CORS yang rapi (`Access-Control-Allow-Origin` sesuai env `ALLOWED_ORIGINS`, tangani `OPTIONS`) agar bisa dites dari browser biasa.
 
 ---
 
-## 7. Integrasi Gemini
+## 7. Integrasi Provider dan Model
 
-Ikuti **`API-DOCS.md`** untuk: nama endpoint, format request, cara kirim gambar (`inlineData`), structured output, parameter `generationConfig`, dan nama model.
+Token Harbor memakai endpoint OpenAI-compatible `/v1/chat/completions` di `https://tokenharbor.ai`. Gemini memakai Google AI Interactions API dengan JSON terstruktur. `API-DOCS.txt` menjadi referensi awal; untuk field request Gemini yang lebih baru, verifikasi lewat dokumentasi resmi Google.
 
-Ketentuan dari proyek ini:
+Model yang tersedia untuk pilihan manual:
 
-- **Nama model dari env** `GEMINI_MODEL` (jangan hardcode). Pilih model **cepat** (kelas "flash") karena target respons ±3 detik. Nilai default mengikuti `API-DOCS.md`.
-- **Structured output (JSON)** dengan `responseMimeType: "application/json"` dan `responseSchema`, agar tidak perlu parsing teks bebas. Skema minimal:
-  ```json
-  {
-    "keys":        ["string"],
-    "texts":       ["string"],
-    "rows":        [{ "row": "string", "picks": ["string"] }],
-    "confidence":  "number",
-    "explanation": "string"
-  }
-  ```
-- **`temperature` rendah** (0–0.2) agar konsisten.
-- **Batasi "thinking"** / token berpikir seminimal mungkin sesuai opsi yang ada di `API-DOCS.md` agar cepat. Untuk soal hitungan/penalaran kompleks boleh dinaikkan lewat env `GEMINI_THINKING_BUDGET`.
-- **`maxOutputTokens`** kecil (±300) karena jawaban pendek.
-- **Timeout** server 12 dtk untuk panggilan Gemini; set `maxDuration` fungsi di `vercel.json` ke 30 dtk. Satu kali **retry** hanya untuk 429/5xx dengan jeda singkat, jangan retry bila total waktu sudah > 8 dtk.
-- **Normalisasi** (`normalize.js`): pastikan `keys` hanya berisi huruf yang benar-benar ada di `options`. Jika model mengembalikan teks opsi tanpa huruf, petakan balik ke huruf. Bentuk `display` di server, bukan di model: `"{KEY}. {TEXT}"`, dipisah `"; "` untuk beberapa jawaban.
+| Provider | ID model |
+|---|---|
+| Harbor utama | `qwen3.8-flash:free` |
+| Harbor | `deepseek-v4.1-flash:free` |
+| Harbor | `mimo-v2.6-flash:free` |
+| Gemini fallback | `gemini-3.5-flash-lite` |
+| Gemini fallback | `gemini-3.6-flash` |
+| Gemini fallback | `gemini-3.8-flash` |
+
+Ketentuan:
+
+- Environment `HARBOR_MODEL` dan `GEMINI_MODEL` menjadi default. Ekstensi mengirim pilihan model manual; backend menerima hanya ID allowlist di atas.
+- Route MiMo `mimo-v2.6-flash:free` saat ini hanya menerima teks. Jika model itu dipilih untuk soal bergambar, Harbor dicoba tanpa gambar dan UI memberi peringatan; fallback Gemini tetap menerima gambar.
+- Harbor selalu dicoba lebih dulu. Hanya kegagalan jaringan, timeout, HTTP 408/429, dan HTTP 5xx yang memicu fallback Gemini. Error autentikasi dan payload tidak valid langsung dilaporkan.
+- Harbor mengirim prompt untuk menghasilkan objek JSON. Gemini memakai `response_format` JSON schema. Kedua respons dinormalisasi di server sebelum dikirim ke ekstensi.
+- Gunakan temperatur rendah, output pendek, dan thinking minimal di Gemini. Retry Gemini paling banyak satu kali untuk 429/5xx.
+- `normalize.js` hanya mengizinkan key yang ada di opsi soal. Server membentuk `display`, misalnya `D. CH3COOH`, bukan mengambil display bebas dari model.
 
 ### Prompt (garis besar, tulis di `lib/prompt.js`)
 
@@ -312,14 +315,14 @@ Deteksi gambar di parser:
   "name": "Form Helper",
   "version": "0.1.0",
   "description": "Saran jawaban untuk soal di Google Forms (untuk belajar).",
-  "permissions": ["storage"],
+  "permissions": ["storage", "permissions"],
   "host_permissions": [
     "https://docs.google.com/forms/*",
     "https://*.googleusercontent.com/*",
     "https://*.ggpht.com/*",
-    "https://*.gstatic.com/*",
-    "https://<NAMA-PROYEK>.vercel.app/*"
+    "https://*.gstatic.com/*"
   ],
+  "optional_host_permissions": ["https://*/*"],
   "background": {
     "service_worker": "background.js",
     "scripts": ["background.js"]
@@ -330,19 +333,24 @@ Deteksi gambar di parser:
     "css": ["content/styles.css"],
     "run_at": "document_idle"
   }],
-  "action": { "default_title": "Form Helper", "default_popup": "popup/popup.html" },
+  "action": { "default_title": "Form Helper — pengaturan tersedia di halaman Forms" },
   "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
   "browser_specific_settings": {
-    "gecko": { "id": "form-helper@<domain-pemilik>", "strict_min_version": "121.0" }
+    "gecko": {
+      "id": "form-helper@ytta.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["websiteContent"] }
+    },
+    "gecko_android": { "strict_min_version": "142.0" }
   }
 }
 ```
 
-Catatan: base URL API bisa diubah di popup; jika domain Vercel diganti, `host_permissions` ikut diperbarui. Cukup satu domain tetap.
+Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesuai Base URL API yang dimasukkan pengguna.
 
 ### 9.2 Content script
 
-**Aktivasi:** hanya pada halaman **respondent** (`/forms/d/e/.../viewform`), bukan editor. Jika URL mengandung `/edit`, jangan lakukan apa pun. Jika toggle "aktif" di popup mati, jangan tampilkan tombol.
+**Aktivasi:** hanya pada halaman **respondent** (`/forms/d/e/.../viewform`), bukan editor. Jika URL mengandung `/edit`, jangan lakukan apa pun. Saat toggle saran mati, hilangkan tombol per soal; tombol ⚙ pengaturan tetap terlihat.
 
 **Orkestrasi (`30-main.js`):**
 1. Ambil pengaturan (`enabled`, `lang`) dari `storage.local`.
@@ -355,8 +363,8 @@ Catatan: base URL API bisa diubah di popup; jika domain Vercel diganti, `host_pe
 - Teks soal: elemen `[role="heading"]` pertama di blok; bersihkan tanda `*` wajib dan spasi ganda.
 - Opsi radio/checkbox: ambil label dari `aria-label`, `data-value`, atau teks anak. Beri huruf A, B, C... berurutan.
 - Opsi "Lainnya/Other": sertakan sebagai opsi bertanda `isOther: true`; jangan dipilih sebagai jawaban kecuali tidak ada yang cocok.
-- Dropdown: baca daftar `[role="option"]` (abaikan opsi kosong "Pilih"). Jika daftar belum dirender sampai dibuka, buka dropdown secara programatik sebentar untuk membaca, lalu tutup lagi tanpa mengubah pilihan; jika gagal, kirim `options: []` dan biarkan UI menampilkan peringatan.
-- Linear scale: ambil `min`, `max`, dan label ujung.
+- Dropdown: baca daftar `[role="option"]` (abaikan opsi kosong "Pilih"). Jika daftar belum dirender, jangan ubah kontrol form; kirim `options: []` dan tampilkan peringatan bahwa pilihan belum terbaca.
+- Linear scale: ambil `min`, `max`, dan label ujung; jawaban tampil sebagai angka/label tanpa huruf opsi.
 - Grid: baris dari label baris, kolom dari header tabel.
 - **Wajib ada fixture test** untuk setiap tipe (lihat §12).
 
@@ -377,32 +385,35 @@ Catatan: base URL API bisa diubah di popup; jika domain Vercel diganti, `host_pe
 - Listener `runtime.onMessage` untuk `{type: "ANSWER"}`.
 - Langkah: ambil pengaturan (`apiBase`, `token`) → ambil gambar jadi base64 (§8) → `fetch(apiBase + "/api/answer")` dengan `AbortController` timeout 20 dtk → kembalikan JSON ke content script.
 - Retry otomatis 1× hanya untuk error jaringan, bukan untuk 4xx.
-- Pesan `{type: "PING"}` untuk tes koneksi dari popup.
+- Pesan `{type: "PING"}` untuk tes koneksi dari panel pengaturan.
 - Jangan menyimpan teks soal ke storage atau log.
 
-### 9.4 Popup
+### 9.4 Panel Pengaturan di Halaman
 
-- Toggle **Aktifkan ekstensi**
-- Input **Base URL API** (default dari konstanta), input **Token** (type password)
-- Pilihan **Bahasa jawaban**: Otomatis / Indonesia / English
-- Tombol **Tes koneksi** (panggil `/api/health` lalu uji token)
-- Teks catatan penggunaan (lihat §0)
-- Simpan ke `storage.local`
+- Tidak ada popup toolbar. Tombol ⚙ yang terlihat pada halaman respondent membuka panel Shadow DOM.
+- Panel mengatur toggle saran, Base URL API, token klien, bahasa, model Harbor utama, dan model Gemini cadangan.
+- Tombol "Tes koneksi" memanggil `/api/health`; simpanan konfigurasi berada di `storage.local`.
+- Pengguna memberi izin host API HTTPS yang dimasukkan. Tombol pengaturan tetap tampil saat saran dimatikan agar fitur dapat diaktifkan kembali.
+- Tampilkan catatan penggunaan sesuai §0.
 
 ---
 
 ## 10. Spesifikasi Backend (Vercel)
 
-- Runtime Node (LTS), fungsi serverless di `/api`. Gunakan `fetch` bawaan Node; **tanpa SDK berat** bila `API-DOCS.md` cukup dengan REST langsung (lebih cepat cold-start).
+- Runtime Node (LTS), fungsi serverless di `/api`. Gunakan `fetch` bawaan Node tanpa SDK provider runtime.
 - `vercel.json`: set `maxDuration` 30 untuk `api/answer.js`, dan header keamanan dasar.
 - **Env vars** (`.env.example`):
   ```
+  TOKENHARBOR_API_KEY=
   GEMINI_API_KEY=
-  GEMINI_MODEL=
+  HARBOR_MODEL=qwen3.8-flash:free
+  GEMINI_MODEL=gemini-3.8-flash
   GEMINI_THINKING_BUDGET=0
   CLIENT_TOKEN=
   ALLOWED_ORIGINS=
   RATE_LIMIT_PER_MIN=20
+  UPSTASH_REDIS_REST_URL=
+  UPSTASH_REDIS_REST_TOKEN=
   LOG_LEVEL=info
   ```
 - **Auth:** bandingkan `X-Client-Token` dengan `CLIENT_TOKEN` memakai `crypto.timingSafeEqual`. Catat bahwa token di ekstensi bisa diekstrak; ia hanya penghalang ringan, **bukan** pengaman utama. Pengaman utama adalah rate limit dan batas ukuran.
@@ -420,7 +431,7 @@ Catatan: base URL API bisa diubah di popup; jika domain Vercel diganti, `host_pe
 | Parse + kirim dari ekstensi | < 150 ms |
 | Ambil gambar (jika ada) | < 500 ms |
 | Vercel (cold start + proses) | < 400 ms |
-| Gemini | < 1,8 dtk |
+| Harbor atau Gemini fallback | < 1,8 dtk |
 | Render | < 100 ms |
 
 Taktik:
@@ -447,57 +458,57 @@ Taktik:
 ## 13. Fase Pengerjaan
 
 ### Fase 0 — Fondasi
-- [ ] Inisialisasi repo, `package.json`, `.gitignore` (abaikan `.env`, `node_modules`, `*.xpi`, `web-ext-artifacts/`), `.env.example`
-- [ ] Baca `API-DOCS.md`, ringkas hal penting di bagian atas `README.md`
+- [x] Inisialisasi repo, `package.json`, `.gitignore` (abaikan `.env`, `node_modules`, `*.xpi`, `web-ext-artifacts/`), `.env.example`
+- [x] Baca `API-DOCS.txt`, ringkas hal penting di bagian atas `README.md`
 - [ ] Buat Google Form uji (jelaskan tipe soal apa saja di README)
 
 **Selesai bila:** repo bisa di-clone dan `npm install` sukses di Termux.
 
 ### Fase 1 — API minimum (teks saja)
-- [ ] `api/health.js`, `lib/cors.js`, `lib/auth.js`, `lib/validate.js`
-- [ ] `lib/gemini.js` sesuai `API-DOCS.md` (teks saja, structured output)
-- [ ] `lib/prompt.js` untuk `multiple_choice`, `checkbox`, `dropdown`, `short_answer`, `paragraph`
-- [ ] `lib/normalize.js` + unit test
-- [ ] `api/answer.js` end-to-end
+- [x] `api/health.js`, `lib/cors.js`, `lib/auth.js`, `lib/validate.js`
+- [x] `lib/providers.js` untuk Harbor utama + Gemini fallback
+- [x] `lib/prompt.js` untuk tipe soal yang didukung
+- [x] `lib/normalize.js` + unit test
+- [x] `api/answer.js` end-to-end
 - [ ] Deploy ke Vercel, isi env, jalankan `scripts/smoke.js`
 
 **Selesai bila:** soal contoh `CH3COOH` menghasilkan `"display": "D. CH3COOH"` dalam < 3 dtk (setelah warm).
 
 ### Fase 2 — Ekstensi inti
-- [ ] `manifest.json`, `background.js`, popup (pengaturan + tes koneksi)
-- [ ] `10-parser.js` untuk pilihan ganda, checkbox, dropdown, short answer, paragraph + fixture & test
-- [ ] `20-ui.js` (Shadow DOM): tombol, spinner, panel jawaban
-- [ ] `30-main.js`: pindai, observer, orkestrasi
+- [x] `manifest.json`, `background.js`, panel pengaturan inline (tes koneksi)
+- [x] `10-parser.js` untuk tipe soal + fixture & test
+- [x] `20-ui.js` (Shadow DOM): tombol, status proses, panel jawaban
+- [x] `30-main.js`: pindai, observer, orkestrasi
 
 **Selesai bila:** di Google Form uji, tap tombol → jawaban muncul di bawah soal untuk 5 tipe di atas.
 
 ### Fase 3 — Gambar
-- [ ] Deteksi gambar soal dan opsi di parser
-- [ ] Background: fetch gambar → base64, batas ukuran, fallback URL
-- [ ] API: dukung `inlineData` Gemini, `lib/images.js` dengan allowlist
-- [ ] Peringatan `IMAGE_UNAVAILABLE` di UI
+- [x] Deteksi gambar soal dan opsi di parser
+- [x] Background: fetch gambar → base64, batas ukuran, fallback URL
+- [x] API: dukung input gambar inline provider, `lib/images.js` dengan allowlist
+- [x] Peringatan `IMAGE_UNAVAILABLE` di UI
 
 **Selesai bila:** soal dengan gambar dan opsi bergambar terjawab benar di form uji.
 
 ### Fase 4 — Tipe tambahan
-- [ ] Linear scale
-- [ ] Grid pilihan ganda & grid kotak centang
-- [ ] Tanggal & waktu
-- [ ] Penanganan "tidak didukung" untuk unggah file
+- [x] Linear scale
+- [x] Grid pilihan ganda & grid kotak centang
+- [x] Tanggal & waktu
+- [x] Penanganan "tidak didukung" untuk unggah file
 
 ### Fase 5 — Ketahanan & polish
-- [ ] Rate limit (Upstash/KV bila ada), timeout, retry terukur
-- [ ] Pesan galat lengkap, tombol batal, regenerate, salin
-- [ ] Mode gelap, ukuran sentuh, tes di layar kecil
-- [ ] Pastikan tidak ada kebocoran data ke log
+- [x] Rate limit (Upstash/KV bila ada), timeout, retry terukur
+- [x] Pesan galat, tombol batal, regenerate, salin
+- [x] Mode gelap dan ukuran sentuh; tes layar kecil masih menunggu perangkat
+- [x] Logging hanya metadata
 - [ ] Optimasi latensi sesuai §11
 
 ### Fase 6 — Distribusi ke Firefox Android
-- [ ] Install `web-ext` (`npm i -D web-ext`), jalankan `web-ext lint` di folder `extension/`
+- [x] Tambahkan `web-ext` sebagai dev dependency dan jalankan `web-ext lint` di folder `extension/`
 - [ ] Daftar akun developer AMO (gratis), buat API key/secret
 - [ ] `web-ext sign --channel=unlisted --source-dir=extension --api-key=... --api-secret=...`
 - [ ] Install `.xpi` hasil sign di Firefox Android (buka file `.xpi` dari penyimpanan)
-- [ ] Tulis panduan pemasangan singkat di README
+- [x] Tulis panduan pemasangan singkat di README
 - [ ] (Opsional) Cadangan untuk browser berbasis Chromium: zip folder `extension/` dan catat cara muat manual
 
 ---
@@ -514,7 +525,8 @@ Taktik:
 - [ ] Ekstensi tidak pernah mengubah/mengisi input form
 - [ ] API key tidak ada di repo/ekstensi/log; token salah → 401
 - [ ] Payload terlalu besar / host gambar di luar allowlist → ditolak
-- [ ] Toggle di popup benar-benar mematikan semua tombol
+- [ ] Toggle di panel pengaturan benar-benar mematikan tombol soal
+- [x] Panel meminta persetujuan pemrosesan teks/gambar soal dan manifest mendeklarasikan `websiteContent`
 - [ ] Tidak ada fitur penyamaran atau anti-deteksi (lihat §0)
 
 ---
@@ -523,7 +535,7 @@ Taktik:
 
 1. Kerjakan **satu fase per sesi**; di akhir fase, perbarui checklist di dokumen ini dan ringkas apa yang berubah di `README.md`.
 2. **Jangan** menambah dependency tanpa alasan tertulis di PR/commit. Pertahankan ekstensi bebas build.
-3. **Jangan** mengubah `API-DOCS.md`. Jika ada hal yang ambigu soal Gemini, tulis pertanyaannya di `README.md` bagian "Pertanyaan terbuka" dan pilih opsi paling aman.
+3. **Jangan** mengubah `API-DOCS.txt`. Jika ada hal yang ambigu soal provider, tulis pertanyaannya di `README.md` bagian "Pertanyaan terbuka" dan pilih opsi paling aman.
 4. Semua selector DOM Google Forms di satu tempat (`SELECTORS`), berkomentar jelas.
 5. Setiap fungsi parser harus teruji dengan fixture; jangan menulis parser tanpa fixture.
 6. Tulis komentar dan pesan UI dalam **Bahasa Indonesia**; nama variabel/fungsi dalam bahasa Inggris.
@@ -540,7 +552,7 @@ Taktik:
 | CSP/CORS memblokir request | Tidak ada jawaban | Semua request lewat background + `host_permissions` |
 | Gambar tidak bisa diambil | Jawaban kurang akurat | Fallback URL di server, peringatan di UI |
 | Latensi > 3 dtk | Pengalaman buruk | Model flash, thinking minimal, output pendek, spinner cepat |
-| Kuota/biaya Gemini membengkak | Layanan berhenti | Rate limit, batas ukuran, token klien, pantau di AI Studio |
+| Kuota Harbor/Gemini membengkak | Layanan berhenti | Rate limit, batas ukuran, token klien, pantau kuota masing-masing provider |
 | Token klien bocor | Penyalahgunaan API | Rate limit per IP, rotasi `CLIENT_TOKEN`, batas harian |
 | Firefox rilis menolak ekstensi tak ter-sign | Tidak bisa dipasang | Sign unlisted lewat AMO (Fase 6) |
 | Jawaban AI salah | Pengguna tertipu | Tampilkan confidence + penjelasan; ingatkan ini hanya saran |

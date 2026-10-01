@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Form Helper",
+  "version": "0.1.0",
+  "description": "Saran jawaban untuk membahas soal Google Forms saat belajar.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://docs.google.com/forms/*",
+    "https://*.googleusercontent.com/*",
+    "https://*.ggpht.com/*",
+    "https://*.gstatic.com/*"
+  ],
+  "optional_host_permissions": ["https://*/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://docs.google.com/forms/*"],
+    "js": ["content/00-utils.js", "content/10-parser.js", "content/20-ui.js", "content/30-main.js"],
+    "css": ["content/styles.css"],
+    "run_at": "document_idle"
+  }],
+  "action": { "default_title": "Form Helper — buka pengaturan di halaman Forms" },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "form-helper@ytta.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["websiteContent"] }
+    },
+    "gecko_android": { "strict_min_version": "142.0" }
+  }
+}
