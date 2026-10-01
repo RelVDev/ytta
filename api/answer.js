@@ -32,6 +32,11 @@ module.exports = async function answer(req, res) {
   }
   let questionType = "unknown";
   let provider = "none";
+  let stage = "validate";
+  let selectedModel = null;
+  let imageInputCount = 0;
+  let imageSentCount = 0;
+  let imagesUnavailable = false;
   try {
     const declaredLength = Number(req.headers && req.headers["content-length"] || 0);
     if (declaredLength > MAX_BODY_BYTES) throw new AppError("PAYLOAD_TOO_LARGE", MESSAGES.PAYLOAD_TOO_LARGE, 413);
@@ -39,7 +44,12 @@ module.exports = async function answer(req, res) {
     await enforceRateLimit(req);
     const payload = validatePayload(parseBody(req));
     questionType = payload.question.type;
+    selectedModel = payload.models.harbor;
+    imageInputCount = payload.question.images.length + payload.question.options.filter((option) => option.image).length;
+    stage = "prepare_images";
     const prepared = await prepareImages(payload.question, requestController.signal);
+    imageSentCount = prepared.images.length;
+    imagesUnavailable = prepared.unavailable;
     const args = {
       question: payload.question,
       lang: payload.lang,
@@ -48,27 +58,45 @@ module.exports = async function answer(req, res) {
     };
 
     let rawOutput;
-    let usedModel = payload.models.harbor;
+    let answer;
     const harborImageUnsupported = prepared.images.length > 0 && !HARBOR_IMAGE_MODELS.has(payload.models.harbor);
     try {
       provider = "harbor";
+      stage = "harbor";
       rawOutput = await callHarbor({
         ...args,
         images: harborImageUnsupported ? [] : prepared.images,
         imagesUnsupported: harborImageUnsupported,
         model: payload.models.harbor
       });
+      stage = "normalize_harbor";
+      answer = normalizeModelOutput(rawOutput, payload.question);
     } catch (error) {
-      if (!(error instanceof ProviderError) || !error.retryable) throw error;
+      const retryableFailure = (error instanceof ProviderError && error.retryable)
+        || (error instanceof AppError && error.code === "MODEL_ERROR");
+      if (!retryableFailure) throw error;
       if (payload.onlyHarbor) throw error;
       provider = "gemini";
-      usedModel = payload.models.gemini;
+      selectedModel = payload.models.gemini;
+      stage = "gemini";
       rawOutput = await callGemini({ ...args, model: payload.models.gemini });
+      stage = "normalize_gemini";
+      answer = normalizeModelOutput(rawOutput, payload.question);
     }
 
-    const answer = normalizeModelOutput(rawOutput, payload.question);
     const latencyMs = Date.now() - started;
-    console.info(JSON.stringify({ event: "answer", type: questionType, provider, latencyMs, status: "ok" }));
+    console.info(JSON.stringify({
+      event: "answer",
+      type: questionType,
+      provider,
+      model: selectedModel,
+      latencyMs,
+      status: "ok",
+      imageInputCount,
+      imageSentCount,
+      imagesUnavailable,
+      ...(harborImageUnsupported ? { imageUnsupportedByModel: true } : {})
+    }));
     return res.status(200).json({
       ok: true,
       type: questionType,
@@ -77,7 +105,7 @@ module.exports = async function answer(req, res) {
       explanation: answer.explanation,
       latencyMs,
       provider,
-      model: usedModel,
+      model: selectedModel,
       ...(prepared.unavailable || harborImageUnsupported ? { warning: "IMAGE_UNAVAILABLE" } : {})
     });
   } catch (error) {
@@ -89,7 +117,17 @@ module.exports = async function answer(req, res) {
       provider,
       latencyMs: Date.now() - started,
       status: "error",
-      code: error instanceof AppError ? error.code : error instanceof ProviderError && error.timeout ? "TIMEOUT" : "MODEL_ERROR"
+      code: error instanceof AppError ? error.code : error instanceof ProviderError && error.timeout ? "TIMEOUT" : "MODEL_ERROR",
+      stage,
+      ...(selectedModel ? { model: selectedModel } : {}),
+      ...(error instanceof ProviderError ? {
+        providerStatus: error.status || undefined,
+        providerRetryable: error.retryable,
+        reason: error.reason || undefined
+      } : error instanceof AppError && error.reason ? { reason: error.reason } : {}),
+      imageInputCount,
+      imageSentCount,
+      imagesUnavailable
     }));
     return res.status(result.status).json(result.body);
   }

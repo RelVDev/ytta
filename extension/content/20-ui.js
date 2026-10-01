@@ -294,7 +294,7 @@
         bar.append(copy, close);
         if (questionType === "paragraph") card.append(title, bar);
         else card.append(title, detail, bar);
-        if (response.warning === "IMAGE_UNAVAILABLE") { const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = "Gambar tidak terbaca, jawaban mungkin kurang akurat."; card.append(warning); }
+        if (response.warning === "IMAGE_UNAVAILABLE") { const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = "Sebagian gambar tidak terkirim atau tidak terbaca, jawaban mungkin kurang akurat."; card.append(warning); }
         panelRoot.append(card); block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
       }
     };

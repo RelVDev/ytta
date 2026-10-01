@@ -2,7 +2,8 @@
 
 const extensionApi = globalThis.browser || globalThis.chrome;
 const IMAGE_HOST = /(^|\.)(googleusercontent\.com|ggpht\.com|gstatic\.com)$/i;
-const MAX_IMAGE_BYTES = 1.5 * 1024 * 1024;
+const MAX_IMAGE_BYTES = 512 * 1024;
+const IMAGE_FETCH_TIMEOUT_MS = 8000;
 const activeRequests = new Map();
 const cancelledRequests = new Set();
 const pendingRequests = new Set();
@@ -29,6 +30,22 @@ function bytesToBase64(buffer) {
     binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
   }
   return btoa(binary);
+}
+
+function detectImageMimeType(bytes, declaredType = "") {
+  if (bytes.length >= 8
+      && bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47
+      && bytes[4] === 0x0d && bytes[5] === 0x0a && bytes[6] === 0x1a && bytes[7] === 0x0a) return "image/png";
+  if (bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return "image/jpeg";
+  if (bytes.length >= 6) {
+    const signature = String.fromCharCode(...bytes.subarray(0, 6));
+    if (signature === "GIF87a" || signature === "GIF89a") return "image/gif";
+  }
+  if (bytes.length >= 12
+      && String.fromCharCode(...bytes.subarray(0, 4)) === "RIFF"
+      && String.fromCharCode(...bytes.subarray(8, 12)) === "WEBP") return "image/webp";
+  const declared = String(declaredType).split(";")[0].trim().toLowerCase();
+  return new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]).has(declared) ? declared : "";
 }
 
 async function readImageBlob(response) {
@@ -60,26 +77,22 @@ async function readImageBlob(response) {
 
 async function convertImage(image) {
   if (!image || image.base64 || !image.url || !isAllowedImageUrl(image.url)) return image;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), IMAGE_FETCH_TIMEOUT_MS);
   try {
-    let currentUrl = image.url;
-    let response;
-    for (let redirects = 0; redirects <= 3; redirects += 1) {
-      if (!isAllowedImageUrl(currentUrl)) return image;
-      response = await fetch(currentUrl, { credentials: "include", redirect: "manual" });
-      if (![301, 302, 303, 307, 308].includes(response.status)) break;
-      const location = response.headers.get("location");
-      if (!location || redirects === 3) return image;
-      currentUrl = new URL(location, currentUrl).toString();
-    }
-    if (!response) return image;
-    if (!response.ok) return image;
+    const response = await fetch(image.url, { credentials: "include", signal: controller.signal });
+    if (!response.ok || !isAllowedImageUrl(response.url || image.url)) return image;
     const blob = await readImageBlob(response);
     if (!blob) return image;
-    const mimeType = (blob.type || "").split(";")[0].toLowerCase();
-    if (!new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]).has(mimeType) || blob.size > MAX_IMAGE_BYTES) return image;
-    return { ...image, mimeType, base64: bytesToBase64(await blob.arrayBuffer()) };
+    if (blob.size > MAX_IMAGE_BYTES) return image;
+    const bytes = new Uint8Array(await blob.arrayBuffer());
+    const mimeType = detectImageMimeType(bytes, blob.type);
+    if (!mimeType) return image;
+    return { ...image, mimeType, base64: bytesToBase64(bytes) };
   } catch {
     return image;
+  } finally {
+    clearTimeout(timeout);
   }
 }
 

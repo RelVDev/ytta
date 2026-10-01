@@ -128,16 +128,30 @@
       return null;
     }
 
+    const images = questionImages.slice(0, 4);
+    let imageBudget = 4 - images.length;
+    let imagesTruncated = questionImages.length > images.length;
+    const limitedOptions = options.map((option) => {
+      if (!option.image) return option;
+      if (imageBudget > 0) {
+        imageBudget -= 1;
+        return option;
+      }
+      imagesTruncated = true;
+      return { ...option, image: null };
+    });
+
     return {
       id: block.getAttribute("data-params") || "",
       type,
       text,
       required: Boolean(block.querySelector('[aria-label*="required" i], [aria-label*="wajib" i]')),
-      options,
+      options: limitedOptions,
       scale,
       rows,
       columns,
-      images: questionImages.slice(0, 4)
+      images,
+      imagesTruncated
     };
   }
 
