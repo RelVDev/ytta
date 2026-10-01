@@ -56,7 +56,7 @@
         error.code = response && response.code;
         throw error;
       }
-      control.showAnswer(response.result);
+      control.showAnswer(response.result, question.type);
       control.setState("done");
     } catch (error) {
       if (control.requestId !== requestId) return;
@@ -88,21 +88,10 @@
     control.removePanel();
   }
 
-  function isVisibleBlock(block) {
-    if (block.closest("[hidden], [aria-hidden='true']")) return false;
-    let current = block;
-    while (current) {
-      const style = global.getComputedStyle(current);
-      if (style.display === "none" || style.visibility === "hidden") return false;
-      current = current.parentElement;
-    }
-    return block.getClientRects().length > 0;
-  }
-
   async function scan() {
     if (!isRespondentPage()) return { enabled: false, count: 0 };
     const settings = await getSettings();
-    const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)].filter(isVisibleBlock);
+    const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)];
     let count = 0;
     for (const block of blocks) {
       const question = global.FormHelperParser.parseQuestion(block);

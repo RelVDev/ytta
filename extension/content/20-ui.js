@@ -106,7 +106,7 @@
         if (!result) pageLoad.textContent = "Coba muat lagi";
         else if (!result.enabled) pageLoad.textContent = "Aktifkan di ⚙";
         else if (!result.count) pageLoad.textContent = "Soal belum terbaca";
-        else pageLoad.textContent = `${result.count} soal siap`;
+        else pageLoad.textContent = "Soal siap ✓";
       } catch {
         pageLoad.textContent = "Gagal memuat";
       }
@@ -230,7 +230,7 @@
         card.append(close, text); panelRoot.append(card);
         block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
       },
-      showAnswer(response) {
+      showAnswer(response, questionType) {
         control.removePanel();
         const panelHost = document.createElement("div");
         panelHost.className = "fh-answer-host";
@@ -243,7 +243,9 @@
         const copy = document.createElement("button"); copy.type = "button"; copy.textContent = "Salin";
         copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(response.answer.display); copy.textContent = "Tersalin"; } catch { copy.textContent = "Tidak bisa menyalin"; } });
         const close = document.createElement("button"); close.type = "button"; close.textContent = "Tutup"; close.addEventListener("click", () => panelHost.remove());
-        bar.append(copy, close); card.append(title, detail, bar);
+        bar.append(copy, close);
+        if (questionType === "paragraph") card.append(title, bar);
+        else card.append(title, detail, bar);
         if (response.warning === "IMAGE_UNAVAILABLE") { const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = "Gambar tidak terbaca, jawaban mungkin kurang akurat."; card.append(warning); }
         panelRoot.append(card); block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
       }
