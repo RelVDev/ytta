@@ -216,6 +216,11 @@
   function questionControl(block, onAsk) {
     const host = document.createElement("div");
     host.className = "fh-question-host";
+    host.style.cssText = "position:absolute;top:5px;right:5px;z-index:5;width:26px;height:26px;line-height:0;";
+    const needsPositionAnchor = getComputedStyle(block).position === "static";
+    const originalPosition = block.style.getPropertyValue("position");
+    const originalPositionPriority = block.style.getPropertyPriority("position");
+    if (needsPositionAnchor) block.style.setProperty("position", "relative", "important");
     const root = host.attachShadow({ mode: "closed" });
     addStyle(root, `
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
@@ -243,6 +248,11 @@
       host,
       block,
       button,
+      restorePosition() {
+        if (!needsPositionAnchor) return;
+        if (originalPosition) block.style.setProperty("position", originalPosition, originalPositionPriority);
+        else block.style.removeProperty("position");
+      },
       panel: null,
       setState(state) {
         control.loading = state === "loading";

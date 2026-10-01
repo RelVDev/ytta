@@ -115,7 +115,7 @@ async function apiFetch(path, options = {}, requestId = "") {
   const base = settings.apiBase.replace(/\/+$/, "");
   const controller = new AbortController();
   if (requestId) activeRequests.set(requestId, controller);
-  const timeout = setTimeout(() => controller.abort(), 20_000);
+  const timeout = setTimeout(() => controller.abort(), 65_000);
   try {
     return await fetch(`${base}${path}`, {
       ...options,

@@ -88,6 +88,7 @@
       if (shouldSendCancel) sendMessage({ type: "CANCEL", requestId }).catch(() => {});
     }
     control.host.remove();
+    control.restorePosition();
     control.removePanel();
   }
 

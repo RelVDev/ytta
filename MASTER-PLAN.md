@@ -401,7 +401,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 ## 10. Spesifikasi Backend (Vercel)
 
 - Runtime Node (LTS), fungsi serverless di `/api`. Gunakan `fetch` bawaan Node tanpa SDK provider runtime.
-- `vercel.json`: set `maxDuration` 30 untuk `api/answer.js`, dan header keamanan dasar.
+- `vercel.json`: set `maxDuration` 60 untuk `api/answer.js`, dan header keamanan dasar.
 - **Env vars** (`.env.example`):
   ```
   TOKENHARBOR_API_KEY=
