@@ -129,17 +129,18 @@
   function startObserver() {
     const target = document.body;
     observer = new MutationObserver((records) => {
+      global.FormHelperUI.syncHelpMenu();
       const external = records.some((record) => {
         if (record.type === "childList") {
           const changedNodes = [...record.addedNodes, ...record.removedNodes];
           return changedNodes.some((node) => {
             if (node.nodeType !== Node.ELEMENT_NODE) return true;
-            return !node.matches(".fh-ui-host, .fh-question-host, .fh-answer-host")
-              && !node.closest(".fh-ui-host, .fh-question-host, .fh-answer-host");
+            return !node.matches(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]")
+              && !node.closest(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]");
           });
         }
         const targetNode = record.target.nodeType === Node.ELEMENT_NODE ? record.target : record.target.parentElement;
-        return !targetNode?.closest(".fh-ui-host, .fh-question-host, .fh-answer-host");
+        return !targetNode?.closest(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]");
       });
       if (external) scheduleScan();
     });
@@ -160,6 +161,7 @@
 
   if (isRespondentPage()) {
     global.FormHelperUI.initSettingsPanel();
+    global.FormHelperUI.syncHelpMenu();
     scan().then(startObserver);
     api.storage.onChanged.addListener(refresh);
   }

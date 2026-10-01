@@ -26,10 +26,13 @@
   function imageObject(img) {
     if (!img || !img.src || img.src.startsWith("data:image/svg+xml")) return null;
     const rect = img.getBoundingClientRect ? img.getBoundingClientRect() : { width: img.width, height: img.height };
-    const width = rect.width || img.width || 0;
-    const height = rect.height || img.height || 0;
-    if (width < 40 && height < 40) return null;
-    return { url: img.src, mimeType: img.getAttribute("type") || "image/jpeg", base64: null };
+    const width = rect.width || img.width || img.naturalWidth || 0;
+    const height = rect.height || img.height || img.naturalHeight || 0;
+    const questionImage = img.closest(SELECTORS.heading);
+    const optionImage = img.closest(`${SELECTORS.radio}, ${SELECTORS.checkbox}, ${SELECTORS.option}`);
+    if (width < 40 && height < 40 && !questionImage && !optionImage) return null;
+    const declaredType = (img.getAttribute("type") || "").toLowerCase();
+    return { url: img.src, mimeType: IMAGE_TYPES.has(declaredType) ? declaredType : "image/jpeg", base64: null };
   }
 
   function imagesIn(element) {
@@ -68,8 +71,12 @@
   function parseQuestion(block) {
     if (!block || !block.querySelector) return null;
     const heading = block.querySelector(SELECTORS.heading);
-    const text = textOf(heading);
-    if (!text) return null;
+    const headingText = textOf(heading);
+    const questionImages = imagesIn(block);
+    const optionImages = [...block.querySelectorAll(`${SELECTORS.radio}, ${SELECTORS.checkbox}, ${SELECTORS.option}`)]
+      .some((option) => [...option.querySelectorAll("img")].some((img) => imageObject(img)));
+    if (!headingText && !questionImages.length && !optionImages) return null;
+    const text = headingText || "Soal bergambar tanpa teks.";
 
     const radios = [...block.querySelectorAll(SELECTORS.radio)];
     const checkboxes = [...block.querySelectorAll(SELECTORS.checkbox)];
@@ -130,7 +137,7 @@
       scale,
       rows,
       columns,
-      images: imagesIn(block).slice(0, 4)
+      images: questionImages.slice(0, 4)
     };
   }
 

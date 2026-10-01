@@ -9,7 +9,7 @@ Ekstensi WebExtension untuk Firefox Android yang menampilkan saran jawaban di Go
 3. API mencoba model Harbor yang dipilih. Timeout, gangguan jaringan, HTTP 408/429, atau HTTP 5xx pada Harbor memicu fallback ke model Gemini yang dipilih. Error autentikasi atau payload tidak memicu fallback.
 4. API memvalidasi respons dan mengembalikan saran terstruktur.
 
-Pengaturan dibuka lewat tombol ⚙ pada halaman Google Forms. Ekstensi tidak menggunakan popup toolbar. Pilih model Harbor utama dan model Gemini cadangan secara terpisah. Sebelum aktif, panel meminta persetujuan bahwa teks dan gambar yang ditanyakan dikirim ke Vercel untuk diproses oleh Harbor dan, bila perlu, Gemini.
+Pengaturan dan pemindaian halaman dibuka dari menu **Bantuan dan masukan** bawaan Google Forms. Pilih **Pengaturan Form Helper** untuk memilih model Harbor utama dan Gemini cadangan. **Muat soal halaman ini** memindai ulang pertanyaan setelah berpindah section. Sebelum aktif, panel meminta persetujuan bahwa teks dan gambar yang ditanyakan dikirim ke Vercel untuk diproses oleh Harbor dan, bila perlu, Gemini.
 
 ## Model
 
@@ -60,7 +60,7 @@ Jalankan `npm run package:extension` untuk membuat dua arsip dengan manifest yan
 
 Ekstrak arsip yang sesuai, lalu muat folder hasil ekstrak lewat halaman Extensions dengan Developer mode dan **Load unpacked** di Chromium, atau `about:debugging` di Firefox desktop. Untuk Firefox Android, buat kredensial AMO API dan jalankan `npx web-ext sign --channel=unlisted --source-dir=/path/ke/folder-firefox-yang-diekstrak --api-key="$AMO_API_KEY" --api-secret="$AMO_API_SECRET"`. Hasil `.xpi` muncul di `web-ext-artifacts/`; pasang XPI yang ditandatangani melalui Firefox.
 
-Buka Google Forms lalu gunakan tombol **Muat soal** setelah berpindah halaman/section agar ekstensi memindai halaman tersebut. Gunakan tombol ⚙ untuk memasukkan Base URL API, token klien, bahasa, model, serta persetujuan pemrosesan data. Izinkan akses host API saat browser meminta izin. Toggle “Aktifkan tombol saran” mengatur tombol jawaban.
+Buka menu **Bantuan dan masukan** pada Google Forms, pilih **Pengaturan Form Helper** untuk memasukkan Base URL API, token klien, bahasa, model, serta persetujuan pemrosesan data. Setelah berpindah halaman/section, buka menu yang sama dan pilih **Muat soal halaman ini**. Izinkan akses host API saat browser meminta izin. Toggle “Aktifkan tombol saran” mengatur tombol jawaban. Pemicu jawaban berupa ikon bintang kecil di dalam setiap soal.
 
 Untuk memeriksa ekstensi jalankan `npm run lint:extension`. Manifest menyediakan background event page untuk Firefox Android 142+ dan service worker untuk Chromium. Izin data Firefox mendeklarasikan `websiteContent` karena teks/gambar soal dikirim ke API setelah pengguna menekan tombol. Ikon browser khusus belum disertakan.
 

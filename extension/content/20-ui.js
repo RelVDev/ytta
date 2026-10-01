@@ -12,6 +12,45 @@
     ["gemini-3.6-flash", "Gemini 3.6 Flash"],
     ["gemini-3.8-flash", "Gemini 3.8 Flash"]
   ];
+  let settingsActions = null;
+
+  function isGoogleHelpMenu(menu) {
+    const text = `${menu.getAttribute("aria-label") || ""} ${menu.textContent || ""}`;
+    return /bantuan dan masukan|help and feedback|hubungi pemilik formulir|contact form owner/i.test(text);
+  }
+
+  function addHelpMenuItem(menu, key, label, action) {
+    if (menu.querySelector(`[data-form-helper-menu-item="${key}"]`)) return;
+    const nativeItem = menu.querySelector('[role="menuitem"]');
+    const item = document.createElement("li");
+    item.className = nativeItem?.className || "";
+    item.setAttribute("role", "menuitem");
+    item.setAttribute("tabindex", "-1");
+    item.dataset.formHelperMenuItem = key;
+    item.style.cssText = "display:flex;align-items:center;min-height:48px;padding:0 16px;cursor:pointer;color:inherit;font:400 14px/20px Roboto,Arial,sans-serif;list-style:none;";
+    const text = document.createElement("span");
+    text.textContent = label;
+    item.append(text);
+    item.addEventListener("click", () => { void action(item); });
+    item.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        item.click();
+      }
+    });
+    item.addEventListener("mouseenter", () => { item.style.backgroundColor = "rgba(60,64,67,.08)"; });
+    item.addEventListener("mouseleave", () => { item.style.backgroundColor = "transparent"; });
+    menu.append(item);
+  }
+
+  function syncHelpMenu() {
+    if (!settingsActions) return;
+    for (const menu of document.querySelectorAll('[role="menu"]')) {
+      if (!isGoogleHelpMenu(menu)) continue;
+      addHelpMenuItem(menu, "load-page", "Muat soal halaman ini", settingsActions.loadPage);
+      addHelpMenuItem(menu, "settings", "Pengaturan Form Helper", settingsActions.openSettings);
+    }
+  }
 
   function addStyle(root, css) {
     const style = document.createElement("style");
@@ -39,9 +78,6 @@
     addStyle(root, `
       :host { all: initial; color-scheme: light dark; }
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
-      .launcher { position: fixed; right: 14px; bottom: 14px; z-index: 2147483647; width: 48px; height: 48px; border: 0; border-radius: 50%; background: #2857d9; color: #fff; font-size: 22px; box-shadow: 0 3px 14px #0005; cursor: pointer; }
-      .page-load { position: fixed; right: 70px; bottom: 16px; z-index: 2147483647; min-height: 44px; padding: 0 14px; border: 0; border-radius: 22px; background: #2857d9; color: #fff; font-size: 14px; font-weight: 600; box-shadow: 0 3px 14px #0005; cursor: pointer; }
-      .page-load:disabled { opacity: .8; cursor: wait; }
       .panel { position: fixed; right: 12px; bottom: 72px; z-index: 2147483647; width: min(370px, calc(100vw - 24px)); max-height: min(82vh, 700px); overflow: auto; padding: 17px; border: 1px solid #8993a5; border-radius: 14px; background: Canvas; color: CanvasText; box-shadow: 0 8px 30px #0005; }
       .panel[hidden] { display: none; }
       h2 { font-size: 18px; margin: 0 0 12px; }
@@ -73,48 +109,54 @@
       <div class="group"><label for="harborModel">Model utama — Harbor AI</label><select id="harborModel"></select></div>
       <label for="geminiModel">Model cadangan — Gemini AI</label><select id="geminiModel"></select>
       <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal yang saya tanyakan dikirim ke API Vercel untuk diproses oleh Harbor AI, dan dapat diteruskan ke Gemini bila Harbor mengalami gangguan sementara.</label>
-      <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Tes koneksi</button></div>
+      <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Tes koneksi</button><button class="secondary" id="close">Tutup</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">Gunakan sesuai aturan dosen/penyelenggara ujian. Ekstensi hanya menampilkan saran dan tidak mengisi jawaban. Isi pertanyaan tidak disimpan di ekstensi atau log server.</p>
     `;
     fillModelOptions(panel.querySelector("#harborModel"), HARBOR_MODELS, DEFAULTS.harborModel);
     fillModelOptions(panel.querySelector("#geminiModel"), GEMINI_MODELS, DEFAULTS.geminiModel);
-    const launcher = document.createElement("button");
-    launcher.className = "launcher";
-    launcher.type = "button";
-    launcher.textContent = "⚙";
-    launcher.setAttribute("aria-label", "Buka pengaturan Form Helper");
-    launcher.title = "Pengaturan Form Helper";
-    const pageLoad = document.createElement("button");
-    pageLoad.className = "page-load";
-    pageLoad.type = "button";
-    pageLoad.textContent = "↻ Muat soal";
-    pageLoad.setAttribute("aria-label", "Muat soal di halaman Google Forms ini");
-    pageLoad.title = "Pindah halaman Forms, lalu tekan untuk memasang tombol saran di halaman tersebut";
-    root.append(panel, pageLoad, launcher);
+    root.append(panel);
 
     const status = panel.querySelector("#status");
     const setStatus = (message, error = false) => {
       status.textContent = message;
       status.style.color = error ? "#c62828" : "inherit";
     };
-    pageLoad.addEventListener("click", async () => {
-      pageLoad.disabled = true;
-      pageLoad.textContent = "Memuat…";
-      try {
-        const result = await global.FormHelperMain?.loadCurrentPage();
-        if (!result) pageLoad.textContent = "Coba muat lagi";
-        else if (!result.enabled) pageLoad.textContent = "Aktifkan di ⚙";
-        else if (!result.count) pageLoad.textContent = "Soal belum terbaca";
-        else pageLoad.textContent = "Soal siap ✓";
-      } catch {
-        pageLoad.textContent = "Gagal memuat";
+    async function openSettingsPanel() {
+      panel.hidden = false;
+      const settings = await getSettings();
+      panel.querySelector("#enabled").checked = settings.enabled;
+      panel.querySelector("#apiBase").value = settings.apiBase;
+      panel.querySelector("#token").value = settings.token;
+      panel.querySelector("#lang").value = settings.lang;
+      panel.querySelector("#harborModel").value = settings.harborModel;
+      panel.querySelector("#geminiModel").value = settings.geminiModel;
+      panel.querySelector("#dataConsent").checked = settings.dataConsentAccepted === true;
+      setStatus("");
+    }
+    settingsActions = {
+      openSettings: async () => openSettingsPanel(),
+      loadPage: async (item) => {
+        item.setAttribute("aria-disabled", "true");
+        item.textContent = "Memuat soal…";
+        try {
+          const result = await global.FormHelperMain?.loadCurrentPage();
+          if (!result) item.textContent = "Halaman soal tidak ditemukan";
+          else if (!result.enabled) {
+            await openSettingsPanel();
+            setStatus("Aktifkan tombol saran di pengaturan terlebih dahulu.", true);
+            item.textContent = "Aktifkan saran di Pengaturan";
+          } else if (!result.count) item.textContent = "Belum ada soal yang terbaca";
+          else item.textContent = "Soal siap ✓";
+        } catch {
+          item.textContent = "Gagal memuat soal";
+        }
+        setTimeout(() => {
+          if (item.isConnected) item.textContent = "Muat soal halaman ini";
+          item.removeAttribute("aria-disabled");
+        }, 2000);
       }
-      setTimeout(() => {
-        pageLoad.disabled = false;
-        pageLoad.textContent = "↻ Muat soal";
-      }, 2200);
-    });
+    };
     async function saveSettings(quiet = false) {
       const values = {
         enabled: panel.querySelector("#enabled").checked,
@@ -147,20 +189,7 @@
         return false;
       }
     }
-    launcher.addEventListener("click", async () => {
-      panel.hidden = !panel.hidden;
-      if (!panel.hidden) {
-        const settings = await getSettings();
-        panel.querySelector("#enabled").checked = settings.enabled;
-        panel.querySelector("#apiBase").value = settings.apiBase;
-        panel.querySelector("#token").value = settings.token;
-        panel.querySelector("#lang").value = settings.lang;
-        panel.querySelector("#harborModel").value = settings.harborModel;
-        panel.querySelector("#geminiModel").value = settings.geminiModel;
-        panel.querySelector("#dataConsent").checked = settings.dataConsentAccepted === true;
-        setStatus("");
-      }
-    });
+    panel.querySelector("#close").addEventListener("click", () => { panel.hidden = true; });
     panel.querySelector("#save").addEventListener("click", () => saveSettings());
     panel.querySelector("#ping").addEventListener("click", async () => {
       if (!await saveSettings(true)) return;
@@ -182,17 +211,18 @@
     const root = host.attachShadow({ mode: "closed" });
     addStyle(root, `
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
-      .actions { display: flex; justify-content: flex-end; padding: 4px 8px; }
-      button { min-width: 44px; min-height: 44px; border: 0; border-radius: 999px; background: #2857d9; color: #fff; font-size: 17px; cursor: pointer; box-shadow: 0 2px 7px #0003; }
+      .actions { display: flex; justify-content: flex-end; padding: 0 4px; }
+      button { display: inline-grid; place-items: center; width: 26px; min-width: 26px; height: 26px; min-height: 26px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #80868b; opacity: .55; font-size: 14px; cursor: pointer; box-shadow: none; }
+      button:hover, button:focus-visible { background: #f1f3f4; color: #5f6368; opacity: 1; outline: none; }
       button[disabled] { opacity: .7; }
       button[aria-busy="true"] { position: relative; }
-      button[aria-busy="true"]::after { content: ""; position: absolute; width: 11px; height: 11px; right: -2px; top: -2px; border: 2px solid #2857d9; border-right-color: transparent; border-radius: 50%; animation: fh-spin .7s linear infinite; }
+      button[aria-busy="true"]::after { content: ""; position: absolute; width: 9px; height: 9px; right: -1px; top: -1px; border: 2px solid #80868b; border-right-color: transparent; border-radius: 50%; animation: fh-spin .7s linear infinite; }
       @keyframes fh-spin { to { transform: rotate(360deg); } }
     `);
     const row = document.createElement("div");
     row.className = "actions";
     const button = document.createElement("button");
-      button.type = "button";
+    button.type = "button";
     button.textContent = "✦";
     button.setAttribute("aria-label", "Tanya AI");
     button.title = "Tampilkan saran jawaban";
@@ -209,7 +239,7 @@
       setState(state) {
         control.loading = state === "loading";
         button.disabled = false;
-        button.textContent = state === "loading" ? "×" : state === "done" ? "↻" : state === "error" ? "!" : "✦";
+        button.textContent = "✦";
         button.setAttribute("aria-label", state === "loading" ? "Batalkan permintaan" : "Tanya AI");
         button.setAttribute("aria-busy", state === "loading" ? "true" : "false");
         button.title = state === "loading" ? "Batalkan permintaan" : state === "done" ? "Tanya ulang" : "Tampilkan saran jawaban";
@@ -253,5 +283,5 @@
     return control;
   }
 
-  global.FormHelperUI = { initSettingsPanel, questionControl };
+  global.FormHelperUI = { initSettingsPanel, syncHelpMenu, questionControl };
 })(globalThis);
