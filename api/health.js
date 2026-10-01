@@ -13,7 +13,11 @@ module.exports = function health(req, res) {
     return res.status(200).json({
       ok: true,
       time: new Date().toISOString(),
-      providers: { harbor: Boolean(process.env.TOKENHARBOR_API_KEY), gemini: Boolean(process.env.GEMINI_API_KEY) }
+      providers: {
+        harbor: Boolean(process.env.TOKENHARBOR_API_KEY),
+        gemini: Boolean(process.env.GEMINI_API_KEY),
+        groq: Boolean(process.env.GROQ_API_KEY)
+      }
     });
   } catch (error) {
     const result = errorResponse(error);

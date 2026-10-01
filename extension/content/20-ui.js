@@ -12,6 +12,10 @@
     ["gemini-3.6-flash", "Gemini 3.6 Flash"],
     ["gemini-3.8-flash", "Gemini 3.8 Flash"]
   ];
+  const ANSWER_PROVIDERS = [
+    ["harbor", "Harbor AI — model pilihan di atas"],
+    ["groq", "Groq — OpenAI GPT-OSS 120B (teks saja)"]
+  ];
   let settingsActions = null;
 
   function isGoogleHelpMenu(menu) {
@@ -108,15 +112,20 @@
       <label for="lang">Bahasa jawaban</label><select id="lang"><option value="auto">Otomatis</option><option value="id">Indonesia</option><option value="en">English</option></select>
       <div class="group"><label for="harborModel">Model utama — Harbor AI</label><select id="harborModel"></select></div>
       <label for="geminiModel">Model cadangan — Gemini AI</label><select id="geminiModel"></select>
-      <label class="toggle"><input id="onlyHarbor" type="checkbox"> Hanya gunakan Harbor AI (nonaktifkan Gemini)</label>
-      <p class="note">Jika opsi ini aktif, permintaan tidak akan diteruskan ke Gemini saat Harbor mengalami gangguan.</p>
-      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal yang saya tanyakan dikirim ke API Vercel untuk diproses oleh Harbor AI, dan dapat diteruskan ke Gemini jika fallback Gemini tidak dinonaktifkan.</label>
+      <label for="answerProvider">Model utama untuk jawaban</label><select id="answerProvider"></select>
+      <p class="note">GPT-OSS hanya menerima teks. Untuk soal bergambar, aktifkan OCR Qwen atau jawaban akan dialihkan ke Harbor/Gemini.</p>
+      <label class="toggle"><input id="imageToText" type="checkbox"> OCR gambar dengan Qwen 3.8 27B (Groq)</label>
+      <p class="note">Jika aktif, Qwen menyalin rumus, angka, tabel, dan label gambar menjadi teks sebelum dikirim ke model jawaban.</p>
+      <label class="toggle"><input id="onlyHarbor" type="checkbox"> Nonaktifkan fallback Gemini AI</label>
+      <p class="note">Saat aktif, Gemini tidak dipanggil ketika model jawaban gagal.</p>
+      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal dikirim ke API Vercel. Tergantung pengaturan, data dapat diproses oleh Harbor, Gemini, atau Groq (Qwen untuk OCR dan GPT-OSS untuk jawaban teks).</label>
       <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Tes koneksi</button><button class="secondary" id="close">Tutup</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">Gunakan sesuai aturan dosen/penyelenggara ujian. Ekstensi hanya menampilkan saran dan tidak mengisi jawaban. Isi pertanyaan tidak disimpan di ekstensi atau log server.</p>
     `;
     fillModelOptions(panel.querySelector("#harborModel"), HARBOR_MODELS, DEFAULTS.harborModel);
     fillModelOptions(panel.querySelector("#geminiModel"), GEMINI_MODELS, DEFAULTS.geminiModel);
+    fillModelOptions(panel.querySelector("#answerProvider"), ANSWER_PROVIDERS, DEFAULTS.answerProvider);
     root.append(panel);
 
     const status = panel.querySelector("#status");
@@ -133,6 +142,8 @@
       panel.querySelector("#lang").value = settings.lang;
       panel.querySelector("#harborModel").value = settings.harborModel;
       panel.querySelector("#geminiModel").value = settings.geminiModel;
+      panel.querySelector("#answerProvider").value = settings.answerProvider;
+      panel.querySelector("#imageToText").checked = settings.imageToText === true;
       panel.querySelector("#onlyHarbor").checked = settings.onlyHarbor === true;
       panel.querySelector("#geminiModel").disabled = settings.onlyHarbor === true;
       panel.querySelector("#dataConsent").checked = settings.dataConsentAccepted === true;
@@ -169,6 +180,8 @@
         lang: panel.querySelector("#lang").value,
         harborModel: panel.querySelector("#harborModel").value,
         geminiModel: panel.querySelector("#geminiModel").value,
+        answerProvider: panel.querySelector("#answerProvider").value,
+        imageToText: panel.querySelector("#imageToText").checked,
         onlyHarbor: panel.querySelector("#onlyHarbor").checked,
         dataConsentAccepted: panel.querySelector("#dataConsent").checked
       };
@@ -206,7 +219,7 @@
         const response = await sendMessage({ type: "PING" });
         if (!response || !response.ok) throw new Error(response && response.error || "Tes koneksi gagal.");
         const providers = response.result.providers || {};
-        setStatus(`Terhubung. Harbor: ${providers.harbor ? "siap" : "belum diatur"}; Gemini: ${providers.gemini ? "siap" : "belum diatur"}.`);
+        setStatus(`Terhubung. Harbor: ${providers.harbor ? "siap" : "belum diatur"}; Gemini: ${providers.gemini ? "siap" : "belum diatur"}; Groq: ${providers.groq ? "siap" : "belum diatur"}.`);
       } catch (error) {
         setStatus(error.message, true);
       }
@@ -225,9 +238,9 @@
     addStyle(root, `
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
       .actions { display: flex; justify-content: flex-end; padding: 0 4px; }
-      button { display: inline-grid; place-items: center; width: 26px; min-width: 26px; height: 26px; min-height: 26px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #80868b; opacity: .55; font-size: 14px; cursor: pointer; box-shadow: none; }
-      button:hover, button:focus-visible { background: #f1f3f4; color: #5f6368; opacity: 1; outline: none; }
-      button[disabled] { opacity: .7; }
+      button { display: inline-grid; place-items: center; width: 26px; min-width: 26px; height: 26px; min-height: 26px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #ffffff; opacity: 1; font-size: 14px; cursor: pointer; box-shadow: none; }
+      button:hover, button:focus-visible { background: transparent; color: #ffffff; outline: none; }
+      button[disabled] { opacity: 1; }
       button[aria-busy="true"] { position: relative; }
       button[aria-busy="true"]::after { content: ""; position: absolute; width: 9px; height: 9px; right: -1px; top: -1px; border: 2px solid #80868b; border-right-color: transparent; border-radius: 50%; animation: fh-spin .7s linear infinite; }
       @keyframes fh-spin { to { transform: rotate(360deg); } }
@@ -294,7 +307,13 @@
         bar.append(copy, close);
         if (questionType === "paragraph") card.append(title, bar);
         else card.append(title, detail, bar);
-        if (response.warning === "IMAGE_UNAVAILABLE") { const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = "Sebagian gambar tidak terkirim atau tidak terbaca, jawaban mungkin kurang akurat."; card.append(warning); }
+        const warningMessages = {
+          IMAGE_UNAVAILABLE: "Sebagian gambar tidak terkirim atau tidak terbaca, jawaban mungkin kurang akurat.",
+          IMAGE_OCR_FALLBACK: "OCR Qwen gagal; sistem mencoba memproses gambar langsung dengan model jawaban.",
+          GPT_IMAGE_UNSUPPORTED: "GPT-OSS tidak menerima gambar; jawaban dialihkan ke Harbor/Gemini. Aktifkan OCR Qwen untuk memakai GPT-OSS pada soal gambar.",
+          GROQ_UNAVAILABLE: "API key Groq belum dikonfigurasi; jawaban dialihkan ke Harbor/Gemini."
+        };
+        if (warningMessages[response.warning]) { const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = warningMessages[response.warning]; card.append(warning); }
         panelRoot.append(card); block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
       }
     };

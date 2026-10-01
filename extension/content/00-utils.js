@@ -9,6 +9,8 @@
     lang: "auto",
     harborModel: "qwen3.8-flash:free",
     geminiModel: "gemini-3.8-flash",
+    answerProvider: "harbor",
+    imageToText: true,
     onlyHarbor: false,
     dataConsentAccepted: false
   };

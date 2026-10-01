@@ -6,7 +6,7 @@ const { validatePayload, MAX_BODY_BYTES } = require("../lib/validate");
 const { enforceRateLimit } = require("../lib/ratelimit");
 const { prepareImages } = require("../lib/images");
 const { normalizeModelOutput } = require("../lib/normalize");
-const { callHarbor, callGemini, ProviderError, publicProviderError } = require("../lib/providers");
+const { callHarbor, callGemini, callGroqAnswer, callGroqImageToText, ProviderError, publicProviderError } = require("../lib/providers");
 const { HARBOR_IMAGE_MODELS } = require("../lib/constants");
 const { AppError, errorResponse, MESSAGES } = require("../lib/errors");
 
@@ -36,7 +36,13 @@ module.exports = async function answer(req, res) {
   let selectedModel = null;
   let imageInputCount = 0;
   let imageSentCount = 0;
+  let imagesOcrProcessed = 0;
   let imagesUnavailable = false;
+  let imageOcrFailed = false;
+  let imageOcrApplied = false;
+  let groqSkippedForImages = false;
+  let groqUnavailable = false;
+  let harborImageUnsupported = false;
   try {
     const declaredLength = Number(req.headers && req.headers["content-length"] || 0);
     if (declaredLength > MAX_BODY_BYTES) throw new AppError("PAYLOAD_TOO_LARGE", MESSAGES.PAYLOAD_TOO_LARGE, 413);
@@ -44,45 +50,101 @@ module.exports = async function answer(req, res) {
     await enforceRateLimit(req);
     const payload = validatePayload(parseBody(req));
     questionType = payload.question.type;
-    selectedModel = payload.models.harbor;
+    selectedModel = payload.answerProvider === "groq" ? payload.models.groqAnswer : payload.models.harbor;
     imageInputCount = payload.question.images.length + payload.question.options.filter((option) => option.image).length;
     stage = "prepare_images";
     const prepared = await prepareImages(payload.question, requestController.signal);
     imageSentCount = prepared.images.length;
     imagesUnavailable = prepared.unavailable;
+    let answerQuestion = payload.question;
+    let answerImages = prepared.images;
+    if (payload.imageToText && prepared.images.length) {
+      stage = "groq_ocr";
+      try {
+        const transcription = await callGroqImageToText({
+          images: prepared.images,
+          model: payload.models.groqOcr,
+          signal: requestController.signal,
+          budgetMs: Math.max(1000, Math.min(18_000, 56_000 - (Date.now() - started)))
+        });
+        if (!transcription) throw new ProviderError("groq", "Image transcription is empty", { retryable: true, reason: "EMPTY_RESPONSE" });
+        answerQuestion = {
+          ...payload.question,
+          text: `${payload.question.text}\n\n<image-transcription>\n${transcription}\n</image-transcription>`.slice(0, 13_000)
+        };
+        answerImages = [];
+        imageOcrApplied = true;
+        imagesOcrProcessed = prepared.images.length;
+      } catch (error) {
+        if (requestController.signal.aborted) throw error;
+        imageOcrFailed = true;
+        stage = "answer_fallback_after_ocr";
+      }
+    }
     const args = {
-      question: payload.question,
+      question: answerQuestion,
       lang: payload.lang,
-      images: prepared.images,
+      images: answerImages,
       signal: requestController.signal
     };
 
-    let rawOutput;
-    let answer;
-    const harborImageUnsupported = prepared.images.length > 0 && !HARBOR_IMAGE_MODELS.has(payload.models.harbor);
-    try {
-      provider = "harbor";
-      stage = "harbor";
-      rawOutput = await callHarbor({
-        ...args,
-        images: harborImageUnsupported ? [] : prepared.images,
-        imagesUnsupported: harborImageUnsupported,
-        model: payload.models.harbor
-      });
-      stage = "normalize_harbor";
-      answer = normalizeModelOutput(rawOutput, payload.question);
-    } catch (error) {
-      const retryableFailure = (error instanceof ProviderError && error.retryable)
-        || (error instanceof AppError && error.code === "MODEL_ERROR");
-      if (!retryableFailure) throw error;
-      if (payload.onlyHarbor) throw error;
-      provider = "gemini";
-      selectedModel = payload.models.gemini;
-      stage = "gemini";
-      rawOutput = await callGemini({ ...args, model: payload.models.gemini });
-      stage = "normalize_gemini";
-      answer = normalizeModelOutput(rawOutput, payload.question);
+    const hasImagesForAnswer = answerImages.length > 0;
+    const groqCanAnswer = !hasImagesForAnswer;
+    const routes = [];
+    if (payload.answerProvider === "groq") {
+      if (groqCanAnswer) routes.push({ provider: "groq", model: payload.models.groqAnswer });
+      else groqSkippedForImages = true;
+      routes.push({ provider: "harbor", model: payload.models.harbor });
+    } else {
+      routes.push({ provider: "harbor", model: payload.models.harbor });
     }
+    if (!payload.disableGemini) routes.push({ provider: "gemini", model: payload.models.gemini });
+
+    let answer = null;
+    let lastProviderError = null;
+    for (const route of routes) {
+      provider = route.provider;
+      selectedModel = route.model;
+      stage = route.provider;
+      const timeoutBudgetMs = Math.max(1000, Math.min(56_000, 56_000 - (Date.now() - started)));
+      try {
+        let rawOutput;
+        if (route.provider === "groq") {
+          rawOutput = await callGroqAnswer({ ...args, model: route.model, timeoutMs: Math.min(30_000, timeoutBudgetMs) });
+        } else if (route.provider === "harbor") {
+          harborImageUnsupported = answerImages.length > 0 && !HARBOR_IMAGE_MODELS.has(route.model);
+          rawOutput = await callHarbor({
+            ...args,
+            images: harborImageUnsupported ? [] : answerImages,
+            imagesUnsupported: harborImageUnsupported,
+            model: route.model,
+            timeoutMs: Math.min(40_000, timeoutBudgetMs)
+          });
+        } else {
+          rawOutput = await callGemini({ ...args, model: route.model, timeoutBudgetMs });
+        }
+        stage = `normalize_${route.provider}`;
+        answer = normalizeModelOutput(rawOutput, answerQuestion);
+        break;
+      } catch (error) {
+        lastProviderError = error;
+        if (route.provider === "groq" && error instanceof ProviderError && error.reason === "NOT_CONFIGURED") groqUnavailable = true;
+        const retryableFailure = (error instanceof ProviderError && error.retryable)
+          || (error instanceof AppError && error.code === "MODEL_ERROR");
+        if (!retryableFailure) throw error;
+      }
+    }
+    if (!answer) throw lastProviderError || new AppError("MODEL_ERROR", MESSAGES.MODEL_ERROR, 502);
+
+    const warning = prepared.unavailable || harborImageUnsupported
+      ? "IMAGE_UNAVAILABLE"
+      : imageOcrFailed
+        ? "IMAGE_OCR_FALLBACK"
+        : groqSkippedForImages
+          ? "GPT_IMAGE_UNSUPPORTED"
+          : groqUnavailable
+            ? "GROQ_UNAVAILABLE"
+          : undefined;
 
     const latencyMs = Date.now() - started;
     console.info(JSON.stringify({
@@ -94,6 +156,8 @@ module.exports = async function answer(req, res) {
       status: "ok",
       imageInputCount,
       imageSentCount,
+      imagesOcrProcessed,
+      imageOcrApplied,
       imagesUnavailable,
       ...(harborImageUnsupported ? { imageUnsupportedByModel: true } : {})
     }));
@@ -106,7 +170,7 @@ module.exports = async function answer(req, res) {
       latencyMs,
       provider,
       model: selectedModel,
-      ...(prepared.unavailable || harborImageUnsupported ? { warning: "IMAGE_UNAVAILABLE" } : {})
+      ...(warning ? { warning } : {})
     });
   } catch (error) {
     if (requestController.signal.aborted) return;
@@ -127,6 +191,8 @@ module.exports = async function answer(req, res) {
       } : error instanceof AppError && error.reason ? { reason: error.reason } : {}),
       imageInputCount,
       imageSentCount,
+      imagesOcrProcessed,
+      imageOcrApplied,
       imagesUnavailable
     }));
     return res.status(result.status).json(result.body);

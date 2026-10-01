@@ -6,10 +6,10 @@ Ekstensi WebExtension untuk Firefox Android yang menampilkan saran jawaban di Go
 
 1. Tombol kecil yang terlihat muncul pada setiap pertanyaan Google Forms respondent.
 2. Ekstensi mengirim soal ke API Vercel.
-3. API mencoba model Harbor yang dipilih. Timeout, gangguan jaringan, HTTP 408/429, atau HTTP 5xx pada Harbor memicu fallback ke model Gemini yang dipilih. Error autentikasi atau payload tidak memicu fallback.
+3. API memakai model utama yang dipilih: Harbor atau Groq GPT-OSS 120B. Jika GPT-OSS dipilih, Harbor menjadi fallback berikutnya. Gemini dapat menjadi fallback terakhir dan bisa dinonaktifkan.
 4. API memvalidasi respons dan mengembalikan saran terstruktur.
 
-Pengaturan dan pemindaian halaman dibuka dari menu **Bantuan dan masukan** bawaan Google Forms. Pilih **Pengaturan Form Helper** untuk memilih model Harbor utama dan Gemini cadangan. **Muat soal halaman ini** memindai ulang pertanyaan setelah berpindah section. Sebelum aktif, panel meminta persetujuan bahwa teks dan gambar yang ditanyakan dikirim ke Vercel untuk diproses oleh Harbor dan, bila perlu, Gemini.
+Pengaturan dan pemindaian halaman dibuka dari menu **Bantuan dan masukan** bawaan Google Forms. Pilih **Pengaturan Form Helper** untuk memilih model utama Harbor/GPT-OSS, model Harbor, model Gemini cadangan, dan OCR Qwen untuk gambar. **Muat soal halaman ini** memindai ulang pertanyaan setelah berpindah section. Sebelum aktif, panel meminta persetujuan bahwa teks dan gambar yang ditanyakan dikirim ke Vercel untuk diproses oleh provider yang dipilih.
 
 ## Model
 
@@ -25,7 +25,12 @@ Gemini:
 - `gemini-3.6-flash`
 - `gemini-3.8-flash`
 
-API menolak ID model di luar daftar tersebut. Panggilan Harbor menggunakan endpoint kompatibel OpenAI `/v1/chat/completions`. Gemini memakai Interactions API dengan structured output dan `store: false`. `API-DOCS.txt` disertakan sebagai referensi; detail Gemini dicek terhadap [dokumentasi Interactions API](https://ai.google.dev/gemini-api/docs/interactions-overview) dan [structured output](https://ai.google.dev/gemini-api/docs/structured-output).
+Groq:
+
+- [`qwen/qwen3.8-27b`](https://console.groq.com/docs/model/qwen/qwen3.8-27b) — OCR/transkripsi gambar, dapat dimatikan di pengaturan.
+- [`openai/gpt-oss-120b`](https://console.groq.com/docs/model/openai/gpt-oss-120b) — model jawaban teks utama opsional; jika dipilih, Harbor dan lalu Gemini menjadi fallback sesuai pengaturan. Model ini tidak menerima gambar, sehingga soal gambar memerlukan OCR Qwen agar GPT-OSS bisa dipakai.
+
+API menolak ID model di luar daftar tersebut. Harbor dan Groq memakai endpoint kompatibel OpenAI `/v1/chat/completions`; Gemini memakai Interactions API dengan structured output dan `store: false`. OCR Qwen menghasilkan transkripsi teks terlebih dahulu, termasuk angka, rumus, tabel, dan label diagram. `API-DOCS.txt` disertakan sebagai referensi; detail Gemini dicek terhadap [dokumentasi Interactions API](https://ai.google.dev/gemini-api/docs/interactions-overview) dan [structured output](https://ai.google.dev/gemini-api/docs/structured-output).
 
 ## Menyiapkan API Vercel
 
@@ -36,9 +41,12 @@ Persyaratan: Node.js LTS dan Vercel CLI. Tidak ada SDK provider runtime; backend
 
    - `TOKENHARBOR_API_KEY` — API key Harbor.
    - `GEMINI_API_KEY` — API key Gemini AI Studio.
+   - `GROQ_API_KEY` — API key Groq; dipakai bersama oleh Qwen OCR dan GPT-OSS.
    - `CLIENT_TOKEN` — token acak yang digunakan ekstensi untuk mengakses API.
    - `HARBOR_MODEL` — opsional, default `qwen3.8-flash:free`.
    - `GEMINI_MODEL` — opsional, default `gemini-3.8-flash`.
+   - `GROQ_OCR_MODEL` — opsional, default `qwen/qwen3.8-27b`.
+   - `GROQ_ANSWER_MODEL` — opsional, default `openai/gpt-oss-120b`.
    - `GEMINI_THINKING_BUDGET` — opsional, `0` memilih thinking minimal; nilai positif memilih level rendah.
    - `RATE_LIMIT_PER_MIN` — opsional, default 20 permintaan per menit untuk tiap IP dan token.
    - `ALLOWED_ORIGINS` — opsional, daftar origin dipisahkan koma untuk pemanggilan browser biasa.
@@ -47,7 +55,7 @@ Persyaratan: Node.js LTS dan Vercel CLI. Tidak ada SDK provider runtime; backend
    Jangan taruh provider key di source, ekstensi, `.env.example`, atau log. Nilai lokal yang sensitif harus tetap di file `.env` yang sudah diabaikan Git, atau masukkan langsung ke Vercel.
 3. Jalankan `vercel dev` untuk uji lokal atau deploy lewat alur Vercel proyek. Setelah deploy, isi Base URL API dan `CLIENT_TOKEN` pada panel ekstensi.
 
-`GET /api/health` menguji token dan melaporkan apakah kedua provider sudah dikonfigurasi. `POST /api/answer` menerima payload soal dan pilihan model. Batas payload 3,5 MB, maksimal 4 gambar, dan teks soal maksimal 6.000 karakter.
+`GET /api/health` menguji token dan melaporkan apakah Harbor, Gemini, dan Groq sudah dikonfigurasi. `POST /api/answer` menerima payload soal dan pilihan model. Batas payload 3,5 MB, maksimal 4 gambar, dan teks soal maksimal 6.000 karakter. Groq mendukung hingga tiga gambar per permintaan OCR; jika ada empat gambar, backend memprosesnya dalam beberapa kelompok.
 
 Jika Upstash tidak dikonfigurasi, rate limit memakai memori proses serverless dan sifatnya best-effort; batas ini tidak dibagi antar instance dan dapat hilang saat instance dimulai ulang.
 

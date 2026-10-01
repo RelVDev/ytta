@@ -12,7 +12,7 @@ Ekstensi browser untuk ponsel. Saat pengguna membuka Google Form, ekstensi aktif
 
 1. Ekstensi membaca pertanyaan itu (teks, tipe, pilihan jawaban, gambar bila ada).
 2. Data dikirim ke **API di Vercel** (milik kita).
-3. API mencoba **Harbor AI** dan beralih ke **Gemini AI Studio** jika Harbor mengalami kegagalan sementara.
+3. API memakai model utama yang dipilih, **Harbor** atau **Groq GPT-OSS 120B**. Harbor menjadi fallback setelah GPT-OSS, lalu Gemini AI Studio menjadi fallback opsional.
 4. Jawaban ditampilkan **tepat di bawah soal**, target ±3 detik, contoh: `D. CH3COOH`.
 
 Ekstensi **tidak mengisi form otomatis**. Ia hanya menampilkan jawaban saran.
@@ -75,7 +75,7 @@ Pemilik mengembangkan dari **ponsel (Termux)**, jadi:
 ┌───────────────────────▼────────────────────────┐
 │ Vercel Serverless (Node)                       │
 │   validate → rate-limit → build prompt         │
-│   → Harbor utama → Gemini fallback → normalize │
+│   → model utama → Harbor/Gemini fallback       │
 └───────────────────────┬────────────────────────┘
                         ▼
           Token Harbor / Google AI Studio
@@ -107,7 +107,7 @@ form-helper/
 │  ├─ auth.js                  # cek X-Client-Token
 │  ├─ validate.js              # validasi payload
 │  ├─ prompt.js                # susun system & user prompt per tipe soal
-│  ├─ providers.js             # Harbor utama + Gemini fallback
+│  ├─ providers.js             # Harbor/Groq/Gemini + Groq Qwen OCR
 │  ├─ normalize.js             # rapikan output → format "D. CH3COOH"
 │  ├─ images.js                # fallback fetch gambar dari URL (allowlist)
 │  └─ ratelimit.js
@@ -167,8 +167,13 @@ X-Client-Token: <token statis dari env CLIENT_TOKEN>
   "lang": "id",
   "models": {
     "harbor": "qwen3.8-flash:free",
-    "gemini": "gemini-3.8-flash"
+    "gemini": "gemini-3.8-flash",
+    "groqAnswer": "openai/gpt-oss-120b",
+    "groqOcr": "qwen/qwen3.8-27b"
   },
+  "answerProvider": "harbor",
+  "imageToText": true,
+  "disableGemini": false,
   "question": {
     "id": "q_3",
     "type": "multiple_choice",
@@ -196,7 +201,7 @@ Aturan:
 - `scale`: `{ "min": 1, "max": 5, "minLabel": "...", "maxLabel": "..." }` untuk `linear_scale`.
 - `rows` / `columns`: array string untuk grid.
 - `images[]`: pakai `base64` bila ekstensi berhasil mengambil gambar; jika tidak, kirim `url` saja dan server mencoba mengambilnya (lihat §8).
-- `models.harbor` dan `models.gemini` opsional; jika diberikan harus cocok dengan allowlist §7. Harbor tetap provider pertama.
+- `models.harbor`, `models.gemini`, `models.groqAnswer`, dan `models.groqOcr` opsional; jika diberikan harus cocok dengan allowlist §7. `answerProvider` memilih Harbor atau Groq GPT-OSS. `imageToText` menyalakan OCR Qwen; `disableGemini` mematikan fallback Gemini. Field `onlyHarbor` tetap diterima untuk kompatibilitas versi ekstensi lama.
 - Batas: payload ≤ **3,5 MB** total (batas body Vercel ±4,5 MB), maksimal **4 gambar** per soal.
 
 **Response sukses (200)**
@@ -218,7 +223,7 @@ Aturan:
 
 Untuk `short_answer`/`paragraph`: `keys: []`, `texts: ["..."]`, `display` = jawaban.
 Untuk grid: `rows: [{ "row": "...", "picks": ["..."] }]`, `display` = ringkasan multi-baris.
-Response sukses juga mencantumkan `provider` dan `model`; `warning: "IMAGE_UNAVAILABLE"` muncul jika ada gambar yang tidak terbaca.
+Response sukses juga mencantumkan `provider` dan `model`. `warning` dapat berisi `IMAGE_UNAVAILABLE`, `IMAGE_OCR_FALLBACK`, `GPT_IMAGE_UNSUPPORTED`, atau `GROQ_UNAVAILABLE` sesuai jalur gambar/provider.
 
 **Response error**
 ```json
@@ -237,7 +242,7 @@ Response sukses juga mencantumkan `provider` dan `model`; `warning: "IMAGE_UNAVA
 | `INTERNAL` | 500 | Lainnya |
 
 ### `GET /api/health`
-Mengembalikan `{ "ok": true, "time": "<ISO>", "providers": { "harbor": true, "gemini": true } }`. Dipakai tombol "Tes koneksi" di panel pengaturan.
+Mengembalikan `{ "ok": true, "time": "<ISO>", "providers": { "harbor": true, "gemini": true, "groq": true } }`. Dipakai tombol "Tes koneksi" di panel pengaturan.
 
 ### CORS
 Background tidak terkena CORS, tetapi tetap pasang header CORS yang rapi (`Access-Control-Allow-Origin` sesuai env `ALLOWED_ORIGINS`, tangani `OPTIONS`) agar bisa dites dari browser biasa.
@@ -246,7 +251,7 @@ Background tidak terkena CORS, tetapi tetap pasang header CORS yang rapi (`Acces
 
 ## 7. Integrasi Provider dan Model
 
-Token Harbor memakai endpoint OpenAI-compatible `/v1/chat/completions` di `https://tokenharbor.ai`. Gemini memakai Google AI Interactions API dengan JSON terstruktur. `API-DOCS.txt` menjadi referensi awal; untuk field request Gemini yang lebih baru, verifikasi lewat dokumentasi resmi Google.
+Token Harbor dan Groq memakai endpoint OpenAI-compatible `/v1/chat/completions`; Groq memakai `https://api.groq.com/openai/v1`. Gemini memakai Google AI Interactions API dengan JSON terstruktur. `API-DOCS.txt` menjadi referensi awal; untuk field request Gemini yang lebih baru, verifikasi lewat dokumentasi resmi Google. API key Groq disimpan di `GROQ_API_KEY` dan dipakai oleh OCR Qwen maupun GPT-OSS.
 
 Model yang tersedia untuk pilihan manual:
 
@@ -258,13 +263,17 @@ Model yang tersedia untuk pilihan manual:
 | Gemini fallback | `gemini-3.5-flash-lite` |
 | Gemini fallback | `gemini-3.6-flash` |
 | Gemini fallback | `gemini-3.8-flash` |
+| Groq OCR gambar | `qwen/qwen3.8-27b` |
+| Groq jawaban teks | `openai/gpt-oss-120b` |
 
 Ketentuan:
 
-- Environment `HARBOR_MODEL` dan `GEMINI_MODEL` menjadi default. Ekstensi mengirim pilihan model manual; backend menerima hanya ID allowlist di atas.
-- Route MiMo `mimo-v2.6-flash:free` saat ini hanya menerima teks. Jika model itu dipilih untuk soal bergambar, Harbor dicoba tanpa gambar dan UI memberi peringatan; fallback Gemini tetap menerima gambar.
-- Harbor selalu dicoba lebih dulu. Hanya kegagalan jaringan, timeout, HTTP 408/429, dan HTTP 5xx yang memicu fallback Gemini. Error autentikasi dan payload tidak valid langsung dilaporkan.
-- Harbor mengirim prompt untuk menghasilkan objek JSON. Gemini memakai `response_format` JSON schema. Kedua respons dinormalisasi di server sebelum dikirim ke ekstensi.
+- Environment `HARBOR_MODEL`, `GEMINI_MODEL`, `GROQ_OCR_MODEL`, dan `GROQ_ANSWER_MODEL` menjadi default. Ekstensi mengirim pilihan provider dan model; backend menerima hanya ID allowlist di atas.
+- Route MiMo `mimo-v2.6-flash:free` saat ini hanya menerima teks. Jika dipilih tanpa OCR pada soal bergambar, Harbor dicoba tanpa gambar dan UI memberi peringatan; provider fallback yang mendukung gambar masih dapat memprosesnya.
+- Harbor menjadi provider utama secara default. Jika Groq GPT-OSS dipilih sebagai utama, Harbor dicoba sebagai fallback. Kegagalan jaringan, timeout, HTTP 408/429/5xx, dan output jawaban yang tidak valid dapat memicu provider berikutnya; error autentikasi langsung dilaporkan.
+- OCR Groq Qwen adalah opsi terpisah. Saat aktif, Qwen menyalin gambar menjadi teks bersih sebelum dikirim ke model jawaban. Qwen memproses maksimal tiga gambar per permintaan, sehingga empat gambar dibagi menjadi beberapa kelompok. Jika OCR gagal, backend kembali mencoba gambar langsung dengan model jawaban yang mendukungnya.
+- GPT-OSS 120B hanya menerima teks. Jika dipilih pada soal bergambar dan OCR tidak aktif/gagal, GPT-OSS dilewati; Harbor dan Gemini (bila aktif) menjadi jalur jawaban.
+- Harbor, Groq GPT-OSS, dan Gemini mengirim prompt untuk menghasilkan objek JSON. Respons dinormalisasi di server sebelum dikirim ke ekstensi.
 - Gunakan temperatur rendah, output pendek, dan thinking minimal di Gemini. Retry Gemini paling banyak satu kali untuk 429/5xx.
 - `normalize.js` hanya mengizinkan key yang ada di opsi soal. Server membentuk `display`, misalnya `D. CH3COOH`, bukan mengambil display bebas dari model.
 
@@ -295,7 +304,8 @@ Urutan strategi:
 3. **Fallback server** (`lib/images.js`): jika hanya ada `url`, server mengambil gambar dengan:
    - **Allowlist host** ketat: hanya `*.googleusercontent.com`, `*.ggpht.com`, `*.gstatic.com`. Tolak yang lain (cegah SSRF).
    - HTTPS saja, batas 4 MB, timeout 5 dtk, validasi `content-type`.
-4. Bila semua gagal, API tetap menjawab dari teks dan menambahkan `warning: "IMAGE_UNAVAILABLE"` di response; UI menampilkan peringatan kecil: "Gambar tidak terbaca, jawaban mungkin kurang akurat."
+4. Jika toggle OCR aktif, API mengirim gambar ke Groq Qwen 3.8 27B terlebih dahulu untuk menyalin angka, rumus, tabel, dan label diagram menjadi teks; hasil OCR lalu dimasukkan ke prompt model jawaban. Maksimal 3 gambar per permintaan Qwen; kelompokkan bila soal memiliki 4 gambar.
+5. Jika OCR gagal, API kembali memakai gambar langsung pada model yang mendukungnya. Bila gambar tidak tersedia, API tetap menjawab dari teks dan menambahkan `warning: "IMAGE_UNAVAILABLE"` di response; UI menampilkan peringatan kecil.
 
 Deteksi gambar di parser:
 - **Gambar soal:** `<img>` di blok soal yang **bukan** bagian dari elemen opsi.
@@ -391,7 +401,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 ### 9.4 Panel Pengaturan di Halaman
 
 - Tidak ada popup toolbar. Tombol ⚙ yang terlihat pada halaman respondent membuka panel Shadow DOM.
-- Panel mengatur toggle saran, Base URL API, token klien, bahasa, model Harbor utama, dan model Gemini cadangan.
+- Panel mengatur toggle saran, Base URL API, token klien, bahasa, model Harbor, model jawaban utama Harbor/GPT-OSS, OCR Qwen, dan model Gemini cadangan.
 - Tombol "Tes koneksi" memanggil `/api/health`; simpanan konfigurasi berada di `storage.local`.
 - Pengguna memberi izin host API HTTPS yang dimasukkan. Tombol pengaturan tetap tampil saat saran dimatikan agar fitur dapat diaktifkan kembali.
 - Tampilkan catatan penggunaan sesuai §0.
@@ -406,8 +416,11 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
   ```
   TOKENHARBOR_API_KEY=
   GEMINI_API_KEY=
+  GROQ_API_KEY=
   HARBOR_MODEL=qwen3.8-flash:free
   GEMINI_MODEL=gemini-3.8-flash
+  GROQ_ANSWER_MODEL=openai/gpt-oss-120b
+  GROQ_OCR_MODEL=qwen/qwen3.8-27b
   GEMINI_THINKING_BUDGET=0
   CLIENT_TOKEN=
   ALLOWED_ORIGINS=
@@ -552,7 +565,8 @@ Taktik:
 | CSP/CORS memblokir request | Tidak ada jawaban | Semua request lewat background + `host_permissions` |
 | Gambar tidak bisa diambil | Jawaban kurang akurat | Fallback URL di server, peringatan di UI |
 | Latensi > 3 dtk | Pengalaman buruk | Model flash, thinking minimal, output pendek, spinner cepat |
-| Kuota Harbor/Gemini membengkak | Layanan berhenti | Rate limit, batas ukuran, token klien, pantau kuota masing-masing provider |
+| Kuota Harbor/Gemini/Groq membengkak | Layanan berhenti | Rate limit, batas ukuran, token klien, pantau kuota masing-masing provider |
+| Groq tidak terkonfigurasi / OCR gagal | GPT-OSS atau OCR tidak tersedia | Tes koneksi melaporkan status Groq; fallback ke Harbor dan Gemini sesuai pengaturan |
 | Token klien bocor | Penyalahgunaan API | Rate limit per IP, rotasi `CLIENT_TOKEN`, batas harian |
 | Firefox rilis menolak ekstensi tak ter-sign | Tidak bisa dipasang | Sign unlisted lewat AMO (Fase 6) |
 | Jawaban AI salah | Pengguna tertipu | Tampilkan confidence + penjelasan; ingatkan ini hanya saran |

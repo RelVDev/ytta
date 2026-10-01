@@ -48,8 +48,15 @@
         requestId,
         payload: {
           lang: settings.lang,
-          models: { harbor: settings.harborModel, gemini: settings.geminiModel },
-          onlyHarbor: settings.onlyHarbor === true,
+          models: {
+            harbor: settings.harborModel,
+            gemini: settings.geminiModel,
+            groqAnswer: "openai/gpt-oss-120b",
+            groqOcr: "qwen/qwen3.8-27b"
+          },
+          answerProvider: settings.answerProvider === "groq" ? "groq" : "harbor",
+          imageToText: settings.imageToText === true,
+          disableGemini: settings.onlyHarbor === true,
           question
         }
       });
