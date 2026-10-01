@@ -1,0 +1,2030 @@
+TOKEN HARBOR:
+ChatChat
+ModelsModels
+PricingPricing
+Connect
+BlogBlog
+DocsDocs
+Balance$0.00
+V
+
+Overview
+
+    Introduction
+
+Billing
+
+    Subscription
+    Credits & top-ups
+    Rewards
+    Referrals
+
+API
+
+    Chat APIs
+    Models
+    Prompt caching on Claude
+    How we measure speed
+    Rate limits
+
+Compare
+
+    Token Harbor vs OpenRouter
+
+Connect
+
+    Connect CLI
+    Halyard
+
+Getting started
+
+    Quickstart
+    Universal Key
+
+Integrations
+
+    Manual setup (all agents)
+    Claude Code
+    OpenAI Codex
+    Cursor
+    Cline / Roo Code
+    opencode
+    Aider
+    Continue
+    Windsurf
+    Zed
+    Cherry Studio
+    pi
+    OpenClaw
+
+Web chat
+
+    Limits
+
+API
+Chat APIs
+Copy page
+
+Two compatible endpoint shapes — /v1/chat/completions for OpenAI SDKs and /v1/messages for the Anthropic SDK. Same auth, same router, same bill.
+Anything that already speaks to OpenAI or Anthropic works on Token Harbor with a single base-URL swap. Grab or rotate a key on the dashboard first; keys look like thk_live_….
+OpenAI-compatible · /v1/chat/completions
+
+Drop-in compatible with the OpenAI Chat Completions schema. Auth header is Authorization: Bearer thk_….
+Non-streaming
+
+Returns the full response in a single JSON body. Best for short completions and synchronous request paths.
+Python
+TypeScript (fetch)
+Shell
+PowerShell (Windows)
+
+const res = await fetch("https://tokenharbor.ai/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    Authorization: "Bearer thk_live_PASTE_YOURS_HERE",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    model: "tokenharbor/qwen3-max",
+    messages: [{ role: "user", content: "Hi" }],
+  }),
+});
+const data = await res.json();
+console.log(data.choices[0].message.content);
+
+On Windows PowerShell, use the PowerShell tab (Invoke-RestMethod). The aliased curl is actually Invoke-WebRequest, and even curl.exe mangles the JSON quoting — that's the usual cause of a bad range specification error, or an invalid_api_key when a long key gets a stray space or line-break. Always paste your key in full, with no spaces.
+Streaming
+
+Pass stream: true and the server emits Server-Sent Events so tokens arrive as they're generated.
+Python
+TypeScript (fetch)
+Shell
+
+import requests
+
+with requests.post(
+    url="https://tokenharbor.ai/v1/chat/completions",
+    headers={
+        "Authorization": "Bearer thk_live_PASTE_YOURS_HERE",
+        "Content-Type": "application/json",
+    },
+    json={
+        "model": "tokenharbor/qwen3-max",
+        "messages": [{"role": "user", "content": "Write a haiku about the sea."}],
+        "stream": True,
+    },
+    stream=True,
+) as r:
+    for line in r.iter_lines():
+        if line:
+            print(line.decode("utf-8"))
+
+Claude-compatible · /v1/messages
+
+Anthropic Messages API shape. Point the official @anthropic-ai/sdk or anthropic Python client at Token Harbor by setting base_url (or baseURL). Auth accepts either x-api-key (Anthropic default) or Authorization: Bearer — pass your thk_live_ key in either header.
+Non-streaming
+
+Returns a single message object with the assistant's reply in content[0].text. max_tokens is required by the Anthropic schema.
+Python
+TypeScript
+Shell
+
+from anthropic import Anthropic
+
+client = Anthropic(
+    api_key="thk_live_PASTE_YOURS_HERE",
+    base_url="https://tokenharbor.ai",
+)
+
+message = client.messages.create(
+    model="tokenharbor/qwen3-max",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Hi"}],
+)
+print(message.content[0].text)
+
+Streaming
+
+The Anthropic SDK exposes a typed event stream (message_start, content_block_delta, message_stop, etc.). Our adapter emits the same events so SDK handlers keep working.
+Python
+TypeScript
+Shell
+
+from anthropic import Anthropic
+
+client = Anthropic(
+    api_key="thk_live_PASTE_YOURS_HERE",
+    base_url="https://tokenharbor.ai",
+)
+
+with client.messages.stream(
+    model="tokenharbor/qwen3-max",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Write a haiku about the sea."}],
+) as stream:
+    for text in stream.text_stream:
+        print(text, end="", flush=True)
+
+Model id is whatever appears in /models — every gateway model works on both endpoints. Routing to the cheapest healthy upstream happens internally regardless of which shape you call.
+Prompt handling
+
+Pure pass-through. Your system and messages are forwarded byte-for-byte to the model you name; we never add or rewrite anything.
+Next steps
+
+    Browse the full catalog at /models — every entry shows the exact per-million input/output price.
+    Create, rotate, or revoke keys on the dashboard.
+
+On this page
+
+    OpenAI-compatible · /v1/chat/completions
+    Non-streaming
+    Streaming
+    Claude-compatible · /v1/messages
+    Non-streaming
+    Streaming
+    Prompt handling
+    Next steps
+
+Token Harbor - One API for the world's leading AI models
+
+
+
+
+
+GOOGLE GEMINI AI STUDIO:# Interactions API
+
+The Interactions API is our new interface and the most straightforward way to
+build with Gemini models and agents. As of June 2026, it is Generally Available
+and the recommended interface for all new projects.
+
+While it is now considered legacy, the original
+[`generateContent`](/docs/text-generation?generate-content=true) API remains fully
+supported.
+
+## Why use the Interactions API?  {% id="why-interactions" %}
+
+*     **New capabilities out of the box**: Optional server-side conversation state
+  using `previous_interaction_id`, observable execution steps for debugging
+  and UI rendering, and background execution for long-running tasks using
+  `background=true`.
+
+*     **Lower cost with higher cache hit rates**: Server-side state management
+  enables more efficient context caching across turns, reducing token costs
+  for multi-turn conversations.
+
+*     **Built for frontier models and agents**: Purpose-built for thinking models,
+  multi-step tool use, and complex reasoning flows — simplifying the process
+  of building, debugging, and orchestrating agentic applications.
+
+*     **Single API for models and agents**: One unified interface for calling
+  Gemini models and agents directly such as Deep Research and custom managed
+  agents — no separate endpoints or patterns to learn.
+
+*     **Where new things launch**: Going forward, new models and capabilities
+  beyond the core mainline family, along with new agentic capabilities and
+  tools, will launch on the Interactions API.
+
+
+By default, the Interactions API stores requests so you can leverage the
+server-side state management features by using `previous_interaction_id`. You
+can opt into stateless behavior by setting `store=false`. See the [data
+retention](/docs/interactions-overview#data-storage-retention) section for
+details.
+
+## Get started  {% id="get-started" %}
+
+*     **Set up your coding agent**: Connect to the **Gemini Docs MCP** and install
+  the `gemini-api-dev` skill to give your assistant direct access to the
+  latest developer docs and best practices. [Set up your coding agent
+  →](/docs/coding-agents)
+
+*     **Migrate from `generateContent`**: If you have an existing integration,
+  follow the [Migration Guide](/docs/migrate-to-interactions) to transition to
+  the Interactions API.
+
+*     **Get started**: Get started in the [Interactions API Get started
+  guide](/docs/get-started).
+
+
+### Feature Guides  {% id="feature-guides" %}
+
+Explore the specific capabilities of the Interactions API through these guides.
+You can use the toggle on these pages to switch between generateContent and
+Interactions API:
+
+*   [Text generation](/docs/text-generation)
+*   [Image generation](/docs/image-generation)
+*   [Image understanding](/docs/image-understanding)
+*   [Audio understanding](/docs/audio)
+*   [Video understanding](/docs/video-understanding)
+*   [Document processing](/docs/document-processing)
+*   [Function calling](/docs/function-calling)
+*   [Structured output](/docs/structured-output)
+*   [Deep Research agent](/docs/deep-research)
+*   [Flex inference](/docs/flex-inference)
+*   [Priority inference](/docs/priority-inference)
+
+## How the Interactions API works  {% id="how-it-works" %}
+
+The Interactions API centers around a core resource: the
+[**`Interaction`**](https://ai.google.dev/api/interactions-api#Resource:Interaction).
+An `Interaction` represents a complete turn in a conversation or task. It acts
+as a session record, containing the entire history of an interaction as a
+chronological sequence of **execution steps**. These steps include model
+thoughts, server-side or client-side tool calls and results (like
+`function_call` and `function_result`), and the final `model_output`. The stored
+resource (retrieved via `interactions.get`) also includes `user_input` steps for
+full context, though the `interactions.create` response only returns
+model-generated steps.
+
+When you make a call to
+[`interactions.create`](https://ai.google.dev/api/interactions-api#CreateInteraction),
+you are creating a new `Interaction` resource:
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  
+  client = genai.Client()
+  
+  interaction = client.interactions.create(
+      model="gemini-3.8-flash",
+      input="Tell me a short story about a time-traveling lighthouse."
+  )
+  
+  print(interaction.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  ```javascript
+  import { GoogleGenAI } from "@google/genai";
+  
+  const client = new GoogleGenAI();
+  
+  const interaction = await client.interactions.create({
+    model: "gemini-3.8-flash",
+    input: "Tell me a short story about a time-traveling lighthouse.",
+  });
+  
+  console.log(interaction.output_text);
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  
+  Client client = new Client();
+  
+  CreateModelInteraction params =
+      CreateModelInteraction.builder()
+          .model(Model.of("gemini-3.8-flash"))
+          .input(InteractionsInput.of("Tell me a short story about a time-traveling lighthouse."))
+          .build();
+  
+  Interaction interaction =
+      client.interactions.create(CreateInteractionRequestBody.of(params)).interaction().get();
+  
+  System.out.println(interaction.outputText().orElse(""));
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "context"
+      "fmt"
+      "log"
+  
+      "google.golang.org/genai"
+      "google.golang.org/genai/interactions/models/interactions"
+      "google.golang.org/genai/interactions/models/operations"
+  )
+  
+  func main() {
+      ctx := context.Background()
+      client, err := genai.NewClient(ctx, nil)
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      res, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+          Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+              Model: interactions.Model("gemini-3.8-flash"),
+              Input: interactions.NewInteractionsInput("Tell me a short story about a time-traveling lighthouse."),
+          }),
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+      if res.Interaction.OutputText != nil {
+          fmt.Println(*res.Interaction.OutputText)
+      }
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="REST" %}
+  ```bash
+  curl -X POST "https://generativelanguage.googleapis.com/v1beta/interactions" \
+    -H "Content-Type: application/json" \
+    -H "x-goog-api-key: $GEMINI_API_KEY" \
+    -d '{
+      "model": "gemini-3.8-flash",
+      "input": "Tell me a short story about a time-traveling lighthouse."
+    }'
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+### Server-side state management  {% id="server-side-state" %}
+
+You can use the `id` of a completed interaction in a subsequent call using the
+`previous_interaction_id` parameter to continue the conversation. The server
+uses this ID to retrieve the conversation history, saving you from having to
+resend the entire chat history:
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  
+  client = genai.Client()
+  
+  # 1. First turn
+  turn1 = client.interactions.create(
+      model="gemini-3.8-flash",
+      input="Hi, my name is Phil."
+  )
+  
+  # 2. Second turn (chained using previous_interaction_id)
+  turn2 = client.interactions.create(
+      model="gemini-3.8-flash",
+      input="What is my name?",
+      previous_interaction_id=turn1.id
+  )
+  
+  print(turn2.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  ```javascript
+  import { GoogleGenAI } from "@google/genai";
+  
+  const client = new GoogleGenAI();
+  
+  // 1. First turn
+  const turn1 = await client.interactions.create({
+    model: "gemini-3.8-flash",
+    input: "Hi, my name is Phil.",
+  });
+  
+  // 2. Second turn (chained using previous_interaction_id)
+  const turn2 = await client.interactions.create({
+    model: "gemini-3.8-flash",
+    input: "What is my name?",
+    previous_interaction_id: turn1.id,
+  });
+  
+  console.log(turn2.output_text);
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  
+  Client client = new Client();
+  
+  // 1. First turn
+  Interaction turn1 =
+      client
+          .interactions
+          .create(
+              CreateInteractionRequestBody.of(
+                  CreateModelInteraction.builder()
+                      .model(Model.of("gemini-3.8-flash"))
+                      .input(InteractionsInput.of("Hi, my name is Phil."))
+                      .build()))
+          .interaction()
+          .get();
+  
+  // 2. Second turn (chained using previousInteractionId)
+  Interaction turn2 =
+      client
+          .interactions
+          .create(
+              CreateInteractionRequestBody.of(
+                  CreateModelInteraction.builder()
+                      .model(Model.of("gemini-3.8-flash"))
+                      .input(InteractionsInput.of("What is my name?"))
+                      .previousInteractionId(turn1.id().get())
+                      .build()))
+          .interaction()
+          .get();
+  
+  System.out.println(turn2.outputText().orElse(""));
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "context"
+      "fmt"
+      "log"
+  
+      "google.golang.org/genai"
+      "google.golang.org/genai/interactions/models/interactions"
+      "google.golang.org/genai/interactions/models/operations"
+  )
+  
+  func main() {
+      ctx := context.Background()
+      client, err := genai.NewClient(ctx, nil)
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      // 1. First turn
+      turn1, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+          Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+              Model: interactions.Model("gemini-3.8-flash"),
+              Input: interactions.NewInteractionsInput("Hi, my name is Phil."),
+          }),
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      // 2. Second turn (chained using PreviousInteractionID)
+      turn2, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+          Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+              Model:                 interactions.Model("gemini-3.8-flash"),
+              Input:                 interactions.NewInteractionsInput("What is my name?"),
+              PreviousInteractionID: turn1.Interaction.ID,
+          }),
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+      if turn2.Interaction.OutputText != nil {
+          fmt.Println(*turn2.Interaction.OutputText)
+      }
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="REST" %}
+  ```bash
+  # Replace PREVIOUS_INTERACTION_ID with the id returned from the first turn
+  curl -X POST "https://generativelanguage.googleapis.com/v1beta/interactions" \
+    -H "Content-Type: application/json" \
+    -H "x-goog-api-key: $GEMINI_API_KEY" \
+    -d '{
+      "model": "gemini-3.8-flash",
+      "input": "What is my name?",
+      "previous_interaction_id": "PREVIOUS_INTERACTION_ID"
+    }'
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+The `previous_interaction_id` parameter preserves only the conversation history
+(inputs and outputs) using `previous_interaction_id`. The other parameters are
+**interaction-scoped** and apply only to the specific interaction you are
+currently generating:
+
+-   `tools`
+-   `system_instruction`
+-   `generation_config` (including `thinking_level`, `temperature`, etc.)
+
+This means you must re-specify these parameters in each new interaction if you
+want them to apply. This server-side state management is optional; you can also
+operate in stateless mode by sending the full conversation history in each
+request.
+
+### Data storage and retention  {% id="data-storage-retention" %}
+
+By default, the API stores all Interaction objects (`store=true`) in order to
+simplify use of server-side state management features (with
+`previous_interaction_id`), background execution (using `background=true`) and
+observability purposes.
+
+-   **Paid Tier**: The system retains interactions for **55 days**.
+-   **Free Tier**: The system retains interactions for **1 day**.
+
+If you don't want this, you can set `store=false` in your request. This control
+is separate from state management; you can opt out of storage for any
+interaction. However, note that `store=false` is incompatible with [background
+execution](/docs/background-execution) and prevents using
+`previous_interaction_id` for subsequent turns.
+
+For Paid Tier projects, you can configure the retention window in [AI
+Studio](https://aistudio.google.com/logs) to automatically mark logs for
+deletion from project storage after 7, 14, 28, or 55 days. A shorter retention
+may affect retrieval of past conversations.
+
+You can delete stored interactions at any time using the [`delete`](https://ai.google.dev/api/interactions-api#deleteInteraction) method programmatically, which
+requires the interaction ID. You can also view and manage stored interactions
+logs, including deletion from project storage, in [AI
+Studio](https://aistudio.google.com/logs).
+
+After the retention period expires, your data will be deleted automatically.
+
+Interactions objects are processed according to the [terms](/docs/terms).
+
+### View interactions in AI Studio  {% id="viewing-interactions-in-ai-studio" %}
+
+The API stores Interactions API requests executed with `store=true` for projects
+on the Paid Tier. You can view them directly from the [Logs page in Google AI
+Studio](https://aistudio.google.com/logs). See the [Logs
+guide](/docs/logs-datasets) for more.
+
+## Best practices  {% id="best-practices" %}
+
+*   **Cache hit rate**: Implicit caching is supported in both stateful and
+  stateless modes (see
+  [Quickstart](/docs/get-started#4_multi-turn_conversations)). Using
+  `previous_interaction_id` (stateful) to continue conversations allows the
+  system to more easily utilize implicit caching for the conversation history,
+  which improves performance and reduces costs.
+*   **Mixing interactions**: You have the flexibility to mix and match Agent and
+  Model interactions within a conversation. For example, you can use a
+  specialized agent, like the Deep Research agent, for initial data
+  collection, and then use a standard Gemini model for follow-up tasks such as
+  summarizing or reformatting, linking these steps with the
+  `previous_interaction_id`.
+
+## Supported models & agents  {% id="supported-models-agents" %}
+
+| Model Name | Type | Model ID |
+| :--- | :--- | :--- |
+| Gemini 3.8 Flash | Model | `gemini-3.8-flash` |
+| Gemini 3.7 Flash | Model | `gemini-3.7-flash` |
+| Gemini 3.6 Flash | Model | `gemini-3.6-flash` |
+| Gemini 3.5 Flash | Model | `gemini-3.5-flash` |
+| Gemini 3.1 Pro Preview | Model | `gemini-3.1-pro-preview` |
+| Gemini 3.5 Flash-Lite | Model | `gemini-3.5-flash-lite` |
+| Gemini 3.1 Flash-Lite | Model | `gemini-3.1-flash-lite` |
+| Gemini 3 Flash Preview | Model | `gemini-3-flash-preview` |
+| Gemini 2.5 Pro | Model | `gemini-2.5-pro` |
+| Gemini 2.5 Flash | Model | `gemini-2.5-flash` |
+| Gemini 2.5 Flash-lite | Model | `gemini-2.5-flash-lite` |
+| Gemini 3 Pro Image | Model | `gemini-3-pro-image` |
+| Gemini 3.1 Flash Image | Model | `gemini-3.1-flash-image` |
+| Gemini 3.1 Flash TTS Preview | Model | `gemini-3.1-flash-tts-preview` |
+| Gemma 4 31B IT | Model | `gemma-4-31b-it` |
+| Gemma 4 26B MoE IT | Model | `gemma-4-26b-a4b-it` |
+| Lyria 3.5 | Model | `lyria-3.5` |
+| Lyria 3 Clip Preview | Model | `lyria-3-clip-preview` |
+| Lyria 3 Pro Preview | Model | `lyria-3-pro-preview` |
+| Deep Research Preview | Agent | `deep-research-preview-04-2026` |
+| Deep Research Preview | Agent | `deep-research-max-preview-04-2026` |
+| Antigravity Preview | Agent | `antigravity-preview-09-2026` |
+
+## SDKs  {% id="sdk" %}
+
+You can use latest version of the Google GenAI SDKs in order to access
+Interactions API.
+
+*   On Python, this is `google-genai` package from `2.3.0` version onwards.
+*   On JavaScript, this is `@google/genai` package from `2.3.0` version onwards.
+*   On Go, this is `google.golang.org/genai` package.
+*   On Java, this is `com.google.genai:google-genai` package.
+
+You can learn more about how to install the SDKs on [Libraries](/docs/libraries)
+page.
+
+## Limitations  {% id="limitations" %}
+
+*   **Remote MCP**: Gemini 3 does not support remote MCP, this is coming soon.
+*   **Multi-turn model compatibility**: When mixing different models in a
+  conversation (either stateful or stateless), subsequent models must support
+  the output modalities of the previous models as input. For example, if you
+  generate an image using `gemini-3.1-flash-image`, you cannot continue that
+  conversation with a model that doesn't accept image inputs (such as a
+  text-only model or a music-generation model like Lyria).
+
+The following features are supported by the
+[`generateContent`](/docs/text-generation?generate-content=true) API but are **not
+yet available** in the Interactions API:
+
+*   **[Batch API](/docs/batch-api)**
+*   **[Automatic function calling
+  (Python)](/docs/function-calling?example=meeting#automatic_function_calling_python_only)**  *   **[Explicit caching](/docs/caching)**: Note that server-side implicit
+    caching is available in the Interactions API via
+    `previous_interaction_id`.
+
+*   **[Safety settings](/docs/safety-settings)**: Custom safety settings are not
+  supported in the Interactions API.
+
+## Feedback  {% id="feedback" %}
+
+Your feedback is critical to the development of the Interactions API. Share your
+thoughts, report bugs, or request features on our [Google AI Developer Community
+Forum](https://discuss.ai.google.dev/c/gemini-api/4).
+
+## What's next  {% id="whats-next" %}
+
+*   Try the [Interactions API quickstart
+  notebook](https://colab.sandbox.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Get_started_interactions_api.ipynb).  *   Learn more about the [Gemini Deep Research agent](/docs/deep-research).
+
+
+# File input methods
+
+This guide explains the different ways you can include media files such as
+images, audio, video, and documents when making requests to the Gemini API.
+The new methods are supported in all of the Gemini API endpoints, including
+Batch, Interactions and Live API.
+Choosing the right method depends on the size of your file, where your data is
+stored, and how frequently you plan to use the file.
+
+The simplest way to include a file as your input is to read a local file and
+include it in a prompt. The following example shows how to read a local PDF
+file. PDFs are limited to 50MB for this method. See the
+[Input method comparison table](/docs/file-input-methods#method-comparison) for a complete list of file
+input types and limits.
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  import pathlib
+  import base64
+  
+  client = genai.Client()
+  
+  filepath = pathlib.Path('my_local_file.pdf')
+  
+  prompt = "Summarize this document"
+  interaction = client.interactions.create(
+      model="gemini-3.8-flash",
+      input=[
+          {"type": "text", "text": prompt},
+          {"type": "document", "data": base64.b64encode(filepath.read_bytes()).decode('utf-8'), "mime_type": "application/pdf"}
+      ]
+  )
+  print(interaction.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  ```javascript
+  import { GoogleGenAI } from "@google/genai";
+  import * as fs from 'node:fs';
+  
+  const client = new GoogleGenAI({});
+  const prompt = "Summarize this document";
+  
+  async function main() {
+      const filePath = 'my_local_file.pdf';
+  
+      const interaction = await client.interactions.create({
+          model: "gemini-3.8-flash",
+          input: [
+              { type: "text", text: prompt },
+              {
+                  type: "document",
+                  data: fs.readFileSync(filePath).toString("base64"),
+                  mime_type: "application/pdf"
+              }
+          ]
+      });
+      console.log(interaction.output_text);
+  }
+  
+  main();
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.Content;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.DocumentContent;
+  import com.google.genai.gaos.models.interactions.DocumentContentMimeType;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.interactions.TextContent;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  import java.nio.file.Files;
+  import java.nio.file.Paths;
+  import java.util.Arrays;
+  import java.util.Base64;
+  import java.util.List;
+  
+  Client client = new Client();
+  
+  byte[] pdfBytes = Files.readAllBytes(Paths.get("my_local_file.pdf"));
+  String base64Pdf = Base64.getEncoder().encodeToString(pdfBytes);
+  
+  String prompt = "Summarize this document";
+  
+  Content textContent = TextContent.builder().text(prompt).build();
+  Content docContent =
+      DocumentContent.builder()
+          .data(base64Pdf)
+          .mimeType(DocumentContentMimeType.APPLICATION_PDF)
+          .build();
+  
+  List<Content> contents = Arrays.asList(textContent, docContent);
+  
+  CreateModelInteraction params =
+      CreateModelInteraction.builder()
+          .model(Model.of("gemini-3.8-flash"))
+          .input(InteractionsInput.ofContent(contents))
+          .build();
+  
+  Interaction interaction =
+      client.interactions.create(CreateInteractionRequestBody.of(params)).interaction().get();
+  System.out.println(interaction.outputText().orElse(""));
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "context"
+      "encoding/base64"
+      "fmt"
+      "log"
+      "os"
+  
+      "google.golang.org/genai"
+      "google.golang.org/genai/interactions/models/interactions"
+      "google.golang.org/genai/interactions/models/operations"
+  )
+  
+  func main() {
+      ctx := context.Background()
+      client, err := genai.NewClient(ctx, nil)
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      pdfBytes, err := os.ReadFile("my_local_file.pdf")
+      if err != nil {
+          log.Fatal(err)
+      }
+      base64Pdf := base64.StdEncoding.EncodeToString(pdfBytes)
+  
+      prompt := "Summarize this document"
+  
+      res, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+          Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+              Model: interactions.Model("gemini-3.8-flash"),
+              Input: interactions.NewInteractionsInput([]interactions.Content{
+                  interactions.NewContent(interactions.TextContent{
+                      Text: prompt,
+                  }),
+                  interactions.NewContent(interactions.DocumentContent{
+                      Data:     genai.Ptr(base64Pdf),
+                      MimeType: interactions.DocumentContentMimeTypeApplicationPdf.ToPointer(),
+                  }),
+              }),
+          }),
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+      if res.Interaction.OutputText != nil {
+          fmt.Println(*res.Interaction.OutputText)
+      }
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="REST" %}
+  ```bash
+  # Encode the local file to base64
+  B64_CONTENT=$(base64 -w 0 my_local_file.pdf)
+  
+  curl -X POST "https://generativelanguage.googleapis.com/v1beta/interactions" \
+    -H "x-goog-api-key: $GEMINI_API_KEY" \
+    -H 'Content-Type: application/json' \
+    -H "Api-Revision: 2026-05-20" \
+    -d '{
+      "model": "gemini-3.8-flash",
+      "input": [
+        {"type": "text", "text": "Summarize this document"},
+        {
+          "type": "document",
+          "data": "'${B64_CONTENT}'",
+          "mime_type": "application/pdf"
+        }
+      ]
+    }'
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+## Input method comparison  {% id="method-comparison" %}
+
+The following table compares each input method with file limits and best use
+cases. Note that the file size limit may vary depending on the file type and
+model or tokenizer used to process the file.
+
+{% table %}
+  * Method
+  * Best for
+  * Max file size
+  * Persistence
+
+  ---
+
+  * **Inline data**
+  * Quick testing, small files, real-time applications.
+  * 100 MB per request or payload
+    (**50 MB for PDFs**)
+  * None (sent with every request)
+
+  ---
+
+  * **File API upload**
+  * Large files, files used multiple times.
+  * 2 GB per file,
+    up to 20GB per project
+  * 48 Hours
+
+  ---
+
+  * **File API GCS URI registration**
+  * Large files already in Google Cloud Storage, files used multiple times.
+  * 2 GB per file, no overall storage limits
+  * None (fetched per request). One time registration can give access for up to 30 days.
+
+  ---
+
+  * **External URLs**
+  * Public data or data in cloud buckets (AWS, Azure, GCS) without re-uploading.
+  * 100 MB per request/payload
+  * None (fetched per request)
+{% /table %}
+
+## Inline data  {% id="inline-data" %}
+
+For smaller files (under 100MB, or 50MB for PDFs), you can pass the data
+directly in the request payload. This is the simplest method for quick tests or
+applications handling real-time, transient data. You can provide data as
+base64 encoded strings or by reading local files directly.
+
+For an example of reading from a local file, see the example at the beginning of
+this page.
+
+### Fetch from a URL  {% id="fetch-from-a-url" %}
+
+You can also fetch a file from a URL, convert it to bytes, and include it in the
+input.
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  import httpx
+  
+  client = genai.Client()
+  
+  doc_url = "https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf"
+  doc_data = httpx.get(doc_url).content
+  
+  prompt = "Summarize this document"
+  
+  interaction = client.interactions.create(
+      model="gemini-3.8-flash",
+      input=[
+          {"type": "document", "data": base64.b64encode(doc_data).decode('utf-8'), "mime_type": "application/pdf"},
+          {"type": "text", "text": prompt}
+      ]
+  )
+  print(interaction.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  ```javascript
+  import { GoogleGenAI } from "@google/genai";
+  
+  const client = new GoogleGenAI({});
+  const docUrl = 'https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf';
+  const prompt = "Summarize this document";
+  
+  async function main() {
+      const pdfResp = await fetch(docUrl)
+        .then((response) => response.arrayBuffer());
+  
+      const interaction = await client.interactions.create({
+          model: "gemini-3.8-flash",
+          input: [
+              { type: "text", text: prompt },
+              {
+                  type: "document",
+                  data: Buffer.from(pdfResp).toString("base64"),
+                  mime_type: "application/pdf"
+              }
+          ]
+      });
+      console.log(interaction.output_text);
+  }
+  
+  main();
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.Content;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.DocumentContent;
+  import com.google.genai.gaos.models.interactions.DocumentContentMimeType;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.interactions.TextContent;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  import java.net.URI;
+  import java.net.http.HttpClient;
+  import java.net.http.HttpRequest;
+  import java.net.http.HttpResponse;
+  import java.util.Arrays;
+  import java.util.Base64;
+  import java.util.List;
+  
+  Client client = new Client();
+  
+  String docUrl = "https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf";
+  HttpClient httpClient = HttpClient.newHttpClient();
+  HttpRequest request = HttpRequest.newBuilder().uri(URI.create(docUrl)).build();
+  byte[] docData = httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray()).body();
+  String base64Pdf = Base64.getEncoder().encodeToString(docData);
+  
+  String prompt = "Summarize this document";
+  
+  Content docContent =
+      DocumentContent.builder()
+          .data(base64Pdf)
+          .mimeType(DocumentContentMimeType.APPLICATION_PDF)
+          .build();
+  Content textContent = TextContent.builder().text(prompt).build();
+  
+  List<Content> contents = Arrays.asList(docContent, textContent);
+  
+  CreateModelInteraction params =
+      CreateModelInteraction.builder()
+          .model(Model.of("gemini-3.8-flash"))
+          .input(InteractionsInput.ofContent(contents))
+          .build();
+  
+  Interaction interaction =
+      client.interactions.create(CreateInteractionRequestBody.of(params)).interaction().get();
+  System.out.println(interaction.outputText().orElse(""));
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "context"
+      "encoding/base64"
+      "fmt"
+      "io"
+      "log"
+      "net/http"
+  
+      "google.golang.org/genai"
+      "google.golang.org/genai/interactions/models/interactions"
+      "google.golang.org/genai/interactions/models/operations"
+  )
+  
+  func main() {
+      ctx := context.Background()
+      client, err := genai.NewClient(ctx, nil)
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      docURL := "https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf"
+      resp, err := http.Get(docURL)
+      if err != nil {
+          log.Fatal(err)
+      }
+      defer resp.Body.Close()
+      docData, err := io.ReadAll(resp.Body)
+      if err != nil {
+          log.Fatal(err)
+      }
+      base64Pdf := base64.StdEncoding.EncodeToString(docData)
+  
+      prompt := "Summarize this document"
+  
+      res, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+          Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+              Model: interactions.Model("gemini-3.8-flash"),
+              Input: interactions.NewInteractionsInput([]interactions.Content{
+                  interactions.NewContent(interactions.DocumentContent{
+                      Data:     genai.Ptr(base64Pdf),
+                      MimeType: interactions.DocumentContentMimeTypeApplicationPdf.ToPointer(),
+                  }),
+                  interactions.NewContent(interactions.TextContent{
+                      Text: prompt,
+                  }),
+              }),
+          }),
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+      if res.Interaction.OutputText != nil {
+          fmt.Println(*res.Interaction.OutputText)
+      }
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="REST" %}
+  ```shell
+    DOC_URL="https://discovery.ucl.ac.uk/id/eprint/10089234/1/343019_3_art_0_py4t4l_convrt.pdf"
+    PROMPT="Summarize this document"
+    DISPLAY_NAME="base64_pdf"
+  
+    # Download the PDF
+    wget -O "${DISPLAY_NAME}.pdf" "${DOC_URL}"
+  
+    # Check for FreeBSD base64 and set flags accordingly
+    if [[ "$(base64 --version 2>&1)" = *"FreeBSD"* ]]; then
+      B64FLAGS="--input"
+    else
+      B64FLAGS="-w0"
+    fi
+  
+    # Base64 encode the PDF
+    ENCODED_PDF=$(base64 $B64FLAGS "${DISPLAY_NAME}.pdf")
+  
+    # Create JSON payload file
+    cat <payload.json
+  {
+    "model": "gemini-3.8-flash",
+    "input": [
+      {"type": "document", "data": "${ENCODED_PDF}", "mime_type": "application/pdf"},
+      {"type": "text", "text": "${PROMPT}"}
+    ]
+  }
+  EOF
+  
+      # Generate content using interactions
+      curl -X POST "https://generativelanguage.googleapis.com/v1beta/interactions" \
+          -H "x-goog-api-key: $GEMINI_API_KEY" \
+          -H 'Content-Type: application/json' \
+          -H "Api-Revision: 2026-05-20" \
+          -d @payload.json 2> /dev/null > response.json
+  
+      cat response.json
+      echo
+  
+      jq ".outputs[] | select(.type == \"text\") | .text" response.json
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+## Gemini File API  {% id="file-api" %}
+
+The File API is designed for larger files (up to 2GB) or files you intend to
+use in multiple requests.
+
+### Standard file upload  {% id="standard-file-upload" %}
+
+Upload a local file to the Gemini API. Files uploaded this way are stored
+temporarily (48 hours) and processed for efficient retrieval by the model.
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  
+  client = genai.Client()
+  
+  doc_file = client.files.upload(file="path/to/your/sample.pdf")
+  prompt = "Summarize this document"
+  
+  interaction = client.interactions.create(
+      model="gemini-3.8-flash",
+      input=[
+          {"type": "text", "text": prompt},
+          {"type": "document", "uri": doc_file.uri, "mime_type": doc_file.mime_type}
+      ]
+  )
+  print(interaction.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  ```javascript
+  import { GoogleGenAI } from "@google/genai";
+  
+  const client = new GoogleGenAI({});
+  const prompt = "Summarize this document";
+  
+  async function main() {
+    const filePath = "path/to/your/sample.pdf";
+  
+    const myfile = await client.files.upload({
+      file: filePath,
+      config: { mime_type: "application/pdf" },
+    });
+  
+    const interaction = await client.interactions.create({
+      model: "gemini-3.8-flash",
+      input: [
+          { type: "text", text: prompt },
+          { type: "document", uri: myfile.uri, mime_type: myfile.mimeType }
+      ]
+    });
+    console.log(interaction.output_text);
+  }
+  
+  await main();
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.Content;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.DocumentContent;
+  import com.google.genai.gaos.models.interactions.DocumentContentMimeType;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.interactions.TextContent;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  import com.google.genai.types.File;
+  import com.google.genai.types.UploadFileConfig;
+  import java.util.Arrays;
+  import java.util.List;
+  
+  Client client = new Client();
+  
+  File docFile =
+      client.files.upload(
+          new java.io.File("path/to/your/sample.pdf"),
+          UploadFileConfig.builder().mimeType("application/pdf").build());
+  
+  String prompt = "Summarize this document";
+  
+  Content textContent = TextContent.builder().text(prompt).build();
+  Content docContent =
+      DocumentContent.builder()
+          .uri(docFile.uri().orElse(""))
+          .mimeType(DocumentContentMimeType.of(docFile.mimeType().orElse("application/pdf")))
+          .build();
+  
+  List<Content> contents = Arrays.asList(textContent, docContent);
+  
+  CreateModelInteraction params =
+      CreateModelInteraction.builder()
+          .model(Model.of("gemini-3.8-flash"))
+          .input(InteractionsInput.ofContent(contents))
+          .build();
+  
+  Interaction interaction =
+      client.interactions.create(CreateInteractionRequestBody.of(params)).interaction().get();
+  System.out.println(interaction.outputText().orElse(""));
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "context"
+      "fmt"
+      "log"
+  
+      "google.golang.org/genai"
+      "google.golang.org/genai/interactions/models/interactions"
+      "google.golang.org/genai/interactions/models/operations"
+  )
+  
+  func main() {
+      ctx := context.Background()
+      client, err := genai.NewClient(ctx, nil)
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      docFile, err := client.Files.UploadFromPath(ctx, "path/to/your/sample.pdf", &genai.UploadFileConfig{
+          MIMEType: "application/pdf",
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      prompt := "Summarize this document"
+  
+      res, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+          Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+              Model: interactions.Model("gemini-3.8-flash"),
+              Input: interactions.NewInteractionsInput([]interactions.Content{
+                  interactions.NewContent(interactions.TextContent{
+                      Text: prompt,
+                  }),
+                  interactions.NewContent(interactions.DocumentContent{
+                      URI:      genai.Ptr(docFile.URI),
+                      MimeType: interactions.DocumentContentMimeType(docFile.MIMEType).ToPointer(),
+                  }),
+              }),
+          }),
+      })
+      if err != nil {
+          log.Fatal(err)
+      }
+      if res.Interaction.OutputText != nil {
+          fmt.Println(*res.Interaction.OutputText)
+      }
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="REST" %}
+  ```shell
+  FILE_PATH="path/to/sample.pdf"
+  MIME_TYPE=$(file -b --mime-type "${FILE_PATH}")
+  NUM_BYTES=$(wc -c < "${FILE_PATH}")
+  DISPLAY_NAME=DOCUMENT
+  
+  tmp_header_file=upload-header.tmp
+  
+  # Initial resumable request defining metadata.
+  curl "https://generativelanguage.googleapis.com/upload/v1beta/files" \
+    -D "${tmp_header_file}" \
+    -H "x-goog-api-key: $GEMINI_API_KEY" \
+    -H "X-Goog-Upload-Protocol: resumable" \
+    -H "X-Goog-Upload-Command: start" \
+    -H "X-Goog-Upload-Header-Content-Length: ${NUM_BYTES}" \
+    -H "X-Goog-Upload-Header-Content-Type: ${MIME_TYPE}" \
+    -H "Content-Type: application/json" \
+    -d "{'file': {'display_name': '${DISPLAY_NAME}'}}" 2> /dev/null
+  
+  upload_url=$(grep -i "x-goog-upload-url: " "${tmp_header_file}" | cut -d" " -f2 | tr -d "\r")
+  rm "${tmp_header_file}"
+  
+  # Upload the actual bytes.
+  curl "${upload_url}" \
+    -H "Content-Length: ${NUM_BYTES}" \
+    -H "X-Goog-Upload-Offset: 0" \
+    -H "X-Goog-Upload-Command: upload, finalize" \
+    --data-binary "@${FILE_PATH}" 2> /dev/null > file_info.json
+  
+  file_uri=$(jq ".file.uri" file_info.json)
+  
+  # Now use in an interaction
+  curl -X POST "https://generativelanguage.googleapis.com/v1beta/interactions" \
+      -H "x-goog-api-key: $GEMINI_API_KEY" \
+      -H 'Content-Type: application/json' \
+      -H "Api-Revision: 2026-05-20" \
+      -d '{
+        "model": "gemini-3.8-flash",
+        "input": [
+          {"type": "text", "text": "Summarize this document"},
+          {"type": "document", "uri": '$file_uri', "mime_type": "'${MIME_TYPE}'"}
+        ]
+      }'
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+### Register Google Cloud Storage files  {% id="registration" %}
+
+If your data is already in Google Cloud Storage, you don't need to
+download and re-upload it. You can register it directly with the File API.
+
+1.   Grant **Service Agent** access to each bucket
+
+2.     Enable the Gemini API in your Google Cloud project.
+
+3.     Create the Service Agent:
+
+
+`gcloud beta services identity create --service=generativelanguage.googleapis.com --project=<your_project>`
+
+1.     **Grant the Gemini API Service Agent permissions** to read your storage
+  buckets.
+
+  The user needs to assign the `Storage Object Viewer`
+  [IAM role](https://docs.cloud.google.com/storage/docs/access-control/iam-roles#storage.objectViewer)
+  to this service agent on the specific storage buckets they intend to use.
+
+
+This access doesn't expire by default, but can be changed at any time. You can
+also use the
+[Google Cloud Storage IAM SDK](https://cloud.google.com/iam/docs/write-policy-client-libraries)
+commands to grant permissions.
+
+1.   Authenticate your service
+
+  **Prerequisites**
+
+  * Enable API
+  * Create a service account or agent with appropriate permissions.
+
+
+You first need to authenticate as the service that has storage object viewer
+permissions. How this happens depends on the environment in which your file
+management code will be running.
+
+**Outside of Google Cloud**
+
+If your code is running from outside of Google Cloud, such as your desktop,
+download the account credentials from the Google Cloud Console with the
+following steps:
+
+1.   Browse to the [Service Account console](https://console.cloud.google.com/iam-admin/serviceaccounts)
+2.   Select the relevant service account
+3.   Select the **Keys** tab and choose **Add key, Create new key**
+4.   Choose the **JSON** key type, and note where the file was downloaded to on
+  your machine.
+
+For more details, see the official Google Cloud documentation on
+[service account key management](https://docs.cloud.google.com/iam/docs/keys-create-delete).
+
+Then use the following commands to authenticate. These commands assume your
+service account file is in the current directory, named
+`service-account.json`.
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google.oauth2.service_account import Credentials
+  
+  GCS_READ_SCOPES = [
+    'https://www.googleapis.com/auth/devstorage.read_only',
+    'https://www.googleapis.com/auth/cloud-platform'
+  ]
+  
+  SERVICE_ACCOUNT_FILE = 'service-account.json'
+  
+  credentials = Credentials.from_service_account_file(
+      SERVICE_ACCOUNT_FILE,
+      scopes=GCS_READ_SCOPES
+  )
+  ```
+
+  {% /tab %}
+
+  {% tab label="Javascript" %}
+  ```javascript
+  const { GoogleAuth } = require('google-auth-library');
+  
+  const GCS_READ_SCOPES = [
+    'https://www.googleapis.com/auth/devstorage.read_only',
+    'https://www.googleapis.com/auth/cloud-platform'
+  ];
+  
+  const SERVICE_ACCOUNT_FILE = 'service-account.json';
+  
+  const auth = new GoogleAuth({
+    keyFile: SERVICE_ACCOUNT_FILE,
+    scopes: GCS_READ_SCOPES
+  });
+  ```
+
+  {% /tab %}
+
+  {% tab label="CLI" %}
+  ```bash
+  gcloud auth application-default login \
+    --client-id-file=service-account.json \
+    --scopes='https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/devstorage.read_only'
+  ```
+
+  **On Google Cloud**
+
+  If you are running directly in Google Cloud, for example by using [Cloud
+    Run functions](https://cloud.google.com/functions) or a
+    [Compute Engine instance](https://cloud.google.com/products/compute), you will
+    have implicit credentials but will need to re-authenticate to grant the
+    appropriate scopes.
+
+  {% /tab %}
+
+  {% tab label="Python" %}
+  This code expects that the service is running in an environment where
+    [Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials)
+    can be obtained automatically, such as Cloud Run or Compute Engine.
+
+  ```
+  ```python
+  ```
+
+  import google.auth
+
+  GCS_READ_SCOPES = [
+    'https://www.googleapis.com/auth/devstorage.read_only',
+    'https://www.googleapis.com/auth/cloud-platform'
+    ]
+
+  credentials, project = google.auth.default(scopes=GCS_READ_SCOPES)
+    ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  This code expects that the service is running in an environment where
+    [Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials)
+    can be obtained automatically, such as Cloud Run or Compute Engine.
+
+  ```
+  ```javascript
+  ```
+
+  const { GoogleAuth } = require('google-auth-library');
+
+  const auth = new GoogleAuth({
+    scopes: [
+    'https://www.googleapis.com/auth/devstorage.read_only',
+    'https://www.googleapis.com/auth/cloud-platform'
+    ]
+    });
+    ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.auth.oauth2.GoogleCredentials;
+  import java.io.FileInputStream;
+  import java.util.Arrays;
+  import java.util.List;
+  
+  List<String> gcsReadScopes =
+      Arrays.asList(
+          "https://www.googleapis.com/auth/devstorage.read_only",
+          "https://www.googleapis.com/auth/cloud-platform");
+  
+  String serviceAccountFile = "service-account.json";
+  
+  GoogleCredentials credentials =
+      GoogleCredentials.fromStream(new FileInputStream(serviceAccountFile))
+          .createScoped(gcsReadScopes);
+  ```
+
+  {% /tab %}
+
+  {% tab label="CLI" %}
+  This is an interactive command. For services like Compute Engine you can attach
+    scopes to the running service at the config level. See the
+    [user-managed service docs](https://docs.cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#using)
+    for an example.
+
+  ```
+  ```bash
+  ```
+
+  gcloud auth application-default login   
+    --scopes="https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/devstorage.read_only"
+    ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+1.   File registration (Files API)
+
+  Use the Files API to register files and produce a Files API path that can
+  directly be used in the Gemini API.
+
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  
+  client = genai.Client(credentials=credentials)
+  
+  registered_gcs_files = client.files.register_files(
+      uris=["gs://my_bucket/some_object.pdf", "gs://bucket2/object2.txt"]
+  )
+  prompt = "Summarize this file."
+  
+  for f in registered_gcs_files.files:
+    print(f.name)
+    interaction = client.interactions.create(
+      model="gemini-3.8-flash",
+      input=[
+        {"type": "text", "text": prompt},
+        {"type": "document", "uri": f.uri, "mime_type": f.mime_type}
+      ],
+    )
+    print(interaction.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="JavaScript" %}
+  ```javascript
+  import { GoogleGenAI } from "@google/genai";
+  
+  const ai = new GoogleGenAI({});
+  
+  async function main() {
+      const registeredGcsFiles = await ai.files.registerFiles({
+          uris: ["gs://my_bucket/some_object.pdf", "gs://bucket2/object2.txt"]
+      });
+  
+      const prompt = "Summarize this file.";
+  
+      for (const file of registeredGcsFiles.files) {
+          console.log(file.name);
+          const interaction = await ai.interactions.create({
+              model: "gemini-3.8-flash",
+              input: [
+                  { type: "text", text: prompt },
+                  { type: "document", uri: file.uri, mime_type: file.mimeType }
+              ]
+          });
+  
+          console.log(interaction.output_text);
+      }
+  }
+  
+  main();
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.auth.oauth2.GoogleCredentials;
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.Content;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.DocumentContent;
+  import com.google.genai.gaos.models.interactions.DocumentContentMimeType;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.interactions.TextContent;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  import com.google.genai.types.File;
+  import com.google.genai.types.RegisterFilesResponse;
+  import java.io.FileInputStream;
+  import java.util.Arrays;
+  import java.util.Collections;
+  import java.util.List;
+  
+  GoogleCredentials credentials =
+      GoogleCredentials.fromStream(new FileInputStream("service-account.json"))
+          .createScoped(
+              Arrays.asList(
+                  "https://www.googleapis.com/auth/devstorage.read_only",
+                  "https://www.googleapis.com/auth/cloud-platform"));
+  
+  Client client = Client.builder().credentials(credentials).build();
+  
+  RegisterFilesResponse registeredGcsFiles =
+      client.files.registerFiles(
+          credentials,
+          Arrays.asList("gs://my_bucket/some_object.pdf", "gs://bucket2/object2.txt"),
+          null);
+  
+  String prompt = "Summarize this file.";
+  
+  for (File f : registeredGcsFiles.files().orElse(Collections.emptyList())) {
+    System.out.println(f.name().orElse(""));
+  
+    Content textContent = TextContent.builder().text(prompt).build();
+    Content docContent =
+        DocumentContent.builder()
+            .uri(f.uri().orElse(""))
+            .mimeType(DocumentContentMimeType.of(f.mimeType().orElse("application/pdf")))
+            .build();
+  
+    CreateModelInteraction params =
+        CreateModelInteraction.builder()
+            .model(Model.of("gemini-3.8-flash"))
+            .input(InteractionsInput.ofContent(Arrays.asList(textContent, docContent)))
+            .build();
+  
+    Interaction interaction =
+        client.interactions.create(CreateInteractionRequestBody.of(params)).interaction().get();
+    System.out.println(interaction.outputText().orElse(""));
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "log"
+  
+      "google.golang.org/genai"
+  )
+  
+  func main() {
+      cc := &genai.ClientConfig{}
+      if err := cc.UseDefaultCredentials(); err != nil {
+          log.Fatal(err)
+      }
+      _ = cc.Credentials
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="CLI" %}
+  ```bash
+  access_token=$(gcloud auth application-default print-access-token)
+  project_id=$(gcloud config get-value project)
+  curl -X POST https://generativelanguage.googleapis.com/v1beta/files:register \
+      -H 'Content-Type: application/json' \
+      -H "Authorization: Bearer ${access_token}" \
+      -H "x-goog-user-project: ${project_id}" \
+      -d '{"uris": ["gs://bucket/object1", "gs://bucket/object2"]}'
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+## External HTTP / Signed URLs  {% id="external-urls" %}
+
+You can pass publicly accessible HTTPS URLs or pre-signed URLs directly in your
+request. The Gemini API will fetch the content securely during processing.
+This is ideal for files up to 100MB that you don't want to re-upload.
+
+{% callout type="note" %}
+  Gemini 2.0 family of models are not supported
+
+{% /callout %}
+
+{% tabs %}
+  {% tab label="Python" %}
+  ```python
+  from google import genai
+  
+  uri = "https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf"
+  prompt = "Summarize this file"
+  
+  client = genai.Client()
+  
+  interaction = client.interactions.create(
+      model="gemini-3.8-flash",
+      input=[
+          {"type": "document", "uri": uri, "mime_type": "application/pdf"},
+          {"type": "text", "text": prompt}
+      ]
+  )
+  print(interaction.output_text)
+  ```
+
+  {% /tab %}
+
+  {% tab label="Java" %}
+  ```java
+  import com.google.genai.Client;
+  import com.google.genai.gaos.models.interactions.Content;
+  import com.google.genai.gaos.models.interactions.CreateModelInteraction;
+  import com.google.genai.gaos.models.interactions.DocumentContent;
+  import com.google.genai.gaos.models.interactions.DocumentContentMimeType;
+  import com.google.genai.gaos.models.interactions.Interaction;
+  import com.google.genai.gaos.models.interactions.InteractionsInput;
+  import com.google.genai.gaos.models.interactions.Model;
+  import com.google.genai.gaos.models.interactions.TextContent;
+  import com.google.genai.gaos.models.operations.CreateInteractionRequestBody;
+  import java.util.Arrays;
+  import java.util.List;
+  
+  String uri = "https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf";
+  String prompt = "Summarize this file";
+  
+  Client client = new Client();
+  
+  Content docContent =
+      DocumentContent.builder()
+          .uri(uri)
+          .mimeType(DocumentContentMimeType.APPLICATION_PDF)
+          .build();
+  Content textContent = TextContent.builder().text(prompt).build();
+  
+  List<Content> contents = Arrays.asList(docContent, textContent);
+  
+  CreateModelInteraction params =
+      CreateModelInteraction.builder()
+          .model(Model.of("gemini-3.8-flash"))
+          .input(InteractionsInput.ofContent(contents))
+          .build();
+  
+  Interaction interaction =
+      client.interactions.create(CreateInteractionRequestBody.of(params)).interaction().get();
+  System.out.println(interaction.outputText().orElse(""));
+  ```
+
+  {% /tab %}
+
+  {% tab label="Go" %}
+  ```go
+  package main
+  
+  import (
+      "context"
+      "fmt"
+      "log"
+  
+      "google.golang.org/genai"
+      "google.golang.org/genai/interactions/models/interactions"
+      "google.golang.org/genai/interactions/models/operations"
+  )
+  
+  func main() {
+      ctx := context.Background()
+      cc := &genai.ClientConfig{}
+      if err := cc.UseDefaultCredentials(); err != nil {
+          log.Fatal(err)
+      }
+      client, err := genai.NewClient(ctx, cc)
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      registeredGcsFiles, err := client.Files.RegisterFiles(
+          ctx,
+          []string{"gs://my_bucket/some_object.pdf", "gs://bucket2/object2.txt"},
+          cc.Credentials,
+          nil,
+      )
+      if err != nil {
+          log.Fatal(err)
+      }
+  
+      prompt := "Summarize this file."
+  
+      for _, f := range registeredGcsFiles.Files {
+          fmt.Println(f.Name)
+          res, err := client.Interactions.Create(ctx, operations.CreateInteractionRequest{
+              Body: operations.NewCreateInteractionRequestBody(interactions.CreateModelInteraction{
+                  Model: interactions.Model("gemini-3.8-flash"),
+                  Input: interactions.NewInteractionsInput([]interactions.Content{
+                      interactions.NewContent(interactions.TextContent{
+                          Text: prompt,
+                      }),
+                      interactions.NewContent(interactions.DocumentContent{
+                          URI:      genai.Ptr(f.URI),
+                          MimeType: interactions.DocumentContentMimeType(f.MIMEType).ToPointer(),
+                      }),
+                  }),
+              }),
+          })
+          if err != nil {
+              log.Fatal(err)
+          }
+          if res.Interaction.OutputText != nil {
+              fmt.Println(*res.Interaction.OutputText)
+          }
+      }
+  }
+  ```
+
+  {% /tab %}
+
+  {% tab label="Javascript" %}
+  ```javascript
+  import { GoogleGenAI } from '@google/genai';
+  
+  const client = new GoogleGenAI({});
+  
+  const uri = "https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf";
+  
+  async function main() {
+    const interaction = await client.interactions.create({
+      model: 'gemini-3.8-flash',
+      input: [
+        { type: "document", uri: uri, mime_type: "application/pdf" },
+        { type: "text", text: "summarize this file" }
+      ]
+    });
+  
+    console.log(interaction.output_text);
+  }
+  
+  main();
+  ```
+
+  {% /tab %}
+
+  {% tab label="REST" %}
+  ```bash
+  curl -X POST "https://generativelanguage.googleapis.com/v1beta/interactions" \
+        -H 'x-goog-api-key: $GEMINI_API_KEY' \
+        -H 'Content-Type: application/json' \
+        -H "Api-Revision: 2026-05-20" \
+        -d '{
+            "model": "gemini-3.8-flash",
+            "input": [
+              {"type": "text", "text": "Summarize this pdf"},
+              {
+                "type": "document",
+                "uri": "https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf",
+                "mime_type": "application/pdf"
+              }
+            ]
+          }'
+  ```
+
+  {% /tab %}
+
+{% /tabs %}
+
+### Accessibility  {% id="accessibility" %}
+
+Verify that the URLs you provide don't lead to pages that require a login or
+are behind a paywall. For private databases, ensure you create a signed URL
+with the correct access permissions and expiry.
+
+### Safety checks  {% id="safety-checks" %}
+
+The system performs a content moderation check on the URL to confirm they meet
+safety and policy standards. If the URL fails this check, you will get an
+`url_retrieval_status` of `URL_RETRIEVAL_STATUS_UNSAFE`.
+
+### Supported content types  {% id="supported-content-types" %}
+
+This list of supported file types and limitations is intended as initial
+guidance and is not comprehensive. The effective
+set of supported types is subject to change and can vary based on the specific
+model and tokenizer version in use. Unsupported types will result in an error.
+Additionally, content retrieval for these file types
+only supports publicly accessible URLs.
+
+#### Text file types  {% id="text-file-types" %}
+
+* `text/html`
+* `text/css`
+* `text/plain`
+* `text/xml`
+* `text/csv`
+* `text/rtf`
+* `text/javascript`
+
+#### Application file types  {% id="application-file-types" %}
+
+* `application/json`
+* `application/pdf`
+
+#### Image file types  {% id="image-file-types" %}
+
+* `image/bmp`
+* `image/jpeg`
+* `image/png`
+* `image/webp`
+
+#### Video file types  {% id="video-file-types" %}
+
+* `video/mp4`
+* `video/mpeg`
+* `video/quicktime`
+* `video/avi`
+* `video/x-flv`
+* `video/mpg`
+* `video/webm`
+* `video/wmv`
+* `video/3gpp`
+
+## Best practices  {% id="best-practices" %}
+
+*   **Choose the right method:** Use inline data for small, transient files.
+  Use the File API for larger or frequently used files. Use external URLs
+  for data already hosted online.
+
+*   **Specify MIME Types:** Always provide the correct MIME type for the file
+  data to ensure proper processing.
+
+*   **Handle Errors:** Implement error handling in your code to manage
+  potential issues like network failures, file access problems, or API
+  errors.
+
+
+## Limitations  {% id="limitations" %}
+
+*   File size limits vary by method (see [comparison table](/docs/file-input-methods#method-comparison))
+  and file type.
+
+*   Inline data increases request payload size.
+
+*   File API uploads are temporary and expire after 48 hours.
+
+*   External URL fetching is limited to 100MB per payload and supports specific
+  content types.
+
+
+## What's next  {% id="whats-next" %}
+
+*   Try writing your own multimodal prompts using
+  [Google AI Studio](http://aistudio.google.com/).
+
+*   For information on including files in your prompts, see the
+  [Vision](/docs/image-understanding),
+  [Audio](/docs/audio), and
+  [Document processing](/docs/document-processing)
+  guides.
+
+
+
