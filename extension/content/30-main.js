@@ -49,6 +49,7 @@
         payload: {
           lang: settings.lang,
           models: { harbor: settings.harborModel, gemini: settings.geminiModel },
+          onlyHarbor: settings.onlyHarbor === true,
           question
         }
       });

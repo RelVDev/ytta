@@ -9,6 +9,7 @@
     lang: "auto",
     harborModel: "qwen3.8-flash:free",
     geminiModel: "gemini-3.8-flash",
+    onlyHarbor: false,
     dataConsentAccepted: false
   };
 

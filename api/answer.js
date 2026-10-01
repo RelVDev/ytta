@@ -60,6 +60,7 @@ module.exports = async function answer(req, res) {
       });
     } catch (error) {
       if (!(error instanceof ProviderError) || !error.retryable) throw error;
+      if (payload.onlyHarbor) throw error;
       provider = "gemini";
       usedModel = payload.models.gemini;
       rawOutput = await callGemini({ ...args, model: payload.models.gemini });

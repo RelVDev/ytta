@@ -6,6 +6,7 @@
   "permissions": ["storage"],
   "host_permissions": [
     "https://docs.google.com/forms/*",
+    "https://docs.google.com/forms-images-rt/*",
     "https://drive.google.com/*",
     "https://drive.usercontent.google.com/*",
     "https://*.googleusercontent.com/*",

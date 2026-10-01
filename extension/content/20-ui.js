@@ -108,7 +108,9 @@
       <label for="lang">Bahasa jawaban</label><select id="lang"><option value="auto">Otomatis</option><option value="id">Indonesia</option><option value="en">English</option></select>
       <div class="group"><label for="harborModel">Model utama — Harbor AI</label><select id="harborModel"></select></div>
       <label for="geminiModel">Model cadangan — Gemini AI</label><select id="geminiModel"></select>
-      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal yang saya tanyakan dikirim ke API Vercel untuk diproses oleh Harbor AI, dan dapat diteruskan ke Gemini bila Harbor mengalami gangguan sementara.</label>
+      <label class="toggle"><input id="onlyHarbor" type="checkbox"> Hanya gunakan Harbor AI (nonaktifkan Gemini)</label>
+      <p class="note">Jika opsi ini aktif, permintaan tidak akan diteruskan ke Gemini saat Harbor mengalami gangguan.</p>
+      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal yang saya tanyakan dikirim ke API Vercel untuk diproses oleh Harbor AI, dan dapat diteruskan ke Gemini jika fallback Gemini tidak dinonaktifkan.</label>
       <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Tes koneksi</button><button class="secondary" id="close">Tutup</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">Gunakan sesuai aturan dosen/penyelenggara ujian. Ekstensi hanya menampilkan saran dan tidak mengisi jawaban. Isi pertanyaan tidak disimpan di ekstensi atau log server.</p>
@@ -131,6 +133,8 @@
       panel.querySelector("#lang").value = settings.lang;
       panel.querySelector("#harborModel").value = settings.harborModel;
       panel.querySelector("#geminiModel").value = settings.geminiModel;
+      panel.querySelector("#onlyHarbor").checked = settings.onlyHarbor === true;
+      panel.querySelector("#geminiModel").disabled = settings.onlyHarbor === true;
       panel.querySelector("#dataConsent").checked = settings.dataConsentAccepted === true;
       setStatus("");
     }
@@ -165,6 +169,7 @@
         lang: panel.querySelector("#lang").value,
         harborModel: panel.querySelector("#harborModel").value,
         geminiModel: panel.querySelector("#geminiModel").value,
+        onlyHarbor: panel.querySelector("#onlyHarbor").checked,
         dataConsentAccepted: panel.querySelector("#dataConsent").checked
       };
       if (values.enabled && !values.dataConsentAccepted) {
@@ -190,6 +195,9 @@
       }
     }
     panel.querySelector("#close").addEventListener("click", () => { panel.hidden = true; });
+    panel.querySelector("#onlyHarbor").addEventListener("change", (event) => {
+      panel.querySelector("#geminiModel").disabled = event.currentTarget.checked;
+    });
     panel.querySelector("#save").addEventListener("click", () => saveSettings());
     panel.querySelector("#ping").addEventListener("click", async () => {
       if (!await saveSettings(true)) return;

@@ -14,7 +14,7 @@ function isAllowedImageUrl(value) {
     if (IMAGE_HOST.test(url.hostname)) return true;
     if (url.hostname === "drive.google.com") return /^\/(?:uc|thumbnail|file\/d)(?:\/|$)/.test(url.pathname);
     if (url.hostname === "drive.usercontent.google.com") return /^\/(?:download|uc)(?:\/|$)/.test(url.pathname);
-    if (url.hostname === "docs.google.com") return /^\/(?:uc|document\/d)(?:\/|$)/.test(url.pathname);
+    if (url.hostname === "docs.google.com") return /^\/(?:uc|document\/d|forms-images-rt)(?:\/|$)/.test(url.pathname);
     return false;
   } catch {
     return false;
