@@ -88,10 +88,22 @@
     control.removePanel();
   }
 
+  function isVisibleBlock(block) {
+    if (block.closest("[hidden], [aria-hidden='true']")) return false;
+    let current = block;
+    while (current) {
+      const style = global.getComputedStyle(current);
+      if (style.display === "none" || style.visibility === "hidden") return false;
+      current = current.parentElement;
+    }
+    return block.getClientRects().length > 0;
+  }
+
   async function scan() {
-    if (!isRespondentPage()) return;
+    if (!isRespondentPage()) return { enabled: false, count: 0 };
     const settings = await getSettings();
-    const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)];
+    const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)].filter(isVisibleBlock);
+    let count = 0;
     for (const block of blocks) {
       const question = global.FormHelperParser.parseQuestion(block);
       const fingerprint = question ? JSON.stringify(question) : "";
@@ -102,7 +114,10 @@
           controls.delete(block);
           continue;
         }
-        if (existing.host.isConnected && existing.questionFingerprint === fingerprint) continue;
+        if (existing.host.isConnected && existing.questionFingerprint === fingerprint) {
+          count += 1;
+          continue;
+        }
         removeControl(existing);
         controls.delete(block);
       }
@@ -110,7 +125,9 @@
       const control = global.FormHelperUI.questionControl(block, handleAsk);
       control.questionFingerprint = fingerprint;
       controls.set(block, control);
+      count += 1;
     }
+    return { enabled: settings.enabled, count };
   }
 
   function scheduleScan() {
@@ -145,11 +162,15 @@
   }
 
   function refresh() { scheduleScan(); }
+  function loadCurrentPage() {
+    clearTimeout(scanTimer);
+    return scan();
+  }
 
   if (isRespondentPage()) {
     global.FormHelperUI.initSettingsPanel();
     scan().then(startObserver);
     api.storage.onChanged.addListener(refresh);
   }
-  global.FormHelperMain = { refresh };
+  global.FormHelperMain = { refresh, loadCurrentPage };
 })(globalThis);

@@ -6,7 +6,8 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "test": "node --test",
-    "lint:extension": "web-ext lint --source-dir extension"
+    "lint:extension": "bash scripts/lint-extension.sh",
+    "package:extension": "bash scripts/package-extension.sh"
   },
   "devDependencies": {
     "jsdom": "^26.1.0",

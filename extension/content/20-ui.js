@@ -40,6 +40,8 @@
       :host { all: initial; color-scheme: light dark; }
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
       .launcher { position: fixed; right: 14px; bottom: 14px; z-index: 2147483647; width: 48px; height: 48px; border: 0; border-radius: 50%; background: #2857d9; color: #fff; font-size: 22px; box-shadow: 0 3px 14px #0005; cursor: pointer; }
+      .page-load { position: fixed; right: 70px; bottom: 16px; z-index: 2147483647; min-height: 44px; padding: 0 14px; border: 0; border-radius: 22px; background: #2857d9; color: #fff; font-size: 14px; font-weight: 600; box-shadow: 0 3px 14px #0005; cursor: pointer; }
+      .page-load:disabled { opacity: .8; cursor: wait; }
       .panel { position: fixed; right: 12px; bottom: 72px; z-index: 2147483647; width: min(370px, calc(100vw - 24px)); max-height: min(82vh, 700px); overflow: auto; padding: 17px; border: 1px solid #8993a5; border-radius: 14px; background: Canvas; color: CanvasText; box-shadow: 0 8px 30px #0005; }
       .panel[hidden] { display: none; }
       h2 { font-size: 18px; margin: 0 0 12px; }
@@ -83,13 +85,36 @@
     launcher.textContent = "⚙";
     launcher.setAttribute("aria-label", "Buka pengaturan Form Helper");
     launcher.title = "Pengaturan Form Helper";
-    root.append(panel, launcher);
+    const pageLoad = document.createElement("button");
+    pageLoad.className = "page-load";
+    pageLoad.type = "button";
+    pageLoad.textContent = "↻ Muat soal";
+    pageLoad.setAttribute("aria-label", "Muat soal di halaman Google Forms ini");
+    pageLoad.title = "Pindah halaman Forms, lalu tekan untuk memasang tombol saran di halaman tersebut";
+    root.append(panel, pageLoad, launcher);
 
     const status = panel.querySelector("#status");
     const setStatus = (message, error = false) => {
       status.textContent = message;
       status.style.color = error ? "#c62828" : "inherit";
     };
+    pageLoad.addEventListener("click", async () => {
+      pageLoad.disabled = true;
+      pageLoad.textContent = "Memuat…";
+      try {
+        const result = await global.FormHelperMain?.loadCurrentPage();
+        if (!result) pageLoad.textContent = "Coba muat lagi";
+        else if (!result.enabled) pageLoad.textContent = "Aktifkan di ⚙";
+        else if (!result.count) pageLoad.textContent = "Soal belum terbaca";
+        else pageLoad.textContent = `${result.count} soal siap`;
+      } catch {
+        pageLoad.textContent = "Gagal memuat";
+      }
+      setTimeout(() => {
+        pageLoad.disabled = false;
+        pageLoad.textContent = "↻ Muat soal";
+      }, 2200);
+    });
     async function saveSettings(quiet = false) {
       const values = {
         enabled: panel.querySelector("#enabled").checked,

@@ -12,7 +12,7 @@
   ],
   "optional_host_permissions": ["https://*/*"],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
   "content_scripts": [{
     "matches": ["https://docs.google.com/forms/*"],

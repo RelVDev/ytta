@@ -53,10 +53,14 @@ Jika Upstash tidak dikonfigurasi, rate limit memakai memori proses serverless da
 
 ## Menyiapkan ekstensi
 
-1. Buka `about:debugging` pada Firefox desktop untuk uji sementara.
-2. Untuk Firefox Android, buat kredensial AMO API dan jalankan `npx web-ext sign --channel=unlisted --source-dir=extension --api-key="$AMO_API_KEY" --api-secret="$AMO_API_SECRET"`. Hasil `.xpi` muncul di `web-ext-artifacts/`; pindahkan ke ponsel, unduh/buka file itu, lalu ikuti prompt Firefox.
-3. Buka halaman respondent Google Forms. Gunakan tombol ⚙ untuk memasukkan Base URL, token klien, bahasa, model, serta persetujuan pemrosesan data.
-4. Izinkan akses host API saat Firefox meminta izin. Toggle “Aktifkan tombol saran” hanya mengatur tombol jawaban; panel pengaturan tetap tersedia agar ekstensi bisa diaktifkan kembali.
+Jalankan `npm run package:extension` untuk membuat dua arsip dengan manifest yang sesuai browser:
+
+- `form-helper-extension.zip` untuk Chrome/Chromium (background service worker).
+- `form-helper-firefox.zip` untuk Firefox (background scripts/event page).
+
+Ekstrak arsip yang sesuai, lalu muat folder hasil ekstrak lewat halaman Extensions dengan Developer mode dan **Load unpacked** di Chromium, atau `about:debugging` di Firefox desktop. Untuk Firefox Android, buat kredensial AMO API dan jalankan `npx web-ext sign --channel=unlisted --source-dir=/path/ke/folder-firefox-yang-diekstrak --api-key="$AMO_API_KEY" --api-secret="$AMO_API_SECRET"`. Hasil `.xpi` muncul di `web-ext-artifacts/`; pasang XPI yang ditandatangani melalui Firefox.
+
+Buka Google Forms lalu gunakan tombol **Muat soal** setelah berpindah halaman/section agar ekstensi memindai halaman tersebut. Gunakan tombol ⚙ untuk memasukkan Base URL API, token klien, bahasa, model, serta persetujuan pemrosesan data. Izinkan akses host API saat browser meminta izin. Toggle “Aktifkan tombol saran” mengatur tombol jawaban.
 
 Untuk memeriksa ekstensi jalankan `npm run lint:extension`. Manifest menyediakan background event page untuk Firefox Android 142+ dan service worker untuk Chromium. Izin data Firefox mendeklarasikan `websiteContent` karena teks/gambar soal dikirim ke API setelah pengguna menekan tombol. Ikon browser khusus belum disertakan.
 
