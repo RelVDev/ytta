@@ -2,7 +2,7 @@
 
 > Dokumen ini adalah **sumber kebenaran tunggal** untuk Codex.
 > Baca seluruh dokumen sebelum menulis kode. Kerjakan **per fase**, centang checklist, jangan loncat fase.
-> Dokumentasi API Gemini ada di **`API-DOCS.md`** (disediakan pemilik proyek). Jika ada konflik antara asumsi di dokumen ini dan `API-DOCS.md` soal pemanggilan Gemini, **`API-DOCS.md` yang menang**.
+> Dokumentasi API Gemini dan Harbor Token (sebagai API UTAMA) ada di **`API-DOCS.txt`** (disediakan pemilik proyek). Jika ada konflik antara asumsi di dokumen ini dan `API-DOCS.md` soal pemanggilan Gemini, **`API-DOCS.txt` yang menang**.
 
 ---
 
