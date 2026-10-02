@@ -5,7 +5,12 @@
   const HARBOR_MODELS = [
     ["qwen3.8-flash:free", "Qwen 3.8 Flash (gratis)"],
     ["deepseek-v4.1-flash:free", "DeepSeek V4.1 Flash (gratis)"],
-    ["mimo-v2.6-flash:free", "MiMo V2.6 Flash (gratis, teks saja)"]
+    ["mimo-v2.6-flash:free", "MiMo V2.6 Flash (gratis, teks saja)"],
+    ["glm-5.3-flash", "GLM 5.3 Flash"],
+    ["glm-5.3-flashx", "GLM 5.3 FlashX"],
+    ["gpt-6-luna", "GPT-6 Luna"],
+    ["gpt-6-luna-fast", "GPT-6 Luna Fast (teks saja)"],
+    ["qwen3.8-flash", "Qwen 3.8 Flash (berbayar)"]
   ];
   const GEMINI_MODELS = [
     ["gemini-3.5-flash-lite", "Gemini 3.5 Flash Lite"],
@@ -119,7 +124,7 @@
       <label class="toggle"><input id="onlyHarbor" type="checkbox"> Nonaktifkan fallback Gemini AI</label>
       <p class="note">Saat aktif, Gemini tidak dipanggil ketika model jawaban gagal.</p>
       <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal dikirim ke API Vercel. Tergantung pengaturan, data dapat diproses oleh Harbor, Gemini, atau Groq (Qwen untuk OCR dan GPT-OSS untuk jawaban teks).</label>
-      <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Tes koneksi</button><button class="secondary" id="close">Tutup</button></div>
+      <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Cek konfigurasi</button><button class="secondary" id="close">Tutup</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">Gunakan sesuai aturan dosen/penyelenggara ujian. Ekstensi hanya menampilkan saran dan tidak mengisi jawaban. Isi pertanyaan tidak disimpan di ekstensi atau log server.</p>
     `;
@@ -214,12 +219,12 @@
     panel.querySelector("#save").addEventListener("click", () => saveSettings());
     panel.querySelector("#ping").addEventListener("click", async () => {
       if (!await saveSettings(true)) return;
-      setStatus("Menguji koneksi…");
+      setStatus("Memeriksa konfigurasi API…");
       try {
         const response = await sendMessage({ type: "PING" });
-        if (!response || !response.ok) throw new Error(response && response.error || "Tes koneksi gagal.");
+        if (!response || !response.ok) throw new Error(response && response.error || "Pemeriksaan konfigurasi gagal.");
         const providers = response.result.providers || {};
-        setStatus(`Terhubung. Harbor: ${providers.harbor ? "siap" : "belum diatur"}; Gemini: ${providers.gemini ? "siap" : "belum diatur"}; Groq: ${providers.groq ? "siap" : "belum diatur"}.`);
+        setStatus(`Konfigurasi ditemukan. Harbor: ${providers.harbor ? "key tersedia" : "belum diatur"}; Gemini: ${providers.gemini ? "key tersedia" : "belum diatur"}; Groq: ${providers.groq ? "key tersedia" : "belum diatur"}.`);
       } catch (error) {
         setStatus(error.message, true);
       }
@@ -229,7 +234,7 @@
   function questionControl(block, onAsk) {
     const host = document.createElement("div");
     host.className = "fh-question-host";
-    host.style.cssText = "position:absolute;top:5px;right:5px;z-index:5;width:26px;height:26px;line-height:0;";
+    host.style.cssText = "position:absolute;top:2px;right:2px;z-index:5;width:34px;height:34px;line-height:0;";
     const needsPositionAnchor = getComputedStyle(block).position === "static";
     const originalPosition = block.style.getPropertyValue("position");
     const originalPositionPriority = block.style.getPropertyPriority("position");
@@ -238,7 +243,7 @@
     addStyle(root, `
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
       .actions { display: flex; justify-content: flex-end; padding: 0 4px; }
-      button { display: inline-grid; place-items: center; width: 26px; min-width: 26px; height: 26px; min-height: 26px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #ffffff; opacity: 1; font-size: 14px; cursor: pointer; box-shadow: none; }
+      button { display: inline-grid; place-items: center; width: 34px; min-width: 34px; height: 34px; min-height: 34px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #ffffff; opacity: 1; font-size: 14px; cursor: pointer; box-shadow: none; }
       button:hover, button:focus-visible { background: transparent; color: #ffffff; outline: none; }
       button[disabled] { opacity: 1; }
       button[aria-busy="true"] { position: relative; }
@@ -279,14 +284,14 @@
         if (control.panel) control.panel.remove();
         control.panel = null;
       },
-      showMessage(message, isError) {
+      showMessage(message, isError, onClose) {
         control.removePanel();
         const panelHost = document.createElement("div");
         panelHost.className = "fh-answer-host";
         const panelRoot = panelHost.attachShadow({ mode: "closed" });
         addStyle(panelRoot, `*{box-sizing:border-box;font-family:system-ui,sans-serif}.card{margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45}.error{color:#b42318}.close{float:right;border:0;background:transparent;color:inherit;font-size:18px;cursor:pointer}`);
         const card = document.createElement("div"); card.className = `card${isError ? " error" : ""}`;
-        const close = document.createElement("button"); close.className = "close"; close.type = "button"; close.textContent = "×"; close.setAttribute("aria-label", "Tutup"); close.addEventListener("click", () => panelHost.remove());
+        const close = document.createElement("button"); close.className = "close"; close.type = "button"; close.textContent = "×"; close.setAttribute("aria-label", onClose ? "Batalkan permintaan" : "Tutup"); close.addEventListener("click", () => { if (onClose) onClose(); else panelHost.remove(); });
         const text = document.createElement("span"); text.textContent = message;
         card.append(close, text); panelRoot.append(card);
         block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;

@@ -242,7 +242,7 @@ Response sukses juga mencantumkan `provider` dan `model`. `warning` dapat berisi
 | `INTERNAL` | 500 | Lainnya |
 
 ### `GET /api/health`
-Mengembalikan `{ "ok": true, "time": "<ISO>", "providers": { "harbor": true, "gemini": true, "groq": true } }`. Dipakai tombol "Tes koneksi" di panel pengaturan.
+Mengembalikan `{ "ok": true, "time": "<ISO>", "providers": { "harbor": true, "gemini": true, "groq": true } }`. Dipakai tombol "Cek konfigurasi" di panel pengaturan. Endpoint hanya memeriksa key yang tersedia di environment; ia tidak mengirim prompt uji atau memeriksa kuota provider.
 
 ### CORS
 Background tidak terkena CORS, tetapi tetap pasang header CORS yang rapi (`Access-Control-Allow-Origin` sesuai env `ALLOWED_ORIGINS`, tangani `OPTIONS`) agar bisa dites dari browser biasa.
@@ -260,6 +260,11 @@ Model yang tersedia untuk pilihan manual:
 | Harbor utama | `qwen3.8-flash:free` |
 | Harbor | `deepseek-v4.1-flash:free` |
 | Harbor | `mimo-v2.6-flash:free` |
+| Harbor | `glm-5.3-flash` |
+| Harbor | `glm-5.3-flashx` |
+| Harbor | `gpt-6-luna` |
+| Harbor | `gpt-6-luna-fast` |
+| Harbor | `qwen3.8-flash` |
 | Gemini fallback | `gemini-3.5-flash-lite` |
 | Gemini fallback | `gemini-3.6-flash` |
 | Gemini fallback | `gemini-3.8-flash` |
@@ -270,8 +275,9 @@ Ketentuan:
 
 - Environment `HARBOR_MODEL`, `GEMINI_MODEL`, `GROQ_OCR_MODEL`, dan `GROQ_ANSWER_MODEL` menjadi default. Ekstensi mengirim pilihan provider dan model; backend menerima hanya ID allowlist di atas.
 - Route MiMo `mimo-v2.6-flash:free` saat ini hanya menerima teks. Jika dipilih tanpa OCR pada soal bergambar, Harbor dicoba tanpa gambar dan UI memberi peringatan; provider fallback yang mendukung gambar masih dapat memprosesnya.
+- GPT-6 Luna Fast saat ini hanya menerima teks. GLM 5.3 Flash, GLM 5.3 FlashX, GPT-6 Luna, dan Qwen3.8 Flash menerima gambar melalui route Harbor.
 - Harbor menjadi provider utama secara default. Jika Groq GPT-OSS dipilih sebagai utama, Harbor dicoba sebagai fallback. Kegagalan jaringan, timeout, HTTP 408/429/5xx, dan output jawaban yang tidak valid dapat memicu provider berikutnya; error autentikasi langsung dilaporkan.
-- OCR Groq Qwen adalah opsi terpisah. Saat aktif, Qwen menyalin gambar menjadi teks bersih sebelum dikirim ke model jawaban. Qwen memproses maksimal tiga gambar per permintaan, sehingga empat gambar dibagi menjadi beberapa kelompok. Jika OCR gagal, backend kembali mencoba gambar langsung dengan model jawaban yang mendukungnya.
+- OCR Groq Qwen adalah opsi terpisah. Saat aktif, Qwen menyalin gambar menjadi teks bersih sebelum dikirim ke model jawaban. Qwen memproses maksimal tiga gambar per permintaan, sehingga empat gambar dibagi menjadi beberapa kelompok paralel. Jika OCR gagal, backend kembali mencoba gambar langsung dengan model jawaban yang mendukungnya.
 - GPT-OSS 120B hanya menerima teks. Jika dipilih pada soal bergambar dan OCR tidak aktif/gagal, GPT-OSS dilewati; Harbor dan Gemini (bila aktif) menjadi jalur jawaban.
 - Harbor, Groq GPT-OSS, dan Gemini mengirim prompt untuk menghasilkan objek JSON. Respons dinormalisasi di server sebelum dikirim ke ekstensi.
 - Gunakan temperatur rendah, output pendek, dan thinking minimal di Gemini. Retry Gemini paling banyak satu kali untuk 429/5xx.
@@ -333,10 +339,7 @@ Deteksi gambar di parser:
     "https://*.gstatic.com/*"
   ],
   "optional_host_permissions": ["https://*/*"],
-  "background": {
-    "service_worker": "background.js",
-    "scripts": ["background.js"]
-  },
+  "background": { "service_worker": "background.js" },
   "content_scripts": [{
     "matches": ["https://docs.google.com/forms/*"],
     "js": ["content/00-utils.js", "content/10-parser.js", "content/20-ui.js", "content/30-main.js"],
@@ -345,18 +348,10 @@ Deteksi gambar di parser:
   }],
   "action": { "default_title": "Form Helper — pengaturan tersedia di halaman Forms" },
   "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "form-helper@ytta.local",
-      "strict_min_version": "140.0",
-      "data_collection_permissions": { "required": ["websiteContent"] }
-    },
-    "gecko_android": { "strict_min_version": "142.0" }
-  }
 }
 ```
 
-Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesuai Base URL API yang dimasukkan pengguna.
+Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesuai Base URL API yang dimasukkan pengguna. Manifest Firefox disimpan terpisah dan memuat `browser_specific_settings`; manifest Chromium tidak memuat field Firefox tersebut.
 
 ### 9.2 Content script
 
@@ -402,7 +397,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 
 - Tidak ada popup toolbar. Tombol ⚙ yang terlihat pada halaman respondent membuka panel Shadow DOM.
 - Panel mengatur toggle saran, Base URL API, token klien, bahasa, model Harbor, model jawaban utama Harbor/GPT-OSS, OCR Qwen, dan model Gemini cadangan.
-- Tombol "Tes koneksi" memanggil `/api/health`; simpanan konfigurasi berada di `storage.local`.
+- Tombol "Cek konfigurasi" memanggil `/api/health`; simpanan konfigurasi berada di `storage.local`.
 - Pengguna memberi izin host API HTTPS yang dimasukkan. Tombol pengaturan tetap tampil saat saran dimatikan agar fitur dapat diaktifkan kembali.
 - Tampilkan catatan penggunaan sesuai §0.
 

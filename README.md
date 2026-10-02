@@ -18,6 +18,11 @@ Harbor:
 - [`qwen3.8-flash:free`](https://tokenharbor.ai/models/qwen3.8-flash%3Afree)
 - [`deepseek-v4.1-flash:free`](https://tokenharbor.ai/models/deepseek-v4.1-flash%3Afree)
 - [`mimo-v2.6-flash:free`](https://tokenharbor.ai/models/mimo-v2.6-flash%3Afree) (route Token Harbor saat ini menerima teks saja; soal bergambar menampilkan peringatan jika model ini dipilih)
+- [`glm-5.3-flash`](https://tokenharbor.ai/models/glm-5.3-flash)
+- [`glm-5.3-flashx`](https://tokenharbor.ai/models/glm-5.3-flashx)
+- [`gpt-6-luna`](https://tokenharbor.ai/models/gpt-6-luna)
+- [`gpt-6-luna-fast`](https://tokenharbor.ai/models/gpt-6-luna-fast) (teks saja)
+- [`qwen3.8-flash`](https://tokenharbor.ai/models/qwen3.8-flash) (berbayar)
 
 Gemini:
 
@@ -55,7 +60,7 @@ Persyaratan: Node.js LTS dan Vercel CLI. Tidak ada SDK provider runtime; backend
    Jangan taruh provider key di source, ekstensi, `.env.example`, atau log. Nilai lokal yang sensitif harus tetap di file `.env` yang sudah diabaikan Git, atau masukkan langsung ke Vercel.
 3. Jalankan `vercel dev` untuk uji lokal atau deploy lewat alur Vercel proyek. Setelah deploy, isi Base URL API dan `CLIENT_TOKEN` pada panel ekstensi.
 
-`GET /api/health` menguji token dan melaporkan apakah Harbor, Gemini, dan Groq sudah dikonfigurasi. `POST /api/answer` menerima payload soal dan pilihan model. Batas payload 3,5 MB, maksimal 4 gambar, dan teks soal maksimal 6.000 karakter. Groq mendukung hingga tiga gambar per permintaan OCR; jika ada empat gambar, backend memprosesnya dalam beberapa kelompok.
+`GET /api/health` memeriksa token klien dan melaporkan apakah key Harbor, Gemini, dan Groq telah dikonfigurasi. Endpoint ini tidak memanggil model atau menguji kuota provider. `POST /api/answer` menerima payload soal dan pilihan model. Batas payload 3,5 MB, maksimal 4 gambar, dan teks soal maksimal 6.000 karakter. Groq mendukung hingga tiga gambar per permintaan OCR; jika ada empat gambar, backend memprosesnya dalam beberapa kelompok paralel.
 
 Jika Upstash tidak dikonfigurasi, rate limit memakai memori proses serverless dan sifatnya best-effort; batas ini tidak dibagi antar instance dan dapat hilang saat instance dimulai ulang.
 
@@ -66,7 +71,7 @@ Jalankan `npm run package:extension` untuk membuat dua arsip dengan manifest yan
 - `form-helper-extension.zip` untuk Chrome/Chromium (background service worker).
 - `form-helper-firefox.zip` untuk Firefox (background scripts/event page).
 
-Ekstrak arsip yang sesuai, lalu muat folder hasil ekstrak lewat halaman Extensions dengan Developer mode dan **Load unpacked** di Chromium, atau `about:debugging` di Firefox desktop. Untuk Firefox Android, buat kredensial AMO API dan jalankan `npx web-ext sign --channel=unlisted --source-dir=/path/ke/folder-firefox-yang-diekstrak --api-key="$AMO_API_KEY" --api-secret="$AMO_API_SECRET"`. Hasil `.xpi` muncul di `web-ext-artifacts/`; pasang XPI yang ditandatangani melalui Firefox.
+Ekstrak arsip yang sesuai, lalu muat folder hasil ekstrak lewat halaman Extensions dengan Developer mode dan **Load unpacked** di Chromium, atau `about:debugging` di Firefox desktop. Untuk Firefox Android, buat kredensial AMO API dan jalankan `npx web-ext sign --channel=unlisted --source-dir=/path/ke/folder-firefox-yang-diekstrak --api-key="$AMO_API_KEY" --api-secret="$AMO_API_SECRET"`. Hasil `.xpi` muncul di `web-ext-artifacts/`; pasang XPI yang ditandatangani melalui Firefox. Gunakan `form-helper-extension.zip` pada Chromium Android dan `form-helper-firefox.zip` pada Firefox; manifest Chromium tidak lagi memuat field khusus Firefox.
 
 Buka menu **Bantuan dan masukan** pada Google Forms, pilih **Pengaturan Form Helper** untuk memasukkan Base URL API, token klien, bahasa, model, serta persetujuan pemrosesan data. Setelah berpindah halaman/section, buka menu yang sama dan pilih **Muat soal halaman ini**. Izinkan akses host API saat browser meminta izin. Toggle “Aktifkan tombol saran” mengatur tombol jawaban. Pemicu jawaban berupa ikon bintang kecil di dalam setiap soal.
 

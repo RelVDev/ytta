@@ -3,8 +3,11 @@
 (function initMain(global) {
   const { api, getSettings, sendMessage, cleanText } = global.FormHelperUtils;
   const controls = new WeakMap();
+  const activeControls = new Set();
   let observer = null;
   let scanTimer = null;
+  let scanPromise = null;
+  let scanQueued = false;
 
   function isRespondentPage() {
     return location.pathname.includes("/forms/")
@@ -32,7 +35,7 @@
     control.removePanel();
     const pendingNotice = setTimeout(() => {
       if (control.requestId === requestId && control.loading) {
-        control.showMessage("Masih memproses… tekan × untuk membatalkan.", false);
+        control.showMessage("Masih memproses… tekan × untuk membatalkan.", false, () => handleAsk(control));
       }
     }, 8000);
     try {
@@ -97,15 +100,29 @@
     control.host.remove();
     control.restorePosition();
     control.removePanel();
+    activeControls.delete(control);
   }
 
   async function scan() {
     if (!isRespondentPage()) return { enabled: false, count: 0 };
     const settings = await getSettings();
+    for (const control of activeControls) {
+      if (!control.block.isConnected) removeControl(control);
+    }
     const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)];
     let count = 0;
     for (const block of blocks) {
-      const question = global.FormHelperParser.parseQuestion(block);
+      let question = null;
+      try {
+        question = global.FormHelperParser.parseQuestion(block);
+      } catch {
+        const staleControl = controls.get(block);
+        if (staleControl) {
+          removeControl(staleControl);
+          controls.delete(block);
+        }
+        continue;
+      }
       const fingerprint = question ? JSON.stringify(question) : "";
       const existing = controls.get(block);
       if (existing) {
@@ -125,6 +142,7 @@
       const control = global.FormHelperUI.questionControl(block, handleAsk);
       control.questionFingerprint = fingerprint;
       controls.set(block, control);
+      activeControls.add(control);
       count += 1;
     }
     return { enabled: settings.enabled, count };
@@ -132,7 +150,23 @@
 
   function scheduleScan() {
     clearTimeout(scanTimer);
-    scanTimer = setTimeout(scan, 200);
+    scanTimer = setTimeout(() => { requestScan().catch(() => {}); }, 200);
+  }
+
+  function requestScan() {
+    if (scanPromise) {
+      scanQueued = true;
+      return scanPromise;
+    }
+    scanPromise = (async () => {
+      let result;
+      do {
+        scanQueued = false;
+        result = await scan();
+      } while (scanQueued);
+      return result;
+    })().finally(() => { scanPromise = null; });
+    return scanPromise;
   }
 
   function startObserver() {
@@ -165,13 +199,13 @@
   function refresh() { scheduleScan(); }
   function loadCurrentPage() {
     clearTimeout(scanTimer);
-    return scan();
+    return requestScan();
   }
 
   if (isRespondentPage()) {
     global.FormHelperUI.initSettingsPanel();
     global.FormHelperUI.syncHelpMenu();
-    scan().then(startObserver);
+    requestScan().catch(() => {}).finally(startObserver);
     api.storage.onChanged.addListener(refresh);
   }
   global.FormHelperMain = { refresh, loadCurrentPage };

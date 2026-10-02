@@ -92,6 +92,38 @@ test("Harbor error autentikasi tidak memicu fallback Gemini", async () => {
   }
 });
 
+test("model Harbor yang tidak tersedia beralih ke Gemini", async () => {
+  const previous = { fetch: global.fetch, token: process.env.CLIENT_TOKEN, harbor: process.env.TOKENHARBOR_API_KEY, gemini: process.env.GEMINI_API_KEY };
+  const calls = [];
+  const log = console.info;
+  process.env.CLIENT_TOKEN = "test-client-token";
+  process.env.TOKENHARBOR_API_KEY = "test-harbor-key";
+  process.env.GEMINI_API_KEY = "test-gemini-key";
+  console.info = () => {};
+  global.fetch = async (url) => {
+    calls.push(String(url));
+    if (String(url).includes("tokenharbor.ai")) return providerResponse(404, { error: { message: "model was not found" } });
+    return providerResponse(200, {
+      steps: [{ type: "model_output", content: [{ type: "text", text: JSON.stringify({ keys: ["D"], texts: ["CH3COOH"], rows: [], confidence: 0.94, explanation: "Asam asetat." }) }] }]
+    });
+  };
+  try {
+    const req = request();
+    req.body.models.harbor = "glm-5.3-flashx";
+    const res = fakeResponse();
+    await answerHandler(req, res);
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.body.provider, "gemini");
+    assert.equal(calls.length, 2);
+  } finally {
+    global.fetch = previous.fetch;
+    console.info = log;
+    if (previous.token === undefined) delete process.env.CLIENT_TOKEN; else process.env.CLIENT_TOKEN = previous.token;
+    if (previous.harbor === undefined) delete process.env.TOKENHARBOR_API_KEY; else process.env.TOKENHARBOR_API_KEY = previous.harbor;
+    if (previous.gemini === undefined) delete process.env.GEMINI_API_KEY; else process.env.GEMINI_API_KEY = previous.gemini;
+  }
+});
+
 test("route MiMo teks saja melewati gambar dan menandai respons", async () => {
   const previous = { fetch: global.fetch, token: process.env.CLIENT_TOKEN, harbor: process.env.TOKENHARBOR_API_KEY, gemini: process.env.GEMINI_API_KEY };
   const log = console.info;
@@ -109,7 +141,7 @@ test("route MiMo teks saja melewati gambar dan menandai respons", async () => {
   try {
     const req = request();
     req.body.models.harbor = "mimo-v2.6-flash:free";
-    req.body.question.images = [{ mimeType: "image/png", base64: "aGVsbG8=" }];
+    req.body.question.images = [{ mimeType: "image/png", base64: "iVBORw0KGgo=" }];
     const res = fakeResponse();
     await answerHandler(req, res);
     assert.equal(res.statusCode, 200);

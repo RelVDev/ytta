@@ -32,7 +32,7 @@ function bytesToBase64(buffer) {
   return btoa(binary);
 }
 
-function detectImageMimeType(bytes, declaredType = "") {
+function detectImageMimeType(bytes) {
   if (bytes.length >= 8
       && bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47
       && bytes[4] === 0x0d && bytes[5] === 0x0a && bytes[6] === 0x1a && bytes[7] === 0x0a) return "image/png";
@@ -44,8 +44,7 @@ function detectImageMimeType(bytes, declaredType = "") {
   if (bytes.length >= 12
       && String.fromCharCode(...bytes.subarray(0, 4)) === "RIFF"
       && String.fromCharCode(...bytes.subarray(8, 12)) === "WEBP") return "image/webp";
-  const declared = String(declaredType).split(";")[0].trim().toLowerCase();
-  return new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]).has(declared) ? declared : "";
+  return "";
 }
 
 async function readImageBlob(response) {
@@ -86,7 +85,7 @@ async function convertImage(image) {
     if (!blob) return image;
     if (blob.size > MAX_IMAGE_BYTES) return image;
     const bytes = new Uint8Array(await blob.arrayBuffer());
-    const mimeType = detectImageMimeType(bytes, blob.type);
+    const mimeType = detectImageMimeType(bytes);
     if (!mimeType) return image;
     return { ...image, mimeType, base64: bytesToBase64(bytes) };
   } catch {
@@ -149,22 +148,13 @@ async function sendAnswer(payload, requestId) {
       throw error;
     }
     const body = JSON.stringify({ ...payload, question });
-    let response;
-    for (let attempt = 0; attempt < 2; attempt += 1) {
-      if (cancelledRequests.delete(requestId) || (activeRequests.get(requestId) && activeRequests.get(requestId).signal.aborted)) {
-        const error = new Error("Permintaan dibatalkan.");
-        error.name = "AbortError";
-        throw error;
-      }
-      try {
-        response = await apiFetch("/api/answer", { method: "POST", body }, requestId);
-        break;
-      } catch (error) {
-        if (error.name === "AbortError") throw new Error("Permintaan melewati batas waktu.");
-        if (attempt === 1) throw error;
-        await new Promise((resolve) => setTimeout(resolve, 250));
-      }
-    }
+    const response = await apiFetch("/api/answer", {
+      method: "POST",
+      body,
+    }, requestId).catch((error) => {
+      if (error.name === "AbortError") throw new Error("Permintaan melewati batas waktu.");
+      throw error;
+    });
     const result = await response.json().catch(() => ({}));
     if (!response.ok || !result.ok) {
       const message = result.error && result.error.message;

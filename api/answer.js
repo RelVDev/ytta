@@ -42,7 +42,7 @@ module.exports = async function answer(req, res) {
   let imageOcrApplied = false;
   let groqSkippedForImages = false;
   let groqUnavailable = false;
-  let harborImageUnsupported = false;
+  let finalImageUnsupported = false;
   try {
     const declaredLength = Number(req.headers && req.headers["content-length"] || 0);
     if (declaredLength > MAX_BODY_BYTES) throw new AppError("PAYLOAD_TOO_LARGE", MESSAGES.PAYLOAD_TOO_LARGE, 413);
@@ -109,14 +109,16 @@ module.exports = async function answer(req, res) {
       const timeoutBudgetMs = Math.max(1000, Math.min(56_000, 56_000 - (Date.now() - started)));
       try {
         let rawOutput;
+        let routeImagesUnsupported = false;
         if (route.provider === "groq") {
           rawOutput = await callGroqAnswer({ ...args, model: route.model, timeoutMs: Math.min(30_000, timeoutBudgetMs) });
         } else if (route.provider === "harbor") {
-          harborImageUnsupported = answerImages.length > 0 && !HARBOR_IMAGE_MODELS.has(route.model);
+          const imagesUnsupported = answerImages.length > 0 && !HARBOR_IMAGE_MODELS.has(route.model);
+          routeImagesUnsupported = imagesUnsupported;
           rawOutput = await callHarbor({
             ...args,
-            images: harborImageUnsupported ? [] : answerImages,
-            imagesUnsupported: harborImageUnsupported,
+            images: imagesUnsupported ? [] : answerImages,
+            imagesUnsupported,
             model: route.model,
             timeoutMs: Math.min(40_000, timeoutBudgetMs)
           });
@@ -125,6 +127,7 @@ module.exports = async function answer(req, res) {
         }
         stage = `normalize_${route.provider}`;
         answer = normalizeModelOutput(rawOutput, answerQuestion);
+        finalImageUnsupported = routeImagesUnsupported;
         break;
       } catch (error) {
         lastProviderError = error;
@@ -136,7 +139,7 @@ module.exports = async function answer(req, res) {
     }
     if (!answer) throw lastProviderError || new AppError("MODEL_ERROR", MESSAGES.MODEL_ERROR, 502);
 
-    const warning = prepared.unavailable || harborImageUnsupported
+    const warning = prepared.unavailable || finalImageUnsupported
       ? "IMAGE_UNAVAILABLE"
       : imageOcrFailed
         ? "IMAGE_OCR_FALLBACK"
@@ -159,7 +162,7 @@ module.exports = async function answer(req, res) {
       imagesOcrProcessed,
       imageOcrApplied,
       imagesUnavailable,
-      ...(harborImageUnsupported ? { imageUnsupportedByModel: true } : {})
+      ...(finalImageUnsupported ? { imageUnsupportedByModel: true } : {})
     }));
     return res.status(200).json({
       ok: true,

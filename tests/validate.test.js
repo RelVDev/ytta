@@ -18,6 +18,14 @@ test("payload dan pilihan model yang dikenal diterima", () => {
   assert.equal(validatePayload(validPayload()).question.options.length, 2);
 });
 
+test("model Harbor tambahan diterima", () => {
+  for (const model of ["glm-5.3-flash", "glm-5.3-flashx", "gpt-6-luna", "gpt-6-luna-fast", "qwen3.8-flash"]) {
+    const payload = validPayload();
+    payload.models.harbor = model;
+    assert.equal(validatePayload(payload).models.harbor, model);
+  }
+});
+
 test("model di luar allowlist dan tipe tidak dikenal ditolak", () => {
   const payload = validPayload();
   payload.models.harbor = "arbitrary-model";
