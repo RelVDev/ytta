@@ -109,7 +109,7 @@ form-helper/
 │  ├─ prompt.js                # susun system & user prompt per tipe soal
 │  ├─ providers.js             # Harbor/Groq/Gemini + Groq Qwen OCR
 │  ├─ normalize.js             # rapikan output → format "D. CH3COOH"
-│  ├─ images.js                # fallback fetch gambar dari URL (allowlist)
+│  ├─ images.js                # fetch URL HTTPS publik dengan validasi DNS/redirect
 │  └─ ratelimit.js
 ├─ extension/
 │  ├─ manifest.json
@@ -493,7 +493,7 @@ Taktik:
 ### Fase 3 — Gambar
 - [x] Deteksi gambar soal dan opsi di parser
 - [x] Background: fetch gambar → base64, batas ukuran, fallback URL
-- [x] API: dukung input gambar inline provider, `lib/images.js` dengan allowlist
+- [x] API: dukung input gambar inline dan URL HTTPS publik, blokir alamat jaringan privat
 - [x] Peringatan `IMAGE_UNAVAILABLE` di UI
 
 **Selesai bila:** soal dengan gambar dan opsi bergambar terjawab benar di form uji.
@@ -532,7 +532,7 @@ Taktik:
 - [ ] Waktu rata-rata ≤ ±3 dtk pada soal teks saat warm
 - [ ] Ekstensi tidak pernah mengubah/mengisi input form
 - [ ] API key tidak ada di repo/ekstensi/log; token salah → 401
-- [ ] Payload terlalu besar / host gambar di luar allowlist → ditolak
+- [ ] Payload terlalu besar / URL gambar bukan HTTPS atau mengarah ke jaringan privat → ditolak
 - [ ] Toggle di panel pengaturan benar-benar mematikan tombol soal
 - [x] Panel meminta persetujuan pemrosesan teks/gambar soal dan manifest mendeklarasikan `websiteContent`
 - [ ] Tidak ada fitur penyamaran atau anti-deteksi (lihat §0)

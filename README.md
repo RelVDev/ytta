@@ -60,7 +60,7 @@ Persyaratan: Node.js LTS dan Vercel CLI. Tidak ada SDK provider runtime; backend
    Jangan taruh provider key di source, ekstensi, `.env.example`, atau log. Nilai lokal yang sensitif harus tetap di file `.env` yang sudah diabaikan Git, atau masukkan langsung ke Vercel.
 3. Jalankan `vercel dev` untuk uji lokal atau deploy lewat alur Vercel proyek. Setelah deploy, isi Base URL API dan `CLIENT_TOKEN` pada panel ekstensi.
 
-`GET /api/health` memeriksa token klien dan melaporkan apakah key Harbor, Gemini, dan Groq telah dikonfigurasi. Endpoint ini tidak memanggil model atau menguji kuota provider. `POST /api/answer` menerima payload soal dan pilihan model. Batas payload 3,5 MB, maksimal 4 gambar, dan teks soal maksimal 6.000 karakter. Groq mendukung hingga tiga gambar per permintaan OCR; jika ada empat gambar, backend memprosesnya dalam beberapa kelompok paralel.
+`GET /api/health` memeriksa token klien dan melaporkan apakah key Harbor, Gemini, dan Groq telah dikonfigurasi. Endpoint ini tidak memanggil model atau menguji kuota provider. `POST /api/answer` menerima payload soal dan pilihan model. Batas payload 3,5 MB, maksimal 4 gambar, dan teks soal maksimal 6.000 karakter. URL gambar HTTPS dari host publik dapat digunakan; server memeriksa DNS, memblokir alamat jaringan privat, memvalidasi redirect, dan menerima hanya PNG/JPEG/GIF/WebP dalam batas ukuran. Groq mendukung hingga tiga gambar per permintaan OCR; jika ada empat gambar, backend memprosesnya dalam beberapa kelompok paralel.
 
 Jika Upstash tidak dikonfigurasi, rate limit memakai memori proses serverless dan sifatnya best-effort; batas ini tidak dibagi antar instance dan dapat hilang saat instance dimulai ulang.
 

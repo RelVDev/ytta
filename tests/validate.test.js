@@ -49,8 +49,8 @@ test("kode opsi harus huruf tunggal dan opsi gambar tetap diterima", () => {
   invalid.question.options[0].key = "AA";
   assert.throws(() => validatePayload(invalid), { code: "BAD_REQUEST" });
   const image = validPayload();
-  image.question.options[0].image = { url: "https://lh3.googleusercontent.com/option.png", mimeType: "image/png" };
+  image.question.options[0].image = { url: "https://cdn.example.org/option.png", mimeType: "image/png" };
   assert.equal(validatePayload(image).question.options[0].image.mimeType, "image/png");
-  image.question.options[0].image.url = "https://example.com/private.png";
+  image.question.options[0].image.url = "http://cdn.example.org/private.png";
   assert.throws(() => validatePayload(image), { code: "BAD_REQUEST" });
 });
