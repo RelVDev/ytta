@@ -1,15 +1,17 @@
 # Form Helper
 
-Ekstensi WebExtension untuk Firefox Android yang menampilkan saran jawaban di Google Forms. Alat ini dibuat untuk belajar dan membahas latihan. Ekstensi tidak mengisi atau mengubah jawaban form.
+Ekstensi WebExtension untuk Firefox Android yang menampilkan saran jawaban di Google Forms dan halaman pengerjaan kuis HEBAT Universitas Airlangga. Ekstensi tidak mengisi atau mengubah jawaban kuis.
 
 ## Alur
 
-1. Tombol kecil yang terlihat muncul pada setiap pertanyaan Google Forms respondent.
+1. Tombol kecil muncul pada pertanyaan Google Forms atau Moodle HEBAT (`/mod/quiz/attempt.php`).
 2. Ekstensi mengirim soal ke API Vercel.
 3. API memakai model utama yang dipilih: Harbor atau Groq GPT-OSS 120B. Jika GPT-OSS dipilih, Harbor menjadi fallback berikutnya. Gemini dapat menjadi fallback terakhir dan bisa dinonaktifkan.
 4. API memvalidasi respons dan mengembalikan saran terstruktur.
 
-Pengaturan dan pemindaian halaman dibuka dari menu **Bantuan dan masukan** bawaan Google Forms. Pilih **Pengaturan Form Helper** untuk memilih model utama Harbor/GPT-OSS, model Harbor, model Gemini cadangan, dan OCR Qwen untuk gambar. **Muat soal halaman ini** memindai ulang pertanyaan setelah berpindah section. Sebelum aktif, panel meminta persetujuan bahwa teks dan gambar yang ditanyakan dikirim ke Vercel untuk diproses oleh provider yang dipilih.
+Di Google Forms, pengaturan dan pemindaian dibuka dari menu **Bantuan dan masukan**. Di HEBAT, gunakan menu **Form Helper** di kanan bawah. Keduanya menyediakan pengaturan model dan pemindaian ulang. Parser HEBAT membaca pilihan ganda, checkbox, dropdown, jawaban singkat, dan essay. Gambar hanya disalin dari elemen same-origin yang sudah dimuat di halaman melalui canvas; ekstensi tidak mengambil ulang URL `pluginfile.php`. Jika pembacaan lokal gagal, gambar dilewati dan ditandai agar hasil tidak dianggap pasti.
+
+Pada HEBAT, ikon klip pada tiap soal dapat melampirkan maksimal dua file lokal berukuran 500 KB per file dalam format PDF, TXT, MD, atau CSV. Lampiran hanya diproses dengan model Harbor Claude Haiku 5.5. File dipilih dari perangkat lewat pemilih file browser; ekstensi tidak mengunduh lampiran dari Moodle. Sebelum aktif, panel meminta persetujuan pengiriman teks, gambar, dan file yang dipilih ke Vercel/provider.
 
 ## Model
 
@@ -23,6 +25,7 @@ Harbor:
 - [`gpt-6-luna`](https://tokenharbor.ai/models/gpt-6-luna)
 - [`gpt-6-luna-fast`](https://tokenharbor.ai/models/gpt-6-luna-fast) (teks saja)
 - [`qwen3.8-flash`](https://tokenharbor.ai/models/qwen3.8-flash) (berbayar)
+- `claude-haiku-5.5:free` (teks, gambar, PDF, dan file teks melalui endpoint Messages Harbor)
 
 Gemini:
 
@@ -35,7 +38,7 @@ Groq:
 - [`qwen/qwen3.8-27b`](https://console.groq.com/docs/model/qwen/qwen3.8-27b) — OCR/transkripsi gambar, dapat dimatikan di pengaturan.
 - [`openai/gpt-oss-120b`](https://console.groq.com/docs/model/openai/gpt-oss-120b) — model jawaban teks utama opsional; jika dipilih, Harbor dan lalu Gemini menjadi fallback sesuai pengaturan. Model ini tidak menerima gambar, sehingga soal gambar memerlukan OCR Qwen agar GPT-OSS bisa dipakai.
 
-API menolak ID model di luar daftar tersebut. Harbor dan Groq memakai endpoint kompatibel OpenAI `/v1/chat/completions`; Gemini memakai Interactions API dengan structured output dan `store: false`. OCR Qwen menghasilkan transkripsi teks terlebih dahulu, termasuk angka, rumus, tabel, dan label diagram. `API-DOCS.txt` disertakan sebagai referensi; detail Gemini dicek terhadap [dokumentasi Interactions API](https://ai.google.dev/gemini-api/docs/interactions-overview) dan [structured output](https://ai.google.dev/gemini-api/docs/structured-output).
+API menolak ID model di luar daftar tersebut. Model Harbor selain Claude Haiku dan Groq memakai endpoint kompatibel OpenAI `/v1/chat/completions`; Claude Haiku menggunakan endpoint Anthropic-compatible `/v1/messages` agar gambar dan PDF bisa dikirim sebagai content blocks. Gemini memakai Interactions API dengan structured output dan `store: false`. OCR Qwen menghasilkan transkripsi teks terlebih dahulu, termasuk angka, rumus, tabel, dan label diagram. `API-DOCS.txt` disertakan sebagai referensi; detail provider dilengkapi dokumentasi resmi.
 
 ## Menyiapkan API Vercel
 
@@ -73,7 +76,7 @@ Jalankan `npm run package:extension` untuk membuat dua arsip dengan manifest yan
 
 Ekstrak arsip yang sesuai, lalu muat folder hasil ekstrak lewat halaman Extensions dengan Developer mode dan **Load unpacked** di Chromium, atau `about:debugging` di Firefox desktop. Untuk Firefox Android, buat kredensial AMO API dan jalankan `npx web-ext sign --channel=unlisted --source-dir=/path/ke/folder-firefox-yang-diekstrak --api-key="$AMO_API_KEY" --api-secret="$AMO_API_SECRET"`. Hasil `.xpi` muncul di `web-ext-artifacts/`; pasang XPI yang ditandatangani melalui Firefox. Gunakan `form-helper-extension.zip` pada Chromium Android dan `form-helper-firefox.zip` pada Firefox; manifest Chromium tidak lagi memuat field khusus Firefox.
 
-Buka menu **Bantuan dan masukan** pada Google Forms, pilih **Pengaturan Form Helper** untuk memasukkan Base URL API, token klien, bahasa, model, serta persetujuan pemrosesan data. Setelah berpindah halaman/section, buka menu yang sama dan pilih **Muat soal halaman ini**. Izinkan akses host API saat browser meminta izin. Toggle “Aktifkan tombol saran” mengatur tombol jawaban. Pemicu jawaban berupa ikon bintang kecil di dalam setiap soal.
+Buka **Pengaturan Form Helper** dari menu **Bantuan dan masukan** di Google Forms atau menu **Form Helper** di halaman HEBAT. Masukkan Base URL API dan token klien, pilih model, lalu setujui pemrosesan data. Di HEBAT tombol **Muat soal halaman ini** memindai halaman kuis yang sedang terbuka. Ikon bintang hanya meminta dan menampilkan saran; ikon klip memilih file lokal. Keduanya `type=button`, dan ekstensi tidak mengubah jawaban, mencegat navigasi, atau mengirim form kuis. Permintaan jawaban dikirim ke Vercel; log server hanya mencatat metadata permintaan. Moodle tetap dapat mencatat pemuatan halaman dan gambar normal yang dilakukan browser saat halaman kuis dibuka.
 
 Untuk memeriksa ekstensi jalankan `npm run lint:extension`. Manifest menyediakan background event page untuk Firefox Android 142+ dan service worker untuk Chromium. Izin data Firefox mendeklarasikan `websiteContent` karena teks/gambar soal dikirim ke API setelah pengguna menekan tombol. Ikon browser khusus belum disertakan.
 

@@ -10,7 +10,8 @@
     ["glm-5.3-flashx", "GLM 5.3 FlashX"],
     ["gpt-6-luna", "GPT-6 Luna"],
     ["gpt-6-luna-fast", "GPT-6 Luna Fast (teks saja)"],
-    ["qwen3.8-flash", "Qwen 3.8 Flash (berbayar)"]
+    ["qwen3.8-flash", "Qwen 3.8 Flash (berbayar)"],
+    ["claude-haiku-5.5:free", "Claude Haiku 5.5 (gratis; teks, gambar, PDF/teks)"]
   ];
   const GEMINI_MODELS = [
     ["gemini-3.5-flash-lite", "Gemini 3.5 Flash Lite"],
@@ -61,6 +62,43 @@
     }
   }
 
+  function initHebatLauncher() {
+    if (document.getElementById("fh-hebat-launcher")) return;
+    const host = document.createElement("div");
+    host.id = "fh-hebat-launcher";
+    host.className = "fh-ui-host";
+    document.documentElement.append(host);
+    const root = host.attachShadow({ mode: "closed" });
+    addStyle(root, `
+      :host { all: initial; display: block; }
+      * { box-sizing: border-box; font-family: system-ui, sans-serif; }
+      .launcher { position: fixed; left: max(12px, env(safe-area-inset-left)); bottom: max(12px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: flex-start; width: auto; margin: 0; padding: 0; z-index: 2147483647; }
+      .toggle { border: 1px solid #777; border-radius: 999px; background: #ffffff; color: #202124; padding: 7px 11px; box-shadow: 0 2px 8px #0003; cursor: pointer; font-size: 13px; }
+      .toggle:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+      .menu { position: absolute; left: 0; bottom: calc(100% + 5px); display: grid; gap: 4px; width: 190px; margin: 0; padding: 7px; border: 1px solid #888; border-radius: 10px; background: #fff; box-shadow: 0 3px 14px #0003; }
+      .menu[hidden] { display: none; }
+      .menu button { border: 0; border-radius: 6px; background: transparent; color: #202124; padding: 9px; text-align: left; cursor: pointer; }
+      .menu button:hover { background: #f1f3f4; }
+    `);
+    const launcher = document.createElement("div"); launcher.className = "launcher";
+    const toggle = document.createElement("button"); toggle.className = "toggle"; toggle.type = "button"; toggle.textContent = "✦ Form Helper"; toggle.setAttribute("aria-label", "Menu Form Helper");
+    const menu = document.createElement("div"); menu.className = "menu"; menu.hidden = true;
+    const load = document.createElement("button"); load.type = "button"; load.textContent = "Muat soal halaman ini";
+    const settings = document.createElement("button"); settings.type = "button"; settings.textContent = "Pengaturan";
+    toggle.addEventListener("click", () => { menu.hidden = !menu.hidden; });
+    load.addEventListener("click", async () => {
+      load.disabled = true;
+      load.textContent = "Memuat soal…";
+      try {
+        const result = await global.FormHelperMain?.loadCurrentPage();
+        load.textContent = !result ? "Halaman kuis tidak ditemukan" : !result.enabled ? "Aktifkan saran di Pengaturan" : result.count ? `Soal siap (${result.count})` : "Soal belum terbaca";
+      } catch { load.textContent = "Gagal memuat soal"; }
+      setTimeout(() => { if (load.isConnected) { load.textContent = "Muat soal halaman ini"; load.disabled = false; } }, 1800);
+    });
+    settings.addEventListener("click", () => settingsActions?.openSettings());
+    menu.append(load, settings); launcher.append(toggle, menu); root.append(launcher);
+  }
+
   function addStyle(root, css) {
     const style = document.createElement("style");
     style.textContent = css;
@@ -82,7 +120,9 @@
     const host = document.createElement("div");
     host.id = "fh-settings-host";
     host.className = "fh-ui-host";
-    document.documentElement.append(host);
+    const quizForm = document.querySelector("#responseform");
+    if (quizForm?.parentElement) quizForm.parentElement.insertBefore(host, quizForm);
+    else (document.body || document.documentElement).append(host);
     const root = host.attachShadow({ mode: "closed" });
     addStyle(root, `
       :host { all: initial; color-scheme: light dark; }
@@ -118,12 +158,12 @@
       <div class="group"><label for="harborModel">Model utama — Harbor AI</label><select id="harborModel"></select></div>
       <label for="geminiModel">Model cadangan — Gemini AI</label><select id="geminiModel"></select>
       <label for="answerProvider">Model utama untuk jawaban</label><select id="answerProvider"></select>
-      <p class="note">GPT-OSS hanya menerima teks. Untuk soal bergambar, aktifkan OCR Qwen atau jawaban akan dialihkan ke Harbor/Gemini.</p>
+      <p class="note">GPT-OSS hanya menerima teks. Claude Haiku menerima gambar dan dokumen PDF/teks yang dipilih dari perangkat ini.</p>
       <label class="toggle"><input id="imageToText" type="checkbox"> OCR gambar dengan Qwen 3.8 27B (Groq)</label>
       <p class="note">Jika aktif, Qwen menyalin rumus, angka, tabel, dan label gambar menjadi teks sebelum dikirim ke model jawaban.</p>
       <label class="toggle"><input id="onlyHarbor" type="checkbox"> Nonaktifkan fallback Gemini AI</label>
       <p class="note">Saat aktif, Gemini tidak dipanggil ketika model jawaban gagal.</p>
-      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal dikirim ke API Vercel. Tergantung pengaturan, data dapat diproses oleh Harbor, Gemini, atau Groq (Qwen untuk OCR dan GPT-OSS untuk jawaban teks).</label>
+      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal, serta file lokal yang saya lampirkan, dikirim ke API Vercel. Tergantung pengaturan, data dapat diproses oleh Harbor, Gemini, atau Groq (Qwen untuk OCR dan GPT-OSS untuk jawaban teks).</label>
       <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Cek konfigurasi</button><button class="secondary" id="close">Tutup</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">Gunakan sesuai aturan dosen/penyelenggara ujian. Ekstensi hanya menampilkan saran dan tidak mengisi jawaban. Isi pertanyaan tidak disimpan di ekstensi atau log server.</p>
@@ -191,7 +231,7 @@
         dataConsentAccepted: panel.querySelector("#dataConsent").checked
       };
       if (values.enabled && !values.dataConsentAccepted) {
-        setStatus("Setujui pemrosesan teks dan gambar soal sebelum mengaktifkan saran.", true);
+        setStatus("Setujui pemrosesan teks, gambar, dan file yang dilampirkan sebelum mengaktifkan saran.", true);
         return false;
       }
       if (values.apiBase && !/^https:\/\//i.test(values.apiBase)) {
@@ -231,20 +271,23 @@
     });
   }
 
-  function questionControl(block, onAsk) {
+  function questionControl(block, onAsk, onAttach = null, platform = "google") {
     const host = document.createElement("div");
     host.className = "fh-question-host";
-    host.style.cssText = "position:absolute;top:2px;right:2px;z-index:5;width:34px;height:34px;line-height:0;";
+    host.style.cssText = `position:absolute;top:2px;right:2px;z-index:5;width:${onAttach ? 78 : 34}px;height:34px;line-height:0;`;
     const needsPositionAnchor = getComputedStyle(block).position === "static";
     const originalPosition = block.style.getPropertyValue("position");
     const originalPositionPriority = block.style.getPropertyPriority("position");
     if (needsPositionAnchor) block.style.setProperty("position", "relative", "important");
     const root = host.attachShadow({ mode: "closed" });
+    const starColor = platform === "hebat" ? "#cbe6e9" : "#ffffff";
+    const hoverBackground = platform === "hebat" ? "#f1f3f4" : "transparent";
     addStyle(root, `
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
-      .actions { display: flex; justify-content: flex-end; padding: 0 4px; }
-      button { display: inline-grid; place-items: center; width: 34px; min-width: 34px; height: 34px; min-height: 34px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #ffffff; opacity: 1; font-size: 14px; cursor: pointer; box-shadow: none; }
-      button:hover, button:focus-visible { background: transparent; color: #ffffff; outline: none; }
+      .actions { display: flex; justify-content: flex-end; gap: 2px; padding: 0 4px; }
+      button { display: inline-grid; place-items: center; width: 34px; min-width: 34px; height: 34px; min-height: 34px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: ${starColor}; opacity: 1; font-size: 14px; cursor: pointer; box-shadow: none; }
+      button:hover { background: ${hoverBackground}; color: ${starColor}; }
+      button:focus-visible { background: ${hoverBackground}; color: ${starColor}; outline: 2px solid #1a73e8; outline-offset: 1px; }
       button[disabled] { opacity: 1; }
       button[aria-busy="true"] { position: relative; }
       button[aria-busy="true"]::after { content: ""; position: absolute; width: 9px; height: 9px; right: -1px; top: -1px; border: 2px solid #80868b; border-right-color: transparent; border-radius: 50%; animation: fh-spin .7s linear infinite; }
@@ -257,7 +300,43 @@
     button.textContent = "✦";
     button.setAttribute("aria-label", "Tanya AI");
     button.title = "Tampilkan saran jawaban";
-    button.addEventListener("click", () => onAsk(control));
+    for (const type of ["pointerdown", "mousedown", "mouseup", "touchstart", "touchend"]) {
+      button.addEventListener(type, (event) => event.stopPropagation(), { passive: true });
+    }
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      onAsk(control);
+    });
+    let attachButton = null;
+    if (onAttach) {
+      attachButton = document.createElement("button");
+      attachButton.type = "button";
+      attachButton.textContent = "📎";
+      attachButton.setAttribute("aria-label", "Lampirkan PDF atau file teks lokal");
+      attachButton.title = "Lampirkan PDF/TXT/MD/CSV dari perangkat ini";
+      const input = document.createElement("input");
+      input.type = "file";
+      input.multiple = true;
+      input.accept = ".pdf,.txt,.md,.csv,application/pdf,text/plain,text/markdown,text/csv";
+      input.hidden = true;
+      for (const type of ["click", "change", "input"]) {
+        input.addEventListener(type, (event) => event.stopPropagation());
+      }
+      input.addEventListener("change", () => {
+        if (input.files?.length) onAttach(control, [...input.files]);
+        input.value = "";
+      });
+      attachButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        input.click();
+      });
+      for (const type of ["pointerdown", "mousedown", "mouseup", "touchstart", "touchend"]) {
+        attachButton.addEventListener(type, (event) => event.stopPropagation(), { passive: true });
+      }
+      row.append(attachButton, input);
+    }
     row.append(button);
     root.append(row);
     block.insertBefore(host, block.firstChild);
@@ -272,6 +351,12 @@
         else block.style.removeProperty("position");
       },
       panel: null,
+      setFileState(message) {
+        if (attachButton) {
+          attachButton.title = message || "Lampirkan PDF/TXT/MD/CSV dari perangkat ini";
+          attachButton.setAttribute("aria-label", message || "Lampirkan PDF atau file teks lokal");
+        }
+      },
       setState(state) {
         control.loading = state === "loading";
         button.disabled = false;
@@ -316,14 +401,19 @@
           IMAGE_UNAVAILABLE: "Sebagian gambar tidak terkirim atau tidak terbaca, jawaban mungkin kurang akurat.",
           IMAGE_OCR_FALLBACK: "OCR Qwen gagal; sistem mencoba memproses gambar langsung dengan model jawaban.",
           GPT_IMAGE_UNSUPPORTED: "GPT-OSS tidak menerima gambar; jawaban dialihkan ke Harbor/Gemini. Aktifkan OCR Qwen untuk memakai GPT-OSS pada soal gambar.",
-          GROQ_UNAVAILABLE: "API key Groq belum dikonfigurasi; jawaban dialihkan ke Harbor/Gemini."
+          GROQ_UNAVAILABLE: "API key Groq belum dikonfigurasi; jawaban dialihkan ke Harbor/Gemini.",
+          FILE_UNAVAILABLE: "File hanya dikirim ke Claude Haiku; provider cadangan menjawab dari teks dan gambar soal."
         };
-        if (warningMessages[response.warning]) { const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = warningMessages[response.warning]; card.append(warning); }
+        const warningCodes = new Set([response.warning, ...(Array.isArray(response.warnings) ? response.warnings : [])]);
+        for (const code of warningCodes) {
+          if (!warningMessages[code]) continue;
+          const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = warningMessages[code]; card.append(warning);
+        }
         panelRoot.append(card); block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
       }
     };
     return control;
   }
 
-  global.FormHelperUI = { initSettingsPanel, syncHelpMenu, questionControl };
+  global.FormHelperUI = { initSettingsPanel, initHebatLauncher, syncHelpMenu, questionControl };
 })(globalThis);

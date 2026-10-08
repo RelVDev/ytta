@@ -8,14 +8,14 @@
 
 ## 0. Ringkasan Produk
 
-Ekstensi browser untuk ponsel. Saat pengguna membuka Google Form, ekstensi aktif dan menaruh **satu tombol kecil di setiap pertanyaan**. Ketika tombol diklik:
+Ekstensi browser untuk ponsel. Saat pengguna membuka Google Forms atau kuis di HEBAT, ekstensi menaruh **satu tombol kecil di setiap pertanyaan**. Ketika tombol diklik:
 
 1. Ekstensi membaca pertanyaan itu (teks, tipe, pilihan jawaban, gambar bila ada).
 2. Data dikirim ke **API di Vercel** (milik kita).
 3. API memakai model utama yang dipilih, **Harbor** atau **Groq GPT-OSS 120B**. Harbor menjadi fallback setelah GPT-OSS, lalu Gemini AI Studio menjadi fallback opsional.
 4. Jawaban ditampilkan **tepat di bawah soal**, target ±3 detik, contoh: `D. CH3COOH`.
 
-Ekstensi **tidak mengisi form otomatis**. Ia hanya menampilkan jawaban saran.
+Ekstensi **tidak mengisi form otomatis**. Ia hanya menampilkan jawaban saran. Pada Moodle HEBAT, ekstensi tidak mencegat submit/navigasi kuis dan tidak mengirim request `processattempt.php`.
 
 ### Batasan penggunaan (wajib dipatuhi)
 
@@ -61,14 +61,15 @@ Pemilik mengembangkan dari **ponsel (Termux)**, jadi:
 
 ```
 ┌─────────────── Firefox Android ────────────────┐
-│ Google Form page (docs.google.com/forms/...)   │
+│ Google Forms / HEBAT quiz page                 │
 │   └─ Content Script                            │
 │        • parser: baca pertanyaan di DOM        │
 │        • ui: tombol + panel jawaban            │
 │        • panel pengaturan inline (tanpa popup) │
 │        • kirim pesan ke background             │
 │ Background (event page / service worker)       │
-│   • fetch gambar → base64 (bypass CORS)        │
+│   • Google: fetch gambar → base64              │
+│   • HEBAT: baca gambar yang sudah dirender      │
 │   • POST ke Vercel API (bebas CSP halaman)     │
 └───────────────────────┬────────────────────────┘
                         │ HTTPS  POST /api/answer
@@ -190,6 +191,9 @@ X-Client-Token: <token statis dari env CLIENT_TOKEN>
     "columns": null,
     "images": [
       { "url": "https://lh7-rt.googleusercontent.com/...", "mimeType": "image/png", "base64": "<opsional>" }
+    ],
+    "files": [
+      { "name": "materi.pdf", "mimeType": "application/pdf", "base64": "<base64>" }
     ]
   }
 }
@@ -201,8 +205,9 @@ Aturan:
 - `scale`: `{ "min": 1, "max": 5, "minLabel": "...", "maxLabel": "..." }` untuk `linear_scale`.
 - `rows` / `columns`: array string untuk grid.
 - `images[]`: pakai `base64` bila ekstensi berhasil mengambil gambar; jika tidak, kirim `url` saja dan server mencoba mengambilnya (lihat §8).
+- `files[]`: opsional; maksimal dua lampiran lokal PDF/teks, masing-masing ≤500 KB. Hanya diterima untuk `claude-haiku-5.5:free` melalui Harbor. Jangan mengambil tautan file dari Moodle.
 - `models.harbor`, `models.gemini`, `models.groqAnswer`, dan `models.groqOcr` opsional; jika diberikan harus cocok dengan allowlist §7. `answerProvider` memilih Harbor atau Groq GPT-OSS. `imageToText` menyalakan OCR Qwen; `disableGemini` mematikan fallback Gemini. Field `onlyHarbor` tetap diterima untuk kompatibilitas versi ekstensi lama.
-- Batas: payload ≤ **3,5 MB** total (batas body Vercel ±4,5 MB), maksimal **4 gambar** per soal.
+- Batas: payload ≤ **3,5 MB** total (batas body Vercel ±4,5 MB), maksimal **4 gambar** dan **2 file** per soal.
 
 **Response sukses (200)**
 ```json
@@ -223,7 +228,7 @@ Aturan:
 
 Untuk `short_answer`/`paragraph`: `keys: []`, `texts: ["..."]`, `display` = jawaban.
 Untuk grid: `rows: [{ "row": "...", "picks": ["..."] }]`, `display` = ringkasan multi-baris.
-Response sukses juga mencantumkan `provider` dan `model`. `warning` dapat berisi `IMAGE_UNAVAILABLE`, `IMAGE_OCR_FALLBACK`, `GPT_IMAGE_UNSUPPORTED`, atau `GROQ_UNAVAILABLE` sesuai jalur gambar/provider.
+Response sukses juga mencantumkan `provider` dan `model`. `warning` dapat berisi kode jalur gambar/provider atau `FILE_UNAVAILABLE` jika Claude gagal dan provider cadangan menjawab tanpa lampiran.
 
 **Response error**
 ```json
@@ -251,7 +256,7 @@ Background tidak terkena CORS, tetapi tetap pasang header CORS yang rapi (`Acces
 
 ## 7. Integrasi Provider dan Model
 
-Token Harbor dan Groq memakai endpoint OpenAI-compatible `/v1/chat/completions`; Groq memakai `https://api.groq.com/openai/v1`. Gemini memakai Google AI Interactions API dengan JSON terstruktur. `API-DOCS.txt` menjadi referensi awal; untuk field request Gemini yang lebih baru, verifikasi lewat dokumentasi resmi Google. API key Groq disimpan di `GROQ_API_KEY` dan dipakai oleh OCR Qwen maupun GPT-OSS.
+Token Harbor (kecuali Claude Haiku) dan Groq memakai endpoint OpenAI-compatible `/v1/chat/completions`; Claude Haiku memakai Harbor `/v1/messages`. Groq memakai `https://api.groq.com/openai/v1`. Gemini memakai Google AI Interactions API dengan JSON terstruktur. `API-DOCS.txt` menjadi referensi awal; untuk field request Gemini yang lebih baru, verifikasi lewat dokumentasi resmi Google. API key Groq disimpan di `GROQ_API_KEY` dan dipakai oleh OCR Qwen maupun GPT-OSS.
 
 Model yang tersedia untuk pilihan manual:
 
@@ -265,6 +270,7 @@ Model yang tersedia untuk pilihan manual:
 | Harbor | `gpt-6-luna` |
 | Harbor | `gpt-6-luna-fast` |
 | Harbor | `qwen3.8-flash` |
+| Harbor | `claude-haiku-5.5:free` (teks, gambar, PDF/file teks) |
 | Gemini fallback | `gemini-3.5-flash-lite` |
 | Gemini fallback | `gemini-3.6-flash` |
 | Gemini fallback | `gemini-3.8-flash` |
@@ -272,6 +278,8 @@ Model yang tersedia untuk pilihan manual:
 | Groq jawaban teks | `openai/gpt-oss-120b` |
 
 Ketentuan:
+
+- Model Claude Haiku menggunakan endpoint Anthropic-compatible Harbor `/v1/messages`; provider Harbor lain menggunakan `/v1/chat/completions`. Lampiran PDF/TXT/MD/CSV diterima hanya untuk Haiku, dipilih lokal oleh pengguna, dan dibatasi dua file 500 KB per file. Backend tidak mengambil tautan file dari Moodle.
 
 - Environment `HARBOR_MODEL`, `GEMINI_MODEL`, `GROQ_OCR_MODEL`, dan `GROQ_ANSWER_MODEL` menjadi default. Ekstensi mengirim pilihan provider dan model; backend menerima hanya ID allowlist di atas.
 - Route MiMo `mimo-v2.6-flash:free` saat ini hanya menerima teks. Jika dipilih tanpa OCR pada soal bergambar, Harbor dicoba tanpa gambar dan UI memberi peringatan; provider fallback yang mendukung gambar masih dapat memprosesnya.
@@ -341,7 +349,7 @@ Deteksi gambar di parser:
   "optional_host_permissions": ["https://*/*"],
   "background": { "service_worker": "background.js" },
   "content_scripts": [{
-    "matches": ["https://docs.google.com/forms/*"],
+    "matches": ["https://docs.google.com/forms/*", "https://hebat.elearning.unair.ac.id/mod/quiz/attempt.php*"],
     "js": ["content/00-utils.js", "content/10-parser.js", "content/20-ui.js", "content/30-main.js"],
     "css": ["content/styles.css"],
     "run_at": "document_idle"
@@ -355,7 +363,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 
 ### 9.2 Content script
 
-**Aktivasi:** hanya pada halaman **respondent** (`/forms/d/e/.../viewform`), bukan editor. Jika URL mengandung `/edit`, jangan lakukan apa pun. Saat toggle saran mati, hilangkan tombol per soal; tombol ⚙ pengaturan tetap terlihat.
+**Aktivasi:** pada halaman respondent Google Forms (`/forms/d/e/.../viewform`) atau attempt HEBAT (`/mod/quiz/attempt.php` pada host yang diizinkan). Google Forms editor dan halaman Moodle lain tidak diaktifkan. Saat toggle saran mati, hilangkan tombol per soal; launcher pengaturan tetap terlihat.
 
 **Orkestrasi (`30-main.js`):**
 1. Ambil pengaturan (`enabled`, `lang`) dari `storage.local`.
@@ -370,6 +378,14 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 - Opsi "Lainnya/Other": sertakan sebagai opsi bertanda `isOther: true`; jangan dipilih sebagai jawaban kecuali tidak ada yang cocok.
 - Dropdown: baca daftar `[role="option"]` (abaikan opsi kosong "Pilih"). Jika daftar belum dirender, jangan ubah kontrol form; kirim `options: []` dan tampilkan peringatan bahwa pilihan belum terbaca.
 - Linear scale: ambil `min`, `max`, dan label ujung; jawaban tampil sebagai angka/label tanpa huruf opsi.
+
+### 9.3 Moodle HEBAT
+
+- Parser mengambil blok `#responseform .que`, prompt dari `.qtext`, dan opsi dari label kontrol di `.answer`. Tipe yang dikenali: pilihan ganda, checkbox, dropdown, jawaban singkat, dan essay.
+- Gambar soal diserialisasi dari elemen same-origin yang sudah selesai dimuat di halaman menggunakan canvas. Jangan `fetch` ulang `pluginfile.php` dan jangan kirim URL Moodle ke backend. Jika canvas tidak bisa membaca gambar, lewati gambar dan tandai `imagesTruncated`.
+- File hanya dilampirkan setelah pengguna menekan tombol klip dan memilih file lokal PDF/TXT/MD/CSV. File tidak diambil dari halaman kuis atau Moodle. Kirim file hanya ke model Harbor Claude Haiku 5.5.
+- Launcher HEBAT menyediakan pemindaian halaman dan pengaturan. Tombol bintang/klip serta tombol launcher bertipe `button`; parser hanya membaca DOM. Dilarang mengubah nilai input, menekan kontrol quiz, mencegat submit, atau menulis ke `processattempt.php`.
+- Moodle akan tetap menerima request halaman dan gambar yang dilakukan browser normal. Ekstensi hanya mengirim permintaan jawaban ke API Vercel setelah tombol bintang ditekan; API mencatat metadata, bukan isi soal.
 - Grid: baris dari label baris, kolom dari header tabel.
 - **Wajib ada fixture test** untuk setiap tipe (lihat §12).
 

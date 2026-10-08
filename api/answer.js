@@ -35,6 +35,7 @@ module.exports = async function answer(req, res) {
   let stage = "validate";
   let selectedModel = null;
   let imageInputCount = 0;
+  let fileInputCount = 0;
   let imageSentCount = 0;
   let imagesOcrProcessed = 0;
   let imagesUnavailable = false;
@@ -52,6 +53,7 @@ module.exports = async function answer(req, res) {
     questionType = payload.question.type;
     selectedModel = payload.answerProvider === "groq" ? payload.models.groqAnswer : payload.models.harbor;
     imageInputCount = payload.question.images.length + payload.question.options.filter((option) => option.image).length;
+    fileInputCount = payload.question.files.length;
     stage = "prepare_images";
     const prepared = await prepareImages(payload.question, requestController.signal);
     imageSentCount = prepared.images.length;
@@ -139,15 +141,12 @@ module.exports = async function answer(req, res) {
     }
     if (!answer) throw lastProviderError || new AppError("MODEL_ERROR", MESSAGES.MODEL_ERROR, 502);
 
-    const warning = prepared.unavailable || finalImageUnsupported
-      ? "IMAGE_UNAVAILABLE"
-      : imageOcrFailed
-        ? "IMAGE_OCR_FALLBACK"
-        : groqSkippedForImages
-          ? "GPT_IMAGE_UNSUPPORTED"
-          : groqUnavailable
-            ? "GROQ_UNAVAILABLE"
-          : undefined;
+    const warnings = [];
+    if (prepared.unavailable || finalImageUnsupported) warnings.push("IMAGE_UNAVAILABLE");
+    else if (imageOcrFailed) warnings.push("IMAGE_OCR_FALLBACK");
+    else if (groqSkippedForImages) warnings.push("GPT_IMAGE_UNSUPPORTED");
+    else if (groqUnavailable) warnings.push("GROQ_UNAVAILABLE");
+    if (payload.question.files.length && provider !== "harbor") warnings.push("FILE_UNAVAILABLE");
 
     const latencyMs = Date.now() - started;
     console.info(JSON.stringify({
@@ -158,6 +157,7 @@ module.exports = async function answer(req, res) {
       latencyMs,
       status: "ok",
       imageInputCount,
+      fileInputCount,
       imageSentCount,
       imagesOcrProcessed,
       imageOcrApplied,
@@ -173,7 +173,7 @@ module.exports = async function answer(req, res) {
       latencyMs,
       provider,
       model: selectedModel,
-      ...(warning ? { warning } : {})
+      ...(warnings.length ? { warning: warnings[0], ...(warnings.length > 1 ? { warnings } : {}) } : {})
     });
   } catch (error) {
     if (requestController.signal.aborted) return;
@@ -193,6 +193,7 @@ module.exports = async function answer(req, res) {
         reason: error.reason || undefined
       } : error instanceof AppError && error.reason ? { reason: error.reason } : {}),
       imageInputCount,
+      fileInputCount,
       imageSentCount,
       imagesOcrProcessed,
       imageOcrApplied,

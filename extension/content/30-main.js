@@ -9,10 +9,58 @@
   let scanPromise = null;
   let scanQueued = false;
 
+  function isHebatQuizPage() {
+    return location.hostname === "hebat.elearning.unair.ac.id"
+      && /^\/mod\/quiz\/attempt\.php$/.test(location.pathname)
+      && Boolean(document.querySelector("#responseform"));
+  }
+
   function isRespondentPage() {
     return location.pathname.includes("/forms/")
       && /\/(?:viewform|formResponse)\/?$/.test(location.pathname)
       && !location.pathname.includes("/edit");
+  }
+
+  function isSupportedPage() { return isRespondentPage() || isHebatQuizPage(); }
+
+  function fileToBase64(file) {
+    return file.arrayBuffer().then((buffer) => {
+      const bytes = new Uint8Array(buffer);
+      let binary = "";
+      for (let offset = 0; offset < bytes.length; offset += 0x8000) {
+        binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
+      }
+      return btoa(binary);
+    });
+  }
+
+  async function addLocalFiles(control, fileList) {
+    try {
+      const settings = await getSettings();
+      if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5:free") {
+        throw new Error("Pilih model Harbor Claude Haiku 5.5 sebelum melampirkan file.");
+      }
+      if (fileList.length > 2) throw new Error("Maksimal dua file dapat dilampirkan.");
+      const files = [];
+      for (const file of fileList) {
+        const extension = file.name.split(".").at(-1).toLowerCase();
+        const isPdf = extension === "pdf" || file.type === "application/pdf";
+        const isText = ["txt", "md", "csv"].includes(extension) || /^text\//i.test(file.type);
+        if (!isPdf && !isText) throw new Error("Format yang didukung: PDF, TXT, MD, atau CSV.");
+        if (file.size > 500_000) throw new Error(`Ukuran ${file.name} melebihi batas 500 KB.`);
+        files.push({
+          name: cleanText(file.name).slice(0, 120),
+          mimeType: isPdf ? "application/pdf" : "text/plain",
+          base64: await fileToBase64(file)
+        });
+      }
+      control.files = files;
+      control.setFileState(files.length ? `${files.length} file lokal siap dilampirkan` : "Lampirkan PDF/TXT/MD/CSV dari perangkat ini");
+    } catch (error) {
+      control.files = [];
+      control.setFileState(error.message || "File tidak dapat dibaca");
+      control.showMessage(error.message || "File tidak dapat dibaca.", true);
+    }
   }
 
   async function handleAsk(control) {
@@ -39,11 +87,18 @@
       }
     }, 8000);
     try {
-      const question = global.FormHelperParser.parseQuestion(control.block);
+      let question = global.FormHelperParser.parseQuestion(control.block);
       if (!question) throw new Error("Soal ini belum dapat dibaca.");
       if (question.type === "unsupported_file_upload") throw new Error("Soal unggah file belum didukung.");
       if (question.type === "dropdown" && !question.options.length) throw new Error("Pilihan dropdown belum terbaca. Coba buka daftar pilihan lalu tanya lagi.");
       const settings = await getSettings();
+      if (isHebatQuizPage()) question = global.FormHelperParser.prepareHebatQuestion(control.block, question);
+      if (control.files?.length) {
+        if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5:free") {
+          throw new Error("Lampiran file hanya didukung saat model Harbor Claude Haiku 5.5 dipilih.");
+        }
+        question.files = control.files;
+      }
       if (!settings.dataConsentAccepted) throw new Error("Buka pengaturan dan setujui pemrosesan data soal untuk menggunakan saran AI.");
       control.sentRequest = true;
       const response = await sendMessage({
@@ -104,12 +159,13 @@
   }
 
   async function scan() {
-    if (!isRespondentPage()) return { enabled: false, count: 0 };
+    if (!isSupportedPage()) return { enabled: false, count: 0 };
     const settings = await getSettings();
     for (const control of activeControls) {
       if (!control.block.isConnected) removeControl(control);
     }
-    const blocks = [...document.querySelectorAll(global.FormHelperParser.SELECTORS.questionBlocks)];
+    const platform = isHebatQuizPage() ? "hebat" : "google";
+    const blocks = global.FormHelperParser.getQuestionBlocks(platform);
     let count = 0;
     for (const block of blocks) {
       let question = null;
@@ -139,7 +195,7 @@
         controls.delete(block);
       }
       if (!settings.enabled || !question || block.closest(".fh-ui-host, .fh-question-host, .fh-answer-host")) continue;
-      const control = global.FormHelperUI.questionControl(block, handleAsk);
+      const control = global.FormHelperUI.questionControl(block, handleAsk, platform === "hebat" ? addLocalFiles : null, platform);
       control.questionFingerprint = fingerprint;
       controls.set(block, control);
       activeControls.add(control);
@@ -202,8 +258,9 @@
     return requestScan();
   }
 
-  if (isRespondentPage()) {
+  if (isSupportedPage()) {
     global.FormHelperUI.initSettingsPanel();
+    if (isHebatQuizPage()) global.FormHelperUI.initHebatLauncher();
     global.FormHelperUI.syncHelpMenu();
     requestScan().catch(() => {}).finally(startObserver);
     api.storage.onChanged.addListener(refresh);

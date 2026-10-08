@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Form Helper",
-  "version": "0.1.2",
-  "description": "Saran jawaban untuk membahas soal Google Forms saat belajar.",
+  "version": "0.2.0",
+  "description": "Saran jawaban untuk Google Forms dan HEBAT saat belajar.",
   "permissions": ["storage"],
   "host_permissions": [
     "https://docs.google.com/forms/*",
@@ -18,12 +18,12 @@
     "scripts": ["background.js"]
   },
   "content_scripts": [{
-    "matches": ["https://docs.google.com/forms/*"],
+    "matches": ["https://docs.google.com/forms/*", "https://hebat.elearning.unair.ac.id/mod/quiz/attempt.php*"],
     "js": ["content/00-utils.js", "content/10-parser.js", "content/20-ui.js", "content/30-main.js"],
     "css": ["content/styles.css"],
     "run_at": "document_idle"
   }],
-  "action": { "default_title": "Form Helper — buka pengaturan di halaman Forms" },
+  "action": { "default_title": "Form Helper — pengaturan di halaman Forms atau HEBAT" },
   "browser_specific_settings": {
     "gecko": {
       "id": "form-helper@ytta.local",

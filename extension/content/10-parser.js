@@ -70,6 +70,7 @@
 
   function parseQuestion(block) {
     if (!block || !block.querySelector) return null;
+    if (block.matches(".que")) return parseHebatQuestion(block);
     const heading = block.querySelector(SELECTORS.heading);
     const headingText = textOf(heading);
     const questionImages = imagesIn(block);
@@ -155,5 +156,144 @@
     };
   }
 
-  global.FormHelperParser = { SELECTORS, parseQuestion };
+  function moodleInputLabel(input) {
+    return input.labels?.[0]
+      || (input.id && [...input.ownerDocument.querySelectorAll("label[for]")].find((label) => label.htmlFor === input.id))
+      || input.closest(".r0, .r1, .answer div")
+      || input.parentElement;
+  }
+
+  function moodleOption(input, index) {
+    const label = moodleInputLabel(input);
+    if (!label) return null;
+    const labelText = label.querySelector('[data-region="answer-label"]') || label;
+    const image = label.querySelector("img");
+    const optionImage = image ? { url: image.currentSrc || image.src, mimeType: "image/jpeg", base64: null } : null;
+    const text = global.FormHelperUtils.cleanText(labelText.textContent);
+    return { key: String.fromCharCode(65 + index), text, image: optionImage, isOther: false };
+  }
+
+  function parseHebatQuestion(block) {
+    const qtext = block.querySelector(".qtext");
+    if (!qtext) return null;
+    const text = global.FormHelperUtils.cleanText(qtext.textContent) || "Soal bergambar tanpa teks.";
+    const questionImages = [...qtext.querySelectorAll("img")].map((img) => ({
+      url: img.currentSrc || img.src,
+      mimeType: "image/jpeg",
+      base64: null
+    })).filter((image) => image.url).slice(0, 4);
+    const allQuestionImages = qtext.querySelectorAll("img").length;
+    const radioInputs = [...block.querySelectorAll('.answer input[type="radio"]')];
+    const checkboxInputs = [...block.querySelectorAll('.answer input[type="checkbox"]')];
+    let type;
+    let options = [];
+    let scale = null;
+    if (checkboxInputs.length) {
+      type = "checkbox";
+      options = checkboxInputs.map(moodleOption).filter((option) => option && (option.text || option.image));
+    } else if (radioInputs.length) {
+      type = "multiple_choice";
+      options = radioInputs.map(moodleOption).filter((option) => option && (option.text || option.image));
+    } else if (block.querySelector(".answer select")) {
+      type = "dropdown";
+      const select = block.querySelector(".answer select");
+      options = [...select.options].filter((option) => option.value !== "").map((option, index) => ({
+        key: String.fromCharCode(65 + index), text: global.FormHelperUtils.cleanText(option.textContent), image: null, isOther: false
+      }));
+    } else if (block.querySelector(".answer textarea")) {
+      type = "paragraph";
+    } else if (block.querySelector('.answer input[type="text"], .answer input[type="number"]')) {
+      type = "short_answer";
+    } else {
+      return null;
+    }
+    if (["multiple_choice", "checkbox", "dropdown"].includes(type) && !options.length) return null;
+    const optionImages = options.filter((option) => option.image).length;
+    const allowedQuestionImages = questionImages.slice(0, Math.max(0, 4 - optionImages));
+    const optionBudget = Math.max(0, 4 - allowedQuestionImages.length);
+    let usedOptionImages = 0;
+    options = options.map((option) => {
+      if (!option.image) return option;
+      if (usedOptionImages++ < optionBudget) return option;
+      return { ...option, image: null };
+    });
+    return {
+      id: block.id || "",
+      type,
+      text,
+      required: block.classList.contains("required") || Boolean(block.querySelector('[aria-required="true"]')),
+      options,
+      scale,
+      rows: null,
+      columns: null,
+      images: allowedQuestionImages,
+      imagesTruncated: allQuestionImages > allowedQuestionImages.length || optionImages > optionBudget
+    };
+  }
+
+  function captureRenderedImage(img) {
+    if (!img || !img.complete || !img.naturalWidth || !img.naturalHeight) return null;
+    try {
+      const sourceUrl = new URL(img.currentSrc || img.src, location.href);
+      if (sourceUrl.origin !== location.origin) return null;
+      const maxEdge = 2000;
+      const ratio = Math.min(1, maxEdge / Math.max(img.naturalWidth, img.naturalHeight));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(img.naturalWidth * ratio));
+      canvas.height = Math.max(1, Math.round(img.naturalHeight * ratio));
+      const context = canvas.getContext("2d", { alpha: false });
+      if (!context) return null;
+      context.fillStyle = "#ffffff";
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(img, 0, 0, canvas.width, canvas.height);
+      let dataUrl = canvas.toDataURL("image/png");
+      let mimeType = "image/png";
+      if (dataUrl.length > 600_000) {
+        dataUrl = canvas.toDataURL("image/jpeg", 0.92);
+        mimeType = "image/jpeg";
+      }
+      const base64 = dataUrl.split(",")[1] || "";
+      if (!base64 || base64.length > 1_900_000) return null;
+      return { mimeType, base64, url: null };
+    } catch {
+      return null;
+    }
+  }
+
+  function prepareHebatQuestion(block, question) {
+    const prepared = { ...question, images: [], options: question.options.map((option) => ({ ...option, image: null })) };
+    const qtextImages = [...block.querySelector(".qtext").querySelectorAll("img")];
+    let truncated = question.imagesTruncated;
+    let totalImageBytes = 0;
+    const maxTotalBase64 = 1_400_000;
+    for (const img of qtextImages.slice(0, question.images.length)) {
+      const captured = captureRenderedImage(img);
+      if (captured && totalImageBytes + captured.base64.length <= maxTotalBase64) {
+        prepared.images.push(captured);
+        totalImageBytes += captured.base64.length;
+      } else truncated = true;
+    }
+    const inputImages = [...block.querySelectorAll('.answer input[type="radio"], .answer input[type="checkbox"]')]
+      .map((input) => {
+        const label = moodleInputLabel(input);
+        return label?.querySelector("img") || null;
+      });
+    prepared.options = question.options.map((option) => {
+      if (!option.image) return option;
+      const optionIndex = option.key.charCodeAt(0) - 65;
+      const img = inputImages[optionIndex];
+      const captured = captureRenderedImage(img);
+      if (!captured || totalImageBytes + captured.base64.length > maxTotalBase64) { truncated = true; return { ...option, image: null }; }
+      totalImageBytes += captured.base64.length;
+      return { ...option, image: captured };
+    });
+    prepared.imagesTruncated = truncated;
+    return prepared;
+  }
+
+  function getQuestionBlocks(platform = "google") {
+    return [...document.querySelectorAll(platform === "hebat" ? "#responseform .que" : SELECTORS.questionBlocks)];
+  }
+
+  global.FormHelperParser = { SELECTORS, parseQuestion, getQuestionBlocks, prepareHebatQuestion };
 })(globalThis);

@@ -22,6 +22,10 @@ function isAllowedImageUrl(value) {
   }
 }
 
+function isHebatImageUrl(value) {
+  try { return new URL(value).hostname === "hebat.elearning.unair.ac.id"; } catch { return false; }
+}
+
 function bytesToBase64(buffer) {
   const bytes = new Uint8Array(buffer);
   let binary = "";
@@ -97,11 +101,20 @@ async function convertImage(image) {
 
 async function prepareQuestionImages(question) {
   const prepared = { ...question };
-  prepared.images = await Promise.all((question.images || []).map(convertImage));
-  prepared.options = await Promise.all((question.options || []).map(async (option) => ({
-    ...option,
-    image: option.image ? await convertImage(option.image) : null
-  })));
+  let hebatImageSkipped = false;
+  const questionImages = (question.images || []).filter((image) => {
+    if (!image?.base64 && isHebatImageUrl(image?.url)) { hebatImageSkipped = true; return false; }
+    return true;
+  });
+  prepared.images = await Promise.all(questionImages.map(convertImage));
+  prepared.options = await Promise.all((question.options || []).map(async (option) => {
+    if (option.image && !option.image.base64 && isHebatImageUrl(option.image.url)) {
+      hebatImageSkipped = true;
+      return { ...option, image: null };
+    }
+    return { ...option, image: option.image ? await convertImage(option.image) : null };
+  }));
+  if (hebatImageSkipped) prepared.imagesTruncated = true;
   return prepared;
 }
 
