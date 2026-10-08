@@ -16,7 +16,12 @@
   };
 
   async function getSettings() {
-    return api.storage.local.get(DEFAULTS);
+    const settings = await api.storage.local.get(DEFAULTS);
+    if (settings.harborModel === "claude-haiku-5.5:free") {
+      settings.harborModel = "claude-haiku-5.5";
+      await api.storage.local.set({ harborModel: settings.harborModel });
+    }
+    return settings;
   }
 
   function cleanText(value) {

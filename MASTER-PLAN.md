@@ -205,7 +205,7 @@ Aturan:
 - `scale`: `{ "min": 1, "max": 5, "minLabel": "...", "maxLabel": "..." }` untuk `linear_scale`.
 - `rows` / `columns`: array string untuk grid.
 - `images[]`: pakai `base64` bila ekstensi berhasil mengambil gambar; jika tidak, kirim `url` saja dan server mencoba mengambilnya (lihat §8).
-- `files[]`: opsional; maksimal dua lampiran lokal PDF/teks, masing-masing ≤500 KB. Hanya diterima untuk `claude-haiku-5.5:free` melalui Harbor. Jangan mengambil tautan file dari Moodle.
+- `files[]`: opsional; maksimal dua lampiran lokal PDF/teks, masing-masing ≤500 KB. Hanya diterima untuk `claude-haiku-5.5` melalui Harbor. Jangan mengambil tautan file dari Moodle.
 - `models.harbor`, `models.gemini`, `models.groqAnswer`, dan `models.groqOcr` opsional; jika diberikan harus cocok dengan allowlist §7. `answerProvider` memilih Harbor atau Groq GPT-OSS. `imageToText` menyalakan OCR Qwen; `disableGemini` mematikan fallback Gemini. Field `onlyHarbor` tetap diterima untuk kompatibilitas versi ekstensi lama.
 - Batas: payload ≤ **3,5 MB** total (batas body Vercel ±4,5 MB), maksimal **4 gambar** dan **2 file** per soal.
 
@@ -270,7 +270,7 @@ Model yang tersedia untuk pilihan manual:
 | Harbor | `gpt-6-luna` |
 | Harbor | `gpt-6-luna-fast` |
 | Harbor | `qwen3.8-flash` |
-| Harbor | `claude-haiku-5.5:free` (teks, gambar, PDF/file teks) |
+| Harbor | `claude-haiku-5.5` (teks, gambar, PDF/file teks) |
 | Gemini fallback | `gemini-3.5-flash-lite` |
 | Gemini fallback | `gemini-3.6-flash` |
 | Gemini fallback | `gemini-3.8-flash` |

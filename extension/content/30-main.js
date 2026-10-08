@@ -37,7 +37,7 @@
   async function addLocalFiles(control, fileList) {
     try {
       const settings = await getSettings();
-      if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5:free") {
+      if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5") {
         throw new Error("Pilih model Harbor Claude Haiku 5.5 sebelum melampirkan file.");
       }
       if (fileList.length > 2) throw new Error("Maksimal dua file dapat dilampirkan.");
@@ -94,7 +94,7 @@
       const settings = await getSettings();
       if (isHebatQuizPage()) question = global.FormHelperParser.prepareHebatQuestion(control.block, question);
       if (control.files?.length) {
-        if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5:free") {
+        if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5") {
           throw new Error("Lampiran file hanya didukung saat model Harbor Claude Haiku 5.5 dipilih.");
         }
         question.files = control.files;

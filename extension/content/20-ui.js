@@ -11,7 +11,7 @@
     ["gpt-6-luna", "GPT-6 Luna"],
     ["gpt-6-luna-fast", "GPT-6 Luna Fast (teks saja)"],
     ["qwen3.8-flash", "Qwen 3.8 Flash (berbayar)"],
-    ["claude-haiku-5.5:free", "Claude Haiku 5.5 (gratis; teks, gambar, PDF/teks)"]
+    ["claude-haiku-5.5", "Claude Haiku 5.5 (teks, gambar, PDF/teks)"]
   ];
   const GEMINI_MODELS = [
     ["gemini-3.5-flash-lite", "Gemini 3.5 Flash Lite"],

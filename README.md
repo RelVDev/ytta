@@ -25,7 +25,7 @@ Harbor:
 - [`gpt-6-luna`](https://tokenharbor.ai/models/gpt-6-luna)
 - [`gpt-6-luna-fast`](https://tokenharbor.ai/models/gpt-6-luna-fast) (teks saja)
 - [`qwen3.8-flash`](https://tokenharbor.ai/models/qwen3.8-flash) (berbayar)
-- `claude-haiku-5.5:free` (teks, gambar, PDF, dan file teks melalui endpoint Messages Harbor)
+- `claude-haiku-5.5` (teks, gambar, PDF, dan file teks melalui endpoint Messages Harbor)
 
 Gemini:
 
