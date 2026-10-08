@@ -104,6 +104,39 @@ test("launcher HEBAT putih dan tetap berada di pojok kiri bawah", () => {
     assert.match(style, /bottom:\s*max\(12px, env\(safe-area-inset-bottom\)\)/);
     assert.match(style, /background:\s*#ffffff/);
     assert.equal(host.shadowRoot.querySelector(".toggle").type, "button");
+    assert.match(host.shadowRoot.querySelector(".toggle").title, /Alt\+Shift\+O/);
+  } finally {
+    dom.window.Element.prototype.attachShadow = originalAttachShadow;
+  }
+});
+
+test("Alt+Shift+O membuka pengaturan HEBAT dan tidak mengambil alih input", () => {
+  const originalAttachShadow = dom.window.Element.prototype.attachShadow;
+  dom.window.Element.prototype.attachShadow = function attachShadowForTest(options) {
+    return originalAttachShadow.call(this, { ...options, mode: "open" });
+  };
+  try {
+    global.FormHelperUI.initSettingsPanel();
+    global.FormHelperUI.initHebatLauncher();
+    const settingsHost = document.querySelector("#fh-settings-host");
+    const panel = settingsHost.shadowRoot.querySelector(".panel");
+    panel.hidden = true;
+    const shortcut = new dom.window.KeyboardEvent("keydown", {
+      key: "o", code: "KeyO", altKey: true, shiftKey: true,
+      bubbles: true, cancelable: true, composed: true
+    });
+    document.dispatchEvent(shortcut);
+    assert.equal(shortcut.defaultPrevented, true);
+    assert.equal(panel.hidden, false);
+
+    const input = settingsHost.shadowRoot.querySelector("#apiBase");
+    input.focus();
+    const whileEditing = new dom.window.KeyboardEvent("keydown", {
+      key: "o", code: "KeyO", altKey: true, shiftKey: true,
+      bubbles: true, cancelable: true, composed: true
+    });
+    input.dispatchEvent(whileEditing);
+    assert.equal(whileEditing.defaultPrevented, false);
   } finally {
     dom.window.Element.prototype.attachShadow = originalAttachShadow;
   }

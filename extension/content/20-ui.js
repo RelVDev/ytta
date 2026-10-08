@@ -23,6 +23,7 @@
     ["groq", "Groq — OpenAI GPT-OSS 120B (teks saja)"]
   ];
   let settingsActions = null;
+  let hebatShortcutInstalled = false;
 
   function isGoogleHelpMenu(menu) {
     const text = `${menu.getAttribute("aria-label") || ""} ${menu.textContent || ""}`;
@@ -62,7 +63,27 @@
     }
   }
 
+  function installHebatSettingsShortcut() {
+    if (hebatShortcutInstalled) return;
+    hebatShortcutInstalled = true;
+    document.addEventListener("keydown", (event) => {
+      if (event.repeat || event.isComposing
+          || !event.altKey || !event.shiftKey || event.ctrlKey || event.metaKey
+          || event.code !== "KeyO") return;
+      const target = event.target;
+      const editing = typeof target?.matches === "function"
+        && (target.matches("input, textarea, select")
+          || target.isContentEditable
+          || Boolean(target.closest?.('[contenteditable]:not([contenteditable="false"])')));
+      if (editing || document.activeElement?.id === "fh-settings-host") return;
+      event.preventDefault();
+      event.stopPropagation();
+      void settingsActions?.openSettings();
+    }, true);
+  }
+
   function initHebatLauncher() {
+    installHebatSettingsShortcut();
     if (document.getElementById("fh-hebat-launcher")) return;
     const host = document.createElement("div");
     host.id = "fh-hebat-launcher";
@@ -81,10 +102,10 @@
       .menu button:hover { background: #f1f3f4; }
     `);
     const launcher = document.createElement("div"); launcher.className = "launcher";
-    const toggle = document.createElement("button"); toggle.className = "toggle"; toggle.type = "button"; toggle.textContent = "✦ Form Helper"; toggle.setAttribute("aria-label", "Menu Form Helper");
+    const toggle = document.createElement("button"); toggle.className = "toggle"; toggle.type = "button"; toggle.textContent = "✦ Form Helper"; toggle.setAttribute("aria-label", "Menu Form Helper"); toggle.title = "Menu Form Helper · Pengaturan: Alt+Shift+O";
     const menu = document.createElement("div"); menu.className = "menu"; menu.hidden = true;
     const load = document.createElement("button"); load.type = "button"; load.textContent = "Muat soal halaman ini";
-    const settings = document.createElement("button"); settings.type = "button"; settings.textContent = "Pengaturan";
+    const settings = document.createElement("button"); settings.type = "button"; settings.textContent = "Pengaturan"; settings.title = "Buka pengaturan · Alt+Shift+O";
     toggle.addEventListener("click", () => { menu.hidden = !menu.hidden; });
     load.addEventListener("click", async () => {
       load.disabled = true;
