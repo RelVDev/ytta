@@ -31,6 +31,36 @@ test("parser HEBAT membaca teks, pilihan, dan gambar soal", () => {
   assert.equal(parsed.images[0].base64, null);
 });
 
+test("simulasi halaman HEBAT.md membaca seluruh soal yang tertangkap", () => {
+  const capturedHtml = fs.readFileSync(path.join(__dirname, "../HEBAT.md"), "utf8");
+  const capturedDom = new JSDOM(capturedHtml, { url: "https://hebat.elearning.unair.ac.id/mod/quiz/attempt.php" });
+  const previousDocument = global.document;
+  const previousLocation = global.location;
+  global.document = capturedDom.window.document;
+  global.location = capturedDom.window.location;
+  try {
+    const capturedBlocks = global.FormHelperParser.getQuestionBlocks("hebat");
+    const parsed = capturedBlocks.map((block) => global.FormHelperParser.parseQuestion(block));
+    assert.equal(capturedBlocks.length, 10);
+    assert.ok(parsed.every((question) => question && question.type === "multiple_choice"));
+    assert.equal(parsed[0].text, "Adanya pengakuan dan penghargaan terhadap seluruh aset budaya kehidupan sosial yang ada dalam berbagai kelompok suku, agama, ras, dan antargolongan (SARA) di Indonesia merupakan pengertian Pancasila sebagai");
+  } finally {
+    global.document = previousDocument;
+    global.location = previousLocation;
+    capturedDom.window.close();
+  }
+});
+
+test("parser HEBAT mengenali essay Moodle dengan editor Atto", () => {
+  const block = document.createElement("div");
+  block.className = "que essay deferredfeedback";
+  block.innerHTML = '<div class="qtext"><div class="clearfix">Jelaskan proses fotosintesis.</div></div><div class="answer"><div class="qtype_essay_response"><div class="editor_atto_content" contenteditable="true"></div></div></div>';
+  const parsed = global.FormHelperParser.parseQuestion(block);
+  assert.equal(parsed.type, "paragraph");
+  assert.equal(parsed.text, "Jelaskan proses fotosintesis.");
+  assert.deepEqual(parsed.options, []);
+});
+
 test("persiapan gambar HEBAT memakai gambar yang sudah dirender tanpa fetch", () => {
   const image = document.querySelector("#sample-mc .qtext img");
   Object.defineProperty(image, "complete", { configurable: true, value: true });

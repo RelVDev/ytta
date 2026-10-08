@@ -138,7 +138,7 @@ form-helper/
 | Kotak centang (Checkboxes) | `[role="checkbox"]` | **Wajib** | `A. ..., C. ...` |
 | Dropdown | `[role="listbox"]` + `[role="option"]` | **Wajib** | `B. ...` |
 | Jawaban singkat (Short answer) | `input[type="text"]` | **Wajib** | teks jawaban singkat |
-| Paragraf (Paragraph) | `textarea` | **Wajib** | jawaban ringkas (maks ±3 kalimat) |
+| Paragraf (Paragraph) | `textarea` | **Wajib** | jawaban esai lengkap mengikuti instruksi/batas panjang soal |
 | Skala linier (Linear scale) | `radiogroup` berisi angka | Wajib | angka + label |
 | Kisi pilihan ganda (MC grid) | tabel, banyak `radiogroup` per baris | Fase 5 | per baris: `Baris → Kolom` |
 | Kisi kotak centang (Checkbox grid) | tabel, banyak `checkbox` | Fase 5 | per baris: daftar kolom |
@@ -288,7 +288,7 @@ Ketentuan:
 - OCR Groq Qwen adalah opsi terpisah. Saat aktif, Qwen menyalin gambar menjadi teks bersih sebelum dikirim ke model jawaban. Qwen memproses maksimal tiga gambar per permintaan, sehingga empat gambar dibagi menjadi beberapa kelompok paralel. Jika OCR gagal, backend kembali mencoba gambar langsung dengan model jawaban yang mendukungnya.
 - GPT-OSS 120B hanya menerima teks. Jika dipilih pada soal bergambar dan OCR tidak aktif/gagal, GPT-OSS dilewati; Harbor dan Gemini (bila aktif) menjadi jalur jawaban.
 - Harbor, Groq GPT-OSS, dan Gemini mengirim prompt untuk menghasilkan objek JSON. Respons dinormalisasi di server sebelum dikirim ke ekstensi.
-- Gunakan temperatur rendah, output pendek, dan thinking minimal di Gemini. Retry Gemini paling banyak satu kali untuk 429/5xx.
+- Gunakan temperatur rendah dan thinking minimal di Gemini. Batasi output untuk soal biasa; sediakan output lebih panjang untuk mode esai/paragraf. Retry Gemini paling banyak satu kali untuk 429/5xx.
 - `normalize.js` hanya mengizinkan key yang ada di opsi soal. Server membentuk `display`, misalnya `D. CH3COOH`, bukan mengambil display bebas dari model.
 
 ### Prompt (garis besar, tulis di `lib/prompt.js`)
@@ -297,7 +297,7 @@ Ketentuan:
 - Kamu asisten pembahas soal. Jawab **hanya** berdasarkan soal yang diberikan.
 - Pilihan ganda/dropdown: kembalikan **tepat satu** `key`. Checkbox: **satu atau lebih** `key`.
 - Jawaban singkat: kembalikan jawaban paling ringkas (kata/angka/frasa), tanpa kalimat pembuka.
-- Paragraf: maksimal 3 kalimat.
+- Esai/paragraf: jawab lengkap dan runtut sesuai instruksi serta batas panjang soal. Bila tidak ditentukan, berikan beberapa paragraf yang cukup untuk menjelaskan gagasan dan alasan dengan jelas; jangan potong jawaban hanya karena jumlah kalimat.
 - Jika soal bergantung pada gambar, gunakan gambar yang dilampirkan.
 - Jika tidak yakin, tetap beri jawaban terbaik dan turunkan `confidence`.
 - Balas dalam bahasa soal. `explanation` maksimal 1 kalimat.
@@ -316,7 +316,7 @@ Urutan strategi:
    - Batas ukuran per gambar ≈ 1,5 MB. Jika lebih besar, jangan kirim base64; kirim `url` saja.
    - Ambil `mimeType` dari `blob.type`; hanya terima `image/png`, `image/jpeg`, `image/webp`, `image/gif`.
 3. **Fallback server** (`lib/images.js`): jika hanya ada `url`, server mengambil gambar dengan:
-   - **Allowlist host** ketat: hanya `*.googleusercontent.com`, `*.ggpht.com`, `*.gstatic.com`. Tolak yang lain (cegah SSRF).
+   - Terima URL HTTPS dari host publik; resolve DNS, tolak alamat privat, pin koneksi ke alamat publik hasil resolusi, validasi redirect, ukuran, dan tipe konten untuk mencegah SSRF.
    - HTTPS saja, batas 4 MB, timeout 5 dtk, validasi `content-type`.
 4. Jika toggle OCR aktif, API mengirim gambar ke Groq Qwen 3.8 27B terlebih dahulu untuk menyalin angka, rumus, tabel, dan label diagram menjadi teks; hasil OCR lalu dimasukkan ke prompt model jawaban. Maksimal 3 gambar per permintaan Qwen; kelompokkan bila soal memiliki 4 gambar.
 5. Jika OCR gagal, API kembali memakai gambar langsung pada model yang mendukungnya. Bila gambar tidak tersedia, API tetap menjawab dari teks dan menambahkan `warning: "IMAGE_UNAVAILABLE"` di response; UI menampilkan peringatan kecil.
@@ -381,13 +381,13 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 
 ### 9.3 Moodle HEBAT
 
-- Parser mengambil blok `#responseform .que`, prompt dari `.qtext`, dan opsi dari label kontrol di `.answer`. Tipe yang dikenali: pilihan ganda, checkbox, dropdown, jawaban singkat, dan essay.
+- Parser mengambil blok `#responseform .que`, prompt dari `.qtext`, dan opsi dari label kontrol di `.answer`. Tipe essay Moodle dikenali dari `.que.essay`/`.qtype_essay_response` dan editor textarea/contenteditable; hasilnya memakai mode paragraf yang sama dengan kolom panjang Google Forms.
 - Gambar soal diserialisasi dari elemen same-origin yang sudah selesai dimuat di halaman menggunakan canvas. Jangan `fetch` ulang `pluginfile.php` dan jangan kirim URL Moodle ke backend. Jika canvas tidak bisa membaca gambar, lewati gambar dan tandai `imagesTruncated`.
 - File hanya dilampirkan setelah pengguna menekan tombol klip dan memilih file lokal PDF/TXT/MD/CSV. File tidak diambil dari halaman kuis atau Moodle. Kirim file hanya ke model Harbor Claude Haiku 5.5.
 - Launcher HEBAT menyediakan pemindaian halaman dan pengaturan. Tombol bintang/klip serta tombol launcher bertipe `button`; parser hanya membaca DOM. Dilarang mengubah nilai input, menekan kontrol quiz, mencegat submit, atau menulis ke `processattempt.php`.
 - Moodle akan tetap menerima request halaman dan gambar yang dilakukan browser normal. Ekstensi hanya mengirim permintaan jawaban ke API Vercel setelah tombol bintang ditekan; API mencatat metadata, bukan isi soal.
 - Grid: baris dari label baris, kolom dari header tabel.
-- **Wajib ada fixture test** untuk setiap tipe (lihat §12).
+- Fixture uji mencakup markup attempt HEBAT yang tersedia serta markup essay Moodle dengan editor Atto/textarea. `HEBAT.md` adalah snapshot pilihan ganda; snapshot itu sendiri tidak berisi soal essay.
 
 **UI (`20-ui.js`) — tanpa framework, pakai Shadow DOM** agar CSS Google tidak merusak tampilan kita:
 - **Tombol** kecil bundar (±28 px, area sentuh ≥ 40 px), diletakkan di sisi kanan atas blok soal. Ikon sederhana (misalnya ✦). Label aksesibilitas: `aria-label="Tanya AI"`.
@@ -459,7 +459,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 | Render | < 100 ms |
 
 Taktik:
-- Model "flash" + thinking minimal + output pendek + skema JSON kecil.
+- Model "flash" + thinking minimal + output pendek untuk soal biasa; batas output lebih besar tersedia untuk esai, dengan skema JSON yang sama.
 - Hindari library berat di API (cold start).
 - Kompres gambar besar di sisi klien hanya jika mudah (`createImageBitmap` + `OffscreenCanvas`, maks sisi 1280 px); bila tidak tersedia di browser target, lewati.
 - Tampilkan spinner segera saat klik; jika > 8 dtk tampilkan "Masih memproses..." dan beri tombol batal.
@@ -473,6 +473,7 @@ Taktik:
   - `parser.test.js`: muat fixture HTML tiap tipe soal (simpan manual dari Google Form uji) memakai `jsdom` (devDependency) → cek teks, opsi, huruf, gambar terdeteksi.
   - `normalize.test.js`: model mengembalikan huruf saja / teks saja / huruf+teks / huruf tidak valid.
   - `validate.test.js`: payload valid dan tidak valid.
+  - HEBAT: parse snapshot `HEBAT.md` dan simulasi soal `.que.essay`; API/normalizer harus mempertahankan semua kalimat dan paragraf jawaban esai.
 - **Integrasi API:** skrip `scripts/smoke.js` yang mengirim contoh payload (teks saja, dengan gambar, checkbox, short answer) ke URL Vercel dan mencetak `display` + `latencyMs`.
 - **Manual di ponsel:** buat **Google Form uji milik sendiri** berisi semua tipe soal (termasuk soal bergambar dan opsi bergambar, multi-section). Centang checklist di §14.
 - **Ketahanan DOM:** simulasikan perubahan selector dengan mengubah fixture; pastikan parser gagal dengan aman (tombol tidak muncul / pesan jelas), tidak melempar error yang merusak halaman.
@@ -544,6 +545,7 @@ Taktik:
 - [ ] Format jawaban pilihan ganda tepat `HURUF. Teks` (contoh `D. CH3COOH`)
 - [ ] Checkbox menampilkan beberapa jawaban dengan benar
 - [ ] Jawaban singkat tampil ringkas, tanpa kalimat pembuka
+- [ ] Jawaban esai pada HEBAT dan Google Forms mengikuti panjang soal dan tidak dipotong menjadi tiga kalimat
 - [ ] Soal bergambar dan opsi bergambar terkirim dan terjawab
 - [ ] Waktu rata-rata ≤ ±3 dtk pada soal teks saat warm
 - [ ] Ekstensi tidak pernah mengubah/mengisi input form
@@ -575,7 +577,7 @@ Taktik:
 | Google mengubah DOM Forms | Parser rusak | Selector berbasis `role`/`aria`, terpusat, fixture test, gagal-aman |
 | CSP/CORS memblokir request | Tidak ada jawaban | Semua request lewat background + `host_permissions` |
 | Gambar tidak bisa diambil | Jawaban kurang akurat | Fallback URL di server, peringatan di UI |
-| Latensi > 3 dtk | Pengalaman buruk | Model flash, thinking minimal, output pendek, spinner cepat |
+| Latensi > 3 dtk | Pengalaman buruk | Model flash, thinking minimal, output pendek untuk soal biasa, batas esai terukur, spinner cepat |
 | Kuota Harbor/Gemini/Groq membengkak | Layanan berhenti | Rate limit, batas ukuran, token klien, pantau kuota masing-masing provider |
 | Groq tidak terkonfigurasi / OCR gagal | GPT-OSS atau OCR tidak tersedia | Tes koneksi melaporkan status Groq; fallback ke Harbor dan Gemini sesuai pengaturan |
 | Token klien bocor | Penyalahgunaan API | Rate limit per IP, rotasi `CLIENT_TOKEN`, batas harian |

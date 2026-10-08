@@ -29,6 +29,13 @@ test("jawaban bebas dan grid dinormalisasi", () => {
   assert.equal(grid.display, "Apel → Merah");
 });
 
+test("normalizer mempertahankan seluruh jawaban essay dan pemisah paragraf", () => {
+  const essay = "Paragraf pertama berisi penjelasan awal. Kalimat kedua menjelaskan sebabnya.\n\nParagraf kedua menguraikan dampak dengan lebih lengkap. Kalimat terakhir menyimpulkan jawaban.";
+  const answer = normalizeModelOutput({ keys: [], texts: [essay] }, { type: "paragraph", options: [] });
+  assert.equal(answer.display, essay);
+  assert.deepEqual(answer.texts, [essay]);
+});
+
 test("skala linear menampilkan nilai tanpa label opsi buatan", () => {
   const answer = normalizeModelOutput({ keys: ["B"], texts: ["2"], confidence: 0.8 }, {
     type: "linear_scale", options: [{ key: "A", text: "1" }, { key: "B", text: "2" }, { key: "C", text: "3" }]

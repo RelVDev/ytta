@@ -156,3 +156,37 @@ test("route MiMo teks saja melewati gambar dan menandai respons", async () => {
     if (previous.gemini === undefined) delete process.env.GEMINI_API_KEY; else process.env.GEMINI_API_KEY = previous.gemini;
   }
 });
+
+test("jawaban essay melewati API secara utuh dan memakai batas output lebih besar", async () => {
+  const previous = { fetch: global.fetch, token: process.env.CLIENT_TOKEN, harbor: process.env.TOKENHARBOR_API_KEY, gemini: process.env.GEMINI_API_KEY };
+  const log = console.info;
+  const essay = "Paragraf pertama menjelaskan konsep utama. Kalimat berikutnya menguraikan alasan dan konteksnya.\n\nParagraf kedua menjabarkan dampak terhadap masyarakat. Kalimat penutup merangkum hubungan sebab dan akibat.";
+  process.env.CLIENT_TOKEN = "test-client-token";
+  process.env.TOKENHARBOR_API_KEY = "test-harbor-key";
+  process.env.GEMINI_API_KEY = "test-gemini-key";
+  console.info = () => {};
+  global.fetch = async (_url, options) => {
+    const providerBody = JSON.parse(options.body);
+    assert.equal(providerBody.max_tokens, 1400);
+    assert.match(providerBody.messages[1].content[0].text, /Mode jawaban: esai/);
+    return providerResponse(200, {
+      choices: [{ message: { content: JSON.stringify({ keys: [], texts: [essay], rows: [], confidence: 0.86, explanation: "Penjelasan sesuai soal." }) } }]
+    });
+  };
+  try {
+    const req = request();
+    req.body.question.type = "paragraph";
+    req.body.question.text = "Jelaskan konsep dan dampaknya.";
+    req.body.question.options = [];
+    const res = fakeResponse();
+    await answerHandler(req, res);
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.body.answer.display, essay);
+  } finally {
+    global.fetch = previous.fetch;
+    console.info = log;
+    if (previous.token === undefined) delete process.env.CLIENT_TOKEN; else process.env.CLIENT_TOKEN = previous.token;
+    if (previous.harbor === undefined) delete process.env.TOKENHARBOR_API_KEY; else process.env.TOKENHARBOR_API_KEY = previous.harbor;
+    if (previous.gemini === undefined) delete process.env.GEMINI_API_KEY; else process.env.GEMINI_API_KEY = previous.gemini;
+  }
+});

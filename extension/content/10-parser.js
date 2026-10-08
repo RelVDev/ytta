@@ -200,7 +200,9 @@
       options = [...select.options].filter((option) => option.value !== "").map((option, index) => ({
         key: String.fromCharCode(65 + index), text: global.FormHelperUtils.cleanText(option.textContent), image: null, isOther: false
       }));
-    } else if (block.querySelector(".answer textarea")) {
+    } else if (block.querySelector(".answer textarea, .answer [contenteditable=\"true\"], .answer .editor_atto_content, .answer .qtype_essay_response")
+      || block.classList.contains("essay")
+      || block.querySelector(".qtype_essay_response")) {
       type = "paragraph";
     } else if (block.querySelector('.answer input[type="text"], .answer input[type="number"]')) {
       type = "short_answer";
