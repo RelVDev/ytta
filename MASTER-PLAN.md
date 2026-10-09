@@ -386,6 +386,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 - Gambar soal diserialisasi dari elemen same-origin yang sudah selesai dimuat di halaman menggunakan canvas. Jangan `fetch` ulang `pluginfile.php` dan jangan kirim URL Moodle ke backend. Jika canvas tidak bisa membaca gambar, lewati gambar dan tandai `imagesTruncated`.
 - File hanya dilampirkan setelah pengguna menekan tombol klip dan memilih file lokal PDF/TXT/MD/CSV. File tidak diambil dari halaman kuis atau Moodle. Kirim file hanya ke model Harbor Claude Haiku 5.5.
 - Launcher HEBAT menyediakan pemindaian halaman dan pengaturan. Tombol bintang/klip serta tombol launcher bertipe `button`; parser hanya membaca DOM. Dilarang mengubah nilai input, menekan kontrol quiz, mencegat submit, atau menulis ke `processattempt.php`.
+- Popover footer di `[data-region="footer-container-popover"]` menyediakan **Pengaturan Form Helper** dan **Ganti model**; shortcut Alt+Shift+M tetap bekerja saat fokus ada di kolom jawaban.
 - Moodle akan tetap menerima request halaman dan gambar yang dilakukan browser normal. Ekstensi hanya mengirim permintaan jawaban ke API Vercel setelah tombol bintang ditekan; API mencatat metadata, bukan isi soal.
 - Grid: baris dari label baris, kolom dari header tabel.
 - Fixture uji mencakup markup attempt HEBAT yang tersedia serta markup essay Moodle dengan editor Atto/textarea. `HEBAT.md` adalah snapshot pilihan ganda; snapshot itu sendiri tidak berisi soal essay.
@@ -415,7 +416,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 - Tidak ada popup toolbar. Tombol ⚙ yang terlihat pada halaman respondent membuka panel Shadow DOM.
 - Panel mengatur toggle saran, Base URL API, token klien, bahasa, model Harbor, model jawaban utama Harbor/GPT-OSS, OCR Qwen, dan model Gemini cadangan.
 - Tombol "Cek konfigurasi" memanggil `/api/health`; simpanan konfigurasi berada di `storage.local`.
-- Shortcut **Alt+Shift+M** membuka popup kecil sesuai tema platform untuk mengganti provider jawaban, model Harbor, dan model Gemini cadangan. Popup hanya menyimpan ketiga pilihan model dan tidak mengubah pengaturan lain.
+- Shortcut **Alt+Shift+M** membuka popup kecil sesuai tema platform untuk mengganti provider jawaban, model Harbor, dan model Gemini cadangan. Di HEBAT, opsi **Ganti model** juga tersedia di popover footer. Popup hanya menyimpan ketiga pilihan model dan tidak mengubah pengaturan lain.
 - Pengguna memberi izin host API HTTPS yang dimasukkan. Tombol pengaturan tetap tampil saat saran dimatikan agar fitur dapat diaktifkan kembali.
 - Tampilkan catatan penggunaan sesuai §0.
 

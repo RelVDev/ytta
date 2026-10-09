@@ -77,23 +77,47 @@
     if (location.hostname !== "hebat.elearning.unair.ac.id" || !/^\/mod\/quiz\//.test(location.pathname)) return;
     for (const region of document.querySelectorAll('[data-region="footer-container-popover"]')) {
       const body = region.querySelector(".popover.footer .popover-body");
-      if (!body || body.querySelector('[data-form-helper-menu-item="hebat-settings"]')) continue;
-      const section = document.createElement("div");
-      section.className = "footer-section p-3 border-bottom";
-      section.dataset.formHelperMenuItem = "hebat-section";
-      const settings = document.createElement("button");
-      settings.className = "btn btn-link p-0";
-      settings.type = "button";
-      settings.textContent = "Pengaturan Form Helper";
-      settings.dataset.formHelperMenuItem = "hebat-settings";
-      settings.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        settingsActions?.openSettings();
-      });
-      section.append(settings);
+      if (!body) continue;
+      let section = body.querySelector('[data-form-helper-menu-item="hebat-section"]');
+      if (!section) {
+        section = document.createElement("div");
+        section.className = "footer-section p-3 border-bottom";
+        section.dataset.formHelperMenuItem = "hebat-section";
+        body.append(section);
+      }
 
-      if (/^\/mod\/quiz\/attempt\.php$/.test(location.pathname) && document.querySelector("#responseform")) {
+      if (!section.querySelector('[data-form-helper-menu-item="hebat-settings"]')) {
+        const settings = document.createElement("button");
+        settings.className = "btn btn-link p-0";
+        settings.type = "button";
+        settings.textContent = "Pengaturan Form Helper";
+        settings.dataset.formHelperMenuItem = "hebat-settings";
+        settings.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          settingsActions?.openSettings();
+        });
+        section.append(settings);
+      }
+
+      if (!section.querySelector('[data-form-helper-menu-item="hebat-model-picker"]')) {
+        const modelPicker = document.createElement("button");
+        modelPicker.className = "btn btn-link p-0 ms-3";
+        modelPicker.type = "button";
+        modelPicker.textContent = "Ganti model";
+        modelPicker.title = "Ganti model · Alt+Shift+M";
+        modelPicker.dataset.formHelperMenuItem = "hebat-model-picker";
+        modelPicker.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          void modelPickerActions?.open();
+        });
+        section.append(modelPicker);
+      }
+
+      if (/^\/mod\/quiz\/attempt\.php$/.test(location.pathname)
+          && document.querySelector("#responseform")
+          && !section.querySelector('[data-form-helper-menu-item="hebat-load-page"]')) {
         const load = document.createElement("button");
         load.className = "btn btn-link p-0 ms-3";
         load.type = "button";
@@ -173,8 +197,7 @@
       }
       if (event.repeat || event.isComposing
           || !event.altKey || !event.shiftKey || event.ctrlKey || event.metaKey
-          || event.code !== "KeyM") return;
-      if (isEditingTarget(event.target) || document.activeElement?.id === "fh-settings-host") return;
+          || (event.code !== "KeyM" && event.key?.toLowerCase() !== "m" && event.keyCode !== 77)) return;
       event.preventDefault();
       event.stopPropagation();
       void modelPickerActions?.toggle();
