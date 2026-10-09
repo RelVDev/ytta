@@ -18,7 +18,7 @@
     "scripts": ["background.js"]
   },
   "content_scripts": [{
-    "matches": ["https://docs.google.com/forms/*", "https://hebat.elearning.unair.ac.id/mod/quiz/attempt.php*"],
+    "matches": ["https://docs.google.com/forms/*", "https://hebat.elearning.unair.ac.id/mod/quiz/*"],
     "js": ["content/00-utils.js", "content/10-parser.js", "content/20-ui.js", "content/30-main.js"],
     "css": ["content/styles.css"],
     "run_at": "document_idle"

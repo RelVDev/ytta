@@ -363,7 +363,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 
 ### 9.2 Content script
 
-**Aktivasi:** pada halaman respondent Google Forms (`/forms/d/e/.../viewform`) atau attempt HEBAT (`/mod/quiz/attempt.php` pada host yang diizinkan). Google Forms editor dan halaman Moodle lain tidak diaktifkan. Saat toggle saran mati, hilangkan tombol per soal; launcher pengaturan tetap terlihat.
+**Aktivasi:** pada halaman respondent Google Forms (`/forms/d/e/.../viewform`) atau semua route kuis HEBAT (`/mod/quiz/*` pada host yang diizinkan). Shortcut dan tautan pengaturan di popover footer HEBAT aktif di semua route kuis; pemindaian dan tombol saran soal hanya aktif di attempt (`/mod/quiz/attempt.php` dengan `#responseform`). Tombol muat ulang soal hanya ditampilkan di popover attempt. Google Forms editor dan halaman Moodle di luar modul kuis tidak diaktifkan. Saat toggle saran mati, hilangkan tombol per soal; launcher pengaturan tetap terlihat pada attempt.
 
 **Orkestrasi (`30-main.js`):**
 1. Ambil pengaturan (`enabled`, `lang`) dari `storage.local`.

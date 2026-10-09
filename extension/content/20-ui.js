@@ -61,6 +61,44 @@
       addHelpMenuItem(menu, "load-page", "Muat soal halaman ini", settingsActions.loadPage);
       addHelpMenuItem(menu, "settings", "Pengaturan Form Helper", settingsActions.openSettings);
     }
+    syncHebatFooterMenu();
+  }
+
+  function syncHebatFooterMenu() {
+    if (location.hostname !== "hebat.elearning.unair.ac.id" || !/^\/mod\/quiz\//.test(location.pathname)) return;
+    for (const region of document.querySelectorAll('[data-region="footer-container-popover"]')) {
+      const body = region.querySelector(".popover.footer .popover-body");
+      if (!body || body.querySelector('[data-form-helper-menu-item="hebat-settings"]')) continue;
+      const section = document.createElement("div");
+      section.className = "footer-section p-3 border-bottom";
+      section.dataset.formHelperMenuItem = "hebat-section";
+      const settings = document.createElement("button");
+      settings.className = "btn btn-link p-0";
+      settings.type = "button";
+      settings.textContent = "Pengaturan Form Helper";
+      settings.dataset.formHelperMenuItem = "hebat-settings";
+      settings.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        settingsActions?.openSettings();
+      });
+      section.append(settings);
+
+      if (/^\/mod\/quiz\/attempt\.php$/.test(location.pathname) && document.querySelector("#responseform")) {
+        const load = document.createElement("button");
+        load.className = "btn btn-link p-0 ms-3";
+        load.type = "button";
+        load.textContent = "Muat soal halaman ini";
+        load.dataset.formHelperMenuItem = "hebat-load-page";
+        load.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          settingsActions?.loadPage(load);
+        });
+        section.append(load);
+      }
+      body.append(section);
+    }
   }
 
   function installHebatSettingsShortcut() {
@@ -436,5 +474,5 @@
     return control;
   }
 
-  global.FormHelperUI = { initSettingsPanel, initHebatLauncher, syncHelpMenu, questionControl };
+  global.FormHelperUI = { initSettingsPanel, initHebatLauncher, initHebatSettingsShortcut: installHebatSettingsShortcut, syncHelpMenu, questionControl };
 })(globalThis);

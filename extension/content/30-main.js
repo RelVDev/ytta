@@ -9,8 +9,13 @@
   let scanPromise = null;
   let scanQueued = false;
 
-  function isHebatQuizPage() {
+  function isHebatQuizRoute() {
     return location.hostname === "hebat.elearning.unair.ac.id"
+      && /^\/mod\/quiz\//.test(location.pathname);
+  }
+
+  function isHebatQuizPage() {
+    return isHebatQuizRoute()
       && /^\/mod\/quiz\/attempt\.php$/.test(location.pathname)
       && Boolean(document.querySelector("#responseform"));
   }
@@ -225,7 +230,7 @@
     return scanPromise;
   }
 
-  function startObserver() {
+  function startObserver(scanSupportedPage = true) {
     const target = document.body;
     observer = new MutationObserver((records) => {
       global.FormHelperUI.syncHelpMenu();
@@ -241,7 +246,7 @@
         const targetNode = record.target.nodeType === Node.ELEMENT_NODE ? record.target : record.target.parentElement;
         return !targetNode?.closest(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]");
       });
-      if (external) scheduleScan();
+      if (external && scanSupportedPage) scheduleScan();
     });
     observer.observe(target, {
       childList: true,
@@ -258,12 +263,19 @@
     return requestScan();
   }
 
-  if (isSupportedPage()) {
+  const supportedPage = isSupportedPage();
+  const hebatQuizRoute = isHebatQuizRoute();
+  if (supportedPage || hebatQuizRoute) {
     global.FormHelperUI.initSettingsPanel();
+    if (hebatQuizRoute) global.FormHelperUI.initHebatSettingsShortcut();
     if (isHebatQuizPage()) global.FormHelperUI.initHebatLauncher();
     global.FormHelperUI.syncHelpMenu();
-    requestScan().catch(() => {}).finally(startObserver);
-    api.storage.onChanged.addListener(refresh);
+    if (supportedPage) {
+      requestScan().catch(() => {}).finally(startObserver);
+      api.storage.onChanged.addListener(refresh);
+    } else if (hebatQuizRoute) {
+      startObserver(false);
+    }
   }
   global.FormHelperMain = { refresh, loadCurrentPage };
 })(globalThis);
