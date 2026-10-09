@@ -44,6 +44,17 @@ test("simulasi halaman HEBAT.md membaca seluruh soal yang tertangkap", () => {
     assert.equal(capturedBlocks.length, 10);
     assert.ok(parsed.every((question) => question && question.type === "multiple_choice"));
     assert.equal(parsed[0].text, "Adanya pengakuan dan penghargaan terhadap seluruh aset budaya kehidupan sosial yang ada dalam berbagai kelompok suku, agama, ras, dan antargolongan (SARA) di Indonesia merupakan pengertian Pancasila sebagai");
+    const nextPageLink = capturedDom.window.document.querySelector('.qn_buttons a[data-quiz-page="1"]');
+    assert.ok(nextPageLink);
+    assert.match(nextPageLink.href, /\/mod\/quiz\/attempt\.php\?.*page=1/);
+
+    const nextPageDom = new JSDOM('<form id="responseform"><div id="question-next" class="que multichoice"><div class="qtext">Soal dari halaman berikutnya</div><div class="answer"><div><input type="radio" id="next-answer" name="next"><label for="next-answer"><span data-region="answer-label">Pilihan berikutnya</span></label></div></div></div></form>', { url: nextPageLink.href });
+    global.document = nextPageDom.window.document;
+    global.location = nextPageDom.window.location;
+    const nextPageBlocks = global.FormHelperParser.getQuestionBlocks("hebat");
+    assert.equal(nextPageBlocks.length, 1);
+    assert.equal(global.FormHelperParser.parseQuestion(nextPageBlocks[0]).text, "Soal dari halaman berikutnya");
+    nextPageDom.window.close();
   } finally {
     global.document = previousDocument;
     global.location = previousLocation;

@@ -231,7 +231,7 @@
   }
 
   function startObserver(scanSupportedPage = true) {
-    const target = document.body;
+    const target = document.documentElement || document.body;
     observer = new MutationObserver((records) => {
       global.FormHelperUI.syncHelpMenu();
       const external = records.some((record) => {
@@ -271,7 +271,8 @@
     if (isHebatQuizPage()) global.FormHelperUI.initHebatLauncher();
     global.FormHelperUI.syncHelpMenu();
     if (supportedPage) {
-      requestScan().catch(() => {}).finally(startObserver);
+      startObserver();
+      requestScan().catch(() => {});
       api.storage.onChanged.addListener(refresh);
     } else if (hebatQuizRoute) {
       startObserver(false);

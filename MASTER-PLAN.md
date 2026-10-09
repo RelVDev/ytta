@@ -363,13 +363,13 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 
 ### 9.2 Content script
 
-**Aktivasi:** pada halaman respondent Google Forms (`/forms/d/e/.../viewform`) atau semua route kuis HEBAT (`/mod/quiz/*` pada host yang diizinkan). Shortcut dan tautan pengaturan di popover footer HEBAT aktif di semua route kuis; pemindaian dan tombol saran soal hanya aktif di attempt (`/mod/quiz/attempt.php` dengan `#responseform`). Tombol muat ulang soal hanya ditampilkan di popover attempt. Google Forms editor dan halaman Moodle di luar modul kuis tidak diaktifkan. Saat toggle saran mati, hilangkan tombol per soal; launcher pengaturan tetap terlihat pada attempt.
+**Aktivasi:** pada halaman respondent Google Forms (`/forms/d/e/.../viewform`) atau semua route kuis HEBAT (`/mod/quiz/*` pada host yang diizinkan). Shortcut model ringkas **Alt+Shift+M** aktif di kedua platform; shortcut pengaturan **Alt+Shift+O** dan tautan pengaturan di popover footer HEBAT aktif di semua route kuis. Pemindaian dan tombol saran soal hanya aktif di attempt (`/mod/quiz/attempt.php` dengan `#responseform`). Tombol muat ulang soal hanya ditampilkan di popover attempt. Google Forms editor dan halaman Moodle di luar modul kuis tidak diaktifkan. Saat toggle saran mati, hilangkan tombol per soal; launcher pengaturan tetap terlihat pada attempt.
 
 **Orkestrasi (`30-main.js`):**
 1. Ambil pengaturan (`enabled`, `lang`) dari `storage.local`.
 2. Pindai semua blok soal: `[role="listitem"]` yang memuat kontrol input (radio/checkbox/listbox/text/textarea/date/time).
 3. Untuk tiap blok yang belum diproses (tandai dengan `data-fh="1"`), sisipkan tombol.
-4. Pasang **`MutationObserver`** pada kontainer form agar soal baru muncul (pindah section/halaman, render ulang) tetap mendapat tombol. Debounce 200 ms. Pastikan tidak terjadi loop tak berujung akibat DOM yang kita sisipkan sendiri (abaikan mutasi dari elemen berawalan `fh-`).
+4. Pasang **`MutationObserver`** pada `document.documentElement` sebelum pemindaian awal agar section baru (pindah halaman, render ulang, atau penggantian subtree/body) tetap mendapat tombol. Debounce 200 ms. Pastikan tidak terjadi loop tak berujung akibat DOM yang kita sisipkan sendiri (abaikan mutasi dari elemen `fh-`).
 5. Klik tombol → bangun objek soal via parser → kirim `runtime.sendMessage({type: "ANSWER", payload})` → tampilkan hasil.
 
 **Parser (`10-parser.js`):** fungsi murni `parseQuestion(listItemEl) → QuestionObject | null`.
@@ -382,6 +382,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 ### 9.3 Moodle HEBAT
 
 - Parser mengambil blok `#responseform .que`, prompt dari `.qtext`, dan opsi dari label kontrol di `.answer`. Tipe essay Moodle dikenali dari `.que.essay`/`.qtype_essay_response` dan editor textarea/contenteditable; hasilnya memakai mode paragraf yang sama dengan kolom panjang Google Forms.
+- Pagination pada snapshot HEBAT memakai navigasi penuh ke `attempt.php` dengan parameter `page`; manifest mencakup route tersebut dan content script memindai DOM halaman yang dimuat berikutnya secara mandiri.
 - Gambar soal diserialisasi dari elemen same-origin yang sudah selesai dimuat di halaman menggunakan canvas. Jangan `fetch` ulang `pluginfile.php` dan jangan kirim URL Moodle ke backend. Jika canvas tidak bisa membaca gambar, lewati gambar dan tandai `imagesTruncated`.
 - File hanya dilampirkan setelah pengguna menekan tombol klip dan memilih file lokal PDF/TXT/MD/CSV. File tidak diambil dari halaman kuis atau Moodle. Kirim file hanya ke model Harbor Claude Haiku 5.5.
 - Launcher HEBAT menyediakan pemindaian halaman dan pengaturan. Tombol bintang/klip serta tombol launcher bertipe `button`; parser hanya membaca DOM. Dilarang mengubah nilai input, menekan kontrol quiz, mencegat submit, atau menulis ke `processattempt.php`.
@@ -414,6 +415,7 @@ Catatan: popup toolbar tidak dipakai. Panel halaman meminta izin host HTTPS sesu
 - Tidak ada popup toolbar. Tombol ⚙ yang terlihat pada halaman respondent membuka panel Shadow DOM.
 - Panel mengatur toggle saran, Base URL API, token klien, bahasa, model Harbor, model jawaban utama Harbor/GPT-OSS, OCR Qwen, dan model Gemini cadangan.
 - Tombol "Cek konfigurasi" memanggil `/api/health`; simpanan konfigurasi berada di `storage.local`.
+- Shortcut **Alt+Shift+M** membuka popup kecil sesuai tema platform untuk mengganti provider jawaban, model Harbor, dan model Gemini cadangan. Popup hanya menyimpan ketiga pilihan model dan tidak mengubah pengaturan lain.
 - Pengguna memberi izin host API HTTPS yang dimasukkan. Tombol pengaturan tetap tampil saat saran dimatikan agar fitur dapat diaktifkan kembali.
 - Tampilkan catatan penggunaan sesuai §0.
 

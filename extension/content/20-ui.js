@@ -24,6 +24,15 @@
   ];
   let settingsActions = null;
   let hebatShortcutInstalled = false;
+  let modelShortcutInstalled = false;
+  let modelPickerActions = null;
+
+  function isEditingTarget(target) {
+    return typeof target?.matches === "function"
+      && (target.matches("input, textarea, select")
+        || target.isContentEditable
+        || Boolean(target.closest?.('[contenteditable]:not([contenteditable="false"])')));
+  }
 
   function isGoogleHelpMenu(menu) {
     const text = `${menu.getAttribute("aria-label") || ""} ${menu.textContent || ""}`;
@@ -108,12 +117,7 @@
       if (event.repeat || event.isComposing
           || !event.altKey || !event.shiftKey || event.ctrlKey || event.metaKey
           || event.code !== "KeyO") return;
-      const target = event.target;
-      const editing = typeof target?.matches === "function"
-        && (target.matches("input, textarea, select")
-          || target.isContentEditable
-          || Boolean(target.closest?.('[contenteditable]:not([contenteditable="false"])')));
-      if (editing || document.activeElement?.id === "fh-settings-host") return;
+      if (isEditingTarget(event.target) || document.activeElement?.id === "fh-settings-host") return;
       event.preventDefault();
       event.stopPropagation();
       void settingsActions?.openSettings();
@@ -140,10 +144,10 @@
       .menu button:hover { background: #f1f3f4; }
     `);
     const launcher = document.createElement("div"); launcher.className = "launcher";
-    const toggle = document.createElement("button"); toggle.className = "toggle"; toggle.type = "button"; toggle.textContent = "✦ Form Helper"; toggle.setAttribute("aria-label", "Menu Form Helper"); toggle.title = "Menu Form Helper · Pengaturan: Alt+Shift+O";
+    const toggle = document.createElement("button"); toggle.className = "toggle"; toggle.type = "button"; toggle.textContent = "✦ Form Helper"; toggle.setAttribute("aria-label", "Menu Form Helper"); toggle.title = "Pengaturan: Alt+Shift+O · Ganti model: Alt+Shift+M";
     const menu = document.createElement("div"); menu.className = "menu"; menu.hidden = true;
     const load = document.createElement("button"); load.type = "button"; load.textContent = "Muat soal halaman ini";
-    const settings = document.createElement("button"); settings.type = "button"; settings.textContent = "Pengaturan"; settings.title = "Buka pengaturan · Alt+Shift+O";
+    const settings = document.createElement("button"); settings.type = "button"; settings.textContent = "Pengaturan"; settings.title = "Buka pengaturan · Alt+Shift+O · Ganti model: Alt+Shift+M";
     toggle.addEventListener("click", () => { menu.hidden = !menu.hidden; });
     load.addEventListener("click", async () => {
       load.disabled = true;
@@ -156,6 +160,31 @@
     });
     settings.addEventListener("click", () => settingsActions?.openSettings());
     menu.append(load, settings); launcher.append(toggle, menu); root.append(launcher);
+  }
+
+  function installModelShortcut() {
+    if (modelShortcutInstalled) return;
+    modelShortcutInstalled = true;
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modelPickerActions?.isOpen()) {
+        event.preventDefault();
+        modelPickerActions.close();
+        return;
+      }
+      if (event.repeat || event.isComposing
+          || !event.altKey || !event.shiftKey || event.ctrlKey || event.metaKey
+          || event.code !== "KeyM") return;
+      if (isEditingTarget(event.target) || document.activeElement?.id === "fh-settings-host") return;
+      event.preventDefault();
+      event.stopPropagation();
+      void modelPickerActions?.toggle();
+    }, true);
+    document.addEventListener("pointerdown", (event) => {
+      const pickerHost = document.getElementById("fh-model-picker-host");
+      if (modelPickerActions?.isOpen() && pickerHost && !pickerHost.contains(event.target)) {
+        modelPickerActions.close();
+      }
+    }, true);
   }
 
   function addStyle(root, css) {
@@ -231,6 +260,104 @@
     fillModelOptions(panel.querySelector("#geminiModel"), GEMINI_MODELS, DEFAULTS.geminiModel);
     fillModelOptions(panel.querySelector("#answerProvider"), ANSWER_PROVIDERS, DEFAULTS.answerProvider);
     root.append(panel);
+
+    const pickerHost = document.createElement("div");
+    pickerHost.id = "fh-model-picker-host";
+    pickerHost.className = "fh-ui-host";
+    document.documentElement.append(pickerHost);
+    const pickerRoot = pickerHost.attachShadow({ mode: "closed" });
+    const isHebat = location.hostname === "hebat.elearning.unair.ac.id";
+    const pickerTheme = isHebat
+      ? `font-family:system-ui,sans-serif;--picker-text:#212529;--picker-surface:#fff;--picker-border:#ced4da;--picker-accent:#0f6cbf;--picker-hover:#e9f3fb;`
+      : `font-family:Roboto,Arial,sans-serif;--picker-text:#202124;--picker-surface:#fff;--picker-border:#dadce0;--picker-accent:#673ab7;--picker-hover:#f1f3f4;`;
+    addStyle(pickerRoot, `
+      :host { all: initial; display: block; color-scheme: light; }
+      * { box-sizing: border-box; }
+      .picker { ${pickerTheme} position: fixed; right: 12px; bottom: 72px; z-index: 2147483647; width: min(310px, calc(100vw - 24px)); max-height: min(75vh, 460px); overflow: auto; padding: 13px; border: 1px solid var(--picker-border); border-radius: 12px; background: var(--picker-surface); color: var(--picker-text); box-shadow: 0 5px 20px #0003; }
+      .picker[hidden] { display: none; }
+      .heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+      h2 { margin: 0; font-family: inherit; font-size: 15px; line-height: 1.3; font-weight: 600; }
+      label { display: block; margin-top: 9px; font-family: inherit; font-size: 11px; line-height: 1.3; font-weight: 600; }
+      select { display: block; width: 100%; margin-top: 4px; padding: 7px 8px; border: 1px solid var(--picker-border); border-radius: 7px; background: var(--picker-surface); color: var(--picker-text); font-family: inherit; font-size: 12px; line-height: 1.3; }
+      select:focus-visible, button:focus-visible { outline: 2px solid var(--picker-accent); outline-offset: 2px; }
+      select:disabled { opacity: .55; }
+      .hint, .status { margin: 7px 0 0; font-family: inherit; font-size: 11px; line-height: 1.35; opacity: .78; }
+      .status { min-height: 14px; }
+      .actions { display: flex; gap: 7px; margin-top: 10px; }
+      button { border: 0; border-radius: 7px; padding: 7px 10px; cursor: pointer; font-family: inherit; font-size: 12px; line-height: 1.3; font-weight: 600; }
+      .close { padding: 2px 6px; background: transparent; color: inherit; font-size: 19px; line-height: 1; }
+      .close:hover { background: var(--picker-hover); }
+      .save { flex: 1; background: var(--picker-accent); color: #fff; }
+      .cancel { background: var(--picker-hover); color: inherit; }
+    `);
+    const picker = document.createElement("section");
+    picker.className = "picker";
+    picker.hidden = true;
+    picker.setAttribute("role", "dialog");
+    picker.setAttribute("aria-label", "Ganti model Form Helper");
+    picker.innerHTML = `
+      <div class="heading"><h2>Ganti model</h2><button class="close" id="pickerClose" type="button" aria-label="Tutup">×</button></div>
+      <label for="pickerProvider">Provider jawaban</label><select id="pickerProvider"></select>
+      <label for="pickerHarbor">Model Harbor</label><select id="pickerHarbor"></select>
+      <label for="pickerGemini">Model Gemini cadangan</label><select id="pickerGemini"></select>
+      <p class="hint" id="pickerHint"></p>
+      <div class="actions"><button class="save" id="pickerSave" type="button">Simpan model</button><button class="cancel" id="pickerCancel" type="button">Batal</button></div>
+      <p class="status" id="pickerStatus" role="status" aria-live="polite"></p>
+    `;
+    fillModelOptions(picker.querySelector("#pickerProvider"), ANSWER_PROVIDERS, DEFAULTS.answerProvider);
+    fillModelOptions(picker.querySelector("#pickerHarbor"), HARBOR_MODELS, DEFAULTS.harborModel);
+    fillModelOptions(picker.querySelector("#pickerGemini"), GEMINI_MODELS, DEFAULTS.geminiModel);
+    pickerRoot.append(picker);
+
+    const pickerStatus = picker.querySelector("#pickerStatus");
+    const pickerHint = picker.querySelector("#pickerHint");
+    const updatePickerHint = () => {
+      pickerHint.textContent = picker.querySelector("#pickerProvider").value === "groq"
+        ? "Groq GPT-OSS dipakai utama; Harbor menjadi cadangan."
+        : "Harbor dipakai utama; Gemini menjadi cadangan jika diaktifkan.";
+    };
+    async function openModelPicker() {
+      picker.hidden = false;
+      pickerStatus.textContent = "";
+      const settings = await getSettings();
+      picker.querySelector("#pickerProvider").value = settings.answerProvider;
+      picker.querySelector("#pickerHarbor").value = settings.harborModel;
+      picker.querySelector("#pickerGemini").value = settings.geminiModel;
+      picker.querySelector("#pickerGemini").disabled = settings.onlyHarbor === true;
+      updatePickerHint();
+    }
+    const closeModelPicker = () => { picker.hidden = true; };
+    modelPickerActions = {
+      open: openModelPicker,
+      close: closeModelPicker,
+      toggle: () => picker.hidden ? openModelPicker() : closeModelPicker(),
+      isOpen: () => !picker.hidden
+    };
+    picker.querySelector("#pickerProvider").addEventListener("change", updatePickerHint);
+    picker.querySelector("#pickerClose").addEventListener("click", closeModelPicker);
+    picker.querySelector("#pickerCancel").addEventListener("click", closeModelPicker);
+    picker.querySelector("#pickerSave").addEventListener("click", async (event) => {
+      const saveButton = event.currentTarget;
+      saveButton.disabled = true;
+      pickerStatus.textContent = "Menyimpan…";
+      pickerStatus.style.color = "inherit";
+      try {
+        await api.storage.local.set({
+          answerProvider: picker.querySelector("#pickerProvider").value,
+          harborModel: picker.querySelector("#pickerHarbor").value,
+          geminiModel: picker.querySelector("#pickerGemini").value
+        });
+        global.FormHelperMain?.refresh();
+        pickerStatus.textContent = "Model tersimpan.";
+        setTimeout(closeModelPicker, 450);
+      } catch (error) {
+        pickerStatus.textContent = error.message || "Model gagal disimpan.";
+        pickerStatus.style.color = "#c62828";
+      } finally {
+        saveButton.disabled = false;
+      }
+    });
+    installModelShortcut();
 
     const status = panel.querySelector("#status");
     const setStatus = (message, error = false) => {
