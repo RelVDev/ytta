@@ -6,6 +6,7 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "test": "node --test",
+    "build:db": "node scripts/build-db.js",
     "lint:extension": "bash scripts/lint-extension.sh",
     "package:extension": "bash scripts/package-extension.sh"
   },

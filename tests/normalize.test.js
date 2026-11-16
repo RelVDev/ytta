@@ -2,7 +2,7 @@
 
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { normalizeModelOutput } = require("../lib/normalize");
+const { normalizeModelOutput, sanitizeMathText } = require("../lib/normalize");
 
 const question = {
   type: "multiple_choice",
@@ -42,4 +42,11 @@ test("skala linear menampilkan nilai tanpa label opsi buatan", () => {
   });
   assert.equal(answer.keys.length, 0);
   assert.equal(answer.display, "2");
+});
+
+test("sanitizeMathText mengubah LaTeX menjadi Unicode rapi untuk HEBAT", () => {
+  const cleaned = sanitizeMathText("Diketahui:\n$v = \\sqrt{2 \\cdot g \\cdot h}$\n$\\Delta P = \\frac{F}{A} = 10^-23\\text{ Pa}, \\theta = 90^\\circ$");
+  assert.match(cleaned, /√\(2 · g · h\)/);
+  assert.match(cleaned, /ΔP = F\/A = 10⁻²³ Pa, θ = 90°/);
+  assert.doesNotMatch(cleaned, /\$|\\frac|\\cdot|\\sqrt|\\circ/);
 });

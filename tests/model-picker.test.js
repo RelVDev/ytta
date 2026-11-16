@@ -28,15 +28,17 @@ test("HEBAT footer opens model picker and Alt+Shift+M works from an answer field
   global.location = dom.window.location;
   global.FormHelperUtils = {
     DEFAULTS: {
-      enabled: true, apiBase: "", token: "", lang: "auto", harborModel: "qwen3.8-flash:free",
-      geminiModel: "gemini-3.8-flash", answerProvider: "harbor", imageToText: true,
-      onlyHarbor: false, dataConsentAccepted: false
+      enabled: true, apiBase: "", token: "", lang: "auto", harborModel: "deepseek-v4.1-flash-1017",
+      geminiModel: "gemini-3.8-flash", answerProvider: "harbor", imageToText: false,
+      onlyHarbor: false, pembahasanMode: false, pembahasanShortcut: "Alt+Shift+P",
+      dbModeEnabled: false, dbSelected: "fisika", dataConsentAccepted: false
     },
     api: { storage: { local: { set: async () => {} } } },
     getSettings: async () => ({
-      enabled: true, apiBase: "", token: "", lang: "auto", harborModel: "qwen3.8-flash:free",
-      geminiModel: "gemini-3.8-flash", answerProvider: "harbor", imageToText: true,
-      onlyHarbor: false, dataConsentAccepted: false
+      enabled: true, apiBase: "", token: "", lang: "auto", harborModel: "deepseek-v4.1-flash-1017",
+      geminiModel: "gemini-3.8-flash", answerProvider: "harbor", imageToText: false,
+      onlyHarbor: false, pembahasanMode: false, pembahasanShortcut: "Alt+Shift+P",
+      dbModeEnabled: false, dbSelected: "fisika", dataConsentAccepted: false
     }),
     sendMessage: async () => ({ ok: true })
   };

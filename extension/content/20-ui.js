@@ -1,17 +1,17 @@
 "use strict";
 
 (function initUI(global) {
-  const { api, getSettings, sendMessage, DEFAULTS } = global.FormHelperUtils;
+  const utils = global.FormHelperUtils;
+  const { api, getSettings, sendMessage, DEFAULTS } = utils;
   const HARBOR_MODELS = [
-    ["qwen3.8-flash:free", "Qwen 3.8 Flash (gratis)"],
-    ["deepseek-v4.1-flash:free", "DeepSeek V4.1 Flash (gratis)"],
-    ["mimo-v2.6-flash:free", "MiMo V2.6 Flash (gratis, teks saja)"],
-    ["glm-5.3-flash", "GLM 5.3 Flash"],
-    ["glm-5.3-flashx", "GLM 5.3 FlashX"],
+    ["deepseek-v4.1-flash-1017", "DeepSeek V4.1 Flash 1017"],
+    ["deepseek-v4.1-flash", "DeepSeek V4.1 Flash"],
+    ["claude-haiku-5.5", "Claude Haiku 5.5"],
+    ["muse-ember", "Muse Ember"],
     ["gpt-6-luna", "GPT-6 Luna"],
-    ["gpt-6-luna-fast", "GPT-6 Luna Fast (teks saja)"],
-    ["qwen3.8-flash", "Qwen 3.8 Flash (berbayar)"],
-    ["claude-haiku-5.5", "Claude Haiku 5.5 (teks, gambar, PDF/teks)"]
+    ["minimax-m3.1-flash", "MiniMax M3.1 Flash"],
+    ["glm-5.3-flash", "GLM 5.3 Flash"],
+    ["qwen3.8-flash", "Qwen 3.8 Flash"]
   ];
   const GEMINI_MODELS = [
     ["gemini-3.5-flash-lite", "Gemini 3.5 Flash Lite"],
@@ -22,16 +22,82 @@
     ["harbor", "Harbor AI — model pilihan di atas"],
     ["groq", "Groq — OpenAI GPT-OSS 120B (teks saja)"]
   ];
+  const DB_OPTIONS = [
+    ["fisika", "Fisika Dasar"]
+  ];
+
   let settingsActions = null;
   let hebatShortcutInstalled = false;
   let modelShortcutInstalled = false;
   let modelPickerActions = null;
+  let cachedShortcut = DEFAULTS.pembahasanShortcut || "Alt+Shift+P";
+  let cachedPembahasanMode = false;
+  let cachedDbModeEnabled = false;
+  let cachedDbSelected = DEFAULTS.dbSelected || "fisika";
+  let cacheEpoch = 0;
+  let toastTimer = null;
+
+  function isHebatHost() {
+    return location.hostname === "hebat.elearning.unair.ac.id" && /^\/mod\/quiz\//.test(location.pathname);
+  }
 
   function isEditingTarget(target) {
     return typeof target?.matches === "function"
       && (target.matches("input, textarea, select")
         || target.isContentEditable
         || Boolean(target.closest?.('[contenteditable]:not([contenteditable="false"])')));
+  }
+
+  function showToast(message) {
+    let host = document.getElementById("fh-toast-host");
+    if (!host) {
+      host = document.createElement("div");
+      host.id = "fh-toast-host";
+      host.className = "fh-ui-host";
+      document.documentElement.append(host);
+      const root = host.attachShadow({ mode: "closed" });
+      addStyle(root, `
+        :host { all: initial; }
+        .toast { position: fixed; right: 16px; bottom: 72px; z-index: 2147483647; padding: 9px 14px; border-radius: 10px; border: 1px solid #8bbcc4; background: #cce6ea; color: #163036; font: 600 13px/1.35 system-ui, sans-serif; box-shadow: 0 4px 16px #0003; transition: opacity .2s ease; }
+        .toast[hidden] { display: none; }
+      `);
+      const box = document.createElement("div");
+      box.className = "toast";
+      box.setAttribute("role", "status");
+      box.setAttribute("aria-live", "polite");
+      root.append(box);
+      host._box = box;
+    }
+    const box = host._box;
+    if (!box) return;
+    box.textContent = message;
+    box.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { box.hidden = true; }, 1900);
+  }
+
+  function syncSettingsCacheFromStorage() {
+    if (!api?.storage?.local?.get) return;
+    const epoch = cacheEpoch;
+    Promise.resolve(getSettings()).then((settings) => {
+      if (epoch !== cacheEpoch) return;
+      cachedShortcut = settings.pembahasanShortcut || "Alt+Shift+P";
+      cachedPembahasanMode = settings.pembahasanMode === true;
+      cachedDbModeEnabled = settings.dbModeEnabled === true;
+      cachedDbSelected = settings.dbSelected || "fisika";
+      refreshFooterModeControls();
+    }).catch(() => {});
+  }
+
+  if (api?.storage?.onChanged?.addListener) {
+    api.storage.onChanged.addListener((changes) => {
+      cacheEpoch += 1;
+      if (changes.pembahasanShortcut) cachedShortcut = utils.normalizeShortcut ? utils.normalizeShortcut(changes.pembahasanShortcut.newValue) : (changes.pembahasanShortcut.newValue || "Alt+Shift+P");
+      if (changes.pembahasanMode) cachedPembahasanMode = changes.pembahasanMode.newValue === true;
+      if (changes.dbModeEnabled) cachedDbModeEnabled = changes.dbModeEnabled.newValue === true;
+      if (changes.dbSelected) cachedDbSelected = changes.dbSelected.newValue || "fisika";
+      refreshFooterModeControls();
+    });
   }
 
   function isGoogleHelpMenu(menu) {
@@ -73,8 +139,36 @@
     syncHebatFooterMenu();
   }
 
+  function refreshFooterModeControls() {
+    for (const btn of document.querySelectorAll('[data-form-helper-menu-item="hebat-pembahasan"]')) {
+      btn.textContent = `Pembahasan: ${cachedPembahasanMode ? "ON" : "OFF"}`;
+      btn.title = `Toggle Mode Pembahasan · ${cachedShortcut}`;
+      btn.setAttribute("aria-pressed", cachedPembahasanMode ? "true" : "false");
+    }
+    for (const btn of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-toggle"]')) {
+      btn.textContent = `Mode DB: ${cachedDbModeEnabled ? "ON" : "OFF"}`;
+      btn.setAttribute("aria-pressed", cachedDbModeEnabled ? "true" : "false");
+    }
+    for (const select of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-select"]')) {
+      select.value = cachedDbSelected;
+      select.disabled = !cachedDbModeEnabled;
+    }
+  }
+
+  async function togglePembahasanMode(announce = true) {
+    cacheEpoch += 1;
+    const next = !cachedPembahasanMode;
+    cachedPembahasanMode = next;
+    refreshFooterModeControls();
+    await api.storage.local.set({ pembahasanMode: next });
+    const settingsHost = document.getElementById("fh-settings-host");
+    const panelCheckbox = settingsHost?.shadowRoot?.querySelector("#pembahasanMode");
+    if (panelCheckbox) panelCheckbox.checked = next;
+    if (announce) showToast(`Mode Pembahasan: ${next ? "Aktif" : "Nonaktif"}`);
+  }
+
   function syncHebatFooterMenu() {
-    if (location.hostname !== "hebat.elearning.unair.ac.id" || !/^\/mod\/quiz\//.test(location.pathname)) return;
+    if (!isHebatHost()) return;
     for (const region of document.querySelectorAll('[data-region="footer-container-popover"]')) {
       const body = region.querySelector(".popover.footer .popover-body");
       if (!body) continue;
@@ -130,14 +224,75 @@
         });
         section.append(load);
       }
-      body.append(section);
+
+      if (!section.querySelector('[data-form-helper-menu-item="hebat-modes-row"]')) {
+        const modesRow = document.createElement("div");
+        modesRow.dataset.formHelperMenuItem = "hebat-modes-row";
+        modesRow.className = "mt-2 d-flex flex-wrap align-items-center gap-2";
+        modesRow.style.cssText = "display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px;";
+
+        const pembBtn = document.createElement("button");
+        pembBtn.className = "btn btn-link p-0";
+        pembBtn.type = "button";
+        pembBtn.dataset.formHelperMenuItem = "hebat-pembahasan";
+        pembBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          void togglePembahasanMode(true);
+        });
+
+        const dbBtn = document.createElement("button");
+        dbBtn.className = "btn btn-link p-0";
+        dbBtn.type = "button";
+        dbBtn.dataset.formHelperMenuItem = "hebat-db-toggle";
+        dbBtn.addEventListener("click", async (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          cacheEpoch += 1;
+          const next = !cachedDbModeEnabled;
+          cachedDbModeEnabled = next;
+          refreshFooterModeControls();
+          await api.storage.local.set({ dbModeEnabled: next });
+          showToast(`Mode DB: ${next ? "Aktif" : "Nonaktif"}`);
+        });
+
+        const dbSelect = document.createElement("select");
+        dbSelect.className = "form-select form-select-sm";
+        dbSelect.style.cssText = "width:auto;min-width:130px;padding:2px 8px;font-size:12px;border-radius:6px;border:1px solid #ced4da;";
+        dbSelect.setAttribute("aria-label", "Pilih database soal");
+        dbSelect.dataset.formHelperMenuItem = "hebat-db-select";
+        fillModelOptions(dbSelect, DB_OPTIONS, cachedDbSelected);
+        dbSelect.addEventListener("click", (event) => event.stopPropagation());
+        dbSelect.addEventListener("change", async (event) => {
+          event.stopPropagation();
+          cacheEpoch += 1;
+          cachedDbSelected = dbSelect.value;
+          await api.storage.local.set({ dbSelected: cachedDbSelected });
+        });
+
+        modesRow.append(pembBtn, dbBtn, dbSelect);
+        section.append(modesRow);
+      }
+
+      if (!section.isConnected) body.append(section);
     }
+    refreshFooterModeControls();
   }
 
   function installHebatSettingsShortcut() {
+    syncSettingsCacheFromStorage();
     if (hebatShortcutInstalled) return;
     hebatShortcutInstalled = true;
     document.addEventListener("keydown", (event) => {
+      if (isHebatHost() && utils.eventMatchesShortcut && utils.eventMatchesShortcut(event, cachedShortcut)) {
+        const activeHost = document.activeElement?.id === "fh-settings-host";
+        if (!activeHost) {
+          event.preventDefault();
+          event.stopPropagation();
+          void togglePembahasanMode(true);
+          return;
+        }
+      }
       if (event.repeat || event.isComposing
           || !event.altKey || !event.shiftKey || event.ctrlKey || event.metaKey
           || event.code !== "KeyO") return;
@@ -150,40 +305,6 @@
 
   function initHebatLauncher() {
     installHebatSettingsShortcut();
-    if (document.getElementById("fh-hebat-launcher")) return;
-    const host = document.createElement("div");
-    host.id = "fh-hebat-launcher";
-    host.className = "fh-ui-host";
-    document.documentElement.append(host);
-    const root = host.attachShadow({ mode: "closed" });
-    addStyle(root, `
-      :host { all: initial; display: block; }
-      * { box-sizing: border-box; font-family: system-ui, sans-serif; }
-      .launcher { position: fixed; left: max(12px, env(safe-area-inset-left)); bottom: max(12px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: flex-start; width: auto; margin: 0; padding: 0; z-index: 2147483647; }
-      .toggle { border: 1px solid #777; border-radius: 999px; background: #ffffff; color: #202124; padding: 7px 11px; box-shadow: 0 2px 8px #0003; cursor: pointer; font-size: 13px; }
-      .toggle:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
-      .menu { position: absolute; left: 0; bottom: calc(100% + 5px); display: grid; gap: 4px; width: 190px; margin: 0; padding: 7px; border: 1px solid #888; border-radius: 10px; background: #fff; box-shadow: 0 3px 14px #0003; }
-      .menu[hidden] { display: none; }
-      .menu button { border: 0; border-radius: 6px; background: transparent; color: #202124; padding: 9px; text-align: left; cursor: pointer; }
-      .menu button:hover { background: #f1f3f4; }
-    `);
-    const launcher = document.createElement("div"); launcher.className = "launcher";
-    const toggle = document.createElement("button"); toggle.className = "toggle"; toggle.type = "button"; toggle.textContent = "✦ Form Helper"; toggle.setAttribute("aria-label", "Menu Form Helper"); toggle.title = "Pengaturan: Alt+Shift+O · Ganti model: Alt+Shift+M";
-    const menu = document.createElement("div"); menu.className = "menu"; menu.hidden = true;
-    const load = document.createElement("button"); load.type = "button"; load.textContent = "Muat soal halaman ini";
-    const settings = document.createElement("button"); settings.type = "button"; settings.textContent = "Pengaturan"; settings.title = "Buka pengaturan · Alt+Shift+O · Ganti model: Alt+Shift+M";
-    toggle.addEventListener("click", () => { menu.hidden = !menu.hidden; });
-    load.addEventListener("click", async () => {
-      load.disabled = true;
-      load.textContent = "Memuat soal…";
-      try {
-        const result = await global.FormHelperMain?.loadCurrentPage();
-        load.textContent = !result ? "Halaman kuis tidak ditemukan" : !result.enabled ? "Aktifkan saran di Pengaturan" : result.count ? `Soal siap (${result.count})` : "Soal belum terbaca";
-      } catch { load.textContent = "Gagal memuat soal"; }
-      setTimeout(() => { if (load.isConnected) { load.textContent = "Muat soal halaman ini"; load.disabled = false; } }, 1800);
-    });
-    settings.addEventListener("click", () => settingsActions?.openSettings());
-    menu.append(load, settings); launcher.append(toggle, menu); root.append(launcher);
   }
 
   function installModelShortcut() {
@@ -227,6 +348,7 @@
   }
 
   function initSettingsPanel() {
+    syncSettingsCacheFromStorage();
     if (document.getElementById("fh-settings-host")) return;
     const host = document.createElement("div");
     host.id = "fh-settings-host";
@@ -238,16 +360,19 @@
     addStyle(root, `
       :host { all: initial; color-scheme: light dark; }
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
-      .panel { position: fixed; right: 12px; bottom: 72px; z-index: 2147483647; width: min(370px, calc(100vw - 24px)); max-height: min(82vh, 700px); overflow: auto; padding: 17px; border: 1px solid #8993a5; border-radius: 14px; background: Canvas; color: CanvasText; box-shadow: 0 8px 30px #0005; }
+      .panel { position: fixed; right: 12px; bottom: 72px; z-index: 2147483647; width: min(380px, calc(100vw - 24px)); max-height: min(84vh, 740px); overflow: auto; padding: 17px; border: 1px solid #8993a5; border-radius: 14px; background: Canvas; color: CanvasText; box-shadow: 0 8px 30px #0005; }
       .panel[hidden] { display: none; }
       h2 { font-size: 18px; margin: 0 0 12px; }
       label { display: block; margin: 11px 0 5px; font-size: 13px; font-weight: 600; }
       input, select { display: block; width: 100%; padding: 9px; border: 1px solid #8892a5; border-radius: 8px; background: Canvas; color: CanvasText; font-size: 14px; }
+      select:disabled, input:disabled { opacity: .55; }
       .toggle { display: flex; gap: 9px; align-items: center; }
       .toggle input { width: auto; }
       .consent { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; line-height: 1.4; }
       .consent input { width: auto; margin-top: 2px; }
       .row { display: flex; gap: 8px; margin-top: 13px; }
+      .shortcut-row { display: flex; gap: 8px; align-items: center; }
+      .shortcut-row input { flex: 1; cursor: pointer; text-align: center; font-weight: 600; }
       button.secondary, button.primary { border: 0; border-radius: 8px; padding: 9px 12px; cursor: pointer; font-size: 14px; }
       button.primary { flex: 1; background: #2857d9; color: white; }
       button.secondary { background: color-mix(in srgb, CanvasText 12%, Canvas); color: CanvasText; }
@@ -269,12 +394,26 @@
       <div class="group"><label for="harborModel">Model utama — Harbor AI</label><select id="harborModel"></select></div>
       <label for="geminiModel">Model cadangan — Gemini AI</label><select id="geminiModel"></select>
       <label for="answerProvider">Model utama untuk jawaban</label><select id="answerProvider"></select>
-      <p class="note">GPT-OSS hanya menerima teks. Claude Haiku menerima gambar dan dokumen PDF/teks yang dipilih dari perangkat ini.</p>
+      <p class="note">GPT-OSS hanya menerima teks. Semua model Harbor di atas mendukung gambar langsung.</p>
       <label class="toggle"><input id="imageToText" type="checkbox"> OCR gambar dengan Qwen 3.8 27B (Groq)</label>
-      <p class="note">Jika aktif, Qwen menyalin rumus, angka, tabel, dan label gambar menjadi teks sebelum dikirim ke model jawaban.</p>
+      <p class="note">Opsional: jika aktif, gambar diubah jadi teks OCR oleh Qwen terlebih dahulu sebelum dikirim ke model jawaban.</p>
       <label class="toggle"><input id="onlyHarbor" type="checkbox"> Nonaktifkan fallback Gemini AI</label>
       <p class="note">Saat aktif, Gemini tidak dipanggil ketika model jawaban gagal.</p>
-      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal, serta file lokal yang saya lampirkan, dikirim ke API Vercel. Tergantung pengaturan, data dapat diproses oleh Harbor, Gemini, atau Groq (Qwen untuk OCR dan GPT-OSS untuk jawaban teks).</label>
+      <div class="group">
+        <label class="toggle"><input id="pembahasanMode" type="checkbox"> Aktifkan Mode Pembahasan (HEBAT)</label>
+        <label for="pembahasanShortcut">Shortcut Mode Pembahasan</label>
+        <div class="shortcut-row">
+          <input id="pembahasanShortcut" type="text" readonly title="Klik lalu tekan kombinasi tombol (mis. Alt+Shift+P)">
+          <button class="secondary" id="resetShortcut" type="button">Reset</button>
+        </div>
+        <p class="note">Klik kotak shortcut lalu tekan kombinasi tombol (wajib memakai Alt, Ctrl, atau Meta) untuk toggle dinamis.</p>
+      </div>
+      <div class="group">
+        <label class="toggle"><input id="dbModeEnabled" type="checkbox"> Aktifkan Mode DB (HEBAT)</label>
+        <label for="dbSelected">Pilih Database Soal</label><select id="dbSelected"></select>
+        <p class="note">Mencocokkan soal ke database lokal lalu membandingkan hasilnya dengan jawaban AI.</p>
+      </div>
+      <label class="consent"><input id="dataConsent" type="checkbox"> Saya memahami bahwa teks dan gambar soal dikirim ke API Vercel. Tergantung pengaturan, data dapat diproses oleh Harbor, Gemini, atau Groq.</label>
       <div class="row"><button class="primary" id="save">Simpan</button><button class="secondary" id="ping">Cek konfigurasi</button><button class="secondary" id="close">Tutup</button></div>
       <div class="status" id="status" role="status" aria-live="polite"></div>
       <p class="note">Gunakan sesuai aturan dosen/penyelenggara ujian. Ekstensi hanya menampilkan saran dan tidak mengisi jawaban. Isi pertanyaan tidak disimpan di ekstensi atau log server.</p>
@@ -282,6 +421,7 @@
     fillModelOptions(panel.querySelector("#harborModel"), HARBOR_MODELS, DEFAULTS.harborModel);
     fillModelOptions(panel.querySelector("#geminiModel"), GEMINI_MODELS, DEFAULTS.geminiModel);
     fillModelOptions(panel.querySelector("#answerProvider"), ANSWER_PROVIDERS, DEFAULTS.answerProvider);
+    fillModelOptions(panel.querySelector("#dbSelected"), DB_OPTIONS, DEFAULTS.dbSelected);
     root.append(panel);
 
     const pickerHost = document.createElement("div");
@@ -387,6 +527,26 @@
       status.textContent = message;
       status.style.color = error ? "#c62828" : "inherit";
     };
+    const shortcutInput = panel.querySelector("#pembahasanShortcut");
+    shortcutInput.addEventListener("keydown", (event) => {
+      if (event.key === "Tab" || event.key === "Escape") return;
+      event.preventDefault();
+      event.stopPropagation();
+      const formatted = utils.formatShortcutFromEvent ? utils.formatShortcutFromEvent(event) : "";
+      if (formatted === "Alt+Shift+O" || formatted === "Alt+Shift+M") {
+        setStatus(`Shortcut ${formatted} sudah dipakai untuk menu/model. Pilih kombinasi lain.`, true);
+      } else if (formatted) {
+        shortcutInput.value = formatted;
+        setStatus(`Shortcut diatur ke ${formatted}. Klik Simpan untuk menerapkan.`);
+      } else {
+        setStatus("Gunakan kombinasi dengan Alt, Ctrl, atau Meta (mis. Alt+Shift+P).", true);
+      }
+    });
+    panel.querySelector("#resetShortcut").addEventListener("click", () => {
+      shortcutInput.value = DEFAULTS.pembahasanShortcut || "Alt+Shift+P";
+      setStatus("Shortcut dikembalikan ke default (Alt+Shift+P).");
+    });
+
     async function openSettingsPanel() {
       panel.hidden = false;
       const settings = await getSettings();
@@ -400,6 +560,11 @@
       panel.querySelector("#imageToText").checked = settings.imageToText === true;
       panel.querySelector("#onlyHarbor").checked = settings.onlyHarbor === true;
       panel.querySelector("#geminiModel").disabled = settings.onlyHarbor === true;
+      panel.querySelector("#pembahasanMode").checked = settings.pembahasanMode === true;
+      panel.querySelector("#pembahasanShortcut").value = settings.pembahasanShortcut || "Alt+Shift+P";
+      panel.querySelector("#dbModeEnabled").checked = settings.dbModeEnabled === true;
+      panel.querySelector("#dbSelected").value = settings.dbSelected || "fisika";
+      panel.querySelector("#dbSelected").disabled = settings.dbModeEnabled !== true;
       panel.querySelector("#dataConsent").checked = settings.dataConsentAccepted === true;
       setStatus("");
     }
@@ -427,6 +592,9 @@
       }
     };
     async function saveSettings(quiet = false) {
+      const normalizedShortcut = utils.normalizeShortcut
+        ? utils.normalizeShortcut(panel.querySelector("#pembahasanShortcut").value)
+        : (panel.querySelector("#pembahasanShortcut").value || "Alt+Shift+P");
       const values = {
         enabled: panel.querySelector("#enabled").checked,
         apiBase: panel.querySelector("#apiBase").value.trim().replace(/\/+$/, ""),
@@ -437,10 +605,14 @@
         answerProvider: panel.querySelector("#answerProvider").value,
         imageToText: panel.querySelector("#imageToText").checked,
         onlyHarbor: panel.querySelector("#onlyHarbor").checked,
+        pembahasanMode: panel.querySelector("#pembahasanMode").checked,
+        pembahasanShortcut: normalizedShortcut,
+        dbModeEnabled: panel.querySelector("#dbModeEnabled").checked,
+        dbSelected: panel.querySelector("#dbSelected").value,
         dataConsentAccepted: panel.querySelector("#dataConsent").checked
       };
       if (values.enabled && !values.dataConsentAccepted) {
-        setStatus("Setujui pemrosesan teks, gambar, dan file yang dilampirkan sebelum mengaktifkan saran.", true);
+        setStatus("Setujui pemrosesan teks dan gambar soal sebelum mengaktifkan saran.", true);
         return false;
       }
       if (values.apiBase && !/^https:\/\//i.test(values.apiBase)) {
@@ -453,6 +625,12 @@
           if (!permission || !permission.ok) throw new Error((permission && permission.message) || "Izin host API tidak diberikan.");
         }
         await api.storage.local.set(values);
+        cacheEpoch += 1;
+        cachedShortcut = values.pembahasanShortcut;
+        cachedPembahasanMode = values.pembahasanMode;
+        cachedDbModeEnabled = values.dbModeEnabled;
+        cachedDbSelected = values.dbSelected;
+        refreshFooterModeControls();
         if (!quiet) setStatus("Pengaturan tersimpan.");
         global.FormHelperMain && global.FormHelperMain.refresh();
         return true;
@@ -464,6 +642,9 @@
     panel.querySelector("#close").addEventListener("click", () => { panel.hidden = true; });
     panel.querySelector("#onlyHarbor").addEventListener("change", (event) => {
       panel.querySelector("#geminiModel").disabled = event.currentTarget.checked;
+    });
+    panel.querySelector("#dbModeEnabled").addEventListener("change", (event) => {
+      panel.querySelector("#dbSelected").disabled = !event.currentTarget.checked;
     });
     panel.querySelector("#save").addEventListener("click", () => saveSettings());
     panel.querySelector("#ping").addEventListener("click", async () => {
@@ -480,6 +661,66 @@
     });
   }
 
+  function mountAnswerHost(block, panelHost, platform) {
+    if (platform === "hebat" || block.matches?.(".que")) {
+      panelHost.style.cssText = "display:block;clear:both;width:100%;";
+      const container = block.querySelector(".formulation") || block.querySelector(".content") || block;
+      container.append(panelHost);
+      return;
+    }
+    block.insertAdjacentElement("afterend", panelHost);
+  }
+
+  function isolatePanelHost(panelHost) {
+    for (const type of ["click", "pointerdown", "mousedown", "mouseup", "touchstart", "touchend", "keydown", "input", "change"]) {
+      panelHost.addEventListener(type, (event) => event.stopPropagation());
+    }
+  }
+
+  function formatDisplayAnswer(text) {
+    return String(text || "")
+      .replace(/^([A-Z])\.\s+\1\s*[.)]\s+/i, "$1. ")
+      .trim();
+  }
+
+  function renderDiscussionContent(container, text) {
+    const normalized = String(text || "")
+      .replace(/\r\n?/g, "\n")
+      .replace(/([^\n])\s*(?=(?:Diketahui|Ditanya|Dijawab)\s*:)/gi, "$1\n")
+      .trim();
+    const sections = normalized.split(/\n(?=(?:Diketahui|Ditanya|Dijawab)\s*:)/i);
+    for (const part of sections) {
+      const trimmed = part.trim();
+      if (!trimmed) continue;
+      const lineMatch = trimmed.match(/^(Diketahui|Ditanya|Dijawab)\s*:\s*([\s\S]*)$/i);
+      const item = document.createElement("div");
+      item.className = "disc-block";
+      if (lineMatch) {
+        const labelText = lineMatch[1][0].toUpperCase() + lineMatch[1].slice(1).toLowerCase();
+        const heading = document.createElement("div");
+        heading.className = "disc-label";
+        heading.textContent = labelText;
+        const body = document.createElement("div");
+        body.className = "disc-body";
+        const lines = lineMatch[2].split("\n").map((l) => l.trim()).filter(Boolean);
+        if (labelText === "Dijawab" && lines.length > 1) {
+          const steps = document.createElement("div");
+          steps.textContent = lines.slice(0, -1).join("\n");
+          const resultLine = document.createElement("div");
+          resultLine.className = "disc-final";
+          resultLine.textContent = lines.at(-1);
+          body.append(steps, resultLine);
+        } else {
+          body.textContent = lines.join("\n");
+        }
+        item.append(heading, body);
+      } else {
+        item.textContent = trimmed;
+      }
+      container.append(item);
+    }
+  }
+
   function questionControl(block, onAsk, onAttach = null, platform = "google") {
     const host = document.createElement("div");
     host.className = "fh-question-host";
@@ -489,8 +730,9 @@
     const originalPositionPriority = block.style.getPropertyPriority("position");
     if (needsPositionAnchor) block.style.setProperty("position", "relative", "important");
     const root = host.attachShadow({ mode: "closed" });
-    const starColor = platform === "hebat" ? "#cbe6e9" : "#ffffff";
-    const hoverBackground = platform === "hebat" ? "#f1f3f4" : "transparent";
+    const isHebat = platform === "hebat";
+    const starColor = isHebat ? "#cbe6e9" : "#ffffff";
+    const hoverBackground = isHebat ? "#f1f3f4" : "transparent";
     addStyle(root, `
       * { box-sizing: border-box; font-family: system-ui, sans-serif; }
       .actions { display: flex; justify-content: flex-end; gap: 2px; padding: 0 4px; }
@@ -582,30 +824,124 @@
         control.removePanel();
         const panelHost = document.createElement("div");
         panelHost.className = "fh-answer-host";
+        isolatePanelHost(panelHost);
         const panelRoot = panelHost.attachShadow({ mode: "closed" });
-        addStyle(panelRoot, `*{box-sizing:border-box;font-family:system-ui,sans-serif}.card{margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45}.error{color:#b42318}.close{float:right;border:0;background:transparent;color:inherit;font-size:18px;cursor:pointer}`);
+        const cardStyle = isHebat
+          ? `margin:12px 0 0;padding:10px 12px;border:1px solid #96c3ca;border-top:2px solid #75aeb8;border-radius:8px;background:#cce6ea;color:#163036;font-size:14px;line-height:1.45`
+          : `margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45`;
+        addStyle(panelRoot, `*{box-sizing:border-box;font-family:system-ui,sans-serif}.card{${cardStyle};display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.error{color:#b42318}.close{flex:0 0 auto;width:28px;height:28px;border:0;border-radius:6px;background:rgba(0,0,0,.07);color:inherit;font-size:18px;line-height:1;cursor:pointer;display:inline-grid;place-items:center}.close:hover{background:rgba(0,0,0,.14)}`);
         const card = document.createElement("div"); card.className = `card${isError ? " error" : ""}`;
-        const close = document.createElement("button"); close.className = "close"; close.type = "button"; close.textContent = "×"; close.setAttribute("aria-label", onClose ? "Batalkan permintaan" : "Tutup"); close.addEventListener("click", () => { if (onClose) onClose(); else panelHost.remove(); });
         const text = document.createElement("span"); text.textContent = message;
-        card.append(close, text); panelRoot.append(card);
-        block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
+        const close = document.createElement("button"); close.className = "close"; close.type = "button"; close.textContent = "×"; close.setAttribute("aria-label", onClose ? "Batalkan permintaan" : "Tutup");
+        close.addEventListener("click", (event) => { event.preventDefault(); event.stopPropagation(); if (onClose) onClose(); else { panelHost.remove(); control.panel = null; } });
+        card.append(text, close); panelRoot.append(card);
+        mountAnswerHost(block, panelHost, platform);
+        control.panel = panelHost;
       },
       showAnswer(response, questionType) {
         control.removePanel();
         const panelHost = document.createElement("div");
         panelHost.className = "fh-answer-host";
+        isolatePanelHost(panelHost);
         const panelRoot = panelHost.attachShadow({ mode: "closed" });
-        addStyle(panelRoot, `*{box-sizing:border-box;font-family:system-ui,sans-serif}.card{margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45}.answer{font-weight:700;font-size:16px;white-space:pre-wrap}.meta{margin-top:6px;font-size:12px;opacity:.76}.bar{display:flex;align-items:center;gap:10px;margin-top:8px}.bar button{border:0;background:transparent;color:inherit;padding:4px;cursor:pointer;font-size:12px}.warning{color:#a15c00;font-size:12px;margin-top:6px}`);
+        const cardCss = isHebat
+          ? `.card{margin:12px 0 0;padding:12px 14px;border:1px solid #96c3ca;border-top:2px solid #75aeb8;border-radius:8px;background:#cce6ea;color:#163036;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.top-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}.top-actions button{border:0;border-radius:6px;background:rgba(22,48,54,.09);color:#163036;padding:4px 9px;cursor:pointer;font-size:12px;font-weight:600}.top-actions button:hover{background:rgba(22,48,54,.17)}.top-actions .close-btn{width:28px;height:28px;padding:0;font-size:18px;line-height:1;display:inline-grid;place-items:center}`
+          : `.card{margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.top-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}.top-actions button{border:0;border-radius:6px;background:color-mix(in srgb,CanvasText 10%,Canvas);color:inherit;padding:4px 9px;cursor:pointer;font-size:12px}.top-actions .close-btn{width:26px;height:26px;padding:0;font-size:17px;line-height:1;display:inline-grid;place-items:center}`;
+        addStyle(panelRoot, `
+          *{box-sizing:border-box;font-family:system-ui,sans-serif}
+          ${cardCss}
+          .badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700;background:rgba(22,48,54,.1);color:inherit}
+          .badge.match{background:#c5e8d1;color:#115329}
+          .badge.mismatch{background:#fde6bf;color:#7a4300}
+          .badge.notfound{background:rgba(22,48,54,.08);color:inherit}
+          .answer{font-weight:700;font-size:15.5px;line-height:1.4;white-space:pre-wrap}
+          .compare-grid{display:grid;gap:7px;margin-top:4px}
+          .compare-item{padding:8px 10px;border-radius:7px;border:1px solid rgba(22,48,54,.16);background:rgba(255,255,255,.38)}
+          .compare-label{font-size:11px;font-weight:700;opacity:.8;margin-bottom:2px}
+          .meta{margin-top:6px;font-size:12px;opacity:.82;line-height:1.45}
+          .discussion{margin-top:10px;padding-top:10px;border-top:1px solid rgba(22,48,54,.2);font-size:13px;line-height:1.55;display:grid;gap:7px}
+          .discussion-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;opacity:.75}
+          .disc-block{border-left:3px solid #63a4af;padding:4px 0 4px 10px;background:rgba(255,255,255,.26);border-radius:0 6px 6px 0}
+          .disc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;opacity:.78;margin-bottom:2px}
+          .disc-body{white-space:pre-wrap}
+          .disc-final{margin-top:3px;font-weight:700}
+          .warning{color:#9a4d00;font-size:12px;margin-top:6px;font-weight:500}
+        `);
         const card = document.createElement("div"); card.className = "card";
-        const title = document.createElement("div"); title.className = "answer"; title.textContent = response.answer.display;
-        const detail = document.createElement("div"); detail.className = "meta"; detail.textContent = `Keyakinan ${Math.round((response.confidence || 0) * 100)}%${response.explanation ? ` · ${response.explanation}` : ""}`;
-        const bar = document.createElement("div"); bar.className = "bar";
+        const topBar = document.createElement("div"); topBar.className = "top-bar";
+        const badge = document.createElement("span"); badge.className = "badge";
+        const dbComp = response.dbComparison;
+        if (dbComp?.status === "match") {
+          badge.classList.add("match");
+          badge.textContent = `✓ DB & AI Sama (${dbComp.dbName || "DB"})`;
+        } else if (dbComp?.status === "mismatch") {
+          badge.classList.add("mismatch");
+          badge.textContent = `⚠ DB & AI Berbeda (${dbComp.dbName || "DB"})`;
+        } else if (dbComp?.status === "not_found") {
+          badge.classList.add("notfound");
+          badge.textContent = "DB: Tidak cocok · Saran AI";
+        } else {
+          badge.textContent = "✦ Saran AI";
+        }
+
+        const displayAi = formatDisplayAnswer(response.answer.display);
+        const displayDb = dbComp?.dbDisplay ? formatDisplayAnswer(dbComp.dbDisplay) : "";
+
+        const topActions = document.createElement("div"); topActions.className = "top-actions";
         const copy = document.createElement("button"); copy.type = "button"; copy.textContent = "Salin";
-        copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(response.answer.display); copy.textContent = "Tersalin"; } catch { copy.textContent = "Tidak bisa menyalin"; } });
-        const close = document.createElement("button"); close.type = "button"; close.textContent = "Tutup"; close.addEventListener("click", () => panelHost.remove());
-        bar.append(copy, close);
-        if (questionType === "paragraph") card.append(title, bar);
-        else card.append(title, detail, bar);
+        const copyPayload = response.discussion
+          ? `${displayAi}\n\n${response.discussion}`
+          : displayAi;
+        copy.addEventListener("click", async (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          try { await navigator.clipboard.writeText(copyPayload); copy.textContent = "Tersalin"; }
+          catch { copy.textContent = "Gagal salin"; }
+        });
+        const close = document.createElement("button"); close.type = "button"; close.className = "close-btn"; close.textContent = "×"; close.setAttribute("aria-label", "Tutup"); close.title = "Tutup";
+        close.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          panelHost.remove();
+          control.panel = null;
+        });
+        topActions.append(copy, close);
+        topBar.append(badge, topActions);
+        card.append(topBar);
+
+        if (dbComp?.status === "mismatch") {
+          const grid = document.createElement("div"); grid.className = "compare-grid";
+          const dbBox = document.createElement("div"); dbBox.className = "compare-item";
+          const dbLabel = document.createElement("div"); dbLabel.className = "compare-label"; dbLabel.textContent = `Jawaban DB (${dbComp.dbName || "Database"})`;
+          const dbVal = document.createElement("div"); dbVal.className = "answer"; dbVal.textContent = displayDb;
+          dbBox.append(dbLabel, dbVal);
+
+          const aiBox = document.createElement("div"); aiBox.className = "compare-item";
+          const aiLabel = document.createElement("div"); aiLabel.className = "compare-label"; aiLabel.textContent = `Jawaban AI (${response.model || response.provider || "AI"})`;
+          const aiVal = document.createElement("div"); aiVal.className = "answer"; aiVal.textContent = displayAi;
+          aiBox.append(aiLabel, aiVal);
+
+          grid.append(dbBox, aiBox);
+          card.append(grid);
+        } else {
+          const title = document.createElement("div"); title.className = "answer"; title.textContent = displayAi;
+          card.append(title);
+        }
+
+        if (questionType !== "paragraph") {
+          const detail = document.createElement("div"); detail.className = "meta";
+          detail.textContent = `Keyakinan ${Math.round((response.confidence || 0) * 100)}%${response.explanation ? ` · ${response.explanation}` : ""}`;
+          card.append(detail);
+        }
+
+        if (response.discussion) {
+          const discWrap = document.createElement("div"); discWrap.className = "discussion";
+          const discTitle = document.createElement("div"); discTitle.className = "discussion-title"; discTitle.textContent = "Pembahasan";
+          discWrap.append(discTitle);
+          renderDiscussionContent(discWrap, response.discussion);
+          card.append(discWrap);
+        }
+
         const warningMessages = {
           IMAGE_UNAVAILABLE: "Sebagian gambar tidak terkirim atau tidak terbaca, jawaban mungkin kurang akurat.",
           IMAGE_OCR_FALLBACK: "OCR Qwen gagal; sistem mencoba memproses gambar langsung dengan model jawaban.",
@@ -618,11 +954,19 @@
           if (!warningMessages[code]) continue;
           const warning = document.createElement("div"); warning.className = "warning"; warning.textContent = warningMessages[code]; card.append(warning);
         }
-        panelRoot.append(card); block.insertAdjacentElement("afterend", panelHost); control.panel = panelHost;
+        panelRoot.append(card);
+        mountAnswerHost(block, panelHost, platform);
+        control.panel = panelHost;
       }
     };
     return control;
   }
 
-  global.FormHelperUI = { initSettingsPanel, initHebatLauncher, initHebatSettingsShortcut: installHebatSettingsShortcut, syncHelpMenu, questionControl };
+  global.FormHelperUI = {
+    initSettingsPanel,
+    initHebatLauncher,
+    initHebatSettingsShortcut: installHebatSettingsShortcut,
+    syncHelpMenu,
+    questionControl
+  };
 })(globalThis);

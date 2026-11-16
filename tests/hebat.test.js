@@ -11,13 +11,40 @@ const dom = new JSDOM(fixture, { url: "https://hebat.elearning.unair.ac.id/mod/q
 global.document = dom.window.document;
 global.location = dom.window.location;
 global.getComputedStyle = dom.window.getComputedStyle.bind(dom.window);
+global.window = dom.window;
+const mockStorageApi = {
+  storage: {
+    local: {
+      _data: {
+        enabled: true,
+        harborModel: "deepseek-v4.1-flash-1017",
+        geminiModel: "gemini-3.8-flash",
+        answerProvider: "harbor",
+        pembahasanMode: false,
+        pembahasanShortcut: "Alt+Shift+P",
+        dbModeEnabled: false,
+        dbSelected: "fisika"
+      },
+      get: async (defaults) => ({ ...defaults, ...mockStorageApi.storage.local._data }),
+      set: async (values) => { Object.assign(mockStorageApi.storage.local._data, values); }
+    },
+    onChanged: { addListener() {} }
+  }
+};
+global.chrome = mockStorageApi;
 global.FormHelperUtils = {
   cleanText: (value) => String(value || "").replace(/\*/g, " ").replace(/\s+/g, " ").trim(),
-  api: {},
-  getSettings: async () => ({}),
+  api: mockStorageApi,
+  getSettings: async () => ({ ...mockStorageApi.storage.local._data }),
   sendMessage: async () => ({}),
-  DEFAULTS: {}
+  DEFAULTS: {
+    enabled: true, apiBase: "", token: "", lang: "auto", harborModel: "deepseek-v4.1-flash-1017",
+    geminiModel: "gemini-3.8-flash", answerProvider: "harbor", imageToText: false,
+    onlyHarbor: false, pembahasanMode: false, pembahasanShortcut: "Alt+Shift+P",
+    dbModeEnabled: false, dbSelected: "fisika", dataConsentAccepted: false
+  }
 };
+require("../extension/content/00-utils.js");
 require("../extension/content/10-parser.js");
 require("../extension/content/20-ui.js");
 
@@ -114,11 +141,11 @@ test("kontrol HEBAT tidak mengirim event ke form atau mengubah jawaban", () => {
   form.addEventListener("click", () => { bubbledClicks += 1; });
   form.addEventListener("submit", (event) => { event.preventDefault(); submits += 1; });
   try {
-    const control = global.FormHelperUI.questionControl(block, () => { answerClicks += 1; }, () => {}, "hebat");
+    const control = global.FormHelperUI.questionControl(block, () => { answerClicks += 1; }, null, "hebat");
     const shadow = control.host.shadowRoot;
     const buttons = shadow.querySelectorAll("button");
+    assert.equal(buttons.length, 1, "tombol upload file tidak ditampilkan pada HEBAT");
     buttons[0].click();
-    buttons[1].click();
     assert.equal(buttons[0].type, "button");
     assert.match(shadow.querySelector("style").textContent, /#cbe6e9/);
     assert.equal(answerClicks, 1);
@@ -131,22 +158,134 @@ test("kontrol HEBAT tidak mengirim event ke form atau mengubah jawaban", () => {
   }
 });
 
-test("launcher HEBAT putih dan tetap berada di pojok kiri bawah", () => {
+test("HEBAT tidak menampilkan launcher mengambang di kiri bawah dan kotak jawaban menyatu dengan #cce6ea", () => {
   const originalAttachShadow = dom.window.Element.prototype.attachShadow;
   dom.window.Element.prototype.attachShadow = function attachShadowForTest(options) {
     return originalAttachShadow.call(this, { ...options, mode: "open" });
   };
   try {
     global.FormHelperUI.initHebatLauncher();
-    const host = document.querySelector("#fh-hebat-launcher");
-    const style = host.shadowRoot.querySelector("style").textContent;
-    assert.match(style, /position:\s*fixed/);
-    assert.match(style, /left:\s*max\(12px, env\(safe-area-inset-left\)\)/);
-    assert.match(style, /bottom:\s*max\(12px, env\(safe-area-inset-bottom\)\)/);
-    assert.match(style, /background:\s*#ffffff/);
-    assert.equal(host.shadowRoot.querySelector(".toggle").type, "button");
-    assert.match(host.shadowRoot.querySelector(".toggle").title, /Alt\+Shift\+O/);
+    assert.equal(document.querySelector("#fh-hebat-launcher"), null);
+
+    const block = document.querySelector("#sample-mc");
+    const formulation = document.createElement("div");
+    formulation.className = "formulation clearfix";
+    while (block.firstChild) formulation.append(block.firstChild);
+    block.append(formulation);
+
+    const control = global.FormHelperUI.questionControl(block, () => {}, null, "hebat");
+    let formClicks = 0;
+    const form = document.querySelector("#responseform");
+    const onFormClick = () => { formClicks += 1; };
+    form.addEventListener("click", onFormClick);
+    try {
+      control.showAnswer({
+        answer: { display: "A. a. Pilihan A" },
+        confidence: 0.92,
+        explanation: "Cocok.",
+        discussion: "Diketahui:\nm = 2 kg\n\nDitanya:\nF?\n\nDijawab:\nF = m × a\nF = 10 N",
+        dbComparison: {
+          status: "mismatch",
+          dbName: "Fisika Dasar",
+          dbDisplay: "B. b. Pilihan B"
+        }
+      }, "multiple_choice");
+
+      const answerHost = formulation.querySelector(".fh-answer-host");
+      assert.ok(answerHost, "panel jawaban berada di dalam .formulation");
+      const style = answerHost.shadowRoot.querySelector("style").textContent;
+      assert.match(style, /#cce6ea/);
+      const text = answerHost.shadowRoot.textContent;
+      assert.match(text, /DB & AI Berbeda/);
+      assert.match(text, /A\. Pilihan A/);
+      assert.doesNotMatch(text, /A\. a\. Pilihan A/);
+      assert.match(text, /Diketahui/);
+      assert.match(text, /Dijawab/);
+      assert.ok(answerHost.shadowRoot.querySelector(".disc-final"));
+      const closeBtn = answerHost.shadowRoot.querySelector(".close-btn");
+      assert.ok(closeBtn, "tombol tutup berada di bagian atas kotak jawaban");
+      closeBtn.click();
+      assert.equal(formulation.querySelector(".fh-answer-host"), null);
+      assert.equal(control.panel, null);
+      assert.ok(block.isConnected && formulation.isConnected, "div soal dan formulation HEBAT tetap utuh saat jawaban ditutup");
+      assert.ok(formulation.querySelector(".qtext") && formulation.querySelector(".answer"), "konten soal dan pilihan HEBAT tidak ikut terhapus");
+      assert.equal(formClicks, 0, "klik tombol tutup di kotak jawaban tidak membocorkan event ke #responseform");
+
+      control.showAnswer({ answer: { display: "A. Pilihan A" }, confidence: 0.9, explanation: "Ulang." }, "multiple_choice");
+      assert.ok(formulation.querySelector(".fh-answer-host"), "jawaban dapat dibuka kembali setelah ditutup");
+      control.removePanel();
+      assert.equal(formulation.querySelector(".fh-answer-host"), null);
+      assert.ok(formulation.querySelector(".qtext") && formulation.querySelector(".answer"));
+    } finally {
+      form.removeEventListener("click", onFormClick);
+    }
   } finally {
+    dom.window.Element.prototype.attachShadow = originalAttachShadow;
+  }
+});
+
+test("prepareHebatQuestionAsync fallback ke fetch ber-cookie saat canvas gagal", async () => {
+  const block = document.createElement("div");
+  block.className = "que multichoice";
+  block.innerHTML = '<div class="qtext">Soal gambar <img src="https://hebat.elearning.unair.ac.id/pluginfile.php/123/soal.png" /></div><div class="answer"><div><input type="radio" id="r1" name="r"><label for="r1"><span data-region="answer-label">Opsi A</span></label></div></div>';
+  const img = block.querySelector("img");
+  Object.defineProperty(img, "complete", { configurable: true, value: true });
+  Object.defineProperty(img, "naturalWidth", { configurable: true, value: 0 });
+  const previousFetch = global.fetch;
+  const pngBytes = new Uint8Array([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0x00, 0x00]);
+  global.fetch = async () => ({
+    ok: true,
+    blob: async () => ({
+      type: "image/png",
+      arrayBuffer: async () => pngBytes.buffer
+    })
+  });
+  try {
+    const parsed = global.FormHelperParser.parseQuestion(block);
+    const prepared = await global.FormHelperParser.prepareHebatQuestionAsync(block, parsed);
+    assert.equal(prepared.images.length, 1);
+    assert.equal(prepared.images[0].mimeType, "image/png");
+    assert.ok(prepared.images[0].base64);
+    assert.equal(prepared.imagesTruncated, false);
+  } finally {
+    global.fetch = previousFetch;
+  }
+});
+
+test("shortcut dinamis Mode Pembahasan dan kontrol menu (?) HEBAT bekerja", async () => {
+  const originalAttachShadow = dom.window.Element.prototype.attachShadow;
+  dom.window.Element.prototype.attachShadow = function attachShadowForTest(options) {
+    return originalAttachShadow.call(this, { ...options, mode: "open" });
+  };
+  const footer = document.createElement("div");
+  footer.setAttribute("data-region", "footer-container-popover");
+  footer.innerHTML = '<div class="popover footer"><div class="popover-body"></div></div>';
+  document.body.append(footer);
+  try {
+    global.FormHelperUI.initSettingsPanel();
+    global.FormHelperUI.initHebatSettingsShortcut();
+    global.FormHelperUI.syncHelpMenu();
+
+    const pembBtn = footer.querySelector('[data-form-helper-menu-item="hebat-pembahasan"]');
+    const dbToggle = footer.querySelector('[data-form-helper-menu-item="hebat-db-toggle"]');
+    const dbSelect = footer.querySelector('[data-form-helper-menu-item="hebat-db-select"]');
+    assert.ok(pembBtn && dbToggle && dbSelect);
+    assert.equal(dbSelect.disabled, true);
+
+    const shortcut = new dom.window.KeyboardEvent("keydown", {
+      key: "P", code: "KeyP", altKey: true, shiftKey: true, bubbles: true, cancelable: true
+    });
+    document.dispatchEvent(shortcut);
+    await new Promise((r) => setTimeout(r, 20));
+    assert.equal(shortcut.defaultPrevented, true);
+    assert.match(pembBtn.textContent, /ON/);
+
+    dbToggle.click();
+    await new Promise((r) => setTimeout(r, 20));
+    assert.match(dbToggle.textContent, /ON/);
+    assert.equal(dbSelect.disabled, false);
+  } finally {
+    footer.remove();
     dom.window.Element.prototype.attachShadow = originalAttachShadow;
   }
 });

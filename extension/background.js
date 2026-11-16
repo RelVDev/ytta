@@ -1,6 +1,14 @@
 "use strict";
 
+if (typeof globalThis.FormHelperDbMatch === "undefined" && typeof importScripts === "function") {
+  importScripts("lib/db-match.js");
+}
+
 const extensionApi = globalThis.browser || globalThis.chrome;
+const dbCache = new Map();
+const DB_FILES = {
+  fisika: "db/fisika.json"
+};
 const IMAGE_HOST = /(^|\.)(googleusercontent\.com|ggpht\.com|gstatic\.com)$/i;
 const MAX_IMAGE_BYTES = 512 * 1024;
 const IMAGE_FETCH_TIMEOUT_MS = 8000;
@@ -152,15 +160,37 @@ async function apiFetch(path, options = {}, requestId = "") {
   }
 }
 
+async function getDatabase(dbName) {
+  const relPath = DB_FILES[dbName];
+  if (!relPath) return null;
+  if (dbCache.has(dbName)) return dbCache.get(dbName);
+  const url = extensionApi.runtime.getURL(relPath);
+  const response = await fetch(url);
+  if (!response.ok) return null;
+  const data = await response.json();
+  dbCache.set(dbName, data);
+  return data;
+}
+
 async function sendAnswer(payload, requestId) {
+  const { dbMode, dbName, ...apiPayload } = payload || {};
+  let dbMatch = null;
+  if (dbMode && dbName && globalThis.FormHelperDbMatch) {
+    try {
+      const db = await getDatabase(dbName);
+      if (db) dbMatch = globalThis.FormHelperDbMatch.matchQuestionInDb(db, apiPayload.question);
+    } catch {
+      dbMatch = null;
+    }
+  }
   try {
-    const question = await prepareQuestionImages(payload.question);
+    const question = await prepareQuestionImages(apiPayload.question);
     if (cancelledRequests.delete(requestId) || (activeRequests.get(requestId) && activeRequests.get(requestId).signal.aborted)) {
       const error = new Error("Permintaan dibatalkan.");
       error.name = "AbortError";
       throw error;
     }
-    const body = JSON.stringify({ ...payload, question });
+    const body = JSON.stringify({ ...apiPayload, question });
     const response = await apiFetch("/api/answer", {
       method: "POST",
       body,
@@ -173,7 +203,11 @@ async function sendAnswer(payload, requestId) {
       const message = result.error && result.error.message;
       const error = new Error(message || "Koneksi gagal, coba lagi.");
       error.code = result.error && result.error.code;
+      error.dbMatch = dbMatch;
       throw error;
+    }
+    if (dbMode && globalThis.FormHelperDbMatch) {
+      result.dbComparison = globalThis.FormHelperDbMatch.compareDbAndAi(dbMatch, result.answer, apiPayload.question);
     }
     return result;
   } finally {
@@ -207,6 +241,11 @@ extensionApi.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     }
     return { ok: false, error: "Pesan tidak dikenal." };
   };
-  handle().then(sendResponse).catch((error) => sendResponse({ ok: false, error: error.message, code: error.code }));
+  handle().then(sendResponse).catch((error) => sendResponse({
+    ok: false,
+    error: error.message,
+    code: error.code,
+    ...(error.dbMatch ? { dbMatch: error.dbMatch } : {})
+  }));
   return true;
 });

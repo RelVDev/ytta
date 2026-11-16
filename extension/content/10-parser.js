@@ -168,7 +168,8 @@
     if (!label) return null;
     const labelText = label.querySelector('[data-region="answer-label"]') || label;
     const image = label.querySelector("img");
-    const optionImage = image ? { url: image.currentSrc || image.src, mimeType: "image/jpeg", base64: null } : null;
+    const imgUrl = image ? (image.currentSrc || image.src || image.getAttribute("data-src") || "") : "";
+    const optionImage = imgUrl ? { url: imgUrl, mimeType: "image/jpeg", base64: null } : null;
     const text = global.FormHelperUtils.cleanText(labelText.textContent);
     return { key: String.fromCharCode(65 + index), text, image: optionImage, isOther: false };
   }
@@ -178,7 +179,7 @@
     if (!qtext) return null;
     const text = global.FormHelperUtils.cleanText(qtext.textContent) || "Soal bergambar tanpa teks.";
     const questionImages = [...qtext.querySelectorAll("img")].map((img) => ({
-      url: img.currentSrc || img.src,
+      url: img.currentSrc || img.src || img.getAttribute("data-src") || "",
       mimeType: "image/jpeg",
       base64: null
     })).filter((image) => image.url).slice(0, 4);
@@ -233,33 +234,163 @@
     };
   }
 
-  function captureRenderedImage(img) {
-    if (!img || !img.complete || !img.naturalWidth || !img.naturalHeight) return null;
-    try {
-      const sourceUrl = new URL(img.currentSrc || img.src, location.href);
-      if (sourceUrl.origin !== location.origin) return null;
-      const maxEdge = 2000;
-      const ratio = Math.min(1, maxEdge / Math.max(img.naturalWidth, img.naturalHeight));
+  function encodeCanvasWithBudget(img, maxBytes) {
+    const naturalW = img.naturalWidth || img.width || 0;
+    const naturalH = img.naturalHeight || img.height || 0;
+    if (naturalW <= 1 && naturalH <= 1) return null;
+    const edges = [1800, 1280, 900];
+    for (const maxEdge of edges) {
+      const ratio = Math.min(1, maxEdge / Math.max(naturalW, naturalH));
+      const drawW = Math.max(1, Math.round(naturalW * ratio));
+      const drawH = Math.max(1, Math.round(naturalH * ratio));
+      const canvasW = Math.max(16, drawW);
+      const canvasH = Math.max(16, drawH);
       const canvas = document.createElement("canvas");
-      canvas.width = Math.max(1, Math.round(img.naturalWidth * ratio));
-      canvas.height = Math.max(1, Math.round(img.naturalHeight * ratio));
+      canvas.width = canvasW;
+      canvas.height = canvasH;
       const context = canvas.getContext("2d", { alpha: false });
       if (!context) return null;
       context.fillStyle = "#ffffff";
-      context.fillRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(img, 0, 0, canvas.width, canvas.height);
-      let dataUrl = canvas.toDataURL("image/png");
-      let mimeType = "image/png";
-      if (dataUrl.length > 600_000) {
-        dataUrl = canvas.toDataURL("image/jpeg", 0.92);
-        mimeType = "image/jpeg";
+      context.fillRect(0, 0, canvasW, canvasH);
+      context.drawImage(img, 0, 0, drawW, drawH);
+
+      const pngUrl = canvas.toDataURL("image/png");
+      const pngBase64 = pngUrl.split(",")[1] || "";
+      if (pngBase64 && pngBase64.length <= Math.min(550_000, maxBytes)) {
+        return { mimeType: "image/png", base64: pngBase64, url: null };
       }
-      const base64 = dataUrl.split(",")[1] || "";
-      if (!base64 || base64.length > 1_900_000) return null;
-      return { mimeType, base64, url: null };
+      for (const quality of [0.92, 0.78, 0.62]) {
+        const jpgUrl = canvas.toDataURL("image/jpeg", quality);
+        const jpgBase64 = jpgUrl.split(",")[1] || "";
+        if (jpgBase64 && jpgBase64.length <= maxBytes) {
+          return { mimeType: "image/jpeg", base64: jpgBase64, url: null };
+        }
+      }
+    }
+    return null;
+  }
+
+  function captureRenderedImage(img, maxBytes = 1_400_000) {
+    if (!img || !img.complete || !img.naturalWidth || !img.naturalHeight) return null;
+    try {
+      const rawSrc = img.currentSrc || img.src || "";
+      const sourceUrl = new URL(rawSrc, location.href);
+      const isInlineOrSameOrigin = sourceUrl.origin === location.origin
+        || sourceUrl.protocol === "data:"
+        || sourceUrl.protocol === "blob:";
+      if (!isInlineOrSameOrigin) return null;
+      return encodeCanvasWithBudget(img, maxBytes);
     } catch {
       return null;
     }
+  }
+
+  async function waitForImageReady(img, timeoutMs = 3000) {
+    if (!img) return;
+    if (img.complete && img.naturalWidth > 0) return;
+    if (typeof img.decode === "function") {
+      try {
+        await Promise.race([img.decode(), new Promise((resolve) => setTimeout(resolve, timeoutMs))]);
+        if (img.naturalWidth > 0) return;
+      } catch {
+        // Fallback to load event below
+      }
+    }
+    if (img.complete) return;
+    await new Promise((resolve) => {
+      const done = () => {
+        img.removeEventListener("load", done);
+        img.removeEventListener("error", done);
+        resolve();
+      };
+      img.addEventListener("load", done, { once: true });
+      img.addEventListener("error", done, { once: true });
+      setTimeout(done, timeoutMs);
+    });
+  }
+
+  function bytesToBase64(bytes) {
+    let binary = "";
+    const chunkSize = 0x8000;
+    for (let offset = 0; offset < bytes.length; offset += chunkSize) {
+      binary += String.fromCharCode(...bytes.subarray(offset, offset + chunkSize));
+    }
+    return btoa(binary);
+  }
+
+  function sniffImageMime(bytes) {
+    if (bytes.length >= 8 && bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47) return "image/png";
+    if (bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return "image/jpeg";
+    if (bytes.length >= 6 && String.fromCharCode(...bytes.subarray(0, 3)) === "GIF") return "image/gif";
+    if (bytes.length >= 12 && String.fromCharCode(...bytes.subarray(0, 4)) === "RIFF" && String.fromCharCode(...bytes.subarray(8, 12)) === "WEBP") return "image/webp";
+    return "";
+  }
+
+  async function fetchHebatImageFallback(img, maxBytes) {
+    const rawSrc = img?.currentSrc || img?.src || img?.getAttribute?.("data-src") || "";
+    if (!rawSrc) return null;
+    let parsedUrl;
+    try { parsedUrl = new URL(rawSrc, location.href); } catch { return null; }
+    const sameOrigin = parsedUrl.origin === location.origin || parsedUrl.protocol === "data:" || parsedUrl.protocol === "blob:";
+    if (sameOrigin && typeof fetch === "function") {
+      try {
+        const res = await fetch(parsedUrl.href, { credentials: "include" });
+        if (res.ok) {
+          const blob = await res.blob();
+          if (typeof createImageBitmap === "function" && typeof document !== "undefined") {
+            try {
+              const bitmap = await createImageBitmap(blob);
+              const pseudoImg = { naturalWidth: bitmap.width, naturalHeight: bitmap.height, width: bitmap.width, height: bitmap.height };
+              const canvas = document.createElement("canvas");
+              const ratio = Math.min(1, 1600 / Math.max(bitmap.width || 1, bitmap.height || 1));
+              canvas.width = Math.max(16, Math.round(bitmap.width * ratio));
+              canvas.height = Math.max(16, Math.round(bitmap.height * ratio));
+              const ctx = canvas.getContext("2d", { alpha: false });
+              if (ctx) {
+                ctx.fillStyle = "#ffffff";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+                bitmap.close?.();
+                const jpgUrl = canvas.toDataURL("image/jpeg", 0.88);
+                const base64 = jpgUrl.split(",")[1] || "";
+                if (base64 && base64.length <= maxBytes) return { mimeType: "image/jpeg", base64, url: null };
+              }
+              void pseudoImg;
+            } catch {
+              // Fall back to raw bytes
+            }
+          }
+          const bytes = new Uint8Array(await blob.arrayBuffer());
+          const mimeType = sniffImageMime(bytes) || (IMAGE_TYPES.has(blob.type) ? blob.type : "");
+          if (mimeType && bytes.length > 0 && bytes.length <= 2 * 1024 * 1024) {
+            const base64 = bytesToBase64(bytes);
+            if (base64.length <= maxBytes) return { mimeType, base64, url: null };
+          }
+          const isSvg = blob.type === "image/svg+xml" || parsedUrl.pathname.toLowerCase().endsWith(".svg");
+          if (isSvg && typeof Image === "function" && typeof URL.createObjectURL === "function") {
+            const objUrl = URL.createObjectURL(blob);
+            try {
+              const svgImg = new Image();
+              await new Promise((resolve) => {
+                svgImg.onload = resolve;
+                svgImg.onerror = resolve;
+                svgImg.src = objUrl;
+              });
+              const captured = encodeCanvasWithBudget(svgImg, maxBytes);
+              if (captured) return captured;
+            } finally {
+              URL.revokeObjectURL(objUrl);
+            }
+          }
+        }
+      } catch {
+        // Fall through
+      }
+    }
+    if (parsedUrl.protocol === "https:" && parsedUrl.origin !== location.origin) {
+      return { mimeType: "image/jpeg", base64: null, url: parsedUrl.href };
+    }
+    return null;
   }
 
   function prepareHebatQuestion(block, question) {
@@ -267,9 +398,10 @@
     const qtextImages = [...block.querySelector(".qtext").querySelectorAll("img")];
     let truncated = question.imagesTruncated;
     let totalImageBytes = 0;
-    const maxTotalBase64 = 1_400_000;
+    const maxTotalBase64 = 1_800_000;
     for (const img of qtextImages.slice(0, question.images.length)) {
-      const captured = captureRenderedImage(img);
+      const remaining = Math.max(200_000, maxTotalBase64 - totalImageBytes);
+      const captured = captureRenderedImage(img, remaining);
       if (captured && totalImageBytes + captured.base64.length <= maxTotalBase64) {
         prepared.images.push(captured);
         totalImageBytes += captured.base64.length;
@@ -284,7 +416,8 @@
       if (!option.image) return option;
       const optionIndex = option.key.charCodeAt(0) - 65;
       const img = inputImages[optionIndex];
-      const captured = captureRenderedImage(img);
+      const remaining = Math.max(200_000, maxTotalBase64 - totalImageBytes);
+      const captured = captureRenderedImage(img, remaining);
       if (!captured || totalImageBytes + captured.base64.length > maxTotalBase64) { truncated = true; return { ...option, image: null }; }
       totalImageBytes += captured.base64.length;
       return { ...option, image: captured };
@@ -293,9 +426,51 @@
     return prepared;
   }
 
+  async function prepareHebatQuestionAsync(block, question) {
+    const prepared = { ...question, images: [], options: question.options.map((option) => ({ ...option, image: null })) };
+    const qtextImages = [...block.querySelector(".qtext").querySelectorAll("img")];
+    let truncated = question.imagesTruncated;
+    let totalImageBytes = 0;
+    const maxTotalBase64 = 1_800_000;
+    for (const img of qtextImages.slice(0, question.images.length)) {
+      await waitForImageReady(img);
+      const remaining = Math.max(200_000, maxTotalBase64 - totalImageBytes);
+      let captured = captureRenderedImage(img, remaining);
+      if (!captured) captured = await fetchHebatImageFallback(img, remaining);
+      if (captured && (!captured.base64 || totalImageBytes + captured.base64.length <= maxTotalBase64)) {
+        prepared.images.push(captured);
+        if (captured.base64) totalImageBytes += captured.base64.length;
+      } else {
+        truncated = true;
+      }
+    }
+    const inputImages = [...block.querySelectorAll('.answer input[type="radio"], .answer input[type="checkbox"]')]
+      .map((input) => {
+        const label = moodleInputLabel(input);
+        return label?.querySelector("img") || null;
+      });
+    prepared.options = await Promise.all(question.options.map(async (option) => {
+      if (!option.image) return option;
+      const optionIndex = option.key.charCodeAt(0) - 65;
+      const img = inputImages[optionIndex];
+      await waitForImageReady(img);
+      const remaining = Math.max(200_000, maxTotalBase64 - totalImageBytes);
+      let captured = captureRenderedImage(img, remaining);
+      if (!captured) captured = await fetchHebatImageFallback(img, remaining);
+      if (!captured || (captured.base64 && totalImageBytes + captured.base64.length > maxTotalBase64)) {
+        truncated = true;
+        return { ...option, image: null };
+      }
+      if (captured.base64) totalImageBytes += captured.base64.length;
+      return { ...option, image: captured };
+    }));
+    prepared.imagesTruncated = truncated;
+    return prepared;
+  }
+
   function getQuestionBlocks(platform = "google") {
     return [...document.querySelectorAll(platform === "hebat" ? "#responseform .que" : SELECTORS.questionBlocks)];
   }
 
-  global.FormHelperParser = { SELECTORS, parseQuestion, getQuestionBlocks, prepareHebatQuestion };
+  global.FormHelperParser = { SELECTORS, parseQuestion, getQuestionBlocks, prepareHebatQuestion, prepareHebatQuestionAsync };
 })(globalThis);

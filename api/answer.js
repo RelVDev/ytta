@@ -87,6 +87,7 @@ module.exports = async function answer(req, res) {
       question: answerQuestion,
       lang: payload.lang,
       images: answerImages,
+      pembahasanMode: payload.pembahasanMode,
       signal: requestController.signal
     };
 
@@ -128,7 +129,7 @@ module.exports = async function answer(req, res) {
           rawOutput = await callGemini({ ...args, model: route.model, timeoutBudgetMs });
         }
         stage = `normalize_${route.provider}`;
-        answer = normalizeModelOutput(rawOutput, answerQuestion);
+        answer = normalizeModelOutput(rawOutput, answerQuestion, { pembahasanMode: payload.pembahasanMode });
         finalImageUnsupported = routeImagesUnsupported;
         break;
       } catch (error) {
@@ -170,6 +171,7 @@ module.exports = async function answer(req, res) {
       answer,
       confidence: answer.confidence,
       explanation: answer.explanation,
+      ...(answer.discussion ? { discussion: answer.discussion } : {}),
       latencyMs,
       provider,
       model: selectedModel,

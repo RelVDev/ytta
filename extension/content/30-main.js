@@ -1,7 +1,7 @@
 "use strict";
 
 (function initMain(global) {
-  const { api, getSettings, sendMessage, cleanText } = global.FormHelperUtils;
+  const { api, getSettings, sendMessage } = global.FormHelperUtils;
   const controls = new WeakMap();
   const activeControls = new Set();
   let observer = null;
@@ -27,46 +27,6 @@
   }
 
   function isSupportedPage() { return isRespondentPage() || isHebatQuizPage(); }
-
-  function fileToBase64(file) {
-    return file.arrayBuffer().then((buffer) => {
-      const bytes = new Uint8Array(buffer);
-      let binary = "";
-      for (let offset = 0; offset < bytes.length; offset += 0x8000) {
-        binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
-      }
-      return btoa(binary);
-    });
-  }
-
-  async function addLocalFiles(control, fileList) {
-    try {
-      const settings = await getSettings();
-      if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5") {
-        throw new Error("Pilih model Harbor Claude Haiku 5.5 sebelum melampirkan file.");
-      }
-      if (fileList.length > 2) throw new Error("Maksimal dua file dapat dilampirkan.");
-      const files = [];
-      for (const file of fileList) {
-        const extension = file.name.split(".").at(-1).toLowerCase();
-        const isPdf = extension === "pdf" || file.type === "application/pdf";
-        const isText = ["txt", "md", "csv"].includes(extension) || /^text\//i.test(file.type);
-        if (!isPdf && !isText) throw new Error("Format yang didukung: PDF, TXT, MD, atau CSV.");
-        if (file.size > 500_000) throw new Error(`Ukuran ${file.name} melebihi batas 500 KB.`);
-        files.push({
-          name: cleanText(file.name).slice(0, 120),
-          mimeType: isPdf ? "application/pdf" : "text/plain",
-          base64: await fileToBase64(file)
-        });
-      }
-      control.files = files;
-      control.setFileState(files.length ? `${files.length} file lokal siap dilampirkan` : "Lampirkan PDF/TXT/MD/CSV dari perangkat ini");
-    } catch (error) {
-      control.files = [];
-      control.setFileState(error.message || "File tidak dapat dibaca");
-      control.showMessage(error.message || "File tidak dapat dibaca.", true);
-    }
-  }
 
   async function handleAsk(control) {
     if (control.loading && control.requestId) {
@@ -97,12 +57,10 @@
       if (question.type === "unsupported_file_upload") throw new Error("Soal unggah file belum didukung.");
       if (question.type === "dropdown" && !question.options.length) throw new Error("Pilihan dropdown belum terbaca. Coba buka daftar pilihan lalu tanya lagi.");
       const settings = await getSettings();
-      if (isHebatQuizPage()) question = global.FormHelperParser.prepareHebatQuestion(control.block, question);
-      if (control.files?.length) {
-        if (settings.answerProvider !== "harbor" || settings.harborModel !== "claude-haiku-5.5") {
-          throw new Error("Lampiran file hanya didukung saat model Harbor Claude Haiku 5.5 dipilih.");
-        }
-        question.files = control.files;
+      if (isHebatQuizPage()) {
+        question = typeof global.FormHelperParser.prepareHebatQuestionAsync === "function"
+          ? await global.FormHelperParser.prepareHebatQuestionAsync(control.block, question)
+          : global.FormHelperParser.prepareHebatQuestion(control.block, question);
       }
       if (!settings.dataConsentAccepted) throw new Error("Buka pengaturan dan setujui pemrosesan data soal untuk menggunakan saran AI.");
       control.sentRequest = true;
@@ -120,6 +78,9 @@
           answerProvider: settings.answerProvider === "groq" ? "groq" : "harbor",
           imageToText: settings.imageToText === true,
           disableGemini: settings.onlyHarbor === true,
+          pembahasanMode: isHebatQuizPage() && settings.pembahasanMode === true,
+          dbMode: isHebatQuizPage() && settings.dbModeEnabled === true,
+          dbName: settings.dbSelected || "fisika",
           question
         }
       });
@@ -127,6 +88,9 @@
       if (!response || !response.ok) {
         const error = new Error(response && response.error || "Koneksi gagal, coba lagi.");
         error.code = response && response.code;
+        if (response && response.dbMatch) {
+          error.message = `${error.message} (Jawaban DB: ${response.dbMatch.display})`;
+        }
         throw error;
       }
       control.showAnswer(response.result, question.type);
@@ -192,7 +156,8 @@
           controls.delete(block);
           continue;
         }
-        if (existing.host.isConnected && existing.questionFingerprint === fingerprint) {
+        if (existing.host.isConnected && (existing.questionFingerprint === fingerprint || existing.loading || existing.panel)) {
+          existing.questionFingerprint = fingerprint;
           count += 1;
           continue;
         }
@@ -200,7 +165,7 @@
         controls.delete(block);
       }
       if (!settings.enabled || !question || block.closest(".fh-ui-host, .fh-question-host, .fh-answer-host")) continue;
-      const control = global.FormHelperUI.questionControl(block, handleAsk, platform === "hebat" ? addLocalFiles : null, platform);
+      const control = global.FormHelperUI.questionControl(block, handleAsk, null, platform);
       control.questionFingerprint = fingerprint;
       controls.set(block, control);
       activeControls.add(control);
@@ -268,7 +233,6 @@
   if (supportedPage || hebatQuizRoute) {
     global.FormHelperUI.initSettingsPanel();
     if (hebatQuizRoute) global.FormHelperUI.initHebatSettingsShortcut();
-    if (isHebatQuizPage()) global.FormHelperUI.initHebatLauncher();
     global.FormHelperUI.syncHelpMenu();
     if (supportedPage) {
       startObserver();

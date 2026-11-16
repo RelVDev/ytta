@@ -6,7 +6,7 @@ const { validatePayload } = require("../lib/validate");
 
 const validPayload = () => ({
   lang: "id",
-  models: { harbor: "qwen3.8-flash:free", gemini: "gemini-3.8-flash" },
+  models: { harbor: "deepseek-v4.1-flash-1017", gemini: "gemini-3.8-flash" },
   question: {
     id: "q1", type: "multiple_choice", text: "Rumus air?", required: true,
     options: [{ key: "A", text: "H2O" }, { key: "B", text: "CO2" }],
@@ -18,11 +18,25 @@ test("payload dan pilihan model yang dikenal diterima", () => {
   assert.equal(validatePayload(validPayload()).question.options.length, 2);
 });
 
-test("model Harbor tambahan diterima", () => {
-  for (const model of ["glm-5.3-flash", "glm-5.3-flashx", "gpt-6-luna", "gpt-6-luna-fast", "qwen3.8-flash"]) {
+test("model Harbor baru diterima dan model lama atau butuh pass tinggi ditolak", () => {
+  for (const model of [
+    "deepseek-v4.1-flash-1017",
+    "deepseek-v4.1-flash",
+    "claude-haiku-5.5",
+    "muse-ember",
+    "gpt-6-luna",
+    "minimax-m3.1-flash",
+    "glm-5.3-flash",
+    "qwen3.8-flash"
+  ]) {
     const payload = validPayload();
     payload.models.harbor = model;
     assert.equal(validatePayload(payload).models.harbor, model);
+  }
+  for (const removed of ["qwen3.8-flash:free", "glm-5.3", "gemini-3.8-flash"]) {
+    const old = validPayload();
+    old.models.harbor = removed;
+    assert.throws(() => validatePayload(old), { code: "BAD_REQUEST" });
   }
 });
 
@@ -30,7 +44,7 @@ test("model di luar allowlist dan tipe tidak dikenal ditolak", () => {
   const payload = validPayload();
   payload.models.harbor = "arbitrary-model";
   assert.throws(() => validatePayload(payload), { code: "BAD_REQUEST" });
-  payload.models.harbor = "qwen3.8-flash:free";
+  payload.models.harbor = "deepseek-v4.1-flash-1017";
   payload.question.type = "unknown";
   assert.throws(() => validatePayload(payload), { code: "UNSUPPORTED_TYPE" });
 });
