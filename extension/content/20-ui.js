@@ -757,16 +757,52 @@
       .trim();
   }
 
+  function formatDiketahuiLines(bodyText) {
+    const rawLines = String(bodyText || "").split("\n").map((l) => l.trim()).filter(Boolean);
+    const out = [];
+    for (const line of rawLines) {
+      if (line.includes(";")) {
+        out.push(...line.split(/\s*;\s*/).map((s) => s.trim()).filter(Boolean));
+      } else if (/=.*,.*=/.test(line) && !/[.?!]\s/.test(line)) {
+        out.push(...line.split(/\s*,\s*(?=[A-Za-zΔρπθμωαβγ_₀₁₂]+\s*=)/).map((s) => s.trim()).filter(Boolean));
+      } else {
+        out.push(line);
+      }
+    }
+    return out;
+  }
+
+  function formatDijawabLines(bodyText) {
+    const rawLines = String(bodyText || "").split("\n").map((l) => l.trim()).filter(Boolean);
+    const out = [];
+    for (const line of rawLines) {
+      const eqMatches = line.match(/=/g);
+      if (eqMatches && eqMatches.length >= 2 && line.length <= 120 && !/[.?!]\s/.test(line.split("=")[0])) {
+        const parts = line.split(/\s*=\s*/).map((s) => s.trim()).filter(Boolean);
+        if (parts.length >= 3) {
+          out.push(`${parts[0]} = ${parts[1]}`);
+          for (let i = 2; i < parts.length; i += 1) {
+            out.push(`= ${parts[i]}`);
+          }
+          continue;
+        }
+      }
+      out.push(line);
+    }
+    return out;
+  }
+
   function renderDiscussionContent(container, text) {
     const normalized = String(text || "")
       .replace(/\r\n?/g, "\n")
-      .replace(/([^\n])\s*(?=(?:Diketahui|Ditanya|Dijawab)\s*:)/gi, "$1\n")
+      .replace(/\*\*/g, "")
+      .replace(/([^\n])\s*(?=(?:Diketahui|Ditanya|Dijawab|Given|Asked|Solution)\s*:)/gi, "$1\n")
       .trim();
-    const sections = normalized.split(/\n(?=(?:Diketahui|Ditanya|Dijawab)\s*:)/i);
+    const sections = normalized.split(/\n(?=(?:Diketahui|Ditanya|Dijawab|Given|Asked|Solution)\s*:)/i);
     for (const part of sections) {
       const trimmed = part.trim();
       if (!trimmed) continue;
-      const lineMatch = trimmed.match(/^(Diketahui|Ditanya|Dijawab)\s*:\s*([\s\S]*)$/i);
+      const lineMatch = trimmed.match(/^(Diketahui|Ditanya|Dijawab|Given|Asked|Solution)\s*:\s*([\s\S]*)$/i);
       const item = document.createElement("div");
       item.className = "disc-block";
       if (lineMatch) {
@@ -776,8 +812,13 @@
         heading.textContent = labelText;
         const body = document.createElement("div");
         body.className = "disc-body";
-        const lines = lineMatch[2].split("\n").map((l) => l.trim()).filter(Boolean);
-        if (labelText === "Dijawab" && lines.length > 1) {
+        const contentText = lineMatch[2].trim();
+        const lines = (labelText === "Diketahui" || labelText === "Given")
+          ? formatDiketahuiLines(contentText)
+          : (labelText === "Dijawab" || labelText === "Solution")
+            ? formatDijawabLines(contentText)
+            : contentText.split("\n").map((l) => l.trim()).filter(Boolean);
+        if ((labelText === "Dijawab" || labelText === "Solution") && lines.length > 1) {
           const steps = document.createElement("div");
           steps.textContent = lines.slice(0, -1).join("\n");
           const resultLine = document.createElement("div");
@@ -912,7 +953,7 @@
         mountAnswerHost(block, panelHost, platform);
         control.panel = panelHost;
       },
-      showAnswer(response, questionType) {
+      showAnswer(response, questionType, options = {}) {
         control.removePanel();
         const panelHost = document.createElement("div");
         panelHost.className = "fh-answer-host";
@@ -959,11 +1000,17 @@
 
         const displayAi = formatDisplayAnswer(response.answer.display);
         const displayDb = dbComp?.dbDisplay ? formatDisplayAnswer(dbComp.dbDisplay) : "";
+        const pembahasanActive = Boolean(options?.pembahasanMode || response.discussion || response.answer?.discussion);
+        const discussionText = String(
+          response.discussion
+          || response.answer?.discussion
+          || (options?.pembahasanMode ? (response.explanation || response.answer?.explanation || displayAi) : "")
+        ).trim();
 
         const topActions = document.createElement("div"); topActions.className = "top-actions";
         const copy = document.createElement("button"); copy.type = "button"; copy.textContent = "Salin";
-        const copyPayload = response.discussion
-          ? `${displayAi}\n\n${response.discussion}`
+        const copyPayload = discussionText
+          ? `${displayAi}\n\n${discussionText}`
           : displayAi;
         copy.addEventListener("click", async (event) => {
           event.preventDefault();
@@ -1007,11 +1054,11 @@
           card.append(detail);
         }
 
-        if (response.discussion) {
+        if (discussionText) {
           const discWrap = document.createElement("div"); discWrap.className = "discussion";
-          const discTitle = document.createElement("div"); discTitle.className = "discussion-title"; discTitle.textContent = "Pembahasan";
+          const discTitle = document.createElement("div"); discTitle.className = "discussion-title"; discTitle.textContent = pembahasanActive ? "Pembahasan" : "Ringkasan";
           discWrap.append(discTitle);
-          renderDiscussionContent(discWrap, response.discussion);
+          renderDiscussionContent(discWrap, discussionText);
           card.append(discWrap);
         }
 

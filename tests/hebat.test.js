@@ -213,6 +213,23 @@ test("HEBAT tidak menampilkan launcher mengambang di kiri bawah dan kotak jawaba
 
       control.showAnswer({ answer: { display: "A. Pilihan A" }, confidence: 0.9, explanation: "Ulang." }, "multiple_choice");
       assert.ok(formulation.querySelector(".fh-answer-host"), "jawaban dapat dibuka kembali setelah ditutup");
+      control.showAnswer({
+        answer: { display: "36 Joule" },
+        confidence: 0.95,
+        explanation: "Energi kinetik adalah 36 Joule."
+      }, "short_answer", { pembahasanMode: true });
+      assert.match(formulation.querySelector(".fh-answer-host").shadowRoot.textContent, /Pembahasan/);
+      assert.match(formulation.querySelector(".fh-answer-host").shadowRoot.textContent, /Energi kinetik adalah 36 Joule\./);
+
+      control.showAnswer({
+        answer: { display: "36 J" },
+        confidence: 0.99,
+        discussion: "Diketahui: m = 2 kg, v = 6 m/s\nDitanya: EK?\nDijawab: EK = (1/2) × m × v² = (1/2) × 2 × 36 = 36 J"
+      }, "short_answer", { pembahasanMode: true });
+      const discText = formulation.querySelector(".fh-answer-host").shadowRoot.querySelector(".discussion").textContent;
+      assert.match(discText, /m = 2 kg\nv = 6 m\/s/);
+      assert.match(formulation.querySelector(".fh-answer-host").shadowRoot.querySelector(".disc-final").textContent, /^= 36 J$/);
+
       control.removePanel();
       assert.equal(formulation.querySelector(".fh-answer-host"), null);
       assert.ok(formulation.querySelector(".qtext") && formulation.querySelector(".answer"));

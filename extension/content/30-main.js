@@ -95,7 +95,9 @@
         }
         throw error;
       }
-      control.showAnswer(response.result, question.type);
+      control.showAnswer(response.result, question.type, {
+        pembahasanMode: settings.pembahasanMode === true
+      });
       control.setState("done");
     } catch (error) {
       if (control.requestId !== requestId) return;

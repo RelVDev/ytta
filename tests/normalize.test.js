@@ -50,3 +50,23 @@ test("sanitizeMathText mengubah LaTeX menjadi Unicode rapi untuk HEBAT", () => {
   assert.match(cleaned, /ΔP = F\/A = 10⁻²³ Pa, θ = 90°/);
   assert.doesNotMatch(cleaned, /\$|\\frac|\\cdot|\\sqrt|\\circ/);
 });
+
+test("normalizeModelOutput menjamin discussion terisi saat pembahasanMode aktif", () => {
+  const fromObject = normalizeModelOutput({
+    keys: ["B"],
+    texts: ["CH3COOH"],
+    explanation: "Asam asetat.",
+    discussion: { diketahui: "Rumus CH3COOH", ditanya: "Nama senyawa", dijawab: "Asam asetat" }
+  }, question, { pembahasanMode: true });
+  assert.match(fromObject.discussion, /Diketahui:\nRumus CH3COOH/);
+  assert.match(fromObject.discussion, /Dijawab:\nAsam asetat/);
+
+  const fallbackFromEmpty = normalizeModelOutput({
+    keys: ["B"],
+    texts: ["CH3COOH"],
+    explanation: "CH3COOH adalah asam asetat.",
+    discussion: ""
+  }, { ...question, text: "Senyawa CH3COOH adalah?" }, { pembahasanMode: true });
+  assert.match(fallbackFromEmpty.discussion, /Diketahui:\nSenyawa CH3COOH adalah\?/);
+  assert.match(fallbackFromEmpty.discussion, /Dijawab:\nCH3COOH adalah asam asetat\./);
+});
