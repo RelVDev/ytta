@@ -7,12 +7,18 @@
     "besar", "nilai", "tentukan", "hitunglah", "berapa", "berapakah", "apa", "apakah"
   ]);
 
+  function stripThousandDots(text) {
+    return String(text || "").replace(/\b(\d{1,3}(?:\.\d{3})+)(?!\.\d)\b/g, (match) => match.replace(/\./g, ""));
+  }
+
   function normalizeText(value) {
-    return String(value || "")
-      .normalize("NFKC")
-      .replace(/[\u200B-\u200D\uFEFF]/g, "")
-      .replace(/\uFFFD/g, " ")
-      .replace(/(\d),(\d)/g, "$1.$2")
+    return stripThousandDots(
+      String(value || "")
+        .normalize("NFKC")
+        .replace(/[\u200B-\u200D\uFEFF]/g, "")
+        .replace(/\uFFFD/g, " ")
+        .replace(/(\d),(\d)/g, "$1.$2")
+    )
       .replace(/²/g, "2")
       .replace(/³/g, "3")
       .replace(/⁻¹/g, "-1")
@@ -31,9 +37,11 @@
   }
 
   function extractNumbers(text) {
-    const normalized = String(text || "")
-      .normalize("NFKC")
-      .replace(/(\d),(\d)/g, "$1.$2");
+    const normalized = stripThousandDots(
+      String(text || "")
+        .normalize("NFKC")
+        .replace(/(\d),(\d)/g, "$1.$2")
+    );
     const matches = normalized.match(/\d+(?:\.\d+)?/g) || [];
     return matches.map((token) => String(Number(token))).sort();
   }

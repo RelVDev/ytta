@@ -117,7 +117,14 @@ test("Google Forms mendukung menu Mode Pembahasan, Mode DB, shortcut dinamis, da
     assert.ok(menu.querySelector('[data-form-helper-menu-item="model-picker"]'));
     assert.ok(menu.querySelector('[data-form-helper-menu-item="google-pembahasan"]'));
     const dbSelect = menu.querySelector('[data-form-helper-menu-item="google-db-select"]');
+    const dbItem = menu.querySelector('[data-form-helper-menu-item="google-db"]');
     assert.ok(dbSelect && dbSelect.disabled === true);
+    dbSelect.querySelector("option").dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+    await new Promise((r) => setTimeout(r, 10));
+    assert.equal(store.dbModeEnabled, false, "klik option di dalam select tidak boleh men-toggle Mode DB");
+    dbItem.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Enter", bubbles: true, cancelable: true }));
+    await new Promise((r) => setTimeout(r, 10));
+    assert.equal(store.dbModeEnabled, true, "Enter pada item menu Mode DB men-toggle Mode DB");
 
     const shortcut = new dom.window.KeyboardEvent("keydown", {
       key: "P", code: "KeyP", altKey: true, shiftKey: true, bubbles: true, cancelable: true

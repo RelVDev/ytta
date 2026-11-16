@@ -61,6 +61,8 @@
         question = typeof global.FormHelperParser.prepareHebatQuestionAsync === "function"
           ? await global.FormHelperParser.prepareHebatQuestionAsync(control.block, question)
           : global.FormHelperParser.prepareHebatQuestion(control.block, question);
+      } else if (typeof global.FormHelperParser.prepareGoogleQuestionAsync === "function") {
+        question = await global.FormHelperParser.prepareGoogleQuestionAsync(control.block, question);
       }
       if (!settings.dataConsentAccepted) throw new Error("Buka pengaturan dan setujui pemrosesan data soal untuk menggunakan saran AI.");
       control.sentRequest = true;

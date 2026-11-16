@@ -68,6 +68,38 @@ test("Harbor 5xx beralih ke Gemini dan mengembalikan jawaban normal", async () =
   }
 });
 
+test("Harbor mengembalikan string kosong memicu fallback Gemini sebagai EMPTY_RESPONSE", async () => {
+  const previous = { fetch: global.fetch, token: process.env.CLIENT_TOKEN, harbor: process.env.TOKENHARBOR_API_KEY, gemini: process.env.GEMINI_API_KEY };
+  const calls = [];
+  const log = console.info;
+  process.env.CLIENT_TOKEN = "test-client-token";
+  process.env.TOKENHARBOR_API_KEY = "test-harbor-key";
+  process.env.GEMINI_API_KEY = "test-gemini-key";
+  console.info = () => {};
+  global.fetch = async (url) => {
+    calls.push(String(url));
+    if (String(url).includes("tokenharbor.ai")) {
+      return providerResponse(200, { choices: [{ message: { content: "   " } }] });
+    }
+    return providerResponse(200, {
+      steps: [{ type: "model_output", content: [{ type: "text", text: JSON.stringify({ keys: ["D"], texts: ["CH3COOH"], rows: [], confidence: 0.9, explanation: "Fallback." }) }] }]
+    });
+  };
+  try {
+    const res = fakeResponse();
+    await answerHandler(request(), res);
+    assert.equal(res.statusCode, 200);
+    assert.equal(res.body.provider, "gemini");
+    assert.equal(calls.length, 2);
+  } finally {
+    global.fetch = previous.fetch;
+    console.info = log;
+    if (previous.token === undefined) delete process.env.CLIENT_TOKEN; else process.env.CLIENT_TOKEN = previous.token;
+    if (previous.harbor === undefined) delete process.env.TOKENHARBOR_API_KEY; else process.env.TOKENHARBOR_API_KEY = previous.harbor;
+    if (previous.gemini === undefined) delete process.env.GEMINI_API_KEY; else process.env.GEMINI_API_KEY = previous.gemini;
+  }
+});
+
 test("Harbor error autentikasi tidak memicu fallback Gemini", async () => {
   const previous = { fetch: global.fetch, token: process.env.CLIENT_TOKEN, harbor: process.env.TOKENHARBOR_API_KEY, gemini: process.env.GEMINI_API_KEY };
   const calls = [];

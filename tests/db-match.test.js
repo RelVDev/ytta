@@ -55,3 +55,18 @@ test("compareDbAndAi menandai not_found bila soal tidak ada di DB", () => {
   const notFound = compareDbAndAi(null, { keys: ["A"], texts: ["Jawaban X"], display: "A. Jawaban X" }, { options: [] });
   assert.equal(notFound.status, "not_found");
 });
+
+test("compareDbAndAi menyamakan format pemisah ribuan pada isian singkat", () => {
+  const dbMatch = {
+    matched: true,
+    mappedToLiveOption: false,
+    similarity: 1,
+    dbName: "Fisika Dasar",
+    answerKey: "B",
+    answerText: "50.000 Pa",
+    cleanAnswerText: "50.000 Pa",
+    display: "50.000 Pa"
+  };
+  const same = compareDbAndAi(dbMatch, { keys: [], texts: ["50000 Pa"], display: "50000 Pa" }, { options: [] });
+  assert.equal(same.status, "match");
+});

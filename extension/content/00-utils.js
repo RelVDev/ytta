@@ -17,7 +17,7 @@
     apiBase: "",
     token: "",
     lang: "auto",
-    harborModel: "deepseek-v4.1-flash-1017",
+    harborModel: "deepseek-v4.1-flash",
     geminiModel: "gemini-3.8-flash",
     answerProvider: "harbor",
     imageToText: false,

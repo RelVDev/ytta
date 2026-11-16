@@ -252,6 +252,23 @@ test("prepareHebatQuestionAsync fallback ke fetch ber-cookie saat canvas gagal",
   }
 });
 
+test("parseHebatQuestion memprioritaskan gambar soal utama dalam batas 4 gambar", () => {
+  const block = document.createElement("div");
+  block.className = "que multichoice";
+  block.innerHTML = `
+    <div class="qtext">Soal utama <img src="https://hebat.elearning.unair.ac.id/pluginfile.php/1/q.png"></div>
+    <div class="answer">
+      <div><input type="radio" id="o1" name="o"><label for="o1"><img src="https://hebat.elearning.unair.ac.id/pluginfile.php/1/a.png"> A</label></div>
+      <div><input type="radio" id="o2" name="o"><label for="o2"><img src="https://hebat.elearning.unair.ac.id/pluginfile.php/1/b.png"> B</label></div>
+      <div><input type="radio" id="o3" name="o"><label for="o3"><img src="https://hebat.elearning.unair.ac.id/pluginfile.php/1/c.png"> C</label></div>
+      <div><input type="radio" id="o4" name="o"><label for="o4"><img src="https://hebat.elearning.unair.ac.id/pluginfile.php/1/d.png"> D</label></div>
+    </div>`;
+  const parsed = global.FormHelperParser.parseQuestion(block);
+  assert.equal(parsed.images.length, 1);
+  assert.equal(parsed.options.filter((o) => o.image).length, 3);
+  assert.equal(parsed.imagesTruncated, true);
+});
+
 test("shortcut dinamis Mode Pembahasan dan kontrol menu (?) HEBAT bekerja", async () => {
   const originalAttachShadow = dom.window.Element.prototype.attachShadow;
   dom.window.Element.prototype.attachShadow = function attachShadowForTest(options) {

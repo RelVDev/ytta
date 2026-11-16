@@ -4,8 +4,8 @@
   const utils = global.FormHelperUtils;
   const { api, getSettings, sendMessage, DEFAULTS } = utils;
   const HARBOR_MODELS = [
-    ["deepseek-v4.1-flash-1017", "DeepSeek V4.1 Flash 1017"],
     ["deepseek-v4.1-flash", "DeepSeek V4.1 Flash"],
+    ["deepseek-v4.1-flash-1017", "DeepSeek V4.1 Flash 1017"],
     ["claude-haiku-5.5", "Claude Haiku 5.5"],
     ["muse-ember", "Muse Ember"],
     ["gpt-6-luna", "GPT-6 Luna"],
@@ -156,13 +156,20 @@
       await api.storage.local.set({ dbSelected: cachedDbSelected });
     });
     item.addEventListener("click", async (event) => {
-      if (event.target === select) return;
+      if (select.contains(event.target)) return;
       cacheEpoch += 1;
       const next = !cachedDbModeEnabled;
       cachedDbModeEnabled = next;
       refreshFooterModeControls();
       await api.storage.local.set({ dbModeEnabled: next });
       showToast(`Mode DB: ${next ? "Aktif" : "Nonaktif"}`);
+    });
+    item.addEventListener("keydown", (event) => {
+      if (select.contains(event.target)) return;
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        item.click();
+      }
     });
     item.addEventListener("mouseenter", () => { item.style.backgroundColor = "rgba(60,64,67,.08)"; });
     item.addEventListener("mouseleave", () => { item.style.backgroundColor = "transparent"; });

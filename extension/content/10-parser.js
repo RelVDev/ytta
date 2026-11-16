@@ -212,7 +212,7 @@
     }
     if (["multiple_choice", "checkbox", "dropdown"].includes(type) && !options.length) return null;
     const optionImages = options.filter((option) => option.image).length;
-    const allowedQuestionImages = questionImages.slice(0, Math.max(0, 4 - optionImages));
+    const allowedQuestionImages = questionImages.slice(0, 4);
     const optionBudget = Math.max(0, 4 - allowedQuestionImages.length);
     let usedOptionImages = 0;
     options = options.map((option) => {
@@ -449,8 +449,12 @@
         const label = moodleInputLabel(input);
         return label?.querySelector("img") || null;
       });
-    prepared.options = await Promise.all(question.options.map(async (option) => {
-      if (!option.image) return option;
+    prepared.options = [];
+    for (const option of question.options) {
+      if (!option.image) {
+        prepared.options.push(option);
+        continue;
+      }
       const optionIndex = option.key.charCodeAt(0) - 65;
       const img = inputImages[optionIndex];
       await waitForImageReady(img);
@@ -459,18 +463,67 @@
       if (!captured) captured = await fetchHebatImageFallback(img, remaining);
       if (!captured || (captured.base64 && totalImageBytes + captured.base64.length > maxTotalBase64)) {
         truncated = true;
-        return { ...option, image: null };
+        prepared.options.push({ ...option, image: null });
+        continue;
       }
       if (captured.base64) totalImageBytes += captured.base64.length;
-      return { ...option, image: captured };
-    }));
+      prepared.options.push({ ...option, image: captured });
+    }
     prepared.imagesTruncated = truncated;
     return prepared;
+  }
+
+  function parseInlineDataImage(url) {
+    const match = String(url || "").match(/^data:(image\/(?:png|jpeg|gif|webp));base64,([A-Za-z0-9+/=]+)$/i);
+    if (!match || match[2].length > 1_400_000) return null;
+    return { mimeType: match[1].toLowerCase(), base64: match[2], url: null };
+  }
+
+  async function resolveInlineGoogleImage(block, image) {
+    if (!image || image.base64 || !image.url) return image;
+    if (!/^(?:data|blob):/i.test(image.url)) return image;
+    const inline = parseInlineDataImage(image.url);
+    if (inline) return inline;
+    const img = [...block.querySelectorAll("img")].find((el) => (el.currentSrc || el.src) === image.url);
+    if (img) {
+      await waitForImageReady(img);
+      const captured = captureRenderedImage(img, 1_400_000) || await fetchHebatImageFallback(img, 1_400_000);
+      if (captured) return captured;
+    }
+    return null;
+  }
+
+  async function prepareGoogleQuestionAsync(block, question) {
+    let truncated = question.imagesTruncated;
+    const images = [];
+    for (const img of question.images || []) {
+      const resolved = await resolveInlineGoogleImage(block, img);
+      if (resolved) images.push(resolved);
+      else truncated = true;
+    }
+    const options = [];
+    for (const option of question.options || []) {
+      if (!option.image) {
+        options.push(option);
+        continue;
+      }
+      const resolved = await resolveInlineGoogleImage(block, option.image);
+      if (!resolved) truncated = true;
+      options.push({ ...option, image: resolved });
+    }
+    return { ...question, images, options, imagesTruncated: truncated };
   }
 
   function getQuestionBlocks(platform = "google") {
     return [...document.querySelectorAll(platform === "hebat" ? "#responseform .que" : SELECTORS.questionBlocks)];
   }
 
-  global.FormHelperParser = { SELECTORS, parseQuestion, getQuestionBlocks, prepareHebatQuestion, prepareHebatQuestionAsync };
+  global.FormHelperParser = {
+    SELECTORS,
+    parseQuestion,
+    getQuestionBlocks,
+    prepareHebatQuestion,
+    prepareHebatQuestionAsync,
+    prepareGoogleQuestionAsync
+  };
 })(globalThis);

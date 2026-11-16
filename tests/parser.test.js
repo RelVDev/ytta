@@ -48,3 +48,19 @@ test("parser memisahkan gambar soal dan gambar opsi", () => {
   assert.match(parsed.images[0].url, /question\.png$/);
   assert.match(parsed.options[0].image.url, /option\.png$/);
 });
+
+test("prepareGoogleQuestionAsync mengonversi gambar data URI menjadi base64 inline", async () => {
+  const dom = new JSDOM(`<!doctype html><html><body><div role="listitem" id="dataq">
+    <div role="heading">Perhatikan gambar</div>
+    <img src="data:image/png;base64,iVBORw0KGgo=" width="100" height="80">
+    <div role="radio" aria-label="A"></div>
+  </div></body></html>`);
+  const block = dom.window.document.getElementById("dataq");
+  const parsed = global.FormHelperParser.parseQuestion(block);
+  const prepared = await global.FormHelperParser.prepareGoogleQuestionAsync(block, parsed);
+  assert.equal(prepared.images.length, 1);
+  assert.equal(prepared.images[0].url, null);
+  assert.equal(prepared.images[0].mimeType, "image/png");
+  assert.equal(prepared.images[0].base64, "iVBORw0KGgo=");
+  dom.window.close();
+});
