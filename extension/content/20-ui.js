@@ -177,6 +177,14 @@
     menu.append(item);
   }
 
+  function setTextIfChanged(el, next) {
+    if (el && el.textContent !== next) el.textContent = next;
+  }
+
+  function setAttrIfChanged(el, name, next) {
+    if (el && el.getAttribute(name) !== next) el.setAttribute(name, next);
+  }
+
   function syncHelpMenu() {
     if (!settingsActions) return;
     for (const menu of document.querySelectorAll('[role="menu"]')) {
@@ -192,24 +200,31 @@
   }
 
   function refreshFooterModeControls() {
+    const pembText = `Pembahasan: ${cachedPembahasanMode ? "ON" : "OFF"}`;
+    const pembTitle = `Toggle Mode Pembahasan · ${cachedShortcut}`;
+    const pembPressed = cachedPembahasanMode ? "true" : "false";
+    const dbText = `Mode DB: ${cachedDbModeEnabled ? "ON" : "OFF"}`;
+    const dbPressed = cachedDbModeEnabled ? "true" : "false";
+    const dbDisabled = !cachedDbModeEnabled;
+
     for (const btn of document.querySelectorAll('[data-form-helper-menu-item="hebat-pembahasan"]')) {
-      btn.textContent = `Pembahasan: ${cachedPembahasanMode ? "ON" : "OFF"}`;
-      btn.title = `Toggle Mode Pembahasan · ${cachedShortcut}`;
-      btn.setAttribute("aria-pressed", cachedPembahasanMode ? "true" : "false");
+      setTextIfChanged(btn, pembText);
+      if (btn.title !== pembTitle) btn.title = pembTitle;
+      setAttrIfChanged(btn, "aria-pressed", pembPressed);
     }
     for (const item of document.querySelectorAll('[data-form-helper-menu-item="google-pembahasan"] span')) {
-      item.textContent = `Pembahasan: ${cachedPembahasanMode ? "ON" : "OFF"}`;
+      setTextIfChanged(item, pembText);
     }
     for (const btn of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-toggle"]')) {
-      btn.textContent = `Mode DB: ${cachedDbModeEnabled ? "ON" : "OFF"}`;
-      btn.setAttribute("aria-pressed", cachedDbModeEnabled ? "true" : "false");
+      setTextIfChanged(btn, dbText);
+      setAttrIfChanged(btn, "aria-pressed", dbPressed);
     }
     for (const label of document.querySelectorAll('[data-form-helper-menu-item="google-db-label"]')) {
-      label.textContent = `Mode DB: ${cachedDbModeEnabled ? "ON" : "OFF"}`;
+      setTextIfChanged(label, dbText);
     }
     for (const select of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-select"], [data-form-helper-menu-item="google-db-select"]')) {
-      select.value = cachedDbSelected;
-      select.disabled = !cachedDbModeEnabled;
+      if (select.value !== cachedDbSelected) select.value = cachedDbSelected;
+      if (select.disabled !== dbDisabled) select.disabled = dbDisabled;
     }
   }
 

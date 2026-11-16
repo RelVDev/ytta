@@ -116,6 +116,17 @@ test("Google Forms mendukung menu Mode Pembahasan, Mode DB, shortcut dinamis, da
     const menu = dom.window.document.querySelector('[role="menu"]');
     assert.ok(menu.querySelector('[data-form-helper-menu-item="model-picker"]'));
     assert.ok(menu.querySelector('[data-form-helper-menu-item="google-pembahasan"]'));
+
+    let repeatedMutations = 0;
+    const loopGuardObserver = new dom.window.MutationObserver((records) => {
+      repeatedMutations += records.length;
+    });
+    loopGuardObserver.observe(menu, { childList: true, subtree: true, characterData: true, attributes: true });
+    global.FormHelperUI.syncHelpMenu();
+    global.FormHelperUI.syncHelpMenu();
+    await new Promise((r) => setTimeout(r, 20));
+    loopGuardObserver.disconnect();
+    assert.equal(repeatedMutations, 0, "syncHelpMenu tidak boleh memicu mutasi DOM berulang saat state tidak berubah");
     const dbSelect = menu.querySelector('[data-form-helper-menu-item="google-db-select"]');
     const dbItem = menu.querySelector('[data-form-helper-menu-item="google-db"]');
     assert.ok(dbSelect && dbSelect.disabled === true);

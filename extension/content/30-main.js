@@ -197,23 +197,25 @@
     return scanPromise;
   }
 
+  function isOwnExtensionNode(node) {
+    const el = node?.nodeType === Node.ELEMENT_NODE ? node : node?.parentElement;
+    return Boolean(el?.closest?.(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]"));
+  }
+
   function startObserver(scanSupportedPage = true) {
     const target = document.documentElement || document.body;
     observer = new MutationObserver((records) => {
-      global.FormHelperUI.syncHelpMenu();
       const external = records.some((record) => {
+        if (isOwnExtensionNode(record.target)) return false;
         if (record.type === "childList") {
           const changedNodes = [...record.addedNodes, ...record.removedNodes];
-          return changedNodes.some((node) => {
-            if (node.nodeType !== Node.ELEMENT_NODE) return true;
-            return !node.matches(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]")
-              && !node.closest(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]");
-          });
+          return changedNodes.some((node) => !isOwnExtensionNode(node));
         }
-        const targetNode = record.target.nodeType === Node.ELEMENT_NODE ? record.target : record.target.parentElement;
-        return !targetNode?.closest(".fh-ui-host, .fh-question-host, .fh-answer-host, [data-form-helper-menu-item]");
+        return true;
       });
-      if (external && scanSupportedPage) scheduleScan();
+      if (!external) return;
+      global.FormHelperUI.syncHelpMenu();
+      if (scanSupportedPage) scheduleScan();
     });
     observer.observe(target, {
       childList: true,
