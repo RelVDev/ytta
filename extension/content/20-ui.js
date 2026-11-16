@@ -56,9 +56,12 @@
       host.className = "fh-ui-host";
       document.documentElement.append(host);
       const root = host.attachShadow({ mode: "closed" });
+      const toastCss = isHebatHost()
+        ? "border:1px solid #8bbcc4;background:#cce6ea;color:#163036;"
+        : "border:1px solid #dadce0;border-left:4px solid #673ab7;background:#ffffff;color:#202124;";
       addStyle(root, `
         :host { all: initial; }
-        .toast { position: fixed; right: 16px; bottom: 72px; z-index: 2147483647; padding: 9px 14px; border-radius: 10px; border: 1px solid #8bbcc4; background: #cce6ea; color: #163036; font: 600 13px/1.35 system-ui, sans-serif; box-shadow: 0 4px 16px #0003; transition: opacity .2s ease; }
+        .toast { position: fixed; right: 16px; bottom: 72px; z-index: 2147483647; padding: 9px 14px; border-radius: 10px; ${toastCss} font: 600 13px/1.35 system-ui, sans-serif; box-shadow: 0 4px 16px #0003; transition: opacity .2s ease; }
         .toast[hidden] { display: none; }
       `);
       const box = document.createElement("div");
@@ -129,14 +132,56 @@
     menu.append(item);
   }
 
+  function addGoogleDbMenuItem(menu) {
+    if (menu.querySelector('[data-form-helper-menu-item="google-db"]')) return;
+    const nativeItem = menu.querySelector('[role="menuitem"]');
+    const item = document.createElement("li");
+    item.className = nativeItem?.className || "";
+    item.setAttribute("role", "menuitem");
+    item.setAttribute("tabindex", "-1");
+    item.dataset.formHelperMenuItem = "google-db";
+    item.style.cssText = "display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:0 16px;cursor:pointer;color:inherit;font:400 14px/20px Roboto,Arial,sans-serif;list-style:none;";
+    const label = document.createElement("span");
+    label.dataset.formHelperMenuItem = "google-db-label";
+    const select = document.createElement("select");
+    select.setAttribute("aria-label", "Pilih database soal");
+    select.dataset.formHelperMenuItem = "google-db-select";
+    select.style.cssText = "padding:3px 6px;font-size:12px;border:1px solid #dadce0;border-radius:6px;background:#fff;color:#202124;";
+    fillModelOptions(select, DB_OPTIONS, cachedDbSelected);
+    select.addEventListener("click", (event) => event.stopPropagation());
+    select.addEventListener("change", async (event) => {
+      event.stopPropagation();
+      cacheEpoch += 1;
+      cachedDbSelected = select.value;
+      await api.storage.local.set({ dbSelected: cachedDbSelected });
+    });
+    item.addEventListener("click", async (event) => {
+      if (event.target === select) return;
+      cacheEpoch += 1;
+      const next = !cachedDbModeEnabled;
+      cachedDbModeEnabled = next;
+      refreshFooterModeControls();
+      await api.storage.local.set({ dbModeEnabled: next });
+      showToast(`Mode DB: ${next ? "Aktif" : "Nonaktif"}`);
+    });
+    item.addEventListener("mouseenter", () => { item.style.backgroundColor = "rgba(60,64,67,.08)"; });
+    item.addEventListener("mouseleave", () => { item.style.backgroundColor = "transparent"; });
+    item.append(label, select);
+    menu.append(item);
+  }
+
   function syncHelpMenu() {
     if (!settingsActions) return;
     for (const menu of document.querySelectorAll('[role="menu"]')) {
       if (!isGoogleHelpMenu(menu)) continue;
       addHelpMenuItem(menu, "load-page", "Muat soal halaman ini", settingsActions.loadPage);
+      addHelpMenuItem(menu, "model-picker", "Ganti model", () => modelPickerActions?.open());
+      addHelpMenuItem(menu, "google-pembahasan", `Pembahasan: ${cachedPembahasanMode ? "ON" : "OFF"}`, () => togglePembahasanMode(true));
+      addGoogleDbMenuItem(menu);
       addHelpMenuItem(menu, "settings", "Pengaturan Form Helper", settingsActions.openSettings);
     }
     syncHebatFooterMenu();
+    refreshFooterModeControls();
   }
 
   function refreshFooterModeControls() {
@@ -145,11 +190,17 @@
       btn.title = `Toggle Mode Pembahasan · ${cachedShortcut}`;
       btn.setAttribute("aria-pressed", cachedPembahasanMode ? "true" : "false");
     }
+    for (const item of document.querySelectorAll('[data-form-helper-menu-item="google-pembahasan"] span')) {
+      item.textContent = `Pembahasan: ${cachedPembahasanMode ? "ON" : "OFF"}`;
+    }
     for (const btn of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-toggle"]')) {
       btn.textContent = `Mode DB: ${cachedDbModeEnabled ? "ON" : "OFF"}`;
       btn.setAttribute("aria-pressed", cachedDbModeEnabled ? "true" : "false");
     }
-    for (const select of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-select"]')) {
+    for (const label of document.querySelectorAll('[data-form-helper-menu-item="google-db-label"]')) {
+      label.textContent = `Mode DB: ${cachedDbModeEnabled ? "ON" : "OFF"}`;
+    }
+    for (const select of document.querySelectorAll('[data-form-helper-menu-item="hebat-db-select"], [data-form-helper-menu-item="google-db-select"]')) {
       select.value = cachedDbSelected;
       select.disabled = !cachedDbModeEnabled;
     }
@@ -284,7 +335,7 @@
     if (hebatShortcutInstalled) return;
     hebatShortcutInstalled = true;
     document.addEventListener("keydown", (event) => {
-      if (isHebatHost() && utils.eventMatchesShortcut && utils.eventMatchesShortcut(event, cachedShortcut)) {
+      if (utils.eventMatchesShortcut && utils.eventMatchesShortcut(event, cachedShortcut)) {
         const activeHost = document.activeElement?.id === "fh-settings-host";
         if (!activeHost) {
           event.preventDefault();
@@ -400,7 +451,7 @@
       <label class="toggle"><input id="onlyHarbor" type="checkbox"> Nonaktifkan fallback Gemini AI</label>
       <p class="note">Saat aktif, Gemini tidak dipanggil ketika model jawaban gagal.</p>
       <div class="group">
-        <label class="toggle"><input id="pembahasanMode" type="checkbox"> Aktifkan Mode Pembahasan (HEBAT)</label>
+        <label class="toggle"><input id="pembahasanMode" type="checkbox"> Aktifkan Mode Pembahasan</label>
         <label for="pembahasanShortcut">Shortcut Mode Pembahasan</label>
         <div class="shortcut-row">
           <input id="pembahasanShortcut" type="text" readonly title="Klik lalu tekan kombinasi tombol (mis. Alt+Shift+P)">
@@ -409,7 +460,7 @@
         <p class="note">Klik kotak shortcut lalu tekan kombinasi tombol (wajib memakai Alt, Ctrl, atau Meta) untuk toggle dinamis.</p>
       </div>
       <div class="group">
-        <label class="toggle"><input id="dbModeEnabled" type="checkbox"> Aktifkan Mode DB (HEBAT)</label>
+        <label class="toggle"><input id="dbModeEnabled" type="checkbox"> Aktifkan Mode DB</label>
         <label for="dbSelected">Pilih Database Soal</label><select id="dbSelected"></select>
         <p class="note">Mencocokkan soal ke database lokal lalu membandingkan hasilnya dengan jawaban AI.</p>
       </div>
@@ -662,13 +713,14 @@
   }
 
   function mountAnswerHost(block, panelHost, platform) {
+    panelHost.style.cssText = "display:block;clear:both;width:100%;";
     if (platform === "hebat" || block.matches?.(".que")) {
-      panelHost.style.cssText = "display:block;clear:both;width:100%;";
       const container = block.querySelector(".formulation") || block.querySelector(".content") || block;
       container.append(panelHost);
       return;
     }
-    block.insertAdjacentElement("afterend", panelHost);
+    const gformCard = block.querySelector(".geS5n") || block;
+    gformCard.append(panelHost);
   }
 
   function isolatePanelHost(panelHost) {
@@ -828,7 +880,7 @@
         const panelRoot = panelHost.attachShadow({ mode: "closed" });
         const cardStyle = isHebat
           ? `margin:12px 0 0;padding:10px 12px;border:1px solid #96c3ca;border-top:2px solid #75aeb8;border-radius:8px;background:#cce6ea;color:#163036;font-size:14px;line-height:1.45`
-          : `margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45`;
+          : `margin:12px 0 0;padding:10px 12px;border:1px solid #dadce0;border-top:2px solid #673ab7;border-radius:8px;background:#ffffff;color:#202124;font-size:14px;line-height:1.45`;
         addStyle(panelRoot, `*{box-sizing:border-box;font-family:system-ui,sans-serif}.card{${cardStyle};display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.error{color:#b42318}.close{flex:0 0 auto;width:28px;height:28px;border:0;border-radius:6px;background:rgba(0,0,0,.07);color:inherit;font-size:18px;line-height:1;cursor:pointer;display:inline-grid;place-items:center}.close:hover{background:rgba(0,0,0,.14)}`);
         const card = document.createElement("div"); card.className = `card${isError ? " error" : ""}`;
         const text = document.createElement("span"); text.textContent = message;
@@ -845,8 +897,8 @@
         isolatePanelHost(panelHost);
         const panelRoot = panelHost.attachShadow({ mode: "closed" });
         const cardCss = isHebat
-          ? `.card{margin:12px 0 0;padding:12px 14px;border:1px solid #96c3ca;border-top:2px solid #75aeb8;border-radius:8px;background:#cce6ea;color:#163036;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.top-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}.top-actions button{border:0;border-radius:6px;background:rgba(22,48,54,.09);color:#163036;padding:4px 9px;cursor:pointer;font-size:12px;font-weight:600}.top-actions button:hover{background:rgba(22,48,54,.17)}.top-actions .close-btn{width:28px;height:28px;padding:0;font-size:18px;line-height:1;display:inline-grid;place-items:center}`
-          : `.card{margin:6px 0;padding:12px 14px;border:1px solid #8893a5;border-radius:11px;background:Canvas;color:CanvasText;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.top-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}.top-actions button{border:0;border-radius:6px;background:color-mix(in srgb,CanvasText 10%,Canvas);color:inherit;padding:4px 9px;cursor:pointer;font-size:12px}.top-actions .close-btn{width:26px;height:26px;padding:0;font-size:17px;line-height:1;display:inline-grid;place-items:center}`;
+          ? `.card{margin:12px 0 0;padding:12px 14px;border:1px solid #96c3ca;border-top:2px solid #75aeb8;border-radius:8px;background:#cce6ea;color:#163036;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.top-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}.top-actions button{border:0;border-radius:6px;background:rgba(22,48,54,.09);color:#163036;padding:4px 9px;cursor:pointer;font-size:12px;font-weight:600}.top-actions button:hover{background:rgba(22,48,54,.17)}.top-actions .close-btn{width:28px;height:28px;padding:0;font-size:18px;line-height:1;display:inline-grid;place-items:center}.disc-block{border-left:3px solid #63a4af;padding:4px 0 4px 10px;background:rgba(255,255,255,.26);border-radius:0 6px 6px 0}`
+          : `.card{margin:12px 0 0;padding:12px 14px;border:1px solid #dadce0;border-top:2px solid #673ab7;border-radius:8px;background:#ffffff;color:#202124;font-family:Roboto,Arial,sans-serif;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.top-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}.top-actions button{border:0;border-radius:6px;background:#f1f3f4;color:#202124;padding:4px 9px;cursor:pointer;font-size:12px;font-weight:600}.top-actions button:hover{background:#e2e5e8}.top-actions .close-btn{width:28px;height:28px;padding:0;font-size:18px;line-height:1;display:inline-grid;place-items:center}.disc-block{border-left:3px solid #673ab7;padding:4px 0 4px 10px;background:#f8f5fc;border-radius:0 6px 6px 0}`;
         addStyle(panelRoot, `
           *{box-sizing:border-box;font-family:system-ui,sans-serif}
           ${cardCss}
@@ -861,7 +913,6 @@
           .meta{margin-top:6px;font-size:12px;opacity:.82;line-height:1.45}
           .discussion{margin-top:10px;padding-top:10px;border-top:1px solid rgba(22,48,54,.2);font-size:13px;line-height:1.55;display:grid;gap:7px}
           .discussion-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;opacity:.75}
-          .disc-block{border-left:3px solid #63a4af;padding:4px 0 4px 10px;background:rgba(255,255,255,.26);border-radius:0 6px 6px 0}
           .disc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;opacity:.78;margin-bottom:2px}
           .disc-body{white-space:pre-wrap}
           .disc-final{margin-top:3px;font-weight:700}

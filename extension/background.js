@@ -10,7 +10,7 @@ const DB_FILES = {
   fisika: "db/fisika.json"
 };
 const IMAGE_HOST = /(^|\.)(googleusercontent\.com|ggpht\.com|gstatic\.com)$/i;
-const MAX_IMAGE_BYTES = 512 * 1024;
+const MAX_IMAGE_BYTES = 1536 * 1024;
 const IMAGE_FETCH_TIMEOUT_MS = 8000;
 const activeRequests = new Map();
 const cancelledRequests = new Set();

@@ -78,8 +78,8 @@
           answerProvider: settings.answerProvider === "groq" ? "groq" : "harbor",
           imageToText: settings.imageToText === true,
           disableGemini: settings.onlyHarbor === true,
-          pembahasanMode: isHebatQuizPage() && settings.pembahasanMode === true,
-          dbMode: isHebatQuizPage() && settings.dbModeEnabled === true,
+          pembahasanMode: settings.pembahasanMode === true,
+          dbMode: settings.dbModeEnabled === true,
           dbName: settings.dbSelected || "fisika",
           question
         }
@@ -232,7 +232,7 @@
   const hebatQuizRoute = isHebatQuizRoute();
   if (supportedPage || hebatQuizRoute) {
     global.FormHelperUI.initSettingsPanel();
-    if (hebatQuizRoute) global.FormHelperUI.initHebatSettingsShortcut();
+    global.FormHelperUI.initHebatSettingsShortcut();
     global.FormHelperUI.syncHelpMenu();
     if (supportedPage) {
       startObserver();

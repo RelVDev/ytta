@@ -51,3 +51,115 @@ test("scanner Google Forms menambahkan kontrol setelah pengguna pindah section",
     dom.window.close();
   }
 });
+
+test("Google Forms mendukung menu Mode Pembahasan, Mode DB, shortcut dinamis, dan kotak jawaban terintegrasi", async () => {
+  const dom = new JSDOM(`<!doctype html><html><body>
+    <ul role="menu" aria-label="Bantuan dan masukan"><li role="menuitem">Bantuan dan masukan</li></ul>
+    <form id="form">
+      <div role="listitem" id="q1">
+        <div class="geS5n">
+          <div role="heading">Tekanan hidrostatis pada kedalaman 5 m?</div>
+          <div role="radio" aria-label="50.000 Pa"></div>
+          <div role="radio" aria-label="100.000 Pa"></div>
+        </div>
+      </div>
+    </form>
+  </body></html>`, { url: "https://docs.google.com/forms/d/e/test-form/viewform" });
+
+  const previous = {
+    document: global.document,
+    location: global.location,
+    window: global.window,
+    chrome: global.chrome,
+    getComputedStyle: global.getComputedStyle,
+    FormHelperUtils: global.FormHelperUtils,
+    FormHelperUI: global.FormHelperUI
+  };
+  const attachShadow = dom.window.Element.prototype.attachShadow;
+  dom.window.Element.prototype.attachShadow = function attachOpenShadow() {
+    const root = attachShadow.call(this, { mode: "open" });
+    this.testShadowRoot = root;
+    return root;
+  };
+  const store = {
+    enabled: true, apiBase: "", token: "", lang: "auto",
+    harborModel: "deepseek-v4.1-flash-1017", geminiModel: "gemini-3.8-flash",
+    answerProvider: "harbor", imageToText: false, onlyHarbor: false,
+    pembahasanMode: false, pembahasanShortcut: "Alt+Shift+P",
+    dbModeEnabled: false, dbSelected: "fisika", dataConsentAccepted: true
+  };
+  const mockApi = {
+    storage: {
+      local: {
+        get: async (d) => ({ ...d, ...store }),
+        set: async (v) => { Object.assign(store, v); }
+      },
+      onChanged: { addListener() {} }
+    }
+  };
+  global.document = dom.window.document;
+  global.location = dom.window.location;
+  global.window = dom.window;
+  global.chrome = mockApi;
+  global.getComputedStyle = dom.window.getComputedStyle.bind(dom.window);
+
+  delete require.cache[require.resolve("../extension/content/00-utils.js")];
+  delete require.cache[require.resolve("../extension/content/20-ui.js")];
+  require("../extension/content/00-utils.js");
+  require("../extension/content/20-ui.js");
+
+  try {
+    global.FormHelperUI.initSettingsPanel();
+    global.FormHelperUI.initHebatSettingsShortcut();
+    global.FormHelperUI.syncHelpMenu();
+
+    const menu = dom.window.document.querySelector('[role="menu"]');
+    assert.ok(menu.querySelector('[data-form-helper-menu-item="model-picker"]'));
+    assert.ok(menu.querySelector('[data-form-helper-menu-item="google-pembahasan"]'));
+    const dbSelect = menu.querySelector('[data-form-helper-menu-item="google-db-select"]');
+    assert.ok(dbSelect && dbSelect.disabled === true);
+
+    const shortcut = new dom.window.KeyboardEvent("keydown", {
+      key: "P", code: "KeyP", altKey: true, shiftKey: true, bubbles: true, cancelable: true
+    });
+    dom.window.document.dispatchEvent(shortcut);
+    await new Promise((r) => setTimeout(r, 20));
+    assert.equal(shortcut.defaultPrevented, true);
+    assert.match(menu.querySelector('[data-form-helper-menu-item="google-pembahasan"]').textContent, /ON/);
+
+    const block = dom.window.document.querySelector("#q1");
+    const gformCard = block.querySelector(".geS5n");
+    const control = global.FormHelperUI.questionControl(block, () => {}, null, "google");
+    let formClicks = 0;
+    dom.window.document.querySelector("#form").addEventListener("click", () => { formClicks += 1; });
+
+    control.showAnswer({
+      answer: { display: "A. 50.000 Pa" },
+      confidence: 0.96,
+      explanation: "P = ρ × g × h.",
+      discussion: "Diketahui:\nh = 5 m\n\nDitanya:\nP?\n\nDijawab:\nP = 1000 × 10 × 5\nP = 50.000 Pa",
+      dbComparison: { status: "match", dbName: "Fisika Dasar", dbDisplay: "A. 50.000 Pa" }
+    }, "multiple_choice");
+
+    const answerHost = gformCard.querySelector(".fh-answer-host");
+    assert.ok(answerHost, "kotak jawaban Google Forms terpasang di dalam .geS5n");
+    assert.match(answerHost.testShadowRoot.querySelector("style").textContent, /#673ab7/);
+    assert.match(answerHost.testShadowRoot.textContent, /DB & AI Sama/);
+    assert.match(answerHost.testShadowRoot.textContent, /Diketahui/);
+
+    answerHost.testShadowRoot.querySelector(".close-btn").click();
+    assert.equal(gformCard.querySelector(".fh-answer-host"), null);
+    assert.ok(gformCard.querySelector('[role="heading"]'), "elemen soal Google Forms tetap utuh saat jawaban ditutup");
+    assert.equal(formClicks, 0, "klik tutup tidak membocorkan event ke form Google Forms");
+  } finally {
+    dom.window.Element.prototype.attachShadow = attachShadow;
+    dom.window.close();
+    global.document = previous.document;
+    global.location = previous.location;
+    global.window = previous.window;
+    global.chrome = previous.chrome;
+    global.getComputedStyle = previous.getComputedStyle;
+    global.FormHelperUtils = previous.FormHelperUtils;
+    global.FormHelperUI = previous.FormHelperUI;
+  }
+});
