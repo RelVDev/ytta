@@ -1,0 +1,376 @@
+﻿SOAL FISIKA
+Nama : Rima Nur Lathifah - Nim : 626108112009 
+
+
+Fluida
+
+
+1. Salah satu prinsip yang dikemukakan Archimedes berkaitan dengan benda yang dicelupkan ke dalam zat cair. Prinsip tersebut menjelaskan mengapa kapal yang terbuat dari logam tetap dapat mengapung di permukaan laut. Berdasarkan prinsip Archimedes, benda yang dicelupkan ke dalam fluida akan mengalami ....
+1. Gaya ke bawah yang besarnya selalu sama dengan berat benda.
+2. Gaya apung ke atas yang besarnya sama dengan berat fluida yang dipindahkan.
+3. Gaya gesek yang besarnya selalu sama dengan massa benda.
+4. Tekanan yang hanya bekerja pada bagian bawah benda.
+5. Gaya gravitasi yang berkurang hingga menjadi nol.
+Jawaban : B
+2. Air mengalir melalui pipa yang memiliki dua ukuran penampang berbeda. Jika luas penampang pipa besar 5 m² dan pipa kecil 2 m², sedangkan kecepatan air pada pipa besar 15 m/s, kecepatan air pada pipa kecil adalah .... 
+1. 15,0 m/s
+2. 22,5 m/s
+3. 30,0 m/s
+4. 37,5 m/s
+5. 45,0 m/s
+Jawaban : D
+3. Setiap material memiliki karakteristik yang dapat digunakan untuk membedakannya, salah satunya massa jenis. Dalam fisika, massa jenis merupakan .... 
+1. Besarnya gaya gravitasi yang bekerja pada setiap satuan volume benda.
+2. Perbandingan antara massa suatu benda dengan volume yang ditempatinya.
+3. Besarnya tekanan yang dihasilkan benda terhadap permukaan tempatnya berada.
+4. Perbandingan antara volume benda dengan gaya yang bekerja padanya.
+5. Jumlah energi yang dimiliki suatu benda dalam keadaan diam.
+Jawaban : B
+4. Dua titik A dan B berada di dalam sebuah kolam yang berisi air. Titik A berada pada kedalaman 2 meter, sedangkan titik B berada pada kedalaman 5 meter dari permukaan air. Jika massa jenis air dan percepatan gravitasi dianggap sama, hubungan tekanan hidrostatis pada kedua titik tersebut adalah …
+1. PA = PB karena berada dalam zat cair yang sama
+2. PA > PB karena titik A lebih dekat permukaan
+3. PA < PB karena titik B berada lebih dalam
+4. PA = 2PB karena kedalaman A lebih kecil
+5. PB = 2PA karena kedalaman B lebih besar
+Jawaban : C
+5. Seorang penyelam berada pada kedalaman 5 meter di bawah permukaan air. Jika massa jenis air 1.000 kg/m³ dan gravitasi 10 m/s², tekanan hidrostatis yang dialami penyelam adalah .... 
+1. 5.000 Pa
+2. 10.000 Pa
+3. 25.000 Pa
+4. 50.000 Pa
+5. 100.000 Pa
+Jawaban : D
+6. Prinsip Pascal menjadi dasar penggunaan berbagai alat hidrolik, seperti dongkrak dan rem mobil. Pernyataan yang sesuai dengan prinsip tersebut adalah .... 
+1. Tekanan pada fluida diam selalu berkurang ketika kedalaman bertambah.
+2. Tekanan yang diberikan pada fluida dalam ruang tertutup diteruskan sama besar ke segala arah.
+3. Benda yang dimasukkan ke dalam fluida akan mengalami gaya apung sebesar berat benda.
+4. Kecepatan fluida meningkat ketika luas penampang pipa semakin besar.
+5. Tekanan fluida hanya bekerja pada arah vertikal ke bawah.
+Jawaban : B
+7. Sebuah dongkrak hidrolik digunakan untuk mengangkat mobil dengan berat 12.000 N. Jika luas penampang kecil 10 cm² dan penampang besar 400 cm², gaya minimum yang diperlukan pada penampang kecil adalah .... 
+1. 200 N
+2. 250 N
+3. 300 N
+4. 350 N
+5. 400 N
+Jawaban : C
+8. Sebuah venturimeter digunakan untuk mengukur kecepatan aliran air dalam pipa horizontal. Luas penampang besar 5 cm² dan penampang kecil 3 cm². Jika perbedaan ketinggian air pada kedua tabung 20 cm dan gravitasi 10 m/s², kecepatan air pada penampang besar adalah .... 
+1. 0,5 m/s
+2. 1,0 m/s
+3. 1,5 m/s
+4. 2,0 m/s
+5. 2,5 m/s
+Jawaban : C
+9. Sebuah tangki mengalami kebocoran melalui lubang yang berada 5 meter di atas tanah. Air keluar secara horizontal dengan kecepatan 4 m/s. Jika gravitasi 10 m/s² dan hambatan udara diabaikan, jarak mendatar pancaran air hingga menyentuh tanah adalah .... 
+1. 1 meter
+2. 2 meter
+3. 3 meter
+4. 4 meter
+5. 5 meter
+Jawaban : D
+10. Air mengalir melalui pipa horizontal dengan luas penampang besar 8 cm² dan penampang kecil 4 cm². Jika kecepatan air pada pipa besar 2 m/s, tekanannya 100.000 Pa, dan massa jenis air 1.000 kg/m³, tekanan pada pipa kecil adalah ....  
+1. 80.000 Pa
+2. 84.000 Pa
+3. 90.000 Pa
+4. 94.000 Pa
+5. 98.000 Pa
+Jawaban : D
+Osilator Harmonik
+
+
+11. Gerak harmonik sederhana merupakan gerak bolak-balik secara periodik di sekitar titik keseimbangan. Salah satu karakteristik utamanya adalah hubungan antara gaya pemulih dan simpangan benda. Pernyataan yang tepat mengenai gerak harmonik sederhana adalah .... 
+
+
+1. Gaya pemulih searah dengan simpangan benda.
+2. Gaya pemulih berbanding lurus dengan simpangan dan berlawanan arah.
+3. Kecepatan benda selalu bernilai tetap selama berosilasi.
+4. Percepatan benda selalu bernilai nol di setiap posisi.
+5. Periode osilasi selalu bergantung pada amplitudo.
+Jawaban : B
+12. Sebuah benda bergerak bolak-balik secara teratur dan menyelesaikan beberapa getaran dalam selang waktu tertentu. Dalam gerak osilasi, periode dan frekuensi merupakan dua besaran yang saling berkaitan. Hubungan yang benar antara keduanya adalah .... 
+1. Frekuensi merupakan waktu yang dibutuhkan untuk satu getaran.
+2. Periode merupakan jumlah getaran dalam satu sekon.
+3. Periode berbanding lurus dengan frekuensi.
+4. Frekuensi merupakan kebalikan dari periode.
+5. Periode dan frekuensi tidak memiliki hubungan matematis.
+Jawaban : E
+13. Sebuah benda melakukan 40 getaran selama 20 sekon ketika digantungkan pada sebuah pegas. Berdasarkan gerakan tersebut, frekuensi dan periode osilasi benda secara berurutan adalah .... 
+1. 0,5 Hz dan 2 s.
+2. 1 Hz dan 1 s.
+3. 2 Hz dan 0,5 s.
+4. 4 Hz dan 0,25 s.
+5. 5 Hz dan 0,2 s.
+Jawaban : C
+14. Sebuah benda bermassa 2 kg digantungkan pada pegas vertikal sehingga pegas mengalami pertambahan panjang sebesar 20 cm ketika mencapai posisi keseimbangan. Jika percepatan gravitasi 10 m/s², konstanta pegas tersebut adalah .... 
+1. 25 N/m.
+2. 50 N/m.
+3. 75 N/m.
+4. 100 N/m.
+5. 200 N/m.
+Jawaban : D
+15. Sebuah sistem pegas mengalami osilasi akibat pengaruh gaya luar yang bekerja secara periodik. Ketika frekuensi gaya luar sama dengan frekuensi alami sistem, dapat terjadi fenomena resonansi. Kondisi tersebut menyebabkan .... 
+1. Amplitudo osilasi menjadi sangat kecil.
+2. Sistem kehilangan seluruh energi mekaniknya secara langsung.
+3. Frekuensi alami sistem menjadi nol.
+4. Amplitudo osilasi mencapai nilai maksimum dalam kondisi resonansi ideal.
+5. Benda berhenti bergerak karena gaya luar menghilang.
+Jawaban: D 
+16. Dua buah bandul sederhana memiliki panjang tali yang sama dan berada di tempat dengan percepatan gravitasi yang sama. Bandul pertama memiliki massa 100 gram, sedangkan bandul kedua memiliki massa 500 gram. Jika keduanya berayun dengan simpangan kecil, pernyataan yang tepat adalah .... 
+1. Bandul kedua memiliki periode lebih besar karena massanya lebih berat.
+2. Bandul pertama memiliki frekuensi lebih besar karena massanya lebih ringan.
+3. Kedua bandul memiliki periode dan frekuensi yang sama.
+4. Periode kedua bandul bergantung pada besar massa masing-masing.
+5. Bandul kedua membutuhkan waktu dua kali lebih lama untuk satu ayunan.
+Jawaban: C 
+17. Sebuah bandul sederhana memiliki panjang tali 40 meter. Jika percepatan gravitasi di tempat tersebut sebesar 10 m/s², periode ayunan bandul adalah .... 
+1. 0,4π sekon
+2. 0,8π sekon
+3. 1,2π sekon
+4. 1,6π sekon
+5. 2π sekon 
+Jawaban: A
+18. Dalam kehidupan sehari-hari, suatu benda yang berosilasi dapat mengalami penurunan amplitudo akibat adanya gaya hambat atau gesekan. Fenomena tersebut dikenal sebagai osilasi teredam. Pernyataan yang tepat mengenai osilasi teredam adalah .... 
+1. Amplitudo osilasi semakin besar seiring bertambahnya waktu.
+2. Energi mekanik osilasi selalu konstan.
+3. Amplitudo osilasi berkurang terhadap waktu akibat gaya hambat.
+4. Frekuensi osilasi selalu meningkat hingga tak terhingga.
+5. Benda terus berosilasi tanpa mengalami kehilangan energi.
+Jawaban: C 
+
+
+19. Sebuah benda bermassa 2 kg dihubungkan dengan pegas dan melakukan gerak harmonik sederhana. Jika amplitudo osilasinya 10 cm dan periode geraknya 1 sekon, energi mekanik total yang dimiliki benda adalah .... 
+1. 0,10 J
+2. 0,20 J
+3. 0,30 J
+4. 0,40 J
+5. 0,50 J 
+
+
+Jawaban: D 
+
+
+20. Suatu pegas memiliki konstanta pegas sebesar 200 N/m dan bergerak secara vertikal dengan simpangan maksimum 10 cm. Jika beban pegas berada pada posisi 3 cm di atas titik setimbang, besar dan arah gaya pemulih pada pegas tersebut adalah .... 
+
+
+1. 3 N ke atas
+2. 3 N ke bawah
+3. 6 N ke atas
+4. 6 N ke bawah
+5. 10 N ke bawah 
+
+
+Jawaban: D 
+
+
+Gelombang Mekanik
+
+
+21. Sebuah sumber bunyi memancarkan suara dengan frekuensi 500 Hz. Pada saat yang sama, seorang pengamat bergerak mendekati sumber bunyi yang berada dalam keadaan diam. Berdasarkan konsep efek Doppler, frekuensi bunyi yang diterima pengamat akan ....
+1. Lebih rendah dari 500 Hz
+2. Tetap 500 Hz
+3. Lebih tinggi dari 500 Hz
+4. Menjadi nol
+5. Tidak mengalami perubahan sama sekali
+Jawaban: C
+22.  Ketika sebuah tali digetarkan ke atas dan ke bawah, gelombang merambat sepanjang tali secara horizontal. Berdasarkan arah getaran medium terhadap arah rambatnya, gelombang tersebut termasuk .... 
+
+
+1. Gelombang longitudinal
+2. Gelombang transversal
+3. Gelombang bunyi
+4. Gelombang elektromagnetik
+5. Gelombang stasioner 
+
+
+Jawaban: B
+
+
+23. Dalam pengamatan gelombang, jumlah getaran yang terjadi dalam satu sekon digunakan untuk menentukan salah satu karakteristik gelombang. Besaran tersebut dikenal sebagai .... 
+
+
+1. Amplitudo
+2. Panjang gelombang
+3. Frekuensi
+4. Periode
+5. Simpangan 
+
+
+Jawaban: C
+
+
+24. Dua gelombang yang merambat pada medium yang sama bertemu dan saling berpadu. Peristiwa perpaduan gelombang tersebut dikenal sebagai .... 
+
+
+1. Refleksi
+2. Refraksi
+3. Superposisi
+4. Dispersi
+5. Polarisasi 
+
+
+Jawaban: C
+
+
+25. Sebuah gelombang transversal merambat pada tali dan dinyatakan melalui persamaan:
+
+
+
+dengan  dan  dalam meter serta  dalam sekon. Berdasarkan persamaan tersebut, perhatikan pernyataan berikut!
+1. Amplitudo gelombang sebesar 0,04 m.
+2. Frekuensi gelombang sebesar 2 Hz.
+3. Panjang gelombang sebesar 10 m.
+4. Cepat rambat gelombang sebesar 20 m/s.
+Pernyataan yang benar ditunjukkan oleh .... 
+1. (1), (2), dan (3) saja
+2. (1) dan (3) saja
+3. (2) dan (4) saja
+4. (4) saja
+5. (1), (2), (3), dan (4) 
+Jawaban: E
+
+
+26. Dalam suatu percobaan, mahasiswa menghasilkan gelombang pada tali dengan frekuensi 5 Hz dan panjang gelombang 4 meter. Berdasarkan kedua besaran tersebut, cepat rambat gelombang pada tali adalah .... 
+
+
+1. 5 m/s
+2. 10 m/s
+3. 15 m/s
+4. 20 m/s
+5. 25 m/s 
+
+
+Jawaban: D
+
+27. Sebuah tali diberi tegangan sebesar 100 N dan memiliki massa per satuan panjang sebesar 1 kg/m. Ketika tali digetarkan, gelombang merambat sepanjang tali tersebut. Besar cepat rambat gelombang yang dihasilkan adalah .... 
+
+
+1. 5 m/s
+2. 10 m/s
+3. 15 m/s
+4. 20 m/s
+5. 25 m/s 
+
+
+Jawaban: B
+
+
+28. Sebuah sumber getaran menghasilkan 20 gelombang selama 5 sekon. Berdasarkan hasil pengamatan tersebut, frekuensi gelombang yang dihasilkan sumber getaran adalah .... 
+
+
+1. 2 Hz
+2. 3 Hz
+3. 4 Hz
+4. 5 Hz
+5. 10 Hz 
+
+
+Jawaban: C
+
+
+29. Sebuah gelombang harmonik merambat dengan panjang gelombang 2 meter. Jika bilangan gelombang ditentukan menggunakan hubungan antara panjang gelombang dan konstanta , nilai bilangan gelombangnya adalah .... 
+________________
+1. 1,57 rad/m
+2. 2,14 rad/m
+3. 3,14 rad/m
+4. 4,14 rad/m
+5. 6,28 rad/m 
+
+
+Jawaban: C
+
+
+30. Sebuah gelombang yang merambat pada suatu medium memiliki frekuensi sebesar 4 Hz. Untuk mengetahui waktu yang diperlukan gelombang dalam menyelesaikan satu getaran penuh, periode gelombang tersebut adalah .... 
+1. 0,1 sekon
+2. 0,2 sekon
+3. 0,25 sekon
+4. 0,5 sekon
+5. 1 sekon 
+
+
+Jawaban: C
+
+
+Suhu
+
+
+31. Dalam kehidupan sehari-hari, seseorang sering menggunakan termometer untuk mengetahui kondisi panas atau dinginnya suatu benda. Besaran fisika yang diukur menggunakan alat tersebut adalah ....  
+1. Kalor
+2. Suhu
+3. Energi potensial
+4. Massa jenis
+5. Tekanan
+ 
+Jawaban: B
+
+
+32. Seorang mahasiswa memasukkan dua benda dengan suhu berbeda ke dalam suatu wadah yang terisolasi. Setelah beberapa waktu, suhu kedua benda menjadi sama dan tidak terjadi perpindahan kalor bersih. Kondisi tersebut menunjukkan bahwa kedua benda telah mencapai .... 
+1. Pemuaian termal
+2. Perubahan wujud
+3. Kesetimbangan termal
+4. Kesetimbangan mekanik
+5. Kesetimbangan kimia 
+
+
+Jawaban: C
+
+
+33. Terdapat tiga benda, yaitu A, B, dan C. Benda A berada dalam kesetimbangan termal dengan benda C, sedangkan benda B juga berada dalam kesetimbangan termal dengan benda C. Berdasarkan Hukum ke-Nol Termodinamika, hubungan antara benda A dan B adalah .... 
+1. Suhu A lebih tinggi daripada B
+2. Suhu A lebih rendah daripada B
+3. Suhu A dan B sama
+4. Massa A dan B sama
+5. Volume A dan B sama
+
+
+ Jawaban: C
+
+
+34. Dalam pengukuran suhu, terdapat beberapa skala yang digunakan secara internasional. Di antara skala Celsius, Fahrenheit, Reamur, dan Kelvin, skala yang termasuk skala suhu mutlak adalah ....
+1. Celsius
+2. Fahrenheit
+3. Reamur
+4. Kelvin
+5. Celsius dan Fahrenheit
+Jawaban: D
+35. Dalam suatu percobaan, peneliti menggunakan termometer gas volume konstan untuk mengamati perubahan suhu gas. Agar pengukuran dapat dilakukan, besaran yang dipertahankan tetap dan besaran yang diamati secara berurutan adalah .... 
+1. Tekanan tetap dan volume berubah
+2. Volume tetap dan tekanan berubah
+3. Massa tetap dan volume berubah
+4. Suhu tetap dan tekanan berubah
+5. Tekanan dan volume berubah 
+Jawaban: B
+36. Dalam sebuah praktikum fisika, mahasiswa mengukur suhu suatu larutan dan memperoleh hasil sebesar 27°C. Agar hasil pengukuran dapat dibandingkan dengan data yang menggunakan skala Kelvin, nilai suhu tersebut harus dikonversikan menjadi .... 
+1. 273 K
+2. 280 K
+3. 290 K
+4. 300 K
+5. 310 K 
+Jawaban: D
+37.  Sebuah alat pengukur suhu menunjukkan bahwa suhu air dalam suatu wadah mencapai 40°C. Apabila hasil pengukuran tersebut ingin dinyatakan dalam skala Fahrenheit, nilai yang diperoleh adalah ....
+1. 72°F
+2. 82°F
+3. 92°F
+4. 104°F
+5. 112°F 
+Jawaban: D
+38. Dalam suatu percobaan, sejumlah gas ditempatkan di dalam wadah yang dapat berubah volumenya. Ketika suhu dijaga tetap, volume gas dikurangi dari 4 liter menjadi 2 liter. Jika tekanan awal gas adalah 2 atm, tekanan akhirnya berdasarkan Hukum Boyle adalah .... 
+
+
+1. 1 atm
+2. 2 atm
+3. 3 atm
+4. 4 atm
+5. 6 atm 
+Jawaban: D
+39. Suatu gas berada dalam wadah tertutup dengan volume tetap. Pada kondisi awal, gas memiliki suhu 300 K dan tekanan 2 atm. Jika suhu gas dinaikkan menjadi 600 K, tekanan akhir gas berdasarkan hubungan tekanan dan suhu mutlak adalah .... 
+
+
+1. 1 atm
+2. 2 atm
+3. 3 atm
+4. 4 atm
+5. 6 atm 
+Jawaban: D
+40. Dalam suatu praktikum fisika, mahasiswa mengukur suhu suatu zat menggunakan dua termometer dengan skala Reamur dan Celsius. Pada suhu berapakah kedua termometer tersebut menunjukkan angka yang sama….
+1. 2.  
+3. 4. 5. Jawaban :  C

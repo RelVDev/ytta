@@ -1,0 +1,319 @@
+1. Besaran yang menyatakan gaya tegak lurus yang bekerja pada setiap satuan luas permukaan disebut ....
+A. Massa jenis
+B. Tekanan
+C. Gaya apung
+D. Tegangan
+E. Viskositas
+ANSWER: B
+
+2. Satuan tekanan dalam Sistem Internasional (SI) adalah ....
+A. Newton
+B. Joule
+C. Pascal
+D. Watt
+E. Kilogram
+ANSWER: C
+
+3. Persamaan yang digunakan untuk menghitung massa jenis suatu zat adalah ....
+A. ? = m / V
+B. ? = mV
+C. ? = V / m
+D. ? = mg
+E. ? = F / A
+ANSWER: A
+
+4. Hukum Pascal menyatakan bahwa tekanan yang diberikan pada fluida dalam ruang tertutup akan ....
+A. Berkurang ke segala arah
+B. Diteruskan sama besar ke segala arah
+C. Hanya diteruskan ke bawah
+D. Hilang ketika mencapai dinding
+E. Berubah menjadi energi panas
+ANSWER: B
+
+5. Alat yang digunakan untuk mengukur tekanan atmosfer adalah ....
+A. Termometer
+B. Barometer
+C. Hidrometer
+D. Amperemeter
+E. Dinamometer
+ANSWER: B
+
+6. Gaya ke atas yang dialami benda ketika berada di dalam fluida disebut ....
+A. Gaya gesek
+B. Gaya normal
+C. Gaya gravitasi
+D. Gaya apung
+E. Gaya sentripetal
+ANSWER: D
+
+7. Mengapa tekanan hidrostatis semakin besar ketika kedalaman suatu titik di dalam air bertambah?
+A. Karena massa jenis air semakin kecil
+B. Karena jumlah air di atas titik tersebut semakin besar
+C. Karena gravitasi semakin kecil
+D. Karena volume air semakin kecil
+E. Karena suhu air semakin tinggi
+ANSWER: B
+
+8. Sebuah benda dapat terapung di permukaan air apabila ....
+A. Massa jenis benda lebih besar daripada air
+B. Massa jenis benda sama dengan udara
+C. Massa jenis benda lebih kecil daripada air
+D. Gaya gravitasi benda bernilai nol
+E. Benda tidak mengalami gaya apung
+ANSWER: C
+
+9. Menurut prinsip Bernoulli, pada aliran fluida ideal, ketika kecepatan fluida meningkat, tekanan statisnya cenderung ....
+A. Meningkat
+B. Menurun
+C. Tetap selalu
+D. Menjadi nol
+E. Tidak dapat ditentukan dalam kondisi apa pun
+ANSWER: B
+
+10. Sebuah benda memiliki massa 2 kg dan volume 0,001 m3. Massa jenis benda tersebut adalah ....
+A. 200 kg/m³
+B. 500 kg/m³
+C. 1.000 kg/m³
+D. 2.000 kg/m³
+E. 5.000 kg/m³
+ANSWER: D
+
+11. Gerak osilasi adalah gerak ....
+A. Lurus dengan kecepatan tetap
+B. Bolak-balik melalui titik keseimbangan
+C. Melingkar dengan jari-jari tetap
+D. Jatuh bebas tanpa hambatan
+E. Satu arah dengan percepatan tetap
+ANSWER: B
+
+12. Waktu yang diperlukan suatu benda untuk melakukan satu getaran penuh disebut ....
+A. Frekuensi
+B. Amplitudo
+C. Periode
+D. Simpangan
+E. Kecepatan sudut
+ANSWER: C
+
+13. Jumlah getaran yang terjadi dalam satu sekon disebut ....
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Simpangan
+E. Fase
+ANSWER: B
+
+14. Satuan frekuensi dalam Sistem Internasional adalah ....
+A. Meter
+B. Sekon
+C. Hertz
+D. Newton
+E. Joule
+ANSWER: C
+
+15. Simpangan maksimum dari titik keseimbangan pada gerak harmonik disebut ....
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Energi kinetik
+E. Kecepatan
+ANSWER: C
+
+16. Gaya pemulih pada pegas ideal mengikuti hukum ....
+A. Hukum Newton
+B. Hukum Pascal
+C. Hukum Hooke
+D. Hukum Archimedes
+E. Hukum Bernoulli
+ANSWER: C
+
+17. Pada gerak harmonik sederhana, percepatan benda selalu ....
+A. Searah dengan simpangan
+B. Berlawanan arah dengan simpangan
+C. Bernilai nol sepanjang gerakan
+D. Selalu bernilai positif
+E. Tidak berhubungan dengan simpangan
+ANSWER: B
+
+18. Ketika benda yang berosilasi pada pegas berada tepat di titik keseimbangan, energi kinetiknya mencapai ....
+A. Nilai minimum
+B. Nilai maksimum
+C. Nilai nol
+D. Nilai negatif
+E. Nilai yang tidak berubah
+ANSWER: B
+
+19. Jika massa benda yang digantung pada pegas diperbesar, sedangkan konstanta pegas tetap, periode osilasinya akan ....
+A. Semakin kecil
+B. Semakin besar
+C. Tetap
+D. Menjadi nol
+E. Tidak memiliki hubungan dengan massa
+ANSWER: B
+
+20. Sebuah benda melakukan 20 getaran dalam waktu 10 sekon. Frekuensi getaran benda tersebut adalah ....
+A. 0,5 Hz
+B. 1 Hz
+C. 2 Hz
+D. 5 Hz
+E. 10 Hz
+ANSWER: C
+
+21. Gelombang mekanik merupakan gelombang yang ....
+A. Tidak membutuhkan medium
+B. Membutuhkan medium untuk merambat
+C. Hanya dapat merambat di ruang hampa
+D. Selalu merambat dengan kecepatan cahaya
+E. Tidak membawa energi
+ANSWER: B
+
+22. Gelombang yang arah getaran partikelnya tegak lurus terhadap arah rambat gelombang disebut ....
+A. Gelombang longitudinal
+B. Gelombang transversal
+C. Gelombang elektromagnetik
+D. Gelombang stasioner
+E. Gelombang bunyi
+ANSWER: B
+
+23. Gelombang yang arah getaran partikelnya sejajar dengan arah rambat gelombang disebut ....
+A. Gelombang transversal
+B. Gelombang longitudinal
+C. Gelombang cahaya
+D. Gelombang permukaan
+E. Gelombang elektromagnetik
+ANSWER: B
+
+24. Jarak antara dua puncak gelombang yang berurutan disebut ....
+A. Amplitudo
+B. Frekuensi
+C. Panjang gelombang
+D. Periode
+E. Cepat rambat
+ANSWER: C
+
+25. Besaran yang menyatakan banyaknya gelombang yang melewati suatu titik setiap sekon disebut ....
+A. Amplitudo
+B. Frekuensi
+C. Panjang gelombang
+D. Simpangan
+E. Periode
+ANSWER: B
+
+26. Gelombang bunyi di udara termasuk jenis gelombang ....
+A. Transversal
+B. Longitudinal
+C. Elektromagnetik
+D. Cahaya
+E. Stasioner transversal
+ANSWER: B
+
+27. Mengapa gelombang bunyi tidak dapat merambat di ruang hampa?
+A. Karena bunyi tidak memiliki energi
+B. Karena bunyi membutuhkan medium untuk merambat
+C. Karena ruang hampa memiliki tekanan tinggi
+D. Karena frekuensi bunyi selalu nol
+E. Karena bunyi hanya merambat melalui cahaya
+ANSWER: B
+
+28. Ketika gelombang merambat dari satu tempat ke tempat lain, besaran yang dipindahkan adalah ....
+A. Materi secara keseluruhan
+B. Partikel medium secara permanen
+C. Energi
+D. Massa benda
+E. Volume medium
+ANSWER: C
+
+29. Pada gelombang transversal, puncak gelombang merupakan titik ....
+A. Simpangan maksimum ke bawah
+B. Simpangan maksimum ke atas
+C. Simpangan nol
+D. Kecepatan minimum
+E. Percepatan nol sepanjang waktu
+ANSWER: B
+
+30. Sebuah gelombang memiliki frekuensi 5 Hz dan panjang gelombang 2 meter. Cepat rambat gelombang tersebut adalah ....
+A. 2,5 m/s
+B. 5 m/s
+C. 7 m/s
+D. 10 m/s
+E. 15 m/s
+ANSWER: D
+
+31. Suhu merupakan besaran yang menyatakan ....
+A. Jumlah energi potensial benda
+B. Tingkat panas atau dinginnya suatu benda
+C. Massa suatu benda
+D. Volume suatu benda
+E. Tekanan suatu benda
+ANSWER: B
+
+32. Alat yang digunakan untuk mengukur suhu adalah ....
+A. Barometer
+B. Termometer
+C. Hidrometer
+D. Amperemeter
+E. Voltmeter
+ANSWER: B
+
+33. Satuan suhu dalam Sistem Internasional adalah ....
+A. Celsius
+B. Fahrenheit
+C. Kelvin
+D. Joule
+E. Kalori
+ANSWER: C
+
+34. Titik beku air pada tekanan atmosfer standar dalam skala Celsius adalah ....
+A. 0°C
+B. 10°C
+C. 32°C
+D. 100°C
+E. 273°C
+ANSWER: A
+
+35. Titik didih air pada tekanan atmosfer standar dalam skala Celsius adalah ....
+A. 0°C
+B. 25°C
+C. 50°C
+D. 100°C
+E. 273°C
+ANSWER: D
+
+36. Perpindahan energi akibat perbedaan suhu antara dua benda disebut ....
+A. Usaha
+B. Kalor
+C. Tekanan
+D. Massa
+E. Daya
+ANSWER: B
+
+37. Ketika dua benda yang memiliki suhu berbeda bersentuhan, kalor secara spontan akan mengalir dari ....
+A. Benda bersuhu rendah ke benda bersuhu tinggi
+B. Benda bersuhu tinggi ke benda bersuhu rendah
+C. Benda bermassa kecil ke benda bermassa besar
+D. Benda bertekanan rendah ke benda bertekanan tinggi
+E. Benda dengan volume kecil ke benda dengan volume besar
+ANSWER: B
+
+38. Mengapa rel kereta api diberikan celah pada sambungannya?
+A. Agar massa rel berkurang
+B. Agar rel tidak mengalami gaya gravitasi
+C. Untuk memberikan ruang pemuaian ketika suhu meningkat
+D. Agar rel menjadi lebih dingin
+E. Untuk mengurangi tekanan udara
+ANSWER: C
+
+39. Jika suatu benda menerima kalor dan tidak mengalami perubahan wujud, suhu benda tersebut pada umumnya akan ....
+A. Menurun
+B. Meningkat
+C. Tetap nol
+D. Selalu tetap
+E. Menjadi negatif
+ANSWER: B
+
+40. Sebuah cairan di dalam tabung reaksi dipanaskan hingga suhunya mencapai 45°C. Berapakah suhu cairan tersebut jika diukur menggunakan termometer berskala Fahrenheit....
+A. 77°F
+B. 81°F
+C. 138°F
+D. 113°F
+E. 104°F
+ANSWER: D

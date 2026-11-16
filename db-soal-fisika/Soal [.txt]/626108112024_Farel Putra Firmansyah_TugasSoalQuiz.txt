@@ -1,0 +1,319 @@
+1. Menurut prinsip Archimedes, gaya apung yang dialami sebuah benda yang tercelup sebagian atau seluruhnya dalam fluida sama dengan…
+A. berat benda di udara
+B. massa benda yang tercelup
+C. tekanan fluida pada dasar bejana
+D. berat fluida yang dipindahkan oleh benda
+E. volume fluida yang dipindahkan oleh benda
+ANSWER: D
+
+2. Pada fluida ideal yang mengalir dalam pipa, hasil kali luas penampang pipa (A) dengan laju alir fluida (v), yaitu Av, merupakan besaran yang disebut…
+A. debit
+B. viskositas
+C. massa jenis
+D. tekanan hidrostatis
+E. gaya apung
+ANSWER: A
+
+3. Gaya angkat pada sayap pesawat terbang dapat timbul karena bentuk sayap membuat…
+A. udara di bawah sayap bergerak lebih cepat sehingga tekanannya lebih kecil
+B. udara di atas dan di bawah sayap bergerak sama cepat sehingga tekanannya sama
+C. udara di atas sayap bergerak lebih cepat sehingga tekanannya lebih kecil daripada tekanan di bawah sayap
+D. udara di atas sayap bergerak lebih lambat sehingga tekanannya lebih besar
+E. massa jenis udara di atas sayap lebih besar daripada di bawah sayap
+ANSWER: C
+
+4. Seorang penyelam berada pada kedalaman 15 m di sebuah danau. Jika massa jenis air 1000 kg/m³, percepatan gravitasi 10 m/s², dan tekanan atmosfer 1,0 × 10⁵ Pa, maka tekanan mutlak yang dialami penyelam adalah…
+A. 1,5 × 10⁵ Pa
+B. 2,5 × 10⁵ Pa
+C. 3,5 × 10⁵ Pa
+D. 4,0 × 10⁵ Pa
+E. 1,5 × 10⁶ Pa
+ANSWER: B
+
+5. Sebuah dongkrak hidrolik memiliki penampang kecil seluas 25 cm² dan penampang besar seluas 400 cm². Jika gaya 150 N diberikan pada penampang kecil, gaya yang dihasilkan pada penampang besar adalah…
+A. 600 N
+B. 1.200 N
+C. 2.400 N
+D. 3.750 N
+E. 9.600 N
+ANSWER: C
+
+6. Sebuah tangki besar terbuka berisi air. Pada dinding tangki terdapat lubang kecil yang berada 3,2 m di bawah permukaan air. Jika g = 10 m/s², kelajuan air yang menyembur keluar dari lubang adalah…
+A. 8 m/s
+B. 10 m/s
+C. 12 m/s
+D. 16 m/s
+E. 64 m/s
+ANSWER: A
+
+7. Sebuah tangki besar terbuka berisi air diletakkan pada penyangga sehingga sebuah lubang kecil di dinding bawah tangki berada 1,8 m di atas tanah. Permukaan air di dalam tangki berada 0,8 m di atas lubang tersebut. Jika g = 10 m/s², air yang menyembur mendatar dari lubang akan jatuh di tanah pada jarak mendatar … dari dinding tangki.
+A. 1,8 m
+B. 2,4 m
+C. 3,0 m
+D. 3,6 m
+E. 4,8 m
+ANSWER: B
+
+8. Air (ρ = 1000 kg/m³) mengalir dalam pipa mendatar. Pada penampang yang lebar, air mengalir dengan kelajuan 2 m/s dan tekanan 1,6 × 10⁵ Pa. Luas penampang yang sempit adalah sepertiga luas penampang yang lebar. Tekanan air pada penampang yang sempit adalah…
+A. 1,20 × 10⁵ Pa
+B. 1,32 × 10⁵ Pa
+C. 1,42 × 10⁵ Pa
+D. 1,44 × 10⁵ Pa
+E. 1,76 × 10⁵ Pa
+ANSWER: D
+
+9. Perhatikan pernyataan dan alasan berikut! Pernyataan: Kapal baja yang sangat besar dapat terapung di permukaan air laut. SEBAB Alasan: massa jenis rata-rata kapal (baja beserta rongga udara di dalamnya) lebih kecil daripada massa jenis air laut. Pilihlah jawaban yang tepat!
+A. Pernyataan benar, alasan benar, dan keduanya menunjukkan hubungan sebab-akibat
+B. Pernyataan benar, alasan benar, tetapi keduanya tidak menunjukkan hubungan sebab-akibat
+C. Pernyataan benar, alasan salah
+D. Pernyataan salah, alasan benar
+E. Pernyataan salah dan alasan salah
+ANSWER: A
+
+10. Sebuah benda bermassa 3 kg dan bervolume 5 × 10⁻³ m³ dicelupkan seluruhnya ke dalam air (ρ = 1000 kg/m³, g = 10 m/s²), lalu dilepaskan. Perhatikan pernyataan-pernyataan berikut! (1) Gaya apung pada benda saat tercelup seluruhnya adalah 50 N; (2) Massa jenis benda adalah 1.667 kg/m³; (3) Benda akan bergerak naik dan akhirnya terapung di permukaan air; (4) Pada keadaan terapung diam, volume benda yang tercelup adalah 3 × 10⁻³ m³. Urutan B (benar) atau S (salah) untuk pernyataan (1) sampai (4) secara berturut-turut adalah…
+A. B – B – B – S
+B. S – B – B – B
+C. B – B – S – B
+D. S – S – B – B
+E. B – S – B – B
+ANSWER: E
+
+11. Sebuah benda melakukan gerak harmonik sederhana jika gaya pemulih yang bekerja pada benda tersebut…
+A. konstan dan searah dengan simpangan
+B. sebanding dengan simpangan dan berlawanan arah dengan simpangan
+C. sebanding dengan kuadrat simpangan
+D. berbanding terbalik dengan simpangan
+E. sebanding dengan kecepatan benda
+ANSWER: B
+
+12. Satuan SI untuk konstanta pegas (k) adalah…
+A. N·m
+B. N/m²
+C. kg/s
+D. kg·m
+E. N/m
+ANSWER: E
+
+13. Sebuah beban bermassa m digantung pada pegas dan berosilasi dengan periode T. Jika beban diganti dengan beban bermassa 4m (pegas tetap sama), periode osilasinya menjadi…
+A. ¼ T
+B. ½ T
+C. T
+D. 2 T
+E. 4 T
+ANSWER: D
+
+14. Sebuah beban bermassa 0,5 kg digantung pada pegas dengan konstanta 200 N/m, kemudian digetarkan harmonik. Periode getaran sistem tersebut adalah…
+A. 0,04π s
+B. 0,05π s
+C. 0,10π s
+D. 0,20π s
+E. 40π s
+ANSWER: C
+
+15. Sebuah ayunan sederhana memiliki panjang tali 2,5 m. Jika percepatan gravitasi 10 m/s², periode ayunan tersebut adalah…
+A. 0,5 s
+B. π s
+C. 2π s
+D. 2,5π s
+E. 5π s
+ANSWER: B
+
+16. Sebuah benda bermassa 0,5 kg terhubung pada pegas berkonstanta 200 N/m dan bergetar harmonik dengan amplitudo 10 cm di atas lantai licin. Kelajuan benda saat berada pada simpangan 6 cm dari titik setimbang adalah…
+A. 1,6 m/s
+B. 2,0 m/s
+C. 2,4 m/s
+D. 3,2 m/s
+E. 4,0 m/s
+ANSWER: A
+
+17. Dua pegas identik, masing-masing berkonstanta k, disusun secara seri pada satu rangkaian dan secara paralel pada rangkaian lain. Pada masing-masing rangkaian digantungkan beban bermassa sama. Perbandingan periode osilasi rangkaian seri terhadap periode osilasi rangkaian paralel adalah…
+A. 1 : 4
+B. 1 : 2
+C. 2 : 1
+D. 4 : 1
+E. √2 : 1
+ANSWER: C
+
+18. Sebuah pegas digantung vertikal. Ketika sebuah beban digantungkan pada ujung bawahnya, pegas bertambah panjang 40 cm pada keadaan setimbang. Beban kemudian ditarik sedikit ke bawah lalu dilepaskan sehingga berosilasi. Jika g = 10 m/s², periode osilasinya adalah…
+A. 0,1π s
+B. 0,2π s
+C. 0,3π s
+D. 0,4π s
+E. 4π s
+ANSWER: D
+
+19. Perhatikan pernyataan-pernyataan berikut tentang gerak harmonik sederhana! (1) Periode ayunan sederhana (simpangan kecil) tidak bergantung pada massa beban; (2) Periode getaran beban pada pegas tidak bergantung pada amplitudo getaran; (3) Energi mekanik total benda yang bergetar harmonik sebanding dengan amplitudo A; (4) Percepatan benda yang bergetar harmonik bernilai maksimum saat benda melewati titik setimbang. Pernyataan yang benar adalah…
+A. (1) dan (3) saja
+B. (1) dan (2) saja
+C. (2) dan (4) saja
+D. (1), (2), dan (3)
+E. (3) dan (4) saja
+ANSWER: B
+
+20. Sebuah beban bermassa 1 kg digantung pada pegas berkonstanta 100 N/m dan bergetar harmonik dengan amplitudo 0,2 m. Pernyataan yang SALAH mengenai getaran tersebut adalah…
+A. Frekuensi sudut getaran adalah 10 rad/s
+B. Periode getaran adalah 0,2π s
+C. Energi mekanik sistem adalah 2 J
+D. Percepatan maksimum beban adalah 20 m/s²
+E. Frekuensi getaran adalah 10 Hz
+ANSWER: E
+
+21. Gelombang yang arah getar partikel-partikel mediumnya tegak lurus terhadap arah rambat gelombang disebut gelombang…
+A. longitudinal
+B. elektromagnetik
+C. bunyi
+D. stasioner
+E. transversal
+ANSWER: E
+
+22. Berikut ini yang merupakan contoh gelombang mekanik longitudinal adalah…
+A. gelombang cahaya
+B. gelombang radio
+C. gelombang bunyi di udara
+D. gelombang pada tali yang digetarkan naik-turun
+E. sinar-X
+ANSWER: C
+
+23. Sebuah gelombang pada tali dipantulkan di ujung tali yang terikat tetap. Pernyataan yang benar mengenai gelombang pantul dan pola yang terbentuk adalah…
+A. fasenya tidak berubah dan di ujung terbentuk perut
+B. fasenya berbalik 180° dan di ujung terbentuk simpul
+C. fasenya bergeser 90° dan di ujung terbentuk perut
+D. fasenya tidak berubah dan di ujung terbentuk simpul
+E. frekuensinya berubah dan di ujung terbentuk perut
+ANSWER: B
+
+24. Gelombang air merambat dari perairan dalam menuju perairan dangkal sehingga cepat rambatnya berkurang. Besaran gelombang yang tidak berubah selama peristiwa tersebut adalah…
+A. frekuensi
+B. panjang gelombang
+C. cepat rambat
+D. panjang gelombang dan cepat rambat
+E. cepat rambat dan frekuensi
+ANSWER: A
+
+25. Sebuah gelombang berjalan pada tali dinyatakan oleh persamaan y = 0,05 sin(20πt − 5πx), dengan x dan y dalam meter serta t dalam sekon. Cepat rambat gelombang tersebut adalah…
+A. 0,25 m/s
+B. 0,4 m/s
+C. 2,0 m/s
+D. 4,0 m/s
+E. 10 m/s
+ANSWER: D
+
+26. Sebuah gabus di permukaan air naik-turun sebanyak 20 kali dalam waktu 40 sekon akibat gelombang air. Jarak antara dua puncak gelombang yang berurutan adalah 6 m. Cepat rambat gelombang air tersebut adalah…
+A. 0,5 m/s
+B. 1,5 m/s
+C. 2,0 m/s
+D. 2,5 m/s
+E. 3,0 m/s
+ANSWER: E
+
+27. Sebuah mesin pabrik menghasilkan taraf intensitas bunyi 60 dB di tempat pendengar berada. Jika 100 mesin identik bekerja bersamaan pada jarak yang sama dari pendengar, taraf intensitas bunyi yang didengar adalah…
+A. 70 dB
+B. 80 dB
+C. 120 dB
+D. 160 dB
+E. 6.000 dB
+ANSWER: B
+
+28. Sebuah ambulans membunyikan sirine berfrekuensi 640 Hz sambil bergerak dengan kelajuan 20 m/s menuju sebuah sepeda motor. Pengendara sepeda motor bergerak mendekati ambulans dengan kelajuan 10 m/s. Jika cepat rambat bunyi di udara 340 m/s, frekuensi sirine yang didengar pengendara sepeda motor adalah…
+A. 700 Hz
+B. 622 Hz
+C. 659 Hz
+D. 660 Hz
+E. 680 Hz
+ANSWER: A
+
+29. Perhatikan pernyataan dan alasan berikut! Pernyataan: Cepat rambat gelombang transversal pada tali bertambah jika tegangan tali diperbesar (massa per satuan panjang tali tetap). SEBAB Alasan: cepat rambat gelombang pada tali berbanding terbalik dengan akar tegangan tali. Pilihlah jawaban yang tepat!
+A. Pernyataan benar, alasan benar, dan keduanya menunjukkan hubungan sebab-akibat
+B. Pernyataan benar, alasan benar, tetapi keduanya tidak menunjukkan hubungan sebab-akibat
+C. Pernyataan benar, alasan salah
+D. Pernyataan salah, alasan benar
+E. Pernyataan salah dan alasan salah
+ANSWER: C
+
+30. Sebuah pipa organa terbuka (kedua ujung terbuka) memiliki panjang 0,5 m. Cepat rambat bunyi di udara 340 m/s. Perhatikan pernyataan-pernyataan berikut! (1) Frekuensi nada dasar pipa adalah 340 Hz; (2) Frekuensi nada atas pertama pipa adalah 680 Hz; (3) Pada nada dasar, panjang gelombang bunyi di dalam pipa adalah 0,5 m; (4) Jika pipa diganti dengan pipa organa tertutup yang panjangnya sama, frekuensi nada dasarnya menjadi 170 Hz. Pernyataan yang benar adalah…
+A. (1) dan (3) saja
+B. (2) dan (4) saja
+C. (1), (2), dan (3)
+D. (1), (2), dan (4)
+E. (1), (2), (3), dan (4)
+ANSWER: D
+
+31. Suhu suatu zat pada dasarnya merupakan ukuran dari…
+A. jumlah total kalor yang dikandung zat
+B. massa zat
+C. rata-rata energi kinetik partikel-partikel penyusun zat
+D. banyaknya partikel dalam zat
+E. energi potensial total zat
+ANSWER: C
+
+32. Pada tekanan 1 atm, titik didih air pada skala Fahrenheit adalah…
+A. 212 °F
+B. 100 °F
+C. 180 °F
+D. 373 °F
+E. 32 °F
+ANSWER: A
+
+33. Suhu sebuah benda naik sebesar 20 °C. Kenaikan suhu benda tersebut jika dinyatakan dalam kelvin adalah…
+A. 36 K
+B. 68 K
+C. 253 K
+D. 293 K
+E. 20 K
+ANSWER: E
+
+34. Sebuah termometer X diberi skala dengan titik beku air 20 °X dan titik didih air 220 °X. Jika sebuah benda memiliki suhu 35 °C, suhu benda tersebut pada termometer X adalah…
+A. 55 °X
+B. 70 °X
+C. 80 °X
+D. 90 °X
+E. 110 °X
+ANSWER: D
+
+35. Sebuah batang baja panjangnya 2,0 m pada suhu 20 °C. Koefisien muai panjang baja 1,2 × 10⁻⁵ /°C. Jika batang dipanaskan hingga 120 °C, pertambahan panjang batang tersebut adalah…
+A. 0,24 mm
+B. 1,2 mm
+C. 2,4 mm
+D. 12 mm
+E. 24 mm
+ANSWER: C
+
+36. Sebanyak 200 g air bersuhu 80 °C dicampur dengan 300 g air bersuhu 20 °C dalam wadah yang tidak menyerap kalor. Suhu akhir campuran adalah…
+A. 32 °C
+B. 36 °C
+C. 40 °C
+D. 44 °C
+E. 50 °C
+ANSWER: D
+
+37. Sebuah logam bermassa 200 g dipanaskan hingga 100 °C, lalu dimasukkan ke dalam 400 g air bersuhu 20 °C. Setelah tercapai kesetimbangan, suhu campuran 25 °C. Jika kalor jenis air 4.200 J/kg·°C dan kalor yang diserap wadah diabaikan, kalor jenis logam tersebut adalah…
+A. 560 J/kg·°C
+B. 140 J/kg·°C
+C. 280 J/kg·°C
+D. 1.680 J/kg·°C
+E. 4.200 J/kg·°C
+ANSWER: A
+
+38. Sebanyak 0,2 kg es bersuhu −10 °C dipanaskan hingga seluruhnya menjadi air bersuhu 20 °C. Diketahui kalor jenis es 2.100 J/kg·°C, kalor jenis air 4.200 J/kg·°C, dan kalor lebur es 336.000 J/kg. Kalor total yang diperlukan adalah…
+A. 21,0 kJ
+B. 67,2 kJ
+C. 71,4 kJ
+D. 84,0 kJ
+E. 88,2 kJ
+ANSWER: E
+
+39. Pernyataan berikut yang SALAH adalah…
+A. Perubahan suhu 1 °C sama besarnya dengan perubahan suhu 1 K
+B. Suhu dan kalor adalah dua besaran yang sama sehingga memiliki satuan yang sama
+C. Lantai keramik terasa lebih dingin daripada karpet karena keramik menghantarkan kalor dari kaki lebih cepat
+D. Selama es melebur pada tekanan 1 atm, suhu campuran es dan air tetap 0 °C
+E. Radiasi dapat memindahkan kalor tanpa memerlukan medium perantara
+ANSWER: B
+
+40. Sebanyak 0,5 kg air bersuhu 20 °C diberi kalor sebesar 42.000 J. Kalor jenis air 4.200 J/kg·°C dan tidak ada kalor yang hilang ke lingkungan. Perhatikan pernyataan-pernyataan berikut! (1) Kenaikan suhu air adalah 10 °C; (2) Suhu akhir air adalah 40 °C; (3) Jika massa air 1 kg dan kalor yang diberikan sama, kenaikan suhunya adalah 10 °C; (4) Kapasitas kalor 0,5 kg air tersebut adalah 2.100 J/°C. Urutan B (benar) atau S (salah) untuk pernyataan (1) sampai (4) secara berturut-turut adalah…
+A. B – B – B – S
+B. S – S – B – B
+C. S – B – S – B
+D. B – B – S – B
+E. S – B – B – B
+ANSWER: E

@@ -1,0 +1,324 @@
+﻿Nama	: Fakhira Rusmaputeri
+NIM	: 626108112029
+Kelas	: Fisika Dasar DI1
+
+1. Bunyi Hukum Pascal adalah ...
+A. Gaya apung sebanding dengan berat fluida yang dipindahkan
+B. Tekanan yang diberikan pada fluida dalam ruang tertutup diteruskan sama besar ke segala arah
+C. Tekanan fluida bertambah jika kecepatan alirannya bertambah
+D. Debit fluida di setiap penampang pipa selalu berbeda
+E. Tekanan fluida tidak bergantung pada kedalaman
+ANSWER: B
+
+2. Sebuah benda akan terapung di dalam fluida jika ...
+A. massa jenis benda lebih besar daripada massa jenis fluida
+B. massa jenis benda sama dengan massa jenis fluida
+C. benda bersentuhan dengan dasar wadah
+D. massa jenis benda lebih kecil daripada massa jenis fluida
+E. berat benda lebih besar daripada gaya apung
+ANSWER: D
+
+3. Persamaan kontinuitas untuk fluida ideal dinyatakan dengan ...
+A. A1.v1 = A2.v2
+B. P + ½.ρ.v² + ρ.g.h = konstan
+C. P = F / A
+D. F1 / A1 = F2 / A2
+E. F = ρ.g.V
+ANSWER: A
+
+4. Menurut asas Bernoulli, pada aliran fluida dalam pipa horizontal, bagian pipa yang memiliki kecepatan aliran lebih besar akan memiliki ...
+A. tekanan yang lebih besar
+B. tekanan yang sama
+C. massa jenis yang lebih besar
+D. ketinggian yang lebih besar
+E. tekanan yang lebih kecil
+ANSWER: E
+
+5. Berikut ini yang BUKAN merupakan ciri fluida ideal adalah ...
+A. tidak dapat dimampatkan
+B. alirannya tunak (steady)
+C. memiliki kekentalan (viskositas) yang besar
+D. alirannya tidak berputar (non-rotasional)
+E. alirannya berupa garis arus (laminar)
+ANSWER: C
+
+6. Tekanan hidrostatis yang dialami seorang penyelam pada kedalaman 5 m dari permukaan air adalah ... (g = 10 m/s², ρ air = 1000 kg/m³)
+A. 5.000 Pa
+B. 25.000 Pa
+C. 50.000 Pa
+D. 100.000 Pa
+E. 150.000 Pa
+ANSWER: C
+
+7. Sebuah pompa hidrolik memiliki luas penampang pengisap kecil 10 cm² dan pengisap besar 500 cm². Jika pada pengisap kecil diberi gaya 100 N, gaya yang dihasilkan pada pengisap besar adalah ...
+A. 50 N
+B. 500 N
+C. 1.000 N
+D. 2.500 N
+E. 5.000 N
+ANSWER: E
+
+8. Sebuah balok bervolume 2 × 10⁻³ m³ tercelup seluruhnya di dalam air. Gaya apung yang dialami balok adalah ... (g = 10 m/s², ρ air = 1000 kg/m³)
+A. 2 N
+B. 20 N
+C. 200 N
+D. 2.000 N
+E. 20.000 N
+ANSWER: B
+
+9. Air mengalir dalam pipa horizontal. Pada penampang pertama, luas 20 cm², kecepatan 2 m/s, dan tekanan 120.000 Pa. Pada penampang kedua, luas 10 cm². Tekanan pada penampang kedua adalah ... (ρ air = 1000 kg/m³)
+A. 108.000 Pa
+B. 110.000 Pa
+C. 112.000 Pa
+D. 114.000 Pa
+E. 126.000 Pa
+ANSWER: D
+
+10. Sebuah benda memiliki berat 30 N di udara dan 20 N ketika dicelupkan seluruhnya di dalam air. Massa jenis benda tersebut adalah ... (g = 10 m/s², ρ air = 1000 kg/m³)
+A. 3.000 kg/m³
+B. 2.500 kg/m³
+C. 2.000 kg/m³
+D. 1.500 kg/m³
+E. 1.000 kg/m³
+ANSWER: A
+
+11. Gerak harmonik sederhana adalah ...
+A. gerak lurus dengan kecepatan tetap
+B. gerak melingkar dengan laju tetap
+C. gerak bolak-balik dengan percepatan tetap
+D. gerak bolak-balik melalui titik setimbang dengan gaya pemulih sebanding dengan simpangan
+E. gerak jatuh bebas akibat gravitasi
+ANSWER: D
+
+12. Pada saat benda yang bergetar harmonik melewati titik setimbang, ...
+A. kecepatan maksimum dan percepatan nol
+B. kecepatan nol dan percepatan maksimum
+C. kecepatan dan percepatan maksimum
+D. kecepatan dan percepatan nol
+E. energi potensial maksimum
+ANSWER: A
+
+13. Periode getaran adalah ...
+A. jumlah getaran yang terjadi tiap sekon
+B. simpangan terjauh dari titik setimbang
+C. waktu yang diperlukan untuk melakukan satu getaran penuh
+D. jarak antara dua titik yang sefase
+E. kecepatan benda saat melewati titik setimbang
+ANSWER: C
+
+14. Pada saat benda yang bergetar harmonik berada di simpangan maksimum, ...
+A. energi kinetik maksimum dan energi potensial nol
+B. energi kinetik nol dan energi potensial maksimum
+C. energi kinetik dan energi potensial sama besar
+D. energi kinetik dan energi potensial sama-sama nol
+E. energi mekanik sama dengan nol
+ANSWER: B
+
+15. Periode ayunan bandul sederhana untuk simpangan kecil bergantung pada ...
+A. massa beban dan panjang tali
+B. massa beban dan amplitudo
+C. amplitudo dan percepatan gravitasi
+D. massa beban saja
+E. panjang tali dan percepatan gravitasi
+ANSWER: E
+
+16. Sebuah benda bermassa 2 kg dihubungkan dengan pegas yang memiliki konstanta 200 N/m. Periode getaran benda adalah ...
+A. 0,1.π.s
+B. 0,2.π.s
+C. 0,5.π.s
+D. π.s
+E. 2.π.s
+ANSWER: B
+
+17. Sebuah benda melakukan 20 getaran dalam waktu 5 sekon. Frekuensi getaran benda tersebut adalah ...
+A. 0,25 Hz
+B. 0,5 Hz
+C. 2 Hz
+D. 3 Hz
+E. 4 Hz
+ANSWER: E
+
+18. Sebuah bandul sederhana memiliki panjang tali 0,4 m. Jika g = 10 m/s², periode ayunannya adalah ... (g = 10 m/s²)
+A. 0,1.π.s
+B. 0,2.π.s
+C. 0,4.π.s
+D. 0,8.π.s
+E. 2.π.s
+ANSWER: C
+
+19. Simpangan suatu getaran harmonik dinyatakan dengan y = 0,1 sin (10 π t) meter. Kecepatan maksimum getaran tersebut adalah ...
+A. π m/s
+B. 0,1 π m/s
+C. 10 π m/s
+D. 100 π m/s
+E. 1 m/s
+ANSWER: A
+
+20. Sebuah benda bermassa 0,5 kg bergetar pada pegas dengan konstanta 50 N/m dan amplitudo 0,2 m. Energi kinetik benda saat simpangannya 0,1 m adalah ...
+A. 0,25 J
+B. 0,50 J
+C. 0,60 J
+D. 0,75 J
+E. 1,00 J
+ANSWER: D
+
+21. Gelombang mekanik adalah gelombang yang ...
+A. dapat merambat di ruang hampa
+B. merupakan gelombang elektromagnetik
+C. memerlukan medium untuk merambat
+D. tidak dapat mengalami pemantulan
+E. memiliki kecepatan yang sama di semua medium
+ANSWER: C
+
+22. Pada gelombang transversal, ...
+A. arah getar sejajar dengan arah rambat
+B. terbentuk rapatan dan renggangan
+C. hanya dapat merambat pada gas
+D. tidak dapat dipantulkan
+E. arah getar tegak lurus terhadap arah rambat
+ANSWER: E
+
+23. Pada gelombang transversal, panjang gelombang adalah ...
+A. waktu yang diperlukan untuk satu getaran
+B. jarak antara dua puncak yang berurutan
+C. simpangan terjauh dari titik setimbang
+D. banyaknya gelombang tiap sekon
+E. jarak dari satu puncak ke lembah terdekat
+ANSWER: B
+
+24. Gelombang longitudinal terdiri atas ...
+A. rapatan dan renggangan
+B. bukit dan lembah
+C. simpul dan perut
+D. puncak dan dasar
+E. amplitudo dan fase
+ANSWER: A
+
+25. Pada gelombang stasioner, jarak antara dua simpul yang berurutan adalah ...
+A. satu panjang gelombang
+B. seperempat panjang gelombang
+C. tiga perempat panjang gelombang
+D. setengah panjang gelombang
+E. dua kali panjang gelombang
+ANSWER: D
+
+26. Sebuah gelombang memiliki frekuensi 5 Hz dan panjang gelombang 0,4 m. Cepat rambat gelombang tersebut adalah ...
+A. 0,08 m/s
+B. 0,8 m/s
+C. 1,25 m/s
+D. 2 m/s
+E. 12,5 m/s
+ANSWER: D
+
+27. Sebuah gelombang memiliki periode 0,02 s dan panjang gelombang 4 m. Cepat rambat gelombang tersebut adalah ...
+A. 200 m/s
+B. 100 m/s
+C. 80 m/s
+D. 20 m/s
+E. 0,5 m/s
+ANSWER: A
+
+28. Persamaan simpangan gelombang berjalan adalah y = 0,04 sin (10 π t - 2 π x) dengan × dalam meter dan t dalam sekon. Cepat rambat gelombang tersebut adalah ...
+A. 2,5 m/s
+B. 4 m/s
+C. 5 m/s
+D. 10 m/s
+E. 20 m/s
+ANSWER: C
+
+29. Seutas tali bermassa 0,1 kg dan panjang 2 m diberi tegangan 80 N. Cepat rambat gelombang pada tali tersebut adalah ...
+A. 4 m/s
+B. 8 m/s
+C. 20 m/s
+D. 32 m/s
+E. 40 m/s
+ANSWER: E
+
+30. Pada gelombang stasioner, jarak antara dua simpul yang berurutan adalah 0,5 m dan frekuensi gelombang 20 Hz. Cepat rambat gelombang tersebut adalah ...
+A. 10 m/s
+B. 20 m/s
+C. 40 m/s
+D. 50 m/s
+E. 80 m/s
+ANSWER: B
+
+31. Satuan suhu dalam Sistem Internasional (SI) adalah ...
+A. Celsius
+B. Fahrenheit
+C. Reamur
+D. Joule
+E. Kelvin
+ANSWER: E
+
+32. Gelas kaca yang tebal dapat retak jika diisi air panas secara tiba-tiba karena ...
+A. seluruh bagian kaca menyusut
+B. massa kaca bertambah
+C. pemuaian yang terjadi tidak merata pada bagian kaca
+D. kaca menjadi lebih ringan
+E. kalor jenis kaca berubah menjadi nol
+ANSWER: C
+
+33. Kalor adalah ...
+A. energi yang berpindah akibat adanya perbedaan suhu
+B. ukuran derajat panas atau dinginnya suatu benda
+C. satuan dari suhu
+D. jumlah partikel dalam suatu benda
+E. gaya yang bekerja pada benda
+ANSWER: A
+
+34. Kalor dari Matahari sampai ke Bumi melalui proses ...
+A. konduksi
+B. konveksi
+C. konduksi dan konveksi
+D. radiasi
+E. difusi
+ANSWER: D
+
+35. Asas Black menyatakan bahwa ...
+A. kalor berbanding lurus dengan suhu benda
+B. kalor yang dilepas benda bersuhu tinggi sama dengan kalor yang diterima benda bersuhu rendah
+C. kalor hanya bergantung pada massa benda
+D. suhu campuran selalu sama dengan rata-rata suhu awal
+E. kalor dapat hilang pada saat pencampuran
+ANSWER: B
+
+36. Suhu suatu benda 40 °C. Jika dinyatakan dalam skala Fahrenheit, suhu benda tersebut adalah ...
+A. 72 °F
+B. 104 °F
+C. 112 °F
+D. 144 °F
+E. 313 °F
+ANSWER: B
+
+37. Sebuah batang besi panjangnya 2 m dan koefisien muai panjangnya 1,2 × 10⁻⁵ /°C. Jika dipanaskan dari 20 °C sampai 120 °C, pertambahan panjang batang adalah ...
+A. 0,24 mm
+B. 1,2 mm
+C. 2 mm
+D. 2,4 mm
+E. 24 mm
+ANSWER: D
+
+38. Kalor yang diperlukan untuk memanaskan 0,5 kg air dari suhu 20 °C menjadi 60 °C adalah ... (kalor jenis air = 4.200 J/kg °C)
+A. 84.000 J
+B. 8.400 J
+C. 21.000 J
+D. 168.000 J
+E. 4.200 J
+ANSWER: A
+
+39. Sebanyak 200 g air bersuhu 80 °C dicampur dengan 300 g air bersuhu 20 °C. Suhu akhir campuran adalah ...
+A. 36 °C
+B. 40 °C
+C. 44 °C
+D. 50 °C
+E. 56 °C
+ANSWER: C
+
+40. Kalor yang diperlukan untuk mengubah 0,1 kg es bersuhu 0 °C menjadi air bersuhu 20 °C adalah ... (kalor lebur es = 336.000 J/kg; kalor jenis air = 4.200 J/kg °C)
+A. 8.400 J
+B. 33.600 J
+C. 36.000 J
+D. 50.400 J
+E. 42.000 J
+ANSWER: E
+

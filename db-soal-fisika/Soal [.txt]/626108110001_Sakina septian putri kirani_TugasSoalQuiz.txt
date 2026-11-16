@@ -1,0 +1,386 @@
+LATIHAN SOAL FISIKA - PILIHAN GANDA
+Materi: Fluida, Osilator Harmonik, Gelombang Mekanik, dan Suhu
+
+1. Fluida adalah zat yang ...
+   A. Memiliki bentuk tetap
+   B. Dapat mengalir dan menyesuaikan bentuk wadahnya
+   C. Hanya berupa gas
+   D. Tidak dapat mengalir
+   E. Selalu memiliki massa jenis besar
+
+   Jawaban: B
+
+2. Tekanan hidrostatis pada zat cair bergantung pada ...
+   A. Bentuk wadah
+   B. Kedalaman, massa jenis zat cair, dan percepatan gravitasi
+   C. Warna zat cair
+   D. Luas permukaan wadah
+   E. Suhu udara
+
+   Jawaban: B
+
+3. Sebuah kolam memiliki kedalaman 5 m.
+   Jika massa jenis air 1000 kg/m^3 dan g = 10 m/s^2,
+   tekanan hidrostatis pada dasar kolam adalah ...
+   A. 20000 Pa
+   B. 30000 Pa
+   C. 40000 Pa
+   D. 50000 Pa
+   E. 60000 Pa
+
+   Jawaban: D
+
+4. Hukum Archimedes menyatakan bahwa gaya apung sama dengan ...
+   A. Berat benda
+   B. Berat zat cair yang dipindahkan
+   C. Massa benda
+   D. Volume benda
+   E. Tekanan atmosfer
+
+   Jawaban: B
+
+5. Sebuah benda memiliki volume 0,002 m^3 dan dicelupkan seluruhnya ke dalam air.
+   Jika massa jenis air 1000 kg/m^3 dan g = 10 m/s^2,
+   gaya apung yang dialami benda adalah ...
+   A. 10 N
+   B. 20 N
+   C. 30 N
+   D. 40 N
+   E. 50 N
+
+   Jawaban: B
+
+6. Sebuah benda akan terapung dalam air jika ...
+   A. Massa jenis benda lebih besar dari massa jenis air
+   B. Massa jenis benda sama dengan massa jenis air
+   C. Massa jenis benda lebih kecil dari massa jenis air
+   D. Volume benda sangat kecil
+   E. Berat benda sangat besar
+
+   Jawaban: C
+
+7. Hukum Pascal menyatakan bahwa tekanan yang diberikan pada fluida tertutup akan ...
+   A. Berkurang ke segala arah
+   B. Diteruskan sama besar ke segala arah
+   C. Hanya bekerja ke bawah
+   D. Hilang setelah beberapa waktu
+   E. Berubah menjadi kalor
+
+   Jawaban: B
+
+8. Sebuah piston kecil memiliki luas 0,01 m^2 dan diberi gaya 100 N.
+   Piston besar memiliki luas 0,5 m^2.
+   Gaya pada piston besar adalah ...
+   A. 500 N
+   B. 1000 N
+   C. 2000 N
+   D. 5000 N
+   E. 10000 N
+
+   Jawaban: D
+
+9. Persamaan kontinuitas menyatakan bahwa ...
+   A. A1 v1 = A2 v2
+   B. P1 = P2
+   C. F1 = F2
+   D. m1 = m2
+   E. T1 = T2
+
+   Jawaban: A
+
+10. Air mengalir dalam pipa dengan luas penampang A1 = 0,02 m^2
+    dan A2 = 0,005 m^2.
+    Jika kecepatan pada A1 adalah 2 m/s,
+    kecepatan pada A2 adalah ...
+    A. 2 m/s
+    B. 4 m/s
+    C. 6 m/s
+    D. 8 m/s
+    E. 10 m/s
+
+    Jawaban: D
+
+11. Gerak harmonik sederhana adalah gerak bolak-balik ...
+    A. Dengan percepatan tetap
+    B. Dengan gaya pemulih sebanding dengan simpangan
+    C. Hanya terjadi pada pegas
+    D. Yang selalu dipercepat
+    E. Yang tidak memiliki periode
+
+    Jawaban: B
+
+12. Besaran yang menunjukkan jumlah getaran tiap satuan waktu disebut ...
+    A. Periode
+    B. Frekuensi
+    C. Amplitudo
+    D. Fase
+    E. Simpangan
+
+    Jawaban: B
+
+13. Hubungan periode dan frekuensi adalah ...
+    A. T = f
+    B. T = 1/f
+    C. T = f^2
+    D. T = 2f
+    E. T = f/2
+
+    Jawaban: B
+
+14. Sebuah benda berosilasi dengan frekuensi 2 Hz.
+    Periode osilasinya adalah ...
+    A. 0,25 s
+    B. 0,5 s
+    C. 1 s
+    D. 2 s
+    E. 4 s
+
+    Jawaban: B
+
+15. Pada pegas, periode osilasi bergantung pada ...
+    A. Massa benda dan konstanta pegas
+    B. Amplitudo getaran
+    C. Warna pegas
+    D. Panjang tali
+    E. Suhu lingkungan
+
+    Jawaban: A
+
+16. Sebuah benda bermassa 1 kg tergantung pada pegas dengan konstanta 100 N/m.
+    Periode osilasinya adalah ...
+    A. 0,2 s
+    B. 0,4 s
+    C. 0,6 s
+    D. 0,8 s
+    E. 1,0 s
+
+    Jawaban: C
+
+17. Pada bandul sederhana, periode bergantung pada ...
+    A. Massa bandul
+    B. Panjang tali dan percepatan gravitasi
+    C. Amplitudo besar
+    D. Jenis bahan bandul
+    E. Warna tali
+
+    Jawaban: B
+
+18. Sebuah bandul memiliki panjang tali 1 m.
+    Jika g = 10 m/s^2, periode osilasinya adalah ...
+    A. 1 s
+    B. 2 s
+    C. 3 s
+    D. 4 s
+    E. 5 s
+
+    Jawaban: B
+
+19. Energi total pada osilator harmonik sederhana adalah ...
+    A. Hanya energi kinetik
+    B. Hanya energi potensial
+    C. Jumlah energi kinetik dan energi potensial
+    D. Selalu nol
+    E. Tidak dapat dihitung
+
+    Jawaban: C
+
+20. Sebuah benda berosilasi dengan amplitudo 0,2 m dan frekuensi 4 Hz.
+    Kecepatan maksimum benda adalah ...
+    A. 2,5 m/s
+    B. 3,1 m/s
+    C. 5,0 m/s
+    D. 6,3 m/s
+    E. 8,0 m/s
+
+    Jawaban: C
+
+21. Gelombang mekanik adalah gelombang yang ...
+    A. Dapat merambat tanpa medium
+    B. Memerlukan medium untuk merambat
+    C. Hanya berupa cahaya
+    D. Tidak membawa energi
+    E. Selalu merambat searah tegak lurus
+
+    Jawaban: B
+
+22. Gelombang transversal adalah gelombang yang arah getarnya ...
+    A. Sejajar arah rambat
+    B. Tegak lurus arah rambat
+    C. Berlawanan arah rambat
+    D. Tidak memiliki arah
+    E. Selalu ke bawah
+
+    Jawaban: B
+
+23. Hubungan cepat rambat, frekuensi, dan panjang gelombang adalah ...
+    A. v = f / lambda
+    B. v = lambda / f
+    C. v = f x lambda
+    D. v = f + lambda
+    E. v = f - lambda
+
+    Jawaban: C
+
+24. Sebuah gelombang memiliki frekuensi 50 Hz dan panjang gelombang 2 m.
+    Cepat rambat gelombang tersebut adalah ...
+    A. 50 m/s
+    B. 75 m/s
+    C. 100 m/s
+    D. 125 m/s
+    E. 150 m/s
+
+    Jawaban: C
+
+25. Sebuah gelombang merambat dengan cepat 340 m/s dan frekuensi 170 Hz.
+    Panjang gelombangnya adalah ...
+    A. 1 m
+    B. 2 m
+    C. 3 m
+    D. 4 m
+    E. 5 m
+
+    Jawaban: B
+
+26. Jarak antara dua puncak gelombang yang berurutan disebut ...
+    A. Amplitudo
+    B. Periode
+    C. Frekuensi
+    D. Panjang gelombang
+    E. Cepat rambat
+
+    Jawaban: D
+
+27. Sebuah gelombang memiliki periode 0,02 s dan panjang gelombang 4 m.
+    Cepat rambat gelombang tersebut adalah ...
+    A. 100 m/s
+    B. 150 m/s
+    C. 200 m/s
+    D. 250 m/s
+    E. 300 m/s
+
+    Jawaban: C
+
+28. Pada gelombang stasioner, titik yang tidak bergetar disebut ...
+    A. Perut
+    B. Simpul
+    C. Puncak
+    D. Lembah
+    E. Amplitudo
+
+    Jawaban: B
+
+29. Sebuah tali memiliki panjang 2 m dan membentuk gelombang stasioner
+    dengan 3 simpul.
+    Panjang gelombangnya adalah ...
+    A. 0,5 m
+    B. 1 m
+    C. 1,5 m
+    D. 2 m
+    E. 2,5 m
+
+    Jawaban: D
+
+30. Dua titik pada gelombang berjarak 1/4 panjang gelombang.
+    Beda fase antara kedua titik tersebut adalah ...
+    A. 45 derajat
+    B. 60 derajat
+    C. 90 derajat
+    D. 120 derajat
+    E. 180 derajat
+
+    Jawaban: C
+
+31. Suhu adalah besaran yang menyatakan ...
+    A. Jumlah kalor suatu benda
+    B. Derajat panas atau dingin suatu benda
+    C. Massa jenis benda
+    D. Volume benda
+    E. Tekanan benda
+
+    Jawaban: B
+
+32. Alat yang digunakan untuk mengukur suhu disebut ...
+    A. Barometer
+    B. Termometer
+    C. Hidrometer
+    D. Amperemeter
+    E. Dinamometer
+
+    Jawaban: B
+
+33. Suhu 25 derajat Celsius sama dengan ...
+    A. 45 derajat Fahrenheit
+    B. 57 derajat Fahrenheit
+    C. 68 derajat Fahrenheit
+    D. 77 derajat Fahrenheit
+    E. 87 derajat Fahrenheit
+
+    Jawaban: D
+
+34. Suhu 100 derajat Celsius sama dengan ...
+    A. 273 K
+    B. 300 K
+    C. 313 K
+    D. 373 K
+    E. 400 K
+
+    Jawaban: D
+
+35. Suhu 300 K sama dengan ...
+    A. 17 derajat Celsius
+    B. 27 derajat Celsius
+    C. 37 derajat Celsius
+    D. 47 derajat Celsius
+    E. 57 derajat Celsius
+
+    Jawaban: B
+
+36. Suhu 68 derajat Fahrenheit sama dengan ...
+    A. 10 derajat Celsius
+    B. 15 derajat Celsius
+    C. 20 derajat Celsius
+    D. 25 derajat Celsius
+    E. 30 derajat Celsius
+
+    Jawaban: C
+
+37. Kalor adalah energi yang berpindah karena ...
+    A. Perbedaan suhu
+    B. Perbedaan massa
+    C. Perbedaan volume
+    D. Perbedaan warna
+    E. Perbedaan bentuk
+
+    Jawaban: A
+
+38. Sebuah benda menerima kalor 5000 J.
+    Massa benda 2 kg dan kalor jenisnya 500 J/kg derajat Celsius.
+    Kenaikan suhu benda tersebut adalah ...
+    A. 2 derajat Celsius
+    B. 3 derajat Celsius
+    C. 4 derajat Celsius
+    D. 5 derajat Celsius
+    E. 6 derajat Celsius
+
+    Jawaban: D
+
+39. Pemuaian panjang suatu benda terjadi karena ...
+    A. Benda mendingin
+    B. Benda menerima kalor sehingga suhunya naik
+    C. Benda dipadatkan
+    D. Benda ditekan
+    E. Benda diputar
+
+    Jawaban: B
+
+40. Sebuah batang besi memiliki panjang awal 2 m.
+    Koefisien muai panjang besi adalah 1,2 x 10^-5 /derajat Celsius.
+    Jika suhu naik 50 derajat Celsius,
+    pertambahan panjang batang adalah ...
+    A. 0,6 mm
+    B. 1,2 mm
+    C. 1,8 mm
+    D. 2,4 mm
+    E. 3,0 mm
+
+    Jawaban: B

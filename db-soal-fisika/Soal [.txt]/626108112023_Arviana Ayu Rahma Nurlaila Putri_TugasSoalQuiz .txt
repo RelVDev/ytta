@@ -1,0 +1,358 @@
+﻿1. Zat yang tidak mempertahankan bentuk yang tetap dan bersifat mengalir disebut...
+A. Zat padat
+B. Kristal
+C. Fluida
+D. Logam
+E. Koloid
+ANSWER: C
+
+
+2. Satuan Sistem Internasional (SI) untuk besaran tekanan adalah...
+A. Newton (N)
+B. Joule (J)
+C. Watt (W)
+D. Pascal (Pa)
+E. Poise (P)
+ANSWER: D
+
+
+3. Sebuah pengukur tekanan ban menunjukkan angka 200 kPa. Jika tekanan udara luar (atmosfer) sebesar 100 kPa, maka tekanan absolut di dalam ban adalah...
+A. 100 kPa
+B. 200 kPa
+C. 300 kPa
+D. 400 kPa
+E. 500 kPa
+ANSWER: C
+
+
+4. Sebuah dongkrak hidrolik memiliki luas penampang kecil 10 cm² dan luas penampang besar 100 cm². Jika beban di penampang besar adalah 2.000 N, gaya minimal yang diperlukan pada penampang kecil untuk mengangkat beban tersebut adalah...
+A. 20 N
+B. 100 N
+C. 200 N
+D. 500 N
+E. 2.000 N
+ANSWER: C
+
+
+5. Sebuah benda dengan volume 0,02 m³ tercelup seluruhnya di dalam air yang massa jenisnya 1.000 kg/m³ (g = 10 m/s²). Besar gaya apung (gaya tekan ke atas) yang dialami benda tersebut adalah...
+A. 20 N
+B. 50 N
+C. 100 N
+D. 200 N
+E. 500 N
+ANSWER: D
+
+
+6. Sepotong balok kayu terapung di permukaan air dengan 1/2 bagian volumenya tercelup. Jika massa jenis air 1.000 kg/m³, maka massa jenis balok kayu tersebut adalah...
+A. 200 kg/m³
+B. 250 kg/m³
+C. 500 kg/m³
+D. 750 kg/m³
+E. 1.000 kg/m³
+ANSWER: C
+
+
+7. Air mengalir di dalam pipa mendatar dari bagian yang luas penampangnya 20 cm² menuju bagian yang luas penampangnya 5 cm². Jika kelajuan air di penampang besar adalah 1 m/s, maka kelajuan air di penampang kecil adalah...
+A. 0,25 m/s
+B. 1 m/s
+C. 2 m/s
+D. 4 m/s
+E. 5 m/s
+ANSWER: D
+
+
+8. Tangki air terbuka memiliki lubang kebocoran kecil pada kedalaman 5 m dari permukaan air (g = 10 m/s²). Kecepatan air yang memancar keluar dari lubang tersebut adalah...
+A. 2 m/s
+B. 5 m/s
+C. 10 m/s
+D. 25 m/s
+E. 50 m/s
+ANSWER: C
+
+
+9. Pada aliran fluida ideal di dalam pipa mendatar, apabila laju aliran fluida di suatu titik bertambah besar, maka tekanan fluida di titik tersebut akan...
+A. Bertambah besar
+B. Berkurang (menjadi lebih rendah)
+C. Tetap sama
+D. Menjadi nol
+E. Berubah menjadi energi potensial gravitasi
+ANSWER: B
+
+
+10. Dua pipa kapiler memiliki panjang dan beda tekanan yang sama, namun jari-jari pipa A dua kali jari-jari pipa B (rA = 2rB). Menurut persamaan Poiseuille, perbandingan debit aliran fluida QA : QB adalah...
+A. 2 : 1
+B. 4 : 1
+C. 8 : 1
+D. 16 : 1
+E. 32 : 1
+ANSWER: D
+
+
+11. Gaya pemulih pada pegas yang disimpangkan sejauh x dari titik setimbangnya dirumuskan oleh Hukum Hooke sebagai...
+A. F = kx
+B. F = -kx
+C. F = ½ kx²
+D. F = mgh
+E. F = -bv
+ANSWER: B
+
+
+12. Simpangan maksimum yang dicapai benda dari titik kesetimbangannya saat berosilasi disebut...
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Fase
+E. Panjang gelombang
+ANSWER: C
+
+
+13. Sebuah benda bergetar harmonik sederhana dengan frekuensi 5 Hz. Periode getaran benda tersebut adalah...
+A. 0,1 s
+B. 0,2 s
+C. 0,5 s
+D. 2,0 s
+E. 5,0 s
+ANSWER: B
+
+
+14. Sebuah benda bermassa 2 kg digantungkan pada ujung pegas vertikal sehingga pegas bertambah panjang 0,1 m pada posisi setimbang (g = 10 m/s²). Konstanta pegas tersebut adalah...
+A. 2 N/m
+B. 20 N/m
+C. 100 N/m
+D. 200 N/m
+E. 2.000 N/m
+ANSWER: D
+
+
+15. Sebuah pegas dengan konstanta 100 N/m berosilasi dengan amplitudo 0,2 m. Energi mekanik total sistem pegas tersebut adalah...
+A. 1 J
+B. 2 J
+C. 4 J
+D. 10 J
+E. 20 J
+ANSWER: B
+
+
+16. Pada Gerak Harmonik Sederhana (GHS), saat benda berada tepat di titik kesetimbangan (x = 0), pernyataan yang benar mengenai energi sistem adalah...
+A. Energi kinetik bernilai nol dan energi potensial maksimum
+B. Energi kinetik bernilai maksimum dan energi potensial nol
+C. Energi kinetik dan energi potensial sama-sama bernilai nol
+D. Energi total sistem bernilai nol
+E. Percepatan benda mencapai nilai maksimum
+ANSWER: B
+
+
+17. Dua pegas identik diberi beban yang sama, lalu beban A ditarik sejauh 4 cm dan beban B ditarik sejauh 8 cm sebelum dilepaskan bersamaan. Perbandingan periode osilasi TA : TB adalah...
+A. 1 : 4
+B. 1 : 2
+C. 1 : 1
+D. 2 : 1
+E. 4 : 1
+ANSWER: C
+
+
+18. Sebuah bandul sederhana memiliki panjang tali 1 m dan berayun dengan periode T. Jika panjang tali bandul diubah menjadi 4 m, maka periode ayunannya menjadi...
+A. ¼ T
+B. ½ T
+C. T
+D. 2 T
+E. 4 T
+ANSWER: D
+
+
+19. Jika konstanta pegas pada sistem osilasi massa-pegas diperbesar menjadi 4 kali semula sedangkan massanya tetap, maka frekuensi sudut osilasinya akan menjadi...
+A. ¼ kali semula
+B. ½ kali semula
+C. Tetap sama
+D. 2 kali semula
+E. 4 kali semula
+ANSWER: D
+
+
+20. Pada peristiwa osilasi teredam (seperti sistem suspensi atau shock absorber kendaraan), besaran yang nilainya berkurang secara eksponensial terhadap waktu adalah...
+A. Massa benda
+B. Konstanta pegas
+C. Amplitudo osilasi
+D. Percepatan gravitasi
+E. Panjang lintasan tali
+ANSWER: C
+
+
+21. Gelombang yang arah getar mediumnya sejajar dengan arah rambat gelombangnya disebut...
+A. Gelombang transversal
+B. Gelombang longitudinal
+C. Gelombang permukaan
+D. Gelombang tali
+E. Gelombang elektromagnetik
+ANSWER: B
+
+
+22. Alat yang digunakan untuk mengukur taraf intensitas kebisingan bunyi dalam satuan desibel (dB) adalah...
+A. Manometer
+B. Venturimeter
+C. Termokopel
+D. Sound level meter
+E. Kalorimeter
+ANSWER: D
+
+
+23. Sebuah gelombang merambat dengan panjang gelombang 2 m dan frekuensi 10 Hz. Cepat rambat gelombang tersebut adalah...
+A. 0,2 m/s
+B. 5 m/s
+C. 12 m/s
+D. 20 m/s
+E. 40 m/s
+ANSWER: D
+
+
+24. Persamaan suatu gelombang berjalan dinyatakan oleh y = 0,5 sin(4x - 20t) dalam satuan SI. Cepat rambat gelombang tersebut adalah...
+A. 0,2 m/s
+B. 4 m/s
+C. 5 m/s
+D. 10 m/s
+E. 20 m/s
+ANSWER: C
+
+
+25. Seutas tali dengan rapat massa linear 0,04 kg/m ditegangkan dengan gaya sebesar 16 N. Cepat rambat gelombang transversal pada tali tersebut adalah...
+A. 4 m/s
+B. 10 m/s
+C. 20 m/s
+D. 40 m/s
+E. 400 m/s
+ANSWER: C
+
+
+26. Dua gelombang identik yang merambat searah mengalami superposisi dengan beda fase 0° (sefase). Jika amplitudo masing-masing gelombang adalah A, maka amplitudo gelombang hasil superposisinya adalah...
+A. 0
+B. 0,5 A
+C. A
+D. 2 A
+E. 4 A
+ANSWER: D
+
+
+27. Seutas tali sepanjang 2 m terikat pada kedua ujungnya dan bergetar pada nada dasar (harmonik pertama, n = 1). Panjang gelombang yang terbentuk pada tali tersebut adalah...
+A. 0,5 m
+B. 1,0 m
+C. 2,0 m
+D. 4,0 m
+E. 8,0 m
+ANSWER: D
+
+
+28. Kapal memancarkan gelombang sonar ke dasar laut dan menerima pantulannya kembali setelah 2 sekon. Jika cepat rambat bunyi di dalam air laut 1.500 m/s, kedalaman laut di tempat tersebut adalah...
+A. 750 m
+B. 1.500 m
+C. 3.000 m
+D. 4.500 m
+E. 6.000 m
+ANSWER: B
+
+
+29. Sebuah sumber bunyi menghasilkan taraf intensitas 60 dB. Jika terdapat 10 sumber bunyi identik yang dibunyikan bersamaan pada jarak yang sama, taraf intensitas totalnya menjadi...
+A. 61 dB
+B. 70 dB
+C. 80 dB
+D. 100 dB
+E. 600 dB
+ANSWER: B
+
+
+30. Sebuah mobil ambulans membunyikan sirene sambil bergerak mendekati seorang pengamat yang berdiri diam di pinggir jalan. Frekuensi bunyi sirene yang didengar oleh pengamat tersebut akan...
+A. Lebih tinggi daripada frekuensi asli sirene
+B. Lebih rendah daripada frekuensi asli sirene
+C. Sama persis dengan frekuensi asli sirene
+D. Bernilai nol karena efek pantulan
+E. Berubah-ubah menjadi setengahnya
+ANSWER: A
+
+
+31. Skala suhu yang ditetapkan sebagai skala suhu mutlak dalam Sistem Internasional (SI) adalah...
+A. Celsius (°C)
+B. Reamur (°R)
+C. Fahrenheit (°F)
+D. Kelvin (K)
+E. Rankine (°Ra)
+ANSWER: D
+
+
+32. Jenis termometer yang digunakan sebagai termometer standar karena sifat pemuaiannya paling seragam pada berbagai jenis gas di tekanan rendah adalah...
+A. Termometer air raksa
+B. Termometer alkohol
+C. Termometer gas volume konstan
+D. Termometer bimetal
+E. Termometer klinis
+ANSWER: C
+
+
+33. Suhu suatu ruangan terukur sebesar 27°C. Jika dinyatakan dalam skala suhu mutlak Kelvin (menggunakan konversi T = t°C + 273), suhu ruangan tersebut adalah...
+A. 246 K
+B. 273 K
+C. 300 K
+D. 327 K
+E. 373 K
+ANSWER: C
+
+
+34. Suhu air hangat terukur sebesar 40°C. Jika diukur menggunakan termometer berskala Reamur, suhu air tersebut adalah...
+A. 20°R
+B. 32°R
+C. 40°R
+D. 50°R
+E. 72°R
+ANSWER: B
+
+
+35. Sebatang logam panjang awalnya 10 m dipanaskan sehingga suhunya naik sebesar 50°C. Jika koefisien muai panjang logam tersebut α = 2 × 10⁻⁵ /°C, maka pertambahan panjang logam adalah...
+A. 0,001 m
+B. 0,01 m
+C. 0,1 m
+D. 1,0 m
+E. 10,01 m
+ANSWER: B
+
+
+36. Kalor sebesar 4.000 J diberikan pada 2 kg zat cair sehingga suhunya naik sebesar 5°C. Kalor jenis zat cair tersebut adalah...
+A. 200 J/kg·°C
+B. 400 J/kg·°C
+C. 800 J/kg·°C
+D. 1.000 J/kg·°C
+E. 4.000 J/kg·°C
+ANSWER: B
+
+
+37. Sebanyak 50 gram es bersuhu 0°C dicampur dengan 100 gram air bersuhu 55°C. Jika kalor lebur es 80 kal/g dan kalor jenis air 1 kal/g·°C, suhu akhir campuran saat setimbang termal adalah...
+A. 0°C
+B. 5°C
+C. 10°C
+D. 15°C
+E. 25°C
+ANSWER: C
+
+
+38. Suatu gas ideal mengalami proses adiabatik sehingga tidak ada kalor yang masuk maupun keluar sistem (Q = 0). Jika gas melakukan usaha sebesar 500 J terhadap lingkungan, maka perubahan energi dalam (ΔU) gas tersebut adalah...
+A. -500 J
+B. 0 J
+C. +250 J
+D. +500 J
+E. +1.000 J
+ANSWER: A
+
+
+39. Sebuah mesin Carnot menyerap kalor dari reservoir bersuhu tinggi 500 K dan membuang sebagian kalor ke reservoir bersuhu rendah 300 K. Efisiensi mesin Carnot tersebut adalah...
+A. 20%
+B. 30%
+C. 40%
+D. 50%
+E. 60%
+ANSWER: C
+
+
+40. Apabila suatu batang logam dipanaskan hingga suhunya naik dua kali lipat dari semula (dalam Kelvin), maka laju energi radiasi kalor yang dipancarkan permukaan logam menurut Hukum Stefan-Boltzmann akan menjadi...
+A. 2 kali semula
+B. 4 kali semula
+C. 8 kali semula
+D. 16 kali semula
+E. 32 kali semula
+ANSWER: D

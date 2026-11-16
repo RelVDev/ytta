@@ -1,0 +1,340 @@
+Nama: Clara Irvansah
+NIM: 626108110006
+Prodi: Biologi
+Kelas: Fisika DI1
+SOAL DAN JAWABAN QUIZ FISIKA
+1. Menurut hukum Pascal, tekanan yang diberikan pada zat cair dalam ruang tertutup akan diteruskan ke segala arah dengan sama besar. Penerapan prinsip tersebut dapat ditemukan pada peralatan berikut, yaitu ....
+A. Kapal selam dan balon udara
+B. Dongkrak hidrolik dan rem hidrolik
+C. Termometer dan barometer
+D. Sayap pesawat dan cerobong asap
+E. Kapal laut dan hidrometer
+Jawaban: B. Dongkrak hidrolik dan rem hidrolik
+
+2. Suatu pegas memiliki konstanta pegas 100 N/m bergetar harmonik arah vertikal dengan simpangan terjauh 5 cm. Saat simpangan beban pegas 2 cm di atas titik setimbang besar dan gaya pemulih pada pegas tersebut adalah....
+A. 500 N ke bawah
+B. 200 N ke bawah
+C. 5 N ke atas
+D. 3 N ke bawah
+E. 2 N ke bawah
+Jawaban: E. 2 N ke bawah
+
+3. Gelombang mekanik merupakan gelombang yang memerlukan medium untuk merambat. Berikut ini yang termasuk contoh gelombang mekanik adalah ....
+A. Gelombang cahaya dan gelombang radio
+B. Gelombang bunyi dan gelombang pada tali
+C. Gelombang cahaya dan gelombang inframerah
+D. Gelombang radio dan gelombang mikro
+E.Gelombang ultraviolet dan gelombang cahaya
+  Jawaban: B. Gelombang bunyi dan gelombang pada tali
+
+4. Benda A memiliki suhu 40°C, sedangkan benda B memiliki suhu 86°F. Pernyataan yang benar adalah .....
+A. Suhu A lebih tinggi daripada B sebesar 5°C.
+B. Suhu B lebih tinggi daripada A sebesar 5°C.
+C. Suhu A dan B sama.
+D. Suhu A lebih rendah daripada B sebesar 10°C.
+E. Suhu B lebih rendah daripada A sebesar 10°C
+  Jawaban: E. suhu lebih rendah daripada A sebesar 10°C
+
+5. Fluida ideal mengalir melalui pipa mendatar yang menyempit. Di suatu titik, penampang pipa mengecil dari 20 cm² menjadi 5 cm². Jika kecepatan aliran pada penampang besar adalah 2 m/s dan tekanan di titik tersebut adalah 1.5 × 105 Pa, berapakah tekanan di penampang kecil? (Massa jenis air rho = 1000kg/m³)
+A. 1.2 × 105 Pa
+B. 1.5 × 105 Pa
+C.  1.175 × 105 Pa
+D. 1.3 × 105 Pa
+E. 1× 105 Pa
+Jawaban: A. 1.2 × 105 Pa
+
+6. Persamaan gelombang berjalan pada sebuah tali dinyatakan oleh y(x, t) = 0.05 sin(2p(5t - 20x)), dengan x dalam meter dan 1 dalam sekon. Kecepatan rambat gelombang tersebut adalah...
+A. 0,25 m/s
+B. 4 m/s
+C. 5 m/s
+D. 100 m/s
+E. 0,05 m/s
+Jawaban: A. 0,25 m/s
+
+7. Sebuah partikel mengalami gerak harmonik sederhana dengan besar amplitudo 20 cm. Jika partikel memiliki simpangan 10v3 cm, fase getaran partikel terhadap titik setimbangnya adalah......
+A. 1/2
+B. 1/6
+C. 1/3
+D. 1/8
+E. 1/4
+Jawaban: B. 1/6
+
+8. Taraf intensitas bunyi pada jarak 2 m dari sumber bunyi adalah 60 dB. Taraf intensitas bunyi pada jarak 20 m dari sumber bunyi tersebut adalah.....
+A. 40 dB
+B. 50 dB
+C. 55 dB
+D. 45 dB
+E. 30 Db
+Jawaban: A. 40 Db
+
+9. Suatu alat pengangkat mobil (dongkrak hidrolik) terdiri atas 2 tabung yang berhubungan. Kedua tabung yang mempunyai diameter berbeda ini ditutup masing-masing dengan sebuah pengisap. Tabung diisi penuh air. Pada tabung besar diletakkan mobil yang hendak diangkat. Ketika pengisap pada tabung kecil diberi gaya, ternyata mobil terangkat ke atas. Jika berat mobil 3 ton, diameter pengisap tabung besar 30 cm dan tabung kecil 5 cm, serta g = 10 m/s² maka berapa gaya yang harus diberikan agar mobil terangkat naik?
+A. 833,33 N
+B. 725 N
+C. 300 N
+D. 30.000 N
+E. 254 N
+Jawaban: A. 833,33 N
+
+10. Kalor yang diperlukan untuk menaikkan suhu 2 kg air dari 20 °C menjadi 70 °C adalah .... (kalor jenis air = 4.200 J/kg°C)
+A. 42 kJ
+B. 84 kJ
+C. 210 kJ
+D. 420 kJ
+E. 840 kJ
+  Jawaban: D. 420 Kj
+
+11. Sepotong logam bermassa 200 g bersuhu 100 °C dimasukkan ke dalam 400 g air bersuhu 20 °C dalam wadah terisolasi. Suhu akhir campuran 25 °C. Jika kalor jenis air 4.200 J/kg°C, kalor jenis logam adalah ....
+A. 420 J/kg°C
+B. 560 J/kg°C
+C. 840 J/kg°C
+D. 1.120 J/kg°C
+E. 2.100 J/kg°C
+Jawaban: B. 560 J/kg°C
+
+12. Pegas yang digantung vertikal dengan ujung pegas yang bebas diberi beban 2 kg, kemudian ditarik sejauh 10 cm dari titik setimbangnya. Setelah itu, beban dilepas sehingga terjadi gerak harmonik dengan frekuensi 20 Hz. Perbandingan antara energi potensial dan energi kinetik sistem tersebut saat simpangan pegas sebesar 5 cm adalah....
+A. 8 : 3
+B. 4 : 3
+C. 3 : 8
+D. 3 : 1
+E. 1 : 3
+Jawaban: E. 1 : 3
+
+13. Sebuah partikel mengalami gerak harmonik sederhana dengan amplitudo 6 cm dan frekuensi 5 Hz. Ketika simpangannya 3v3 cm dan sudut fase awalnya nol, besar sudut fase getarannya adalah.....
+A. 30°
+B. 45°
+C. 53°
+D. 60°
+E. 150°
+Jawaban: D. 60°
+
+14. Sebuah logam bermassa 500 gram memerlukan kalor sebesar 4.5 kJ untuk menaikkan suhunya dari 20° menjadi 70° C. Kalor jenis logam tersebut adalah......
+A. 0.18 J/g°C
+B. 0.22 J/g°C
+C. 0.35 J/g°C
+D. O.45 J/g°C
+E. 0.90 J/g°C
+Jawaban: A. 0.18 J/g°C
+
+15.  Sebuah tabung diisi dengan alkohol setinggi 20 cm. Jika massa jenis alkohol 0,8 g/cm³ dan g=10m/s² besar tekanan hidrostatik yang bekerja pada kedalaman 5 cm dari dasar tabung adalah.....
+A. 1,2 × 105 Pa
+B. 4 × 104 Pa
+C. 4 × 10³ Pa
+D. 1,6 × 10³ Pa
+E. 1,2 × 10³ Pa
+Jawaban: E. 1,2 × 10³ Pa
+
+16. Air yang bermassa 250 g dan memiliki suhu 10°C akan dibuat menjadi es batu. Jika kalor lebur es 80 kal/g dan kalor jenis air 1 kal/g°C, besar kalor yang dilepaskan oleh air adalah.....
+A. 22,5 kkal
+B. 12,5 kkal
+C. 10,5 kkal
+D. 7,25 kkal
+E. 2,25 kkal
+Jawaban: A. 22,5 kkal
+
+17. Sebuah pipa organa terbuka memiliki panjang 60 cm. Jika cepat rambat bunyi di udara adalah 330 m/s, frekuensi nada atas kedua (harmonik ketiga) pipa organa tersebut adalah....
+A. 275 Hz
+B. 550 Hz
+C. 825 Hz
+D. 1.100 Hz
+E. 1.650 Hz
+Jawaban: C. 825 Hz
+
+18. Sebongkah es bermassa 300 g yang memiliki suhu 0°C dicampur dengan air bermassa 500 g dengan suhu 80°C. Suhu akhir campuran tersebut adalah....
+A. 10° C
+B. 20° C
+C. 30° C
+D. 40° C
+E. 50° C
+Jawaban: B. 20° C
+
+19. Sebuah tangki air terbuka memiliki tinggi 5 m. Pada dinding bawah tangka terdapat lubang kecil yang berada pada kedalaman 1.8 m dari permukaan air. Kecepatan pancaran air dari lubang tersebut adalah.... (g=10 m/s²)
+A. 3 m/s
+B. 6 m/s
+C. 10 m/s
+D. 8 m/s
+E. 4 m/s 
+Jawaban: B. 6 m/s
+
+20. Air mengalir melalui sebuah pipa horizontal yang diameternya menyempit dari 6 cm mejadi 2 cm. Jika kecepatan air pada penampang besar adalah 0.5 m/s, kecepatan air pada penampang kecil adalah....
+A. 1,5 m/s
+B. 3 m/s
+C. 4,5 m/s
+D. 6 m/s
+E. 9 m/s 
+Jawaban: C. 4,5 m/s
+
+21. Seberkas cahaya monokromatik dengan panjang gelombang 600 nm dijatuhkan pada celah tunggal. Jika terjadi pola difraksi maksimum orde pertama pada sudut 30°, lebar celahnya adalah...
+A. 300 nm
+B. 450 nm
+C. 600 nm
+D. 900 nm
+E. 1.200 nm
+Jawaban: E. 1.200 nm 
+
+22. Ban dalam mobil diisi udara dengan volume 100 liter dan massa 1 kg. Apabila ban itu di gunakan sebagai pelampung di dalam air, beban maksimum yang dapat diapungkan oleh ban tersebut adalah....
+A. 101 kg
+B. 100 kg
+C. 99 kg
+D. 90 kg
+E. 1 kg
+Jawaban: C. 99 kg
+
+23. Sebuah pelat baja berukuran 2 m × 1 m pada suhu 20°C. Jika koefisien muai panjang baja a = 1.2 × 10-5 °C, pertambahan luas pelat tersebut jika dipanaskan hingga 120°C adalah...
+A. 2,4 × 10?³ m²
+B. 4,8 × 10?³ m²
+C. 1,2 × 10?³ m²
+D. 9,6 × 10?³ m²
+E. 2,4 × 10?² m²
+  Jawaban: B. 4,8 × 10?³ m²
+
+
+24. Sebuah thermometer tak berskala X memiliki titik beku air -20°X dan titik didih air 140°X. Jika sebuah benda diukur menggunakan thermometer Celcius menunjukkan angka 50° C, maka jika diukur dengan thermometer X akan menunjukkan angka....
+A. 40° C
+B. 60° C
+C. 80° C 
+D. 100° C
+E. 120° C
+Jawaban: B. 60° C
+
+25. Seekor ikan berenang di dalam akuarium air laut (rho = 1025 kg/m³) pada kedalaman 40 cm dari permukaan air. Jika tekanan udara luar 1.01 × 10³ Pa dan g = 9.8 m / s² tekanan hidrostatis yang dialami ikan tersebut adalah...
+A. 4.02 × 10³ Pa
+B. 4.12 × 10³ Pa
+C. 4.02 × 104 Pa
+D. 1.05 × 105 Pa
+E. 4.12 × 104 Pa
+Jawaban: A. 4.02 × 10³ Pa
+
+26. Pegas yang bergetar harmonik dengan Ek umax kecepatan maksimum 16 m/s memiliki amplitudo 50 cm. Besar kecepatan getaran pegas ketika energi kinetiknya sama dengan energi potensialnya adalah.
+A. 16 m/s
+B. 8v3 m/s
+C. 8v2 m/s
+D. 8 m/s
+E. 4v2 m/s
+  Jawaban: C. 8v2 m/s
+
+27. Taraf intensitas bunyi pada pabrik kain yang menggunakan 100 mesin identik adalah 80 dB. Jika hari berikutnya hanya menggunakan 10 mesin, besar taraf intensitas bunyinya menjadi....
+A. 8 dB
+B. 60 Db
+C. 70 dB
+D. 90 dB
+E. 800 dB
+  Jawaban: C. 70 dB
+28. Suatu partikel bermassa m mengalami getaran harmonik sederhana. Jika partikel tersebut berada pada titik setimbangnya, maka
+A. simpangannya bernilai maksimumx
+B. percepatannya bernilai maksimum X
+C. energi potensialnya bernilai maksimum X
+D. gayanya bernilai minimum
+E. energi kinetiknya bernilai minimum
+  Jawaban: D. gayanya bernilai minimum
+
+29. Dawai dengan panjang 80 cm digetarkan secara kontinu sehingga menghasilkan nada atas pertama sebesar 250 Hz. Perhatikan pernyataan berikut.
+(1) Cepat rambat gelombang pada dawai adalah 200 m/s.
+(2) Frekuensi nada atas ketiga dawai adalah 500 Hz.
+(3) Frekuensi nada dasar dawai adalah 125 Hz.
+(4) Panjang gelombang dawai adalah 40 cm.
+Pernyataan benar ditunjukkan oleh nomor
+A. (1), (2), (3), dan (4)
+B . (1), (2), dan (3)
+C. (1) dan (3)
+D. (2) dan (4)
+E. (4) saja
+    Jawaban: B . (1), (2), dan (3)
+
+30. Suatu partikel bergetar harmonik dengan besar energi 4,0 × 10?6 J. Jika simpangan partikel 0,5 kali amplitudo, besar energi kinetik partikel tersebut adalah
+A. 10 × 10?6 J
+B. 2,0 × 10?6 J
+C. 2,5 × 10?6 J
+D. 3,0 × 10?6 J
+E. 4 × 10?6 J
+    Jawaban: D. 3,0 × 10?6 J
+
+31. Ketika gelombang air merambat dari bagian kolam yang dalam menuju bagian kolam yang dangkal dengan sudut datang tertentu, terjadi perubahan karakteristik gelombang. Perhatikan pernyataan berikut:
+1. Frekuensi gelombang tidak mengalami perubahan saat melintasi batas kedua kedalaman air tersebut.
+2. Cepat rambat gelombang berkurang saat memasuki daerah yang lebih dangkal.
+3. Panjang gelombang membesar saat gelombang bergerak menuju daerah yang lebih dangkal.
+4. Arah rambat gelombang dibelokkan mendekati garis normal saat memasuki daerah dangkal.
+Pernyataan yang benar adalah...
+A. 1, 2, dan 4
+B. 1 dan 3 saja
+C. 2 dan 3 saja
+D. 4 saja
+    Jawaban: A. 1, 2, dan 4
+    
+32. Suatu pegas saat diberi beban 7,5 N mengalami pertambahan panjang sebesar 1,5 cm. Jika pegas tersebut bertambah panjang 6 cm dari panjang mula-mula, besar energi potensial yang dialami pegas adalah...
+A. 0,09 J
+B. 0,9 J
+C. 9 J
+D. 90 J
+E. 900 J
+	Jawaban: B. 0,9 J
+
+33.  Perhatikan pernyataan-pernyataan teoritis mengenai karakteristik dasar gelombang mekanik berikut ini, Gelombang mekanik terjadi akibat
+1. adanya usikan atau getaran yang merambat melalui suatu medium perantara.
+2. Gelombang mekanik tetap dapat merambat di ruang hampa udara asalkan amplitudonya cukup besar.
+3. Dalam perambatannya, gelombang mekanik memindahkan materi partikel medium secara permanen dari satu titik ke titik lainnya.
+4. Gelombang bunyi di udara diklasifikasikan sebagai gelombang mekanik longitudinal karena arah getar partikel udara sejajar dengan arah rambatnya.
+Pernyataan yang benar adalah...
+A. 1 dan 4 saja
+B. 1 dan 2 saja
+C. 2 dan 3 saja
+D. 1,3, dan 4 
+E. Semua benar
+    Jawaban: A. 1 dan 4 saja
+    
+34. Andi bermain ayunan dari ketinggian 1/4 m hingga 11/4 m dari permukaan tanah. kecepatan maksimum Andi adalah
+A. 2 m/s
+B. 5 m/s
+C. 2v10 m / s
+D. 5v2 m / s
+E. 5v10 m / s
+    Jawaban: D. 5v2 m / s
+
+
+35. Sebanyak 200 gram logam dipanaskan dari 25°C hingga 75°C. Jika kalor yang diserap oleh logam tersebut adalah 2.000 Joule, kalor jenis logam tersebut adalah...
+A. 0.10 J/g°C
+B. 0.20 J/g°C
+C. 0.25 J/g°C
+D. 0.40 J/g°C
+E. 0.50 J/g°C 
+    Jawaban: B. 0.20 J/g°C
+    
+36. Jika dua buah benda yang memiliki suhu berbeda disentuhkan satu sama lain dalam sistem terisolasi, kondisi kesetimbangan termal akan tercapai apabila...
+A. Kedua benda memiliki kapasitas kalor yang sama besar
+B. Jumlah energi dalam kedua benda menjadi sama besar
+C. Laju perpindahan kalor netto di antara kedua benda bernilai nol
+D. Benda bersuhu rendah melepaskan kalor ke benda bersuhu tinggi
+E. Kedua benda mengalami perubahan wujud secara bersamaan
+    Jawaban: C. Laju perpindahan kalor netto di antara kedua benda bernilai nol
+    
+37. Sebuah tangka air terbuka memiliki lubang kecil pada kedalaman h di bawah permukaan air. Kecepatan pancaran air keluar dari lubang tersebut terutama dipengaruhi oleh
+A. Luas penampang lubang bocor
+B. Luas penampang total tangka air
+C. Kedalam lubang dari permukaan air
+D. Massa jenis air dalam tangka
+E. Tinggi total tangka air dari permukaan tanah
+Jawaban: C. Kedalam lubang dari permukaan air
+
+38. Suatu benda dicelupkan ke dalam zat cair. Berdasarkan prinsip Archimedes, benda akan mengalami gaya ke atas yang besarnya sama dengan ....
+A. Berat benda di udara
+B. Massa jenis benda dikalikan percepatan gravitasi
+C. Berat zat cair yang dipindahkan oleh benda
+D. Tekanan udara di permukaan zat cair
+E. Massa benda dikalikan volumenya
+    Jawaban: C. Berat zat cair yang dipindahkan oleh benda
+    
+39. Ketika gelombang mekanik merambat melalui suatu medium, pernyataan yang tepat mengenai perpindahan energi dan partikel medium adalah ....
+A. Partikel medium berpindah secara permanen mengikuti arah rambat gelombang.
+B. Gelombang memindahkan energi tanpa memindahkan materi medium secara permanen.
+C. Gelombang mekanik dapat merambat tanpa medium perantara.
+D. Frekuensi gelombang selalu berubah selama merambat.
+E. Semua gelombang mekanik memiliki arah getaran tegak lurus terhadap arah rambatnya.
+Jawaban: B. Gelombang memindahkan energi tanpa memindahkan materi medium secara permanen.
+
+40. Pada gerak harmonik sederhana, sebuah benda bergetar pada ujung pegas. Jika amplitudo getaran diperbesar menjadi dua kali semula, pernyataan yang benar mengenai energi mekanik totalnya adalah ....
+A. Energi mekanik tetap karena massa benda tidak berubah.
+B. Energi mekanik menjadi dua kali semula.
+C. Energi mekanik menjadi empat kali semula.
+D. Energi mekanik menjadi setengah dari semula.
+E. Energi mekanik menjadi seperempat dari semula.
+    Jawaban: C. Energi mekanik menjadi empat kali semula.
+

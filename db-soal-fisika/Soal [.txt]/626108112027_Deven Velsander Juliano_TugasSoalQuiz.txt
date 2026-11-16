@@ -1,0 +1,241 @@
+1. Sebuah benda bermassa 600 g memiliki volume 200 cm³. Berapa massa jenisnya?
+* A. 0,3 g/cm³
+* B. 2 g/cm³
+* C. 3 g/cm³
+* D. 12 g/cm³
+Jawaban: C.
+2. Gaya 200 N bekerja tegak lurus pada permukaan seluas 0,5 m². Berapa tekanannya?
+* A. 100 Pa
+* B. 400 Pa
+* C. 1.000 Pa
+* D. 100.000 Pa
+Jawaban: B.
+3. Seorang penyelam berada pada kedalaman 5 m di dalam danau. Berapa tekanan hidrostatis yang dialaminya?
+* A. 5.000 Pa
+* B. 10.000 Pa
+* C. 500.000 Pa
+* D. 50.000 Pa
+Jawaban: D.
+4. Alat ukur tekanan ban menunjukkan 250 kPa. Jika tekanan atmosfer 101 kPa, berapa tekanan absolut di dalam ban?
+* A. 351 kPa
+* B. 149 kPa
+* C. 250 kPa
+* D. 25.250 kPa
+Jawaban: A.
+5. Pada dongkrak hidrolik, penampang kecil 10 cm² dan penampang besar 500 cm². Jika penampang kecil ditekan dengan gaya 100 N, berapa gaya di penampang besar?
+* A. 2 N
+* B. 500 N
+* C. 5.000 N
+* D. 50.000 N
+Jawaban: C.
+6. Sebuah benda bervolume 0,002 m³ tercelup seluruhnya ke dalam air. Berapa gaya apung yang dialaminya?
+* A. 2 N
+* B. 20 N
+* C. 200 N
+* D. 2.000 N
+Jawaban: B.
+7. Sebuah batu beratnya 50 N di udara. Saat tercelup seluruhnya ke dalam air, gaya apungnya 20 N. Berapa berat batu di dalam air?
+* A. 20 N
+* B. 70 N
+* C. 2,5 N
+* D. 30 N
+Jawaban: D.
+8. Balok kayu bermassa jenis 600 kg/m³ terapung di air. Berapa persen volume balok yang tercelup?
+* A. 60%
+* B. 40%
+* C. 100%
+* D. 6%
+Jawaban: A.
+9. Air mengalir dalam pipa berpenampang 10 cm² dengan kecepatan 2 m/s, lalu pipa menyempit menjadi 5 cm². Berapa kecepatan air di bagian yang sempit?
+* A. 1 m/s
+* B. 2 m/s
+* C. 4 m/s
+* D. 8 m/s
+Jawaban: C.
+10. Menurut prinsip Bernoulli, pada bagian fluida yang kecepatannya tinggi, tekanannya...
+* A. tinggi
+* B. rendah
+* C. tetap sama
+* D. tidak ada hubungannya dengan kecepatan
+Jawaban: B.
+11. Sebuah benda bergetar 20 kali dalam 10 detik. Berapa frekuensinya?
+* A. 2 Hz
+* B. 0,5 Hz
+* C. 10 Hz
+* D. 200 Hz
+Jawaban: A.
+12. Pegas dengan konstanta k = 200 N/m ditarik 0,05 m dari posisi setimbangnya. Berapa besar gaya pulihnya?
+* A. 4.000 N
+* B. 0,25 N
+* C. 100 N
+* D. 10 N
+Jawaban: D.
+13. Benda bermassa 0,5 kg digantung pada pegas dengan k = 200 N/m lalu digetarkan. Berapa periodenya?
+* A. 0,05 s
+* B. 0,1 s
+* C. 0,314 s
+* D. 3,14 s
+Jawaban: C.
+14. Beban pada pegas berosilasi dengan periode T. Jika massa beban dijadikan 4 kali lipat, periodenya menjadi...
+* A. tetap T
+* B. 2T
+* C. 4T
+* D. 16T
+Jawaban: B.
+15. Bandul sederhana dengan panjang tali 2,5 m berayun di tempat dengan g = 10 m/s². Berapa periodenya?
+* A. 3,14 s
+* B. 1,57 s
+* C. 6,28 s
+* D. 0,5 s
+Jawaban: A.
+16. Periode bandul sederhana dipengaruhi oleh...
+* A. massa bandul
+* B. massa bandul dan panjang tali
+* C. amplitudo ayunan saja
+* D. panjang tali dan percepatan gravitasi
+Jawaban: D.
+17. Posisi sebuah benda yang berosilasi dinyatakan dengan x = 5 cos(2pt) cm (t dalam sekon). Berapa frekuensi osilasinya?
+* A. 2p Hz
+* B. 5 Hz
+* C. 1 Hz
+* D. 0,5 Hz
+Jawaban: C.
+18. Pegas dengan k = 200 N/m berosilasi dengan amplitudo 0,1 m. Berapa energi totalnya?
+* A. 10 J
+* B. 1 J
+* C. 0,1 J
+* D. 20 J
+Jawaban: B.
+19. Benda bermassa 2 kg terikat pada pegas k = 200 N/m dan berosilasi dengan amplitudo 0,1 m. Berapa kecepatan maksimumnya?
+* A. 1 m/s
+* B. 10 m/s
+* C. 0,1 m/s
+* D. 100 m/s
+Jawaban: A.
+20. Pada posisi mana kecepatan benda yang berosilasi paling besar?
+* A. di simpangan maksimum
+* B. di setengah amplitudo
+* C. di titik setimbang
+* D. di mana saja sama besar
+Jawaban: C.
+21. Gelombang bunyi yang merambat di udara termasuk gelombang...
+* A. transversal
+* B. longitudinal
+* C. elektromagnetik
+* D. yang tidak membutuhkan medium
+Jawaban: B.
+22. Sebuah gelombang memiliki frekuensi 5 Hz dan panjang gelombang 2 m. Berapa cepat rambatnya?
+* A. 2,5 m/s
+* B. 0,4 m/s
+* C. 7 m/s
+* D. 10 m/s
+Jawaban: D.
+23. Sebuah gelombang memiliki periode 0,25 s. Berapa frekuensinya?
+* A. 0,25 Hz
+* B. 2 Hz
+* C. 4 Hz
+* D. 25 Hz
+Jawaban: C.
+24. Sebuah gelombang memiliki panjang gelombang 0,5 m. Berapa bilangan gelombangnya (k)?
+* A. 4p rad/m ˜ 12,6 rad/m
+* B. 2p rad/m ˜ 6,28 rad/m
+* C. 0,5 rad/m
+* D. p/4 rad/m
+Jawaban: A.
+25. Gelombang dinyatakan dengan y = 0,02 sin(2px - 10pt), x dalam meter dan t dalam sekon. Berapa cepat rambat gelombang tersebut?
+* A. 10p m/s
+* B. 5 m/s
+* C. 2p m/s
+* D. 0,2 m/s
+Jawaban: B.
+26. Seutas tali bertegangan 100 N dan bermassa per satuan panjang 0,01 kg/m. Berapa cepat rambat gelombang pada tali itu?
+* A. 1 m/s
+* B. 10 m/s
+* C. 10.000 m/s
+* D. 100 m/s
+Jawaban: D.
+27. Dua gelombang beramplitudo sama bertemu dengan beda fase 180°. Hasil interferensinya adalah...
+* A. saling meniadakan, amplitudo menjadi nol
+* B. saling menguatkan, amplitudo menjadi dua kali
+* C. amplitudo tetap sama
+* D. frekuensi menjadi dua kali
+Jawaban: A.
+28. Tali sepanjang 1,5 m terikat pada kedua ujungnya, dan cepat rambat gelombang pada tali 60 m/s. Berapa frekuensi nada dasarnya?
+* A. 40 Hz
+* B. 60 Hz
+* C. 20 Hz
+* D. 90 Hz
+Jawaban: C.
+29. Kapal mengirim sinyal sonar dan pantulannya dari dasar laut diterima setelah 2 detik. Jika cepat rambat bunyi di air laut 1.500 m/s, berapa kedalaman lautnya?
+* A. 3.000 m
+* B. 1.500 m
+* C. 750 m
+* D. 1.000 m
+Jawaban: B.
+30. Intensitas sebuah bunyi 10?6 W/m². Berapa taraf intensitasnya jika I0 = 10?¹² W/m²?
+* A. 6 dB
+* B. 12 dB
+* C. 600 dB
+* D. 60 dB
+Jawaban: D.
+31. Berapa 40 °C jika dinyatakan dalam skala Fahrenheit?
+* A. 72 °F
+* B. 88 °F
+* C. 104 °F
+* D. 40 °F
+Jawaban: C.
+32. Suhu tubuh normal 98,6 °F. Berapa suhunya dalam Celsius?
+* A. 37 °C
+* B. 66,6 °C
+* C. 52 °C
+* D. 30 °C
+Jawaban: A.
+33. Berapa 25 °C jika dinyatakan dalam Kelvin?
+* A. 248 K
+* B. 25 K
+* C. 273 K
+* D. 298 K
+Jawaban: D.
+34. Berapa 350 K jika dinyatakan dalam Celsius?
+* A. 623 °C
+* B. 77 °C
+* C. 350 °C
+* D. 27 °C
+Jawaban: B.
+35. Berapa 50 °C jika dinyatakan dalam skala Reamur?
+* A. 62,5 °R
+* B. 50 °R
+* C. 40 °R
+* D. 90 °R
+Jawaban: C.
+36. Berapa 60 °R jika dinyatakan dalam Celsius?
+* A. 75 °C
+* B. 48 °C
+* C. 100 °C
+* D. 60 °C
+Jawaban: A.
+37. Berapa 68 °F jika dinyatakan dalam Kelvin?
+* A. 20 K
+* B. 341 K
+* C. 68 K
+* D. 293 K
+Jawaban: D.
+38. Pada suhu berapa termometer Celsius dan Fahrenheit menunjukkan angka yang sama?
+* A. 0
+* B. -40
+* C. 40
+* D. 32
+Jawaban: B.
+39. Berapa 212 °F jika dinyatakan dalam Kelvin?
+* A. 100 K
+* B. 212 K
+* C. 373 K
+* D. 485 K
+Jawaban: C.
+40. Berapa 20 °R jika dinyatakan dalam Fahrenheit?
+* A. 77 °F
+* B. 68 °F
+* C. 36 °F
+* D. 45 °F
+Jawaban: A.
+

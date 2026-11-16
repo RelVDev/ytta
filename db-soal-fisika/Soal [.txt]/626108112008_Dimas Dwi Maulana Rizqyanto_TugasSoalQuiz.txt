@@ -1,0 +1,280 @@
+1. Fluida merupakan zat yang dapat mengalir dan mengalami perubahan bentuk ketika diberikan gaya. Berikut ini yang termasuk karakteristik fluida adalah ....
+A. Memiliki bentuk tetap dan volume tetap
+B. Tidak dapat mengalami perubahan bentuk
+C. Dapat mengalir dan menyesuaikan bentuk wadahnya
+D. Selalu memiliki massa jenis yang sama
+E. Tidak dapat menerima tekanan
+ANSWER: C
+2. Tekanan hidrostatis pada suatu titik di dalam zat cair dipengaruhi oleh beberapa faktor. Faktor yang paling tepat adalah ....
+A. Bentuk wadah dan luas permukaan zat cair
+B. Kedalaman, massa jenis zat cair, dan percepatan gravitasi
+C. Volume zat cair dan luas wadah
+D. Suhu dan warna zat cair
+E. Massa benda yang berada di sekitar zat cair
+ANSWER: B
+3. Hukum Pascal menyatakan bahwa ....
+A. Tekanan pada zat cair berkurang seiring bertambahnya kedalaman
+B. Benda yang dicelupkan ke dalam zat cair akan mengalami gaya ke atas
+C. Tekanan yang diberikan pada fluida dalam ruang tertutup diteruskan sama besar ke segala arah
+D. Kecepatan fluida selalu berbanding lurus dengan tekanan
+E. Massa jenis zat cair selalu berubah terhadap kedalaman
+ANSWER: C
+4. Berdasarkan Hukum Archimedes, sebuah benda yang dicelupkan ke dalam fluida akan mengalami gaya ke atas sebesar ....
+A. Berat benda di udara
+B. Massa benda dikalikan percepatan gravitasi
+C. Massa jenis benda dikalikan volume benda
+D. Berat fluida yang dipindahkan oleh benda
+E. Tekanan atmosfer di sekitar benda
+ANSWER: D
+5. Persamaan kontinuitas pada aliran fluida ideal menyatakan bahwa ....
+A. Tekanan fluida selalu konstan
+B. Massa jenis fluida selalu bertambah
+C. Hasil kali luas penampang dan kecepatan aliran tetap
+D. Kecepatan fluida tidak dipengaruhi luas penampang
+E. Tekanan fluida berbanding lurus dengan luas penampang
+ANSWER: C
+6. Sebuah benda memberikan gaya sebesar 200 N pada permukaan dengan luas 0,5 m². Besarnya tekanan yang diberikan benda tersebut adalah ....
+A. 100 Pa
+B. 200 Pa
+C. 300 Pa
+D. 400 Pa
+E. 500 Pa
+ANSWER: D
+7. Sebuah kolam memiliki kedalaman air sebesar 3 meter. Jika massa jenis air 1.000 kg/m³ dan percepatan gravitasi 10 m/s², tekanan hidrostatis pada dasar kolam adalah ....
+A. 10.000 Pa
+B. 20.000 Pa
+C. 30.000 Pa
+D. 40.000 Pa
+E. 50.000 Pa
+ANSWER: C
+8. Sebuah alat hidrolik memiliki luas penampang kecil 5 cm² dan luas penampang besar 100 cm². Jika gaya yang diberikan pada penampang kecil sebesar 20 N, gaya yang dihasilkan pada penampang besar adalah ....
+A. 100 N
+B. 200 N
+C. 300 N
+D. 400 N
+E. 500 N
+ANSWER: D
+9. Sebuah benda memiliki volume 0,002 m³ dan dicelupkan seluruhnya ke dalam air. Jika massa jenis air 1.000 kg/m³ dan percepatan gravitasi 10 m/s², besar gaya Archimedes yang dialami benda adalah ....
+A. 2 N
+B. 10 N
+C. 15 N
+D. 20 N
+E. 25 N
+ANSWER: D
+10. Air mengalir melalui sebuah pipa dengan luas penampang 4 cm² dan kecepatan 2 m/s. Jika pipa menyempit sehingga luas penampangnya menjadi 2 cm², kecepatan air pada bagian tersebut adalah ....
+A. 1 m/s
+B. 2 m/s
+C. 3 m/s
+D. 4 m/s
+E. 8 m/s
+ANSWER: D
+11. Gerak harmonik sederhana merupakan gerak bolak-balik secara periodik melalui titik keseimbangan. Ciri utama gerak harmonik sederhana adalah ....
+A. Percepatan selalu konstan
+B. Gaya pemulih sebanding dengan simpangan dan berlawanan arah
+C. Kecepatan selalu bernilai maksimum
+D. Benda bergerak hanya dalam satu arah
+E. Tidak memiliki titik keseimbangan
+ANSWER: B
+12. Pada sistem pegas yang mengalami gerak harmonik sederhana, periode getaran dipengaruhi oleh ....
+A. Massa benda dan konstanta pegas
+B. Warna dan bentuk pegas
+C. Kecepatan awal benda saja
+D. Luas permukaan benda
+E. Tekanan udara di sekitar benda
+ANSWER: A
+13. Pada gerak harmonik sederhana, ketika benda berada pada titik simpangan maksimum, kondisi energi yang terjadi adalah ....
+A. Energi kinetik maksimum dan energi potensial minimum
+B. Energi kinetik dan energi potensial sama dengan nol
+C. Energi kinetik maksimum
+D. Energi potensial maksimum dan energi kinetik nol
+E. Energi mekanik bernilai nol
+ANSWER: D
+14. Pada sistem bandul sederhana dengan simpangan kecil, periode ayunan dipengaruhi oleh ....
+A. Massa bandul dan warna tali
+B. Panjang tali dan percepatan gravitasi
+C. Massa bandul dan amplitudo saja
+D. Bentuk bandul dan luas permukaannya
+E. Kecepatan angin dan massa bandul
+ANSWER: B
+15. Frekuensi suatu getaran didefinisikan sebagai ....
+A. Waktu yang dibutuhkan untuk satu getaran
+B. Jarak yang ditempuh selama satu getaran
+C. Banyaknya getaran yang terjadi setiap satuan waktu
+D. Besarnya simpangan maksimum
+E. Besarnya gaya pemulih pada benda
+ANSWER: C
+16. Sebuah benda melakukan 40 getaran dalam waktu 20 sekon. Frekuensi getaran benda tersebut adalah ....
+A. 0,5 Hz
+B. 1 Hz
+C. 2 Hz
+D. 4 Hz
+E. 8 Hz
+ANSWER: C
+17. Sebuah pegas memiliki konstanta pegas sebesar 200 N/m dan dihubungkan dengan benda bermassa 2 kg. Periode getaran sistem tersebut adalah .... (Gunakan p = 3,14)
+A. 0,314 sekon
+B. 0,628 sekon
+C. 1,256 sekon
+D. 2,512 sekon
+E. 3,140 sekon
+ANSWER: B
+18. Sebuah bandul sederhana memiliki panjang tali 1 meter. Jika percepatan gravitasi sebesar 10 m/s² dan p = 3,14, periode ayunan bandul tersebut adalah ....
+A. 0,5 sekon
+B. 1 sekon
+C. 1,5 sekon
+D. 2 sekon
+E. 3 sekon
+ANSWER: D
+19. Sebuah benda bergerak harmonik sederhana dengan amplitudo 0,2 meter dan frekuensi 5 Hz. Kecepatan maksimum benda tersebut adalah ....
+A. 2p m/s
+B. 3p m/s
+C. 4p m/s
+D. 5p m/s
+E. 6p m/s
+ANSWER: A
+20. Sebuah benda bermassa 0,5 kg bergerak harmonik sederhana dengan kecepatan maksimum 4 m/s. Energi mekanik total sistem adalah ....
+A. 1 J
+B. 2 J
+C. 3 J
+D. 4 J
+E. 5 J
+ANSWER: D
+21. Gelombang mekanik adalah gelombang yang dalam perambatannya membutuhkan ....
+A. Ruang hampa
+B. Medan magnet
+C. Medium perambatan
+D. Energi listrik
+E. Cahaya matahari
+ANSWER: C
+22. Perbedaan utama antara gelombang transversal dan longitudinal terletak pada ....
+A. Besarnya amplitudo
+B. Arah getaran terhadap arah rambat gelombang
+C. Frekuensi gelombang
+D. Cepat rambat gelombang
+E. Energi yang dihasilkan
+ANSWER: B
+23. Gelombang bunyi di udara termasuk gelombang longitudinal karena ....
+A. Arah getaran partikel medium sejajar dengan arah rambat gelombang
+B. Arah getaran partikel medium tegak lurus dengan arah rambat gelombang
+C. Tidak membutuhkan medium untuk merambat
+D. Hanya dapat merambat dalam zat padat
+E. Memiliki amplitudo yang selalu tetap
+ANSWER: A
+24. Amplitudo dalam gelombang merupakan ....
+A. Jumlah gelombang dalam satu detik
+B. Waktu yang dibutuhkan untuk satu gelombang
+C. Jarak antara dua puncak gelombang
+D. Simpangan maksimum dari titik keseimbangan
+E. Kecepatan perambatan gelombang
+ANSWER: D
+25. Ketika gelombang mekanik merambat melalui suatu medium, besaran yang dipindahkan dari satu tempat ke tempat lain adalah ....
+A. Partikel medium secara keseluruhan
+B. Massa medium
+C. Energi
+D. Volume medium
+E. Bentuk permanen medium
+ANSWER: C
+26. Sebuah gelombang memiliki panjang gelombang 4 meter dan frekuensi 5 Hz. Cepat rambat gelombang tersebut adalah ....
+A. 5 m/s
+B. 10 m/s
+C. 15 m/s
+D. 20 m/s
+E. 25 m/s
+ANSWER: D
+27. Sebuah gelombang memiliki frekuensi 20 Hz. Periode gelombang tersebut adalah ....
+A. 0,01 sekon
+B. 0,02 sekon
+C. 0,05 sekon
+D. 0,1 sekon
+E. 0,2 sekon
+ANSWER: C
+28. Sebuah tali memiliki panjang 2 meter dan diberi tegangan sebesar 200 N. Jika massa tali adalah 0,02 kg, cepat rambat gelombang pada tali tersebut adalah ....
+A. 50 m/s
+B. 100 m/s
+C. 120 m/s
+D. 141,4 m/s
+E. 150 m/s
+ANSWER: D
+29. Sebuah gelombang merambat dengan cepat rambat 300 m/s dan memiliki frekuensi 150 Hz. Panjang gelombangnya adalah ....
+A. 0,5 m
+B. 1 m
+C. 1,5 m
+D. 2 m
+E. 2,5 m
+ANSWER: D
+30. Sebuah sumber gelombang menghasilkan 120 gelombang selama 60 sekon. Jika panjang gelombangnya 3 meter, cepat rambat gelombang tersebut adalah ....
+A. 3 m/s
+B. 4 m/s
+C. 5 m/s
+D. 6 m/s
+E. 8 m/s
+ANSWER: D
+31. Suhu merupakan besaran fisika yang digunakan untuk menyatakan ....
+A. Jumlah kalor dalam suatu benda
+B. Derajat panas atau dinginnya suatu benda
+C. Massa suatu benda
+D. Energi potensial suatu benda
+E. Volume suatu benda
+ANSWER: B
+32. Alat yang digunakan untuk mengukur suhu suatu benda adalah ....
+A. Barometer
+B. Higrometer
+C. Termometer
+D. Amperemeter
+E. Dinamometer
+ANSWER: C
+33. Ketika suatu benda dipanaskan, sebagian besar zat akan mengalami pemuaian. Hal ini terjadi karena ....
+A. Partikel zat berhenti bergerak
+B. Jarak rata-rata antarpartikel meningkat
+C. Massa benda bertambah
+D. Jumlah partikel bertambah
+E. Massa jenis benda selalu meningkat
+ANSWER: B
+34. Perbedaan antara suhu dan kalor yang paling tepat adalah ....
+A. Suhu dan kalor merupakan besaran yang sama
+B. Suhu merupakan energi, sedangkan kalor merupakan massa
+C. Suhu menyatakan tingkat panas suatu benda, sedangkan kalor merupakan energi yang berpindah karena perbedaan suhu
+D. Kalor tidak dapat berpindah antarbenda
+E. Suhu hanya dapat diukur menggunakan skala Celsius
+ANSWER: C
+35. Perpindahan kalor yang terjadi melalui zat perantara tanpa disertai perpindahan partikel zat secara keseluruhan disebut ....
+A. Konveksi
+B. Radiasi
+C. Konduksi
+D. Evaporasi
+E. Sublimasi
+ANSWER: C
+36. Suhu suatu benda adalah 30°C. Jika dikonversikan ke dalam skala Kelvin, suhu benda tersebut adalah ....
+A. 273 K
+B. 283 K
+C. 293 K
+D. 303 K
+E. 313 K
+ANSWER: D
+37. Suhu suatu benda menunjukkan 86°F. Jika dikonversikan ke dalam skala Celsius, suhu benda tersebut adalah ....
+A. 20°C
+B. 25°C
+C. 30°C
+D. 35°C
+E. 40°C
+ANSWER: C
+38. Sebuah batang logam memiliki panjang awal 2 meter. Jika koefisien muai panjang logam tersebut adalah 0,00002/°C dan mengalami kenaikan suhu sebesar 50°C, pertambahan panjang batang adalah ....
+A. 0,5 mm
+B. 1 mm
+C. 2 mm
+D. 3 mm
+E. 4 mm
+ANSWER: C
+39. Sebanyak 2 kg air dipanaskan dari suhu 25°C menjadi 75°C. Jika kalor jenis air adalah 4.200 J/kg°C, kalor yang dibutuhkan adalah ....
+A. 210.000 J
+B. 310.000 J
+C. 420.000 J
+D. 520.000 J
+E. 620.000 J
+ANSWER: C
+40. Sebanyak 200 gram air bersuhu 80°C dicampurkan dengan 300 gram air bersuhu 20°C. Jika tidak terjadi kehilangan kalor ke lingkungan dan kalor jenis air sama, suhu akhir campuran adalah ....
+A. 40°C
+B. 44°C
+C. 50°C
+D. 55°C
+E. 60°C
+ANSWER: B

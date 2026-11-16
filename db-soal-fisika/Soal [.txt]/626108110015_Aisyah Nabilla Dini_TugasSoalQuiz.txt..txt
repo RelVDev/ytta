@@ -1,0 +1,394 @@
+Nama: Aisyah Nabilla Dini 
+NIM: 626108110015
+Matkul: FISIKA
+Kelas: DI 1
+
+SOAL & JAWABAN
+
+ FLUIDA (soal 1-10)
+
+1. Yang termasuk ke dalam fluida adalah...
+A. zat padat dan zat cair
+B. zat padat dan gas
+C. zat cair dan gas
+D. zat padat saja
+E. zat padat, zat cair, dan gas
+
+Jawaban: C.
+
+2. Pernyataan yang sesuai dengan Prinsip Pascal adalah...
+A. tekanan dalam fluida hanya bekerja ke arah bawah
+B. tekanan dalam fluida tidak berubah meskipun diberi tekanan luar
+C. tekanan luar hanya dirasakan pada tempat penekanan
+D. tekanan hanya bekerja pada dasar wadah
+E. tekanan luar yang bekerja pada fluida disalurkan ke seluruh bagian fluida
+
+Jawaban: E. 
+
+3. Gaya tekan ke atas (gaya apung) yang dialami benda di dalam fluida sama dengan...
+A. berat benda di udara
+B. berat fluida yang dipindahkan oleh benda
+C. massa benda yang tercelup
+D. tekanan udara di sekitar benda
+E. volume wadah fluida
+
+Jawaban: B. 
+
+4. Seorang penyelam bergerak semakin dalam di dalam laut. Tekanan air yang dialami penyelam tersebut akan...
+A. semakin kecil
+B. tetap sama
+C. menjadi nol
+D. semakin besar
+E. berubah-ubah tanpa pola
+
+Jawaban: D. 
+
+5. Pengukur tekanan ban menunjukkan angka 220 kPa. Jika tekanan atmosfer 101 kPa, tekanan absolut di dalam ban adalah...
+A. 101 kPa
+B. 119 kPa
+C. 220 kPa
+D. 300 kPa
+E. 321 kPa
+
+Jawaban: E. 
+
+6. Berdasarkan Persamaan Bernoulli untuk fluida bergerak, jika kecepatan aliran fluida bernilai tinggi, maka tekanan pada fluida tersebut akan menjadi...
+A. Semakin tinggi
+B. Menjadi nol
+C. Rendah
+D. Tetap dan tidak berubah
+E. Sama besar dengan tekanan atmosfer  
+
+Jawaban: C. 
+
+7. Gaya tarik-menarik antara molekul-molekul yang berlainan jenis (misalnya antara molekul air dan dinding kaca) dikenal dengan istilah...
+A. Gaya kohesi
+B. Gaya adhesi
+C. Viskositas
+D. Tegangan permukaan
+E. Tekanan terukur  
+
+Jawaban: B.
+
+8. Contoh penerapan Prinsip Pascal dalam kehidupan sehari-hari adalah...
+A. dongkrak hidrolik
+B. termometer raksa
+C. lampu senter
+D. jam dinding
+E. timbangan digital
+
+Jawaban: A. 
+
+9. Air mengalir di dalam pipa yang penampangnya makin menyempit. Kecepatan air di bagian yang menyempit akan...
+A. bertambah besar
+B. berkurang
+C. tetap sama
+D. menjadi nol
+E. berbalik arah
+
+Jawaban: A.
+
+10. Alat ukur yang digunakan untuk mengetahui besarnya tekanan gas atau fluida di dalam ruang tertutup dengan memanfaatkan perbedaan ketinggian cairan (seperti air raksa atau air) disebut...
+A. Venturimeter
+B. Manometer tabung terbuka
+C. Pipa kapiler
+D. Dongkrak hidrolik
+E. Barometer logam  
+
+Jawaban: B. 
+
+OSILATOR HARMONIK (11-20)
+
+11. Proyeksi gerak melingkar beraturan pada salah satu diameter lingkarannya merupakan...
+A. gerak lurus beraturan
+B. gerak parabola
+C. gerak harmonik sederhana
+D. gerak lurus berubah beraturan
+E. gerak jatuh bebas
+
+Jawaban: C. 
+
+12. Sebuah balok berosilasi vertikal pada pegas dengan frekuensi 4 Hz. Frekuensi sudut osilasi balok tersebut adalah...
+A. 4 rad/s
+B. 8 pi rad/s
+C. 4 pi rad/s
+D. 16 pi rad/s
+E. 2 pi rad/s
+
+Jawaban: B. 
+
+13. Syarat suatu benda melakukan gerak harmonik sederhana (GHS) adalah...
+A. percepatannya konstan
+B. percepatannya sebanding dengan perpindahan dan searah dengan perpindahan
+C. kecepatannya konstan
+D. percepatannya sebanding dengan perpindahan tetapi berlawanan arah
+E. gaya pulihnya sebanding dengan kecepatan benda
+
+Jawaban: D.
+
+14. Simpangan maksimum pada gerak harmonik sederhana disebut...
+A. frekuensi
+B. amplitudo
+C. periode
+D. fase
+E. frekuensi sudut
+
+Jawaban: B.
+
+15. Pada Hukum Hooke F = -kx, tanda negatif menunjukkan bahwa...
+A. gaya pegas searah dengan perpindahan
+B. gaya pegas selalu bernilai nol
+C. konstanta pegas bernilai negatif
+D. pegas selalu memendek
+E. gaya pulih pegas berlawanan arah dengan perpindahan
+
+Jawaban: E.
+
+16. Dua pegas serupa diberi beban bermassa sama, lalu disimpangkan masing-masing 5 cm dan 10 cm dan dilepaskan bersamaan. Kedua benda akan mencapai titik setimbang...
+A. bersamaan karena periode tidak bergantung pada amplitudo
+B. lebih dulu pada benda yang disimpangkan 5 cm karena lintasannya lebih pendek
+C. lebih dulu pada benda yang disimpangkan 10 cm karena gayanya lebih besar
+D. pada waktu yang berbeda karena amplitudonya berbeda
+E. tidak pernah mencapai titik setimbang
+
+Jawaban: A. 
+
+17. Pada gerak harmonik sederhana, energi total osilator sebanding dengan...
+A. amplitudo
+B. akar amplitudo
+C. simpangan sesaat
+D. waktu getar
+E. kuadrat amplitudo
+
+Jawaban: E.
+
+18. Sebuah benda pada pegas dengan konstanta 200 N/m berosilasi dengan amplitudo 0,1 m. Energi total osilasi benda tersebut adalah...
+A. 0,1 J
+B. 0,5 J
+C. 0,75 J
+D. 1 J
+E. 2 J
+
+Jawaban: D.
+
+19. Sebuah bandul sederhana ingin dibuat periodenya lebih kecil. Langkah yang tepat adalah...
+A. memperpendek tali bandul
+B. memperpanjang tali bandul
+C. menambah massa beban
+D. memperbesar amplitudo
+E. tidak mungkin dilakukan
+
+Jawaban: A.
+
+20. Penyerap kejut (shock absorber) pada kendaraan berfungsi meredam osilasi. Pernyataan yang tepat mengenai osilasi teredam adalah...
+A. energi mekanik tetap kekal dan amplitudo tidak berubah
+B. energi mekanik bertambah seiring waktu
+C. energi mekanik berkurang terhadap waktu, amplitudo mengecil, dan akhirnya osilasi berhenti
+D. energi mekanik berkurang hanya jika massa diperbesar
+E. amplitudo membesar seiring waktu
+
+Jawaban: C
+
+GELOMBANG MEKANIK (21-30)
+
+21. Perhatikan faktor-faktor berikut!
+1) Tegangan tali
+2) Massa per satuan panjang tali
+3) Amplitudo gelombang
+4) Warna tali
+Faktor yang memengaruhi kecepatan gelombang pada tali ditunjukkan oleh nomor...
+A. 1 dan 2
+B. 1 dan 3
+C. 2 dan 4
+D. 3 dan 4
+E. 1 dan 4
+
+Jawaban: A
+
+22. Gelombang sinus pada tali memiliki frekuensi 8 Hz dan panjang gelombang 40 cm. Laju rambat gelombang tersebut adalah...
+A. 0,2 m/s
+B. 0,32 m/s
+C. 3,2 m/s
+D. 32 m/s
+E. 320 m/s
+
+Jawaban: C.
+
+23.  Lumba-lumba mengirim sinyal bunyi ke target sejauh 150 m dan menerima pantulannya. Jika laju bunyi dalam air 1.500 m/s, waktu yang diperlukan dari sinyal dikirim sampai pantulannya diterima adalah...
+A. 0,1 s
+B. 0,15 s
+C. 0,25 s
+D. 0,3 s
+E. 0,2 s
+
+Jawaban: E. 
+
+24. Suara sirene ambulans terdengar makin tinggi saat ambulans mendekati kita, dan makin rendah saat ambulans menjauhi kita. Peristiwa ini disebut...
+A. interferensi
+B. resonansi
+C. pemantulan bunyi
+D. efek Doppler
+E. gelombang berdiri
+
+Jawaban: D. 
+
+25. Satu mesin menghasilkan intensitas bunyi sebesar I. Jika ada 3 mesin identik yang beroperasi bersamaan di tempat yang sama jaraknya, intensitas bunyi totalnya menjadi...
+A. 1/3 I
+B. 3 I
+C. 9 I
+D. I (tetap sama)
+E. 6 I
+
+Jawaban: B. 
+
+26.Gelombang yang menyebabkan bagian-bagian medium bergerak tegak lurus arah rambatnya disebut...
+A. gelombang longitudinal
+B. gelombang transversal
+C. gelombang berdiri
+D. gelombang bunyi
+E. gelombang stasioner
+
+Jawaban: B.
+
+27.  Perhatikan pernyataan berikut!
+1) Medium bergerak sejajar arah rambat gelombang
+2) Medium bergerak tegak lurus arah rambat gelombang
+3) Contohnya gelombang pada tali
+4) Contohnya gelombang bunyi
+Pernyataan yang benar tentang gelombang longitudinal ditunjukkan oleh nomor...
+A. 1 dan 2
+B. 2 dan 3
+C. 1 dan 3
+D. 1 dan 4
+E. 2 dan 4
+
+Jawaban: D.
+
+28. Satuan taraf intensitas bunyi adalah...
+A. desibel (dB)
+B. watt/m2
+C. hertz
+D. joule
+E. pascal
+
+Jawaban: A. 
+
+29. Dua gelombang harmonik yang bertemu dengan beda fase 0 derajat akan mengalami interferensi...
+A. destruktif sehingga amplitudo menjadi nol
+B. destruktif sehingga amplitudo menjadi setengah
+C. tidak ada, karena gelombang tidak dapat bertemu
+D. yang membuat gelombang kehilangan frekuensi
+E. konstruktif sehingga amplitudo gabungan menjadi lebih besar
+
+Jawaban: E.
+
+30. Gelombang berdiri pada tali yang kedua ujungnya terikat terjadi karena...
+A. gelombang hanya merambat ke satu arah
+B. tali digetarkan terus-menerus tanpa ada pantulan
+C. terjadi pantulan di kedua ujung sehingga gelombang bergerak dua arah dan berpadu
+D. tali sama sekali tidak bergetar
+E. frekuensi sumber selalu berubah-ubah
+
+Jawaban: C.
+
+SUHU (31-40)
+
+31. Derajat panas atau dinginnya suatu zat disebut...
+A. kalor
+B. suhu
+C. energi
+D. tekanan
+E. konduktivitas
+
+Jawaban: B.
+
+32. Perhatikan pernyataan berikut!
+1) Termometer air raksa
+2) Termokopel
+3) Barometer
+4) Amperemeter
+Alat yang termasuk termometer (alat pengukur suhu) ditunjukkan oleh nomor...
+A. 1 dan 3
+B. 2 dan 3
+C. 3 dan 4
+D. 1 dan 4
+E. 1 dan 2
+
+Jawaban: E.  
+
+33.  Satuan suhu mutlak dalam Sistem Internasional (SI) adalah...
+A. Kelvin (K)
+B. Celsius
+C. Fahrenheit
+D. Reamur
+E. Rankine
+
+Jawaban: A.
+
+34. Benda A setimbang termal dengan benda C, dan benda B juga setimbang termal dengan benda C. Maka benda A dan benda B...
+A. tidak setimbang termal
+B. memiliki suhu yang berbeda
+C. saling bertukar kalor
+D. setimbang termal dan bersuhu sama
+E. keadaannya bergantung pada massa benda
+
+Jawaban: D. 
+
+35. Pada skala Celsius, es yang mencair dan air yang mendidih berturut-turut menunjukkan angka...
+A. 100 dan 0
+B. 0 dan 212
+C. 0 dan 100
+D. 32 dan 212
+E. 273 dan 373
+
+Jawaban: C. 
+
+36. Pada termometer gas volume konstan, besaran yang diukur untuk mengetahui perubahan suhu adalah...
+A. perubahan volume gas
+B. perubahan tekanan gas
+C. perubahan massa gas
+D. perubahan warna gas
+E. perubahan massa jenis gas
+
+Jawaban: B. 
+
+37. Suhu 27 derajat Celsius jika dinyatakan dalam Kelvin (dibulatkan) adalah...
+A. 27 K
+B. 246 K
+C. 273 K
+D. 300 K
+E. 373 K
+
+Jawaban: D.
+
+38. Sebuah termometer Celsius menunjukkan suhu 50 derajat. Jika diukur dengan termometer Reamur, suhu tersebut adalah...
+A. 40 derajat Reamur
+B. 50 derajat Reamur
+C. 62,5 derajat Reamur
+D. 122 derajat Reamur
+E. 323 derajat Reamur
+
+Jawaban: A.
+
+39. Batang logam sepanjang 1 m dipanaskan dari 20 derajat Celsius menjadi 120 derajat Celsius. Jika koefisien muai panjang logam 0,00001 per derajat Celsius, pertambahan panjang batang adalah...
+A. 0,1 mm
+B. 0,5 mm
+C. 1 mm
+D. 2 mm
+E. 10 mm
+
+Jawaban: C.
+
+40. Perhatikan kondisi berikut!*
+1) Suhu sangat tinggi
+2) Suhu sangat rendah
+3) Kerapatan gas rendah
+4) Kerapatan gas tinggi
+Gas sejati dapat berperilaku seperti gas ideal pada kondisi yang ditunjukkan oleh nomor...
+A. 1 dan 4
+B. 2 dan 3
+C. 2 dan 4
+D. 3 dan 4
+E. 1 dan 3
+
+Jawaban: E.

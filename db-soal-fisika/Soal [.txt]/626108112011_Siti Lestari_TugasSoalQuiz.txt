@@ -1,0 +1,334 @@
+FLUIDA
+1. Tekanan Adalah gaya yanng bekerja pada suatu penampang tiap satu stuan luas penampang. Rumus dimensi tekanan adalah……..
+A. M.L.T-2
+B. M.L.T-1
+C. M.L-1.T-1
+D. M.L2.T-2
+E. M.L-1.T-2
+JAWAB: E
+
+2. Jika tekanan di permukaan laut (1 atm) sama dengan tekanan hidrostatis air laut pada kedalaman 10 meter, maka seseorang yang menyelam pada kedalaman 100 meter akan mengalami tekanan total sebesar atm….
+A. 9
+B. 10
+C. 11
+D. 12
+E. 20
+JAWAB: C
+
+3. Pernyataan berikut ini tentang tekanan hidrostatis.
+1) Besar tekanan hidrostatis dipengaruhi oleh massa jenis fluida.
+2) Besar tekanan hidrostatis ditentukan oleh percepatan gravitasi yang bekerja pada fluida.
+3) Makin jauh di bawah permukaan fluida, tekanan hidrostatis makin besar.
+4) Benda yang dicelupkan ke dalam fluida akan mendapat tekanan hidrostatis yang arahnya ke atas.
+Pernyataan yang benar adalah…..
+A. 1), 2), dan 3) saja
+B. 1) dan 3) saja
+C. 2) dan 4) saja
+D. 4) saja
+E. 1), 2), 3), dan 4)
+JAWAB: A
+
+4. Sepotong balok yang beratnya w hanya dapat bertahan di Tengah-tengah bejana berisi air jika ditahan oleh seutas tali yang terikat di dasar bejana (lihat gambar). Hal itu menunjukkan bahwa….
+A. Massa jenis balok lebih besar dari massa jenis air.
+B. Massa jenis balok sama dengan massa jenis air.
+C. Massa jenis balok lebih kecil dari massa jenis air.
+D. Saat tertahan oleh tali, balok tidak berada dalam keadaan seimbang.
+E. Gaya tegangan tali menahan balok = 0 (nol).
+JAWAB: C
+
+5. Bola kecil yang bermassa 10 gram dan memiliki volume 4 cm3 dilepaskan pada permukaan air yang massa jenisnya 1 g/cm3. Jika gesekan air diabaikan dan g = 10 m/s2, maka percepatan yang dialami bola sebesar…..m/s2.
+A. 4
+B. 5
+C. 6 
+D. 8
+E. 10
+JAWAB: C
+
+6. Ujung sebuah pipa memiliki luas penampang seperempat kali luas penampang pipanya. Jika air memancar keluar dari ujung pipa dengan kecepatan 8 m/s, maka kecepatan aliran air di dalam pipa aadalah m/s?....
+A. 2
+B. 4
+C. 8
+D. 16
+E. 32
+JAWAB: A 
+
+7. Pernyataan-pernyataan berikut ini berkaitan dengan hukum Bernoulli:
+1) Pada pipa saluran yang menyempit, tekanan fluida menjadi lebih kecil.
+2) Tekanan fluida yang mengalir tidak dipengaruhi oleh kecepatan alirtan fluida.
+3) Tekanan udara luar bisa mempengaruhi kecepatan aliran fluida.
+4) Makin cepat aliran fluida, makin besar tekanannya.
+Pernyataan yang benar Adalah….
+A. 1), 2), dan 3) saja
+B. 1) dan 3) saja
+C. 2) dan 4) saja
+D. 4) saja
+E. 1), 2), 3), dan 4)
+JAWAB: B
+ 
+8. Alat-alat di bawah ini yang bekerja dengan menerapkan azas Bernoulli, kecuali….
+A. Pompa hidrolik
+B. Venturimeter
+C. Tabung pitot
+D. Alat penyemprot obat nyamuk
+E. Karburator
+JAWAB: A
+
+9. Sebuah benda dengan volume 0,5 m3 dicelupkan ke dalam air (?=1000 kg/m3). Gaya apung yang dialami benda tersebut Adalah….
+A. 500 N
+B. 1000 N
+C. 2500 N
+D. 5000 N
+E. 7500N
+JAWAB: D
+
+10. Sebuah pipa U diisi dengan air dan minyak. Jika tinggi kolom air 20 cm dan tinggi kolom minyak 25 cm, maka massa jenis minyak adalah….
+A. 600 kg/m3
+B. 700 kg/m3
+C. 800 kg/m3
+D. 900 kg/m3
+E. 1000 kg/m3
+JAWAB: C
+
+OSILATOR HARMONIK
+11. Sebuah benda bermassa 50 gram bergerak harmonic sederhana dengan amplitude 10 cm dan periode 0,2 s. Besar gaya yang bekerja pada system saat simpangannya setengah amplitude adalah sekitar…..
+A. 1,0 N
+B. 2,5 N
+C. 4,8 N
+D. 6,9 N
+E. 8,4 N
+JAWAB: B
+
+12. Menurut hukum Hooke, gaya pemulih pegas Ketika disimpangkan sejauh x memiliki arah….
+A. Sejalan dengan simpangan
+B. Berlawanan dengan simpangan
+C. Selalu vertikal ke bawah
+D. Selalu searah gerak benda
+E. Tidak memiliki arah tertentu
+JAWAB: B
+
+13. Sebuah benda melakukan 36 getaran dalam waktu 12 sekon. Periode satu getarannya adalah....
+A. 0,17 s
+B. 0,25 s
+C. 0,33 s
+D. 3,0 s
+E. 4,0 s
+JAWAB: C
+
+14. Ketika benda pegas ideal melewati posisi setimbang, pernyataan yang tepat adalah…
+A. Simpangan dan laju maksimum
+B. Simpangan maksimum dan percepatan nol
+C. Simpangan nol dan laju maksimum
+D. Laju nol dan energi kinetik maksimum
+E. Gaya pemulihan maksimum
+JAWAB: C
+ 
+15. Pada osilasi pegas vertikal, frekuensi sudut osilasi kecil ditentukan oleh….
+A. Massa dan konstanta pegas
+B. Massa dan amplitudo saja
+C. Gravitasi dan amplitudo
+D. Panjang dan pegas saja.
+E. Berat benda dan amplitudo
+JAWAB: A
+
+16. Pegas dengan konstanta 100 N/m dipasangi benda bermassa 0,25 kg. Frekuensi sudut osilasi sistem adalah...
+A. 5 rad/s
+B. 10 rad/s
+C. 20 rad/s
+D. 25 rad/s
+E. 40 rad/s
+JAWAB: C
+
+17. Benda bermassa 2kg berosilasi pada pegas dengan konstanta 50 n/m dan amplitudo 0,20 m. Energi mekanik totalnya adalah .....
+A. 0,5 J
+B. 1,0 J
+C.2,0 J
+D. 4,0 J
+E.10,0 J
+JAWAB: B
+
+18. Pada Osilasi teredam, amplitude berkurang seiring waktu. Penyebab utama keadaan tersebut aadalah …..
+A. Energi mekanik bertambah
+B. Gaya pemulih menjadi nol
+C. Energi mekanik berkurang akibat gaya hambat
+D. Massa benda bertambah
+E. Frekuensi selalu menjadi dua kali lipat
+JAWAB:
+
+19. Benda pada pegas memiliki amplitudo 0,10 m dan frekuensi sudut 6 rad/s. Ketika simpangannya 0,06 m, besar kelajuannya adalah .....
+A.0,36 m/s
+B.0,40 m/s
+C.0,48 m/s
+D.0,60 m/s
+E.0,80 m/s
+JAWAB: C
+
+20. Amplitudo respons osilator terpaksa dapat menjadi sangat besar ketika frekuensi gaya luar mendekati frekuensi alami sistem. Peristiwa ini disebut ....
+A. Interferensi
+B. Resonansi
+C. Pemantulan
+D. Redaman kritis
+E.Kesetimbangan termal
+JAWAB:B
+
+GELOMBANG MEKANIK
+
+21. Panjang gelombang dari gambar di atas adalah ...
+A. 0,5 m
+B. 1,0 m
+C. 2,0 m
+D. 4,0 m
+E. 6,0 m
+JAWAB: C
+
+22. Suatu gelombang berjalan dihasilkan oleh suatu sumber getaran dengan periode 0,2 sekon. Jika gelombang itu merambat dengan laju 100 m setiap sekon maka panjang gelombang dari gelombang tersebut adalah ...
+A. 500 m
+B. 200 m
+C. 50 m
+D. 20 m
+E. 10 m
+JAWAB: D
+
+23. Suatu titik P pada jarak 10 cm darisumber gelombang yang bergetar dengan frekuensi Hz. Jika cepat rambat gelombang 2 m/s dan sumber gelombang telah bergetar selama 5 sekon maka titik P telah mengalami gerak bolak-balik sebanyak … kali.
+A. 50
+B. 45
+C. 5
+D. 10
+E. 0
+JAWAB: A
+
+24. Kelelawar memancarkan sinyal 40 kHz dengan panjang gelombang 8,75 mm ke arah pohon dan menerima pantulan suara 0,4 detik kemudian. Seberapa jauh kelelawar dari pohon?
+A. 35 m
+B. 70 m
+C. 105 m
+D. 140 m
+E. 175 m
+JAWAB: B
+
+25. Berapakah panjang gelombang dari gelombang 5Hz yang menjalar dengan kelajuan 10 m/s?
+A. 0,25 m
+B. 0,5 m
+C. 1 m
+D. 2 m
+E. 50 m
+JAWAB: D
+
+26. Perbedaan gelombang mekanik dengan gelombang elektromagnetik adalah ...
+A. Gelombang elektromagnetik memerlukan medium sedang gelombang mekanik tidak memerlukannya.
+B. Gelombang elektromagnetik dapat merambat sedangkan gelombang mekanik tidak dapat merambat.
+C. Gelombang mekanik memerlukan medium sedang gelombang elektromagnetik tidak memerlukannya.
+D. Gelombang mekanik dapat merambat sedangkan gelombang elektromagnetik tidak dapat merambat.
+E. Gelombang mekanik dapat merambat dan gelombang elektromagnetik dapat merambat.
+JAWAB: C
+
+27. Selama 1 menit, tali menghasilkan 6 gelombang. Frekuensi gelombang tersebut adalah
+A. 6 Hz
+B. 0,1 Hz
+C. 1,6 Hz
+D. 0,01 Hz
+E. 0,5 Hz
+JAWAB: B
+
+28. Berdasarkan amplitudonya gelombang terbagi menjadi dua, yaitu gelombang dengan amplitude berubah-ubah dan gelombang dengan amplitude tetap sering disebut dengan?
+A. Gelombang berjalan dan gelombang stasioner
+B. Gelombang transversal dan gelombang berjalan
+C. Gelombang trnasversal dan gelombang longitudinal
+D. Gelombang longitudinal dan gelombang transversal
+E. Gelombang bunyi dan gelombang cahaya
+JAWAB: A
+
+29. Berikut ini yang termasuk contoh gelombang mekanik adalah…
+A. Gelombang radio
+B. Sinar-X
+C. Gelombang bunyi
+D. Cahaya
+E. Sinar laser
+JAWAB: C
+
+30. Gelombang bunyi yang merambat di udara termasuk ke dalam jenis gelombang longitudinal. Ciri utama dari gelombang longitudinal adalah...
+A. Memiliki bagian yang disebut bukit dan lembah gelombang.
+B. Arah getar partikel mediumnya tegak lurus terhadap arah rambat gelombang.
+C. Dapat mengalami polarisasi (pengutuban) saat melewati celah sempit.
+D. Arah getar partikel mediumnya sejajar (berimpit) dengan arah rambat gelombang.
+E. Tidak dipengaruhi oleh kerapatan medium yang dilaluinya.
+JAWAB: D
+
+SUHU
+31. Mengapa indra peraba manusia (seperti kulit tangan) tidak dapat digunakan sebagai alat pengukur suhu yang akurat?
+A. Kulit manusia tidak mampu merasakan benda yang bersuhu di bawah titik beku.
+B. Hasil pengukuran bersifat subjektif dan dipengaruhi oleh kondisi suhu tangan sebelumnya.
+C. Kulit hanya dapat merasakan perubahan suhu pada benda berwujud cair saja.
+D. Suhu tubuh manusia selalu berubah-ubah mengikuti suhu lingkungan sekitar.
+E. Saraf pada kulit manusia memiliki batas waktu tertentu dalam mendeteksi kalor.
+JAWAB: B
+
+32. Termometer zat cair bekerja dengan memanfaatkan salah satu sifat termometrik zat, yaitu...
+A. Perubahan warna cairan saat menyerap energi panas.
+B. Perubahan massa jenis zat secara tetap pada setiap tekanan.
+C. Perubahan volume zat cair yang memuai atau menyusut akibat perubahan suhu.
+D. Perubahan wujud zat dari cair menjadi uap di dalam pipa kapiler.
+E. Perubahan daya hantar listrik cairan ketika dipanaskan.
+JAWAB: C
+
+33. Raksa sering dipilih sebagai cairan pengisi termometer laboratorium maupun klinis karena memiliki keunggulan berikut, kecuali...
+A. Perubahan warna cairan saat menyerap energi panas.
+B. Perubahan massa jenis zat secara tetap pada setiap tekanan.
+C. Perubahan volume zat cair yang memuai atau menyusut akibat perubahan suhu.
+D. Perubahan wujud zat dari cair menjadi uap di dalam pipa kapiler.
+E. Perubahan daya hantar listrik cairan ketika dipanaskan.
+JAWAB: D
+
+34. Raksa sering dipilih sebagai cairan pengisi termometer laboratorium maupun klinis karena memiliki keunggulan berikut, kecuali...
+A. Warnanya mengilap sehingga mudah diamati pada pipa kapiler.
+B. Tidak membasahi dinding kaca sehingga pengukurannya teliti.
+C. Pemuaiannya teratur terhadap kenaikan suhu.
+D. Dapat mengukur suhu yang sangat rendah hingga -100 °C.
+E. Cepat mengambil panas dari benda yang diukur sehingga cepat mencapai keseimbangan termal.
+JAWAB: D
+
+35. Sepotong logam panas dimasukkan ke dalam wadah berisi air dingin. Setelah beberapa menit, suhu logam dan air menjadi sama. Pernyataan yang paling tepat menjelaskan fenomena ini adalah...
+A. Kalor berpindah dari air dingin menuju logam hingga energi kinetiknya sama.
+B. Suhu berpindah dari logam ke air hingga keduanya memiliki massa jenis yang sama.
+C. Kalor berpindah dari logam bersuhu tinggi ke air bersuhu rendah hingga tercapai keseimbangan termal.
+D. Logam dan air saling melepaskan kalor ke udara hingga suhunya menjadi nol.
+E. Terjadi pemuaian volume pada air yang menekan partikel logam agar suhunya turun.
+JAWAB: C 
+
+36. Suhu suatu ruangan yang diukur menggunakan termometer Celcius menunjukkan angka 45 °C. Jika ruangan tersebut diukur menggunakan termometer Fahrenheit, suhu yang terbaca adalah...
+A. 77 °F
+B. 81 °F
+C. 105 °F
+D. 113 °F
+E. 122 °F
+JAWAB: D
+
+37. Pada suhu berapakah termometer skala Celcius dan termometer skala Fahrenheit akan menunjukkan angka pembacaan yang sama persis?
+A. -40°
+B. -32°
+C. 0°
+D. 32°
+E. 40°
+JAWAB: A
+
+38. Gas di dalam tabung tertutup memiliki suhu mutlak sebesar 333 K. Jika suhu gas tersebut diukur menggunakan termometer berskala Reamur, angka yang ditunjukkan adalah...
+A. 40 °R
+B. 48 °R
+C. 60 °R
+D. 75 °R
+E. 80 °R
+JAWAB: B
+
+39. Panjang kolom raksa pada sebuah termometer tak berskala adalah 4 cm saat dimasukkan ke dalam es yang sedang melebur, dan 24 cm saat dimasukkan ke dalam air yang sedang mendidih pada tekanan 1 atm. Jika panjang kolom raksa menunjukkan 14 cm, suhu benda yang diukur adalah...
+A. 40 °C
+B. 45 °C
+C. 50 °C
+D. 55 °C
+E. 60 °C
+JAWAB: C
+
+40. Sebuah batang besi dipanaskan sehingga suhunya naik dari 25 °C menjadi 75 °C. Besar kenaikan suhu batang besi tersebut jika dinyatakan dalam skala Fahrenheit adalah...
+A. 50 °F
+B. 82 °F
+C. 90 °F
+D. 112 °F
+E. 122 °F
+JAWAB: C

@@ -1,0 +1,353 @@
+Nama: Kholifatul Afifa
+NIM: 626108110003
+Kelas: DI1
+
+SOAL FISIKA
+
+1. Seorang penyelam mutiara berusaha mencari mutiara di laut yang kedalamannya sekitar 15 meter. Penyelam tersebut kemudian menyelam
+sampai kedalaman 12 meter. Jika massa jenis air laut 1200 kg/m³ dan g = 10 m/s², tekanan hidrostatik yang dirasakan penyelam tersebut sebesar...
+  A. 120 kPa
+  B. 134 kPa
+  C. 144 kPa
+  D. 146 kPa
+  E. 154 kPa
+  ANSWER: C
+
+2. Sebuah benda terapung di atas bejana besi berisi zat cair dengan massa jenis 1200 kg/m3. Jika baguian benda yang berada di udara adalah 20% dari volume benda seharusnya, maka massa jenis benda (dalam kg/m³) adalah...  
+  A. 600
+  B. 900
+  C. 1200
+  D. 960
+  E. 1000
+  ANSWER: D
+
+3. Sebuah benda dicelupkan ke dalam zat cair sehingga mengalami gaya ke atas (gaya Archimedes). Pernyataan yang benar mengenai hubungan antara massa jenis benda dan massa jenis zat cair pada peristiwa terapung, melayang, dan tenggelam adalah...
+  A. Benda akan terapung apabila massa jenis benda lebih besar daripada massa jenis zat cair
+  B. Benda akan melayang apabila massa jenis benda sama dengan massa jenis zat cair
+  C. Benda akan tenggelam apabila massa jenis benda lebih kecil daripada massa jenis zat cair
+  D. Benda akan melayang apabila gaya ke atas lebih kecil daripada berat benda
+  E. Bneda akan terapung apabila massa jenis benda sama dengan massa jenis zat cair
+  ANSWER: B
+
+4. Sebuah pengangkat hidrolik mobil bekerja berdasarkan tekanan air. Maka besarnya gaya F yang dibutuhkan untuk mengangkat sebuah mobil yang massanya 1.200 kg jika g = 10 m/s², luas permukaan piston 1 adalah 20 cm², dan luas penampang piston 2 adalah 400 cm²...
+  A. 600 N
+  B. 850 N
+  C. 500 N
+  D. 1000 N
+  E. 750 N
+  ANSWER: A
+
+5. Sebuah fluida bergerak melalui pipa dengan luas penampang pipa A = 10 cm² dan pipa B = 4 cm². Kecepatam aliran air pada pipa B, jika kecepatan aliran air pada pipa A = 10 m/s adalah...(m/s)
+  A. 25
+  B. 20
+  C. 15
+  D. 10
+  E. 5
+  ANSWER: A
+
+6. Pipa berjari-jari 15 cm disambung dengan pipa lain yang barjarjari 5 cm, keduanya dalam posisi horizontal. Apabila kecepatan aliran air pada pipa besar adalah 1 m/s pada tekanan 10⁵ N/m², maka tekanan pada pipa yang kecil adalah...N/m² (massa jenis air = 1 g/cm​³)
+  A. 10.000
+  B. 15.000
+  C. 30.000
+  D. 90.000
+  E. 60.000
+  ANSWER: E
+
+7.  Berdasarkan Asas Bernoulli pada fluida ideal yang mengalir secara tunak (steady) di dalam pipa mendatar, hubungan antara kelajuan aliran fluida dan tekanannya adalah...
+  A. Semakin besar kelajuan aliran fluida, semakin besar pula tekanannya
+  B. Semakin besar kelajuan aliran fluida, semakin kecil tekanannya
+  C. Kelajuan aliran fluida tidak memengaruhi besarnya tekanan di dalam pipa
+  D. Tekanan fluida selalu bernilai nol saat kelajuannya mencapai nilai maksimum
+  E. Tekanan fluida hanya bergantung pada massa jenisnya, bukan pada kelanjuannya
+  ANSWER: B
+
+8. Pernyataan di bawah ini yang berkaitan dengan gaya angkat pada pesawat terbang yang benar adalah...
+  A. Tekanan udara di atas sayap lebi besar dari pada tekanan udara di bawah sayap
+  B. Tekanan udara di bawah sayap tidak berpengaruh terhadap gaya angkat pesawat
+  C. Kecepatan aliran udara di atas sayap lebih besar dari pada kecepatan aliran udara di bawah sayap
+  D. Kecepatan aliran udara di atas sayap lebih kecil dari pada kecepatan aliran udara di bawah sayap
+  E. Kecepatan aliran udara tidak mempengaruhi gaya angkat pesawat
+  ANSWER: C
+
+9. Perhatikan pernyataan berikut!
+   (1) gaya angkat pesawat
+   (2) pompa hidrolik
+   (3) penyemprotan nyamuk
+   (4) naiknya air melalui tembok
+Pernyataan yang berkaitan dengan penerapan prinsip kerja hukum Bernoulli adalah...
+A. (1), (2), (3) dan (4)
+B. (1), (2) dan (3)
+C. (1) dan (3) saja
+D. (1) dan (4) saj
+E. (2) dan (4) saja
+ANSWER: C
+
+
+10. Sebuah pipa silinder diletakkan mendatar dan dialiri dengan kecepatan 3m/s​¹ di penampang 1 dan 5m/s​¹ dipenampang 2. Jika tekanan di penampang 1 sebesar 10​⁵ Nm⁻², maka tekanan dipenampang 2 adalah...Nm⁻²
+A. 71.000
+B. 92.000
+C. 95.000
+D. 102.500
+E. 104.500
+ANSWER: B
+
+11. Berdasarkan Hukum Hooke pada osilasi pegas, tanda negatif (–) pada persamaan gaya pemulih F = –kx memiliki arti bahwa...
+A. Konstanta pegas selalu bernilai negative
+B. Arah gaya pemulih berlawanan dengan arah perpindahan benda
+C. Benda selalu bergerak ke arah kiri
+D. Kecepatan benda semakin lama semakin berkurang
+E. Massa benda memengaruhi arah tarikan pegas
+ANSWER: B
+
+12. Perhatikan pernyataan-pernyataan berikut mengenai sifat energi pada Gerak Harmonik Sederhana (GHS) tanpa redaman:
+(1) Energi kinetik benda bernilai maksimum saat melewati titik setimbang.
+(2) Energi potensial pegas bernilai nol saat benda berada di titik simpangan terjauh (amplitudo).
+(3) Energi mekanik total sistem selalu konstan selama benda berosilasi.
+(4) Energi total GHS berbanding lurus dengan kuadrat amplitudonya.
+Pernyataan yang benar ditunjukkan oleh nomor...
+A. (1), (2), dan (3)
+B. (1), (3), dan (4)
+C. (2) dan (4) saja
+D. (1) dan (2) saja
+E. Semua pernyataan benar
+ANSWER: B
+
+13. Dua buah pegas identik masing-masing diberi beban bermassa sama. Pegas pertama ditarik sejauh 5 cm dan pegas kedua ditarik sejauh 10 cm, lalu keduanya dilepaskan bersamaan. Pernyataan yang tepat mengenai kedua sistem tersebut adalah...
+A. Pegas pertama mencapai titik setimbang lebih dulu karena lintasannya lebih pendek
+B. Pegas kedua mencapai titik setimbang lebih dulu karena kecepatannya lebih besar
+C. Keduanya mencapai titik setimbang secara bersamaan karena periode tidak bergantung pada amplitude
+D. Pegas kedua memiliki frekuensi getaran dua kali lipat lebih besar dari pegas pertama
+E. Pegas pertama memiliki periode getaran setengah kali dari pegas kedua
+ANSWER: C
+
+14.  Contoh penerapan konsep osilasi teredam dalam kehidupan sehari-hari yang berfungsi untuk meredam getaran agar cepat berhenti adalah...
+A. Ayunan bandul jam dinding
+B. Penyerap kejutan (shockbreaker) pada mobil atau kendaraan
+C. Senar gitar yang dipetik
+D. Gerak rotasi bumi pada porosnya
+E. Pegas pada timbangan duduk
+ANSWER: B
+
+15. Sebuah benda bermassa 2 kg digantungkan pada sebuah pegas dan berosilasi harmonik. Jika konstanta pegas tersebut adalah 50 N/m, maka frekuensi sudut (ω) osilasi benda adalah...
+A. 2 rad/s
+B. 5 rad/s
+C. 10 rad/s
+D. 25 rad/s
+E. 50 rad/s
+ANSWER: B
+
+16. Sebuah pegas vertikal memiliki konstanta pegas k = 200 N/m. Jika pada ujung pegas digantungkan beban bermassa 4 kg (gunakan g = 10 m/s²), maka pertambahan panjang pegas pada posisi setimbang barunya (y₀) adalah...
+A. 0,05 m
+B. 0,10 m
+C. 0,20 m
+D. 0,40 m
+E. 0,50 m
+ANSWER: C
+
+17. Sebuah partikel melakukan gerak harmonik sederhana dengan amplitudo A = 0,04 m dan frekuensi sudut ω = 10 rad/s. Laju maksimum (v_maks) partikel tersebut adalah...
+A. 0,04 m/s
+B. 0,25 m/s
+C. 0,40 m/s
+D. 2,50 m/s
+E. 4,00 m/s
+ANSWER: C
+
+18. Sebuah benda berosilasi harmonik pada pegas dengan konstanta k = 100 N/m dan amplitudo A = 0,1 m. Energi total (E) dari sistem osilasi tersebut adalah...
+A. 0,1 Joule
+B. 0,5 Joule
+C. 1,0 Joule
+D. 5,0 Joule
+E. 10,0 Joule
+ANSWER: B
+
+19. Sebuah bandul sederhana (bandul matematis) memiliki panjang tali l = 0,4 m. Jika percepatan gravitasi di tempat tersebut adalah g = 10 m/s², maka periode ayunan bandul untuk simpangan kecil adalah...
+A. 0,2π sekon
+B. 0,4π sekon
+C. 0,8π sekon
+D. 1,2π sekon
+E. 2,0π sekon
+ANSWER: B
+
+20. Gerakan osilasi naik-turun sebuah perahu di atas ombak dinyatakan dengan persamaan simpangan y = 0,5 cos(4πt) dalam satuan meter. Nilai amplitudo dan frekuensi gerakan perahu tersebut berturut-turut adalah...
+A. 0,5 m dan 2 Hz
+B. 0,5 m dan 4 Hz
+C. 4 m dan 0,5 Hz
+D. 0,5 m dan 4π Hz
+E. 2 m dan 0,5 Hz
+ANSWER: A
+
+21. Dari suatu tempat ke tempat lainnya gelombang memindahkan...
+A. Massa
+B. Amplitudo
+C. Fase
+D. Energi
+E. Panjang gelombang 
+ANSWER: D
+
+22. Perhatikan pernyataan berikut ini!
+(1) Dapat dipantulkan
+(2) Merambat tegak lurus arah getarnya
+(3) Merambat sejajar arah getar
+(4) Dapat terdifraksi 
+Karakteristik gelombang transversal ditunjukkan oleh nomor...
+A. (1) dan (2) 
+B. (1), (2), dan (3)
+C. (1), (2), dan (4)
+D. (2), (3), dan (4)
+E. (2) dan (4)
+ANSWER: C
+
+23. Sebuah tali yang salah satu ujungnya terikat pada tiang digetarnya. Panjang tali itu 4m. Jika dalam perambatannya terdapat 8 bukit dan lembah, tentukan panjang gelombang dan cepat rambat gelombang tali. Diketahui juga untuk mencapai tiang, gelombang memerlukan Waktu 4 sekon...
+A. 1,5 m/s
+B. 2 m/s
+C. 5 m/s
+D. 3 m/s
+E. 1 m/s
+ANSWER: E
+
+24. Dua buah gabus berada di puncak-puncak gelombang. Keduanya bergerak naik turun di atas permukaan air laut sebanyak 20 kali dalam waktu 4 detik mengikuti gelombang air laut. Jika Jarak kedua gabus 100 cm dan diantaranya terdapat dua lembah dan satu bukit, maka frekuensi gelombang dan cepat rambat gelombang berturut-turut adalah...
+A. 0,2 Hz dan 200 cm cm/s​⁻​¹
+B. 5,0 Hz dan 200 cm cm/s​⁻​¹
+C. 0,2 Hz dan 250 cm cm/s​⁻​¹
+D. 2,5 Hz dan 250 cm cm/s​⁻​¹
+C. 5,0 Hz dan 250 cm cm/s​⁻​¹
+ANSWER: E
+
+25. Excel dan Lala sedang mengamati gelombang pada permukaan dengan meletakkan dua buah gabus yang terapung tepat di puncak gelombang. Jarak antara kedua gabus adalah 1 meter. Jika di antara kedua gabus dipisahkan 2 puncak gelombang maka panjang gelombang permukaan air tersebut adalah...
+A. 31 cm
+B. 32 cm
+C. 33 cm
+D. 34 cm
+E. 35 cm
+ANSWER:
+
+26. Persamaan gelombang berjalan:
+y = 2 sin 2π(4t-2x) meter dengan t dalam sekon dan x dalam meter
+(1) Amplitudo gelombang 20m
+(2) Panjang gelombang 5m
+(3) Frekuensi gelombang 4Hz
+(4) Cepat rambat gelombang 2m/s​⁻​¹
+Dua pernyataan diatas yang benar adalah...
+A. (1) dan (2)
+B. (1) dan (3)
+C. (2) dan (3)
+D. (2) dan (4)
+E. (3) dan (4)
+ANSWER: E
+
+27. Sebuah gelombang merambat dari titik A dan titik B dengan amplitudo 100 cm dan frekuensi 5 Hz. Jarak AB = 30 cm. Bila cepat rambat gelombang 2,5 m/s pada suatu saat tertentu beda sudut fase antara titik A dan B adalah...
+A. 4π/3 rad
+B. 4π/5 rad
+C. 6π/5 rad
+D. 3π/2 rad
+E. 0
+ANSWER: C
+
+28. Sebuah gelombang berjalan dipermukaan air memenuhi persamaan y = 0,03 sin 2π(60-2x), y dan x dalam meter dan t dalam sekon. Cepat rambat gelombang tersebut adalah...
+A. 15 m/s​⁻​¹
+B. 20 m/s​⁻​¹
+C. 30 m/s​⁻​¹
+D. 45 m/s​⁻​¹
+E. 60 m/s​⁻​¹
+ANSWER: C
+
+29. Tidak semua bunyi dapat didengar oleh manusia. Rentang frekuensi bunyi yang dapat didengar telinga manusia disebut..
+A. Audiosonik
+B. Infrasonik
+C. Ultrasonik
+D. Bomsonik
+E. Supersonik
+ANSWER: A
+
+30. Jika diketahui modulus Bulk air 2x10​⁹ N/m², cepat rambat gelombang bunyi di air sebesar.... m/s
+A. 10​⁶√3 
+B. 10​⁶√2
+C. 10³√3 
+D. 10³√2 
+E. 10³√5
+ANSWER: D
+
+31. Bunyi dari Hukum ke-Nol Termodinamika yang mendasari prinsip kerja pengukuran suhu menggunakan termometer adalah... 
+A. Kalor selalu mengalir dari benda bersuhu rendah ke benda bersuhu tinggi 
+B. Jika dua benda masing-masing berada dalam kesetimbangan termal dengan benda ketiga, maka kedua benda tersebut juga berada dalam kesetimbangan termal satu sama lain 
+C. Energi dalam suatu sistem gas ideal hanya bergantung pada volumenya 
+D. Tekanan gas akan selalu berbanding terbalik dengan suhu mutlaknya 
+E. Setiap zat akan menyusut apabila dipanaskan pada tekanan tetap 
+ANSWER: B
+
+32. Skala suhu yang ditetapkan sebagai skala suhu mutlak dalam Sistem Internasional (SI) adalah... 
+A. Celcius (°C) 
+B. Fahrenheit (°F) 
+C. Reamur (°R) 
+D. Kelvin (K) 
+E. Rankine (°Ra) 
+ANSWER: D
+
+33. Perhatikan pernyataan-pernyataan berikut mengenai asumsi dasar pada Gas Ideal: 
+(1) Gaya tarik-menarik antar molekul gas diabaikan. 
+(2) Molekul-molekul gas diperlakukan sebagai titik massa yang bergerak bebas. 
+(3) Energi internal gas ideal hanya berupa energi kinetik translasi molekulnya. 
+(4) Suhu mutlak gas berbanding terbalik dengan energi kinetik rata-rata molekulnya. 
+Pernyataan yang benar ditunjukkan oleh nomor... 
+A. (1), (2), dan (3) 
+B. (1) dan (3) saja 
+C. (2) dan (4) saja 
+D. (4) saja 
+E. Semua pernyataan benar
+ANSWER: A 
+
+34. Suhu permukaan dari dua buah dinding 100°F dan 35°F. Suhu tersebut dalam derajat Celcius adalah...
+A. 37,78°C
+B. 30,81°C
+C. 12,09°C
+D. 35,31°C
+E. 36,47°C
+ANSWER: A
+
+35. Suhu suatu ruangan tercatat sebesar 27°C. Jika dinyatakan dalam skala suhu mutlak Kelvin, suhu ruangan tersebut adalah... (Gunakan T(K) = t(°C) + 273,15) 
+A. 246,15 K 
+B. 273,15 K 
+C. 300,15 K 
+D. 310,15 K 
+E. 373,15 K 
+ANSWER: C
+
+36. Termometer X digunakan untuk mengukur suhu es yang sedang melebur pada -10°X dan untuk mengukur suhu air mendidih pada 110°X. Termometer Celcius digunakan untuk mengukur suhu benda 40°C. Berapa suhu benda tersebut jika diukur dengan termometer X...
+A. 38°
+B. 35°
+C. 30°
+D. 40°
+E. 37°
+ANSWER: A
+
+37. Sebuah benda mempunyai suhu 25°C. Nyatakan suhu benda tersebut dalam skala Kelvin!
+A. 300K
+B. 298K
+C. 275K
+D. 255K
+E. 333K
+ANSWER: B
+
+38. Rel kereta api terbuat dari bahan besi yang koefisien mulai panjangnya 12x10⁻​⁶ 1/C. Setiap rel panjangnya menjadi 100 m, jika suhunya 20 C. Berapa Jarak rel agar aman, dengan pertimbangan suhu pada siang hari sampai 42°C...
+A. 2,64 cm
+B. 2,65 cm
+C. 2,66 cm
+D. 2,67 cm
+E. 2,68 cm
+​ANSWER: A
+
+39. Sebuah bejana mempunyai volume 1 liter pada suhu 25°C, Jika koefisien muai panjang bejana 2x10⁻​​⁵/C​⁰, tentukan volume bejana pada suhu 75°C..
+A. 1.000 liter
+B. 1.0001 liter
+C. 1.0002 liter
+D. 1.0003 liter
+E. 1.0004 liter 
+ANSWER: D
+
+40. Sejumlah gas ideal berada di dalam ruang tertutup pada suhu tetap (proses isotermal sesuai Hukum Boyle: P₁V₁ = P₂V₂). Jika tekanan awal gas adalah 2 atm dengan volume 6 liter, kemudian volume gas diperkecil menjadi 3 liter, maka tekanan akhir gas tersebut menjadi... 
+A. 1 atm 
+B. 2 atm 
+C. 3 atm 
+D. 4 atm 
+E. 6 atm 
+ANSWER: D

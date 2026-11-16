@@ -1,0 +1,385 @@
+﻿1. Tekanan yang dialami oleh sebuah benda di dalam zat cair pada kedalaman tertentu disebut tekanan…
+1. total
+2. hidrostatis
+3. diam
+4. atmosfer
+5. udara luar
+Jawaban: B
+
+
+2. Tekanan yang dikerjakan pada suatu zat cair yang berada dalam ruangan tertutup akan diteruskan ke segala arah dan sama besar adalah bunyi dari hukum…
+1. Archimedes
+2. Bernoulli
+3. Toricelli
+4. Pascal
+5. Hidrostatistika
+        Jawaban: D
+
+
+3. Jika zat cair melalui sebuah pipa yang makin menyempit, maka…
+1. Kecepatannya semakin kecil
+2. Laju alirnya semakin kecil
+3. Kecepatannya sama besar
+4. Laju alirnya sama besar
+5. Kecepatannya nol
+        Jawaban: D
+
+
+4. Perhatikan gambar berikut:
+  
+
+1. Massa jenis benda B lebih besar daripada massa jenis benda A
+2. Kedua benda mendapat gaya apung yang sama besar
+3. Gaya apung yang diterima benda A lebih kecil daripada berat benda
+4. Gaya apung yang diterima kedua benda bergantung dari massa jenis benda
+Pernyataan yang benar adalah…
+1. 1) saja
+2. 1) dan 4)
+3. 2) dan 3)
+4. 2) dan 4)
+5. 3) dan 4)
+        Jawaban: A
+
+
+5. Ukuran kekentalan fluida yang menyatakan besar kecilnya gesekan di dalam fluida. Semakin besar viskositas fluida, semakin sulit suatu fluida untuk mengalir dan juga menunjukkan semakin sulit suatu benda untuk bergerak dalam fluida tersebut. Peristiwa ini disebut…
+1. Kapilaritas
+2. adhesi
+3. kohesi
+4. viskositas
+5. tegangan permukaan
+        Jawaban: D
+
+
+6. Sebuah penekan hidrolik dengan jari-jari penghisap kecil dan besar masing-masing 5 cm dan 40 cm. Jika pada penghisap kecil dikerjakan gaya 200 N, berapa gaya yang dihasilkan pada penghisap besar?
+1. 120 N
+2. 1200 N
+3. 12000 N
+4. 12800 N
+5. 13000 N
+        Jawaban: D
+
+
+7. Berat sebuah benda di udara 100 N, sedangkan bila ditimbang dalam air berat 90 N. Massa jenis benda tersebut adalah
+1. 10000 kg/m3
+2. 10100 kg/m3
+3. 10010 kg/m3
+4. 1100 kg/m3
+5. 1000 kg/m3
+        Jawaban: A
+
+
+8. Kecepatan rata-rata minyak pada suatu pipa yang berdiameter 6 cm ialah 3 m/s. Hitung jumlah zat (minyak) yang mengalir tiap detik (Q)!
+1. 3,14 m3/s
+2. 3 x 10-2 m3/s
+3. 8,48 x 10-3 m3/s
+4. 8,98 x 10-3 m3/s
+5. 7,46 x 10-3 m3/s
+        Jawaban: C
+
+
+9. Air mengalir dalam sebuah penguncupan pipa dengan kecepatan 3 m s¹. Jika luas penampang penguncupan itu sepersepuluhnya luas penampang pipa yang normal, maka penurunan tekanan air dalam penguncupan itu....
+1. 0,4 x 10 Pa
+2. 1,4 x 103 Pa
+3. 2,2 x 103 Pa
+4. 3,4 x 103 Pa
+5. 4,4 x 103 Pa
+        Jawaban: E
+
+
+10. Pada gambar di bawah, air mengalir melewati pipa venturimeter
+  
+
+Jika luas penampang A1 dan A2 masing-masing 5 cm2 dan 4 cm2 maka kecepatan air memasuki pipa venturimeter adalah
+1. 3 m/s
+2. 4 m/s
+3. 5 m/s
+4. 9 m/s
+5. 25 m/s
+        Jawaban: B
+
+
+11. Sebuah partikel melakukan getaran selaras dengan frekuensi 5 Hz dan amplitudo 10 cm. Kecepatan partikel pada saat berada pada simpangan 8 cm adalah… cm/s
+1. 8π
+2. 30π
+3. 60π
+4. 72π
+5. 80π
+        Jawaban: C
+
+
+12. Sebuah partikel mengalami gerak harmonik sederhana dengan amplitudo 5 cm. Saat simpangannya 3 cm, kecepatannya 80π cm/s. Frekuensi geraknya adalah…
+1. 16 Hz
+2. 10 Hz
+3. 8 Hz
+4. 5 Hz
+5. 4 Hz
+        Jawaban: B
+
+
+13. Benda bermassa 2 kg bergetar selaras sederhana. Ketika benda tersebut berada di titik seimbang kecepatannya 2 m/s dan ketika di simpangan 20 cm benda itu diam. Kecepatan benda ketika di simpangan 16 cm sebesar…
+1. 1,8 m/s
+2. 1,6 m/s
+3. 1,2 m/s
+4. 1,0 m/s
+5. 0,8 m/s
+        Jawaban: C
+
+
+14. Sebuah benda bermassa 2 kg dihubungkan ke sebuah pegas berkonstanta k = 40 N/m. Benda bergerak dengan laju 25 cm/s saat berada pada posisi setimbang. Energi total dari benda tersebut adalah…
+1. 0,0620 Joule
+2. 0,0526 Joule
+3. 0,0875 Joule
+4. 0,712 Joule
+5. 0,0625 Joule
+        Jawaban: E
+
+
+15.   Grafik di atas menunjukkan suatu getaran harmonik sebuah partikel. Pada t = 0,4 s, partikel memiliki…
+   1. Energi kinetik maksimum dan energi potensial minimum
+   2. Energi kinetik sama dengan energi potensial
+   3. Energi kinetik lebih besar daripada energi potensial
+   4. Energi kinetik minimum dan energi potensial maksimum
+   5. Energi kinetik maksimum dan energi potensial nol
+        Jawaban: D
+
+
+   16. Sebuah pegas memiliki konstanta 20 N/m pada ujungnya diberi beban 40 gram. Jika g = 10 m/s2, maka besar pertambahan panjang pegas adalah …
+   1. 0,02 cm
+   2. 0,04 cm
+   3. 0,2 cm
+   4. 0,4 cm
+   5. 2 cm
+        Jawaban: E
+
+
+   17. Pada ujung pegas yang tergantung vertikal diberi beban dengan massa m, lalu digetarkan selaras dengan periode T sekon. Jika beban diganti dengan beban lain yang massanya 4 m maka periode getarannya menjadi…
+   1. T sekon
+   2. 2T sekon
+   3. ½ T sekon
+   4. 4T sekon
+   5. ¼ T sekon
+Jawaban: B
+
+
+   18. Di suatu tempat di bumi yang percepatan gravitasinya 9,8 m/s2, sebuah ayunan sederhana memiliki periode 4 sekon. Panjang tali ayunan tersebut adalah…
+   1. 1 m
+   2. 2 m
+   3. 3 m
+   4. 4 m
+   5. 5 m
+        Jawaban:D
+
+
+   19.   Jika bandul C diayun, maka bandul yang turut berayun adalah…
+      1. A dan E 
+      2. B dan D
+      3. A dan B
+      4. D dan E
+      5. A dan D
+        Jawaban: A
+
+
+      20. Besarnya periode suatu ayunan (bandul) sederhana bergantung pada ...
+(1) Panjang tali
+(2) Massa benda
+(3) Percepatan gravitasi
+(4) Amplitudo
+Pernyataan di atas yang benar adalah…
+      1. (1) dan (2)
+      2. (2) dan (3)
+      3. (1) dan (3)
+      4. (1) dan (4)
+      5. (2) dan (4)
+        Jawaban: C
+
+
+      21. Gelombang yang dalam perambatannya memerlukan medium disebut... serta gelombang yang arah getarnya tegak lurus terhadap arah rambatannya disebut... 
+      1. Gelombang mekanik dan gelombang transversal
+      2. Gelombang elektromagnetik dan gelombang longitudinal
+      3. Gelombang transversal dan gelombang mekanik
+      4. Gelombang berjalan dan gelombang stasioner
+      5. Gelombang mekanik dan gelombang longitudinal
+        Jawaban: A
+
+
+      22. Peristiwa pembelokan gelombang ketika melewati celah sempit atau rintangan disebut sebagai sifat gelombang... 
+      1. Refleksi (Pemantulan)
+      2. Refraksi (Pembiasan)
+      3. Difraksi (Lenturan)
+      4. Interferensi (Perpaduan)
+      5. Polarisasi (Kutub gelombang)
+Jawaban: C
+
+
+      23.   Jika jarak yang ditempuh gelombang adalah adalah 15 cm dan waktu yang dibutuhkan untuk menempuh gelombang tersebut 0,6 s, maka panjang gelombang adalah…
+         1. 5 cm
+         2. 10 cm
+         3. 15 cm
+         4. 20 cm
+         5. 25 cm
+        Jawaban: B
+
+
+         24. Sebuah gelombang berjalan di permukaan air memenuhi persamaan y = 0,02 sin (10πt – 10πx), y dan x dalam meter dan t dalam sekon. Frekuensi dan panjang gelombang adalah…
+         1. 0,2 m dan 5,5 Hz
+         2. 9 Hz dan 0,4 m
+         3. 5 Hz dan 0,2 m
+         4. 5 Hz dan 0,8 m
+         5. 9 Hz dan 0,2 m
+Jawaban: C
+
+
+         25. Pada tali yang panjangnya 4 m dan ujungnya terikat pada tiang ditimbulkan gelombang stasioner. Jika terbentuk 6 gelombang penuh, maka letak perut yang ketiga dihitung dari ujung terikat adalah ... 
+         1. ⅔ m
+         2. ½ m
+         3. ¼ m
+         4. ⅚ m
+         5. ⅞ m
+Jawaban: D
+
+
+         26. Hewan-hewan seperti kelelawar dan lumba-lumba memanfaatkan kemampuan ekolokasi untuk bernavigasi serta berburu mangsa di lingkungan yang gelap atau keruh. Gelombang bunyi yang dipancarkan dan ditangkap kembali oleh hewan-hewan tersebut termasuk jenis bunyi …
+         1. Infrasonik, karena frekuensinya kurang dari 20 Hz
+         2. Audiosonik, karena frekuensinya tepat 20.000 Hz
+         3. Ultrasonik, karena frekuensinya lebih dari 20.000 Hz
+         4. Supersonik, karena kecepatannya melebihi kecepatan cahaya
+         5. Infrasonik, karena hanya merambat di dalam zat cair
+        Jawaban: C
+
+
+         27. Perhatikan beberapa pernyataan mengenai sifat gelombang bunyi berikut:
+         1. Dapat merambat di ruang hampa udara.
+         2. Termasuk gelombang longitudinal yang terdiri atas rapatan dan regangan.
+         3. Tidak dapat mengalami polarisasi.
+         4. Cepat rambatnya paling besar saat melewati medium gas dibandingkan zat padat.
+Pernyataan yang benar mengenai karakteristik gelombang bunyi ditunjukkan oleh nomor …
+         1. 1 dan 2
+         2. 1 dan 3
+         3. 2 dan 3
+         4. 2 dan 4
+         5. 3 dan 4
+Jawaban: C
+
+
+         28. Dinding bagian dalam gedung bioskop maupun studio musik umumnya dilapisi oleh bahan-bahan berpori seperti karpet tebal, busa, atau gabus. Pemasangan bahan-bahan tersebut bertujuan untuk meredam sifat gelombang bunyi berupa …
+         1. Interferensi yang menyebabkan suara menjadi pecah
+         2. Difraksi yang membuat suara bocor keluar ruangan
+         3. Refraksi yang mengubah nada dasar musik
+         4. Pemantulan (gaung/kerdam) yang mengganggu kejelasan suara asli
+         5. Efek Doppler yang mengubah tinggi rendahnya frekuensi
+Jawaban: D
+
+
+         29. Sebuah mobil ambulans melaju dengan kecepatan 108 km/jam dan membunyikan sirine dengan frekuensi 800 Hz. Ambulance tersebut mendekati seorang pejalan kaki yang diam di tepi jalan dengan kecepatan bunyi udara 350 m/s. Berapa frekuensi yang didengar oleh pejalan kaki?
+         1. 875 Hz
+         2. 880 Hz
+         3. 865 Hz
+         4. 885 Hz
+         5. 870 Hz
+Jawaban: A
+
+
+         30. Sebuah jet menghasilkan bunyi dengan taraf intensitas 140 dB pada jarak 100 m. Taraf intensitas yang dihasilkan jet tersebut pada jarak 10 km akan menjadi ....
+         1. 70 dB
+         2. 100 dB
+         3. 120 dB
+         4. 140 dB
+         5. 150 dB
+Jawaban: B
+
+
+         31. Suhu suatu zat bila diukur dengan termometer Celcius menunjukkan angka 25°C. Jika suhu benda tersebut diukur dengan termometer Fahrenheit menunjukkan angka
+         1. 14°F
+         2. 45°F
+         3. 60°F
+         4. 77°F
+         5. 318°F
+        Jawaban: D
+
+
+         32. Besi yang diberikan kalor akan mengalami Pemuaian adalah bertambah besarnya pertambahan panjang, luas ataupun ukuran suatu benda karena kenaikan volumenya. Berdasarkan penjelasan tersebut suhu yang terjadi pada benda tersebut. maka dapat disimpulkan bahwa setiap benda bila diberi kalor akan mengalami 
+         1. Pemuaian
+         2. Penyusutan
+         3. Pertambahan luas
+         4. Perubahan wujud
+         5. Pencairan
+Jawaban: A
+
+
+         33. Gelas yang diisi air panas dapat pecah atau retak. Fenomena tersebut terjadi akibat
+         1. Air yang dituangkan mengalirkan panas secara merata keseluruh permukaannya dan menjadikan gelas memuai perlahan-lahan hingga retak dan akhirnya pecah
+         2. Air yang dituangkan mengalirkan panas secara tidak meratak seluruh permukaannya dan menjadikan gelas memuai perlahan-lahan hingga retak dan akhirnya pecah
+         3. Air yang dituangkan mengalirkan panas secara merata keseluruh permukaannya dan menjadikan gelas tidak memuai perlahan-lahan hingga retak dan akhirnya pecah
+         4. Air yang dituangkan mengalirkan panas secara merata kesebagian permukaannya dan menjadikan gelas memuai cepat hingga retak
+         5. Air yang dituangkan mengalirkan panas secara tidak merata ke seluruh permukaannya dan menjadikan gelas menyusut perlahan-lahan hingga retak dan akhirnya pecah 
+Jawaban: B
+
+
+         34. (1) Besarnya suhu
+(2) Besarnya kalor jenis suatu zat
+(3) Besarnya massa zat
+(4) Besarnya kalor yang diberikan
+Faktor-faktor yang mempengaruhi perubahan suhu suatu zat cepat meningkat adalah
+         1. 1 dan 2
+         2. 1, 2 dan 3
+         3. 2, 3, dan 4
+         4. 1, 3, dan 4
+         5. Semuanya benar
+        Jawaban: C
+
+
+         35. Sebuah batang logam memiliki panjang awal 2 m. Batang tersebut dipanaskan sehingga suhunya naik 50°C. Jika koefisien muai panjang logam adalah 2 x 10-5 C-1, pertambahan panjang batang adalah ....
+         1. 0,2 mm
+         2. 1 mm
+         3. 2 mm
+         4. 5 mm
+         5. 10 mm
+Jawaban: C.
+
+
+         36. Suhu gas dalam sebuah wadah meningkat dari 300 K menjadi 600 K. Jika volume gas tetap, tekanan awal gas adalah 2 atm. Tekanan akhirnya adalah ....
+         1. 1 atm
+         2. 2 atm
+         3. 3 atm
+         4. 4 atm
+         5. 6 atm
+Jawaban: D.
+
+
+         37. Dua termometer, A dan B, digunakan untuk mengukur suhu suatu benda. Termometer A menunjukkan 25°C, sedangkan termometer B menunjukkan 77°F. Berdasarkan hasil pengukuran tersebut, kesimpulan yang tepat adalah ....
+         1. Termometer A menunjukkan suhu lebih tinggi
+         2. Termometer B menunjukkan suhu lebih tinggi
+         3. Kedua termometer menunjukkan suhu yang sama
+         4. Kedua termometer tidak dapat dibandingkan
+         5. Termometer B mengalami kesalahan pengukuran
+Jawaban: C
+
+
+         38. Sebuah gas memiliki volume 4 L pada tekanan 2 atm. Jika suhu tetap dan tekanan dinaikkan menjadi 8 atm, volume akhir gas adalah ....
+         1. 0,5 L
+         2. 1 L
+         3. 2 L
+         4. 4 L
+         5. 8 L
+Jawaban: B. 
+
+
+         39. Distribusi Maxwell-Boltzmann digunakan untuk menjelaskan ....
+         1. Perubahan massa molekul akibat suhu
+         2. Distribusi energi atau kecepatan molekul gas dalam keadaan setimbang termal
+         3. Perubahan volume benda padat
+         4. Hubungan antara massa dan gaya gravitasi
+         5. Perubahan wujud zat akibat tekanan saja
+Jawaban: B
+
+
+         40. Perhatikan dua kondisi berikut.
+- Kondisi I: Gas berada pada suhu 100 K.
+- Kondisi II: Gas berada pada suhu 1000 K.
+Berdasarkan distribusi Maxwell-Boltzmann, analisis yang paling tepat mengenai molekul gas pada kedua kondisi tersebut adalah ....
+         1. Pada suhu 100 K, molekul memiliki energi kinetik rata-rata lebih besar
+         2. Pada suhu 1000 K, molekul memiliki energi kinetik rata-rata lebih besar dan distribusi energi molekul lebih menyebar
+         3. Pada kedua suhu, energi kinetik rata-rata molekul selalu sama
+         4. Pada suhu 1000 K, semua molekul memiliki energi yang sama
+         5. Pada suhu 100 K, seluruh molekul berhenti bergerak
+Jawaban: B

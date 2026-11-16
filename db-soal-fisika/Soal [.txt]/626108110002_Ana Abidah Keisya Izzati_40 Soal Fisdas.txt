@@ -1,0 +1,248 @@
+40 SOAL FISIKA DASAR
+
+1. Hukum Pascal menyatakan bahwa tekanan yang diberikan pada fluida dalam ruang tertutup akan....
+a. Berkurang ke segala arah
+b. Diteruskan sama besar ke segala arah
+c. Hanya diteruskan ke bawah
+d. Hilang di dalam fluida
+2. Air mengalir melalui pipa dengan luas penampang 4 cm² dan kecepatan 2 m/s. Jika luas penampang pipa mengecil menjadi 2 cm², kecepatan air menjadi ....
+a. 1 m/s
+b. 2 m/s
+c. 4 m/s
+d. 8 m/s
+3. Sebuah benda berada pada kedalaman 5 m di dalam minyak yang memiliki massa jenis 800 kg/m³. Tekanan hidrostatis yang dialami benda adalah ....
+a. 20.000 Pa
+b. 30.000 Pa
+c. 40.000 Pa
+d. 50.000 Pa
+4. Sebuah benda memiliki massa 200 gram dan volume 100 cm³. Massa jenis benda tersebut adalah ....
+a. 0,5 g/cm³
+b. 1 g/cm³
+c. 2 g/cm³
+d. 4 g/cm³
+5. Massa jenis sebuah benda 800 kg/m³ dan massa jenis air 1.000 kg/m³. Benda tersebut akan mengapung di air.
+a. Benar
+b. Salah
+6. Sebuah benda memiliki massa 300 gram dan volume 500 cm³. Jika massa jenis air 1 g/cm³, massa jenis benda dan keadaannya adalah ....
+a. 0,6 g/cm³ dan mengapung
+b. 1 g/cm³ dan melayang
+c. 1,5 g/cm³ dan tenggelam
+d. 2 g/cm³ dan tenggelam
+7. Alat berikut yang menggunakan prinsip Hukum Pascal adalah ....
+a. Kapal laut
+b. Dongkrak hidrolik
+c. Sayap pesawat
+d. Termometer
+8. Dua benda berada di dalam zat cair yang sama. Benda pertama berada pada kedalaman 2 m, sedangkan benda kedua berada pada kedalaman 4 m. Tekanan hidrostatis benda kedua dua kali lebih besar daripada benda pertama.
+a. Benar
+b. Salah
+9. Air sebanyak 120 liter mengalir melalui sebuah pipa selama 30 sekon. Besar debit air tersebut adalah ....
+a. 2 liter/s
+b. 3 liter/s
+c. 4 liter/s
+d. 5 liter/s
+10. Sebuah benda tercelup seluruhnya dalam air dengan volume 0,002 m³. Jika massa jenis air 1.000 kg/m³ dan gravitasi 10 m/s², besar gaya ke atas yang dialami benda adalah ....
+a. 2 N
+b. 10 N
+c. 20 N
+d. 40 N
+11. Sebuah benda melakukan 20 getaran dalam waktu 10 sekon. Frekuensi getaran benda tersebut adalah ....
+a. 0,5 Hz
+b. 1 Hz
+c. 2 Hz
+d. 4 Hz
+12. Pada gerak harmonik sederhana, ketika benda berada tepat di titik keseimbangan, kondisi kecepatannya adalah ....
+a. Maksimum
+b. Minimum
+c. Nol
+d. Tidak bergerak selamanya
+13. Sebuah benda bergetar sebanyak 60 kali dalam 30 sekon. Periode getarannya adalah ...
+a. 0,25 sekon
+b. 0,5 sekon
+c. 1 sekon
+d. 2 sekon
+14. Jika amplitudo getaran diperbesar, energi mekanik total osilasi harmonik sederhana akan ...
+a. Berkurang
+b. Tetap
+c. Bertambah
+d. Menjadi nol
+15. Jika frekuensi getaran semakin besar, periode getaran juga semakin besar.
+a. Benar
+b. Salah
+16. Sebuah benda melakukan 5 getaran dalam 2 sekon. Jika amplitudonya 4 cm, jarak total yang ditempuh selama 5 getaran adalah ...
+a. 20 cm
+b. 40 cm
+c. 60 cm
+d. 80 cm
+17. Dalam gerak harmonik sederhana, percepatan benda berhubungan dengan gaya pemulih berdasarkan ....
+a. Hukum Newton I
+b. Hukum Newton II
+c. Hukum Newton III
+d. Hukum Pascal
+18. Menurut Hukum Hooke, besar gaya yang diberikan pegas berbanding lurus dengan ....
+a. Massa benda
+b. Perpindahan atau pertambahan panjang pegas
+c. Kecepatan benda
+d. Waktu getaran
+19. Pada gerak harmonik sederhana, jika simpangan benda adalah setengah amplitudo, energi potensialnya adalah setengah energi mekanik total.
+a. Benar
+b. Salah
+20. Sebuah pegas memiliki konstanta 200 N/m dan ditarik sejauh 0,1 m. Besar gaya pemulihnya adalah ...
+a. 10 N
+b. 20 N
+c. 30 N
+d. 40 N
+21. Sebuah gelombang memiliki panjang gelombang 4 meter dan frekuensi 5 Hz. Cepat rambat gelombang tersebut adalah ....
+a. 0,8 m/s
+b. 9 m/s
+c. 20 m/s
+d. 25 /s
+22. Gelombang transversal merupakan gelombang yang arah getaran partikelnya ....
+a. Sejajar dengan arah rambat gelombang
+b. Tegak lurus dengan arah rambat gelombang
+c. Berlawanan dengan arah rambat gelombang
+d. Selalu membentuk sudut 45° terhadap arah rambat
+23. Gelombang mekanik dapat merambat tanpa adanya medium perantara.
+a. Benar
+b. Salah
+24. Sebuah kapal mengirimkan gelombang bunyi ke dasar laut. Bunyi pantul diterima kembali setelah 2 sekon. Jika cepat rambat bunyi di air laut 1.500 m/s, kedalaman laut tersebut adalah ....
+a. 750 m
+b. 1.000 m
+c. 1.250 m
+d. 1.500 m
+e. 3.000 m
+25. Gelombang merambat pada tali dengan persamaan:y=0,2  sin??(4pt-2px)?
+Jika satuan y dan x adalah meter serta t sekon, panjang gelombang dan cepat rambatnya adalah ....
+a. 0,5 m dan 1 m/s
+b. 1 m dan 2 m/s
+c. 2 m dan 2 m/s
+d. 2 m dan 4 m/s
+e. 4 m dan 4 m/s
+26. Sebuah tali digetarkan sehingga terbentuk gelombang dengan jarak antara puncak pertama dan puncak kelima sebesar 12 meter. Jika dalam waktu 4 sekon terbentuk 10 gelombang, cepat rambat gelombang tersebut adalah ....
+a. 5 m/s
+b. 7,5 m/s
+c. 10 m/s
+d. 12 m/s
+e. 15 m/s
+27. Suatu gelombang dinyatakan dengan persamaan: y=0,25  sin??(12pt-6px)?
+Banyaknya gelombang yang terjadi selama 5 sekon adalah ....
+a. 15 gelombang
+b. 20 gelombang
+c. 25 gelombang
+d. 30 gelombang
+e. 60 gelombang
+28. Ketika sebuah batu dijatuhkan ke permukaan air, terbentuk gelombang melingkar. Partikel air di sekitar titik gangguan terutama ....
+a. Bergerak mengikuti gelombang hingga ke tepi kolam
+b. Bergetar di sekitar posisi keseimbangannya
+c. Berpindah secara permanen menjauhi sumber
+d. Tidak mengalami gerakan
+e. Bergerak hanya dalam arah horizontal
+29. Pada gelombang longitudinal, satu panjang gelombang merupakan jarak antara ....
+a. Dua puncak yang berurutan
+b. Dua lembah yang berurutan
+c. Satu rapatan dan satu renggangan berikutnya
+d. Dua rapatan yang berurutan
+e. Satu puncak dan satu lembah
+30. Persamaan gelombang transversal diberikan sebagai: y= 0, 5  sin??(2pt- px?
+Waktu yang diperlukan suatu titik untuk melakukan 3 getaran penuh adalah ....
+a. 0,5 s
+b. 1 s
+c. 1,5 s
+d. 2 s
+e. 3 s
+31. Hukum ke-Nol Termodinamika menjelaskan bahwa ....
+a. Kalor tidak dapat berpindah tanpa adanya perbedaan suhu
+b. Energi tidak dapat diciptakan maupun dimusnahkan
+c. Jika dua benda masing-masing berada dalam kesetimbangan termal dengan benda 
+ketiga, maka keduanya berada dalam kesetimbangan termal satu sama lain
+d. Kalor selalu berpindah dari benda dingin ke benda panas
+e. Suhu benda akan selalu meningkat ketika kalor diberikan
+32. Suhu suatu benda adalah 45°C. Jika dinyatakan dalam skala Fahrenheit, nilainya adalah ....
+a. 103°F
+b. 109°F
+c. 113°F
+d. 117°F
+e. 121°F
+33. Suhu suatu benda meningkat dari 20°C menjadi 80°C. Besarnya perubahan suhu jika dinyatakan dalam Kelvin adalah ....
+a. 40 K
+b. 50 K
+c. 60 K
+d. 80 K
+e. 100 K
+34. Termometer Y menunjukkan 50°Y ketika air membeku dan 250°Y ketika air mendidih. Ketika termometer menunjukkan 170°Y, suhu dalam Celsius adalah ....
+a. 40°C
+b. 50°C
+c. 55°C
+d. 60°C
+e. 65°C
+35. Suhu suatu benda adalah 122°F. Jika dinyatakan dalam skala Réaumur, nilainya adalah ....
+a. 30°R
+b. 35°R
+c. 40°R
+d. 45°R
+e. 50°R
+36. Ketika suhu suatu benda meningkat, gerak rata-rata partikel penyusunnya akan ....
+a. Semakin lambat
+b. Tetap
+c. Semakin cepat
+d. Berhenti
+e. Tidak beraturan tanpa perubahan energi kinetik
+37. Dalam kesetimbangan termal, tidak terjadi perpindahan kalor netto antara benda-benda yang bersentuhan.
+a. Benar
+b. Salah
+38. Termometer raksa dapat digunakan untuk mengukur suhu karena ....
+a. Raksa memiliki kalor jenis yang sangat besar
+b. Raksa tidak mengalami perubahan volume
+c. Raksa memiliki sifat pemuaian yang teratur terhadap perubahan suhu
+d. Raksa dapat menghantarkan kalor dengan sempurna
+e. Raksa memiliki titik beku yang sangat tinggi
+39. Suhu 25°C sama dengan 298 K 
+a. Benar
+b. salah
+40. Suhu suatu zat adalah 350 K. Jika dikonversikan ke skala Celsius, suhu zat tersebut adalah ....
+a. 67°C
+b. 77°C
+c. 87°C
+d. 97°C
+e. 107°C
+KUNCI JAWABAN 
+1. B
+2. C
+3. C
+4. C
+5. A
+6. A
+7. B
+8. A
+9. C
+10. C
+11. C
+12. A
+13. B
+14. C
+15. B
+16. D
+17. B
+18. B
+19. B
+20. B
+21. C
+22. B
+23. B
+24. D
+25. B
+26. B
+27. D
+28. B
+29. D
+30. E
+31. C
+32. C
+33. C
+34. D
+35. C
+36. C
+37. A
+38. C
+39. A
+40. B

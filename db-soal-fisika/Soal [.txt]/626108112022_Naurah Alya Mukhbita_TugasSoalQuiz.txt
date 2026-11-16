@@ -1,0 +1,319 @@
+1. Besaran yang menyatakan massa per satuan volume suatu zat disebut ....
+A. Tekanan
+B. Massa jenis
+C. Tegangan permukaan
+D. Viskositas
+E. Debit
+ANSWER: B
+
+2. Sebuah benda bermassa 600 g memiliki volume 200 cm³. Massa jenis benda tersebut adalah ....
+A. 0,3 g/cm³
+B. 2 g/cm³
+C. 3 g/cm³
+D. 6 g/cm³
+E. 12 g/cm³
+ANSWER: C
+
+3. Tekanan hidrostatis pada kedalaman 2 m di dalam air (ρ = 1.000 kg/m³), jika g = 10 m/s², adalah ....
+A. 2.000 Pa
+B. 5.000 Pa
+C. 10.000 Pa
+D. 20.000 Pa
+E. 40.000 Pa
+ANSWER: D
+
+4. Gaya 120 N bekerja tegak lurus pada bidang seluas 0,04 m². Tekanan yang dihasilkan adalah ....
+A. 300 Pa
+B. 1.200 Pa
+C. 3.000 Pa
+D. 4.800 Pa
+E. 12.000 Pa
+ANSWER: C
+
+5. Alat hidrolik memiliki luas penampang kecil 5 cm² dan besar 100 cm². Jika gaya pada penampang kecil 20 N, gaya pada penampang besar adalah ....
+A. 40 N
+B. 100 N
+C. 200 N
+D. 400 N
+E. 2.000 N
+ANSWER: D
+
+6. Benda tercelup seluruhnya dalam air dengan volume 0,002 m³. Jika ρ air = 1.000 kg/m³ dan g = 10 m/s², gaya apungnya adalah ....
+A. 2 N
+B. 10 N
+C. 20 N
+D. 100 N
+E. 200 N
+ANSWER: C
+
+7. Air mengalir dalam pipa berpenampang 8 cm² dengan kecepatan 2 m/s. Jika penampang menyempit menjadi 4 cm², kecepatan aliran menjadi ....
+A. 0,5 m/s
+B. 1 m/s
+C. 2 m/s
+D. 4 m/s
+E. 8 m/s
+ANSWER: D
+
+8. Air mengalir mendatar. Pada bagian pipa yang lebih sempit, kecepatan aliran meningkat. Menurut prinsip Bernoulli, tekanan statis pada bagian sempit ....
+A. Meningkat
+B. Menurun
+C. Tetap
+D. Menjadi nol
+E. Selalu sama dengan tekanan atmosfer
+ANSWER: B
+
+9. Satuan SI viskositas dinamis adalah ....
+A. N/m
+B. N/m²
+C. N·s/m²
+D. kg/m³
+E. J/s
+ANSWER: C
+
+10. Tegangan permukaan cairan 0,06 N/m. Jika panjang garis permukaan 0,2 m dan γ = F/L, gaya yang diperlukan adalah ....
+A. 0,003 N
+B. 0,012 N
+C. 0,03 N
+D. 0,12 N
+E. 3 N
+ANSWER: B
+
+11. Pada gerak harmonik sederhana, simpangan maksimum dari titik setimbang disebut ....
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Fase
+E. Frekuensi sudut
+ANSWER: C
+
+12. Sebuah benda melakukan 20 getaran dalam waktu 5 sekon. Frekuensinya adalah ....
+A. 0,25 Hz
+B. 2 Hz
+C. 4 Hz
+D. 5 Hz
+E. 100 Hz
+ANSWER: C
+
+13. Jika frekuensi osilasi suatu benda 5 Hz, periodenya adalah ....
+A. 0,1 s
+B. 0,2 s
+C. 2 s
+D. 5 s
+E. 25 s
+ANSWER: B
+
+14. Pegas memiliki konstanta 200 N/m dan dihubungkan dengan massa 2 kg. Periode osilasinya (π = 3,14) mendekati ....
+A. 0,31 s
+B. 0,63 s
+C. 1,00 s
+D. 1,26 s
+E. 2,00 s
+ANSWER: B
+
+15. Osilator memiliki frekuensi sudut 10 rad/s. Frekuensinya adalah ....
+A. 1,59 Hz
+B. 3,14 Hz
+C. 5,00 Hz
+D. 10,0 Hz
+E. 62,8 Hz
+ANSWER: A
+
+16. Benda berosilasi dengan amplitudo 0,05 m dan frekuensi sudut 4 rad/s. Laju maksimumnya adalah ....
+A. 0,0125 m/s
+B. 0,20 m/s
+C. 0,80 m/s
+D. 1,25 m/s
+E. 4,00 m/s
+ANSWER: B
+
+17. Pada osilasi pegas ideal tanpa redaman, energi mekanik total ....
+A. Selalu nol
+B. Bertambah terhadap waktu
+C. Berkurang secara eksponensial
+D. Tetap
+E. Hanya berupa energi kinetik
+ANSWER: D
+
+18. Benda bermassa 0,5 kg berosilasi pada pegas berk konstanta 100 N/m dengan amplitudo 0,10 m. Energi mekanik totalnya adalah ....
+A. 0,05 J
+B. 0,10 J
+C. 0,25 J
+D. 0,50 J
+E. 1,00 J
+ANSWER: D
+
+19. Bandul sederhana memiliki panjang tali 1 m. Jika g = 9,8 m/s², periodenya mendekati ....
+A. 0,50 s
+B. 1,00 s
+C. 2,00 s
+D. 3,14 s
+E. 6,28 s
+ANSWER: C
+
+20. Dua sistem pegas identik memiliki massa beban sama, tetapi amplitudo sistem kedua dua kali amplitudo pertama. Jika dilepaskan bersamaan, pernyataan yang tepat adalah ....
+A. Periode sistem kedua dua kali lebih besar
+B. Sistem pertama mencapai setimbang lebih dahulu
+C. Sistem kedua mencapai setimbang lebih dahulu
+D. Keduanya memiliki periode sama
+E. Periode hanya ditentukan amplitudo
+ANSWER: D
+
+21. Gelombang dengan arah getar partikel medium tegak lurus terhadap arah rambat disebut gelombang ....
+A. Longitudinal
+B. Transversal
+C. Stasioner
+D. Bunyi
+E. Elektromagnetik
+ANSWER: B
+
+22. Gelombang longitudinal ditandai oleh arah getar medium yang ....
+A. Tegak lurus arah rambat
+B. Melingkar
+C. Sejajar arah rambat
+D. Selalu ke atas
+E. Tidak memiliki arah
+ANSWER: C
+
+23. Gelombang memiliki frekuensi 5 Hz dan panjang gelombang 2 m. Cepat rambatnya adalah ....
+A. 0,4 m/s
+B. 2,5 m/s
+C. 5 m/s
+D. 7 m/s
+E. 10 m/s
+ANSWER: E
+
+24. Gelombang memiliki frekuensi 8 Hz. Periodenya adalah ....
+A. 0,125 s
+B. 0,25 s
+C. 0,5 s
+D. 4 s
+E. 8 s
+ANSWER: A
+
+25. Gelombang pada tali memiliki tegangan 80 N dan massa per satuan panjang 0,02 kg/m. Cepat rambat gelombang adalah ....
+A. 20 m/s
+B. 40 m/s
+C. 50 m/s
+D. 63,2 m/s
+E. 80 m/s
+ANSWER: D
+
+26. Tali sepanjang 2 m terikat pada kedua ujungnya. Jika terbentuk gelombang berdiri pada harmonik dasar, panjang gelombangnya adalah ....
+A. 0,5 m
+B. 1 m
+C. 2 m
+D. 4 m
+E. 8 m
+ANSWER: D
+
+27. Bunyi merambat di dalam air dengan cepat rambat 1.500 m/s. Waktu yang diperlukan untuk menempuh jarak 300 m adalah ....
+A. 0,02 s
+B. 0,2 s
+C. 2 s
+D. 5 s
+E. 20 s
+ANSWER: B
+
+28. Intensitas bunyi 10⁻⁶ W/m² dan intensitas ambang pendengaran 10⁻¹² W/m². Taraf intensitas bunyi adalah ....
+A. 6 dB
+B. 20 dB
+C. 40 dB
+D. 60 dB
+E. 120 dB
+ANSWER: D
+
+29. Sumber bunyi diam menghasilkan frekuensi 500 Hz. Pengamat bergerak mendekati sumber dengan kecepatan 10 m/s. Jika cepat rambat bunyi 340 m/s, frekuensi yang didengar mendekati ....
+A. 485 Hz
+B. 500 Hz
+C. 515 Hz
+D. 530 Hz
+E. 550 Hz
+ANSWER: C
+
+30. Dua gelombang harmonik dengan amplitudo sama bertemu dan memiliki beda fase 180°. Interferensi yang terjadi adalah ....
+A. Konstruktif maksimum
+B. Destruktif maksimum
+C. Tidak terjadi superposisi
+D. Resonansi
+E. Pembiasan
+ANSWER: B
+
+31. Satuan SI untuk suhu termodinamik adalah ....
+A. Celsius
+B. Fahrenheit
+C. Kelvin
+D. Reamur
+E. Rankine
+ANSWER: C
+
+32. Suhu 27°C setara dengan ....
+A. 246,15 K
+B. 273,15 K
+C. 300,15 K
+D. 310,15 K
+E. 327,15 K
+ANSWER: C
+
+33. Suhu 40°C jika dinyatakan dalam skala Fahrenheit adalah ....
+A. 50°F
+B. 72°F
+C. 96°F
+D. 104°F
+E. 112°F
+ANSWER: D
+
+34. Menurut hukum ke-Nol termodinamika, jika benda A dan B masing-masing berada dalam kesetimbangan termal dengan benda C, maka ....
+A. A lebih panas daripada B
+B. B lebih panas daripada A
+C. A dan B setimbang termal satu sama lain
+D. A dan B harus bermassa sama
+E. Ketiganya harus bervolume sama
+ANSWER: C
+
+35. Batang logam panjangnya 2 m memiliki koefisien muai panjang 1,2 × 10⁻⁵ °C⁻¹. Jika suhu naik 50°C, pertambahan panjangnya adalah ....
+A. 0,12 mm
+B. 0,6 mm
+C. 1,2 mm
+D. 6 mm
+E. 12 mm
+ANSWER: C
+
+36. Gas ideal dalam wadah tertutup memiliki tekanan 100 kPa pada suhu 300 K. Jika volumenya tetap dan suhu naik menjadi 450 K, tekanan akhirnya adalah ....
+A. 50 kPa
+B. 100 kPa
+C. 125 kPa
+D. 150 kPa
+E. 200 kPa
+ANSWER: D
+
+37. Suhu titik tripel air pada skala Kelvin adalah ....
+A. 0 K
+B. 100 K
+C. 273,15 K
+D. 273,16 K
+E. 373,15 K
+ANSWER: D
+
+38. Sebuah bejana kaca berisi penuh cairan. Ketika suhu dinaikkan, volume cairan yang tumpah ditentukan oleh ....
+A. Pemuaian bejana saja
+B. Pemuaian cairan saja
+C. Selisih pemuaian volume cairan dan bejana
+D. Massa jenis awal saja
+E. Tekanan atmosfer saja
+ANSWER: C
+
+39. Menurut teori kinetik gas, suhu mutlak gas ideal berbanding lurus dengan ....
+A. Energi potensial gravitasi molekul
+B. Energi kinetik rata-rata molekul
+C. Volume wadah saja
+D. Massa total wadah
+E. Tekanan atmosfer luar
+ANSWER: B
+
+40. Dua benda dengan suhu berbeda disentuhkan dalam sistem terisolasi. Pernyataan yang tepat hingga tercapai kesetimbangan termal adalah ....
+A. Kalor mengalir dari suhu rendah ke tinggi
+B. Kalor tetap mengalir setelah suhu sama
+C. Kalor mengalir dari suhu tinggi ke rendah hingga suhu sama
+D. Massa kedua benda harus sama
+E. Suhu kedua benda tetap sejak awal
+ANSWER: C

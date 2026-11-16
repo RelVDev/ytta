@@ -1,0 +1,321 @@
+1. Zat yang mempertahankan bentuk dan ukurannya disebut….
+a. Zat padat
+b. Zat cair
+c. Zat gas
+d. Plasma
+e. Fluida
+ANSWER: A
+
+2. Zat cair dan zat gas tidak memiliki bentuk tetap dan dapat mengalir. Maka  zat cair dan zat gas disebut dengan….
+a. Zat padat
+b. Zat cair
+c. Zat gas
+d. Plasma
+e. Fluida
+ANSWER: D
+
+3. P= F/A adalah rumus …..
+a. Viskositas
+b. Tegangan
+c. Tekanan
+d. Kepadatan
+e. Keringanan
+ANSWER: C
+
+4. Jika tekanan absolut di dalam ban adalah sebesar 321,3 kPa, maka pengukur tekanan pada ban menunjukkan angka…
+a. 320 kPa
+b. 322,3 kPa
+c. 220 kPa
+d. 220,3 kPa
+e. 320,3 kPa
+ANSWER: C
+
+5. Penyebab benda di dalam fluida memiliki berat lebih kecil daripada benda di luar fluida adalah karena adanya….
+a. Gaya gravitasi
+b. Gaya berat
+c. Gaya apung
+d. Gaya cinta
+e. Gaya gesek
+ANSWER: C
+
+6. Sebuah benda bermassa 5 kg dicelupkan seluruhnya ke dalam air. Jika volume benda 0,005 m³, massa jenis air 1.000 kg/m³, dan g=10m/s². Berapa gaya apung yang dialami benda?
+a. 25N
+b. 20N
+c. 30N
+d. 40N
+e. 50N
+ANSWER: E
+
+7. Sebuah kolam memiliki kedalaman 5 m. Jika massa jenis air 1.000 kg/m³ dan g= 10m/s². Maka, tekanan hidrostastis pada dasar kolam adalah sebesar….
+a. 55 kPa
+b. 52 kPa
+c. 50 kPa
+d. 57 kPa
+e. 45 kPa
+ANSWER; C
+
+8. Mengapa es yang terapung di dalam gelas berisi air tidak tenggelam?
+a. Karena massa jenis es lebih besar daripada air
+b. Karena berat es lebih besar daripada gaya apung
+c. Karena gaya apung yang diterima es sama dengan berat es
+d. Karena es tidak memiliki volume
+e. Karena air tidak memberikan gaya pada es
+ANSWER: C
+
+9. Hukum Pascal menyatakan bahwa …
+a. Tekanan pada fluida tertutup diteruskan sama besar ke segala arah. 
+b. Gaya apung sama dengan berat fluida yang dipindahkan
+c. Tekanan hidrostatis bertambah seiring kedalaman
+d. Debit fluida selalu berubah
+e. Kecepatan fluida selalu tetap
+ANSWER: A
+
+10. Wujud keempat materi setelah padat, gas, cair, adalah…
+a. Plasma
+b. Beku
+c. Titik
+d. Encer
+e. Rintik
+ANSWER: A
+
+11. Gerak bolak-balik benda menurut lintasan tertentu dengan melewati titik seimbangnya disebut….
+a. Osilator
+b. Osilasi
+c. Osmosis
+d. Sosialisasi
+e. Sosis
+ANSWER: B
+
+12. Simpangan terjauh disebut juga….
+a. Osilator
+b. Amplitudo
+c. Periode
+d. Gelombang
+e. Lembah-gunung
+ANSWER: B
+
+13. Secara umum, osilasi dapat diklasifikasikan menjadi dua jenis, yaitu…
+a. Osilasi berarah dan osilasi sangat terarah
+b. Osilasi tidak terarah dan osilasi terarah
+c. Osilasi maksimal dan osilasi minimal
+d. Osilasi minimum dan osilasi maksimum
+e. Osilasi teredam dan osilasi tidak teredam
+ANSWER: E
+
+14. Besaran yang menyatakan waktu yang diperlukan untuk melakukan satu kali getaran penuh disebut ....
+a. Frekuensi
+b. Periode
+c. Amplitudo
+d. Simpangan
+e. Kecepatan sudut
+ANSWER: B
+
+15. Satuan frekuensi dalam Sistem Internasional (SI) adalah ....
+a. Meter
+b. Sekon
+c. Newton
+d. Hertz
+e. Joule
+ANSWER: D
+
+16. Persamaan yang menunjukkan hubungan antara periode (T) dan frekuensi (f) adalah ....
+a. T=f
+b. T=2f
+c. T=1/f
+d. T=f²
+e. T=f/2
+ANSWER: C
+
+17. Sebuah bandul sederhana melakukan 40 getaran dalam waktu 20 sekon. Frekuensi osilasi bandul tersebut adalah ....
+a. 20Hz
+b. 200Hz
+c. 2Hz
+d. 10Hz
+e. 100Hz
+ANSWER: C
+
+18. Jika diketahui sebuah bandul osilasi sederhana memiliki frekuensi 2Hz, maka periodenya adalah sebesar….
+a. O,1s
+b. 0,2s
+c. 0,3s
+d. 0,4s
+e. 0,5s
+ANSWER: E
+
+19. Dua bandul sederhana memiliki panjang tali yang berbeda, tetapi massa beban keduanya sama. Bandul pertama memiliki tali lebih panjang dibandingkan bandul kedua. Pernyataan yang tepat mengenai periode kedua bandul adalah ....
+a. Bandul pertama memiliki periode lebih kecil karena massanya sama.
+b. Bandul kedua memiliki periode lebih besar karena talinya lebih pendek.
+c. Kedua bandul memiliki periode yang sama karena massanya sama.
+d. Bandul pertama memiliki periode lebih besar karena periode dipengaruhi panjang tali.
+e. Periode kedua bandul hanya dipengaruhi oleh massa beban.
+ANSWER: D
+
+20. Sebuah benda melakukan gerak harmonis sederhana dengan amplitudo tertentu. Ketika amplitudo osilasi diperbesar menjadi dua kali semula, sedangkan frekuensi sudut tetap, apakah hal tersebut memengaruhi percepatan maksimum benda?
+a. Percepatan maksimum menjadi setengah kali semula.
+b. Percepatan maksimum tetap.
+c. Percepatan maksimum menjadi dua kali semula.
+d. Percepatan maksimum menjadi empat kali semula.
+e. Percepatan maksimum menjadi nol.
+ANSWER: C
+
+21. Gelombang mekanik merupakan gelombang yang dalam perambatannya memerlukan ....
+a. Ruang vakum
+b. Ruang angkasa
+c. Ruang hampa
+d. Medium perambatan
+e. Cahaya matahari
+ANSWER: D
+
+22. Gelombang bunyi yang merambat melalui udara termasuk jenis gelombang ....
+a. Transversal
+b. Longitudinal
+c. Stasioner
+d. Cahaya
+e. Raksasa
+ANSWER: B
+
+23. Jarak antara dua puncak gelombang yang berurutan disebut ....
+a. Panjang Gelombang
+b. Lembah
+c. Gunung
+d. Simpangan
+e. Frekuensi
+ANSWER: A
+
+24. Pada gelombang transversal, arah getaran partikel medium terhadap arah rambat gelombang adalah ....
+a. Berlawanan Arah
+b. Tegak lurus
+c. Membentuk sudut 45°
+d. Membentuk sudut 37°
+e. Tidak berhubungan
+ANSWER: B
+
+25. Frekuensi gelombang menunjukkan ....
+a. Jarak yang ditempuh gelombang dalam satu detik.
+b. Banyaknya getaran yang terjadi setiap sekon.
+c. Waktu yang dibutuhkan untuk menempuh satu panjang gelombang.
+d. Simpangan maksimum suatu gelombang.
+e. Jarak antara dua lembah gelombang yang berurutan.
+ANSWER: B
+
+26. Sebuah gelombang memiliki frekuensi 5 Hz dan panjang gelombang 2 meter. Cepat rambat gelombang tersebut adalah ....
+a. 2,5 m/s
+b. 5 m/s
+c. 7 m/s
+d. 10 m/s
+e. 15 m/s
+ANSWER: D
+
+27. Sebuah gelombang memiliki panjang gelombang 5 meter dan cepat rambat  50 m/s. Maka, frekuensi dari gelombang adalah….
+a. 100 Hz
+b. 500 Hz
+c. 2 Hz
+d. 5 Hz
+e. 10 Hz
+ANSWER: E
+
+28. Dalam waktu 50 sekon, sebuah sumber gelombang menghasilkan 100 getaran. Periode gelombang yang dihasilkan adalah ....
+a. 0,05 s
+b. 0,5 s
+c. 5 s
+d. 50 s
+e. 500 s
+ANSWER: B
+
+29. Dalam waktu 20 sekon, sebuah gelombang menghasilkan periode 0,2 s. Maka, getaran yang dihasilkan adalah sebanyak….
+a. 0,1
+b. 1
+c. 10
+d. 100
+e. 1000
+ANSWER: E
+
+30. Dua gelombang merambat pada medium yang sama dengan cepat rambat yang tetap. Gelombang A memiliki frekuensi 2 Hz, sedangkan gelombang B memiliki frekuensi 4 Hz. Berdasarkan hubungan antara cepat rambat, frekuensi, dan panjang gelombang, pernyataan yang benar adalah ....
+a. Panjang gelombang A sama dengan panjang gelombang 
+b. Panjang gelombang B dua kali panjang gelombang  
+c. Panjang gelombang A dua kali panjang gelombang
+d. Cepat rambat gelombang B dua kali cepat rambat gelombang 
+e. Frekuensi tidak memengaruhi panjang gelombang.
+ANSWER: C
+
+31. Titik didih air pada skala Fahrenheit adalah…
+a. 671,67
+b. 373,15
+c. 100
+d. 80
+e. 212
+ANSWER: E
+
+32. Titik didih air pada skala Celcius adalah…
+a. 671,67
+b. 373,15
+c. 100
+d. 80
+e. 212
+ANSWER: C
+
+33. Titik beku pada skala Celcius adalah…
+a. 491,67
+b. 273,15
+c. 0
+d. 5
+e. 32
+ANSWER: C
+
+34. Titik beku pada skala Rankin adalah…
+a. 491,67
+b. 273,15
+c. 0
+d. 5
+e. 32
+ANSWER: A
+
+35. Alat ukur suhu disebut….
+a. Haemositometer
+b. Viskosimeter
+c. Termometer
+d. Penggaris
+e. Jangka sorong
+ANSWER: C
+
+36. Sifat fisis yang berubah akibat suhu, kecuali…
+a. Pemuaian
+b. Wujud zat
+c. Volume
+d. Viskositas
+e. Harga
+ANSWER: E
+
+37. Berikut yang termasuk skala suhu adalah….
+a. Rankin
+b. Dekameter
+c. Kilogram
+d. Ampere
+e. Joule
+ANSWER: A
+
+38. Hubungan antara skala suhu Rankine (°R) dan Fahrenheit (°F) yang benar adalah ....
+a. °R = °F + 273
+b. °R = °F + 459,67
+c. °R = °F – 273
+d. °R =  9/5°F
+e. °R = °F + 32
+ANSWER: B
+
+39. Suhu suatu benda mengalami kenaikan sebesar 41°C. Jika dinyatakan dalam skala Fahrenheit, besar kenaikan suhu tersebut adalah ....
+a. 37,8
+b. 77,8
+c. 73,8
+d. 88,7
+e. 33,7
+ANSWER: C
+
+40. Suatu benda memiliki suhu sebesar 68°F. Jika dikonversikan ke skala Rankine, suhu benda tersebut adalah ....
+a. 427,67 °R
+b. 459,67 °R
+c. 527,67 °R
+d. 541,67 °R
+e. 591,67 °R
+ANSWER: C
+
+

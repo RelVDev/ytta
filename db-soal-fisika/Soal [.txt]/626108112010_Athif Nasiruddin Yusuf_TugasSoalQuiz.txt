@@ -1,0 +1,321 @@
+1. Massa jenis suatu zat didefinisikan sebagai ...
+A. berat per satuan massa
+B. volume per satuan massa
+C. massa per satuan volume
+D. gaya per satuan luas
+E. usaha per satuan waktu
+ANSWER: C
+
+2. Air mengalir pada pipa dengan luas penampang 8 cm² dan kecepatan 1 m/s. Pipa menyempit menjadi 2 cm². Kecepatan air pada penampang yang sempit adalah ...
+A. 4 m/s
+B. 2 m/s
+C. 8 m/s
+D. 16 m/s
+E. 0,25 m/s
+ANSWER: A
+
+3. Pada aliran fluida horizontal, menurut Prinsip Bernoulli, bagian fluida yang kecepatannya tinggi memiliki tekanan ...
+A. lebih besar
+B. sama besar
+C. nol
+D. lebih rendah
+E. tak hingga
+ANSWER: D
+
+4. Sebuah benda bermassa 2 kg memiliki volume 0,002 m³. Massa jenis benda tersebut adalah ...
+A. 1.000 kg/m³
+B. 4.000 kg/m³
+C. 400 kg/m³
+D. 100 kg/m³
+E. 0,001 kg/m³
+ANSWER: A
+
+5. Tekanan hidrostatis pada kedalaman 3 m di dalam air (ρ = 1.000 kg/m³) adalah ...
+A. 3.000 Pa
+B. 10.000 Pa
+C. 300.000 Pa
+D. 6.000 Pa
+E. 30.000 Pa
+ANSWER: E
+
+6. Alat pengukur tekanan ban menunjukkan angka 200 kPa. Jika tekanan atmosfer 100 kPa, tekanan absolut di dalam ban adalah ...
+A. 100 kPa
+B. 300 kPa
+C. 200 kPa
+D. 400 kPa
+E. 20.000 kPa
+ANSWER: B
+
+7. Sebuah dongkrak hidrolik memiliki penampang kecil 20 cm² dan penampang besar 200 cm². Jika pada penampang kecil diberi gaya 100 N, gaya pada penampang besar adalah ...
+A. 10 N
+B. 100 N
+C. 1.000 N
+D. 2.000 N
+E. 10.000 N
+ANSWER: C
+
+8. Sebuah benda bervolume 0,002 m³ tercelup seluruhnya dalam air (ρ = 1.000 kg/m³). Gaya apung yang dialami benda adalah ...
+A. 2 N
+B. 200 N
+C. 0,2 N
+D. 20 N
+E. 2.000 N
+ANSWER: D
+
+9. Menurut Prinsip Archimedes, gaya apung yang dialami benda di dalam fluida sama dengan ...
+A. berat benda di udara
+B. berat fluida yang dipindahkan oleh benda
+C. massa jenis benda
+D. tekanan hidrostatis di dasar bejana
+E. volume seluruh fluida dalam bejana
+ANSWER: B
+
+10. Sebuah tangki berisi air mengalami kebocoran pada lubang yang berada 1,25 m di bawah permukaan air. Kecepatan air yang keluar dari lubang adalah ... (g = 10 m/s²)
+A. 2,5 m/s
+B. 10 m/s
+C. 25 m/s
+D. 12,5 m/s
+E. 5 m/s
+ANSWER: E
+
+11. Pada gerak harmonik sederhana, percepatan benda sebanding dengan ...
+A. simpangan dan searah dengan simpangan
+B. kecepatan dan searah dengan kecepatan
+C. massa dan berlawanan arah dengan simpangan
+D. simpangan dan berlawanan arah dengan simpangan
+E. amplitudo dan searah dengan amplitudo
+ANSWER: D
+
+12. Periode osilasi sistem massa-pegas bergantung pada ...
+A. massa beban dan konstanta pegas
+B. amplitudo dan massa beban
+C. amplitudo saja
+D. amplitudo dan konstanta pegas
+E. percepatan gravitasi dan amplitudo
+ANSWER: A
+
+13. Sebuah benda berosilasi harmonik dengan amplitudo 0,05 m dan frekuensi sudut 10 rad/s. Kecepatan maksimum benda adalah ...
+A. 0,05 m/s
+B. 0,5 m/s
+C. 5 m/s
+D. 50 m/s
+E. 2 m/s
+ANSWER: B
+
+
+14. Simpangan suatu getaran harmonik dinyatakan y = 0,04 sin(10πt) dengan y dalam meter dan t dalam sekon. Frekuensi getarannya adalah ...
+A. 10 Hz
+B. 5 Hz
+C. 2 Hz
+D. 20 Hz
+E. 0,2 Hz
+ANSWER: B
+
+15. Sebuah pegas dengan konstanta 200 N/m ditarik sejauh 0,03 m dari posisi setimbang. Besar gaya pulih pegas adalah ...
+A. 0,6 N
+B. 60 N
+C. 600 N
+D. 0,06 N
+E. 6 N
+ANSWER: E
+
+16. Sebuah benda bermassa 1 kg digantung pada pegas dengan konstanta 400 N/m. Periode getarannya adalah ...
+A. 0,05π s
+B. 0,2π s
+C. 0,5π s
+D. 0,1π s
+E. 2π s
+ANSWER: D
+
+17. Sebuah benda yang terikat pada pegas (k = 100 N/m) berosilasi dengan amplitudo 0,2 m. Energi mekanik total sistem adalah ...
+A. 2 J
+B. 20 J
+C. 4 J
+D. 0,2 J
+E. 200 J
+ANSWER: A
+
+18. Sebuah benda bermassa 2 kg digantung pada pegas secara vertikal sehingga pegas meregang 0,2 m dari panjang semula. Konstanta pegas tersebut adalah ... (g = 10 m/s²)
+A. 10 N/m
+B. 40 N/m
+C. 100 N/m
+D. 400 N/m
+E. 4 N/m
+ANSWER: C
+
+19. Sebuah bandul sederhana memiliki panjang tali 0,1 m (g = 10 m/s²). Periode ayunannya adalah ...
+A. 0,1π s
+B. 0,4π s
+C. 0,02π s
+D. 2π s
+E. 0,2π s
+ANSWER: E
+
+20. Pada osilator harmonik tanpa gesekan, energi mekanik totalnya ...
+A. bertambah seiring waktu
+B. berkurang secara eksponensial
+C. tetap dan sebanding dengan kuadrat amplitudo
+D. bernilai nol di titik setimbang
+E. sebanding dengan amplitudo
+ANSWER: C
+
+21. Seutas dawai sepanjang 1 m diikat kedua ujungnya. Cepat rambat gelombang pada dawai 100 m/s. Frekuensi nada dasar (harmonik pertama) dawai tersebut adalah ...
+A. 50 Hz
+B. 100 Hz
+C. 25 Hz
+D. 200 Hz
+E. 150 Hz
+ANSWER: A
+
+
+22. Interferensi konstruktif terjadi jika dua gelombang harmonik bertemu dengan beda fase ...
+A. 90°
+B. 180°
+C. 0°
+D. 270°
+E. 45°
+ANSWER: C
+
+23. Laju gelombang pada tali yang tegang bergantung pada tegangan tali dan ...
+A. massa per satuan panjang tali
+B. amplitudo gelombang
+C. frekuensi sumber getar
+D. warna tali
+E. panjang gelombang saja
+ANSWER: A
+
+24. Sebuah gelombang memiliki panjang gelombang 0,4 m dan frekuensi 8 Hz. Cepat rambat gelombang tersebut adalah ...
+A. 0,05 m/s
+B. 32 m/s
+C. 20 m/s
+D. 3,2 m/s
+E. 0,32 m/s
+ANSWER: D
+
+25. Persamaan gelombang berjalan y = 0,05 sin(6πt − 2πx) dengan x dan y dalam meter dan t dalam sekon. Cepat rambat gelombang tersebut adalah ...
+A. 12 m/s
+B. 3 m/s
+C. 6 m/s
+D. 0,33 m/s
+E. 2 m/s
+ANSWER: B
+
+26. Seutas tali memiliki tegangan 100 N dan massa per satuan panjang 0,01 kg/m. Cepat rambat gelombang pada tali tersebut adalah ...
+A. 1 m/s
+B. 10 m/s
+C. 1.000 m/s
+D. 10.000 m/s
+E. 100 m/s
+ANSWER: E
+
+27. Pada gelombang transversal, bagian-bagian medium yang dilewati gelombang bergetar ...
+A. sejajar arah rambat gelombang
+B. diam di tempat
+C. berputar mengelilingi sumber
+D. berlawanan arah dengan sumber
+E. tegak lurus arah rambat gelombang
+ANSWER: E
+
+28. Bunyi merambat di dalam air dengan modulus limbak 4 × 10⁹ N/m² dan massa jenis 1.000 kg/m³. Laju bunyi dalam air adalah ...
+A. 200 m/s
+B. 1.000 m/s
+C. 2.000 m/s
+D. 4.000 m/s
+E. 20.000 m/s
+ANSWER: C
+
+29. Intensitas bunyi di suatu tempat adalah 10⁻⁸ W/m². Jika intensitas ambang pendengaran I₀ = 10⁻¹² W/m², taraf intensitas bunyi tersebut adalah ...
+A. 4 dB
+B. 8 dB
+C. 20 dB
+D. 40 dB
+E. 80 dB
+ANSWER: D
+
+30. Kapal mengirim sinyal sonar ke dasar laut dan menerima pantulannya setelah 2 sekon. Jika cepat rambat bunyi di air laut 1.500 m/s, kedalaman laut tersebut adalah ...
+A. 750 m
+B. 1.500 m
+C. 3.000 m
+D. 300 m
+E. 1.000 m
+ANSWER: B
+
+31. Jika benda A dan benda B masing-masing berada dalam kesetimbangan termal dengan benda C, maka ...
+A. A dan B memiliki suhu yang berbeda
+B. A dan B berada dalam kesetimbangan termal satu sama lain
+C. kalor mengalir dari A ke B
+D. benda C pasti lebih panas dari A dan B
+E. A dan B terus bertukar kalor
+ANSWER: B
+
+32. Gas ideal dalam ruang tertutup bertekanan 2 atm pada suhu 300 K. Jika volume dijaga tetap dan suhu dinaikkan menjadi 600 K, tekanan gas menjadi ...
+A. 4 atm
+B. 1 atm
+C. 2 atm
+D. 8 atm
+E. 3 atm
+ANSWER: A
+
+33. Gas ideal bertekanan 2 atm menempati volume 6 liter. Jika suhu dijaga tetap dan volumenya dijadikan 3 liter, tekanan gas menjadi ...
+A. 1 atm
+B. 2 atm
+C. 3 atm
+D. 4 atm
+E. 12 atm
+ANSWER: D
+
+34. Suhu suatu benda 27 °C. Jika dinyatakan dalam Kelvin, suhunya adalah ...
+A. 246 K
+B. 327 K
+C. 300 K
+D. 273 K
+E. 27 K
+ANSWER: C
+
+35. Suhu suatu benda 50 °C. Jika dinyatakan dalam skala Reamur, suhunya adalah ...
+A. 40 °R
+B. 62,5 °R
+C. 90 °R
+D. 122 °R
+E. 50 °R
+ANSWER: A
+
+36. Sebuah batang logam panjangnya 2 m. Koefisien muai panjangnya 1,2 × 10⁻⁵ /°C. Jika suhunya naik 50 °C, pertambahan panjang batang adalah ...
+A. 0,12 mm
+B. 12 mm
+C. 0,6 mm
+D. 2,4 mm
+E. 1,2 mm
+ANSWER: E
+
+37. Sebanyak 1 liter (1.000 cm³) alkohol dipanaskan dari 10 °C menjadi 30 °C. Koefisien muai volume alkohol 1 × 10⁻³ /°C. Pertambahan volume alkohol adalah ...
+A. 2 cm³
+B. 20 cm³
+C. 200 cm³
+D. 0,2 cm³
+E. 1 cm³
+ANSWER: B
+
+38. Termometer gas volume konstan mengukur perubahan suhu berdasarkan perubahan ...
+A. volume gas
+B. massa gas
+C. warna gas
+D. hambatan kawat
+E. tekanan gas
+ANSWER: E
+
+39. Suhu suatu benda 50 °C. Jika dinyatakan dalam skala Fahrenheit, suhunya adalah ...
+A. 82 °F
+B. 90 °F
+C. 122 °F
+D. 132 °F
+E. 58 °F
+ANSWER: C
+
+40. Skala suhu yang bersifat mutlak (bukan nisbi) adalah ...
+A. Celsius
+B. Fahrenheit
+C. Reamur
+D. Kelvin
+E. semua skala suhu bersifat mutlak
+ANSWER: D

@@ -1,0 +1,319 @@
+1. Pak Anto memompa ban sepeda motornya. Alat pengukur tekanan menunjukkan angka 150 kPa, sedangkan tekanan atmosfer saat itu 100 kPa. Tekanan absolut di dalam ban tersebut adalah ...
+A. 50 kPa
+B. 250 kPa
+C. 150 kPa
+D. 200 kPa
+E. 15.000 kPa
+Jawaban: B
+
+2. Rina menimbang sebuah balok kayu dan mendapatkan massanya 480 gram, sedangkan volumenya 600 cm³. Massa jenis balok kayu tersebut adalah ...
+A. 80 kg/m³
+B. 600 kg/m³
+C. 720 kg/m³
+D. 800 kg/m³
+E. 1.250 kg/m³
+Jawaban: D
+
+3. Seorang penyelam menyelam hingga kedalaman 12 m di danau air tawar (ρ = 1.000 kg/m³, g = 10 m/s²). Tekanan hidrostatis yang dialami penyelam tersebut adalah ...
+A. 1,2 × 10⁵ Pa
+B. 1,2 × 10³ Pa
+C. 1,2 × 10⁴ Pa
+D. 1,2 × 10⁶ Pa
+E. 1,2 × 10⁷ Pa
+Jawaban: A
+
+4. Sebuah meja kayu seberat 600 N diletakkan di lantai. Luas seluruh bidang yang bersentuhan dengan lantai adalah 0,2 m². Tekanan yang diberikan meja kepada lantai adalah ...
+A. 120 Pa
+B. 300 Pa
+C. 1.200 Pa
+D. 12.000 Pa
+E. 3.000 Pa
+Jawaban: E
+
+5. Di sebuah bengkel, montir menggunakan dongkrak hidrolik dengan penampang kecil 20 cm² dan penampang besar 400 cm². Montir menekan penampang kecil dengan gaya 50 N. Gaya yang dihasilkan pada penampang besar adalah ...
+A. 2,5 N
+B. 100 N
+C. 1.000 N
+D. 500 N
+E. 8.000 N
+Jawaban: C
+
+6. Doni memasukkan sebuah batu bervolume 0,004 m³ ke dalam bak berisi air hingga batu tenggelam seluruhnya (ρ air = 1.000 kg/m³, g = 10 m/s²). Gaya apung yang dialami batu tersebut adalah ...
+A. 40 N
+B. 4 N
+C. 20 N
+D. 400 N
+E. 4.000 N
+Jawaban: A
+
+7. Seorang pengrajin memasukkan sebuah balok bermassa jenis 400 kg/m³ ke dalam bak berisi cairan bermassa jenis 500 kg/m³, dan balok itu terapung. Bagian balok yang tercelup di dalam cairan adalah ...
+A. 40%
+B. 50%
+C. 100%
+D. 80%
+E. 125%
+Jawaban: D
+
+8. Pak Budi mengalirkan air melalui pipa yang luas penampangnya 8 cm² dengan laju 3 m/s. Di ujung pipa, penampangnya menyempit menjadi 2 cm². Laju air pada bagian yang sempit adalah ...
+A. 0,75 m/s
+B. 12 m/s
+C. 6 m/s
+D. 24 m/s
+E. 48 m/s
+Jawaban: B
+
+9. Sebuah tangki air bocor pada lubang kecil yang berada 3,2 m di bawah permukaan air (g = 10 m/s²). Laju semburan air yang keluar dari lubang tersebut adalah ...
+A. 3,2 m/s
+B. 6,4 m/s
+C. 16 m/s
+D. 64 m/s
+E. 8 m/s
+Jawaban: E
+
+10. Saat lepas landas, sebuah pesawat terbang dapat terangkat ke udara. Hal ini terjadi karena ...
+A. Udara di atas sayap bergerak lebih lambat sehingga tekanannya lebih kecil daripada tekanan di bawah sayap
+B. Udara di atas dan di bawah sayap bergerak dengan laju sama, tetapi massa jenisnya berbeda
+C. Udara di atas sayap bergerak lebih cepat sehingga tekanannya lebih kecil daripada tekanan di bawah sayap
+D. Gaya apung udara pada sayap selalu lebih besar daripada berat pesawat
+E. Tekanan udara di bawah sayap lebih kecil karena udara di bawah sayap bergerak lebih cepat
+Jawaban: C
+
+11. Seorang siswa menggetarkan sebuah beban yang digantung pada pegas. Agar gerak beban tersebut termasuk gerak harmonik sederhana, syaratnya adalah ...
+A. Percepatan benda konstan dan searah simpangan
+B. Kecepatan benda sebanding dengan simpangannya
+C. Periode getaran semakin besar jika amplitudo diperbesar
+D. Gaya pulih bernilai tetap di setiap posisi
+E. Percepatan benda sebanding dengan simpangannya dan arahnya berlawanan dengan simpangan
+Jawaban: E
+
+12. Dalam percobaan di laboratorium, sebuah beban pada pegas bergetar sebanyak 45 kali dalam waktu 15 sekon. Frekuensi getaran beban tersebut adalah ...
+A. 0,33 Hz
+B. 15 Hz
+C. 3 Hz
+D. 30 Hz
+E. 45 Hz
+Jawaban: C
+
+13. Sebuah garpu tala bergetar dengan frekuensi 6 Hz. Frekuensi sudut getaran garpu tala tersebut adalah ...
+A. 3π rad/s
+B. 12π rad/s
+C. 6π rad/s
+D. 36π rad/s
+E. 12 rad/s
+Jawaban: B
+
+14. Ujung sebuah penggaris plastik yang dijepit di tepi meja bergetar dengan simpangan y = 0,04 sin (8πt) meter, dengan t dalam sekon. Frekuensi getaran penggaris tersebut adalah ...
+A. 4 Hz
+B. 2 Hz
+C. 8 Hz
+D. 8π Hz
+E. 16π Hz
+Jawaban: A
+
+15. Dina menggantung beban bermassa 0,1 kg pada sebuah pegas yang konstantanya 90 N/m, lalu menggetarkannya. Frekuensi sudut getaran beban tersebut adalah ...
+A. 3 rad/s
+B. 9 rad/s
+C. 90 rad/s
+D. 30 rad/s
+E. 900 rad/s
+Jawaban: D
+
+16. Sebuah pegas mainan yang konstantanya 400 N/m ditarik sejauh 0,1 m dari posisi setimbang lalu dilepaskan. Energi total getaran pegas tersebut adalah ...
+A. 0,2 J
+B. 2 J
+C. 4 J
+D. 20 J
+E. 40 J
+Jawaban: B
+
+17. Jarum sebuah mesin jahit bergetar naik-turun secara harmonik dengan frekuensi sudut 25 rad/s dan amplitudo 0,04 m. Kecepatan maksimum jarum tersebut adalah ...
+A. 1 m/s
+B. 0,1 m/s
+C. 0,4 m/s
+D. 10 m/s
+E. 100 m/s
+Jawaban: A
+
+18. Raka membuat bandul dari sebuah batu kecil yang diikat pada tali ringan sepanjang 1,6 m (g = 10 m/s²). Periode ayunan bandul tersebut adalah ...
+A. 0,4π s
+B. 1,6π s
+C. 4π s
+D. 8π s
+E. 0,8π s
+Jawaban: E
+
+19. Sebuah beban yang digantung pada pegas bergetar dengan periode T. Kemudian beban diganti dengan beban lain yang massanya 9 kali semula, sedangkan pegasnya tetap. Periode getaran yang baru menjadi ...
+A. 1/3 kali semula
+B. 9 kali semula
+C. 3 kali semula
+D. 81 kali semula
+E. tetap sama
+Jawaban: C
+
+20. Sebuah beban pada pegas bergetar harmonik dengan amplitudo A. Pada saat beban berada di posisi A/2 dari titik setimbang, perbandingan energi potensial dan energi kinetiknya adalah ...
+A. 1 : 1
+B. 1 : 2
+C. 1 : 4
+D. 1 : 3
+E. 3 : 1
+Jawaban: D
+
+21. Ani menggetarkan sebuah pegas slinky dengan cara mendorong dan menariknya searah panjang pegas, sehingga terbentuk rapatan dan renggangan yang merambat. Gelombang yang terbentuk tersebut adalah gelombang ...
+A. Transversal
+B. Elektromagnetik
+C. Melingkar
+D. Longitudinal
+E. Permukaan
+Jawaban: D
+
+22. Di antara peristiwa berikut, yang termasuk gelombang transversal adalah ...
+A. Bunyi gitar yang merambat di udara
+B. Gelombang pada tali yang digoyangkan naik-turun
+C. Rapatan dan renggangan pada pegas yang didorong lalu ditarik
+D. Bunyi sirine ambulans
+E. Bunyi yang merambat di dalam air
+Jawaban: B
+
+23. Seorang siswa menggetarkan seutas tali dengan frekuensi 60 Hz sehingga terbentuk gelombang dengan panjang gelombang 0,25 m. Cepat rambat gelombang pada tali tersebut adalah ...
+A. 1,5 m/s
+B. 24 m/s
+C. 15 m/s
+D. 150 m/s
+E. 240 m/s
+Jawaban: C
+
+24. Pada percobaan tangki riak, Budi menghitung 20 gelombang yang melewati sebuah titik dalam waktu 5 sekon. Periode gelombang tersebut adalah ...
+A. 0,5 s
+B. 4 s
+C. 5 s
+D. 100 s
+E. 0,25 s
+Jawaban: E
+
+25. Sebuah gelombang pada tali memiliki panjang gelombang 0,5 m. Bilangan gelombang (k) gelombang tersebut adalah ...
+A. 4π rad/m
+B. 0,5π rad/m
+C. 2π rad/m
+D. 8π rad/m
+E. π/4 rad/m
+Jawaban: A
+
+26. Gelombang pada seutas tali dinyatakan dengan persamaan y = 0,05 sin (2πx − 12πt) meter, dengan x dalam meter dan t dalam sekon. Cepat rambat gelombang tersebut adalah ...
+A. 0,05 m/s
+B. 2 m/s
+C. 6 m/s
+D. 12 m/s
+E. 24 m/s
+Jawaban: C
+
+27. Sebuah tali jemuran direntangkan dengan tegangan 36 N dan massa per satuan panjangnya 0,01 kg/m. Jika tali tersebut dipukul, cepat rambat gelombang pada tali adalah ...
+A. 6 m/s
+B. 36 m/s
+C. 360 m/s
+D. 3.600 m/s
+E. 60 m/s
+Jawaban: E
+
+28. Seorang anak melihat kilat, kemudian 5 sekon setelahnya ia mendengar bunyi guntur. Jika cepat rambat bunyi di udara 340 m/s dan kecepatan cahaya diabaikan, jarak sumber petir dari anak tersebut adalah ...
+A. 1.700 m
+B. 68 m
+C. 340 m
+D. 850 m
+E. 3.400 m
+Jawaban: A
+
+29. Senar gitar sepanjang 1,5 m diikat pada kedua ujungnya. Jika cepat rambat gelombang pada senar 60 m/s, frekuensi harmonik ketiga senar tersebut adalah ...
+A. 20 Hz
+B. 30 Hz
+C. 40 Hz
+D. 60 Hz
+E. 90 Hz
+Jawaban: D
+
+30. Dua gelombang pada tali memiliki frekuensi sama dengan amplitudo 5 cm dan 3 cm. Keduanya bertemu dalam keadaan berlawanan fase (beda fase 180°). Amplitudo gelombang hasil superposisinya adalah ...
+A. 0 cm
+B. 2 cm
+C. 4 cm
+D. 8 cm
+E. 15 cm
+Jawaban: B
+
+31. Suhu 65 °C jika dinyatakan dalam skala Fahrenheit sama dengan ...
+A. 117 °F
+B. 129 °F
+C. 149 °F
+D. 153 °F
+E. 169 °F
+Jawaban: C
+
+32. Suhu 140 °F jika dinyatakan dalam skala Celsius sama dengan ...
+A. 60 °C
+B. 48 °C
+C. 72 °C
+D. 108 °C
+E. 140 °C
+Jawaban: A
+
+33. Suhu 32 °R jika dinyatakan dalam skala Celsius sama dengan ...
+A. 25 °C
+B. 30 °C
+C. 35 °C
+D. 50 °C
+E. 40 °C
+Jawaban: E
+
+34. Suhu 80 °C jika dinyatakan dalam kelvin (gunakan T = t + 273) sama dengan ...
+A. 193 K
+B. 353 K
+C. 273 K
+D. 343 K
+E. 360 K
+Jawaban: B
+
+35. Sebuah termometer X menunjukkan angka 10 °X pada titik lebur es dan 210 °X pada titik didih air. Suhu 40 °C sama dengan ... °X.
+A. 50 °X
+B. 80 °X
+C. 130 °X
+D. 90 °X
+E. 210 °X
+Jawaban: D
+
+36. Raka mengukur suhu air kolam renang dengan termometer Fahrenheit dan terbaca 95 °F. Jika dinyatakan dalam Celsius, suhu air kolam tersebut adalah ...
+A. 25 °C
+B. 30 °C
+C. 63 °C
+D. 95 °C
+E. 35 °C
+Jawaban: E
+
+37. Sebuah toko es krim menyimpan persediaannya dalam freezer yang suhunya 253 K. Jika dinyatakan dalam Celsius (gunakan T = t + 273), suhu freezer tersebut adalah ...
+A. −40 °C
+B. −20 °C
+C. 20 °C
+D. 253 °C
+E. 526 °C
+Jawaban: B
+
+38. Kakek memasang termometer Reamur di teras rumah dan terbaca 24 °R. Pada termometer Fahrenheit, suhu teras tersebut menunjukkan angka ...
+A. 30 °F
+B. 54 °F
+C. 86 °F
+D. 76 °F
+E. 120 °F
+Jawaban: C
+
+39. Pernyataan yang sesuai dengan Hukum ke-Nol Termodinamika adalah ...
+A. Jika benda A dan benda C masing-masing berada dalam kesetimbangan termal dengan benda B, maka A dan C juga berada dalam kesetimbangan termal
+B. Kalor selalu mengalir dari benda yang dingin ke benda yang panas
+C. Energi tidak dapat diciptakan maupun dimusnahkan
+D. Suhu nol mutlak tidak mungkin dicapai
+E. Kalor yang dilepas benda panas selalu lebih besar daripada kalor yang diterima benda dingin
+Jawaban: A
+
+40. Besaran fisika yang menyatakan derajat panas atau dinginnya suatu benda disebut ...
+A. Kalor
+B. Energi dalam
+C. Tekanan
+D. Suhu
+E. Massa jenis
+Jawaban: D

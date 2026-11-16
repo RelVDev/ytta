@@ -1,0 +1,381 @@
+﻿1. Menurut hukum Pascal, tekanan yang diberikan pada fluida dalam ruang tertutup akan...
+1. Diteruskan sama besar ke segala arah
+2. Hanya diteruskan ke bawah
+3. Berkurang makin jauh dari sumber
+4. Hilang di dinding wadah
+5. Hanya diteruskan ke atas
+ANSWER: A
+
+
+2. Sebuah benda akan terapung jika...
+1. Massanya kecil 
+2. Massa jenisnya lebih kecil dari massa jenis fluida 
+3. Volumenya besar 
+4. Massa jenisnya lebih besar dari massa jenis fluida 
+5. Bentuknya pipih
+ANSWER: B
+
+
+3. Zat cair yang kental seperti madu memiliki ciri...
+1. Viskositas rendah
+2. Viskositas tinggi
+3. Massa jenis nol
+4. Tidak mengalir sama sekali
+5. Selalu bermassa jenis lebih kecil dari air
+ANSWER: B
+
+
+4. Perhatikan pernyataan berikut!
+(1) Sayap pesawat menghasilkan gaya angkat
+(2) Penyemprot nyamuk bekerja karena tekanan turun saat udara bergerak cepat
+(3) Dongkrak hidrolik mengangkat mobil
+(4) Kapal selam melayang di dalam air
+Pernyataan yang merupakan contoh fluida dinamis ditunjukkan oleh nomor...
+1. (1) dan (2)
+2. (1) dan (3)
+3. (2) dan (4)
+4. (3) dan (4)
+5. (1), (2), dan (3)
+ANSWER: A
+
+
+5. Perhatikan pernyataan berikut!
+(1) Tekanan hidrostatis makin besar jika kedalaman makin bertambah
+(2) Gaya apung sama dengan berat fluida yang dipindahkan benda
+(3) Tekanan pada fluida tertutup diteruskan sama besar ke segala arah
+(4) Kecepatan aliran naik saat penampang pipa menyempit
+Pernyataan yang benar tentang fluida statis ditunjukkan oleh nomor...
+1. (1) dan (2)
+2. Semua benar
+3. (2), (3), dan (4)
+4. (1) dan (4)
+5. (1), (2) dan (3)
+ANSWER: E
+
+
+6. Seekor ikan berada pada kedalaman 15 m di bawah permukaan air. Jika massa jenis air 1000 kg/m³, percepatan gravitasi bumi 10 m/s², dan tekanan udara luar 10⁵ N/m².
+Hitunglah tekanan hidrostatis yang dialami ikan!
+1. 1,0 × 10⁴ N/m²
+2. 1,5 × 10⁴ N/m²
+3. 1,0 × 10⁵ N/m²
+4. 1,5 × 10⁵ N/m²
+5. 2,5 × 10⁵ N/m²
+ANSWER: D
+
+
+7. Seekor ikan berada pada kedalaman 15 m di bawah permukaan air. Jika massa jenis air 1000 kg/m³, percepatan gravitasi bumi 10 m/s², dan tekanan udara luar 10⁵ N/m².
+Hitunglah tekanan total yang dialami ikan!
+1. 1,5 × 10⁵ N/m²
+2. 2,0 × 10⁵ N/m²
+3. 2,5 × 10⁵ N/m²
+4. 3,0 × 10⁵ N/m²
+5. 3,5 × 10⁵ N/m²
+ANSWER: C
+
+
+8. Perbandingan diameter pipa kecil dan pipa besar dari sebuah alat berdasarkan hukum Pascal adalah 1 : 25. Alat tersebut digunakan untuk mengangkat beban seberat 12000 N. Perbandingan luas penampang pipa kecil dan pipa besar (A₁ : A₂) adalah...
+1. 1 : 5
+2. 1 : 25 
+3. 1 : 50
+4. 1 : 125
+5. 1 : 625
+ANSWER:  E
+
+
+9. Perbandingan diameter pipa kecil dan pipa besar dari sebuah alat berdasarkan hukum Pascal adalah 1 : 25. Alat tersebut digunakan untuk mengangkat beban seberat 12000 N. Besar gaya yang harus diberikan pada pipa kecil adalah...
+1. 0,48 N
+2. 1,92 N
+3. 19,2 N
+4. 192 N
+5. 480 N
+ANSWER: C
+
+
+10. Air mengalir melalui pipa horizontal yang luas penampang di bagian pangkalnya 40 cm² dan di bagian ujungnya 10 cm². Jika kecepatan air di bagian pangkal 2 m/s, maka kecepatan air di bagian ujung pipa adalah...
+1. 0,5 m/s
+2. 2 m/s
+3. 16 m/s
+4. 4 m/s
+5. 8 m/s
+ANSWER: E
+
+
+11. Periode bandul sederhana bergantung pada...
+1. Massa bandul
+2. Amplitudo
+3. Panjang tali dan percepatan gravitasi
+4. Bahan tali
+5. Bentuk bandul
+ANSWER: C
+
+
+12.  Jika konstanta pegas diperbesar, sedangkan massa benda tetap, maka periode getarannya...
+1. Bertambah besar
+2. Menjadi nol
+3. Tetap
+4. Bertambah kecil
+5. Menjadi tak hingga
+ANSWER: D
+
+
+13. Pada saat benda berada di simpangan maksimum, pernyataan yang benar adalah...
+1. Kecepatan maksimum, percepatan nol
+2. Kecepatan nol, percepatan maksimum
+3. Kecepatan dan percepatan sama-sama nol.
+4. Kecepatan dan percepatan sama-sama maksimum
+5. Energi kinetik maksimum
+ANSWER: B
+
+
+14. Pada getaran harmonik sederhana pegas, energi mekanik sistem...
+1. Terbesar di titik setimbang
+2. Terbesar di simpangan maksimum
+3. Selalu berubah terhadap waktu
+4. Selalu tetap (kekal) di setiap posisi
+5. Bernilai nol di titik setimbang
+ANSWER: D
+
+
+15. Perhatikan pernyataan berikut! 
+(1) Gaya pemulih selalu berlawanan arah dengan simpangan
+(2) Percepatan benda bernilai maksimum di titik setimbang
+(3) Energi mekanik sistem selalu tetap pada setiap posisi
+(4) Periode getaran bergantung pada besar amplitudo
+Pernyataan yang benar ditunjukkan oleh nomor...
+1. (1) dan (2)
+2. (1) dan (3)
+3. (2) dan (4)
+4. (3) dan (4)
+5. (1), (2), dan (3)
+ANSWER: B
+
+
+16. Sebuah benda bergetar harmonik dengan frekuensi 5 Hz dan amplitudo 10 cm. Kecepatan getar benda saat simpangannya 6 cm sebesar ... cm/s
+1. 20π
+2. 40π
+3. 60π
+4. 80π
+5. 100π
+ANSWER: D
+
+
+17. Sebuah bandul melakukan gerak harmonik sederhana dengan persamaan simpangan y = 0,1 sin 0,5πt, di mana y dan A berturut-turut adalah simpangan dan amplitudo dalam satuan cm, dan t adalah waktu dalam satuan s.
+Frekuensi getaran bandul tersebut adalah…
+1. 1/4 Hz
+2. 1/2 Hz
+3. 1/8 Hz
+4. 1 Hz
+5. 2 Hz
+ANSWER: A
+
+
+18. Sebuah bandul melakukan gerak harmonik sederhana dengan persamaan simpangan y = 0,1 sin 0,5πt, di mana y dan A berturut-turut adalah simpangan dan amplitudo dalam satuan cm, dan t adalah waktu dalam satuan s.
+Periode getaran bandul tersebut adalah...
+1. 1/4 s
+2. 1/2 s
+3. 8 s
+4. 2 s
+5. 4 s
+ANSWER: E
+
+
+19. Sebuah benda digantung dengan tali dan berosilasi dengan frekuensi 100 Hz. Jika amplitudo osilasinya 2 mm, kecepatan maksimum benda tersebut adalah...
+1. 0,2π m/s
+2. 0,4π m/s
+3. 0,8π m/s
+4. 2π m/s
+5. 4π m/s
+ANSWER: B
+
+
+20. Sebuah benda digantung dengan tali dan berosilasi dengan frekuensi 100 Hz. Jika amplitudo osilasinya 2 mm, percepatan maksimum benda tersebut adalah...
+1. 8 × 10² m/s²
+2. 8 × 10³ m/s²
+3. 8 × 10⁴ m/s²
+4. 8 × 10⁵ m/s²
+5. 8 × 10⁶ m/s²
+ANSWER: A
+
+
+21. Jarak antara dua puncak gelombang yang berurutan pada gelombang transversal disebut...
+1. Amplitudo
+2. Periode
+3. Frekuensi
+4. Panjang gelombang
+5. Cepat rambat
+ANSWER: D
+
+
+22. Pada perambatan gelombang mekanik, yang dipindahkan dari satu tempat ke tempat lain adalah...
+1. Massa medium
+2. Energi gelombang
+3. Partikel medium
+4. Jumlah molekul medium
+5. Posisi setimbang partikel
+ANSWER: B
+
+
+23. Ketika gelombang air merambat dari laut dalam ke peraairan dangkal, besaran yang tidak berubah adalah...
+1. Cepat rambat
+2. Panjang gelombang
+3. Frekuensi
+4. Arah rambat
+5. Kedalaman
+ANSWER: C
+24. Peristiwa pembelokan arah rambat gelombang ketika melewati batas dua medium yang berbeda disebut...
+1. Refraksi
+2. Refleksi
+3. Difraksi
+4. Interferensi
+5. Polarisasi
+ANSWER: A
+25. Perhatikan pernyataan berikut!
+(1) Gelombang bunyi yng merambat di udara
+(2) Gelombang pada slinki yang didorong dan ditarik searah slinki
+(3) Gelombang pada tali yang digetarkan naik turun
+(4) Gelombang pada permukaan air yang dijatuhi batu
+Pernyataan yang merupakan contoh gelombang longitudinal ditunjukkan oleh nomor...
+1. (1) dan (2)
+2. (1) dan (3)
+3. (2) dan (3)
+4. (2) dan (4)
+5. (3) dan (4)
+ANSWER: A
+
+
+26. Gelombang transversal pada suatu medium memiliki persamaan y = 0,1 sin (40πt − 2πx). x dan y dalam satuan meter, dan t dalam satuan sekon. Frekuensi gelombang pada medium tersebut adalah...
+1. 10 Hz
+2. 20 Hz
+3. 40 Hz
+4. 40π Hz
+5. 80 Hz
+ANSWER: B
+
+
+27. Gelombang transversal pada suatu medium memiliki persamaan y = 0,1 sin (40πt − 2πx). x dan y dalam satuan meter, dan t dalam satuan sekon. Panjang gelombang pada medium tersebut adalah...
+1. 1 meter
+2. 0,5 meter
+3. 2 meter
+4. 4 meter
+5. 2 π meter
+ANSWER: A
+
+
+28. Suatu gelombang berjalan merambat pada tali yang sangat panjang dengan frekuensi 5 Hz dan cepat rambat gelombang 10 m/s. Jika besar amplitudo 4 cm, maka persamaan simpangan gelombang tersebut pada suatu titik yang berjarak x dari sumber gelombang yang benar adalah...
+1. y = 0,04 sin 10π (t − 10x)
+2. y = 0,04 sin 10π (t − 0,1x)
+3. y = 0,04 sin 5π (t − 0,1x)
+4. y = 0,04 sin 10π (t − 0,2x)
+5. y = 0,04 sin 5π (t − 10x)
+ANSWER: B
+29. Seorang anak berteriak di depan tebing dan mendengar bunyi pantulannya 4 sekon kemudian. Jika cepat rambat bunyi di udara 340 m/s, jarak anak dari tebing adalah...
+1. 1.360 m
+2. 340 m
+3. 1.020 m
+4. 850 m
+5. 680 m
+ANSWER: E
+
+
+30. Sebuah sumber bunyi memancarkan gelombang dengan frekuensi 425 Hz. Jika cepat rambat bunyi di udara 340 m/s, panjang gelombang bunyi tersebut adalah...
+1. 1,6 m
+2. 0,6 m
+3. 1,0 m
+4. 1,8 m
+5. 0,8 m
+ANSWER: E
+
+
+31. Alat yang digunakan untuk mengukur suhu disebut...
+1. Barometer
+2. Termometer
+3. Higrometer
+4. Manometer
+5. Kalorimeter
+ANSWER: B
+
+
+32. Perhatikan pernyataan-pernyataan berikut!
+1. Suhu menyatakan derajat panas atau dinginnya suatu benda
+2. Suhu sama dengan kalor
+3. Satuan suhu dalam SI adalah Kelvin
+4. Termometer dapat mengukur banyaknya kalor suatu benda
+Pernyataan yang benar ditunjukkan oleh nomor...
+1. (1) dan (2)
+2. (1) dan (3)
+3. (2) dan (3)
+4. (2) dan (4)
+5. (3) dan (4)
+ANSWER: B
+
+
+33. Perbedaan utama antara suhu dan kalor adalah...
+1. Suhu adalah energi yang berpindah, kalor adalah derajat panas
+2. Suhu dan kalor memiliki satuan yang sama
+3. Suhu menyatakan derajat panas, kalor adalah energi yang berpindah karena perbedaan suhu
+4. Suhu diukur dengan kalorimeter, kalor diukur dengan termometer
+5. Suhu dan kalor tidak berhubungan sama sekali
+ANSWER: C
+
+
+34. Suhu terendah yang secara teori dapat dicapai suatu zat disebut...
+1. Titik beku
+2. Titik didih
+3. Titik lebur
+4. Titik tripel
+5. Nol mutlak
+ANSWER: E
+
+
+35. Skala suhu yang menetapkan titik beku air 0° dan titik didih air 100° adalah...
+1. Celsius
+2. Fahrenheit
+3. Kelvin
+4. Reamur
+5. Rankine
+ANSWER: A
+
+
+36. Air memiliki sifat anomali, yaitu volumenya paling kecil (massa jenis terbesar) pada suhu...
+1. 0 °C
+2. 4 °C
+3. 10 °C
+4. 50 °C
+5. 100 °C
+ANSWER: B
+
+
+37. Suhu 80 °C jika dinyatakan dalam skala Reamur (titik didih air 80 °R) adalah…
+1. 32 °R
+2. 48 °R
+3. 64 °R
+4. 80 °R
+5. 100 °R
+ANSWER: C
+
+
+38. Suhu 30 °C jika dinyatakan dalam skala Kelvin adalah…
+1. 243 K
+2. 273 K
+3. 293 K
+4. 303 K
+5. 330 K
+ANSWER: D
+
+
+39. Pertambahan volume zat cair ketika dipanaskan bergantung pada hal-hal berikut, kecuali…
+1. Volume awal
+2. Kenaikan suhu
+3. Koefisien muai volume
+4. Jenis zat cair
+5. Warna zat cair
+ANSWER: E
+
+
+40. Suhu 20 °C jika dinyatakan dalam skala Fahrenheit adalah...
+1. 36 °F
+2. 52 °F
+3. 68 °F
+4. 72 °F
+5. 88 °F
+ANSWER: C

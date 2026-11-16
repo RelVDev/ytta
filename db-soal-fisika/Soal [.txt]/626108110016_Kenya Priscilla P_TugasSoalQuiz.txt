@@ -1,0 +1,370 @@
+﻿Kenya Priscilla Puspaningtyas
+626108110016/DI1
+FLUIDA
+1. Besaran yang menyatakan massa fluida per satuan volume disebut ….
+A. Tekanan
+B. Massa jenis
+C. Viskositas
+D. Tegangan permukaan
+E. Debit
+Jawaban : B. Massa jenis
+
+
+2. Manometer digunakan untuk mengukur ….
+A. Tekanan fluida
+B. Massa jenis fluida
+C. Viskositas fluida
+D. Tegangan permukaan fluida
+E. Gaya apung
+Jawaban : A. Tekanan fluida
+
+
+3. Benda akan terapung di permukaan zat cair apabila ….
+A. Massa jenis benda lebih besar daripada cairan
+B. Massa benda selalu nol
+C. Massa jenis benda lebih kecil daripada cairan
+D. Gaya berat lebih besar dari gaya apung
+E. Volume benda lebih kecil dari volume cairan
+Jawaban :  C. Massa jenis benda lebih kecil daripada cairan
+
+
+4. Sebuah kapal laut dapat mengapung karena ….
+A. Gaya gravitasi
+B. Tekanan hidrostatis
+C. Tegangan permukaan
+D. Viskositas
+E. Gaya apung
+Jawaban : E. Gaya apung
+
+
+
+
+5. Air mengalir dalam pipa mendatar. Ketika luas penampang pipa mengecil, berdasarkan kontinuitas dan Bernoulli ….
+A. Laju dan tekanan meningkat
+B. Laju menurun, tekanan meningkat
+C. Laju dan tekanan tetap
+D. Laju meningkat, tekanan statis menurun
+E. Laju tetap, tekanan menurun
+Jawaban : D. Laju meningkat, tekanan statis menurun
+
+
+6. Prinsip Pascal menyatakan bahwa ….
+A. Tekanan dalam fluida selalu diteruskan ke segala arah dengan sama besar.
+B. Benda yang tercelup sebagian atau seluruhnya dalam fluida akan mengalami gaya apung yang sama besar dengan berat fluida yang dipindahkan.
+C. Tekanan hidrostatis berbanding lurus dengan kedalaman.
+D. Viskositas fluida berbanding terbalik dengan suhu.
+E. Tegangan permukaan fluida berbanding lurus dengan massa jenisnya.
+Jawaban : A. Tekanan dalam fluida selalu diteruskan ke segala arah dengan sama besar.
+
+
+7. Prinsip Archimedes menyatakan bahwa ….
+A. Tekanan diteruskan sama besar
+B. Tekanan berbanding terbalik dengan kedalaman
+C. Debit tetap untuk semua aliran
+D. Viskositas selalu nol
+E. Gaya apung sama dengan berat fluida yang dipindahkan
+Jawaban : E. Gaya apung sama dengan berat fluida yang dipindahkan
+
+
+8. Sebuah dongkrak hidrolik memiliki luas penampang kecil 10 cm² dan luas penampang besar 100 cm². Jika gaya yang diberikan pada penampang kecil 50 N, maka gaya yang dihasilkan pada penampang besar adalah ….
+A. 50 N
+B. 500 N
+C. 100 N
+D. 250 N
+E. 1000 N
+Jawaban : B. 500 N
+
+
+9. Tekanan hidrostatis pada kedalaman 15 meter di bawah permukaan air adalah …. (g = 10 m/s²)
+A. 15.000 Pa
+B. 75.000 Pa
+C. 300.000 Pa
+D. 150.000 Pa
+E. 450.000 Pa
+Jawaban : D. 150.000 Pa
+
+
+10. Tekanan ukur ban 234 kPa dan tekanan atmosfer 101 kPa. Tekanan absolutnya ….
+A. 133 kPa
+B. 234 kPa
+C. 335 kPa
+D. 436kPa
+E. 101 kPa
+Jawaban : C. 335 kPa
+
+
+
+
+OSILATOR HARMONIK
+1. Tanda negatif pada persamaan gaya pegas F = −kx menunjukkan bahwa ….
+A. Pegas kehilangan energi
+B. Gaya pemulih berlawanan arah dengan simpangan
+C. Gaya selalu nol
+D. Simpangan selalu negatif
+E. Massa pegas negatif
+Jawaban :   B. Gaya pemulih berlawanan arah dengan simpangan
+
+
+2. Energi total osilator pegas ideal dengan amplitudo A adalah ….
+A. kA
+B. k/A
+C. ½mA
+D. mA²
+E. ½kA²
+Jawaban : E. ½kA²
+
+
+3. Sebuah bandul sederhana memiliki periode yang dipengaruhi terutama oleh ….
+A. Massa bandul dan amplitudo besar
+B. Warna bandul
+C. Panjang tali dan percepatan gravitasi
+D. Bentuk bandul
+E. Massa jenis udara saja
+Jawaban : C. Panjang tali dan percepatan gravitasi
+
+
+4. Satuan konstanta pegas dalam SI adalah ….
+A. N
+B. J
+C. kg/m
+D. N/m
+E. m/s
+Jawaban :  D. N/m
+
+
+5. Sebuah osilator melakukan 50 getaran dalam 10 sekon. Frekuensinya adalah ….
+A. 5 Hz
+B. 1 Hz
+C. 2 Hz
+D. 10 Hz
+E. 50 Hz
+Jawaban : A. 5 Hz
+
+
+6. Resonansi terjadi ketika ….
+A. Frekuensi pemaksa mendekati frekuensi alami
+B. Amplitudo nol
+C. Tidak ada gaya luar
+D. Massa nol
+E. Frekuensi alami nol
+Jawaban : A. Frekuensi pemaksa mendekati frekuensi alami
+
+
+7. Osilasi teredam ditandai oleh ….
+A. Amplitudo bertambah
+B. Frekuensi gaya luar nol
+C. Amplitudo dan energi berkurang terhadap waktu
+D. Energi selalu konstan
+E. Tidak ada gaya hambat
+Jawaban :   C. Amplitudo dan energi berkurang terhadap waktu
+
+
+8. Jika panjang tali bandul sederhana diperbesar 4 kali, periodenya menjadi ….
+A. ¼ kali
+B. ½ kali
+C. 4 kali
+D. 2 kali
+E. 16 kali
+Jawaban :  D. 2 kali
+
+
+9. Osilator melakukan 105 getaran dalam 15 s. Frekuensinya ….
+A. 15 Hz
+B. 7 Hz
+C. 100 Hz
+D. 12 Hz
+E. 30 Hz
+Jawaban : B. 7 Hz
+
+
+10. Osilator memiliki periode 2 s. Frekuensi sudutnya ….
+A. π/2 rad/s
+B. 2π rad/s
+C. 4π rad/s
+D. 8π rad/s
+E. π rad/s
+Jawaban : E. π rad/s
+
+
+GELOMBANG MEKANIK
+1. Gelombang mekanik adalah gelombang yang ….
+A. Tidak membawa energi
+B. Tidak memerlukan medium
+C. Hanya merambat di ruang hampa
+D. Memerlukan medium untuk merambat
+E. Selalu berupa gelombang transversal
+Jawaban : D. Memerlukan medium untuk merambat
+
+
+2. Sebuah gelombang memiliki frekuensi 8 Hz. Periodenya adalah ….
+A. 0,125 s
+B. 0,25 s
+C. 2 s
+D. 4 s
+E. 8 s
+Jawaban : A. 0,125 s
+
+
+3. Pada gelombang transversal, arah getaran medium ….
+A. Sejajar rambat
+B. Tegak lurus rambat
+C. Berlawanan rambat
+D. Tidak memiliki arah
+E. Selalu melingkar
+Jawaban : B. Tegak lurus rambat
+
+
+4. Jarak antara dua puncak gelombang yang berurutan disebut ….
+A. Amplitudo
+B. Periode
+C. Panjang gelombang
+D. Frekuensi
+E. Fase
+Jawaban : C. Panjang gelombang
+
+
+5. Taraf intensitas satu mesin 80 dB. Dua mesin identik bekerja bersamaan menghasilkan ….
+A. 80 dB
+B. 88 dB
+C. 160 dB
+D. 100 dB
+E. 83 dB
+Jawaban : E. 83 dB
+
+
+6. Titik gelombang berdiri yang selalu memiliki simpangan nol disebut ….
+A. Perut
+B. Puncak
+C. Lembah
+D. Fase
+E. Simpul
+Jawaban : E. Simpul
+
+
+7. Gelombang menempuh jarak 20 m dalam 4 s. Jika frekuensinya 5 Hz, panjang gelombangnya adalah ….
+A. 1 m
+B. 2 m
+C. 3 m
+D. 4 m
+E. 8 m
+Jawaban : A. 1 m
+
+
+8.  Gelombang longitudinal memiliki arah getar partikel medium yang ….
+A. Tegak lurus arah rambat
+B. Melingkar
+C. Selalu vertikal
+D. Sejajar arah rambat
+E. Tidak beraturan
+Jawaban :  D. Sejajar arah rambat
+
+
+9. Pelenturan gelombang ketika melewati celah sempit disebut ….
+A. Interferensi
+B. Refraksi
+C. Difraksi
+D. Polarisasi
+E. Resonansi
+Jawaban : C. Difraksi
+
+
+10. Jika sumber bunyi mendekati pengamat diam, frekuensi yang didengar ….
+A. Lebih rendah
+B. Lebih tinggi
+C. Selalu sama
+D. Nol
+E. Tidak terdengar
+Jawaban : B. Lebih tinggi
+
+
+
+
+SUHU
+1. Suhu merupakan besaran yang menyatakan ….
+A. Jumlah kalor dalam benda
+B. Massa benda
+C. Energi potensial benda
+D. Derajat panas atau dingin suatu benda
+E. Volume benda
+Jawaban : D. Derajat panas atau dingin suatu benda
+
+
+2. Termometer gas volume konstan mengukur suhu berdasarkan perubahan ….
+A. Massa gas
+B. Tekanan gas
+C. Warna gas
+D. Panjang wadah
+E. Kecepatan wadah
+Jawaban : B. Tekanan gas
+
+
+3. Perpindahan kalor melalui zat padat tanpa perpindahan massa zat disebut ….
+A. Konveksi
+B. Radiasi
+C. Evaporasi
+D. Sublimasi
+E. Konduksi
+Jawaban : E. Konduksi
+
+
+4. Gas pada suhu tetap volumenya diperkecil menjadi setengah. Tekanannya menjadi ….
+A. ½ kali
+B. Tetap
+C. 2 kali
+D. 4 kali
+E. Nol
+Jawaban :  C. 2 kali 
+
+
+5. Rel kereta diberi celah sambungan terutama untuk ….
+A. Memberi ruang saat rel memuai
+B. Mengurangi massa rel
+C. Memperbesar gesekan
+D. Mencegah konduksi
+E. Mempercepat pendinginan
+Jawaban : A. Memberi ruang saat rel memuai
+
+
+6. Jika A dan B masing-masing setimbang termal dengan C, maka ….
+A. A lebih panas
+B. Massa A dan B sama
+C. C tidak bersuhu
+D. A dan B setimbang termal
+E. Kalor selalu mengalir
+Jawaban :   D. A dan B setimbang termal
+
+
+7.  Suhu 25°C sama dengan … pada skala Fahrenheit.
+A. 100°F
+B. 75°F
+C. 132°F
+D. 25°F
+E. 77°F
+Jawaban : E. 77°F
+
+
+8. Sendok logam dan sendok kayu berada di ruangan yang sama dalam waktu lama. Logam terasa lebih dingin saat disentuh karena ….
+   A. Suhu logam pasti lebih rendah
+   B. Kayu menghasilkan kalor
+   C. Logam menghantarkan kalor dari tangan lebih cepat
+   D. Kayu memiliki suhu lebih tinggi
+   E. Logam tidak memiliki kalor
+Jawaban : C. Logam menghantarkan kalor dari tangan lebih cepat
+
+
+9. Suhu 35°C setara dengan ….
+A. 308 K  
+B. 273 K
+C. 280 K
+D. 310 K
+E. 327 K
+Jawaban : A. 308 K
+
+
+10. Pada gas ideal, suhu mutlak sebanding dengan ….
+A. Massa wadah
+B. Volume molekul
+C. Gravitasi
+D. Tekanan atmosfer saja
+E. Energi kinetik translasi rata-rata molekul
+Jawaban : E. Energi kinetik translasi rata-rata molekul

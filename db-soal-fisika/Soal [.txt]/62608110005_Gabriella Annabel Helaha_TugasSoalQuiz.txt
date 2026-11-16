@@ -1,0 +1,319 @@
+1. Pengukur tekanan ban menunjukkan 273 kPa. Tekanan absolut di dalam ban adalah…
+A. 149 kPa
+B. 374 kPa
+C. 371 kPa
+D. 403 kPa
+E. 273 kPa
+Jawaban : B
+
+2. Sebuah kawat dengan panjang 12 cm menarik lapisan tipis sabun dengan sejumlah gaya yang menghasilkan tegangan permukaan lapisan sabun sebesar 0,030 N/m. Besar gaya yang digunakan adalah
+A. 0,72 N
+B. 0,072 N
+C. 0,0072 N
+D. 0,00072 N
+E. 0,0036 N
+Jawaban : C
+
+3. Seorang penyelam profesional berada pada kedalaman 16 m di dalam air. Besar tekanan hidrostatis yang dialaminya adalah…
+A. 176 kPa
+B. 106 kPa
+C. 160 kPa
+D. 145 kPa
+E. 261 kPa
+Jawaban : C
+
+4. Sebuah dongkrak hidrolik memiliki penampang kecil 8 cm² dan penampang besar 400 cm². Jika gaya 150 N diberikan pada penampang kecil, gaya yang dihasilkan pada penampang besar adalah…
+A. 500 N
+B. 2.000 N
+C. 7.500 N
+D. 5.000 N
+E. 3.000 N
+Jawaban : C
+
+5. Balok kayu bermassa jenis 570 kg/m³ terapung di air. Fraksi volume balok yang tercelup adalah…
+A. 43%
+B. 57%
+C. 62%
+D. 77%
+E. 100%
+Jawaban: B
+
+6. Sebuah patung bermassa 35 kg dan bervolume 10⁻² m³ berada di dasar kolam. Gaya yang diperlukan untuk mengangkat patung adalah…
+A. 250 N
+B. 550 N
+C. 350 N
+D. 450 N
+E. 100 N
+Jawaban: A
+
+7. Air mengalir dalam pipa berpenampang 25 cm² dengan laju 3 m/s, lalu pipa menyempit menjadi 5 cm². Laju air pada bagian yang menyempit adalah…
+A. 12 m/s
+B. 6 m/s
+C. 10 m/s
+D. 15 m/s
+E. 0,6 m/s
+Jawaban : D
+
+8. Sebuah tangki besar berisi air bocor pada lubang yang berada 5 m di bawah permukaan air. Laju air yang keluar dari lubang adalah…
+A. 3 m/s
+B. 10 m/s
+C. 20 m/s
+D. 6 m/s
+E. 50 m/s
+Jawaban : B
+
+9. Air mengalir dalam pipa mendatar. Laju air di titik 1 adalah 2 m/s dan di titik 2 adalah 3 m/s. Selisih tekanan P₁ − P₂ adalah…
+A. 1.000 Pa
+B. 2.500 Pa
+C. 3.500 Pa
+D. 4.000 Pa
+E. 5.000 Pa
+Jawaban : B
+
+10. Darah mengalir dalam pembuluh sempit. Jika jari-jari pembuluh menjadi 2 kali semula, laju aliran darah menjadi…
+A. 16 kali
+B. 2 kali
+C. 8 kali
+D. 4 kali
+E. 32 kali
+Jawaban : A
+
+11. Gerak naik turun sebuah perahu dinyatakan x = 0,2 cos(8πt + π/6) m. Frekuensi geraknya adalah…
+A. 1 Hz
+B. 2 Hz
+C. 4 Hz
+D. 4π Hz
+E. 8π Hz
+Jawaban : C
+
+12. Posisi sebuah benda dinyatakan x = 4 cos(πt/3) cm. Posisi benda pada t = 1 s adalah…
+A. 0 cm
+B. 2 cm
+C. 3 cm
+D. 6 cm
+E. 4 cm
+Jawaban : B
+
+13. Sebuah benda bergerak harmonik dengan x = 0,73 cos(10t) m. Kecepatan maksimumnya adalah…
+A. 0,7 m/s
+B. 7,3 m/s
+C. 7,8 m/s
+D. 0,05 m/s
+E. 73 m/s
+Jawaban: B
+
+14. Sebuah benda bergerak harmonik dengan x = 0,05 cos(10t) m. Percepatan maksimumnya adalah…
+A. 0,2 m/s²
+B. 0,8 m/s²
+C. 5 m/s²
+D. 1 m/s²
+E. 50 m/s²
+Jawaban : C
+
+15. Sebuah pegas dengan konstanta 200 N/m ditarik hingga berosilasi dengan amplitudo 10 cm. energi total sistem pegas tersebut adalah...
+A. 0,01 J
+B. 0,1 J
+C. 1 J
+D. 10 J
+E. 100 J
+Jawaban: C
+
+16. Benda bermassa 1,5 kg terikat pada pegas dengan k = 600 N/m dan berosilasi dengan amplitudo 10 cm. Laju maksimum benda adalah…
+A. 0,2 m/s
+B. 1 m/s
+C. 2 m/s
+D. 20 m/s
+E. 200 m/s
+Jawaban: C
+
+17. Benda bermassa 5 kg digantung vertikal pada pegas dan meregangkannya 25 cm. Konstanta pegas tersebut adalah…
+A. 10 N/m
+B. 40 N/m
+C. 50 N/m
+D. 200 N/m
+E. 20 N/m
+Jawaban : D
+
+18. Sebuah pegas dengan beban 2 kg berosilasi pada frekuensi 3 Hz. Jika beban diganti 8 kg, frekuensinya menjadi…
+A. 1,5 Hz
+B. 2 Hz
+C. 4,2 Hz
+D. 8 Hz
+E. 6 Hz
+Jawaban : A
+
+19. Sebuah bandul sederhana memiliki tali sepanjang 3,6 m. Periode ayunannya (simpangan kecil) adalah…
+A. 1,5π s
+B. 1,2π s
+C. 3,1π s
+D. 6,2π s
+E. 0,6π s
+Jawaban : B
+
+20. Osilator pegas memiliki energi total 16 J. Energi potensialnya saat simpangan sama dengan setengah amplitudo adalah…
+A. 1 J
+B. 2 J
+C. 4 J
+D. 6 J
+E. 12 J
+Jawaban : C
+
+21. Suatu gelombang sinus merambat dengan amplitudo 5 cm, panjang gelombang 60 cm, dan frekuensi 3 Hz. Laju gelombang tersebut adalah…
+A. 125 cm/s
+B. 180 cm/s
+C. 220 cm/s
+D. 20 cm/s
+E. 18 cm/s
+Jawaban : B
+
+22. Sebuah kawat tegang diberi beban bermassa 2 kg pada salah satu ujungnya. Panjang kawat 2 m dan massanya 100 g. Laju gelombang pada kawat adalah…
+A. 20 m/s
+B. 2 m/s
+C. 25 m/s
+D. 50 m/s
+E. 400 m/s
+Jawaban : A
+
+23. Seutas kawat bermassa per satuan panjang 0,04 kg/m dan dilalui gelombang dengan laju 50 m/s. Daya yang harus diberikan agar kawat menghasilkan gelombang sinus berfrekuensi 10 Hz dan amplitudo 2 cm adalah… (π² ≈ 10)
+A. 0,16 W
+B. 16 W
+C. 160 W
+D. 1,6 W
+E. 0,016 W
+Jawaban : D
+
+24. Seutas tali terikat pada kedua ujungnya. Dua frekuensi resonansi yang berurutan adalah 90 Hz dan 120 Hz. Frekuensi nada dasar tali adalah…
+A. 100 Hz
+B. 50 Hz
+C. 25 Hz
+D. 30 Hz
+E. 210 Hz
+Jawaban : D
+
+25. Tentukan laju bunyi dalam air jika massa jenisnya 1.000 kg/m³ dan modulus limbaknya 9 × 10⁹ N/m².
+A. 200 m/s
+B. 3.000 m/s
+C. 2.000 m/s
+D. 20.000 m/s
+E. 9.000 m/s
+Jawaban : B
+
+26. Seekor lumba-lumba mengirim sinyal bunyi dan mendeteksi makanan sejauh 450 m. Jika laju bunyi dalam air 1.500 m/s, waktu sejak sinyal dikirim hingga pantulannya diterima adalah…
+A. 0,2 s
+B. 0,6 s
+C. 10 s
+D. 0,4 s
+E. 0,3 s
+Jawaban : B
+
+27. Sebuah sumber bunyi memancarkan daya 12,56 W secara merata ke segala arah. Intensitas bunyi pada jarak 4 m adalah… (π = 3,14)
+A. 0,125 W/m²
+B. 0,015 W/m²
+C. 0,0625 W/m²
+D. 0,073 W/m²
+E. 0,25 W/m²
+Jawaban : C
+
+28. Sebuah mesin menghasilkan intensitas bunyi 10^-9 W/m² pada posisi pekerja. Taraf intensitas bunyi yang dirasakan pekerja adalah…
+A. 5 dB
+B. 70 dB
+C. 50 dB
+D. 30 dB
+E. 90 dB
+Jawaban : D
+
+29. Sebuah mesin menghasilkan taraf intensitas 60 dB di tempat pengamat. Jika 10 mesin identik dihidupkan bersamaan, taraf intensitasnya menjadi…
+A. 41 dB
+B. 140 dB
+C. 70 dB
+D. 30 dB
+E. 600 dB
+Jawaban : C
+
+30. Sebuah ambulans mendekati pengamat yang diam dengan laju 40 m/s sambil membunyikan sirene berfrekuensi 900 Hz. Frekuensi yang didengar pengamat adalah…
+A. 805 Hz
+B. 900 Hz
+C. 1.020 Hz
+D. 1.100 Hz
+E. 960 Hz
+Jawaban : C
+
+31. Termometer A menunjukkan −18 °A saat es mencair dan 130 °A saat air mendidih. Suhu 75 °C pada termometer A adalah…
+A. 70 °A
+B. 100 °A
+C. 99 °A
+D. 93 °A
+E. 111 °A
+Jawaban : D
+
+32. Nitrogen cair mendidih pada suhu 77 K. Suhu tersebut dalam skala Fahrenheit adalah…
+A. −321 °F
+B. −196 °F
+C. −385 °F
+D. −105 °F
+E. −353 °F
+Jawaban : A
+
+33. Suhu air menurut termometer Reamur adalah 60 °R. Dalam skala Fahrenheit suhu tersebut adalah…
+A. 50 °F
+B. 172 °F
+C. 122 °F
+D. 167 °F
+E. 135 °F
+Jawaban : D
+
+34. Batang besi sepanjang 3,5 m memiliki koefisien muai panjang 1,2 × 10⁻⁵ °C⁻¹. Jika suhunya naik 70 °C, pertambahan panjang batang adalah…
+A. 0,12 mm
+B. 0,64 mm
+C. 2,94 mm
+D. 1,27 mm
+E. 29,4 mm
+Jawaban: C
+
+35. Bejana volume 2 liter diisi penuh alkohol (β = 1,1 × 10⁻³ °C⁻¹) pada 15° C. Jika suhu naik menjadi 45 °C dan pemuaian bejana diabaikan, alkohol yang tumpah adalah…
+A. 66 cm³
+B. 11 cm³
+C. 6,6 cm³
+D. 660 cm³
+E. 22 cm³
+Jawaban : A
+
+36. Sebuah kawat memiliki koefisien suhu hambatan jenis 0,005 °C⁻¹ dan suhu awal 45 °C. Agar hambatan jenisnya naik 15%, suhu kawat harus dinaikkan menjadi…
+A. 30 °C
+B. 40 °C
+C. 50 °C
+D. 75 °C
+E. 60 °C
+Jawaban : D
+
+37. Dua mol gas ideal berada pada suhu 300 K dalam volume 0,05 m³. Tekanan gas mendekati…
+A. 50 kPa
+B. 200 kPa
+C. 100 kPa
+D. 10 kPa
+E. 1.000 kPa
+Jawaban : C
+
+38. Energi kinetik translasi rata-rata molekul gas ideal pada suhu 300 K adalah…
+A. 4,1 × 10⁻²³ J
+B. 6,2 × 10⁻²³ J
+C. 4,1 × 10⁻²¹ J
+D. 6,2 × 10⁻²¹ J
+E. 2,1 × 10⁻²¹ J
+Jawaban : D
+
+39. Sebuah sistem berisi 10 partikel: 5 partikel pada aras 1 eV, 3 partikel pada aras 2 eV, dan 2 partikel pada aras 3 eV. Energi rata-rata per partikel adalah…
+A. 1,7 eV
+B. 2,0 eV
+C. 1,0 eV
+D. 17 eV
+E. 2,2 eV
+Jawaban : A
+
+40. Dua aras energi dalam suatu sistem berbeda sebesar ΔE = kT. Perbandingan jumlah partikel aras atas terhadap aras bawah (n₂/n₁) adalah…
+A. 0,63
+B. 0,37
+C. 1,00
+D. 2,72
+E. 0,50
+Jawaban : B

@@ -1,0 +1,329 @@
+1. Sebuah wadah berisi air dengan luas dasar 0,4 m² dan ketinggian 1,5 m. Tentukan tekanan yang dihasilkan oleh air pada dasar wadah!
+A.  14.700 Pa
+B.  14.500 Pa
+C.  14.400 Pa
+D.  14.300 Pa
+E.  14.600 Pa
+Jawaban: A.
+
+2. Sebuah ember berisi air dengan massa jenis 900 kg/m³ dan kedalaman 50 cm. Seorang anak dengan berat 40 kg berdiri di atas ember tersebut. Hitunglah tekanan yang dihasilkan pada dasar ember!
+A. 4410 Pa
+B. 4401 Pa
+C. 4400 Pa
+D. 4411 Pa
+E. 4100 Pa
+Jawaban: A.
+
+3. Sebuah benda Ketika di Udara beratnya 500 N. Tentukan massa jenis benda jika berat benda di Dalam air 400 N dan massa jenis air 1.000 kg/m³!
+A. 500 kg/m³
+B. 5.000 kg/m³
+C. 50.000  kg/m³
+D. 50 kg/m³
+E. 500.000 kg/m³
+Jawaban: B.
+
+4. Di dasar sebuah danau terdapat batu yang beratnya 700 N (diukur di Udara). Jika batu tersebut dapat diangkat oleh seorang pria dengan gaya 500 N, hitunglah berat batu tersebut di Dalam air!
+A. 100 N
+B. 300 N
+C. 200 N
+D. 500 N
+E. 600 N
+Jawaban: C.
+
+5. Sebuah pompa hidrolik memiliki luas penampang kecil sebesar 0,2 m² dan penampang besar 0,8 m². Apabila pada penampang besar diberikan beban sebesar 500 N, berapakah gaya minimal yang harus diberikan pada penampang kecil agar beban tersebut dapat terangkat?
+A. 120 N
+B. 125 N
+C. 130 N
+D. 12,5 N
+E. 200 N 
+Jawaban: B.
+
+6. Sebuah perusahaan ingin membuat sebuah dongkrak hidrolik dengan jari-jari piston kecil adalah 5 cm (penampang piston berbentuk lingkaran). Jika gaya maksimum yang diberikan pada piston kecil adalah 5000 Newton. Tentukan jari-jari piston besar agar mampu mengangkat benda hingga bermassa 50 ton.
+A. 100 cm
+B. 60 cm
+C. 77 cm
+D. 50 cm
+E. 25 cm
+Jawaban: D.
+
+7. Sebuah pipa air memiliki dua penampang pada ketinggian yang berbeda yang berbeda.
+• Pada bagian pipa yang lebih besar (titik 1), ketinggian h1 = 5 m, kecepatan aliran v1 = 36 km/jam, dan tekanan P1 = 9,1×10⁵ Pa.
+• Pada bagian pipa yang lebih kecil (titik 2) , ketinggian h2 = 1 m dan tekanan P2 = 2×10⁵ Pa.
+Jika massa jenis air ρ = 1000 kg/m³ dan percepatan gravitasi g = 10 m/s², berapakah kecepatan aliran air (ν2) pada pipa yang kecil?
+A. 44 m/s
+B. 45 m/s
+C. 40 m/s
+D. 30 m/s
+E. 20 m/s
+Jawaban: C.
+
+8. Air mengalir melalui sebuah pipa yang memiliki dua Ukuran penampang berbeda. Kecepatan aliran air pada penampang besar yang luasnya 40 cm² adalah 2 m/s. Berapakah kecepatan aliran air saat melewati penampang kecil yang luasnya 10 cm²?
+A. 8 m/s
+B. 2 m/s
+C. 6 m/s
+D. 4 m/s
+E. 10 m/s
+Jawaban: A.
+
+9. Sebuah bak penampungan air yang terbuka di bagian atasnya mengalami kebocoran kecil pada dindingnya. Jarak lubang kebocoran dari permukaan air di Dalam bak adalah 1,25 meter. Jika percepatan gravitasi 10 m/s², berapakah kecepatan air yang memancar keluar dari lubang tersebut?
+A. 8 m/s
+B. 7 m/s
+C. 6 m/s
+D. 5 m/s
+E. 9 m/s
+Jawaban: D.
+
+10. Dongkrak hidrolik digunakan untuk mengangkat mobil berat menggunakan sedikit gaya. Prinsip kerja Hukum Pascal menyatakan bahwa...
+A. Tekanan yang diberikan pada zat cair akan diteruskan hanya ke arah bagian dasar wadah.
+B. Tekanan yang diberikan pada zat cair Dalam ruang tertutup akan diteruskan ke segala arah dengan sama besar.
+C. Volume zat cair akan meyusut Ketika diberikan tekanan dari luar.
+D. Tekanan yang diberikan pada zat cair Dalam ruang tertutup akan diteruskan ke segala arah dengan nilai yang semakin besar.
+E. Tekanan yang diberikan pada zat cair dalam ruang tertutup akan berkurang seiring bertambahnya jarak dari titik pemberian tekanan.
+Jawaban: B.
+
+11. Sebuah benda bermassa 200 gram bergerak harmonic sederhana dengan amplitude 15 cm dan periode 0,5 s. Besar gaya yang bekerja pada system saat simpangannya setengah amplitude adalah sekitar...
+A. 1,0 N
+B. 1,6 N
+C. 4,8 N
+D. 6,9 N
+E. 8,4 N
+Jawaban: B.
+
+12. Sebuah bandul melakukan gerak harmonic sederhana dengan simpangan y=0,2 sin 0,25πt, di mana y dan A berturut-turut adalah simpangan dan amplitude Dalam satuan cm dan t adalah Waktu Dalam satuan s, maka frekuensi dan periode berturut-turut adalah...
+A. 1/8 Hz dan 8s
+B. 1/2 Hz dan 2s
+C. 1/4 Hz dan 4s
+D. 4 Hz dan 1/4s
+E. 2 Hz dan 1/2s
+Jawaban: A.
+
+13. Sebuah pegas bergetar dengan frekuensi 15 Hz dan ammplitudo 13 cm. Kecepatan getar pegas saat simpangannya 12 cm sebesar...cm/s.
+A. 20π
+B. 30π
+C. 150π
+D. 80π
+E. 100π
+Jawaban: C.
+
+14. Sebuah benda yang bermassa 0,005 kg bergerak harmonic sederhana dengan periode 0,05 sekon dan amplitudonya 0,02 m. Percepatan maksimum benda sama dengan...
+A. 123 m/s²
+B. 247 m/s²
+c. 494 m/s²
+D. 316 m/s²
+E. 1.976 m/s²
+
+Jawaban: D.
+
+15. Sebuah benda bergetar hingga membentuk suatu gerak harmonis dengan persamaan
+y= 0,04 sin 20πt
+dengan y adalah simpangan Dalam satuan meter, t adalah Waktu Dalam satuan sekon. Tentukan amplitude atau A?
+A. 20 meter
+B. 4 meter
+C. 0,04 meter
+D. 0,4 meter
+E. 0,004 meter
+Jawaban: C.
+
+16. Sebuah benda bergetar hingga membentuk suatu gerak harmonis dengan persamaan
+y= 0,04 sin 20πt
+dengan y adalah simpangan Dalam satuan meter, t adalah Waktu Dalam satuan sekon. Tentukan sudut fase saat simpangannya 0,02 meter!
+A. 30°
+B. 20°
+C. 10°
+D. 15°
+E. 45°
+Jawaban: A.
+
+17. Sebuah balok yang dihubungkan ke pegas ideal melakukan osilator harmonik sederhana pada bidang horizontal licin tanpa gesekan. Manakah pernyataan berikut yang paling benar mengenai energi mekanik total sistem tersebut saat posisi balok berada di titik simpangan maksimum (amplitudo)?. Energi kinetik bernilai maksimum dan energi potensial bernilai nol.
+B. Energi kinetik bernilai nol dan energi potensial bernilai maksimum.
+C. Baik energi kinetik maupun energi potensial bernilai maksimum.
+D. Baik energi kinetik maupun energi potensial bernilai nol.
+E. Energi kinetik bernilai sama besar dengan energi potensial.
+Jawaban: B.
+
+18. Sebuah balok bermassa  0,5 kg dihubungkan pada ujung horizontal sebuah pegas yang memiliki tetapan gaya (konstanta pegas) k= 200 N/m. Sistem tersebut ditarik dari posisi setimbangnya sejauh 0,1 m lalu dilepaskan tanpa kecepatan awal sehingga berosilasi harmonik sederhana. Tentukan Energi mekanik total (E) sistem tersebut.
+A. 2 Joule
+B. 3 Joule
+C. 4 Joule
+D. 5 Joule
+E. 1 Joule
+Jawaban: E.
+
+19. Sebuah sistem osilator harmonik pegas-massa diganti massanya menjadi empat kali lipat dari massa semula, sementara konstanta pegas dan amplitudo osilasi dijaga tetap sama. Bagaimana perubahan yang terjadi pada periode osilasi (T) dan energi mekanik total (E) sistem tersebut?
+A. Periode menjadi 2 kali semula, sedangkan energi total tetap sama.
+B. Periode menjadi 4 kali semula, sedangkan energi total menjadi 2 kali semula.
+C. Periode menjadi 1/2 kali semula, sedangkan energi total tetap sama.
+D. Periode menjadi 2 kali semula, sedangkan energi total menjadi 4 kali semula.
+E. Baik periode maupun energi total tidak mengalami perubahan.
+Jawaban: A.
+
+20. Sebuah beban bermassa 300 gram digantungkan pada ujung bawah sebuah pegas vertikal yang memiliki konstanta pegas k = 108 N/m. Beban tersebut kemudian ditarik ke bawah sejauh 5 cm dari titik setimbangnya dan dilepaskan tanpa kecepatan awal sehingga berosilasi harmonik sederhana. Berapa Percepatan maksimumnya?
+A. 18 m/s²
+B. 20 m/s²
+C. 22 m/s²
+D. 25 m/s²
+E. 14 m/s²
+Jawaban: A
+
+
+21. Mana pernyataan paling tepat mengenai perbedaan antara gelombang transversal dan gelombang longitudinal?
+A. Gelombang transversal merambat tanpa medium, sedangkan longitudinal membutuhkan medium.
+B. Arah getar gelombang transversal tegak lurus terhadap arah rambatnya, sedangkan longitudinal searah dengan arah rambatnya.
+C. Gelombang transversal hanya dapat merambat pada zat cair, sedangkan longitudinal pada zat padat.
+D. Panjang gelombang transversal dihitung dari satu lembah ke satu bukit, sedangkan longitudinal dari satu simpul ke simpul lain.
+E. Kecepatan rambat gelombang longitudinal selalu lebih besar daripada gelombang transversal di semua medium.
+Jawaban: B
+
+22. Persamaan gelombang berjalan pada seutas tali dinyatakan sebagai y = 0,05sin(4πt-0,2πx) (dalam meter dan sekon). Cepat rambat gelombang tersebut adalah...
+A. 5 m/s
+B. 10 m/s
+C. 15 m/s
+D. 20 m.s
+E. 25 m/s
+Jawaban: D.
+
+
+23. Seutas tali yang salah satu ujungnya terikat tetap digetarkan sehingga menghasilkan gelombang datang. Ketika gelombang tersebut dipantulkan oleh ujung terikat, fenomena fase yang terjadi adalah...
+A. Gelombang pantul mengalami beda fase 1/2π terhadap gelombang datang.
+B. Gelombang pantul sefase dengan gelombang datang.
+C. Gelombang pantul mengalami beda fase π (berlawanan fase) terhadap gelombang datang.
+D. Gelombang pantul mengalami interferensi destruktif total tanpa perubahan fase.
+E. Amplitudo gelombang pantul bertambah dua kali lipat akibat pemantulan tetap.
+Jawaban: C.
+
+24. Seutas kawat baja dengan panjang 2 meter dan massa total 20 gram diberi gaya tegangan sebesar 180 N. Cepat rambat gelombang transversal pada kawat tersebut adalah...
+A. 30 m/s
+B. 45 m/s
+C. 60√3 m/s
+D. 60√5 m/s
+E. 90 m/s
+Jawaban: D.
+
+25. Pada gelombang stasioner ujung bebas, Jarak antara satu simpul (nodus) dan satu perut (antinodus) yang berdekatan adalah...
+A. 1/4 λ
+B. 1/2 λ
+C. 3/4 λ
+D. λ
+E. 3/2 λ
+Jawaban: A.
+
+26. Seutas tali yang panjangnya 1,5 m diregangkan dengan kedua ujungnya terikat. Tali tersebut digetarkan sehingga membentuk 3 perut gelombang (harmonic ke-3) dengan frekuensi 60 Hz. Cepat rambat gelombang pada tali tersebut adalah...
+A. 30 m/s
+B. 40 m/s
+C. 50 m/s
+D. 60 m/s
+E. 90 m/s
+Jawaban: D.
+
+27. Sebuah sumber bunyi (mobil pemadam kebakaran dengan sirine aktif) bergerak dengan kecepatan konstan mendekati seorang pengamat yang diam di tepi jalan. Menurut pengamat tersebut, fenomena gelombang yang terjadi adalah...
+A. Frekuensi terdengar lebih tinggi dan panjang gelombang di depan sumber menjadi lebih pendek.
+B. Frekuensi terdengar lebih rendah dan panjang gelombang di depan sumber menjadi lebih panjang.
+C. Frekuensi dan panjang gelombang yang diterima pengamat sama persis dengan sumber.
+D. Cepat rambat bunyi di udara bertambah besar seiring laju sumber.
+E. Amplitudo bunyi mengecil secara drastis saat sumber mendekat.
+Jawaban: A.
+
+28. Sebuah sumber bunyi bergerak dengan laju 30 m/s mendekati seorang pendengar yang diam sambil membunyikan frekuensi 600 Hz. Jika cepat rambat bunyi di udara adalah 330 m/s, besar frekuensi yang didengar oleh pendengar tersebut adalah...
+A. 540 Hz
+B. 600 Hz
+C. 630 Hz
+D. 660 Hz
+E. 720 Hz
+Jawaban: D.
+
+29. Sebuah pipa organa terbuka memiliki panjang 60 cm. Jika cepat rambat bunyi di udara adalah 330 m/s, frekuensi nada atas pertama (f1) dari pipa organa tersebut adalah...
+A. 275 Hz
+B. 330 Hz
+C. 440 Hz
+D. 550 Hz
+E. 660 Hz
+Jawaban: D.
+
+30. Intensitas bunyi dari sebuah sumber titik pada jarak 2 meter adalah 4×10⁻⁴ W/m². Besar intensitas bunyi pada jarak $8\text{ meter}$ dari sumber tersebut adalah...
+A. 1,0 ×10⁻⁴ W/m²
+B. 5,0 ×10⁻⁵ W/m²
+C. 2,5 ×10⁻⁵ W/m²
+D. 1,25 ×10⁻⁵ W/m²
+E. 1,0 ×10⁻⁵ W/m²
+Jawaban: C. 
+
+31. Dua benda A dan B yang memiliki suhu awal berbeda ($T_A > T_B$) ditempelkan dalam ruang terisolasi hingga mencapai kesetimbangan termal. Pernyataan yang paling tepat menggambarkan kondisi sistem saat kesetimbangan termal tercapai adalah...
+A. Kalor berhenti mengalir karena kedua benda memiliki kapasitas kalor yang sama.
+B. Suhu benda A dan benda B menjadi sama besar sehingga tidak ada aliran kalor netto di antara keduanya.
+C. Energi internal benda A sama besar dengan energi internal benda B.
+D. Benda A melepaskan seluruh energi kinetik molekulernya kepada benda B.
+E. Suhu akhir sistem selalu merupakan nilai rata-rata aritmatika dari suhu awal kedua benda.
+Jawaban: B.
+
+32. Prinsip kerja berbagai jenis termometer memanfaatkan sifat fisik zat yang berubah secara teratur terhadap perubahan suhu (sifat termometrik). Pasangan jenis termometer dan sifat termometrik yang digunakan secara tepat adalah...
+A. Termometer hambatan – perubahan volume zat cair
+B. Termometer gas volume tetap – perubahan panjang kolom gas
+C. Termokopel – perbedaan gaya gerak listrik (tegangan) akibat beda suhu dua sambungan logam
+D. Pirometer optik – perubahan hambatan listrik kawat platina
+E. Termometer bimetal – perubahan warna radiasi benda panas
+Jawaban: C
+
+33. Suhu sebuah ruang pendingin di laboratorium tercatat sebesar -40°C. Jika suhu tersebut diukur menggunakan termometer berskala Fahrenheit dan Kelvin, nilai yang terbaca berturut-turut adalah...
+A. -40°F dan 233 K
+B. -32°F dan 233 K
+C. -40°F dan 313 K
+D. 32°F dan 233 K
+E. -72°F dan 313 K
+Jawaban: A.
+
+34. Seorang mahasiswa membuat termometer skala X yang menetapkan titik beku air pada 20°X  dan titik didih air pada 140°X (pada tekanan 1 atm). Jika sebuah cairan diukur dengan termometer Celcius menunjukkan suhu 35°C, suhu yang terbaca pada termometer X adalah...
+A. 42°X
+B. 55°X
+C. 62°X
+D. 70°X
+E. 84°X
+Jawaban: C.
+
+35. Termometer 𝑃 memiliki titik tetap bawah −10°P dan titik tetap atas 110°P. Sementara itu, termometer Q memiliki titik tetap bawah 15°Q dan titik tetap atas 95°Q. Suhu benda yang akan menunjukkan angka yang sama pada kedua termometer tersebut adalah...
+A. 25°
+B. 35°
+C. 40°
+D. 50°
+E. 65°
+Jawaban: E.
+
+36. Panjang kolom air raksa pada sebuah termometer tak berskala adalah 4 cm saat dicelupkan ke dalam es yang sedang melebur dan 24 cm saat dicelupkan ke dalam air mendidih pada tekanan 1 atm. Jika panjang kolom raksa menunjukkan angka 11 cm, suhu benda yang diukur adalah...
+A. 28°C
+B. 35°C
+C. 44°C
+D. 45°C
+E. 55°C
+Jawaban: B.
+
+37. Sebuah larutan kimia dipanaskan hingga suhunya menunjukkan angka 48°R pada termometer Reamur. Suhu larutan tersebut dalam skala mutlak (Kelvin) adalah...
+A. 293 K
+B. 311 K
+C. 321 K
+D. 333 K
+E. 353 K
+Jawaban: D.
+
+38. Suhu sebuah mesin meningkat sebesar 45°C selama beroperasi. Kenaikan suhu mesin tersebut jika dinyatakan dalam skala Fahrenheit dan Kelvin berturut-turut adalah...
+A. 45°F dan 45 K
+B. 81°F dan 45 K
+C. 81°F dan 318 K
+D. 113°F dan 45 K
+E. 113°F dan 318 K
+Jawaban: B.
+
+39. Suhu tubuh seorang pasien diukur menggunakan termometer Fahrenheit menunjukkan angka 104°F. Jika suhu tersebut dikonversi ke dalam skala Reamur, nilai yang terbaca adalah...
+A. 30°R
+B. 32°R
+C. 36°R
+D. 40°R
+E. 44°R
+Jawaban: B.
+
+40. Mengapa skala Kelvin ditetapkan sebagai satuan standar internasional (SI) untuk suhu dan disebut sebagai skala suhu mutlak?
+A. Karena titik beku air pada skala Kelvin ditetapkan tepat pada angka 0 K.
+B. Karena nilai 0 K merepresentasikan kondisi nol mutlak di mana energi kinetik translasi partikel secara teoretis bernilai minimum (nol), sehingga tidak ada suhu negatif pada skala Kelvin.
+C. Karena interval kenaikan 1 K sama dengan 1°F  sehingga lebih presisi dibanding Celcius.
+D. Karena termometer Kelvin hanya dapat digunakan untuk mengukur suhu benda-benda di luar angkasa.
+E. Karena titik didih air pada skala Kelvin bernilai tepat 300 K pada tekanan 1 atm.
+Jawaban: B.
+

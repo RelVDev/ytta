@@ -1,0 +1,423 @@
+40 SOAL QUIZ FISIKA
+FLUIDA, OSILATOR HARMONIK, GELOMBANG MEKANIK, DAN  SUHU
+
+
+FLUIDA
+1. Fluida merupakan zat yang dapat mengalir dan mengalami perubahan bentuk ketika diberikan gaya. Berikut ini yang termasuk contoh fluida adalah ....
+A. Besi dan aluminium
+B. Air dan udara
+C. Kayu dan kaca
+D. Batu dan tanah
+E. Tembaga dan baja 
+
+Jawaban: B
+
+2. Tekanan hidrostatis pada suatu titik di dalam zat cair dipengaruhi oleh beberapa faktor. Faktor yang menentukan besar tekanan hidrostatis adalah ....
+A. Bentuk wadah dan luas permukaan zat cair
+B. Massa benda dan volume wadah
+C. Kedalaman, massa jenis zat cair, dan percepatan gravitasi
+D. Suhu dan warna zat cair
+E. Luas permukaan dan bentuk wadah
+
+Jawaban: C
+
+3. Hukum Archimedes menjelaskan bahwa benda yang dicelupkan ke dalam fluida akan mengalami ....
+A. Gaya gravitasi yang semakin besar
+B. Gaya gesek ke arah bawah
+C. Gaya apung ke arah atas
+D. Perubahan massa benda
+E. Tekanan yang selalu sama dengan nol
+
+Jawaban: C
+
+4. Gaya angkat pada pesawat terbang timbul karena:
+1) Tekanan udara di depan sayap lebih besar daripada di belakang sayap.
+2) Kecepatan udara di atas sayap lebih besar daripada di bawah sayap.
+3) Tekanan udara di atas sayap lebih kecil daripada di bawah sayap.
+4) Kecepatan udara di belakang sayap lebih besar daripada di bawah sayap.
+Pernyataan yang benar adalah ....
+A. 1 dan 2
+B. 1, 3, dan 4
+C. 2, 3, dan 4
+D. 2 dan 3
+E. 3 dan 4
+
+Jawaban: D
+
+5. Seorang petani menggunakan alat penyemprot cairan yang bekerja dengan memanfaatkan aliran udara berkecepatan tinggi. Ketika udara melewati bagian pipa yang meneyempit, cairan dari wadah penampung dapat terangkat dan keluar sebagai butiran kecil.
+Peristiwa tersebut berkaitan dengan prinsip fluida dinamis. Perhatikan pernyataan berikut!
+1) Kecepatan aliran udara meningkat ketika melewati penampang yang lebih sempit.
+2) Perbedaan tekanan dapat menyebabkan cairan dari wadah penampung bergerak menuju aliran udara.
+3) Prinsip kerja alat tersebut dapat dijelaskan menggunakan persamaan Bernoulli.
+4) Tekanan statis udara pada bagian pipa yang menyempit lebih besar dibandingkan bagian yang lebar.
+Pernyataan yang benar adalah....
+A. 1 dan 4
+B. 2 dan 4
+C. 1 dan 3
+D. Semua benar
+E. 1, 2, dan 3
+
+Jawaban: E
+
+6. Seorang penyelam profesional melakukan pengamatan terhadap organisme yang hidup di dalam kolam penelitian. Organisme tersebut berada pada kedalaman 2 meter dari permukaan air. Jika massa jenis air sebesar 1.000 kg/m³ dan percepatan gravitasi 10 m/s², tekanan hidrostatis yang dialami organisme tersebut adalah.....
+A. 5.000 Pa
+B. 10.000 Pa
+C. 15.000 Pa
+D. 20.000 Pa
+E. 35.000 Pa
+
+Jawaban: D
+
+7. Sebuah alat pengukur tekanan menunjukkan tekanan ban sebesar 352 kPa. Jika tekanan atmosfer di sekitar ban sebesar 207 kPa, tekanan absolut di dalam ban tersebut adalah....
+A. 559 kPa
+B. 208 kPa
+C. 441 kPa
+D. 119 kPa
+E. 876 kPa
+
+Jawaban: A
+
+8. Sebuah benda padat memiliki volume 0,004 m³ dan dicelupkan seluruhnya ke dalam air. Benda tersebut memiliki massa 6 kg. Jika massa jenis air 1.000 kg/m³ dan percepatan gravitasinya 10 m/s², kondisi benda tersebut ketika berada di dalam air adalah....
+A. Melayang karena massa jenis benda lebih besar daripada massa jenis air
+B. Tenggelam karena tidak mengalami gaya apung
+C. Melayang karena berat benda sama dengan gaya apung
+D. Tenggelam karena berat benda lebih besar daripada gaya apung
+E. Terapung karena gaya apung lebih besar daripada berat benda
+
+Jawaban: D
+
+9. Dalam percobaan fisika, sebuah kawat kecil digunakan untuk membentuk lapisan tipis cairan. Ketika kawat digerakkan, diperlukan gaya sebesar 0,016 N untuk mempertahankan lapisan tersebut. Jika panjang kawat yang bersentuhan dengan lapisan cairan adalah 0,04 m, besar tegangan permukaan cairan adalah....N/m
+A. 0,02
+B. 0,2
+C. 0,07
+D. 0, 4
+E. 0,18
+
+Jawaban: B
+
+10. Seorang ilmuan memasukkan dua jenis cairan ke dalam wadah yang berbeda. Kedua cairan memiliki kedalaman yang sama, tetapi massa jenisnya berbeda. Berdasarkan konsep tekanan hidrostatis, perhatikan pernyataan berikut!
+1) Cairan dengan massa jenis lebih besar menghasilkan tekanan hidrostatis lebih besar.
+2) Pada kedalaman yang sama, dua cairan dengan massa jenis berbeda selalu menghasilkan tekanan yang sama.
+3) Tekanan hidrostatis hanya dipengaruhi oleh bentuk wadah.
+4) Semakin dalam posisi suatu benda di dalam cairan, semakin besar tekanan hidrostatis yang dialaminya.
+Pernyataan yang benar adalah....
+A. 1 dan 2
+B. 1 dan 4
+C. 2 dan 3
+D. 1, 2, dan 3
+E. Benar semua
+
+Jawaban: B
+
+OSILATOR HARMONIK
+11. Gerak harmonik sederhana merupakan gerak bolak-balik secara periodik melalui titik keseimbangan dengan ....
+A. Percepatan selalu konstan
+B. Kecepatan selalu bernilai nol
+C. Gaya pemulih sebanding dengan simpangan dan berlawanan arah
+D. Gaya selalu searah dengan simpangan
+E. Energi mekanik selalu bertambah
+
+Jawaban: C
+
+12. Besaran yang menyatakan waktu yang diperlukan untuk melakukan satu getaran penuh disebut ....
+A. Periode
+B. Frekuensi
+C. Fase
+D. Amplitudo
+E. Simpangan 
+
+Jawaban: A
+
+13. Pada gerak harmonik sederhana, ketika benda berada tepat di titik keseimbangan, kondisi yang terjadi adalah ....
+A. Kecepatan nol dan percepatan maksimum
+B. Kecepatan maksimum dan percepatan nol
+C. Kecepatan dan percepatan maksimum
+D. Kecepatan dan percepatan sama dengan nol
+E. Energi kinetik sama dengan nol
+
+Jawaban: B
+
+14. Dalam suatu penelitian, sebuah sensor dipasang pada sistem pegas untuk mengamati gerakan bolak-balik suatu benda. Gerakan tersebut berlangsung secara periodik di sekitar titik keseimbangan. Perhatikan pernyataan berikut!
+1) Arah gaya pemulih selalu sama dengan arah simpangan benda.
+2) Benda yang melakukan gerak harmonik sederhana selalu memiliki kecepatan konstan.
+3) Percepatan benda berbanding lurus dengan simpangan dan arahnya menuju titik keseimbangan.
+4) Gaya pemulih pada gerak harmonik sederhana sebanding dengan besar simpangan benda.
+Pernyataan yang benar adalah ....
+A. 3 dan 4
+B. Benar semua
+C. 1, 2, dan 3 benar
+D. 1 dan 3 benar
+E. 2 dan 4 benar
+
+Jawaban: A
+
+15. Dalam percobaan fisika, dua bandul sederhana dibuat dengan panjang tali berbeda, tetapi memiliki massa bandul yang sama. Keduanya diayunkan dengan sudut simpangan kecil. Perhatikan pernyataan berikut!
+1) Periode bandul dipengaruhi oleh panjang tali dan percepatan gravitasi.
+2) Massa bandul tidak memengaruhi periode ayunan sederhana.
+3) Semakin panjang tali bandul, semakin kecil periode osilasinya.
+4) Periode bandul sederhana dapat berubah apabila percepatan gravitasi berubah.
+Pernyataan yang benar adalah....
+A. 1 dan 3
+B. 2 dan 4
+C. 1, 2, dan 4 benar
+D. Semua benar
+E. 3 dan 4 
+
+Jawaban: C
+
+16. Sebuah ayunan yang awalnya bergerak dengan amplitudo kecil diberikan dorongan secara berulang. Ketika frekuensi dorongan mendekati frekuensi alami ayunan, amplitudo gerakannya menjadi semakin besar. Fenomena tersebut berkaitan dengan osilasi terpaksa dan resonansi. Perhatikan pernyataan berikut!
+1) Resonansi dapat menyebabkan amplitudo getaran meningkat secara signifikan.
+2) Osilasi terpaksa terjadi karena adanya gaya luar yang berubah terhadap waktu.
+3) Resonansi dapat terjadi ketika frekuensi gaya pemaksa mendekati frekuensi alami sistem.
+4) Amplitudo osilasi selalu bernilai tetap meskipun frekuensi gaya pemaksa berubah.
+Pernyataan yang tepat adalah ....
+A. Benar semua
+B. 3 dan 4
+C. 2, 3, dan 4 benar
+D. 1 dan 4
+E. 1, 2, dan 3 benar
+
+Jawaban: E
+
+17. Sebuah benda bermassa 1,5 kg digantungkan pada pegas vertikal sehingga pegas mengalami pertambahan panjang sebesar 7,5 cm ketika mencapai posisi setimbang. Jika percepatan gravitasi 10 m/s², frekuensi alami osilasi benda setelah disimpangkan dari posisi setimbangnya adalah .... Hz
+A. 2,00
+B. 2,60
+C. 1,20
+D. 1,84
+E. 1,59
+
+Jawaban: D
+
+18. Sebuah benda bermassa 0,4 kg dihubungkan dengan pegas yang memiliki konstanta 100 N/m. Benda berosilasi dengan amplitudo 6 cm tanpa mengalami gesekan. Kecepatan maksimum benda dan posisi benda ketika kecepatannya setengah dari kecepatan maksimum secara berurutan adalah ....
+A. 0,75 m/s dan 4 cm
+B. 0,95 m/s dan 5,20 cm
+C. 1,25 m/s dan 2 cm
+D. 1,50 m/s dan 4,50 cm
+E. 0,50 m/s dan 3 cm
+
+Jawaban: B
+
+19. Sebuah batang logam homogen dengan panjang 1,2 meter dan massa 2 kg dipasang pada poros yang terletak di salah satu ujungnya. Batang tersebut kemudian disimpangkan sedikit dari posisi keseimbangan sehingga dapat berosilasi. Jika percepatan gravitasi sebesar 10 m/s² dan momen inersia batang terhadap ujungnya adalah 1/3 mL², periode osilasi batang tersebut adalah .... sekon
+A. 1,50
+B. 1,30
+C. 1,78
+D. 2,08
+E. 2,47
+
+Jawaban: C
+
+20. Dalam suatu percobaan, sebuah cakram digantung menggunakan kawat tipis yang memiliki konstanta puntir sebesar 0,072 Nm/rad. Cakram tersebut memiliki momen inersia sebesar 0,018 kg m². Setelah diputar sedikit dari posisi keseimbangannya, cakram mengalami gerak osilasi puntir. Periode osilasi cakram tersebut adalah ....
+A. 3,14 sekon
+B. 1,57 sekon
+C. 2,02 sekon
+D. 4,00 sekon
+E. 1,84 sekon
+
+Jawaban: A
+
+GELOMBANG MEKANIK
+21. Gelombang mekanik adalah gelombang yang dalam perambatannya ....
+A. Tidak membawa energi
+B. Tidak membutuhkan medium
+C. Hanya dapat merambat di ruang hampa
+D. Selalu merambat dengan kecepatan cahaya
+E. Membutuhkan medium untuk merambat
+
+Jawaban: E
+
+22. Perbedaan utama antara gelombang transversal dan longitudinal terletak pada ....
+A. Besar frekuensinya
+B. Energi yang dibawa gelombang
+C. Kecepatan cahayanya
+D. Medium yang digunakan
+E. Arah getaran terhadap arah rambat gelombang
+
+Jawaban: E
+
+23. Sebuah gelombang merambat dengan kecepatan 72 m/s dan memiliki frekuensi 6 Hz. Panjang gelombangnya adalah ....
+A. 8  m
+B. 10 m
+C. 22 m
+D. 2 m
+E. 12 m
+
+Jawaban: E
+
+24. Bagian gelombang transversal yang merupakan titik tertinggi disebut ....
+A. Simpangan
+B. Lembah
+C. Amplitudo
+D. Frekuensi
+E. Puncak 
+
+Jawaban: E
+
+25. Alat untuk mengukur gelombang bunyi di dalam air untuk menentukan kedalaman laut adalah ....
+A. Sonar 
+B. Seismograf
+C. Osiloskop
+D. Termometer
+E. Voltmeter 
+
+Jawaban: A
+
+26. Gelombang pada tali memiliki panjang gelombang 2 meter dan periode 0,8 sekon. Frekuensi gelombang tersebut adalah .... Hz
+A. 2 
+B. 1,25
+C. 4 
+D. 1,22
+E. 8
+
+Jawaban: B
+
+27. Dalam suatu percobaan, mahasiswa menggetarkan tali secara vertikal sehingga terbentuk gelombang yang merambat sepanjang tali. Pada percobaan lain, sebuah pegas panjang didorong dan ditarik sehingga terbentuk pola rapatan dan renggangan yang merambat sepanjang pegas. Berdasarkan kedua percobaan tersebut, perhatikan pernyataan berikut!
+1) Gelombang pada tali termasuk gelombang transversal karena arah getaran medium tegak lurus terhadap arah rambat gelombang.
+2) Gelombang pada pegas yang membentuk rapatan dan renggangan termasuk gelombang longitudinal.
+3) Gelombang transversal dan longitudinal sama-sama memerlukan medium untuk merambat apabila termasuk gelombang mekanik.
+4) Pada gelombang longitudinal, arah getaran medium selalu tegak lurus terhadap arah rambat gelombang.
+Pernyataan yang benar adalah ....
+A. 1 dan 4
+B. 2 dan 3
+C. 1, 2, dan 3 
+D. Semua benar
+E. 3 dan 4 
+
+Jawaban: C
+
+28. Dalam sebuah percobaan, seutas tali sepanjang 4 meter memiliki massa 80 gram. Salah satu ujung tali diberi beban bermassa 2 kg sehingga tali berada dalam keadaan tegang. Jika percepatan gravitasi sebesar 10 m/s², cepat rambat gelombang pada tali tersebut adalah ....
+A. 31,62 m/s
+B. 40 m/s
+C. 31,63 m/s
+D. 25 m/s
+E. 30 m/s
+
+Jawaban: A
+
+29. Dalam suatu pertunjukan musik, senar gitar yang dipetik menghasilkan pola getaran tertentu akibat adanya gelombang yang merambat dan dipantulkan pada kedua ujung senar. Peristiwa tersebut menghasilkan gelombang berdiri. Perhatikan pernyataan berikut!
+1) Simpul merupakan bagian tali yang memiliki amplitudo getaran maksimum.
+2) Gelombang berdiri terbentuk akibat superposisi dua gelombang dengan frekuensi dan amplitudo sama yang merambat berlawanan arah.
+3) Pada tali dengan kedua ujung terikat, kedua ujung tali selalu menjadi simpul.
+4) Perut merupakan bagian tali yang memiliki amplitudo getaran maksimum.
+Pernyataan yang tepat adalah ....
+A. 1, 2, dan 3
+B. 2 dan 4
+C. 2, 3, dan 4
+D. Benar semua
+E. 1 dan 3
+
+Jawaban: C
+
+30. Sebuah laboratorium melakukan pengukuran kebisingan menggunakan alat sound level meter. Hasil pengukuran menunjukkan adanya perubahan taraf intensitas bunyi ketika beberapa sumber suara dinyalakan secara bersamaan. Berdasarkan konsep intensitas bunyi, perhatikan pernyataan berikut!
+1) Jika intensitas bunyi meningkat 10 kali lipat, taraf intensitasnya meningkat sebesar 10 dB.
+2) Taraf intensitas bunyi dinyatakan dalam satuan desibel (dB).
+3) Satuan intensitas bunyi adalah watt per meter persegi (W/m²).
+4) Intensitas bunyi merupakan daya yang melewati setiap satuan luas bidang yang tegak lurus terhadap arah rambat gelombang.
+Pernyataan yang benar adalah ....
+A. 1 dan 2
+B. Benar semua
+C. 1, 2, dan 4
+D. 2, 3, dan 4
+E. 3 dan 4
+
+Jawaban: B
+
+SUHU
+31. Suhu merupakan besaran fisika yang menyatakan ....
+A. Jumlah kalor dalam suatu benda
+B. Jumlah energi potensial benda
+C. Massa total suatu benda
+D. Tingkat panas atau dinginnya suatu benda
+E. Volume suatu benda
+
+Jawaban: D
+
+32. Alat yang digunakan untuk mengukur suhu suatu benda disebut ....
+A. Termometer
+B. Barometer
+C. Voltmeter
+D. Manometer
+E. Amperemeter 
+Jawaban: A
+
+33. Suhu suatu benda adalah 30°C. Jika dinyatakan dalam skala Kelvin, suhu tersebut menjadi ....
+A. 293 K
+B. 303 K
+C. 202 K
+D. 311 K
+E. 313 K
+
+Jawaban: B
+
+34. Suhu suatu benda menunjukkan 45°C. Jika dikonversikan ke skala Fahrenheit, nilainya adalah .... °F
+A. 104
+B. 106
+C. 113
+D. 115
+E. 200
+
+Jawaban: C
+
+35. Perpindahan kalor yang terjadi melalui zat perantara tanpa disertai perpindahan partikel zat secara keseluruhan disebut ....
+A. Konveksi
+B. Radiasi
+C. Konduksi
+D. Sublimasi 
+E. Evaporasi 
+
+Jawaban: C
+
+36. Perhatikan beberapa pernyataan berikut mengenai skala suhu.
+1) Celsius merupakan salah satu skala suhu nisbi.
+2) Suhu 100°C setara dengan 100°K.
+3) Kelvin merupakan skala suhu mutlak.
+4) Suhu 0°C setara dengan 273,15 K.
+Pernyataan yang benar ditunjukkan nomor ....
+A. 1, 3 dan 4
+B. Benar semua
+C. 2 dan 4
+D. 3 dan 4
+E. 2 dan 3
+
+Jawaban: A
+
+37. Ketika suhu suatu batang logam meningkat, panjang batang tersebut bertambah. Peristiwa ini menunjukkan adanya pemuaian. Jenis pemuaian yang terjadi pada batang tersebut adalah ....
+A. Pemuaian hambatan
+B. Pemuaian volume
+C. Pemuaian massa 
+D. Pemuaian linear
+E. Pemuaian tekanan 
+
+Jawaban: D
+
+38. Sebuah termometer X memiliki titik beku air pada -30°X dan titik didih air pada 170°X. Jika suhu suatu zat menunjukkan 60°C, angka yang ditunjukkan termometer X adalah ... °X
+A. 50
+B. 60
+C. 70
+D. 80
+E. 90
+
+Jawaban: E
+
+39. Seorang mahasiswa memasukkan tiga benda A, B, dan C ke dalam suatu percobaan. Benda A dan B masing-masing berada dalam kesetimbangan termal dengan benda C. Berdasarkan Hukum Ke-Nol Termodinamika, pernyataan yang tepat adalah ....
+A. Ketiga benda harus memiliki massa yang sama
+B. Suhu A dan B sama
+C. Kalor selalu mengalir dari A menuju B
+D. Suhu A lebih rendah daripada suhu B
+E. Suhu A lebih tinggi daripada suhu B
+
+Jawaban: B
+
+40. Perhatikan karakteristik gas ideal berikut.
+1) Energi internal hanya berupa energi kinetik translasi.
+2) Molekul gas dianggap sebagai titik massa.
+3) Gaya tarik-menarik antarmolekul diabaikan.
+4) Molekul gas tidak mengalami tumbukan dengan dinding wadah.
+Pernyataan yang sesuai dengan konsep gas ideal ditunjukkan nomor ...
+A. Benar semua
+B. 2 dan 3
+C. 4 saja
+D. 1, 2 dan 4
+E. 1, 2 dan 3
+
+Jawaban: E
+

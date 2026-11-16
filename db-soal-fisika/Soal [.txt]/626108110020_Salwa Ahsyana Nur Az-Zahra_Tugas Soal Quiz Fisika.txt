@@ -1,0 +1,323 @@
+SOAL QUIZ
+FLUIDA, OSILATOR HARMONIK,
+GELOMBANG HARMONIK, DAN SUHU
+
+1. Zat yang bersifat mengalir disebut....
+A. Zat padat
+B. Zat cair saja
+C. Fluida
+D. Gas ideal
+E. Plasma
+JAWABAN: C
+
+2. Tekanan hidrostatis pada suatu titik dalam zat cair dipengaruhi oleh....
+A. Bentuk wadah dan luas permukaan
+B. Kedalaman, massa jenis zat cair, dan gravitasi
+C. Warna dan suhu zat cair
+D. Volume wadah dan tekanan udara saja
+E. Massa benda di atas permukaan
+JAWABAN: B
+
+3. Di bawah ini yang termasuk penerapan hukum Pascal adalah....
+A. Permainan lato-lato                                                                                 
+B. Mendorong mobil yang mogok                                                                         
+C. Kapal selam
+D. Mesin pengangkat mobil
+E. Tangki air yang bocor
+JAWABAN: D
+
+4. Aliran fluida yang memiliki arus eddy adalah....
+A. Laminer
+B. Laminar
+C. Torbulen
+D. Turbelen
+E. Linamer
+JAWABAN: C
+
+5. Sebuah benda memiliki massa 12 kg dan volume 0,06 m³. Massa jenis benda tersebut adalah....
+A. 200 kg/m³
+B. 20 kg/m³
+C. 1.200 kg/m³
+D. 2.000 kg/m³
+E. 4.000 kg/m³
+JAWABAN: A
+
+6. Air memiliki massa jenis 2.000 kg/m³. Jika sebuah titik berada pada kedalaman 4,9 m dan percepatan gravitasi 10 m/s², tekanan hidrostatisnya adalah ....
+A. 20.000 Pa
+B. 49.000 Pa
+C. 9.800 Pa
+D. 4.900 Pa
+E. 98.000 Pa
+JAWABAN: E
+
+7. Sebuah ban memiliki tekanan terukur sebesar 220 kPa. Jika tekanan atmosfer 101 kPa, tekanan absolut di dalam ban adalah....
+A. 110 kPa
+B. 2.220 kPa
+C. 22.220 kPa
+D. 221 kPa
+E. 321 kPa
+JAWABAN: E
+
+8. Air mengalir melalui pipa dengan luas penampang pertama 16 cm² dan kecepatan 4 m/s. Jika luas penampang kedua 8 cm², kecepatan air pada penampang kedua adalah....
+A. 8 m/s
+B. 2 m/s
+C. 4 m/s
+D. 12 m/s
+E. 512 m/s
+JAWABAN: A
+
+9. Sebuah benda tercelup seluruhnya dalam air dengan volume 0,075 m³. Jika massa jenis air 1.000 kg/m³ dan gravitasi 10 m/s², gaya apung yang dialami benda adalah....
+A. 750 N
+B. 75 N
+C. 7.500 N
+D. 7,5 N
+E. 75.000 N
+JAWABAN: A
+
+10. Menurut prinsip Bernoulli, apabila kecepatan aliran fluida semakin besar, maka tekanannya akan....
+A. Semakin besar
+B. Semakin kecil
+C. Tetap
+D. Menjadi nol
+E. Tidak dapat ditentukan
+JAWABAN: B
+
+11. Jika gaya hambat jauh lebih kecil daripada gaya pulih maka gerak osilasi....
+A. Tetap dipertahankan
+B. Berkurang
+C. Bertambah
+D. Berhenti
+E. Berkurang lalu bertambah
+JAWABAN: A
+
+12. Gerak harmonik sederhana adalah gerak bolak-balik melalui titik keseimbangan dengan....
+A. Percepatan tetap
+B. Gaya pemulih yang sebanding dengan simpangan dan berlawanan arah
+C. Kecepatan selalu tetap
+D. Energi kinetik selalu nol
+E. Tidak memiliki gaya pemulih
+JAWABAN: B
+
+13. Resonansi terjadi ketika....
+A. Frekuensi gaya luar sama dengan frekuensi alami sistem
+B. Frekuensi gaya luar selalu nol
+C. Amplitudo menjadi nol
+D. Massa benda menjadi nol
+E. Gaya pemulih menghilang
+JAWABAN: A
+
+14. Simpangan maksimum dari titik keseimbangan pada gerak harmonik sederhana disebut....
+A. Frekuensi
+B. Periode
+C. Amplitudo
+D. Massa
+E. Frekuensi sudut
+JAWABAN: C
+
+15. Pada gerak harmonik sederhana, energi potensial pegas bernilai maksimum ketika benda berada di....
+A. Titik keseimbangan
+B. Titik simpangan maksimum
+C. Tengah lintasan
+D. Semua titik sama
+E. Titik dengan kecepatan maksimum
+JAWABAN: B
+
+16. Peristiwa osilasi teredam ditandai dengan....
+A. Amplitudo semakin besar
+B. Frekuensi selalu meningkat
+C. Amplitudo semakin kecil seiring waktu
+D. Benda bergerak tanpa hambatan
+E. Energi mekanik selalu bertambah
+JAWABAN: C
+
+17. Penyebab utama terjadinya osilasi teredam adalah....
+A. Adanya gaya hambat atau gesekan
+B. Tidak adanya gaya pemulih
+C. Bertambahnya massa benda
+D. Bertambahnya panjang pegas
+E. Tidak adanya titik keseimbangan
+JAWABAN: A
+
+18. Sebuah pegas memiliki konstanta 2.700 N/m dan diberi beban bermassa 3 kg. Frekuensi sudut osilasinya adalah....
+A. 3 rad/s
+B. 9 rad/s
+C. 30 rad/s
+D. 90 rad/s
+E. 20 rad/s
+JAWABAN: C
+
+19. Jika periode suatu osilasi adalah 0,2 sekon, frekuensinya adalah ....
+A. 0,5 Hz
+B. 10 Hz
+C. 4 Hz
+D. 5 Hz
+E. 0,2 Hz
+JAWABAN: D
+
+20. Sebuah pegas memiliki konstanta 640 N/m dan amplitudo 0,4 m. Energi mekanik total osilasinya adalah ....
+A. 25 J
+B. 25,6 J
+C. 25,4 J
+D. 2,5 J
+E. 2,56 J
+JAWABAN: B
+
+21. Gelombang atau pulsa yang merambat yang menyebabkan bagian-bagian medium yang terlewati (terganggu) bergerak tegak lurus arah rambatnya disebut gelombang....
+A. Transylvania
+B. Longitudal
+C. Transversal
+D. Tranversal
+E. Longitudinal
+JAWABAN: C
+
+22. Gelombang atau pulsa yang merambat yang menyebabkan bagian-bagian medium yang terlewati (terganggu) bergerak sejajar arah rambatnya...
+A. Longitudinal
+B. Tranversal
+C. Transversal
+D. Longitudal
+E. Transylvania
+JAWABAN: A
+
+23. Perubahan frekuensi bunyi yang dirasakan pengamat karena sumber dan/atau pengamat bergerak disebut....
+A. Efek Doping
+B. Efek Doppler
+C. Efek Dolphin
+D. Efek Dollper
+E. Efek Dorpel
+JAWABAN: B
+
+24. Jarak antara dua puncak gelombang yang berurutan disebut....
+A. Amplitudo
+B. Frekuensi
+C. Periode
+D. Panjang gelombang
+E. Cepat rambat
+JAWABAN: D
+
+25. Interferensi konstruktif terjadi ketika dua gelombang bertemu dan....
+A. Saling menghilangkan
+B. Menghasilkan amplitudo yang lebih besar
+C. Menghasilkan amplitudo nol
+D. Tidak mengalami perubahan
+E. Berhenti merambat
+JAWABAN: B
+
+26. Gelombang stasioner terbentuk akibat....
+A. Pembiasan dua gelombang
+B. Pemantulan satu gelombang saja
+C. Perpaduan dua gelombang dengan frekuensi dan amplitudo sama yang merambat berlawanan arah
+D. Perubahan suhu medium
+E. Perubahan massa gelombang
+JAWABAN: C
+
+27. Superposisi gelombang harmonik disebut....
+A. Interferensi
+B. Inerferensi
+C. Iferensi
+D. Introferensi
+E. Inersia
+JAWABAN: A
+
+28. Interferensi bergantung pada....
+A. f    
+B. k
+C. ?
+D. A
+E. Semua jawaban benar
+JAWABAN: E
+
+29. Sebuah gelombang memiliki panjang gelombang 2,9 m dan frekuensi 5 Hz. Cepat rambat gelombang tersebut adalah....
+A. 13,5 m/s
+B. 12,5 m/s
+C. 14,5 m/s
+D. 15 m/s
+E. 15,5 m/s
+JAWABAN: C
+
+30. Seutas tali sepanjang 3 m memiliki kedua ujung terikat. Jika cepat rambat gelombang pada tali  120 m/s, frekuensi nada dasarnya adalah....
+A. 5 Hz
+B. 10 Hz
+C. 20 Hz
+D. 40 Hz
+E. 60 Hz
+JAWABAN: C
+
+31. Hukum ke-nol termodinamika menjelaskan tentang ....
+A. Kekekalan energi
+B. Kesetimbangan termal
+C. Pemuaian zat
+D. Perubahan wujud zat
+E. Perpindahan massa
+JAWABAN: B
+
+32. Macam skala suhu yang tidak mutlak ada....
+A. 4
+B. 5
+C. 3
+D. 6
+E. 7
+JAWABAN: A
+
+33. Apa pengaruh suhu terhadap zat....
+A. Pemuaian 
+B. Perubahan Wujud 
+C. Perubahan Konduktivitas-Resistivitas
+D. A dan B benar
+E. Semua jawaban benar
+JAWABAN: E
+
+34. Alat yang digunakan untuk mengukur suhu disebut....
+A. Barometer
+B. Higrometer
+C. Termometer
+D. Amperemeter
+E. Dinamometer
+JAWABAN: C
+
+35. Pemuaian panjang adalah perubahan ukuran benda berupa....
+A. Pertambahan massa
+B. Pertambahan panjang akibat perubahan suhu
+C. Pengurangan volume
+D. Perubahan warna
+E. Perubahan tekanan saja
+JAWABAN: B
+
+36. Keadaan sistem dengan energi kinetik rerata molekul sama setiap daerah sistem disebut kesetimbangan....
+A. Termal
+B. Termo
+C. Ternal
+D. Terval
+E. Teral
+JAWABAN: A
+
+37. Gas ideal berlaku pada gas sejati jika....
+A. Suhu rendah dan kerapatan rendah 
+B. Kecepatan tinggi dan suhu rendah
+C. Kecepatan rendah dan suhu tinggi
+D. Suhu tinggi dan kerapatan rendah 
+E. Kecepatan tinggi dan kerapatan rendah
+JAWABAN: D
+
+38. Suhu suatu benda adalah 25°C. Jika dikonversikan ke Kelvin, suhunya menjadi ....
+A. 273,15 K
+B. 298,15 K
+C. 293,15 K
+D. 308,15 K
+E. 268,15 K
+JAWABAN: B
+
+39. Suhu 45°C jika dikonversikan ke Fahrenheit adalah....
+A. 45°F
+B. 113°F
+C. 223°F
+D. 68°F
+E. 78°F
+JAWABAN: B
+
+40. Sebuah benda memiliki volume awal 4 liter dan koefisien muai volume 2 x 10-4 / °C. Jika suhu naik 30°C, pertambahan volumenya adalah....
+A. 2,4 mL
+B. 24 mL
+C. 0,024 mL
+D. 12 mL
+E. 1,2 mL
+JAWABAN: B

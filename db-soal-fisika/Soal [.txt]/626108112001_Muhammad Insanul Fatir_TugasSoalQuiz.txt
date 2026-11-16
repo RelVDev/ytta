@@ -1,0 +1,319 @@
+1. Bejana A berbentuk silinder tegak, sedangkan bejana B berbentuk kerucut terpancung yang melebar ke atas. Keduanya diisi air yang sama dengan luas alas dan tinggi permukaan yang sama. Meskipun massa air di bejana B jauh lebih besar, gaya tekan hidrostatis pada dasar kedua bejana tetap sama karena...
+A. Gaya tekan pada dasar hanya ditentukan oleh tekanan hidrostatis (ρgh) dan luas alas, sementara kelebihan berat air di bejana B ditahan oleh dinding yang miring
+B. Tekanan hidrostatis meniadakan sebagian berat air pada wadah yang melebar ke atas
+C. Tegangan permukaan air menahan massa cairan di bagian atas agar tidak membebani dasar
+D. Luas permukaan atas cairan menentukan besar percepatan gravitasi efektif di dalam fluida
+E. Massa jenis air memampat di dekat dasar silinder dan merenggang di dalam kerucut
+ANSWER: A
+
+2. Tim eksplorasi mengukur tekanan udara di permukaan sebuah planet memakai barometer air raksa (ρ = 13.600 kg/m³). Jika tinggi kolom raksa terbaca 50 cm dan percepatan gravitasi di planet itu 4,0 m/s², tekanan udaranya adalah...
+A. 1,36 x 10⁴ Pa
+B. 2,72 x 10⁴ Pa
+C. 4,08 x 10⁴ Pa
+D. 5,44 x 10⁴ Pa
+E. 6,80 x 10⁴ Pa
+ANSWER: B
+
+3. Pelampung sensor oseanografi berbentuk balok polimer bermassa jenis 0,75 g/cm³ mengapung tenang di perairan asin yang memiliki massa jenis 1,25 g/cm³. Persentase volume pelampung yang masih muncul di atas permukaan air adalah...
+A. 25%
+B. 30%
+C. 40%
+D. 60%
+E. 75%
+ANSWER: C
+
+4. Dongkrak hidrolik di bengkel mobil memiliki perbandingan diameter pengisap kecil dan pengisap besar sebesar 1 : 4. Jika mekanik menekan pengisap kecil dengan gaya 50 N, gaya angkat yang dihasilkan pada pengisap besar adalah...
+A. 200 N
+B. 400 N
+C. 600 N
+D. 800 N
+E. 1.600 N
+ANSWER: D
+
+5. Kapsul sensor berbentuk bola pejal terapung seimbang tepat di batas dua cairan yang tidak bercampur. Separuh volumenya berada di lapisan atas berupa minyak (ρ = 800 kg/m³) dan separuh lagi di lapisan bawah berupa air (ρ = 1.000 kg/m³). Massa jenis bahan kapsul tersebut adalah...
+A. 850 kg/m³
+B. 875 kg/m³
+C. 900 kg/m³
+D. 925 kg/m³
+E. 950 kg/m³
+ANSWER: C
+
+6. Penyempitan pembuluh darah (aterosklerosis) membuat diameter sebuah arteri menyusut hingga tinggal setengah dari ukuran normalnya. Jika darah dianggap fluida tak termampatkan dan debit aliran dari jantung tetap, kelajuan aliran darah di bagian yang menyempit naik menjadi...
+A. 1,5 kali semula
+B. 2 kali semula
+C. 2,5 kali semula
+D. 4 kali semula
+E. 8 kali semula
+ANSWER: D
+
+7. Dalam pertandingan tenis meja, bola yang dipukul dengan putaran ke depan (topspin) menukik lebih tajam dibandingkan bola tanpa putaran. Menurut asas Bernoulli, hal ini terjadi karena...
+A. Putaran bola membuat laju relatif udara di sisi atas lebih cepat daripada di sisi bawah sehingga muncul selisih tekanan yang menekan bola ke bawah
+B. Gesekan udara memunculkan muatan listrik statis pada bola yang menariknya ke arah meja
+C. Udara di atas bola menjadi lebih rapat sehingga bobotnya mendorong bola turun
+D. Bagian bawah bola memuai akibat gesekan sehingga titik beratnya bergeser ke atas
+E. Pusaran udara di sekeliling bola memperbesar gravitasi lokal
+ANSWER: A
+
+8. Air mengalir dengan kelajuan 2,0 m/s di dalam selang berpenampang 6,0 cm². Ujung selang dipasangi kepala penyiram yang memiliki 12 lubang kecil identik dengan luas masing-masing 0,25 cm². Kelajuan air yang memancar dari tiap lubang itu adalah...
+A. 1,0 m/s
+B. 2,0 m/s
+C. 3,0 m/s
+D. 4,0 m/s
+E. 6,0 m/s
+ANSWER: D
+
+9. Pada alat semprot parfum manual, menekan bola karet membuat udara mengalir kencang mendatar melewati ujung atas pipa vertikal yang tercelup ke dalam cairan parfum. Cairan parfum dapat terisap naik ke lubang semprot karena...
+A. Aliran udara yang cepat di atas pipa menurunkan tekanan udara di titik itu sehingga tekanan udara luar mendorong cairan naik
+B. Udara yang berembus memanaskan cairan parfum sehingga massa jenisnya turun dan mengapung
+C. Gesekan udara menarik molekul parfum ke atas melalui gaya adhesi
+D. Tekanan hidrostatis di dasar botol meningkat saat bola karet ditekan
+E. Gaya gravitasi di dalam pipa sempit melemah akibat pusaran udara
+ANSWER: A
+
+10. Butiran mikroplastik bulat mengendap turun di dalam cairan gliserin kental. Ketika butiran itu mencapai kelajuan terminalnya (laju konstan), kesetimbangan gaya yang bekerja adalah...
+A. Gabungan gaya apung Archimedes dan gaya gesek Stokes mengimbangi gaya berat butiran
+B. Gaya gesek Stokes mencapai nilai maksimum dan hanya mengimbangi gaya apung Archimedes
+C. Gaya berat partikel hilang karena pengaruh kekentalan cairan
+D. Gaya apung Archimedes lenyap akibat viskositas yang menahan gerakan partikel
+E. Tekanan hidrostatis di dasar wadah menarik partikel turun dengan percepatan tetap
+ANSWER: A
+
+11. Di Stasiun Luar Angkasa Internasional (ISS) yang berada dalam kondisi mikrogravitasi (g ≈ 0), seorang astronaut ingin mengukur waktu dengan jam mekanik. Manakah di antara jam bandul sederhana dan jam pegas yang tetap dapat berdetak normal?
+A. Jam bandul, karena periodenya tidak bergantung pada percepatan gravitasi
+B. Jam pegas, karena periodenya hanya bergantung pada massa dan konstanta pegas, bukan gravitasi
+C. Keduanya berhenti karena sama-sama memerlukan gaya berat untuk berosilasi
+D. Keduanya berdetak dua kali lebih cepat karena tidak ada hambatan udara
+E. Jam bandul berayun tak terhingga cepatnya, sedangkan jam pegas melambat
+ANSWER: B
+
+12. Dua pegas identik yang masing-masing memiliki konstanta 200 N/m dipasang paralel untuk menahan sebuah beban bermassa 4,0 kg. Frekuensi sudut alami (ω) sistem pegas-massa tersebut adalah...
+A. 5 rad/s
+B. 10 rad/s
+C. 15 rad/s
+D. 20 rad/s
+E. 25 rad/s
+ANSWER: B
+
+13. Pegas yang digantung vertikal menahan beban bermassa 1,0 kg dan memiliki konstanta pegas 100 N/m. Jika beban ditarik sedikit ke bawah lalu dilepaskan, periode getaran harmoniknya adalah...
+A. 0,1π s
+B. 0,2π s
+C. 0,4π s
+D. 0,5π s
+E. 1,0π s
+ANSWER: B
+
+14. Dua sensor bandul sederhana A dan B dipasang di langit-langit laboratorium dengan perbandingan panjang tali 1 : 4. Jika keduanya diayunkan dengan sudut simpangan kecil, perbandingan periode ayunan bandul A terhadap bandul B adalah...
+A. 1 : 4
+B. 1 : 2
+C. 1 : 1
+D. 2 : 1
+E. 4 : 1
+ANSWER: B
+
+15. Osilator harmonik sederhana bergetar dengan amplitudo A = 10 cm dan frekuensi sudut ω = 8 rad/s. Ketika simpangannya berjarak 6 cm dari titik kesetimbangan, kelajuan partikel saat itu adalah...
+A. 0,32 m/s
+B. 0,48 m/s
+C. 0,64 m/s
+D. 0,80 m/s
+E. 0,96 m/s
+ANSWER: C
+
+16. Jika partikel melakukan gerak harmonik sederhana dengan frekuensi simpangan f, frekuensi perubahan energi kinetik (Ek) partikel tersebut terhadap waktu adalah...
+A. Sama dengan frekuensi simpangan (f)
+B. Dua kali frekuensi simpangan (2f)
+C. Setengah frekuensi simpangan (0,5f)
+D. Empat kali frekuensi simpangan (4f)
+E. Energi kinetik tidak berubah secara periodik
+ANSWER: B
+
+17. Dua partikel berosilasi harmonik pada sumbu yang sama dengan frekuensi dan amplitudo identik (A = 8 cm). Saat partikel pertama berada di simpangan maksimum positif (+8 cm), partikel kedua sedang melintasi titik kesetimbangan ke arah negatif. Beda fase antara kedua partikel itu adalah...
+A. 30° (π/6 rad)
+B. 45° (π/4 rad)
+C. 60° (π/3 rad)
+D. 90° (π/2 rad)
+E. 180° (π rad)
+ANSWER: D
+
+18. Peredam kejut (shock absorber) pada suspensi kendaraan dirancang agar bekerja dalam kondisi teredam kritis (critically damped). Tujuan perancangan ini adalah...
+A. Membuat bodi kendaraan berayun naik-turun dalam waktu lama setelah melewati polisi tidur
+B. Mengembalikan bodi kendaraan ke posisi seimbang secepat mungkin tanpa ayunan berulang setelah melewati gundukan
+C. Mengunci pegas suspensi agar menjadi kaku dan tidak bisa bergerak
+D. Menyimpan energi guncangan menjadi energi potensial pegas permanen
+E. Mencegah ban kendaraan menyentuh aspal
+ANSWER: B
+
+19. Balok bermassa 1,0 kg berosilasi pada pegas mendatar licin. Ketika balok berhenti sesaat di simpangan terjauh, beban tambahan bermassa 3,0 kg diletakkan menempel pada balok sehingga massa totalnya menjadi 4,0 kg. Frekuensi getaran sistem setelah beban ditambahkan berubah menjadi...
+A. 1/4 kali semula
+B. 1/2 kali semula
+C. Tetap sama
+D. 2 kali semula
+E. 4 kali semula
+ANSWER: B
+
+20. Pada bandul sederhana bermassa m dan panjang tali L yang berayun dengan sudut simpangan kecil θ, gaya yang berperan sebagai gaya pemulih menuju titik kesetimbangan adalah...
+A. Gaya tegangan tali T
+B. Komponen gaya berat yang sejajar tali (m g cos θ)
+C. Komponen gaya berat yang menyinggung lintasan ayun (m g sin θ)
+D. Gaya sentrifugal yang mengarah menjauhi pusat lingkaran
+E. Gaya apung udara di sekitar beban bandul
+ANSWER: C
+
+21. Catatan seismologi menunjukkan bahwa gelombang gempa primer (P) dapat menembus inti luar bumi yang cair, sedangkan gelombang sekunder (S) terhenti di batas mantel dan inti. Penyebab gelombang S tidak dapat merambat di fluida cair adalah...
+A. Gelombang S merupakan gelombang longitudinal berfrekuensi tinggi yang tersebar di dalam fluida
+B. Gelombang S adalah gelombang transversal geser, sementara fluida cair tidak memiliki kekakuan geser untuk meneruskannya
+C. Suhu inti luar bumi yang terlalu panas menyerap habis energi gelombang mekanik
+D. Panjang gelombang S lebih besar daripada jari-jari inti luar bumi
+E. Medan magnet bumi memantulkan kembali gelombang S
+ANSWER: B
+
+22. Gelombang tsunami di laut dalam memiliki panjang gelombang 180 km dan cepat rambat 720 km/jam. Saat memasuki perairan dangkal dekat pantai, cepat rambatnya turun menjadi 72 km/jam. Panjang gelombang tsunami di perairan dangkal itu menyusut menjadi...
+A. 1,8 km
+B. 9,0 km
+C. 18,0 km
+D. 36,0 km
+E. 90,0 km
+ANSWER: C
+
+23. Gelombang berjalan pada seutas tali memenuhi persamaan y = 0,08 sin(10πt - 4πx), dengan x dan y dalam meter serta t dalam sekon. Cepat rambat gelombang tersebut adalah...
+A. 0,4 m/s
+B. 1,6 m/s
+C. 2,5 m/s
+D. 4,0 m/s
+E. 5,0 m/s
+ANSWER: C
+
+24. Kawat logam A dan B disambung ujungnya lalu diregangkan dengan gaya tegangan F yang sama. Kawat A memiliki massa per satuan panjang μA = 0,01 kg/m, sedangkan kawat B memiliki μB = 0,04 kg/m. Perbandingan cepat rambat gelombang pada kawat A terhadap kawat B (vA : vB) adalah...
+A. 1 : 4
+B. 1 : 2
+C. 1 : 1
+D. 2 : 1
+E. 4 : 1
+ANSWER: D
+
+25. Salah satu ujung tali diikat pada cincin licin yang bebas naik-turun sehingga membentuk gelombang stasioner y = 0,06 cos(2πx) sin(50πt), dengan x dan y dalam meter. Jarak antara dua simpul yang berdekatan pada tali tersebut adalah...
+A. 0,25 m
+B. 0,50 m
+C. 0,75 m
+D. 1,00 m
+E. 1,25 m
+ANSWER: B
+
+26. Mobil ambulans melaju dengan kelajuan 20 m/s mendekati sensor lalu lintas yang diam di pinggir jalan sambil membunyikan sirene berfrekuensi 640 Hz. Jika cepat rambat bunyi di udara 340 m/s, frekuensi bunyi sirene yang diterima sensor tersebut adalah...
+A. 600 Hz
+B. 640 Hz
+C. 660 Hz
+D. 680 Hz
+E. 720 Hz
+ANSWER: D
+
+27. Pengeras suara di ruang terbuka memancarkan bunyi merata ke segala arah. Pada jarak 10 m dari sumber, taraf intensitas bunyi terukur 80 dB. Jika pendengar menjauh sampai berjarak 100 m dari sumber, taraf intensitas yang terdengar turun menjadi...
+A. 40 dB
+B. 50 dB
+C. 60 dB
+D. 70 dB
+E. 78 dB
+ANSWER: C
+
+28. Dua dawai biola yang dibunyikan bersamaan menghasilkan frekuensi layangan 4 Hz. Salah satu dawai berfrekuensi 440 Hz. Ketika tegangan pada dawai kedua dinaikkan sedikit, frekuensi layangannya naik menjadi 6 Hz. Frekuensi awal dawai kedua sebelum ditegangkan adalah...
+A. 434 Hz
+B. 436 Hz
+C. 440 Hz
+D. 444 Hz
+E. 446 Hz
+ANSWER: D
+
+29. Gelombang transversal pada tali dapat dipadamkan oleh dua celah sempit yang saling tegak lurus, tetapi gelombang bunyi di dalam tabung udara tetap lolos melewati celah serupa. Percobaan ini membuktikan bahwa...
+A. Panjang gelombang bunyi jauh lebih besar daripada lebar celah
+B. Polarisasi hanya terjadi pada gelombang transversal, sedangkan bunyi di udara termasuk gelombang longitudinal
+C. Gelombang bunyi tidak membawa momentum partikel medium
+D. Celah menyerap seluruh energi bunyi dalam bentuk panas
+E. Cepat rambat bunyi melebihi cepat rambat gelombang tali
+ANSWER: B
+
+30. Garputala berfrekuensi 500 Hz digetarkan di atas mulut tabung resonansi berisi air. Resonansi pertama terdengar saat tinggi kolom udara 16 cm, lalu resonansi kedua terjadi saat kolom udara setinggi 50 cm. Dari hasil pengukuran itu, cepat rambat bunyi di udara adalah...
+A. 320 m/s
+B. 330 m/s
+C. 340 m/s
+D. 350 m/s
+E. 360 m/s
+ANSWER: C
+
+31. Hukum ke-Nol Termodinamika menyatakan bahwa jika sistem A setimbang termal dengan sistem B, dan sistem B setimbang termal dengan sistem C, maka sistem A juga setimbang termal dengan sistem C. Pernyataan ini menjadi dasar bagi...
+A. Hukum kekekalan momentum fluida
+B. Pengertian suhu dan cara kerja termometer
+C. Kenaikan entropi pada sistem tertutup
+D. Penentuan kalor laten saat perubahan wujud
+E. Perpindahan kalor secara konveksi paksa
+ANSWER: B
+
+32. Termometer skala Medis (°M) menetapkan titik beku air pada 10°M dan suhu normal tubuh manusia (37°C) pada 47°M. Titik didih air murni pada tekanan 1 atm jika diukur dengan termometer tersebut bernilai...
+A. 100°M
+B. 110°M
+C. 120°M
+D. 137°M
+E. 147°M
+ANSWER: B
+
+33. Di bagian tengah pelat kuningan pejal terdapat lubang berbentuk lingkaran. Jika pelat itu dipanaskan merata hingga suhunya naik 100°C, bagaimana perubahan diameter lubang tersebut?
+A. Diameter lubang membesar seolah-olah bagian lubang itu terisi kuningan yang ikut memuai
+B. Diameter lubang mengecil karena logam di sekelilingnya memuai ke arah dalam
+C. Diameter lubang tetap karena pemuaian hanya terjadi pada tepi luar pelat
+D. Diameter lubang mengecil lebih dahulu lalu membesar mendekati titik leleh
+E. Lubang berubah bentuk menjadi lonjong akibat tegangan termal
+ANSWER: A
+
+34. Batang rel baja sepanjang 10 m dipasang pada suhu 25°C dengan koefisien muai panjang 1,2 x 10⁻⁵ /°C. Saat terik siang hari, suhu rel naik menjadi 75°C. Pertambahan panjang rel baja tersebut adalah...
+A. 3,0 mm
+B. 4,5 mm
+C. 6,0 mm
+D. 7,5 mm
+E. 9,0 mm
+ANSWER: C
+
+35. Dalam termos ideal yang kedap kalor, sebanyak 200 gram air bersuhu 80°C dicampur dengan 200 gram air bersuhu 20°C. Suhu akhir campuran setelah mencapai kesetimbangan termal adalah...
+A. 35°C
+B. 40°C
+C. 45°C
+D. 50°C
+E. 60°C
+ANSWER: D
+
+36. Di puncak gunung setinggi 3.000 meter di atas permukaan laut, air sudah mendidih pada suhu sekitar 90°C. Hal inilah yang membuat memasak makanan berkuah hingga matang di gunung memakan waktu lebih lama karena...
+A. Kalor jenis air turun drastis saat tekanan udara rendah
+B. Tekanan udara yang rendah menurunkan titik didih air sehingga suhu maksimum air rebusan tertahan di 90°C
+C. Api kompor tidak dapat memancarkan kalor radiasi di tempat bertekanan rendah
+D. Udara pegunungan menyerap seluruh kalor penguapan air
+E. Massa jenis air bertambah besar sehingga aliran konveksi terhenti
+ANSWER: B
+
+37. Jendela kaca tunggal seluas 1,5 m² dan tebal 6,0 mm memiliki konduktivitas termal k = 0,8 W/m·K. Jika selisih suhu antara sisi dalam dan sisi luar kaca adalah 15°C, laju perpindahan kalor secara konduksi yang menembus jendela tersebut adalah...
+A. 1.200 W
+B. 1.800 W
+C. 2.400 W
+D. 3.000 W
+E. 4.500 W
+ANSWER: D
+
+38. Termos vakum (tabung Dewar) dirancang untuk menekan kehilangan kalor. Pelapisan cermin perak mengilap pada dinding dalam termos kaca ganda berfungsi untuk...
+A. Menghentikan aliran arus konveksi cairan di dalam botol
+B. Menghambat perpindahan kalor radiasi dengan cara memantulkannya kembali
+C. Menghilangkan ruang hampa antardinding kaca termos
+D. Menyerap kalor konduksi lalu meratakannya ke seluruh dinding
+E. Menurunkan titik didih air agar tidak cepat menguap
+ANSWER: B
+
+39. Penurunan suhu jenazah di ruangan bersuhu tetap 20°C mengikuti Hukum Pendinginan Newton, yakni laju penurunan suhu sebanding dengan selisih suhu tubuh terhadap suhu ruangan. Laju pendinginan jenazah paling cepat terjadi pada saat...
+A. Sesaat setelah kematian, ketika suhu tubuh masih mendekati 37°C sehingga selisih suhunya paling besar
+B. Suhu tubuh sudah turun mendekati 20°C
+C. Tengah malam ketika radiasi matahari paling rendah
+D. Setelah 24 jam saat tubuh sudah setimbang termal dengan ruangan
+E. Setiap waktu karena laju pendinginannya selalu tetap
+ANSWER: A
+
+40. Spektrum radiasi benda hitam dari sebuah bintang raksasa biru memiliki puncak intensitas pada panjang gelombang 2,9 x 10⁻⁷ m. Jika konstanta pergeseran Wien b = 2,9 x 10⁻³ m·K, suhu efektif permukaan bintang itu adalah...
+A. 1.000 K
+B. 5.000 K
+C. 10.000 K
+D. 20.000 K
+E. 50.000 K
+ANSWER: C

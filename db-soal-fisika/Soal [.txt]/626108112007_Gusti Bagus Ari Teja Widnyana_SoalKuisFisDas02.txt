@@ -1,0 +1,319 @@
+1. Besaran tekanan dalam Sistem Internasional dinyatakan dalam pascal (Pa). Satuan dasar yang setara dengan 1 Pa adalah...
+A. N/m²
+B. N/m
+C. kg/m²
+D. J/m
+E. kg·m/s
+ANSWER: A
+
+2. Sebuah peti memberikan gaya tekan sebesar 600 N pada lantai. Jika luas bidang kontak peti dengan lantai adalah 0,03 m², tekanan yang diberikan peti adalah...
+A. 10.000 Pa
+B. 20.000 Pa
+C. 15.000 Pa
+D. 18.000 Pa
+E. 25.000 Pa
+ANSWER: B
+
+3. Sebuah sampel logam memiliki massa 540 gram dan volume 200 cm³. Massa jenis logam tersebut adalah...
+A. 1,2 g/cm³
+B. 2,0 g/cm³
+C. 2,7 g/cm³
+D. 3,6 g/cm³
+E. 5,4 g/cm³
+ANSWER: C
+
+4. Sebuah benda tercelup seluruhnya di dalam air dan memindahkan air sebanyak 3 × 10⁻⁴ m³. Jika massa jenis air 1.000 kg/m³ dan percepatan gravitasi 10 m/s², besar gaya apung yang dialami benda adalah...
+A. 1 N
+B. 2 N
+C. 4 N
+D. 3 N
+E. 5 N
+ANSWER: D
+
+5. Sebuah kawat bergerak pada bingkai yang membentuk selaput sabun dengan dua permukaan. Panjang kawat yang dapat bergerak adalah 5 cm. Jika tegangan permukaan selaput sabun 0,03 N/m, gaya yang diperlukan untuk menahan kawat tetap diam adalah...
+A. 0,001 N
+B. 0,002 N
+C. 0,004 N
+D. 0,006 N
+E. 0,003 N
+ANSWER: E
+
+6. Air naik di dalam pipa kapiler berjari-jari 0,4 mm. Jika tegangan permukaan air 0,072 N/m, sudut kontak 0°, massa jenis air 1.000 kg/m³, dan g = 10 m/s², tinggi kenaikan air adalah...
+A. 3,6 cm
+B. 0,9 cm
+C. 1,8 cm
+D. 2,7 cm
+E. 4,5 cm
+ANSWER: A
+
+7. Air mengalir di dalam pipa berdiameter 1 cm dengan kelajuan 0,02 m/s. Jika massa jenis air 1.000 kg/m³ dan viskositas dinamisnya 1 × 10⁻³ Pa·s, bilangan Reynolds aliran tersebut adalah...
+A. 100
+B. 200
+C. 500
+D. 1.000
+E. 2.000
+ANSWER: B
+
+8. Pada aliran laminar dalam pipa, debit fluida mengikuti hukum Poiseuille dan sebanding dengan pangkat empat jari-jari pipa. Jika jari-jari pipa diperkecil menjadi setengah dari semula, debit aliran menjadi...
+A. 1/8 kali semula
+B. 1/4 kali semula
+C. 1/16 kali semula
+D. 1/2 kali semula
+E. 2 kali semula
+ANSWER: C
+
+9. Sebuah tangki terbuka memiliki lubang kecil yang terletak 1,25 m di bawah permukaan air. Jika g = 10 m/s² dan gesekan diabaikan, kelajuan air saat keluar dari lubang menurut hukum Torricelli adalah...
+A. 2 m/s
+B. 3 m/s
+C. 4 m/s
+D. 5 m/s
+E. 4,5 m/s
+ANSWER: D
+
+10. Dua pelat sejajar dipisahkan oleh lapisan minyak setebal 5 mm. Pelat atas bergerak dengan kelajuan 0,1 m/s, sedangkan pelat bawah diam. Jika luas pelat 0,02 m² dan viskositas minyak 0,8 Pa·s, gaya gesek viskos pada pelat atas adalah...
+A. 0,08 N
+B. 0,16 N
+C. 0,48 N
+D. 0,64 N
+E. 0,32 N
+ANSWER: E
+
+11. Pada gerak harmonik sederhana ideal, ketika benda tepat melewati posisi kesetimbangan, keadaan yang benar adalah...
+A. Kelajuan maksimum dan percepatan nol
+B. Simpangan dan kelajuan sama-sama maksimum
+C. Kelajuan nol dan gaya pemulih maksimum
+D. Energi potensial maksimum
+E. Percepatan maksimum
+ANSWER: A
+
+12. Sebuah benda berosilasi dengan periode 0,4 sekon. Frekuensi getaran benda tersebut adalah...
+A. 1,0 Hz
+B. 2,5 Hz
+C. 1,5 Hz
+D. 4,0 Hz
+E. 5,0 Hz
+ANSWER: B
+
+13. Simpangan sebuah osilator dinyatakan dengan x(t) = 0,05 cos(6πt), dengan x dalam meter dan t dalam sekon. Frekuensi sudut osilator tersebut adalah...
+A. 2π rad/s
+B. 3π rad/s
+C. 6π rad/s
+D. 4π rad/s
+E. 5π rad/s
+ANSWER: C
+
+14. Pada sebuah pegas, simpangan maksimum ujung bebannya adalah 0,08 m. Jika frekuensi sudut geraknya 5 rad/s, percepatan terbesar beban tersebut adalah...
+A. 0,2 m/s²
+B. 0,8 m/s²
+C. 1,6 m/s²
+D. 2,0 m/s²
+E. 4,0 m/s²
+ANSWER: D
+
+15. Sebuah pegas dengan konstanta 200 N/m ditarik sejauh 3 cm dari posisi setimbang. Energi potensial elastis yang tersimpan pada pegas adalah...
+A. 0,03 J
+B. 0,18 J
+C. 0,30 J
+D. 0,60 J
+E. 0,09 J
+ANSWER: E
+
+16. Sebuah benda bergetar secara sinusoidal dengan simpangan terjauh 0,12 m. Dalam satu sekon benda menyelesaikan dua siklus. Kelajuan tertinggi yang dicapai benda adalah...
+A. 0,48π m/s
+B. 0,12π m/s
+C. 0,24π m/s
+D. 0,96π m/s
+E. 1,20π m/s
+ANSWER: A
+
+17. Sebuah benda dihubungkan dengan pegas berkontanta 50 N/m. Ketika benda berada 4 cm di sebelah kanan posisi setimbang, gaya pemulih yang bekerja pada benda adalah...
+A. 0 N
+B. 2 N ke kiri
+C. 0,5 N ke kanan
+D. 2 N ke kanan
+E. 2 N menjauhi posisi setimbang
+ANSWER: B
+
+18. Dua sistem pegas memiliki konstanta pegas yang sama. Jika massa pada sistem kedua adalah sembilan kali massa sistem pertama, perbandingan periode sistem kedua terhadap sistem pertama adalah...
+A. 9 : 1
+B. 1 : 3
+C. 3 : 1
+D. √3 : 1
+E. 1 : 9
+ANSWER: C
+
+19. Sebuah bandul sederhana memiliki panjang tali 1 m dan berayun dengan sudut kecil. Jika percepatan gravitasi di tempat tersebut adalah π² m/s², periode bandul adalah...
+A. 0,5 s
+B. 1 s
+C. π s
+D. 2 s
+E. 2π s
+ANSWER: D
+
+20. Simpangan suatu osilator dinyatakan dengan x = A sin(ωt). Perubahan fase sejak t = 0 hingga seperempat periode pertama adalah...
+A. π/4 rad
+B. π/3 rad
+C. π rad
+D. 2π rad
+E. π/2 rad
+ANSWER: E
+
+21. Gelombang mekanik dapat merambat melalui suatu medium. Ketika gelombang tersebut berpindah, besaran yang dipindahkan dari satu tempat ke tempat lain adalah...
+A. Energi
+B. Partikel medium secara keseluruhan
+C. Massa medium
+D. Volume medium
+E. Massa dan partikel medium secara permanen
+ANSWER: A
+
+22. Pada gelombang longitudinal yang dibangkitkan pada pegas, bagian pegas yang lilitannya saling berdekatan disebut...
+A. Perut
+B. Rapat atau kompresi
+C. Simpul
+D. Puncak
+E. Lembah
+ANSWER: B
+
+23. Sebuah gelombang memiliki periode 0,025 sekon. Frekuensi gelombang tersebut adalah...
+A. 20 Hz
+B. 25 Hz
+C. 40 Hz
+D. 50 Hz
+E. 100 Hz
+ANSWER: C
+
+24. Gelombang transversal merambat pada tali yang memiliki tegangan 100 N dan massa per satuan panjang 0,01 kg/m. Cepat rambat gelombang pada tali tersebut adalah...
+A. 20 m/s
+B. 50 m/s
+C. 150 m/s
+D. 100 m/s
+E. 200 m/s
+ANSWER: D
+
+25. Dalam medium dan kondisi yang sama, amplitudo suatu gelombang diperbesar menjadi dua kali amplitudo awal. Jika energi gelombang sebanding dengan kuadrat amplitudonya, energi gelombang menjadi...
+A. Dua kali semula
+B. Tiga kali semula
+C. Setengah kali semula
+D. Tetap
+E. Empat kali semula
+ANSWER: E
+
+26. Dua pulsa bertemu pada satu titik tali. Pada saat bertumpuk, simpangan pulsa pertama +4 cm dan simpangan pulsa kedua −1,5 cm. Simpangan resultan di titik tersebut adalah...
+A. +2,5 cm
+B. +1,5 cm
+C. +2,0 cm
+D. +3,0 cm
+E. −5,5 cm
+ANSWER: A
+
+27. Sebuah pulsa transversal merambat menuju ujung tali yang terikat kuat pada dinding. Setelah dipantulkan, pulsa akan...
+A. Berbalik arah tanpa perubahan simpangan
+B. Berbalik arah dengan simpangan terbalik
+C. Tetap di tempat
+D. Berubah menjadi gelombang longitudinal
+E. Mengalami pertambahan frekuensi
+ANSWER: B
+
+28. Dua sumber gelombang sefase menghasilkan gelombang dengan panjang gelombang 0,8 m. Jika selisih lintasan menuju suatu titik adalah 1,2 m, jenis interferensi di titik tersebut adalah...
+A. Konstruktif maksimum
+B. Konstruktif minimum
+C. Destruktif
+D. Tidak terjadi interferensi
+E. Konstruktif sebagian
+ANSWER: C
+
+29. Jarak antara dua puncak gelombang yang berurutan pada permukaan air adalah 0,8 m. Besaran 0,8 m tersebut menyatakan...
+A. Amplitudo
+B. Periode
+C. Frekuensi
+D. Panjang gelombang
+E. Cepat rambat
+ANSWER: D
+
+30. Gelombang sinusoidal merambat pada tali dengan massa per satuan panjang 0,02 kg/m, amplitudo 0,02 m, frekuensi 5 Hz, dan cepat rambat 20 m/s. Dengan menggunakan P = ½ μω²A²v, daya rata-rata gelombang mendekati...
+A. 0,008 W
+B. 0,039 W
+C. 0,158 W
+D. 0,790 W
+E. 0,079 W
+ANSWER: E
+
+31. Satuan suhu dalam Sistem Internasional adalah...
+A. Kelvin
+B. Celsius
+C. Fahrenheit
+D. Joule
+E. Kalori
+ANSWER: A
+
+32. Secara mikroskopis, suhu suatu benda berkaitan dengan...
+A. Jumlah total partikel dalam benda
+B. Energi kinetik rata-rata partikel penyusunnya
+C. Massa jenis benda saja
+D. Energi potensial gravitasi benda
+E. Jumlah kalor yang pernah diterima benda
+ANSWER: B
+
+33. Suhu udara tercatat −15°C. Dengan menggunakan pendekatan K = °C + 273, suhu tersebut dalam skala Kelvin adalah...
+A. 243 K
+B. 253 K
+C. 258 K
+D. 255 K
+E. 273 K
+ANSWER: C
+
+34. Sebanyak 500 cm³ cairan memiliki koefisien muai volume 9 × 10⁻⁴/°C. Jika suhu cairan dinaikkan 20°C, pertambahan volumenya adalah...
+A. 4,5 cm³
+B. 12 cm³
+C. 18 cm³
+D. 9 cm³
+E. 45 cm³
+ANSWER: D
+
+35. Sebuah benda logam bermassa 0,2 kg memiliki kalor jenis 390 J/kg°C. Kalor yang diperlukan untuk menaikkan suhu benda sebesar 25°C adalah...
+A. 390 J
+B. 780 J
+C. 1.500 J
+D. 2.500 J
+E. 1.950 J
+ANSWER: E
+
+36. Sebanyak 50 gram air pada suhu 100°C seluruhnya berubah menjadi uap pada suhu yang sama. Jika kalor penguapan air 2,26 × 10⁶ J/kg, kalor yang diperlukan adalah...
+A. 113.000 J
+B. 11.300 J
+C. 56.500 J
+D. 226.000 J
+E. 452.000 J
+ANSWER: A
+
+37. Gas ideal berada dalam wadah tertutup dengan volume tetap. Tekanan awalnya 100 kPa pada suhu 300 K. Jika gas dipanaskan hingga 360 K, tekanan akhirnya adalah...
+A. 130 kPa
+B. 120 kPa
+C. 140 kPa
+D. 150 kPa
+E. 180 kPa
+ANSWER: B
+
+38. Sebuah termometer hambatan platina memiliki hambatan 100 Ω pada 0°C. Jika koefisien suhu hambatannya 0,0039/°C, hambatan termometer pada 100°C menurut pendekatan linear adalah...
+A. 103,9 Ω
+B. 110 Ω
+C. 139 Ω
+D. 120 Ω
+E. 130 Ω
+ANSWER: C
+
+39. Sebuah benda memiliki kapasitas kalor 900 J/°C dan massa 2 kg. Kalor jenis benda tersebut adalah...
+A. 225 J/kg°C
+B. 900 J/kg°C
+C. 1.800 J/kg°C
+D. 450 J/kg°C
+E. 2.700 J/kg°C
+ANSWER: D
+
+40. Sendok logam dan sendok kayu diletakkan di ruangan yang sama dalam waktu lama. Ketika disentuh, sendok logam terasa lebih dingin karena...
+A. Suhu logam selalu lebih rendah daripada suhu kayu
+B. Kalor mengalir dari kayu menuju logam
+C. Massa logam selalu lebih besar daripada massa kayu
+D. Kayu tidak memiliki energi dalam
+E. Logam menghantarkan kalor dari tangan lebih cepat daripada kayu
+ANSWER: E

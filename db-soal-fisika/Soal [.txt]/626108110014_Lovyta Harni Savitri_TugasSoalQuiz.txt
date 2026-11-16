@@ -1,0 +1,326 @@
+Nama: Lovyta Harni Savitri
+NIM:626108110014
+Matkul: Fisika Dasar
+Kelas: DI 1
+
+1. Besaran yang menyatakan massa suatu zat per satuan volume disebut ....
+A. Tekanan
+B. Massa jenis
+C. Viskositas
+D. Tegangan permukaan
+E. Berat jenis
+ANSWER:B
+
+2. Satuan SI untuk tekanan adalah ....
+A. Newton
+B. Joule
+C. Pascal
+D. Watt
+E. Kilogram
+ANSWER:C
+
+3. Tekanan hidrostatis pada kedalaman h dalam fluida bermassa jenis ρ dinyatakan dengan ....
+A. P = ρgh
+B. P = ρg/h
+C. P = gh/ρ
+D. P = Fh
+E. P = ρVg
+ANSWER:A
+
+4. Tekanan absolut suatu gas jika tekanan terukurnya 220 kPa dan tekanan atmosfer 101 kPa adalah ....
+A. 119 kPa
+B. 220 kPa
+C. 301 kPa
+D. 321 kPa
+E. 441 kPa
+ANSWER:D
+
+5. Prinsip Pascal menyatakan bahwa ....
+A. Tekanan fluida hanya bekerja ke bawah
+B. Tekanan luar pada fluida tertutup diteruskan sama besar ke segala arah
+C. Gaya apung sama dengan berat benda
+D. Kecepatan fluida selalu tetap
+E. Tekanan tidak bergantung pada kedalaman
+ANSWER:B
+
+6. Dongkrak hidrolik memiliki luas penampang kecil 0,02 m² dan besar 0,50 m². Jika gaya pada penampang kecil 100 N, gaya pada penampang besar adalah ....
+A. 4 N
+B. 25 N
+C. 100 N
+D. 1.000 N
+E. 2.500 N
+ANSWER:E
+
+7. Menurut prinsip Archimedes, besar gaya apung sama dengan ....
+A. Berat benda di udara
+B. Massa benda yang tercelup
+C. Berat fluida yang dipindahkan
+D. Tekanan atmosfer
+E. Volume total benda dikali gravitasi
+ANSWER:C
+
+8. Air mengalir dalam pipa. Luas penampang pertama 4 cm² dan kecepatannya 2 m/s. Jika luas penampang kedua 2 cm², kecepatan di penampang kedua adalah ....
+A. 1 m/s
+B. 2 m/s
+C. 4 m/s
+D. 6 m/s
+E. 8 m/s
+ANSWER:C
+
+9. Pada pipa horizontal, fluida ideal mengalir lebih cepat pada bagian yang menyempit. Berdasarkan Bernoulli, tekanan statis di bagian sempit cenderung ....
+A. Lebih besar
+B. Lebih kecil
+C. Sama dengan tekanan atmosfer selalu
+D. Menjadi nol
+E. Tidak dapat dibandingkan
+ANSWER:B
+
+10. Viskositas suatu fluida menunjukkan ....
+A. Kemampuan fluida menghantarkan kalor
+B. Hambatan internal fluida terhadap aliran
+C. Massa fluida per volume
+D. Gaya apung fluida
+E. Tekanan fluida pada dinding
+ANSWER:B
+
+11. Simpangan maksimum suatu benda yang berosilasi dari titik setimbang disebut ....
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Fase
+E. Frekuensi sudut
+ANSWER:C
+
+12. Banyaknya osilasi yang terjadi setiap sekon disebut ....
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Energi potensial
+E. Konstanta pegas
+ANSWER:B
+
+13. Hukum Hooke untuk pegas ideal dinyatakan sebagai ....
+A. F = kx
+B. F = −kx
+C. F = mgx
+D. F = −mωx
+E. F = k/x
+ANSWER:B
+
+14. Sebuah benda melakukan 20 osilasi dalam 10 sekon. Frekuensinya adalah ....
+A. 0,5 Hz
+B. 1 Hz
+C. 2 Hz
+D. 10 Hz
+E. 20 Hz
+ANSWER:C
+
+15. Jika periode suatu osilator 2 sekon, frekuensi sudutnya adalah ....
+A. π/2 rad/s
+B. π rad/s
+C. 2π rad/s
+D. 4π rad/s
+E. 8π rad/s
+ANSWER:B
+
+16. Pada sistem massa-pegas ideal, periode osilasi diberikan oleh ....
+A. T = 2π√(k/m)
+B. T = 2π√(m/k)
+C. T = √(mk)
+D. T = k/m
+E. T = m/k
+ANSWER:B
+
+17. Massa 1 kg dipasang pada pegas dengan konstanta 100 N/m. Frekuensi sudut osilasinya adalah ....
+A. 5 rad/s
+B. 10 rad/s
+C. 20 rad/s
+D. 50 rad/s
+E. 100 rad/s
+ANSWER:B
+
+18. Sebuah benda berosilasi dengan amplitudo 0,10 m dan frekuensi sudut 4 rad/s. Kelajuan maksimumnya adalah ....
+A. 0,04 m/s
+B. 0,10 m/s
+C. 0,40 m/s
+D. 2,5 m/s
+E. 4,0 m/s
+ANSWER:C
+
+19. Dua sistem pegas identik memiliki massa sama, tetapi amplitudo pertama 5 cm dan kedua 10 cm. Jika keduanya dilepaskan dari simpangan maksimum, pernyataan yang tepat adalah ....
+A. Sistem kedua memiliki periode dua kali lebih besar
+B. Sistem pertama mencapai titik setimbang lebih dahulu
+C. Keduanya memiliki periode sama
+D. Frekuensi sistem kedua dua kali lebih besar
+E. Periode bergantung langsung pada amplitudo
+ANSWER:C
+
+20. Amplitudo osilasi teredam makin kecil seiring waktu karena ....
+A. Energi mekanik bertambah
+B. Gaya pemulih hilang sejak awal
+C. Energi mekanik berkurang akibat gaya hambat
+D. Frekuensi selalu menjadi nol seketika
+E. Massa benda terus berkurang
+ANSWER:C
+
+21. Gelombang yang arah getar mediumnya tegak lurus terhadap arah rambat disebut gelombang ....
+A. Longitudinal
+B. Transversal
+C. Berdiri
+D. Bunyi
+E. Permukaan
+ANSWER:B
+
+22. Gelombang longitudinal memiliki arah getar medium yang ....
+A. Tegak lurus arah rambat
+B. Melingkar terhadap arah rambat
+C. Sejajar arah rambat
+D. Selalu diam
+E. Berubah acak
+ANSWER:C
+
+23. Hubungan antara cepat rambat gelombang (v), frekuensi (f), dan panjang gelombang (λ) adalah ....
+A. v = f/λ
+B. v = λ/f
+C. v = fλ
+D. v = f + λ
+E. v = λ − f
+ANSWER:C
+
+24. Gelombang memiliki frekuensi 5 Hz dan panjang gelombang 2 m. Cepat rambatnya adalah ....
+A. 2,5 m/s
+B. 5 m/s
+C. 7 m/s
+D. 10 m/s
+E. 25 m/s
+ANSWER:D
+
+25. Pada tali tegang, cepat rambat gelombang bertambah jika ....
+A. Tegangan tali diperbesar, dengan rapat massa tetap
+B. Massa per satuan panjang diperbesar, dengan tegangan tetap
+C. Panjang gelombang diperkecil
+D. Amplitudo dibuat nol
+E. Frekuensi sumber diturunkan
+ANSWER:A
+
+26. Gelombang sinus memiliki frekuensi 50 Hz. Periode gelombangnya adalah ....
+A. 0,01 s
+B. 0,02 s
+C. 0,5 s
+D. 2 s
+E. 50 s
+ANSWER:B
+
+27. Superposisi dua gelombang sefase dengan amplitudo sama menghasilkan interferensi ....
+A. Destruktif sempurna
+B. Konstruktif
+C. Tidak saling memengaruhi
+D. Resonansi termal
+E. Doppler
+ANSWER:B
+
+28. Pada tali yang terikat pada kedua ujungnya, gelombang berdiri terbentuk karena ....
+A. Gelombang tidak mengalami pantulan
+B. Dua gelombang berlawanan arah saling berpadu
+C. Hanya satu gelombang merambat
+D. Medium tidak memiliki massa
+E. Frekuensi selalu berubah
+ANSWER:B
+
+29. Sebuah gelombang bunyi merambat dengan cepat rambat 340 m/s dan frekuensi 170 Hz. Panjang gelombangnya adalah ....
+A. 0,5 m
+B. 1 m
+C. 2 m
+D. 170 m
+E. 510 m
+ANSWER:C
+
+30. Sumber bunyi dan pengamat saling mendekat. Dibandingkan frekuensi sumber, frekuensi yang didengar pengamat menjadi ....
+A. Lebih rendah
+B. Tetap
+C. Lebih tinggi
+D. Nol
+E. Tidak terdefinisi
+ANSWER:C
+
+31. Besaran yang menyatakan derajat panas atau dingin suatu benda disebut ....
+A. Kalor
+B. Suhu
+C. Energi potensial
+D. Tekanan
+E. Massa jenis
+ANSWER:B
+
+32. Satuan SI untuk suhu termodinamik adalah ....
+A. Celsius
+B. Fahrenheit
+C. Reamur
+D. Kelvin
+E. Rankine
+ANSWER:D
+
+33. Hukum ke-Nol Termodinamika menjelaskan bahwa jika benda A dan B masing-masing setimbang termal dengan C, maka ....
+A. A lebih panas dari B
+B. A dan B setimbang termal satu sama lain
+C. A dan B harus memiliki massa sama
+D. C selalu lebih dingin
+E. Tidak ada hubungan suhu
+ANSWER:B
+
+34. Suhu 27°C jika dinyatakan dalam Kelvin adalah ....
+A. 200,15 K
+B. 246,15 K
+C. 273,15 K
+D. 300,15 K
+E. 310,15 K
+ANSWER:D
+
+35. Suhu 40°C setara dengan .... °F.
+A. 40°F
+B. 72°F
+C. 96°F
+D. 104°F
+E. 120°F
+ANSWER:D
+
+36. Termometer gas volume konstan mengukur suhu dengan memanfaatkan perubahan ....
+A. Warna gas
+B. Tekanan gas pada volume tetap
+C. Massa gas
+D. Panjang tabung
+E. Massa jenis wadah
+ANSWER: B
+
+37. Sifat fisis yang dapat berubah akibat perubahan suhu dan dimanfaatkan dalam termometer disebut ....
+A. Sifat elastis
+B. Sifat termometrik
+C. Sifat magnetik
+D. Sifat optik saja
+E. Sifat kapiler
+ANSWER:B
+
+38. Batang logam panjang awal 2 m memiliki koefisien muai panjang 1,0 × 10⁻⁵ °C⁻¹. Jika suhu naik 50°C, pertambahan panjangnya adalah ....
+A. 0,01 mm
+B. 0,1 mm
+C. 1 mm
+D. 10 mm
+E. 100 mm
+ANSWER:C
+
+39. Ketika suhu gas ideal meningkat pada volume tetap, tekanan gas akan ....
+A. Menurun
+B. Tetap
+C. Meningkat
+D. Menjadi nol
+E. Tidak dipengaruhi suhu
+ANSWER:C
+
+40. Dua benda berbeda bahan berada dalam kesetimbangan termal. Kesimpulan yang tepat adalah ....
+A. Keduanya harus memiliki massa sama
+B. Keduanya harus memiliki warna sama
+C. Tidak ada aliran kalor netto di antara keduanya
+D. Keduanya harus memiliki volume sama
+E. Energi dalam keduanya pasti sama
+ANSWER:C
+
+

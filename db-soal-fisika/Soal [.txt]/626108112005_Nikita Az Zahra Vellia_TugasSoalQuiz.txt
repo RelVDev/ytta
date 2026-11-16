@@ -1,0 +1,359 @@
+1. Apa yang dimaksud dengan fluida?
+
+A. Zat yang mempertahankan bentuk dan ukurannya  
+B. Zat yang hanya memiliki bentuk tetap  
+C. Zat yang dapat mengalir  
+D. Zat yang tidak memiliki massa  
+E. Zat yang tidak memiliki volume  
+ANSWER: C
+
+2. Massa jenis suatu zat merupakan perbandingan antara ....
+
+A. Massa dan volume  
+B. Massa dan luas permukaan  
+C. Berat dan waktu  
+D. Volume dan tekanan  
+E. Gaya dan luas permukaan  
+ANSWER: A
+
+3. Rumus untuk menghitung tekanan adalah ....
+
+A. P = F × A  
+B. P = F / A  
+C. P = A / F  
+D. P = m × g  
+E. P = ρ × V  
+ANSWER: B
+
+4. Tekanan yang diberikan oleh zat cair bergantung pada ....
+
+A. Warna zat cair  
+B. Bentuk wadah  
+C. Luas permukaan wadah  
+D. Kedalaman benda dalam zat cair  
+E. Massa benda di luar zat cair  
+ANSWER: D
+
+5. Sebuah benda memberikan gaya sebesar 120 N pada permukaan seluas 2 m². Berapakah tekanan yang dihasilkan?
+
+A. 30 Pa  
+B. 40 Pa  
+C. 50 Pa  
+D. 60 Pa  
+E. 80 Pa  
+ANSWER: D
+
+6. Sebuah benda memberikan gaya sebesar 200 N pada permukaan seluas 4 m². Berapakah tekanan yang dihasilkan?
+
+A. 25 Pa  
+B. 40 Pa  
+C. 50 Pa  
+D. 60 Pa  
+E. 80 Pa  
+ANSWER: C
+
+7. Berdasarkan prinsip Pascal, tekanan luar yang bekerja pada fluida akan ....
+
+A. Hilang setelah diberikan  
+B. Disalurkan ke seluruh bagian fluida  
+C. Hanya bekerja pada permukaan fluida  
+D. Berkurang menjadi setengahnya  
+E. Hanya bekerja pada bagian bawah fluida  
+ANSWER: B
+
+8. Prinsip Archimedes menjelaskan tentang ....
+
+A. Gaya gesek antara lapisan fluida  
+B. Tekanan udara pada permukaan bumi  
+C. Gaya tekan ke atas yang dialami benda dalam fluida  
+D. Hubungan luas penampang dengan kecepatan fluida  
+E. Hubungan tekanan dengan kecepatan aliran fluida  
+ANSWER: C
+
+9. Persamaan kontinuitas pada aliran fluida dinyatakan dengan rumus ....
+
+A. P = F / A  
+B. ρ = m / V  
+C. F = m × g  
+D. A₁v₁ = A₂v₂  
+E. P = ρgh  
+ANSWER: D
+
+10. Menurut prinsip Bernoulli, apabila kecepatan aliran fluida meningkat, maka tekanannya akan ....
+
+A. Meningkat  
+B. Menurun  
+C. Tetap  
+D. Menjadi nol  
+E. Tidak berubah secara teratur  
+ANSWER: B
+
+11. Gerak harmonik sederhana (GHS) merupakan gerak yang memiliki ciri utama berupa ...
+
+A. Gerak dengan kecepatan selalu bertambah  
+B. Gerak bolak-balik secara periodik di sekitar titik setimbang  
+C. Gerak lurus dengan kecepatan konstan  
+D. Gerak tanpa adanya gaya  
+E. Gerak yang selalu memiliki percepatan konstan  
+ANSWER: B
+
+12. Berdasarkan Hukum Hooke, gaya pemulih pada pegas memiliki arah ...
+
+A. Sejalan dengan perpindahan  
+B. Berlawanan dengan perpindahan  
+C. Selalu ke bawah  
+D. Selalu ke atas  
+E. Tidak memiliki arah tertentu  
+ANSWER: B
+
+13. Simpangan maksimum suatu benda yang berosilasi disebut ...
+
+A. Frekuensi  
+B. Periode  
+C. Amplitudo  
+D. Kecepatan  
+E. Percepatan  
+ANSWER: C
+
+14. Frekuensi dalam gerak harmonik sederhana adalah ...
+
+A. Waktu yang diperlukan untuk satu osilasi  
+B. Jumlah osilasi yang terjadi setiap sekon  
+C. Jarak maksimum dari titik setimbang  
+D. Kecepatan benda saat berada di titik setimbang  
+E. Waktu yang diperlukan benda untuk berhenti  
+ANSWER: B
+
+15. Dua benda pada pegas memiliki massa dan konstanta pegas yang sama, tetapi amplitudonya berbeda. Berdasarkan materi GHS, kedua benda tersebut akan ...
+
+A. Memiliki periode yang berbeda  
+B. Memiliki frekuensi yang berbeda  
+C. Mencapai titik setimbang pada waktu yang sama  
+D. Memiliki energi total yang sama  
+E. Berosilasi dengan arah berbeda  
+ANSWER: C
+
+16. Dalam gerak harmonik sederhana, energi kinetik dan energi potensial ...
+
+A. Selalu bernilai nol  
+B. Selalu bertambah  
+C. Selalu berkurang  
+D. Saling berubah, sedangkan energi total tetap konstan  
+E. Tidak memiliki hubungan satu sama lain  
+ANSWER: D
+
+17. Pada bandul sederhana, gerak harmonik sederhana dapat terjadi dengan asumsi ...
+
+A. Gesekan diperbesar dan simpangan besar  
+B. Tali memiliki massa yang sangat besar  
+C. Simpangan kecil dan gesekan diabaikan  
+D. Bandul tidak memiliki massa  
+E. Panjang tali selalu berubah  
+ANSWER: C
+
+18. Pada osilasi teredam, amplitudo osilasi akan ...
+
+A. Bertambah terhadap waktu  
+B. Tetap konstan  
+C. Berkurang terhadap waktu hingga akhirnya berhenti  
+D. Selalu bernilai nol sejak awal  
+E. Berubah secara acak  
+ANSWER: C
+
+19. Osilasi terpaksa terjadi ketika suatu sistem osilasi ...
+
+A. Tidak mendapatkan gaya dari luar  
+B. Mendapatkan gaya luar yang berubah terhadap waktu  
+C. Memiliki amplitudo yang selalu tetap  
+D. Berhenti bergerak karena gesekan  
+E. Tidak memiliki titik setimbang  
+ANSWER: B
+
+20. Sebuah benda melakukan 5 osilasi dalam waktu 10 sekon. Berapakah frekuensi osilasi benda tersebut?
+
+A. 0,2 Hz  
+B. 0,5 Hz  
+C. 2 Hz  
+D. 5 Hz  
+E. 10 Hz  
+ANSWER: B
+
+21. Gelombang transversal merupakan gelombang yang arah getaran mediumnya ...
+
+A. Sejajar dengan arah rambat gelombang  
+B. Tegak lurus dengan arah rambat gelombang  
+C. Berlawanan dengan arah rambat gelombang  
+D. Selalu mengarah ke bawah  
+E. Tidak memiliki arah getaran  
+ANSWER: B
+
+22. Pada gelombang longitudinal, arah getaran medium adalah ...
+
+A. Tegak lurus arah rambat gelombang  
+B. Sejajar arah rambat gelombang  
+C. Selalu ke atas  
+D. Selalu ke bawah  
+E. Tidak beraturan  
+ANSWER: B
+
+23. Simpangan maksimum suatu gelombang dari posisi setimbang disebut ...
+
+A. Frekuensi  
+B. Periode  
+C. Amplitudo  
+D. Panjang gelombang  
+E. Cepat rambat  
+ANSWER: C 
+
+24. Banyaknya gelombang atau getaran yang terjadi setiap sekon disebut ...
+
+A. Amplitudo  
+B. Periode  
+C. Panjang gelombang  
+D. Frekuensi  
+E. Fase  
+ANSWER: D 
+
+25. Jika dua gelombang bertemu dan saling memperkuat, peristiwa tersebut disebut ...
+
+A. Interferensi destruktif  
+B. Interferensi konstruktif  
+C. Gelombang berdiri  
+D. Efek Doppler  
+E. Osilasi teredam  
+ANSWER: B 
+
+26. Interferensi destruktif terjadi ketika dua gelombang ...
+
+A. Saling memperkuat  
+B. Memiliki amplitudo yang selalu sama  
+C. Saling melemahkan  
+D. Bergerak dengan kecepatan nol  
+E. Memiliki frekuensi yang selalu berbeda  
+ANSWER: C 
+
+27. Gelombang berdiri dapat terbentuk akibat perpaduan gelombang yang ...
+
+A. Merambat dalam arah berlawanan  
+B. Merambat dengan arah yang sama saja  
+C. Tidak memiliki amplitudo  
+D. Tidak mengalami getaran  
+E. Memiliki panjang tali yang berbeda  
+ANSWER: A 
+
+28. Peristiwa perubahan frekuensi bunyi yang didengar pengamat akibat gerak sumber bunyi atau pengamat disebut ...
+
+A. Interferensi  
+B. Resonansi  
+C. Efek Doppler  
+D. Superposisi  
+E. Gelombang berdiri  
+ANSWER: C
+
+29. Satuan yang digunakan untuk menyatakan taraf intensitas bunyi adalah ...
+
+A. Meter (m)  
+B. Hertz (Hz)  
+C. Joule (J)  
+D. Desibel (dB)  
+E. Newton (N)  
+ANSWER: D
+
+30. Sebuah gelombang memiliki frekuensi 2 Hz dan panjang gelombang 3 meter. Berapakah cepat rambat gelombang tersebut?
+
+A. 1 m/s  
+B. 3 m/s  
+C. 5 m/s  
+D. 6 m/s  
+E. 9 m/s  
+ANSWER: D
+
+31. Suhu 25°C jika diubah ke Kelvin adalah ....
+
+A. 248,15 K  
+B. 273,15 K  
+C. 298,15 K  
+D. 300,15 K  
+E. 310,15 K
+ANSWER: C
+
+32. Suhu 300 K jika diubah ke Celsius adalah ....
+
+A. 20°C  
+B. 26,85°C  
+C. 27°C  
+D. 30°C  
+E. 33°C  
+ANSWER: B
+
+33. Suhu 40°C jika diubah ke Fahrenheit adalah ....
+
+A. 72°F  
+B. 96°F  
+C. 100°F  
+D. 104°F  
+E. 112°F  
+ANSWER: D
+
+34. Suhu 68°F jika diubah ke Celsius adalah ....
+
+A. 10°C  
+B. 15°C  
+C. 20°C  
+D. 25°C  
+E. 30°C  
+ANSWER: C
+
+35. Suhu 30°C jika diubah ke Reamur adalah ....
+
+A. 20°R  
+B. 24°R  
+C. 30°R  
+D. 36°R  
+E. 40°R  
+ANSWER: B
+
+36. Suhu 40°R jika diubah ke Celsius adalah ....
+
+A. 30°C  
+B. 40°C  
+C. 45°C  
+D. 50°C  
+E. 60°C  
+ANSWER: D
+
+37. Suhu 86°F jika diubah ke Kelvin adalah ....
+
+A. 293,15 K  
+B. 298,15 K  
+C. 303,15 K  
+D. 310,15 K  
+E. 313,15 K  
+ANSWER: C
+
+38. Suhu 273,15 K jika diubah ke Fahrenheit adalah ....
+
+A. 0°F  
+B. 16°F  
+C. 24°F  
+D. 32°F  
+E. 40°F  
+ANSWER: D
+
+39. Alat yang digunakan untuk mengukur suhu disebut ....
+
+A. Barometer  
+B. Termometer  
+C. Amperemeter  
+D. Voltmeter  
+E. Higrometer  
+ANSWER: B
+
+40. Menurut Hukum ke-Nol Termodinamika, jika benda A dan B masing-masing berada dalam kesetimbangan termal dengan benda C, maka ....
+
+A. Suhu A lebih tinggi daripada B  
+B. Suhu A lebih rendah daripada B  
+C. A dan B berada dalam kesetimbangan termal satu sama lain  
+D. A dan B memiliki massa yang sama  
+E. A dan B memiliki volume yang sama  
+ANSWER: C

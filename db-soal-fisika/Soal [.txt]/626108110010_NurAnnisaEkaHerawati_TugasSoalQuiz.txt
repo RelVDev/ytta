@@ -1,0 +1,342 @@
+Nama	: Nur Annisa Eka Herawati
+NIM	: 626108110010
+Matkul	: Fisika Dasar
+Kelas	: DI 1
+
+SOAL & JAWABAN
+
+FLUIDA
+1. Manakah di bawah ini yang merupakan contoh penerapan dari fluida dinamis dalam kehidupan sehari-hari?
+A. Air di dalam gelas yang diletakkan di atas meja
+B. Air tenang di dalam wadah penampungan rumah
+C. Air yang mengalir melalui selang saat menyiram tanaman
+D. Minyak goreng di dalam botol tertutup
+E. Genangan air hujan di halaman rumah
+Answer: C
+
+2. Sebuah fluida ideal mengalir secara stasioner (steady flow) melalui sebuah pipa non-uniform yang posisinya horizontal. Pernyataan yang benar mengenai besaran fisika fluida tersebut saat melintasi perubahan diameter pipa adalah...
+A. Debit volumetrik (Q) berubah menyesuaikan luas penampang pipa.
+B. Kerapatan fluida (p "rho") meningkat pada penampang yang lebih kecil.
+C. Laju aliran fluida (v) berbanding terbalik dengan luas penampang pipa (A).
+D. Tekanan mekanis selalu berbanding lurus dengan laju aliran fluida.
+E. Viskositas fluida meningkat seiring bertambahnya kecepatan aliran.
+Answer: C
+
+3. Air mengalir horizontal melalui Venturimeter tanpa manometer. Pada bagian pipa berdiameter sempit (tenggorokan), dialami perubahan variabel fisika berupa...
+A. Kecepatan aliran berkurang, tekanan fluida meningkat.
+B. Kecepatan aliran meningkat, tekanan fluida menurun.
+C. Kecepatan aliran meningkat, tekanan fluida meningkat.
+D. Kecepatan aliran dan tekanan fluida kedua-duanya bernilai konstan.
+E. Kecepatan aliran berkurang, tekanan fluida berkurang.
+Answer: B
+
+4. Kelereng kecil bermassa jenis pb dijatuhkan bebas ke dalam tabung berisi fluida kental bermassa jenis pf (pb > pf ) Ketika kelereng mencapai kecepatan terminal (vt), kondisi gaya-gaya yang bekerja padanya adalah...
+A. Gaya Archimedes bernilai nol karena benda tenggelam.
+B. Gaya berat benda setara dengan gaya gesek fluida (gaya Stokes).
+C. Gaya total (resultan gaya) yang bekerja pada kelereng sama dengan nol.
+D. Gaya Stokes bernilai lebih besar daripada percepatan gravitasi.
+E. Kecepatan terminal berbanding terbalik dengan kuadrat jari-jari kelereng.
+Answer: C
+
+5. Di antara beberapa cairan berikut, manakah yang memiliki viskositas (kekentalan) paling tinggi?
+A. Air jernih
+B. Oli mesin
+C. Minyak tanah
+D. Alkohol
+E. Bensin
+Answer: B
+
+6. Sayap pesawat terbang dirancang berbentuk aerofoil agar pesawat dapat terangkat ke udara. Berdasarkan Hukum Bernoulli, gaya angkat pesawat dihasilkan karena...
+A. Kecepatan udara di atas sayap lebih kecil daripada di bawah sayap
+B. Tekanan udara di atas sayap lebih besar daripada di bawah sayap
+C. Kecepatan udara di atas sayap lebih besar sehingga tekanannya lebih kecil daripada di bawah sayap
+D. Massa jenis udara di atas sayap lebih besar
+E. Adanya dorongan mesin jet ke arah bawah
+Answer: C
+
+7. Air mengalir melalui pipa horizontal yang memiliki dua bagian dengan luas penampang berbeda. Pada bagian pertama, luas penampang 12 cm² dan kecepatan aliran 2 m/s. Pada bagian kedua, luas penampang 4 cm². Jika tekanan pada bagian pertama adalah 150.000 Pa dan massa jenis air 1.000 kg/m³, tekanan pada bagian kedua adalah ....
+A. 130.000 Pa
+B. 132.000 Pa
+C. 134.000 Pa
+D. 136.000 Pa
+E. 138.000 Pa
+Answer: C
+ 
+8. Sebuah balok kayu bermassa 12 kg dan volume 0,02 m³ mengapung di permukaan air. Volume balok yang berada di bawah permukaan air adalah ....
+A. 0,002 m³
+B. 0,006 m³
+C. 0,008 m³
+D. 0,012 m³
+E. 0,020 m³
+Answer: D
+
+9. Air mengalir melalui pipa horizontal yang menyempit. Pada bagian pertama, luas penampang pipa 12 cm² dan kecepatan air 2 m/s. Pada bagian kedua, luas penampang pipa 4 cm². Jika tekanan pada bagian pertama 150 kPa, tekanan pada bagian kedua adalah ....
+A. 120 kPa
+B. 126 kPa
+C. 134 kPa
+D. 138 kPa
+E. 150 kPa
+Answer: C
+
+10. Sebuah benda bermassa 2 kg memiliki volume 800 cm³. Besaran yang menunjukkan massa benda per satuan volumenya disebut ....
+A. Tekanan
+B. Massa jenis
+C. Berat jenis
+D. Viskositas
+E. Tegangan permukaan
+Answer: B
+
+OSILATOR HARMONIK
+11. Syarat utama agar suatu sistem fisis dapat melakukan gerak harmonik sederhana (GHS) adalah adanya gaya pemulih yang... 
+A. Berbanding terbalik dengan kuadrat simpangannya
+B. Searah dengan arah gerak simpangan benda
+C. Selalu mengarah ke titik kesetimbangan dan sebanding dengan simpangannya
+D. Bernilai konstan di setiap titik lintasan
+E. Selalu tegak lurus dengan arah simpangan benda
+Answer: C
+ 
+12. Ketika sebuah benda yang berosilasi dengan gerak harmonik sederhana berada di titik kesetimbangan, besaran fisis yang bernilai maksimum adalah... 
+A. Energi potensial
+B. Gaya pemulih
+C. Simpangan
+D. Percepatan
+E. Kecepatan (Energi kinetik)
+Answer: E
+
+13. Pada simpangan maksimum (amplitudo) dari suatu sistem pegas yang berosilasi, kondisi energi yang tepat adalah... 
+A. Energi kinetik maksimum, energi potensial minimum
+B. Energi kinetik minimum (nol), energi potensial maksimum
+C. Energi kinetik dan energi potensial sama besar
+D. Energi mekanik bernilai nol
+E. Energi total sistem terus meningkat
+Answer: B
+
+14. Arah percepatan pada benda yang melakukan gerak harmonik sederhana selalu... 
+A. Searah dengan kecepatan benda
+B. Searah dengan simpangan benda
+C. Menjauhi titik kesetimbangan
+D. Mengarah ke titik kesetimbangan
+E. Tegak lurus terhadap bidang lintasan
+Answer: D
+ 
+15. Fenomena berkurangnya amplitudo osilator secara perlahan akibat adanya gesekan udara atau hambatan disebut... 
+A. Resonansi
+B. Superposisi
+C. Redaman 
+D. Difraksi
+E. Refraksi
+Answer: C
+
+16. Peristiwa ikut bergetarnya suatu sistem karena frekuensi sumber luar sama dengan frekuensi alami sistem tersebut dinamakan... 
+A. Interferensi
+B. Resonansi
+C. Polarisasi
+D. Refleksi
+E. Redaman kritis
+Answer: B
+
+17. Manakah di bawah ini yang bukan merupakan contoh penerapan atau kejadian gerak harmonik sederhana? 
+A. Senar gitar yang dipetik
+B. Ayunan bandul jam dinding
+C. Gerakan piston pada mesin mobil
+D. Batu yang dilempar vertikal ke atas hingga jatuh kembali ke tanah
+E. Pegas yang diberi beban dan ditarik lalu dilepaskan
+Answer: D
+
+18. Jika massa beban pada sistem pegas diperbesar, apa yang terjadi pada frekuensi alami osilasi sistem tersebut (dengan asumsi konstanta pegas tetap)? 
+A. Frekuensi bertambah besar
+B. Frekuensi semakin kecil
+C. Frekuensi tidak berubah
+D. Amplitudo langsung menjadi nol
+E. Sistem berhenti berosilasi seketika
+Answer: B
+
+19. Pada saat kecepatan suatu benda yang berosilasi harmonik bernilai nol, maka pada saat itu benda berada di posisi... 
+A. Titik kesetimbangan
+B. Titik tengah lintasan
+C. Simpangan maksimum (amplitudo)
+D. Titik percepatan nol
+E. Titik dengan energi kinetik maksimum
+Answer: C
+
+20. Faktor utama yang menyebabkan amplitudo bandul sederhana mengecil dan akhirnya berhenti berayun adalah... 
+A. Gaya gravitasi bumi yang konstan
+B. Panjang tali bandul yang terlalu pendek
+C. Massa bandul yang terlalu berat
+D. Adanya gaya non-konservatif seperti gesekan udara
+E. Frekuensi sudut bandul yang terlalu tinggi
+Answer: D
+
+GELOMBANG MEKANIK
+21. Pada pemantulan gelombang ujung terikat, gelombang pantul akan mengalami perubahan fase sebesar...
+A. 0° (sefase)
+B. 45°
+C. 90°
+D. 180° (berlawanan fase / mengalami beda fase p)
+E. 360°
+Answer: D
+
+22. Suatu gelombang berjalan merambat pada tali dengan persamaan tertentu. Jika frekuensi gelombang dinaikkan dua kali lipat sementara cepat rambat gelombangnya tetap, maka panjang gelombang ?  akan...
+A. Menjadi empat kali lipat lebih besar.
+B. Menjadi dua kali lipat lebih besar.
+C. Tetap tidak berubah.
+D. Menjadi setengah kali lipat semula.
+E. Menjadi seperempat kali lipat semula.
+Answer: D
+
+23. Suatu gelombang berjalan pada tali memenuhi persamaan:
+y = 0,04 sin p (100t - 0,5x)
+dengan y dan x dalam meter serta t dalam sekon. Cepat rambat gelombang tersebut adalah...
+ A. 50 m/s
+ B. 100 m/s
+ C. 200 m/s
+ D. 400 m/s
+ E. 500 m/s
+ Answer: C
+
+24. Sebuah ambulans bergerak dengan kelajuan 20 m/s sambil membunyikan sirine berfrekuensi 400 Hz mendekati seorang pendengar yang diam di tepi jalan. Jika cepat rambat bunyi di udara adalah 340 m/s, besar frekuensi yang didengar oleh pengamat adalah...
+A. 375 Hz
+B. 400 Hz
+C. 425 Hz
+D. 450 Hz
+E. 475 Hz
+Answer: C
+
+25. Sebuah gelombang merambat pada tali dengan tegangan awal 16 N. Jika massa jenis linear tali tetap dan tegangan diubah menjadi 64 N, maka cepat rambat gelombang menjadi ....
+A. Setengah kali cepat rambat awal
+B. Sama dengan cepat rambat awal
+C. Dua kali cepat rambat awal
+D. Empat kali cepat rambat awal
+E. Delapan kali cepat rambat awal
+Answer: C
+
+26. Gelombang transversal dan longitudinal memiliki perbedaan mendasar pada arah getaran partikel medium terhadap arah rambat gelombang. Pernyataan yang tepat mengenai gelombang longitudinal adalah ....
+A. Arah getaran partikel tegak lurus terhadap arah rambat gelombang
+B. Gelombang longitudinal hanya dapat merambat pada zat padat
+C. Gelombang longitudinal tidak memerlukan medium untuk merambat
+D. Arah getaran partikel sejajar dengan arah rambat gelombang
+E. Gelombang longitudinal selalu memiliki amplitudo yang lebih besar
+Answer: D
+
+27. Sebuah gelombang harmonik memiliki amplitudo 8 cm dan frekuensi 5 Hz. Jika energi gelombang sebanding dengan kuadrat amplitudo dan kuadrat frekuensi, kemudian amplitudo dinaikkan menjadi 16 cm dan frekuensi menjadi 10 Hz, perbandingan energi gelombang akhir terhadap energi awal adalah ....
+A. 2 : 1
+B. 4 : 1
+C. 8 : 1
+D. 16 : 1
+E. 32 : 1
+Answer: D
+
+28. Sebuah gelombang merambat pada tali dengan cepat rambat 15 m/s. Dua titik yang berjarak 3 m. Jika frekuensi gelombang adalah 5 Hz, jawaban yang benar adalah ....
+A. 2p rad
+B. 4p/5  rad
+C. 2p/3 rad
+D. 2p/5 rad
+E. p/5 rad
+Answer: A.
+
+29. Sebuah kapal penelitian menggunakan gelombang bunyi untuk mengukur kedalaman laut. Bunyi dipancarkan dan pantulannya diterima kembali setelah 4 sekon. Jika cepat rambat bunyi dalam air laut 1.500 m/s, kedalaman laut tersebut adalah ....
+A. 2.250 m
+B. 5.750 m
+C. 6.000 m
+D. 7.000 m
+E. 7.985 m
+Answer: C
+
+30. Seorang mahasiswa mengamati gabus yang mengapung di permukaan air ketika gelombang air melewatinya. Gabus bergerak naik turun, tetapi tidak berpindah jauh mengikuti arah rambat gelombang.
+Fenomena tersebut menunjukkan bahwa ....
+A. Gelombang memindahkan seluruh massa air yang ada
+B. Gelombang hanya memindahkan materi saja
+C. Gelombang membawa energi tanpa memindahkan materi secara permanen
+D. Partikel medium bergerak searah dengan gelombang
+E. Gelombang tidak menyebabkan getaran pada medium
+Answer: C
+
+SUHU
+31. Dua benda memiliki suhu yang sama, tetapi massa dan jenis bahan berbeda. Jika keduanya berada dalam keadaan setimbang termal, maka ....
+A. Kedua benda memiliki kalor yang sama
+B. Kedua benda memiliki massa yang sama
+C. Kedua benda memiliki energi internal yang sama
+D. Tidak terjadi perpindahan kalor bersih di antara keduanya
+E. Kedua benda harus memiliki kalor jenis yang sama
+Answer: D
+
+32. Suhu suatu zat adalah 35°C. Jika suhu tersebut dinyatakan dalam Kelvin dan Fahrenheit, hasil yang benar adalah ....
+A. 308 K dan 85°F 
+B. 298 K dan 95°F 
+C. 308 K dan 95°F 
+D. 318 K dan 105°F 
+E. 273 K dan 75°F
+Answer: C
+
+33. Seorang mahasiswa mengukur suhu suatu benda menggunakan dua termometer berbeda. Termometer A menunjukkan 40°C, sedangkan termometer B menunjukkan 313 K. Berdasarkan hasil pengukuran tersebut, kesimpulan yang paling tepat adalah ....
+A. Termometer A menunjukkan suhu lebih tinggi
+B. Termometer B menunjukkan suhu lebih tinggi
+C. Kedua termometer menunjukkan suhu yang hampir sama
+D. Kedua termometer memiliki kesalahan pengukuran yang sama
+E. Kedua hasil pengukuran tidak dapat dibandingkan
+Answer: C
+
+34. Tiga mahasiswa mengukur suhu ruangan menggunakan termometer berbeda.
+- Mahasiswa A: 27°C
+- Mahasiswa B: 300 K
+- Mahasiswa C: 80,6°F
+Kesimpulan yang paling tepat adalah ....
+A. Suhu hasil pengukuran A paling tinggi
+B. Suhu hasil pengukuran B paling tinggi
+C. Suhu hasil pengukuran C paling tinggi
+D. Ketiganya menunjukkan suhu yang hampir sama
+E. Ketiganya menunjukkan suhu berbeda secara signifikan
+Answer: D
+
+35. Dalam sistem SI, satuan suhu termodinamika adalah ....
+A. Kelvin
+B. Fahrenheit
+C. Celcius
+D. Rankine
+E. Joule
+Answer: A
+
+36. Perhatikan pernyataan berikut.
+1. Dua benda yang memiliki suhu sama pasti memiliki energi internal sama.
+2. Suhu merupakan besaran intensif.
+3. Suhu dapat dinyatakan dalam Kelvin.
+4. Dua benda berbeda suhu dapat berada dalam kesetimbangan termal.
+Pernyataan yang benar adalah ....
+A. Salah semua
+B. 2 dan 3
+C. 3 dan 4
+D. 2, 3, dan 4
+E. 1, 2, 3, dan 4
+Answer: B
+
+37. Pernyataan yang benar mengenai suhu adalah ....
+A. Suhu merupakan ukuran jumlah kalor yang terkandung dalam benda
+B. Suhu merupakan ukuran energi kinetik rata-rata partikel penyusun benda
+C. Suhu selalu berbanding lurus dengan massa benda
+D. Suhu menunjukkan jumlah seluruh energi internal benda
+E. Suhu hanya dapat diukur ketika benda mengalami pemanasan
+Answer: B
+
+38. Sebuah termometer X memiliki skala linear yang tidak terkalibrasi dengan benar. Pada suhu 0°C, termometer menunjukkan -8°X, sedangkan pada suhu 100°C menunjukkan 112°X. Jika termometer menunjukkan 58°X, suhu sebenarnya adalah ....
+A. 50°C
+B. 55°C
+C. 60°C
+D. 65°C
+E. 70°C
+Answer: B
+
+39. Suatu benda memiliki suhu sebesar 350 K. Suhu tersebut dinyatakan dalam Fahrenheit adalah ....
+A. 122°F
+B. 140°F
+C. 158°F
+D. 170,6°F
+E. 176°F
+Answer: D
+
+40. Suhu benda A adalah 25°C dan benda B adalah 77°F. Perbedaan suhu kedua benda dalam Kelvin adalah ....
+A. 0 K
+B. 5 K
+C. 10 K
+D. 15 K
+E. 20 K
+Answer: A

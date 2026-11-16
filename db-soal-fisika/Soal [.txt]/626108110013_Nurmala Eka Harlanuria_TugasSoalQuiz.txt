@@ -1,0 +1,321 @@
+1.Tekanan hidrostatik di dalam zat cair yang memiliki massa jenis pada kedalaman h dengan percepatan gravitasi dinyatakan dengan persamaan...
+A. Ph = (ρ · g) / h
+B. Ph = ρ · g · h
+C. Ph = ρ · g · h²
+D. Ph = (ρ · h) / g
+E. Ph = 1/2 ρ · g · h
+ANSWER:B
+
+2.Suatu benda dapat terapung di dalam fluida jika syarat berikut terpenuhi...
+A. massa jenis benda < massa jenis fluida
+B. massa jenis benda = massa jenis fluida
+C. volume benda tercelup = nol
+D. massa jenis benda > massa jenis fluida
+E. volume benda yang tercelup sama dengan volume total benda
+ANSWER:A
+
+3.Jenis aliran fluida yang mengalir melalui garis-garis arus yang lurus, sejajar, dan tidak saling berpotongan disebut sebagai aliran...
+A. Aliran turbulen
+B. Aliran berolak
+C. Aliran kental
+D. Aliran laminar
+E. Aliran transisi
+ANSWER:D
+
+4.Hukum Bernoulli diturunkan berdasarkan hukum kekekalan...
+A. Hukum kekekalan massa
+B. Hukum kekekalan momentum sudut
+C. Hukum kekekalan momentum linear
+D. Hukum kekekalan muatan listrik
+E. Hukum kekekalan energi
+ANSWER:E
+
+5.Salah satu penerapan hukum Bernoulli dalam kehidupan sehari-hari adalah...
+A. Dongkrak hidrolik untuk mengangkat mobil
+B. Gaya angkat pada sayap pesawat terbang
+C. Kapal selam yang dapat menyelam dan mengapung
+D. Balon udara yang dapat terbang tinggi
+E. Rem hidrolik pada kendaraan bermotor
+ANSWER:B
+
+6.Gaya tarik-menarik antara molekul-molekul yang berlainan jenis disebut sebagai gaya...
+A. Adhesi
+B. Subtitusi
+C. Kohesi
+D. Diferensiasi
+E. Eliminasi
+ANSWER:A
+
+7.Seekor ikan berenang pada kedalaman 2 m di bawah permukaan sebuah danau air tawar. Jika massa jenis air danau ρ = 1.000 kg/m³ dan percepatan gravitasi g = 10 m/s², berapakah besar tekanan hidrostatik (P_h) yang dialami ikan tersebut?
+A. 200 Pa
+B. 2.000 Pa
+C. 20.000 Pa
+D. 200.000 Pa
+E. 2.000.000
+ANSWER:C
+
+8.Sebuah dongkrak hidrolik memiliki luas penampang penghisap kecil A₁ = 20 cm² dan luas penampang penghisap besar A₂ = 500 cm². Jika penghisap kecil ditekan dengan gaya F₁ = 40 N, berapakah gaya angkat maksimum (F₂) yang dihasilkan pada penghisap besar?
+A. 1,6 N
+B. 250 N
+C. 800 N
+D. 1.000 N
+E. 2.000 N
+ANSWER:D
+
+9.Sebuah balok kayu dengan volume total 0,05 m³ dicelupkan ke dalam air bermassa jenis ρ = 1.000 kg/m³ sehingga setengah bagian volumenya tercelup di dalam air. Jika percepatan gravitasi g = 10 m/s², berapakah besar gaya apung (F_apung) yang bekerja pada balok tersebut?
+A. 10 N
+B. 20 N
+C. 250 N
+D. 500 N
+E. 1.000 N
+ANSWER:C
+
+10.Air mengalir melalui sebuah pipa yang memiliki dua ukuran penampang berbeda. Pada penampang besar yang luasnya A₁ = 14 cm², air mengalir dengan kelajuan v₁ = 2 m/s. Berapakah kelajuan aliran air (v₂) saat melewati penampang kecil yang luasnya A₂ = 4 cm²?
+A. 7 m/s
+B. 24 m/s
+C. 32 m/s
+D. 112 m/s
+E. 1,75 m/s
+ANSWER:A
+
+11. Frekuensi sudut ω dari osilator pegas horizontal dengan massa m dan konstanta pegas k ditentukan oleh persamaan...
+A. ω = k/m
+B. ω = √(k/m)
+C. ω = √(k · m)
+D. ω = √(m/k)
+E. ω = √(k/m²)
+ANSWER:B
+
+12. Sebuah benda bermassa 2kg dihubungkan pada sebuah pegas horizontal ideal dengan konstanta pegas k = 50 N/m. Berapakah frekuensi sudut ω dari osilasi harmonik sederhana yang terjadi?
+A. 10 rad/s
+B. 25 rad/s
+C. 5 rad/s
+D. 0,2 rad/s
+E. 0,5 rad/s
+ANSWER:C
+
+13. Sebuah pegas dengan konstanta gaya k berosilasi secara harmonik sederhana dengan simpangan maksimum (amplitudo) sebesar A. Jika gesekan udara diabaikan, persamaan energi mekanik total (E_total) yang dimiliki oleh sistem osilator tersebut adalah ...
+A. E_total = k · A
+B. E_total = k · A²
+C. E_total = 1/2 m · A²
+D. E_total = 1/2 k · A
+E. E_total = 1/2 k · A²
+ANSWER:E
+
+14. Sebuah pegas dengan konstanta k = 400 N/m berosilasi secara harmonik sederhana dengan amplitudo A = 0,1 m. Berapakah energi mekanik total (E_total) sistem osilator tersebut?
+A. 0,1 J
+B. 2 J
+C. 1 J 
+D. 10 J
+E. 20 J
+ANSWER:B
+
+15.Sebuah benda bermassa m digantungkan secara vertikal pada pegas berkonstanta k di tempat yang memiliki percepatan gravitasi g. Ketika sistem mencapai titik kesetimbangan statik yang baru, persamaan yang tepat untuk menentukan pertambahan panjang statik (y₀) pegas adalah
+A. y₀ = (m · g) / k
+B. y₀ = (k · g) / m
+C. y₀ = (m · k) / g
+D. y₀ = k / (m · g)
+E. y₀ = m / (k · g)
+ANSWER:A
+
+16. Sebuah benda bermassa 0,2 kg digantungkan secara vertikal pada sebuah pegas berkonstanta k = 20 N/m. Jika percepatan gravitasi g = 10 m/s², berapakah pertambahan panjang statik y0 pegas saat mencapai titik setimbang barunya?
+A. 2,5 m
+B. 2 m
+C. 10 m
+D. 0,1 m
+E. 1 m
+ANSWER:D
+
+17.Sebuah bandul sederhana dengan panjang tali L diayunkan dengan sudut simpangan kecil pada suatu tempat yang memiliki percepatan gravitasi g. Persamaan yang benar untuk menghitung periode (T) satu kali ayunan penuh bandul tersebut adalah ...
+A. T = 2π√(L/g)
+B. T = √(L/g)
+C. T = 2π√(g/L)
+D. T = 2π(L/g)
+E. T = 1/(2π) √(L/g)
+ANSWER:A
+
+18.Sebuah bandul sederhana memiliki panjang tali L = 2,5 m dan berayun dengan sudut simpangan kecil di tempat yang percepatan gravitasinya g = 10 m/s². Berapakah periode osilasi T bandul tersebut?
+A. 0,25π s
+B. 4π s
+C. 2π s
+D. 0,5π s
+E. π s
+ANSWER:E
+
+19.Sebuah partikel bergerak harmonik sederhana dengan amplitudo A dan frekuensi sudut ω. Persamaan yang menyatakan besarnya laju maksimum (v_maks) partikel tersebut saat melintasi titik kesetimbangan adalah ...
+A. v_maks = ω / A
+B. v_maks = ω · A
+C. v_maks = ω · A²
+D. v_maks = ω² · A
+E. v_maks = 1/2 ω · A²
+ ANSWER:B 
+
+20. Sebuah partikel berosilasi harmonik sederhana dengan amplitudo A = 0,02 m dan frekuensi sudut ω = 10 rad/s. Berapakah laju maksimum v_max partikel tersebut saat melewati titik setimbang?
+A. 0,2 m/s
+B. 0,004 m/s
+C. 2 m/s
+D. 500 m/s
+E. 0,1 m/s
+ANSWER:A
+
+21.Suatu gelombang berjalan merambat ke arah sumbu X positif dengan amplitudo A, bilangan gelombang k, dan frekuensi sudut ω. Persamaan simpangan (y) gelombang berjalan tersebut sebagai fungsi posisi (x) dan waktu (t) dinyatakan dengan ...
+A. y = A sin(kx + ωt)
+B. y = A sin(kx - ωt) 
+C. y = k sin(Ax - ωt)
+D. y = ω sin(kx - At)
+E. y = A sin(ωx - kt) 
+ANSWER:B
+
+22.Seutas gelombang berjalan dinyatakan dengan persamaan y = 0,05 sin(2,0x - 50t) dengan x dan y dalam meter serta t dalam sekon. Berapakah besar frekuensi sudut (ω) dari gelombang tersebut?
+A. 0,05 rad/s
+B. 2,0 rad/s
+C. 25 rad/s
+D. 50 rad/s
+E. 100 rad/s
+ANSWER:D
+
+23..Bilangan gelombang (k) pada persamaan gelombang harmonik λ = k / (2π)menunjukkan banyaknya gelombang dalam jarak 2π radian. Hubungan matematis yang tepat untuk menentukan panjang gelombang (λ) jika diketahui bilangan gelombangnya (k) adalah ...
+A. λ = k / (2π)
+B. λ = (2π) / k
+C. λ = 2π · k
+D. λ = π / k
+E. λ = k / π
+ANSWER:B
+
+
+24.Sebuah gelombang harmonik merambat sepanjang tali dengan persamaan y = 0,04 sin(4πx - 20πt) dalam meter dan sekon. Berapakah panjang gelombang (λ) dari gelombang tersebut?
+A. 0,1 m
+B. 0,25 m
+C. 0,5 m
+D. 2 m
+E. 4 m
+ANSWER:C
+
+25.Berdasarkan Hukum Melde, jika gaya tegangan tali dinyatakan dengan F dan massa persatuan panjang tali dinyatakan dengan μ, maka rumus cepat rambat gelombang (v) pada tali tersebut adalah ...
+A. v = √(μ / F)
+B. v = √(F / μ)
+C. v = F / μ
+D. v = √(F · μ)
+E. v = F · μ
+ANSWER:B
+
+26.Seutas kawat memiliki massa per satuan panjang μ = 0,01 kg/m dan ditegangkan dengan gaya F = 40 N. Berapakah kecepatan rambat gelombang (v) pada kawat tersebut?
+A. 2√10 m/s
+B. 10√2 m/s
+C. 20 m/s
+D. 20√10 m/s
+E. 40 m/s
+ANSWER:D
+
+27.Pada percobaan gelombang berdiri di atas seutas tali berujung tetap sepanjang L dengan laju rambat gelombang v, rumus yang digunakan untuk menghitung frekuensi harmonik ke-n (f_n) adalah ...
+A. f_n = (n · v) / L
+B. f_n = (n · v) / (2L)
+C. f_n = (n · v) / (4L)
+D. f_n = (2L) / (n · v)
+E. f_n = (n · L) / (2v)
+ANSWER:B
+
+28.Seutas tali dengan kedua ujung terikat memiliki panjang L = 2,5 m. Jika cepat rambat gelombang pada tali tersebut adalah v = 50 m/s, berapakah frekuensi nada dasar (n = 1) yang dihasilkan tali?
+A. 10 Hz
+B. 20 Hz
+C. 40 Hz
+D. 45 Hz
+E. 90 Hz
+ANSWER:A
+
+29.Cepat rambat gelombang bunyi di dalam suatu medium zat cair dipengaruhi oleh tingkat ketahanan zat tersebut terhadap tekanan serta kerapatan massanya. Jika modulus limbak fluida adalah B dan massa jenisnya adalah ρ, persamaan yang tepat untuk menentukan laju rambat bunyi (v) adalah ...
+A. v = B / ρ
+B. v = B · ρ
+C. v = √(B · ρ)
+D. v = √(B / ρ)
+E. v = √(ρ / B)
+ANSWER:D
+
+30.Gelombang bunyi merambat di dalam suatu zat cair yang memiliki massa jenis ρ = 1.000 kg/m³ dan modulus limbak (bulk) B = 2,25 × 10⁹ N/m². Berapakah laju gelombang bunyi (v) di dalam zat cair tersebut?
+A. 15 m/s
+B. 150 m/s
+C. 1.500 m/s
+D. 2.250 m/s
+E. 15.000 m/s
+ANSWER:C
+
+31.Apa yang dimaksud dengan kesetimbangan termal?
+A. Setiap bagian sistem memiliki suhu yang sama dan tidak ada aliran kalor
+B. Sistem memiliki energi kinetik nol
+C. Setiap bagian sistem memiliki tekanan yang sama
+D. Sistem terus mengalami perubahan suhu
+E. Jumlah kalor di dalam sistem selalu bernilai nol
+ANSWER:A
+
+32.Hukum ke-Nol Termodinamika menjelaskan tentang ...
+A. Hubungan tekanan dan volume gas
+B. Pemuaian panjang suatu benda
+C. Perubahan energi kinetik menjadi energi potensial
+D. Kesetimbangan termal antara tiga benda
+E. Kekekalan energi kalor dan usaha
+ANSWER:D
+
+33.Suhu suatu benda adalah 30°C. Berapakah suhu tersebut dalam Kelvin?
+A. 300,15 K
+B. 273,15 K
+C. 303,15 K
+D. 313,15 K
+E. 243,15 K
+ANSWER:C
+
+34.Suhu suatu ruangan adalah 40°C. Berapakah suhu tersebut dalam skala Fahrenheit? Gunakan F = (9/5)C + 32.
+A. 112°F
+B. 100°F
+C. 104°F
+D. 96°F
+E. 88°F 
+ANSWER:C
+
+35.Sebuah batang logam memiliki panjang awal 2 m pada suhu 20°C. Jika koefisien muai panjangnya 0,000012°C⁻¹ dan suhunya naik menjadi 70°C, berapakah pertambahan panjang batang tersebut?
+A. 0,012 m
+B. 0,00012 m
+C. 0,12 m
+D. 0,0012 m
+E. 0,0006 m
+ANSWER:D
+
+36.Sebuah gas memiliki volume 2 liter pada suhu 300 K. Jika tekanan tetap dan suhu dinaikkan menjadi 450 K, berapakah volume akhirnya?
+A. 3 liter
+B. 2,5 liter
+C. 3,5 liter
+D. 4 liter
+E. 1,33 liter
+ANSWER:A
+
+37.Sebuah wadah tertutup berisi gas ideal sebanyak n mol yang dijaga pada suhu mutlak T. Jika konstanta gas universal dinyatakan sebagai R, manakah bentuk persamaan yang paling tepat untuk menyatakan hasil kali antara tekanan (P) dan volume (V) gas tersebut?
+A. P x V = (n x R) / T
+B. P x V = (R x T) / n
+C. P x V = n x R x T
+D. P x V = (n x T) / R
+E. P x V = n + R + T
+ANSWER:C
+
+38.Gas ideal sebanyak 2 mol berada dalam ruang tertutup pada suhu 300 K. Jika konstanta gas universal R = 8,31 J/mol.K, berapakah hasil kali tekanan dan volume gas tersebut?
+A. 1.662 J
+B. 2.493 J
+C. 4.986 J
+D. 6.232 J
+E. 8.310 J
+ANSWER:C
+
+39.Sebuah tangki tertutup berisi gas ideal sebanyak n mol pada suhu mutlak T dan tekanan P. Jika tangki tersebut memiliki volume sebesar V dan konstanta gas umum dinyatakan sebagai R, manakah bentuk persamaan yang paling tepat untuk menentukan jumlah mol gas di dalam tangki tersebut?
+A. n = (R x T) / (P x V)
+B. n = (P x R) / (V x T)
+C. n = (P x V) / (R x T)
+D. n = (V x T) / (P x R)
+E. n = P x V x R x T
+ANSWER:C
+
+40.Suatu gas ideal berada dalam ruang tertutup dengan tekanan 2 x 10^5 Pa, volume 0,01 m^3, dan suhu 300 K. Jika konstanta gas universal R = 8,31 J/mol.K, berapakah jumlah mol gas tersebut?
+A. 0,40 mol
+B. 0,80 mol
+C. 1,25 mol
+D. 2,40 mol
+E. 8,02 mol
+ANSWER:B
+

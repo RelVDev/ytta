@@ -1,0 +1,319 @@
+1. Tekanan hidrostatis pada kedalaman h dalam fluida dengan massa jenis ρ dan percepatan gravitasi g dinyatakan oleh…
+A. ρ/(gh)
+B. ρgh
+C. ρg/h
+D. ρh/g
+E. gh/ρ
+ANSWER: B
+
+2. Menurut prinsip Pascal, tekanan luar yang diberikan pada fluida dalam ruang tertutup akan…
+A. diteruskan hanya searah dengan arah gaya
+B. berkurang makin jauh dari titik pemberian
+C. hilang di dasar wadah
+D. dipusatkan pada titik pemberian tekanan
+E. diteruskan ke seluruh bagian fluida ke segala arah
+ANSWER: E
+
+3. Sayap pesawat terbang dirancang sehingga pesawat dapat terangkat. Hal ini dapat dijelaskan dengan prinsip Bernoulli, yaitu…
+A. kecepatan udara di atas sayap lebih besar sehingga tekanan di atas sayap lebih kecil
+B. kecepatan udara di atas sayap lebih kecil sehingga tekanan di atas sayap lebih kecil
+C. kecepatan udara di atas sayap lebih besar sehingga tekanan di atas sayap lebih besar
+D. kecepatan udara di atas dan di bawah sayap sama besar
+E. massa jenis udara di bawah sayap lebih kecil daripada di atas sayap
+ANSWER: A
+
+4. Sebuah benda terapung setimbang di permukaan air. Pernyataan yang benar mengenai keadaan benda tersebut adalah…
+A. gaya apung lebih besar daripada berat benda
+B. gaya apung lebih kecil daripada berat benda
+C. gaya apung sama dengan berat benda
+D. massa jenis benda selalu lebih besar daripada massa jenis air
+E. seluruh volume benda selalu tercelup di dalam air
+ANSWER: C
+
+5. Seorang penyelam berada pada kedalaman 20 m di bawah permukaan laut. Jika massa jenis air laut 1.000 kg/m³, percepatan gravitasi 10 m/s², dan tekanan atmosfer 1,0 × 10⁵ Pa, tekanan absolut yang dialami penyelam adalah…
+A. 1,0 × 10⁵ Pa
+B. 2,0 × 10⁵ Pa
+C. 2,0 × 10⁶ Pa
+D. 3,0 × 10⁵ Pa
+E. 3,0 × 10⁶ Pa
+ANSWER: D
+
+6. Sebuah dongkrak hidrolik memiliki penampang kecil seluas 20 cm² dan penampang besar seluas 200 cm². Jika pada penampang kecil diberikan gaya 100 N, gaya yang dihasilkan pada penampang besar adalah…
+A. 200 N
+B. 500 N
+C. 1.000 N
+D. 2.000 N
+E. 10.000 N
+ANSWER: C
+
+7. Batu bermassa 5 kg dan bervolume 2 × 10⁻³ m³ dimasukkan seluruhnya ke dalam air (ρ = 1.000 kg/m³, g = 10 m/s²). Berat batu di dalam air adalah…
+A. 20 N
+B. 30 N
+C. 40 N
+D. 50 N
+E. 70 N
+ANSWER: B
+
+8. Air mengalir dalam pipa yang menyempit. Luas penampang pipa di titik 1 adalah 10 cm² dengan kecepatan aliran 2 m/s. Jika luas penampang di titik 2 adalah 4 cm², kecepatan aliran di titik 2 adalah…
+A. 0,8 m/s
+B. 2 m/s
+C. 4 m/s
+D. 5 m/s
+E. 8 m/s
+ANSWER: D
+
+9. Sebuah balok mengapung di air dengan 3/4 bagian volumenya tercelup. Jika balok tersebut dipindahkan ke cairan lain bermassa jenis 1.200 kg/m³ (massa jenis air 1.000 kg/m³), fraksi volume balok yang tercelup menjadi…
+A. 1/2
+B. 5/8
+C. 3/4
+D. 4/5
+E. 1
+ANSWER: B
+
+10. Air mengalir dalam pipa horizontal. Di titik 1, luas penampang 40 cm², kecepatan 1 m/s, dan tekanan 2,0 × 10⁵ Pa. Di titik 2, luas penampang pipa 10 cm². Jika massa jenis air 1.000 kg/m³, tekanan di titik 2 adalah…
+A. 1,925 × 10⁵ Pa
+B. 2,075 × 10⁵ Pa
+C. 1,500 × 10⁵ Pa
+D. 2,000 × 10⁵ Pa
+E. 1,850 × 10⁵ Pa
+ANSWER: A
+
+11. Syarat suatu gerak disebut gerak harmonik sederhana (GHS) adalah…
+A. percepatan sebanding dengan perpindahan dan arahnya berlawanan dengan perpindahan
+B. kecepatan sebanding dengan perpindahan dan searah dengan perpindahan
+C. percepatan konstan dan searah dengan kecepatan
+D. percepatan sebanding dengan kecepatan
+E. gaya yang bekerja konstan terhadap waktu
+ANSWER: A
+
+12. Tanda negatif pada gaya pulih pegas F = –kx menunjukkan bahwa gaya pegas…
+A. selalu bernilai negatif
+B. searah dengan perpindahan benda
+C. sebanding dengan kuadrat perpindahan
+D. berlawanan arah dengan perpindahan benda
+E. bernilai maksimum di titik setimbang
+ANSWER: D
+
+13. Dua pegas serupa masing-masing diberi beban bermassa sama. Beban pertama disimpangkan 5 cm dan beban kedua 10 cm, kemudian keduanya dilepaskan bersamaan. Pernyataan yang benar adalah…
+A. beban pertama lebih dulu mencapai titik setimbang karena lintasannya lebih pendek
+B. beban kedua lebih dulu mencapai titik setimbang karena gaya pulihnya lebih besar
+C. beban kedua lebih dulu mencapai titik setimbang karena kecepatan awalnya lebih besar
+D. waktu yang diperlukan tidak dapat ditentukan
+E. keduanya mencapai titik setimbang bersamaan karena periode tidak bergantung pada amplitudo
+ANSWER: E
+
+14. Energi total pada GHS sebanding dengan kuadrat amplitudonya. Jika amplitudo osilasi sebuah sistem pegas–massa dijadikan dua kali semula, energi totalnya menjadi…
+A. ½ kali semula
+B. 2 kali semula
+C. tetap
+D. 4 kali semula
+E. 8 kali semula
+ANSWER: D
+
+15. Sebuah benda bermassa 2 kg terikat pada pegas dengan konstanta 50 N/m dan berosilasi harmonik. Periode osilasi benda tersebut adalah…
+A. 0,2π s
+B. 0,4π s
+C. 0,8π s
+D. 2,5π s
+E. 5π s
+ANSWER: B
+
+16. Posisi sebuah benda yang bergerak harmonik dinyatakan oleh x = 0,05 cos (4πt) dengan x dalam meter dan t dalam sekon. Laju maksimum benda tersebut adalah…
+A. 0,05π m/s
+B. 0,1π m/s
+C. 0,2π m/s
+D. 0,4π m/s
+E. 4π m/s
+ANSWER: C
+
+17. Sebuah benda terikat pada pegas dengan konstanta 200 N/m dan berosilasi dengan amplitudo 10 cm. Energi kinetik benda saat berada pada simpangan 6 cm dari titik setimbang adalah…
+A. 0,36 J
+B. 0,64 J
+C. 1,00 J
+D. 1,36 J
+E. 6,40 J
+ANSWER: B
+
+18. Sebuah benda bermassa 2 kg digantung pada pegas secara vertikal sehingga pegas meregang 20 cm (g = 10 m/s²). Konstanta pegas tersebut adalah…
+A. 20 N/m
+B. 50 N/m
+C. 100 N/m
+D. 200 N/m
+E. 500 N/m
+ANSWER: C
+
+19. Sebuah beban digantung pada pegas vertikal sehingga pegas meregang 10 cm dari panjang alaminya. Beban kemudian ditarik sedikit ke bawah dan dilepaskan sehingga berosilasi di sekitar posisi setimbangnya. Jika g = 10 m/s², periode osilasi beban tersebut adalah…
+A. 0,1π s
+B. 0,2π s
+C. 0,4π s
+D. 2π s
+E. 20π s
+ANSWER: B
+
+20. Sebuah bandul sederhana memiliki periode 2 s di Bumi. Bandul tersebut dibawa ke sebuah planet yang percepatan gravitasinya 1/9 kali gravitasi Bumi, dan panjang talinya dipendekkan menjadi 1/4 panjang semula. Periode bandul di planet tersebut adalah…
+A. 1 s
+B. 1,5 s
+C. 3 s
+D. 4 s
+E. 6 s
+ANSWER: C
+
+21. Pada gelombang transversal, bagian-bagian medium yang dilewati gelombang bergerak…
+A. tegak lurus terhadap arah rambat gelombang
+B. sejajar dengan arah rambat gelombang
+C. searah dengan arah rambat gelombang
+D. melingkar mengelilingi arah rambat gelombang
+E. diam di tempatnya
+ANSWER: A
+
+22. Laju gelombang pada tali tegang dengan tegangan T dan massa per satuan panjang μ dinyatakan oleh…
+A. T/μ
+B. μ/T
+C. √(T/μ)
+D. √(μ/T)
+E. Tμ
+ANSWER: C
+
+23. Dua gelombang harmonik dengan amplitudo, frekuensi, dan bilangan gelombang yang sama saling bersuperposisi. Interferensi destruktif terjadi jika beda fase kedua gelombang sebesar…
+A. 0°
+B. 60°
+C. 90°
+D. 360°
+E. 180°
+ANSWER: E
+
+24. Sebuah sumber bunyi bergerak mendekati pengamat yang diam. Frekuensi bunyi yang diterima pengamat…
+A. lebih rendah daripada frekuensi sumber
+B. lebih tinggi daripada frekuensi sumber
+C. sama dengan frekuensi sumber
+D. sama dengan nol
+E. berubah-ubah secara acak
+ANSWER: B
+
+25. Seutas tali tegang memiliki massa per satuan panjang 0,25 kg/m dan tegangan 100 N. Laju gelombang pada tali tersebut adalah…
+A. 5 m/s
+B. 10 m/s
+C. 16 m/s
+D. 20 m/s
+E. 40 m/s
+ANSWER: D
+
+26. Sebuah gelombang pada tali dinyatakan oleh y = 0,1 sin (2πx – 10πt) dengan x dan y dalam meter dan t dalam sekon. Laju rambat gelombang tersebut adalah…
+A. 2 m/s
+B. 5 m/s
+C. 10 m/s
+D. 20 m/s
+E. 31,4 m/s
+ANSWER: B
+
+27. Sebuah gelombang bunyi merambat dalam air yang memiliki modulus limbak 2,25 × 10⁹ N/m² dan massa jenis 1,00 × 10³ kg/m³. Laju bunyi dalam air tersebut adalah…
+A. 1.000 m/s
+B. 1.500 m/s
+C. 2.250 m/s
+D. 4.500 m/s
+E. 15.000 m/s
+ANSWER: B
+
+28. Taraf intensitas bunyi sebuah sumber adalah 50 dB. Jika 100 sumber identik berbunyi bersamaan di tempat yang sama, taraf intensitas bunyi totalnya adalah…
+A. 52 dB
+B. 60 dB
+C. 65 dB
+D. 70 dB
+E. 100 dB
+ANSWER: D
+
+29. Seutas tali sepanjang 1,5 m terikat pada kedua ujungnya. Dua frekuensi resonansi yang berurutan pada tali tersebut adalah 200 Hz dan 250 Hz. Laju gelombang pada tali tersebut adalah…
+A. 50 m/s
+B. 75 m/s
+C. 100 m/s
+D. 150 m/s
+E. 300 m/s
+ANSWER: D
+
+30. Sebuah sumber bunyi berfrekuensi 900 Hz bergerak dengan laju 34 m/s mendekati pengamat, sedangkan pengamat bergerak dengan laju 34 m/s mendekati sumber. Jika laju bunyi di udara 340 m/s, frekuensi bunyi yang didengar pengamat adalah…
+A. 900 Hz
+B. 1.000 Hz
+C. 1.100 Hz
+D. 1.200 Hz
+E. 1.250 Hz
+ANSWER: C
+
+31. Hukum ke-nol termodinamika menyatakan bahwa…
+A. kalor mengalir dari benda bersuhu rendah ke benda bersuhu tinggi
+B. energi total sistem terisolasi selalu kekal
+C. jika benda A dan B masing-masing berada dalam kesetimbangan termal dengan benda C, maka A dan B juga berada dalam kesetimbangan termal
+D. entropi sistem terisolasi tidak pernah berkurang
+E. suhu nol mutlak tidak dapat dicapai
+ANSWER: C
+
+32. Pada termometer gas volume konstan, besaran yang diukur untuk menentukan suhu adalah…
+A. tekanan gas
+B. volume gas
+C. massa gas
+D. massa jenis gas
+E. hambatan listrik gas
+ANSWER: A
+
+33. Gas sejati mendekati perilaku gas ideal pada kondisi…
+A. suhu rendah dan tekanan tinggi
+B. suhu rendah dan kerapatan rendah
+C. suhu tinggi dan kerapatan tinggi
+D. suhu tinggi dan kerapatan rendah
+E. tidak bergantung pada suhu dan kerapatan
+ANSWER: D
+
+34. Jika suhu mutlak suatu gas ideal dijadikan dua kali semula, energi kinetik rerata molekul-molekul gas tersebut menjadi…
+A. ½ kali semula
+B. 2 kali semula
+C. 4 kali semula
+D. tetap
+E. √2 kali semula
+ANSWER: B
+
+35. Sebuah termometer X menunjukkan –40 °X saat es mencair dan 160 °X saat air mendidih. Suhu 35 °C pada termometer X ditunjukkan sebagai…
+A. 10 °X
+B. 20 °X
+C. 25 °X
+D. 30 °X
+E. 35 °X
+ANSWER: D
+
+36. Sebatang besi panjang 2 m memiliki koefisien muai panjang 1,2 × 10⁻⁵ /°C. Jika suhunya dinaikkan dari 20 °C menjadi 70 °C, pertambahan panjang besi adalah…
+A. 0,12 mm
+B. 0,6 mm
+C. 1,2 mm
+D. 2,4 mm
+E. 12 mm
+ANSWER: C
+
+37. Satu mol gas ideal berada pada suhu 300 K dalam volume 0,0083 m³. Jika R = 8,3 J/mol·K, tekanan gas tersebut adalah…
+A. 1 × 10⁵ Pa
+B. 3 × 10⁵ Pa
+C. 6 × 10⁵ Pa
+D. 9 × 10⁵ Pa
+E. 3 × 10⁶ Pa
+ANSWER: B
+
+38. Hambatan jenis suatu logam memenuhi ρ = ρ₀[1 + α(T – T₀)] dengan α = 0,005 /°C. Jika suhu logam dinaikkan dari 20 °C menjadi 120 °C, hambatan jenis logam tersebut bertambah sebesar…
+A. 5%
+B. 10%
+C. 15%
+D. 25%
+E. 50%
+ANSWER: E
+
+39. Sebuah bejana kaca bervolume 1 liter diisi penuh alkohol pada suhu 10 °C. Koefisien muai volume alkohol 1,1 × 10⁻³ /°C dan koefisien muai volume kaca 9 × 10⁻⁶ /°C. Jika suhu dinaikkan menjadi 30 °C, volume alkohol yang tumpah adalah…
+A. 0,18 cm³
+B. 21,8 cm³
+C. 22,0 cm³
+D. 22,2 cm³
+E. 44,0 cm³
+ANSWER: B
+
+40. Gas ideal dalam wadah tertutup bervolume tetap memiliki tekanan 1 atm pada suhu 27 °C. Jika suhu gas dinaikkan menjadi 327 °C, tekanan gas menjadi…
+A. 2 atm
+B. 4 atm
+C. 6 atm
+D. 9 atm
+E. 12 atm
+ANSWER: A

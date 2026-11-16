@@ -1,0 +1,323 @@
+1. Sebuah pintu otomatis menggunakan komponen peredam hidrolik agar pintu tidak menutup secara tiba-tiba. Di dalam komponen tersebut terdapat minyak yang menghambat gerakan piston ketika pintu bergerak. Sifat fluida yang berperan dalam menghasilkan hambatan terhadap gerakan tersebut disebut ....
+A. Kapilaritas
+B. Tegangan permukaan
+C. Viskositas
+D. Massa jenis
+E. Tekanan hidrostatis
+ANSWER: C
+
+2. Sebuah tangki penampungan air memiliki dua saluran pengeluaran yang dipasang pada ketinggian berbeda. Saluran pertama berada 0,5 meter di bawah permukaan air, sedangkan saluran kedua berada 2 meter di bawah permukaan air. Ketika kedua saluran dibuka, air dari saluran kedua cenderung keluar dengan tekanan lebih besar. Penyebab kondisi tersebut adalah ....
+A. Saluran kedua memiliki diameter yang lebih besar.
+B. Massa jenis air meningkat pada kedalaman yang lebih besar.
+C. Tekanan hidrostatis meningkat seiring bertambahnya kedalaman.
+D. Volume air pada saluran kedua lebih sedikit.
+E. Tekanan atmosfer hanya bekerja pada saluran pertama.
+ANSWER: C
+
+3. Sebuah alat pengukur tekanan pada tangki gas menunjukkan tekanan sebesar 175 kPa. Seorang teknisi menyatakan bahwa nilai tersebut belum menunjukkan tekanan absolut gas di dalam tangki. Alasan yang paling tepat adalah ....
+A. Tekanan terukur sudah mencakup tekanan akibat gravitasi.
+B. Tekanan absolut harus memperhitungkan tekanan atmosfer di sekitar tangki.
+C. Tekanan absolut hanya berlaku pada zat cair.
+D. Tekanan terukur selalu lebih besar daripada tekanan absolut.
+E. Tekanan atmosfer tidak berpengaruh terhadap tekanan gas.
+ANSWER: B
+
+4. Sebuah sistem pengangkat hidrolik digunakan untuk mengangkat sebuah kendaraan. Luas penampang piston kecil adalah 5 cm², sedangkan luas penampang piston besar adalah 150 cm². Jika gaya sebesar 40 N diberikan pada piston kecil, besar gaya yang dihasilkan pada piston besar adalah ....
+A. 800 N
+B. 1.000 N
+C. 1.200 N
+D. 1.400 N
+E. 1.600 N
+ANSWER: C
+
+5. Sebuah benda logam memiliki volume 0,006 m³ dan seluruh bagiannya dicelupkan ke dalam cairan dengan massa jenis 800 kg/m³. Jika percepatan gravitasi sebesar 10 m/s², besar gaya apung yang dialami benda tersebut adalah ....
+A. 24 N
+B. 36 N
+C. 42 N
+D. 48 N
+E. 60 N
+ANSWER: D
+
+6. Air mengalir melalui sebuah pipa yang memiliki dua bagian dengan luas penampang berbeda. Pada bagian pertama, luas penampang pipa sebesar 24 cm² dan kecepatan aliran air sebesar 3 m/s. Jika luas penampang bagian kedua diperkecil menjadi 8 cm², kecepatan aliran air pada bagian kedua adalah ....
+A. 4 m/s
+B. 6 m/s
+C. 7 m/s
+D. 8 m/s
+E. 9 m/s
+ANSWER: E
+
+7. Sebuah kawat lurus sepanjang 15 cm digunakan untuk menarik lapisan tipis zat cair sehingga luas permukaan lapisan tersebut bertambah. Jika tegangan permukaan zat cair sebesar 0,04 N/m, besar gaya yang diperlukan untuk mempertahankan kawat agar tetap seimbang adalah .... (Perhatikan bahwa lapisan zat cair memiliki dua permukaan.)
+A. 0,003 N
+B. 0,006 N
+C. 0,009 N
+D. 0,012 N
+E. 0,015 N
+ANSWER: D
+
+8. Sebuah sistem distribusi air menggunakan pipa horizontal yang memiliki bagian lebar dan bagian sempit. Pada bagian pipa yang lebar, air mengalir dengan kecepatan 3 m/s dan memiliki tekanan 180.000 Pa. Ketika air memasuki bagian pipa yang lebih sempit, kecepatannya meningkat menjadi 7 m/s. Jika massa jenis air 1.000 kg/m³ dan tidak terjadi perubahan ketinggian, tekanan air pada bagian pipa yang sempit adalah ....
+A. 140.000 Pa
+B. 150.000 Pa
+C. 160.000 Pa
+D. 170.000 Pa
+E. 180.000 Pa
+ANSWER: C
+
+9. Dua buah pipa kapiler memiliki panjang dan jenis fluida yang sama. Perbedaan kedua pipa hanya terletak pada jari-jari penampangnya. Jari-jari pipa kedua adalah tiga kali jari-jari pipa pertama. Jika perbedaan tekanan pada kedua ujung pipa dibuat sama, perbandingan debit aliran pipa kedua terhadap pipa pertama adalah ....
+A. 3 : 1
+B. 6 : 1
+C. 9 : 1
+D. 27 : 1
+E. 81 : 1
+ANSWER: E
+
+10. Sebuah pelampung berbentuk tabung tertutup memiliki volume luar 0,02 m³ dan massa 13 kg. Pelampung tersebut digunakan untuk menopang sebuah alat pengukur di dalam air. Jika massa jenis air 1.000 kg/m³ dan percepatan gravitasi 10 m/s², massa tambahan maksimum yang masih dapat ditopang sebelum seluruh volume pelampung tercelup adalah ....
+A. 5 kg
+B. 6 kg
+C. 7 kg
+D. 8 kg
+E. 9 kg
+ANSWER: C
+
+11. Sebuah alat metronom mekanis menggunakan bandul yang bergerak bolak-balik untuk menghasilkan ketukan dengan interval teratur. Ketika bandul berada pada titik simpangan terjauh, karakteristik percepatan yang dialaminya adalah ....
+A. Bernilai nol karena kecepatan bandul juga nol.
+B. Bernilai maksimum dan mengarah menuju titik keseimbangan.
+C. Bernilai minimum dan searah dengan simpangan bandul.
+D. Bernilai konstan selama bandul bergerak menuju titik keseimbangan.
+E. Bernilai maksimum dan mengarah menjauhi titik keseimbangan.
+ANSWER: B
+
+12. Sebuah alat pendeteksi getaran menggunakan sensor yang terdiri atas pegas dan massa kecil. Untuk meningkatkan sensitivitas alat, teknisi mengganti massa sensor dengan massa yang lebih besar, sedangkan konstanta pegas dipertahankan tetap. Berdasarkan perubahan tersebut, bagaimana pengaruhnya terhadap periode osilasi sensor?
+A. Periode menjadi lebih kecil karena massa bertambah.
+B. Periode tetap karena hanya konstanta pegas yang memengaruhi osilasi.
+C. Periode menjadi lebih besar karena periode berbanding lurus dengan akar massa.
+D. Periode menjadi dua kali lipat setiap massa ditambahkan.
+E. Periode menjadi lebih kecil karena frekuensi sudut meningkat.
+ANSWER: C
+
+13. Sebuah benda yang terikat pada pegas melakukan gerak harmonik sederhana tanpa adanya gaya gesek. Ketika benda melewati titik keseimbangan, kondisi energi yang terjadi adalah ....
+A. Energi potensial maksimum dan energi kinetik minimum
+B. Energi potensial dan energi kinetik sama-sama maksimum
+C. Energi potensial minimum dan energi kinetik maksimum
+D. Energi potensial dan energi kinetik sama-sama minimum
+E. Energi potensial berubah menjadi nol dan energi kinetik juga nol
+ANSWER: C
+
+14. Sebuah sensor mekanik menggunakan pegas dengan konstanta sebesar 180 N/m. Sensor tersebut dihubungkan dengan benda bermassa 0,5 kg dan kemudian dibuat berosilasi secara harmonik. Frekuensi osilasi yang dihasilkan sistem tersebut mendekati ....
+A. 1,51 Hz
+B. 2,01 Hz
+C. 2,52 Hz
+D. 3,02 Hz
+E. 3,52 Hz
+ANSWER: D
+
+15. Sebuah bandul sederhana dipasang pada rangka alat percobaan dengan panjang tali 90 cm. Bandul tersebut disimpangkan dengan sudut kecil, kemudian dilepaskan sehingga berayun secara periodik. Jika percepatan gravitasi sebesar 10 m/s², waktu yang diperlukan bandul untuk melakukan satu getaran penuh adalah ....
+A. 1,28 s
+B. 1,54 s
+C. 1,88 s
+D. 2,14 s
+E. 2,56 s
+ANSWER: C
+
+16. Sebuah benda bermassa 400 gram dihubungkan dengan pegas yang memiliki konstanta 200 N/m. Benda tersebut mengalami osilasi dengan amplitudo 5 cm. Berdasarkan kondisi tersebut, energi mekanik total yang dimiliki sistem osilasi adalah ....
+A. 0,10 J
+B. 0,15 J
+C. 0,20 J
+D. 0,25 J
+E. 0,30 J
+ANSWER: D
+
+17. Gerakan sebuah komponen mesin yang berosilasi dinyatakan dengan persamaan:
+x = 0,08 cos(5t + π/3)
+dengan x dalam meter dan t dalam sekon. Besar percepatan komponen tersebut pada saat awal pengamatan (t=0) adalah ....
+A. -0,5 m/s²
+B. -1,0 m/s²
+C. 0,5 m/s²
+D. 1,0 m/s²
+E. 2,0 m/s²
+ANSWER: B
+
+18. Sebuah benda yang terhubung dengan pegas mengalami osilasi dengan amplitudo 10 cm. Ketika benda berada pada posisi 6 cm dari titik keseimbangan, energi potensial dan energi kinetiknya mengalami perubahan. Jika energi mekanik total sistem tetap, perbandingan energi kinetik terhadap energi potensial pada posisi tersebut adalah ....
+A. 9 : 16
+B. 9 : 25
+C. 16 : 9
+D. 16 : 25
+E. 25 : 16
+ANSWER: C
+
+19. Sebuah benda kecil diletakkan di atas platform yang bergerak secara vertikal mengikuti Gerak Harmonik Sederhana. Platform tersebut memiliki massa 0,5 kg, konstanta pegas 200 N/m, dan amplitudo 4 cm. Benda kecil akan kehilangan kontak dengan platform ketika percepatan platform mengarah ke bawah sebesar percepatan gravitasi. Berdasarkan kondisi tersebut, jarak posisi benda dari titik keseimbangan ketika kehilangan kontak adalah ....
+A. 1,0 cm
+B. 1,5 cm
+C. 2,0 cm
+D. 2,5 cm
+E. 3,5 cm
+ANSWER: D
+
+20. Sebuah mesin industri mengalami getaran akibat gaya luar periodik yang bekerja secara terus-menerus. Hasil pengamatan menunjukkan bahwa amplitudo getaran meningkat tajam ketika frekuensi gaya luar mendekati frekuensi alami mesin. Teknisi kemudian mempertimbangkan pemasangan sistem peredam untuk mengurangi getaran tersebut. Berdasarkan konsep osilasi terpaksa dan resonansi, analisis yang paling tepat adalah ....
+A. Resonansi terjadi ketika frekuensi gaya luar jauh lebih kecil daripada frekuensi alami sistem, sehingga amplitudo menjadi minimum.
+B. Resonansi terjadi ketika frekuensi gaya luar mendekati frekuensi alami sistem, sedangkan peredam membantu mengurangi amplitudo getaran.
+C. Resonansi menyebabkan energi mekanik sistem selalu berkurang hingga benda berhenti berosilasi.
+D. Pemasangan peredam akan meningkatkan amplitudo getaran karena gaya hambat memperbesar energi sistem.
+E. Frekuensi gaya luar tidak memiliki hubungan dengan besar amplitudo osilasi yang dihasilkan.
+ANSWER: B
+
+21. Saat terjadi gempa bumi, alat seismograf dapat mendeteksi gelombang P yang merambat melalui lapisan bumi. Gelombang tersebut menyebabkan partikel medium bergetar maju-mundur sejajar dengan arah rambat gelombang. Berdasarkan karakteristik tersebut, gelombang P termasuk jenis ....
+A. Gelombang transversal
+B. Gelombang longitudinal
+C. Gelombang elektromagnetik
+D. Gelombang permukaan
+E. Gelombang stasioner
+ANSWER: B
+
+22. Dua gelombang harmonik merambat pada medium yang sama dengan amplitudo dan frekuensi identik. Ketika kedua gelombang bertemu, keduanya memiliki perbedaan fase sebesar 180°. Fenomena yang paling mungkin terjadi adalah ....
+A. Kedua gelombang saling memperkuat sehingga amplitudo resultannya menjadi dua kali lipat.
+B. Kedua gelombang mengalami pemantulan sehingga arah rambatnya berbalik.
+C. Kedua gelombang saling melemahkan hingga menghasilkan amplitudo resultan nol.
+D. Kedua gelombang menghasilkan frekuensi yang lebih tinggi daripada frekuensi awal.
+E. Kedua gelombang berubah menjadi gelombang longitudinal.
+ANSWER: C
+
+23. Sebuah sumber bunyi menghasilkan gelombang dengan frekuensi tetap di dalam udara. Ketika suhu udara meningkat, cepat rambat bunyi juga mengalami peningkatan. Berdasarkan hubungan antara cepat rambat, frekuensi, dan panjang gelombang, perubahan yang terjadi adalah ....
+A. Panjang gelombang mengecil karena cepat rambat meningkat.
+B. Panjang gelombang tetap karena frekuensi sumber tidak berubah.
+C. Frekuensi meningkat karena suhu udara bertambah.
+D. Panjang gelombang meningkat karena cepat rambat bertambah, sedangkan frekuensi tetap.
+E. Cepat rambat meningkat sehingga frekuensi dan panjang gelombang sama-sama menurun.
+ANSWER: D
+
+24. Sebuah gelombang pada permukaan air dinyatakan melalui persamaan:
+y = 0,06 sin(8πt-4πx)
+dengan x dan y dalam meter serta t dalam sekon. Berdasarkan persamaan tersebut, cepat rambat gelombang adalah ....
+A. 0,5 m/s
+B. 1,0 m/s
+C. 1,5 m/s
+D. 2,0 m/s
+E. 2,5 m/s
+ANSWER: D
+
+25. Sebuah gelombang sinus merambat pada tali dengan massa per satuan panjang 0,02 kg/m. Gelombang tersebut memiliki frekuensi 5 Hz, amplitudo 10 cm, dan cepat rambat 10 m/s. Jika daya rata-rata gelombang dihitung menggunakan persamaan P = ½ μω²A²v, besar daya rata-rata yang dibawa gelombang tersebut mendekati ....
+A. 0,25 W
+B. 0,50 W
+C. 1,00 W
+D. 1,50 W
+E. 2,00 W
+ANSWER: C
+
+26. Sebuah kapal penelitian menggunakan gelombang bunyi untuk mendeteksi keberadaan objek di bawah permukaan laut. Kapal mengirimkan sinyal bunyi dan menerima pantulannya setelah 0,8 sekon. Jika cepat rambat bunyi di dalam air laut sebesar 1.500 m/s, jarak objek dari kapal adalah ....
+A. 300 m
+B. 450 m
+C. 600 m
+D. 750 m
+E. 1.200 m
+ANSWER: C
+
+27. Sebuah sumber bunyi menghasilkan intensitas sebesar 4x10⁻⁶ W/m² pada suatu titik pengamatan. Jika intensitas ambang pendengaran manusia adalah 10⁻¹² W/m², taraf intensitas bunyi yang diterima pada titik tersebut adalah ....
+A. 46 dB
+B. 56 dB
+C. 60 dB
+D. 66 dB
+E. 76 dB
+ANSWER: D
+
+28. Sebuah kereta inspeksi bergerak mendekati kendaraan pemantau yang bergerak berlawanan arah pada lintasan lurus. Kereta inspeksi menghasilkan bunyi dengan frekuensi 500 Hz. Kecepatan kereta inspeksi adalah 20 m/s, sedangkan kecepatan kendaraan pemantau adalah 5 m/s. Setelah kedua kendaraan berpapasan, keduanya bergerak saling menjauh dengan kecepatan yang tetap. Jika cepat rambat bunyi di udara sebesar 340 m/s, berapakah selisih frekuensi yang didengar kendaraan pemantau tepat sebelum dan sesudah kedua kendaraan berpapasan?
+A. 54 Hz
+B. 64 Hz
+C. 74 Hz
+D. 84 Hz
+E. 94 Hz
+ANSWER: C
+
+29. Sebuah tali sepanjang 2,4 meter diikat kuat pada kedua ujungnya dan menghasilkan gelombang berdiri. Pada suatu pengamatan, terbentuk empat perut gelombang di sepanjang tali. Jika cepat rambat gelombang pada tali sebesar 120 m/s, frekuensi getaran yang dihasilkan adalah ....
+A. 50 Hz
+B. 75 Hz
+C. 100 Hz
+D. 125 Hz
+E. 150 Hz
+ANSWER: C
+
+30. Dua pengeras suara identik ditempatkan pada posisi yang berdekatan dan menghasilkan gelombang bunyi dengan frekuensi serta amplitudo yang sama. Pada suatu titik pengamatan, kedua gelombang tersebut bertemu dengan perbedaan lintasan yang menyebabkan beda fase sebesar 180°. Setelah salah satu pengeras suara digeser sehingga beda fase kedua gelombang menjadi 0°, perubahan yang terjadi pada intensitas bunyi di titik pengamatan adalah ....
+A. Intensitas bunyi menjadi nol karena terjadi interferensi konstruktif.
+B. Intensitas bunyi meningkat karena kedua gelombang mengalami interferensi konstruktif.
+C. Intensitas bunyi tetap karena perubahan fase tidak memengaruhi superposisi gelombang.
+D. Intensitas bunyi menurun karena kedua gelombang mengalami interferensi destruktif.
+E. Frekuensi kedua gelombang meningkat akibat perubahan posisi pengeras suara.
+ANSWER: B
+
+31. Dalam pengujian tabung gas bertekanan, seorang teknisi menggunakan simulasi untuk memperkirakan perubahan gerakan molekul gas ketika tabung mengalami pemanasan. Agar perhitungan berdasarkan teori kinetik gas dapat dilakukan dengan benar, satuan suhu yang harus dimasukkan ke dalam simulasi adalah ....
+A. Celsius, karena menunjukkan suhu berdasarkan titik beku air.
+B. Fahrenheit, karena digunakan untuk mengukur suhu lingkungan.
+C. Kelvin, karena merupakan skala suhu mutlak dalam teori kinetik gas.
+D. Reamur, karena memiliki interval suhu yang tetap.
+E. Celsius, karena energi kinetik molekul hanya dipengaruhi perubahan suhu relatif.
+ANSWER: C
+
+32. Sebuah termometer memiliki skala buatan A. Pada saat es mencair, termometer menunjukkan suhu −20°A, sedangkan saat air mendidih menunjukkan suhu 130°A. Jika suatu benda memiliki suhu 25°C, berapakah suhu benda tersebut jika diukur menggunakan termometer A?
+A. 12,5°A
+B. 15°A
+C. 17,5°A
+D. 20°A
+E. 22,5°A
+ANSWER: C
+
+33. Seorang teknisi menggunakan termometer gas volume konstan untuk mengukur suhu. Ketika suhu gas meningkat, tekanan gas juga meningkat, sedangkan volumenya dipertahankan tetap. Prinsip yang digunakan dalam pengukuran tersebut adalah ....
+A. Tekanan gas berbanding terbalik dengan suhu mutlak.
+B. Tekanan gas berbanding lurus dengan suhu mutlak.
+C. Volume gas berbanding lurus dengan suhu Celsius.
+D. Tekanan gas tidak dipengaruhi oleh perubahan suhu.
+E. Massa gas bertambah ketika suhu meningkat.
+ANSWER: B
+
+34. Sebuah batang logam digunakan sebagai bagian dari rangka alat pengukur suhu. Panjang awal batang tersebut adalah 1,5 meter pada suhu 20°C. Ketika alat beroperasi, suhu batang meningkat menjadi 100°C. Jika koefisien muai panjang logam adalah 12x10⁻⁶°C⁻¹, pertambahan panjang batang adalah ....
+A. 0,72 mm
+B. 1,08 mm
+C. 1,20 mm
+D. 1,44 mm
+E. 1,80 mm
+ANSWER: D
+
+35. Sebuah termometer X memiliki skala yang tidak biasa. Pada suhu 0°C, termometer menunjukkan angka −20°X, sedangkan pada suhu 100°C menunjukkan angka 180°X. Jika sebuah benda memiliki suhu 37°C, angka yang ditunjukkan termometer X adalah ....
+A. 44°X
+B. 50°X
+C. 54°X
+D. 60°X
+E. 74°X
+ANSWER: C
+
+36. Sebuah kawat tungsten memiliki hambatan jenis awal pada suhu 20°C. Kawat tersebut kemudian dipanaskan hingga 70°C. Jika koefisien suhu hambatan jenis tungsten adalah 0,0045°C⁻¹, persentase kenaikan hambatan jenis kawat adalah ....
+A. 11,25%
+B. 15,00%
+C. 18,00%
+D. 20,25%
+E. 22,50%
+ANSWER: E
+
+37. Dalam suatu simulasi termodinamika, sebuah wadah berisi gas ideal berada pada suhu 400 K. Gas tersebut memiliki molekul yang bergerak secara acak ke segala arah. Jika konstanta Boltzmann sebesar 1,38x10⁻²³ J/K, energi kinetik translasi rata-rata setiap molekul gas tersebut adalah ....
+A. 4,14x10⁻²¹ J
+B. 6,90x10⁻²¹ J
+C. 8,28x10⁻²¹ J
+D. 1,10x10⁻²⁰ J
+E. 1,66x10⁻²⁰ J
+ANSWER: C
+
+38. Sebuah termometer gas volume konstan menunjukkan tekanan 120 kPa ketika suhu gas 27°C. Setelah dipanaskan, tekanan gas berubah menjadi 160 kPa. Dengan menganggap jumlah gas dan volumenya tetap, suhu akhir gas tersebut adalah ....
+A. 77°C
+B. 87°C
+C. 97°C
+D. 107°C
+E. 127°C
+ANSWER: E
+
+39. Dua sampel gas ideal, yaitu gas A dan gas B, berada pada suhu yang berbeda. Gas A memiliki suhu 250 K, sedangkan gas B memiliki suhu 500 K. Jika energi kinetik translasi rata-rata setiap molekul hanya bergantung pada suhu mutlak, analisis yang tepat mengenai kedua gas tersebut adalah ....
+A. Energi kinetik rata-rata gas A dua kali gas B.
+B. Energi kinetik rata-rata gas B dua kali gas A.
+C. Energi kinetik rata-rata kedua gas sama.
+D. Energi kinetik rata-rata gas B empat kali gas A.
+E. Energi kinetik rata-rata gas A empat kali gas B.
+ANSWER: B
+
+40. Seorang peneliti mengamati perilaku gas nyata menggunakan persamaan keadaan Van der Waals. Dalam pengamatannya, terdapat kondisi suhu tertentu ketika penyimpangan perilaku gas nyata terhadap gas ideal menjadi sangat kecil. Peneliti kemudian menemukan bahwa pada suhu tersebut, koefisien virial pertama A(T) bernilai nol. Berdasarkan konsep suhu Boyle dalam materi, kesimpulan yang paling tepat adalah ....
+A. Suhu tersebut merupakan suhu ketika seluruh molekul gas berhenti bergerak.
+B. Suhu tersebut menunjukkan bahwa volume molekul gas menjadi nol.
+C. Suhu tersebut merupakan suhu ketika gaya antarmolekul selalu bernilai maksimum.
+D. Suhu tersebut merupakan suhu ketika gas nyata menunjukkan perilaku yang mendekati gas ideal.
+E. Suhu tersebut menyebabkan tekanan gas tidak lagi dipengaruhi oleh volume.
+ANSWER: D

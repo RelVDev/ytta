@@ -1,0 +1,321 @@
+Soal Quiz Fisika
+
+1. Satuan tekanan pada Fluida adalah ...
+A. Newton
+B. Joule
+C. Pascal
+D. Watt
+E. Hertz
+Jawaban: C. Pascal
+
+2. Bu Sari menuang minyak goreng ke dalam gelas ukur. Massa minyak tersebut 340 gram dan volumenya 400 cm³. Massa jenis minyak goreng tersebut adalah ...
+A. 850 kg/m³
+B. 85 kg/m³
+C. 136 kg/m³
+D. 1.176 kg/m³
+E. 8.500 kg/m³
+Jawaban: A. 850 kg/m³
+
+3. Seorang penyelam berada pada kedalaman 25 m di laut. Anggap massa jenis air laut 1.000 kg/m³ dan g = 10 m/s². Jika tekanan atmosfer 1 × 10⁵ Pa, tekanan total yang dialami penyelam tersebut adalah ...
+A. 2,5 × 10⁴ Pa
+B. 3,5 × 10⁴ Pa
+C. 1,25 × 10⁵ Pa
+D. 2,5 × 10⁵ Pa
+E. 3,5 × 10⁵ Pa
+Jawaban: E. 3,5 × 10⁵ Pa
+
+4. Fajar yang bermassa 50 kg berdiri tegak dengan kedua kakinya di atas lantai. Luas telapak setiap kaki 125 cm² dan g = 10 m/s². Tekanan yang diberikan Fajar pada lantai adalah ...
+A. 2.000 Pa
+B. 4.000 Pa
+C. 10.000 Pa
+D. 20.000 Pa
+E. 40.000 Pa
+Jawaban: D. 20.000 Pa
+
+5. Sebuah dongkrak hidrolik memiliki penampang kecil 10 cm² dan penampang besar 500 cm². Dongkrak tersebut digunakan untuk mengangkat mobil yang beratnya 10.000 N (g = 10 m/s²). Gaya minimum yang harus diberikan pada penampang kecil adalah ...
+A. 200 N
+B. 500 N
+C. 1.000 N
+D. 2.000 N
+E. 5.000 N
+Jawaban: A. 200 N
+
+6. Sebuah bola logam bervolume 2 × 10⁻³ m³ dicelupkan seluruhnya ke dalam minyak yang massa jenisnya 800 kg/m³ (g = 10 m/s²). Gaya apung yang dialami bola tersebut adalah ...
+A. 1,6 N
+B. 16 N
+C. 80 N
+D. 160 N
+E. 1.600 N
+Jawaban: B. 16 N
+
+7. Maya menimbang sebuah balok di udara dan terbaca 30 N. Ketika balok dicelupkan seluruhnya ke dalam air, neraca menunjukkan 20 N (ρ_air = 1.000 kg/m³, g = 10 m/s²). Massa jenis balok tersebut adalah ...
+A. 1.500 kg/m³
+B. 2.000 kg/m³
+C. 2.500 kg/m³
+D. 3.000 kg/m³
+E. 6.000 kg/m³
+Jawaban: D. 3.000 kg/m³
+
+8. Wawan menyiram tanaman dengan selang yang luas penampang ujungnya 2 cm². Air keluar dari ujung selang dengan laju 5 m/s. Debit air yang keluar dari selang adalah ...
+A. 0,1 L/s
+B. 0,5 L/s
+C. 1 L/s
+D. 2 L/s
+E. 10 L/s
+Jawaban: C. 1 L/s
+
+9. Air mengalir dalam pipa mendatar. Pada bagian pipa yang lebar, laju air 2 m/s dan tekanannya 1,5 × 10⁵ Pa. Pada bagian pipa yang sempit, laju air menjadi 6 m/s (ρ_air = 1.000 kg/m³). Tekanan air pada bagian yang sempit adalah ...
+A. 1,16 × 10⁵ Pa
+B. 1,34 × 10⁵ Pa
+C. 1,50 × 10⁵ Pa
+D. 1,66 × 10⁵ Pa
+E. 1,84 × 10⁵ Pa
+Jawaban: B. 1,34 × 10⁵ Pa
+
+10. Sebuah telur tenggelam di dalam air tawar, tetapi terapung ketika dimasukkan ke dalam larutan air garam pekat. Peristiwa ini terjadi karena ...
+A. massa jenis telur lebih kecil daripada massa jenis air tawar maupun air garam
+B. massa jenis telur lebih besar daripada massa jenis air tawar maupun air garam
+C. massa jenis telur sama dengan massa jenis air tawar
+D. berat telur berkurang ketika dimasukkan ke dalam air garam
+E. massa jenis telur lebih besar daripada air tawar, tetapi lebih kecil daripada air garam
+Jawaban: E. massa jenis telur lebih besar daripada air tawar, tetapi lebih kecil daripada air garam
+
+11. Waktu yang diperlukan benda untuk melakukan satu getaran lengkap disebut ...
+A. frekuensi
+B. periode
+C. amplitudo
+D. simpangan
+E. fase
+Jawaban: B. periode
+
+12. Sebuah beban yang digantung pada pegas bergetar harmonik sederhana. Ketika beban melewati titik setimbang, besaran yang bernilai maksimum adalah ...
+A. kecepatan
+B. simpangan
+C. percepatan
+D. gaya pulih
+E. energi potensial
+Jawaban: A. kecepatan
+
+13. Sebuah bandul bergetar sebanyak 240 kali dalam waktu 2 menit. Periode getaran bandul tersebut adalah ...
+A. 0,25 s
+B. 0,5 s
+C. 2 s
+D. 120 s
+E. 240 s
+Jawaban: B. 0,5 s
+
+14. Sebuah beban bergetar harmonik dengan persamaan simpangan y = 0,3 sin 4t meter, dengan t dalam sekon. Kecepatan maksimum beban tersebut adalah ...
+A. 0,075 m/s
+B. 0,3 m/s
+C. 1,2 m/s
+D. 4,8 m/s
+E. 12 m/s
+Jawaban: C. 1,2 m/s
+
+15. Yoga menggantungkan beban bermassa 2 kg pada pegas yang konstantanya 200 N/m, lalu menggetarkannya. Periode getaran beban tersebut adalah ...
+A. 0,2π s
+B. 0,4π s
+C. 2π s
+D. 4π s
+E. 20π s
+Jawaban: A. 0,2π s
+
+16. Sebuah beban bermassa 0,5 kg bergetar harmonik dengan frekuensi sudut 10 rad/s dan amplitudo 0,2 m. Energi total getaran beban tersebut adalah ...
+A. 0,25 J
+B. 0,5 J
+C. 0,75 J
+D. 1 J
+E. 2 J
+Jawaban: D. 1 J
+
+17. Sebuah benda bergetar harmonik dengan frekuensi sudut 12 rad/s dan amplitudo 0,05 m. Percepatan maksimum benda tersebut adalah ...
+A. 0,6 m/s²
+B. 3,6 m/s²
+C. 7,2 m/s²
+D. 14,4 m/s²
+E. 144 m/s²
+Jawaban: C. 7,2 m/s²
+
+18. Sebuah ayunan di taman dianggap sebagai bandul sederhana dengan panjang tali 6,4 m (g = 10 m/s²). Periode ayunan tersebut adalah ...
+A. 0,4π s
+B. 0,8π s
+C. 1,2π s
+D. 1,4π s
+E. 1,6π s
+Jawaban: E. 1,6π s
+
+19. Sebuah bandul sederhana memiliki periode T ketika berayun di Bumi. Jika bandul yang sama dibawa ke sebuah planet yang percepatan gravitasinya ¼ kali percepatan gravitasi Bumi, periode bandul tersebut menjadi ...
+A. ¼ T
+B. ½ T
+C. T
+D. 2T
+E. 4T
+Jawaban: D. 2T
+
+20. Sebuah beban pada pegas bergetar harmonik dengan amplitudo 10 cm dan frekuensi sudut 5 rad/s. Pada saat simpangan beban 6 cm, kecepatan beban tersebut adalah ...
+A. 0,1 m/s
+B. 0,2 m/s
+C. 0,3 m/s
+D. 0,4 m/s
+E. 0,5 m/s
+Jawaban: D. 0,4 m/s
+
+21. Dua gelombang harmonik yang merambat pada seutas tali memiliki frekuensi dan amplitudo yang sama. Agar kedua gelombang tersebut mengalami interferensi konstruktif, beda fase keduanya harus ...
+A. 90°
+B. 180°
+C. 270°
+D. 0° (atau kelipatan 360°)
+E. 45°
+Jawaban: D. 0° (atau kelipatan 360°)
+
+22. Pada gelombang longitudinal, jarak antara dua rapatan yang berurutan sama dengan ...
+A. satu panjang gelombang
+B. setengah panjang gelombang
+C. dua panjang gelombang
+D. satu amplitudo
+E. satu periode
+Jawaban: A. satu panjang gelombang
+
+23. Pada gelombang permukaan air, jarak antara sebuah puncak dan lembah terdekat adalah 0,6 m, dan periode gelombang 0,2 s. Cepat rambat gelombang tersebut adalah ...
+A. 0,24 m/s
+B. 1,5 m/s
+C. 3 m/s
+D. 4 m/s
+E. 6 m/s
+Jawaban: E. 6 m/s
+
+24. Sebuah kapal memancarkan bunyi ke dasar laut dan bunyi pantulannya diterima kembali setelah 0,8 s. Jika cepat rambat bunyi di air laut 1.500 m/s, kedalaman laut di bawah kapal tersebut adalah ...
+A. 300 m
+B. 600 m
+C. 1.200 m
+D. 1.875 m
+E. 2.400 m
+Jawaban: B. 600 m
+
+25. Gelombang pada seutas tali dinyatakan dengan persamaan y = 0,05 sin 2π(10t − 4x) meter, dengan x dalam meter dan t dalam sekon. Cepat rambat gelombang tersebut adalah ...
+A. 0,4 m/s
+B. 1,25 m/s
+C. 2,5 m/s
+D. 10 m/s
+E. 40 m/s
+Jawaban: C. 2,5 m/s
+
+26. Seutas tali yang panjangnya 2 m dan massanya 0,5 kg ditegangkan sehingga gelombang pada tali merambat dengan laju 40 m/s. Tegangan tali tersebut adalah ...
+A. 25 N
+B. 50 N
+C. 100 N
+D. 200 N
+E. 400 N
+Jawaban: E. 400 N
+
+27. Sebuah dawai gitar yang kedua ujungnya terikat memiliki panjang 0,6 m. Dawai tersebut menghasilkan nada dasar dengan frekuensi 150 Hz. Cepat rambat gelombang pada dawai adalah ...
+A. 90 m/s
+B. 180 m/s
+C. 270 m/s
+D. 360 m/s
+E. 540 m/s
+Jawaban: B. 180 m/s
+
+28. Sebuah sumber bunyi yang diam memancarkan bunyi berfrekuensi 400 Hz. Seorang pengendara sepeda motor bergerak mendekati sumber tersebut dengan laju 17 m/s. Jika cepat rambat bunyi di udara 340 m/s, frekuensi bunyi yang didengar pengendara tersebut adalah ...
+A. 380 Hz
+B. 400 Hz
+C. 410 Hz
+D. 420 Hz
+E. 440 Hz
+Jawaban: D. 420 Hz
+
+29. Tegangan pada sebuah dawai dijadikan 4 kali semula, sedangkan panjang dan massa per satuan panjang dawai tetap. Frekuensi nada dasar dawai tersebut menjadi ...
+A. ½ kali semula
+B. 2 kali semula
+C. 4 kali semula
+D. 8 kali semula
+E. 16 kali semula
+Jawaban: B. 2 kali semula
+
+30. Taraf intensitas bunyi sebuah mesin pabrik adalah 60 dB. Jika 10 mesin identik dioperasikan bersamaan, taraf intensitas bunyi yang diterima menjadi ...
+A. 61 dB
+B. 66 dB
+C. 69 dB
+D. 70 dB
+E. 600 dB
+Jawaban: D. 70 dB
+
+31. Pada tekanan 1 atm, titik didih air pada skala Reamur adalah ...
+A. 0 °R
+B. 32 °R
+C. 100 °R
+D. 212 °R
+E. 80 °R
+Jawaban: E. 80 °R
+
+32. Termometer raksa bekerja berdasarkan sifat termometrik berupa ...
+A. pemuaian volume raksa ketika dipanaskan
+B. perubahan hambatan listrik
+C. perubahan tekanan gas pada volume tetap
+D. perubahan warna zat
+E. pancaran radiasi inframerah
+Jawaban: A. pemuaian volume raksa ketika dipanaskan
+
+33. Hadi mengukur suhu sebuah larutan dengan termometer Celsius dan terbaca 60 °C. Jika dinyatakan dalam skala Reamur, suhu larutan tersebut adalah ...
+A. 30 °R
+B. 48 °R
+C. 60 °R
+D. 75 °R
+E. 108 °R
+Jawaban: B. 48 °R
+
+34. Sebuah oven menunjukkan suhu 212 °F pada termometer Fahrenheit. Jika dinyatakan dalam kelvin (gunakan T = t + 273), suhu oven tersebut adalah ...
+A. 100 K
+B. 273 K
+C. 340 K
+D. 373 K
+E. 485 K
+Jawaban: D. 373 K
+
+35. Termometer Y menunjukkan angka −10 °Y pada titik lebur es dan 110 °Y pada titik didih air. Jika suhu suatu benda 30 °C, suhu benda tersebut pada termometer Y adalah ...
+A. 20 °Y
+B. 26 °Y
+C. 36 °Y
+D. 46 °Y
+E. 90 °Y
+Jawaban: B. 26 °Y
+
+36. Suatu suhu memiliki nilai angka yang sama pada skala Celsius dan skala Fahrenheit. Suhu tersebut adalah ...
+A. −40
+B. −32
+C. 0
+D. 32
+E. 40
+Jawaban: A. −40
+
+37. Suhu sebuah zat dinaikkan sebesar 45 K. Kenaikan suhu tersebut sama dengan kenaikan ... °F.
+A. 25 °F
+B. 36 °F
+C. 45 °F
+D. 72 °F
+E. 81 °F
+Jawaban: E. 81 °F
+
+38. Suatu benda diukur suhunya dengan termometer Celsius dan Reamur. Angka yang ditunjukkan termometer Celsius lebih besar 12 daripada angka pada termometer Reamur. Suhu benda tersebut dalam skala Celsius adalah ...
+A. 12 °C
+B. 36 °C
+C. 48 °C
+D. 60 °C
+E. 75 °C
+Jawaban: D. 60 °C
+
+39. Seorang perawat menempelkan termometer di bawah lidah pasien. Setelah beberapa saat, angka pada termometer tidak berubah lagi. Keadaan ini menunjukkan bahwa ...
+A. termometer dan tubuh pasien berada dalam kesetimbangan termal
+B. seluruh kalor tubuh pasien telah berpindah ke termometer
+C. termometer dan tubuh pasien memiliki massa yang sama
+D. tubuh pasien tidak lagi memiliki kalor
+E. volume raksa sama dengan volume tubuh pasien
+Jawaban: A. termometer dan tubuh pasien berada dalam kesetimbangan termal
+
+40. Skala suhu mutlak yang tidak memiliki nilai negatif adalah skala ...
+A. Celsius
+B. Fahrenheit
+C. Kelvin
+D. Reamur
+E. semua skala suhu
+Jawaban: C. Kelvin

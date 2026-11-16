@@ -1,0 +1,321 @@
+
+
+1. Tekanan hidrostatis di dalam zat cair yang diam bergantung pada ....
+A. luas penampang bejana
+B. bentuk bejana
+C. kedalaman dan massa jenis zat cair
+D. volume total zat cair
+E. massa zat cair saja
+Answer: C
+
+2.Dongkrak hidrolik bekerja berdasarkan prinsip ....
+A. Hukum Pascal
+B. Hukum Archimedes
+C. Asas Bernoulli
+D. Hukum Boyle
+E. Hukum Hooke
+Answer: A
+
+3. Sebuah benda akan melayang di dalam fluida jika massa jenis benda ....
+A. lebih besar daripada massa jenis fluida
+B. sama dengan massa jenis fluida
+C. lebih kecil daripada massa jenis fluida
+D. sama dengan nol
+E. tidak berhubungan dengan massa jenis fluida
+Answer: B
+
+4. Pada bejana berhubungan yang berisi satu jenis zat cair dalam keadaan diam, permukaan zat cair di setiap pipa ....
+A. lebih tinggi pada pipa yang sempit
+B. lebih tinggi pada pipa yang lebar
+C. lebih rendah pada pipa yang miring
+D. selalu berbeda
+E. sama tinggi
+Answer: E
+
+5. Dinding bendungan bagian bawah dibuat lebih tebal daripada bagian atas karena ....
+A. air di bagian bawah lebih ringan
+B. air di bagian atas lebih banyak
+C. bendungan bagian atas lebih kuat
+D. tekanan hidrostatis makin besar pada kedalaman yang makin besar
+E. gaya apung makin besar pada bagian atas
+Answer: D
+
+6. Pada alat penyemprot obat nyamuk, cairan dapat naik melalui pipa kecil karena ....
+A. udara di atas pipa diam sehingga tekanannya besar
+B. udara di atas pipa bergerak cepat sehingga tekanannya kecil
+C. cairan lebih ringan daripada udara
+D. gaya apung mendorong cairan ke atas
+E. massa jenis udara lebih besar daripada cairan
+Answer: B
+
+7. Sebuah kolam berisi air dengan kedalaman 4 m. Tekanan hidrostatis di dasar kolam adalah ....
+A. 400 Pa
+B. 4.000 Pa
+C. 40.000 Pa
+D. 400.000 Pa
+E. 4.000.000 Pa
+Answer: C
+
+8. (C3) Sebuah dongkrak hidrolik memiliki penampang kecil 20 cm² dan penampang besar 400 cm². Jika pada penampang kecil diberi gaya 50 N, gaya pada penampang besar adalah ....
+A. 100 N
+B. 200 N
+C. 400 N
+D. 800 N
+E. 1.000 N
+Answer: E
+
+9. Air mengalir dalam pipa berpenampang 10 cm² dengan kecepatan 2 m/s, lalu memasuki bagian pipa berpenampang 5 cm². Kecepatan air pada bagian yang sempit adalah ....
+A. 1 m/s
+B. 2 m/s
+C. 3 m/s
+D. 4 m/s
+E. 5 m/s
+Answer: D
+
+10. (C4) Sebuah balok kayu terapung di air dengan 3/4 bagian volumenya tercelup. Balok yang sama dimasukkan ke dalam cairan X dan terapung dengan 1/2 bagian volumenya tercelup. Massa jenis cairan X adalah ....
+A. 500 kg/m³
+B. 750 kg/m³
+C. 1.000 kg/m³
+D. 1.250 kg/m³
+E. 1.500 kg/m³
+Answer: E
+
+11. Contoh benda yang bergerak harmonik sederhana adalah ....
+A. bola yang menggelinding di lantai
+B. mobil yang melaju di jalan lurus
+C. beban pada pegas yang digetarkan
+D. batu yang jatuh bebas
+E. peluru yang ditembakkan
+Answer: C
+
+12.Frekuensi 1 Hz berarti ....
+A. satu getaran setiap sekon
+B. satu getaran setiap menit
+C. satu getaran setiap jam
+D. satu sekon setiap getaran
+E. satu meter setiap sekon
+Answer: A
+
+13. Pada simpangan terjauh, benda yang bergetar harmonik memiliki ....
+A. kecepatan maksimum
+B. energi potensial nol
+C. energi kinetik maksimum
+D. percepatan maksimum
+E. gaya pemulih nol
+Answer: D
+
+14. Periode ayunan bandul sederhana dengan simpangan kecil bergantung pada ....
+A. massa beban dan panjang tali
+B. panjang tali dan percepatan gravitasi
+C. massa beban dan amplitudo
+D. amplitudo dan massa beban
+E. massa beban saja
+Answer: B
+
+15. Sebuah bandul sederhana dibawa dari Bumi ke Bulan, yang percepatan gravitasinya lebih kecil. Periode ayunan bandul tersebut menjadi ....
+A. lebih kecil
+B. tetap sama
+C. nol
+D. berubah-ubah tidak beraturan
+E. lebih besar
+Answer: E
+
+16. Amplitudo getaran beban pada pegas diperbesar, sedangkan massa beban dan konstanta pegas tetap. Periode getarannya ....
+A. bertambah
+B. tetap
+C. berkurang
+D. menjadi nol
+E. menjadi dua kali semula
+Answer: B
+
+17. Sebuah benda bermassa 2 kg digantung pada pegas dengan konstanta 800 N/m, lalu digetarkan. Periode getarannya adalah ....
+A. 0,05π s
+B. 0,1π s
+C. 0,2π s
+D. 0,5π s
+E. π s
+Answer: B
+
+18. Sebuah bandul sederhana memiliki panjang tali 10 m. Dengan g = 10 m/s², periode ayunannya adalah ....
+A. 0,5π s
+B. π s
+C. 2π s
+D. 4π s
+E. 10π s
+ANswer: C
+
+19. Sebuah pegas dengan konstanta 400 N/m digetarkan dengan amplitudo 0,1 m. Energi mekanik getaran tersebut adalah ....
+A. 0,2 J
+B. 0,5 J
+C. 1 J
+D. 2 J
+E. 4 J
+Answer: D
+
+20. Sebuah beban pada pegas bergetar dengan periode 2 s. Setelah massa beban ditambah 9 kg, periodenya menjadi 4 s. Massa beban mula-mula adalah ....
+A. 1 kg
+B. 1,5 kg
+C. 2 kg
+D. 2,5 kg
+E. 3 kg
+Answer: E
+
+21. Contoh gelombang transversal adalah ....
+A. gelombang pada tali yang digetarkan naik turun
+B. gelombang bunyi di udara
+C. gelombang pada slinki yang didorong dan ditarik
+D. gelombang bunyi di dalam air
+E. gelombang ultrasonik
+Answer: A
+
+22. Rapatan dan regangan terdapat pada gelombang ....
+A. transversal
+B. stasioner
+C. longitudinal
+D. elektromagnetik
+E. tali
+ANswer: C
+
+23. Banyaknya gelombang yang melewati suatu titik setiap sekon disebut ....
+A. periode
+B. amplitudo
+C. panjang gelombang
+D. frekuensi
+E. cepat rambat
+Answer: D
+
+24. Menurut hukum pemantulan gelombang, ....
+A. sudut datang lebih besar daripada sudut pantul
+B. sudut datang sama dengan sudut pantul
+C. sudut datang lebih kecil daripada sudut pantul
+D. sudut pantul selalu 90°
+E. sudut datang tidak berhubungan dengan sudut pantul
+Answer: B
+
+25. Cepat rambat gelombang transversal pada tali bergantung pada ....
+A. amplitudo gelombang
+B. warna tali
+C. frekuensi sumber saja
+D. panjang tali saja
+E. gaya tegangan tali dan massa per satuan panjang tali
+Answer: E
+
+26. Frekuensi suatu gelombang diperbesar, sedangkan cepat rambatnya tetap. Panjang gelombangnya menjadi ....
+A. lebih kecil
+B. lebih besar
+C. tetap
+D. nol
+E. tak terhingga
+Answer: A
+
+27. Sebuah sumber getar menghasilkan 40 getaran dalam 10 s, dan panjang gelombang yang terbentuk 0,75 m. Cepat rambat gelombang tersebut adalah ....
+A. 1 m/s
+B. 2 m/s
+C. 3 m/s
+D. 4 m/s
+E. 5 m/s
+Answer: C
+
+28. Gelombang berjalan memiliki persamaan y = 0,02 sin (4πt − πx), dengan y dan x dalam meter dan t dalam sekon. Cepat rambat gelombang tersebut adalah ....
+A. 1 m/s
+B. 2 m/s
+C. 3 m/s
+D. 4 m/s
+E. 5 m/s
+Answer: D
+
+29. Seseorang berteriak di depan tebing dan mendengar gemanya 1,5 s kemudian. Jika cepat rambat bunyi di udara 340 m/s, jarak orang tersebut ke tebing adalah ....
+A. 170 m
+B. 255 m
+C. 340 m
+D. 510 m
+E. 680 m
+Answer: B
+
+30. Gelombang dengan cepat rambat 12 m/s dan panjang gelombang 3 m merambat dari medium 1 ke medium 2, yang cepat rambat gelombangnya 8 m/s. Panjang gelombang di medium 2 adalah ....
+A. 1 m
+B. 2 m
+C. 3 m
+D. 4 m
+E. 6 m
+Answer: B
+
+31. Titik tetap bawah dan titik tetap atas pada skala Celsius berturut-turut adalah ....
+A. 32°C dan 212°C
+B. 0°C dan 80°C
+C. 0°C dan 100°C
+D. 273°C dan 373°C
+E. 0°C dan 212°C
+Answer: C
+
+32. Titik didih air pada skala Fahrenheit adalah ....
+A. 80°F
+B. 100°F
+C. 180°F
+D. 212°F
+E. 373°F
+Answer: D
+
+33. Titik beku air pada skala Kelvin adalah ....
+A. 273 K
+B. 0 K
+C. 32 K
+D. 100 K
+E. 373 K
+Answer: A
+
+34. Titik didih air pada skala Reamur adalah ....
+A. 0°R
+B. 80°R
+C. 100°R
+D. 212°R
+E. 273°R
+Answer: B
+
+35. Perbandingan skala C : R : (F − 32) adalah ....
+A. 4 : 5 : 9
+B. 9 : 5 : 4
+C. 5 : 4 : 9
+D. 4 : 9 : 5
+E. 1 : 1 : 1
+Answer: C
+
+36. Suhu suatu ruangan 30°C. Jika dinyatakan dalam skala Kelvin, suhunya adalah ....
+A. 30 K
+B. 243 K
+C. 273 K
+D. 303 K
+E. 330 K
+Answer: D
+
+37. Suhu udara 20°C. Jika dinyatakan dalam skala Fahrenheit, suhunya adalah ....
+A. 36°F
+B. 52°F
+C. 56°F
+D. 68°F
+E. 88°F
+Answer: D
+
+38. Suhu sebuah benda 104°F. Jika dinyatakan dalam skala Celsius, suhunya adalah ....
+A. 32°C
+B. 36°C
+C. 40°C
+D. 48°C
+E. 72°C
+Answer: C
+
+39. Suhu air 20°C. Jika dinyatakan dalam skala Reamur, suhunya adalah ....
+A. 16°R
+B. 20°R
+C. 25°R
+D. 32°R
+E. 36°R
+Answer: A
+
+40. Pada suhu berapakah skala Celsius dan skala Fahrenheit menunjukkan angka yang sama?
+A. −40
+B. −32
+C. 0
+D. 32
+E. 40
+ANswer: A

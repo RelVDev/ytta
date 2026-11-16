@@ -1,0 +1,326 @@
+quis fisdas DI1 bab fluida,osilator harmonic,GM,dan suhu
+
+
+1. Zat fluida yang bersifat mengalir adalah.....
+A.Zat padat dan zat gas
+B.Zat cair dan zat gas
+C.Zat padat dan zat cair
+D.Zat gas dan zat campuran
+E.Zat cair dan zat campuran
+ANSWER: B
+
+2. Besaran yang menyatakan gaya yang dialami suatu zat per luas permukaan disebut.....
+A.Massa jenis
+B.Kecepatan
+C.Berat
+D.Tekanan
+E.Volume
+ANSWER: D
+
+3. Berikut ini yang termasuk contoh penerapan prinsip pascal dalam kehidupan sehari-hari adalah.....
+A.Dongkrak hidrolik
+B.Kapal selam
+C.Penyemprot obat nyamuk
+D.Pelampung renang
+E.Balon Udara
+ANSWER: A
+
+4. Jika sebuah pengukur tekanan ban menunjukkan angka 250 kPa, maka tekanan absolut didalam ban adalah...
+A.401
+B.351
+C.301
+D.451
+E.251
+ANSWER: B
+
+5. Benda dapat terapung di permukaan air apabila.....
+A.Massa jenis benda sama dengan massa jenis air
+B.Massa jenis benda lebih besar dari massa jenis air
+C.Massa jenis benda lebih kecil dari massa jenis air
+D.Massa jenis air lebih kecil dari massa jenis benda
+E.Tidak memiliki berat
+ANSWER:C
+
+6. Prinsip gaya tekan ke atas(gaya apung) yang dialami benda Ketika berada di dalam fluida sehingga benda mempunyai berat lebih kecil daripada di luar fluida, merupakan prinsip dari.....
+A.Kontinuitas
+B.Bernoulli
+C.Archimedes
+D.pascal
+E.Viskositas
+ANSWER: C
+
+7. Aliran fluida yang mengikuti lintasan tertentu dan bergerak mengikuti arah angin disebut....
+A.Aliran berputar
+B.Aliran torbulen
+C.Aliran tidak stabil
+D.Aliran laminar
+E.Aliran acak
+ANSWER: D
+
+8. Berdasarkan persamaan kontinuitas, apabila luas penampang pipa semakin besar, maka kecepatan aliran fluida akan.....
+A.Semakin kecil
+B.Semakin besar
+C.Tetap sama
+D.Tidak beraturan
+E.Menjadi nol
+ANSWER: A
+
+9. Alat yang digunakan untuk mengukur kecepatan aliran fluida disebut.....
+A.Hidrometer
+B.Barometer
+C.Manometer
+D.Viskometer
+E.Venturimeter
+ANSWER: E
+
+10. Fluida yang memiliki tingkat viskositas tinggi cenderung mengakibatkan....
+A.Berbentuk gas
+B.Lebih mudah mengalir
+C.Tidak memiliki tekanan
+D.Tidak memiliki massa
+E.Lebih sulit mengalir
+ANSWER: E
+
+11. Tanda negative pada persamaan hukum hooke menunjukkan.....
+A.Gaya bernilai positif
+B.Gaya searah dengan perpindahan
+C.Gaya berlawanan arah
+D.Pegas bergerak ke Bawah
+E.Pegas tidak memiliki gaya
+ANSWER: C
+
+12. Hukum yang menyamakan hukum hooke untuk massa konstan adalah....
+A.Hukum I newton
+B.Hukum II newton
+C.Hukum III newton
+D.Hukum kepler
+E.Hukum Gay-Lussac
+ANSWER: B
+
+13. Besaran yang menunjukkan simpangan maksimum suatu benda dari titik keseimbangan disebut.....
+A.Frekuensi
+B.Kecepatan
+C.Periode
+D.Amplitudo
+E.Energi potensial
+ANSWER: D
+
+14. Pada system pegas, frekuensi sudut dipengaruhi oleh.....
+A.Amplitudo dan Waktu
+B.Kecepatan dan Jarak
+C.Panjang lintasan dan gaya
+D.Konstanta pegas dan massa
+E.Energi dan gravitasi
+ANSWER: D
+
+15. Energi kinetic dan eneergi potensial dalam system gerak harmonic sederhana adalah....
+A.Selalu berubah
+B.Tetap
+C.Menjadi 0
+D.Konstan
+E.Tidak terhingga
+ANSWER: A
+
+16. Sebuah benda bermassa 2kg bergerak dengan kecepatan 3 m/s. energi kinetik yang dihasilkan sebesar....
+A.3 joule
+B.9 joule
+C.12 joule
+D.18 joule
+E.24 joule
+ANSWER : B
+
+17. Sebuah pegas memiliki konstanta 200 N/m dan simpangan 0,1 m. Energi potensial pegas adalah.....
+A.10 joule
+B.5 joule
+c.2 joule
+D.1 joule 
+E.0,5 joule
+ANSWER: D
+
+18. Sebuah benda bermassa 6 kg meregangkan sebuah pegas sejauh 24 cm tatkala ia digantungkan pada pegas secara vertical. kemudian pegas disimpangkan dari keadaan setimbang barunya dengan menarik benda kemudian dilepaskan. nilai konstanta pegas sebesar.....N/m
+A.45
+B.145
+C.245
+D.225
+E.345
+ANSWER: C
+
+19. Gaya pemulih pada bandul puntir berupa....
+A.Gaya gravitasi
+B.Gaya gesek
+C.Gaya magnet
+D.Gaya sentripetal
+E.Torsi pemulih
+ANSWER: E
+
+20. Sebuah bandul puntir memiliki momen inersia sebesar 2 kg m kuadrat dan konstanta puntir 8 Nm/rad. Nilai periode osilasimya adalah.....
+A.3,14 sekon
+B.2,14 sekon
+C.1,57 sekon
+D.4,28 sekon
+E.6,28 sekon
+ANSWER: A
+
+21. Gelombang transversal adalah gelombang yang arah getarannya.....
+A.Sejajar dengan arah rambat
+B.Berlawanan dengan arah rambat
+C.Selalu melingkar
+D.Tidak memiliki arah rambat
+E.Tegak lurus dengan arah rambat
+ANSWER: E
+
+22. Waktu yang dibutuhkan untuk menempuh satu getaran disebut....
+A.Frekuensi
+B.Periode
+C.Panjang gelombang
+D.Amplitudo
+E.Fase
+ANSWER: B
+
+23. Contoh gelombang longitudinal adalah.....
+A.Gelombang bunyi
+B.Gelombang pada tali
+C.Gelombang cahaya
+D.Gelombang riuk air
+E.Gelombang elektromagnetik
+ANSWER: A
+
+24. Jika frekuensi suatu gelombang adalah 10 Hz, periode gelombangnya sebesar....
+A.0,1 sekon
+B.0,2 sekon
+C.0,5 sekon
+D.2 sekon
+E.5 sekon
+ANSWER: A
+
+25. Suatu gelombang memiliki frekuensi 5 Hz dan Panjang gelombang 2 meter. cepat rambat gelombangnya adalah....
+A.25 m/s
+B.2,5 m/s
+C.20 m/s
+D.10 m/s
+E.5 m/s
+ANSWER: D
+
+Seutas tali digetarkan dengan frekuensi 10,00 Hz dan laju gelombang sebesar 20,0 cm/s.
+
+26. Besar frekuensi sudutnya adalah.....
+A.56,8 rad/s
+B.52,8 rad/s
+C.6,28 rad/s
+D.62,8 rad/s
+E.628 rad/s
+ANSWER: D
+27. Nilai bilangan gelombang sebesar.....
+A.314 rad/m
+B.3,14 rad/m
+C.31,4 rad/m
+D.214 rad/m
+E.21,4 rad/m
+ANSWER: C
+
+28. Cepat rambat gelombang pada tali dipengaruhi oleh.....
+A.Warna dan Panjang tali
+B.Tegangan tali dan massa per satuan Panjang
+C.Suhu dan warna tali
+D.Volume dan bentuk tali
+E.Tekanan Udara
+ANSWER: B
+
+29. Cepat rambat gelombang bunyi dalam zat cair dipengaruhi oleh....
+A.Amplitudo
+B.Frekuensi
+C.Modulus limbak dan massa jenis
+D.Warna dan bentuk zat cair
+E.Volume dan warna zat cair
+ANSWER: C
+
+30. Efek Doppler merupakan peristiwa.....
+A.Perubahan amplitudo gelombang
+B.Perubahan massa gelombang
+C.Pemantulan cahaya
+D.Perubahan frekuensi bunyi yang didengar akibat gerak relatif sumber dan pengamat
+E.Hilangnya energi bunyi
+ANSWER: D
+
+31. Berikut ini yang termasuk perubahan sifat fisis akibat perubahan suhu adalah....
+A.Pemuaian
+B.Perubahan tekanan
+C.Perubahan wujud
+D.Perubahan resistivitas
+E.Semua benar
+ANSWER: E
+
+32. Suatu sistem dikatakan berada dalam kesetimbangan termal apabila.....
+A.Setiap bagian sistem memiliki suhu berbeda
+B.Suhu sistem selalu meningkat
+C.Setiap bagian sistem memiliki suhu yang sama
+D.Sistem terus mengalami perubahan wujud
+E.Terjadi aliran kalor secara terus menerus
+ANSWER: C
+
+33. Hukum ke-Nol termodinamika menjelaskan tentang.....
+A.Kekekalan energi
+B.Kesetimbangan termal
+C.Pemuaian zat
+D.Tekanan gas
+E.Perubahan volume
+ANSWER: B
+
+34. Satuan suhu dalam skala mutlak adalah.....
+A.Celcius
+B.Fahrenheit
+C.Reamur
+D.Kelvin
+E.Rankine
+ANSWER: D
+
+35. Pada termometer gas volume konstan,besaran yang digunakan untuk mengukur perubahan suhu adalah.....
+A.Massa gas
+B.Volume gas
+C.Tekanan gas
+D.Warna gas
+E.Kecepatan gas
+ANSWER: C
+
+36. Dalam model gas ideal, gaya antar molekul dianggap.....
+A.Sangat besar
+B.Selalu Tarik menarik
+C.Diabaikan
+D.Tolak menolak
+E.Tidak dapat berubah
+ANSWER: C
+
+37. Gas ideal dapat digunakan untuk mendekati sifat gas sejati Ketika.....
+A.Suhu sangat rendah dan kerapatan tinggi
+B.Suhu sangat tinggi dan kerapatan rendah
+C.Suhu rendah dn tekanan tinggi
+D.Kerapatan tinggi
+E.Gas berada dalam keadaan membeku
+ANSWER: B
+
+38. Hukum distribusi Maxwell-Boltzman digunakan untuk menjelaskan.....
+A.Distribusi energi dan kecepatan molekul gas
+B.Pemuaian zat padat
+C.Perubahan wujud air
+D.kesetimbangan benda padat
+E.Perubahan tekanan zat cair
+ANSWER: A
+
+39. Suhu 80°C jika dikonversikan ke Fahrenheit adalah.....
+A.122°F
+B.144°F
+C.160°F
+D.176°F
+E.180°F
+ANSWER: D
+
+40. Suhu 50°C dikonversikan ke reamur adalah....
+A.20°R
+B.30°R
+C.50°R
+D.45°R
+E.40°R
+ANSWER: E
+ 
+ 
+ 

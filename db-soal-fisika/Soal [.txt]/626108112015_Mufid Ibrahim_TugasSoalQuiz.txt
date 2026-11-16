@@ -1,0 +1,324 @@
+1. Tekanan hidrostatis pada kedalaman 10 meter di bawah permukaan air adalah… (ρ = 1000 kg/m³, g = 10 m/s²)
+A.10.000 Pa
+B.50.000 Pa
+C.100.000 Pa
+D.200.000 Pa
+E.500.000 Pa
+ANSWER: C
+
+2. Sebuah dongkrak hidrolik memiliki luas penampang kecil 10 cm² dan luas penampang besar 100 cm². Jika gaya yang diberikan pada penampang kecil 50 N, maka gaya yang dihasilkan pada penampang besar adalah…
+A.50 N
+B.100 N
+C.250 N
+D.500 N
+E.1000 N
+ANSWER: D
+
+3. Peti kayu yang berbentuk balok memiliki ukuran panjang 1 m, lebar 50 cm, dan berat 400 N. Maka tekanan yang dihasilkan yaitu…
+A.200 N/m²
+B.400 N/m²
+C.600 N/m²
+D.800 N/m²
+E.1000 N/m²
+ANSWER: D
+
+4. Sebuah kubus memiliki sisi sebesar 5 cm dan diketahui massa kubus sebesar 250 gram. Massa jenis kubus tersebut adalah…
+A.0,5 gram/cm³
+B.1,0 gram/cm³
+C.1,5 gram/cm³
+D.2,0 gram/cm³
+E.2,5 gram/cm³
+ANSWER: D
+
+5. Sebuah bejana berisi air setinggi 100 cm. Jika massa jenis air 1000 kg/m³ dan percepatan gravitasi 10 m/s², maka besar tekanan hidrostatis pada dasar bejana adalah…
+A.10² N/m²
+B.10³ N/m²
+C.10⁴ N/m²
+D.10⁵ N/m²
+E.10⁶ N/m²
+ANSWER: C
+
+6. Sebuah balok kayu yang massa jenisnya 0,75 gr/cm³ terapung di atas air yang massa jenisnya 1 gr/cm³. Jika volume balok 12 cm³, volume balok yang tercelup di dalam air adalah…
+A.3 cm³
+B.6 cm³
+C.8 cm³
+D.9 cm³
+E.10 cm³
+ANSWER: D
+
+7. Bak kosong dengan volume 1 m³ diisi air dari kran yang memiliki luas penampang 2 cm² dengan kecepatan aliran 10 m/s. Bak tersebut akan terisi penuh dalam waktu…
+A.250 sekon
+B.500 sekon
+C.600 sekon
+D.750 sekon
+E.800 sekon
+ANSWER: B
+
+8. Timba diisi air yang mengalir dari sebuah pipa paralon dengan luas penampang 8 cm² dan kecepatan aliran 6 m/s. Volume air dalam timba setelah diisi selama 2 menit (120 s) adalah…
+A.120 liter
+B.136 liter
+C.338 liter
+D.467 liter
+E.576 liter
+ANSWER: E
+
+9. Sebuah bak mandi akan diisi dengan air mulai pukul 07.20 WIB s/d pukul 07.50 WIB. Jika debit air 10 liter/menit, maka volume air yang ada dalam bak mandi tersebut adalah…
+A.100 liter
+B.150 liter
+C.200 liter
+D.250 liter
+E.300 liter
+ANSWER: E
+
+10. Saat kita menyiram tanaman dengan menggunakan selang dan jarak tanaman jauh dari ujung selang, maka yang kita lakukan adalah memencet ujung selang supaya luas permukaan ujung selang menjadi semakin kecil. Asas yang terdapat pada aktivitas tersebut adalah…
+A.Asas kontinuitas
+B.Asas Bernoulli
+C.Hukum Pascal
+D.Hukum Archimedes
+E.Hukum Torricelli
+ANSWER: A
+
+11. Satuan frekuensi dalam Sistem Internasional (SI) adalah…
+A.Hertz
+B.Detik
+C.Menit
+D.Jam
+E.Meter
+ANSWER: A
+
+12. Dalam 2 menit terjadi 960 getaran pada suatu partikel. Frekuensi getaran partikel tersebut adalah…
+A.4 Hz
+B.8 Hz
+C.12 Hz
+D.16 Hz
+E.32 Hz
+ANSWER: B
+
+13. Amplitudo getaran adalah…
+A.Waktu yang diperlukan benda untuk melakukan satu getaran
+B.Jumlah getaran yang dilakukan benda tiap sekon
+C.Simpangan total yang dialami benda bergetar
+D.Simpangan terjauh benda yang bergetar terhadap titik keseimbangan
+E.Gerakan bolak-balik di sekitar titik seimbang
+ANSWER: D
+
+14. Sebuah bandul berayun dengan frekuensi 0,5 Hz. Berapa periode bandul tersebut?
+A.1 detik
+B.2 detik
+C.3 detik
+D.4 detik
+E.5 detik
+ANSWER: B
+
+15. Kesukaran pegas untuk ditekan atau diregangkan disebut…
+A.Koefisien pegas
+B.Tekanan
+C.Dorongan
+D.Konstanta pegas
+E.Regangan
+ANSWER: D
+
+16. Sebuah bandul bergetar sebanyak 50 kali dalam waktu 10 sekon. Periode getaran bandul tersebut adalah…
+A.0,1 sekon
+B.0,2 sekon
+C.0,5 sekon
+D.2 sekon
+E.5 sekon
+ANSWER: B
+
+17. Menurut definisi, waktu untuk melakukan 1 ayunan disebut…
+A.Periode
+B.Frekuensi
+C.Amplitudo
+D.Simpangan
+E.Getaran
+ANSWER: A
+
+18. Sebuah pegas digantungi beban bermassa 2 kg dan ternyata bertambah panjang 4 cm. Jika percepatan gravitasi g = 10 m/s², maka besar konstanta pegas tersebut adalah…
+A.50 N/m
+B.100 N/m
+C.250 N/m
+D.500 N/m
+E.800 N/m
+ANSWER: D
+
+19. Besarnya periode suatu ayunan (bandul) sederhana bergantung pada…
+(1) Panjang tali
+(2) Massa benda
+(3) Percepatan gravitasi
+(4) Amplitudo
+Pernyataan di atas yang benar adalah…
+A.(1), (2), dan (3)
+B.(1) dan (3)
+C.(2) dan (4)
+D.(4) saja
+E.(1), (2), (3), dan (4)
+ANSWER: B
+
+20. Sebuah benda bergerak harmonik dengan persamaan y = 5 sin (πt + π/2) m. Amplitudonya adalah…
+A.5 m
+B.π m
+C.π/2 m
+D.1 m
+E.2,5 m
+ANSWER: A
+
+21. Gelombang yang arah getarnya tegak lurus terhadap arah rambatnya disebut…
+A.Gelombang longitudinal
+B.Gelombang transversal
+C.Gelombang elektromagnetik
+D.Gelombang stasioner
+E.Gelombang diam
+ANSWER: B
+
+22. Sebuah gelombang merambat dengan kecepatan 340 m/s. Jika frekuensi gelombang adalah 50 Hz, panjang gelombang dari gelombang tersebut adalah…
+A.6,8 meter
+B.6,7 meter
+C.6,6 meter
+D.6,5 meter
+E.6,4 meter
+ANSWER: A
+
+23. Contoh gelombang longitudinal dalam kehidupan sehari-hari adalah…
+A.Gelombang cahaya
+B.Gelombang air
+C.Gelombang tali
+D.Gelombang bunyi
+E.Gelombang radio
+ANSWER: D
+
+24. Gelombang transversal pada suatu medium memiliki panjang gelombang 4 meter dan frekuensi 5 Hz. Kecepatan rambat gelombang tersebut adalah…
+A.10 m/s
+B.15 m/s
+C.20 m/s
+D.25 m/s
+E.30 m/s
+ANSWER: C
+
+25. Peristiwa berbeloknya arah rambat gelombang ketika melewati celah sempit atau penghalang disebut…
+A.Refleksi
+B.Refraksi
+C.Difraksi
+D.Interferensi
+E.Polarisasi
+ANSWER: C
+
+26. Suatu gelombang memiliki periode 0,5 detik dan panjang gelombang 2 meter. Kecepatan gelombang tersebut adalah…
+A.1 m/s
+B.2 m/s
+C.4 m/s
+D.5 m/s
+E.8 m/s
+ANSWER: C
+
+27. Gelombang yang memerlukan medium dalam perambatannya disebut…
+A.Gelombang elektromagnetik
+B.Gelombang mekanik
+C.Gelombang transversal
+D.Gelombang longitudinal
+E.Gelombang cahaya
+ANSWER: B
+
+28. Dalam waktu 10 sekon terbentuk 20 gelombang pada permukaan air. Jika panjang gelombangnya 2 meter, maka cepat rambat gelombang tersebut adalah…
+A.2 m/s
+B.4 m/s
+C.5 m/s
+D.10 m/s
+E.20 m/s
+ANSWER: B
+
+29. Peristiwa membaliknya gelombang setelah mengenai suatu penghalang atau bidang batas disebut…
+A.Refraksi (pembiasan)
+B.Difraksi (pelenturan)
+C.Interferensi (perpaduan)
+D.Refleksi (pemantulan)
+E.Dispersi (penguraian)
+ANSWER: D
+
+30. Sebuah tali digetarkan sehingga membentuk 3 bukit dan 3 lembah dalam jarak 6 meter. Panjang satu gelombang pada tali tersebut adalah…
+A.1 meter
+B.2 meter
+C.3 meter
+D.6 meter
+E.18 meter
+ANSWER: B
+
+31. Satuan suhu dalam Sistem Internasional (SI) adalah…
+A.Celcius
+B.Reamur
+C.Fahrenheit
+D.Kelvin
+E.Joule
+ANSWER: D
+
+32. Suhu suatu benda terukur sebesar 40°C. Jika dinyatakan dalam skala Reamur, suhu benda tersebut adalah…
+A.24°R
+B.32°R
+C.48°R
+D.50°R
+E.64°R
+ANSWER: B
+
+33. Cairan yang paling sering digunakan untuk mengisi tabung termometer karena pemuaiannya teratur dan tidak membasahi dinding kaca adalah…
+A.Air dan alkohol
+B.Raksa dan air
+C.Raksa dan alkohol
+D.Minyak dan air
+E.Alkohol dan minyak
+ANSWER: C
+
+34. Suhu air hangat tercatat sebesar 50°C. Jika diukur menggunakan termometer berskala Fahrenheit, suhu air tersebut adalah…
+A.90°F
+B.108°F
+C.112°F
+D.122°F
+E.140°F
+ANSWER: D
+
+35. Titik tetap bawah dan titik tetap atas pada termometer skala Celcius berturut-turut ditetapkan berdasarkan suhu…
+A.Es mencair dan air mendidih
+B.Air membeku dan es menyublim
+C.Air mendidih dan es mencair
+D.Alkohol membeku dan air mendidih
+E.Es mencair dan raksa mendidih
+ANSWER: A
+
+36. Suhu suatu ruangan adalah 27°C. Apabila dinyatakan dalam satuan Kelvin, suhu ruangan tersebut sebesar…
+A.246 K
+B.273 K
+C.300 K
+D.310 K
+E.327 K
+ANSWER: C
+
+37. Kelebihan alkohol dibandingkan raksa sebagai pengisi termometer adalah…
+A.Titik didihnya sangat tinggi
+B.Dapat mengukur suhu yang sangat rendah
+C.Tidak membasahi dinding kaca
+D.Warnanya mengilap sehingga mudah dilihat
+E.Pemuaiannya tidak teratur
+ANSWER: B
+
+38. Suhu sebuah benda terukur 77°F. Jika dikonversikan ke dalam skala Celcius, suhu benda tersebut adalah…
+A.15°C
+B.20°C
+C.25°C
+D.30°C
+E.35°C
+ANSWER: C
+
+39. Alat yang digunakan untuk mengukur derajat panas atau dinginnya suatu benda secara tepat adalah…
+A.Barometer
+B.Kalorimeter
+C.Termometer
+D.Hidrometer
+E.Manometer
+ANSWER: C
+
+40. Suhu suatu zat cair menunjukkan angka 60°R. Jika diukur dengan termometer Celcius, angka yang ditunjukkan adalah…
+A.45°C
+B.48°C
+C.65°C
+D.75°C
+E.80°C
+ANSWER: D

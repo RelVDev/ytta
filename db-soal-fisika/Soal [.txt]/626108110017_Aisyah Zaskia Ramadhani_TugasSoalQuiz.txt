@@ -1,0 +1,295 @@
+Soal Quiz Fisika 
+Nama	: Aisyah Zaskia Ramadhani
+NIM	: 626108110017
+Prodi 	: Biologi
+
+Soal Fluida
+1. Sebuah pipa kapiler dimasukkan ke dalam air. Kenaikan air dalam pipa kapiler disebabkan oleh ...
+A. Gaya gravitasi
+B. Gaya apung
+C. Tegangan permukaan
+D. Tekanan hidrostatis
+E. Viskositas
+Jawaban : C
+2. Sebuah benda tenggelam dalam air. Pernyataan yang benar adalah ...
+A. Gaya apung lebih besar dari berat benda.
+B. Gaya apung sama dengan berat benda.
+C. Gaya apung lebih kecil dari berat benda.
+D. Gaya apung tidak ada.
+E. Gaya apung berbanding terbalik dengan berat benda.
+Jawaban : C
+3. Prinsip Archimedes menyatakan bahwa ...
+A. Tekanan dalam fluida selalu diteruskan ke segala arah dengan sama besar.
+B. Benda yang tercelup sebagian atau seluruhnya dalam fluida akan mengalami gaya apung yang sama besar dengan berat fluida yang dipindahkan.
+C. Tekanan hidrostatis berbanding lurus dengan kedalaman.
+D. Viskositas fluida berbanding terbali dengan suhu.
+E. Tegangan permukaan fluida berbanding lurus dengan massa jenisnya.
+Jawaban : B
+4. Sebuah kapal laut dapat mengapung karena...
+A. Gaya gravitasi
+B. Gaya apung
+C. Tekanan hidrostatis
+D. Tegangan permukaan
+E. Viskositas
+Jawaban : B
+5. Sebuah benda dengan massa jenis 800 kg/m3 dicelupkan ke dalam air (1000 kg/m3). Benda tersebut akan ...
+A. Terapung
+B. Melayang
+C. Tenggelam
+D. Mengapung sebagian
+E. Tidak mengalami gaya apung
+Jawaban : A
+6. Sebuah benda dengan volume 0,5 m3 dicelupkan ke dalam air (p = 1000 kg/m3). Gaya apung yang dialami benda tersebut adalah .....
+A. 500 N
+B. 1000 N
+C. 2500 N
+D. 5000 N
+E. 7500 N
+Jawaban : D
+7. Tekanan hidrostatis pada kedalaman 10 meter di bawah permukaan air adalah ...(g=10 m/s2)
+A. 10.000 Pa
+B. 50.000 Pa
+C. 100.000 Pa
+D. 200.000 Pa
+E. 500.000 Pa
+Jawaban : C
+8. Sebuah dongkrak hidrolik memiliki luas penampang kecil 10 cm? dan luas penampang besar 100 cm'. Jika gaya yang diberikan pada penampang kecil 50 N, maka gaya yang dihasilkan pada penampang besar adalah ...
+A. 50 N
+B. 100 N
+C. 250 N
+D. 500 N
+E. 1000 N
+Jawaban : D
+9. Sebuah benda dengan volume 0,2 m3 tercelup seluruhnya dalam cairan dengan massa jenis 1200 kg/m3. Gaya apung yang dialami benda tersebut adalah ..... (g = 10 m/s2)
+A. 240 N
+B. 1200 N
+C. 2400 N
+D. 12000 N
+E. 24000 N
+Jawaban : C
+10. Seekor ikan berada pada kedalaman 15 meter di bawah permukaan air. Jika massa jenis air 1000 kg/m3 percepatan gravitasi bumi 10 m/s2 dan tekanan udara luar 105 N/m, tentukan tekanan hidrostatis yang dialami ikan dan tekanan total yang dialami ikan
+A. 150.000 pa dan 250.000 pa 
+B. 150.000 pa dan 100.000 pa
+C. 250.000 pa dan 150.000 pa
+D. 100.000 pa dan 250.000 pa
+E. 150.000 pa dan 200.000 pa
+Jawaban : A
+
+
+
+Soal Osilator Harmonik
+1. Gerak harmonik sederhana merupakan gerak bolak-balik secara periodik melalui titik ....
+A. Maksimum
+B. Minimum
+C. Kesetimbangan
+D. Terjauh
+E. Terendah
+Jawaban : C
+2. Simpangan maksimum suatu benda yang berosilasi disebut ....
+A. Frekuensi
+B. Periode
+C. Amplitudo
+D. Kecepatan
+E. Percepatan
+Jawaban : C
+3. Banyaknya osilasi yang terjadi setiap sekon disebut ....
+A. Amplitudo
+B. Frekuensi
+C. Periode
+D. Simpangan
+E. Fase
+Jawaban : B
+4. Pada gerak harmonik sederhana, percepatan benda memiliki arah ....
+A. Sama dengan perpindahan
+B. Berlawanan dengan perpindahan
+C. Selalu ke atas
+D. Selalu ke bawah
+E. Tidak memiliki arah
+Jawaban : B
+5. Pada gerak harmonik sederhana, energi mekanik total bersifat ....
+A. Selalu bertambah
+B. Selalu berkurang
+C. Selalu berubah
+D. Konstan
+E. Menjadi nol
+Jawaban : D
+6. Sebuah pegas memiliki konstanta pegas 100 N/m dan mengalami pertambahan panjang sebesar 0,02 m. Berapakah besar gaya pegas?
+A. 0,2 N
+B. 1 N
+C. 2 N
+D. 5 N
+E. 10 N
+Jawaban : C
+7. Sebuah benda bermassa 1 kg dihubungkan dengan pegas yang memiliki konstanta 100 N/m. Jika pi, berapakah periode osilasinya?
+A. 0,31 s
+B. 0,63 s
+C. 1,00 s
+D. 1,57 s
+E. 2,00 s
+Jawaban : B
+8. Sebuah benda melakukan 20 kali osilasi dalam waktu 10 sekon. Berapakah frekuensi osilasinya?
+A. 0,5 Hz
+B. 1 Hz
+C. 2 Hz
+D. 5 Hz
+E. 10 Hz
+Jawaban : C
+9. Sebuah bandul sederhana memiliki panjang tali 1 m. Jika percepatan gravitasi 10 m/s² dan ?, berapakah periode ayunannya?
+A. 0,5 s
+B. 1 s
+C. 1,5 s
+D. 2 s
+E. 3 s
+Jawaban : D
+10. Sebuah benda digantungkan pada pegas dengan konstanta pegas 200 N/m. Jika benda berosilasi dengan amplitudo 5 cm, berapakah energi mekanik?
+A. 0,05 J
+B. 0,10 J
+C. 0,25 J
+D. 0,50 J
+E. 1,00 J
+Jawaban  : C
+
+Soal Gelombang Mekanik
+1. Perbedaan gelombang mekanik dengan gelombang elektromagnetik adalah ...
+A. Gelombang elektromagnetik memerlukan medium sedang gelombang mekanik tidak memerlukannya.
+B. Gelombang elektromagnetik dapat merambat sedangkan gelombang mekanik tidak dapat merambat.
+C. Gelombang mekanik memerlukan medium sedang gelombang elektromagnetik tidak memerlukannya.
+D. Gelombang mekanik dapat merambat sedangkan gelombang elektromagnetik tidak dapat merambat.
+E. Gelombang mekanik dapat merambat di ruang hampa, sedangkan gelombang elektromagnetik memerlukan medium.
+Jawaban  : C
+2. Berikut ini yang termasuk contoh gelombang mekanik adalah ...
+A. Gelombang radio
+B. Sinar-x
+C. Gelombang bunyi
+D. Cahaya
+E. Sinar laser
+Jawaban : C
+3. Bedasarkan amplitudonya gelombang terbagi menjadi dua, yaitu gelombang dengan amplitude berubah-ubah dan gelombang dengan amplitude tetap sering disebut dengan .....
+A. Gelombang berjalan dan gelombang stasioner
+B. Gelombang transversal dan gelombang berjalan
+C. Gelombang transversal dan gelombang longitudinal
+D. Gelombang longitudinal dan gelombang transversal
+E. Gelombang bunyi dan gelombang cahaya
+Jawaban : A
+4.  Apa yang dimaksud dengan gelombang transversal?
+A. Gelombang yang arah getarnya sejajar dengan arah rambatnya. 
+B. Gelombang yang arah getarnya tegak lurus dengan arah rambatnya.
+C. Gelombang yang tidak membutuhkan medium untuk merambat. 
+D. Gelombang yang hanya merambat di ruang hampa. 
+E. Gelombang yang tidak memiliki amplitud
+Jawaban : B
+5. Apa yang dimaksud dengan efek Doppler?
+A. Perubahan amplitudo gelombang akibat perubahan medium. 
+B. Perubahan panjang gelombang akibat perubahan suhu. 
+C. Perubahan frekuensi bunyi yang dirasakan pengamat karena sumber bunyi dan/atau pengamat bergerak. 
+D. Peristiwa perpaduan dua gelombang yang menghasilkan gelombang baru. 
+E. Peristiwa pemantulan gelombang pada suatu medium.
+Jawaban : C
+6. Sebuah gelombang merambat melalui tali sepanjang 2 meter dengan kecepatan 20 m/s. Frekuensi gelombang tersebut yakni 10 Hz. Hitung panjang gelombangnya!
+A. 2 m
+B. 4 m
+C. 40 m
+D. 100 m
+E. 200 m
+Jawaban : A
+7. Sebuah gelombang merambat dengan kecepatan 50 m/s pada seutas tali. Amplitudo gelombang tersebut adalah 5 cm, sedangkan panjang gelombangnya 10 cm. Hitung frekuensi dan periode gelombang tersebut!
+A. 5 hz dan 0,2 s
+B. 500 Hz dan 0,002 s
+C. 0,2 Hz dan  5 s
+D. 0,5 Hz dan 2 s
+E. 0,02 Hz dan 5 s
+Jawaban : B
+8. Sebuah gelombang merambat pada seutas tali dengan panjang gelombang 4 meter dan periode 0,02 sekon. Berapakah kecepatan rambat gelombang tersebut?
+A. 50 m/s
+B. 100 m/s
+C. 150 m/s
+D. 200 m/s
+E. 250 m/s
+Jawaban : D
+9. Sebuah tali memiliki tegangan sebesar 100 N dan massa per satuan panjang sebesar 0,25 kg/m. Berapakah kecepatan rambat gelombang pada tali tersebut?
+A. 10 m/s
+B. 15 m/s
+C. 20 m/s
+D. 25 m/s
+E. 30 m/s
+Jawaban : C
+10. Sebuah sumber bunyi memiliki intensitas sebesar 10^-6  W/m². Jika intensitas ambang pendengaran manusia adalah 10^-12 W/m², berapakah taraf intensitas bunyi tersebut?
+A. 40 dB
+B. 50 dB
+C. 60 dB
+D. 70 dB
+E. 80 dB
+Jawaban : C
+
+Soal Suhu
+1. Mengapa pada saat memasak air, panci yang digunakan sering kali terbuat dari logam?
+A. Karena logam lebih ringan
+B. Karena logam mudah dibentuk
+C. Karena logam bersifat konduktor panas yang baik
+D. Karena logam tidak mudah berkarat
+E. Karena logam memiliki titik leleh yang tinggi.
+Jawaban : C
+2. Pada saat kita memasukkan es batu ke dalam segelas teh hangat, suhu teh akan turun. Hal ini menunjukkan bahwa...
+A. Es batu menyerap panas dari teh
+B. Teh memberikan energi panas pada es batu
+C. Suhu es batu dan teh menjadi sama
+D. Terjadi reaksi kimia antara es batu dan teh
+E. Es batu memiliki massa yang lebih kecil daripada teh.
+Jawaban : A
+3. Mengapa pada saat kita mengeringkan
+pakaian di bawah sinar matahari, pakaian menjadi kering?
+A. Karena sinar matahari menyerap air dari pakaian
+B. Karena sinar matahari mengubah air menjadi uap air
+C. Karena angin membawa air dari pakaian 
+D. Karena air mengalami penguapan akibat panas matahari
+E. Karena panas matahari menghilangkan kandungan air dalam pakaian
+Jawaban : B
+4. Alat yang digunakan untuk mengukur suhu suatu benda disebut ....
+A. Barometer 
+B. Higrometer 
+C. Termometer 
+D. Anemometer 
+E. Amperemeter
+Jawaban : C
+5. Apa yang dimaksud dengan suhu?
+A. Ukuran banyaknya kalor dalam suatu benda.
+B. Ukuran derajat panas atau dinginnya suatu benda.
+C. Jumlah energi yang dimiliki oleh suatu benda.
+D. Kemampuan benda untuk menghantarkan panas.
+E. Perpindahan energi panas dari satu benda ke benda lain.
+Jawaban : B
+6.  Suhu udara di luar rumah yaitu 41°F. Berapakah suhu itu jika dinyatakan dalam skala Celsius?
+A. 3°C
+B.4°C
+C. 6°C
+D. 5°C
+E. 7 °C
+Jawaban D
+7. Suhu tubuh normal manusia adalah 37°C. Berapa suhu tersebut jika dinyatakan dalam skala Fahrenheit?
+A. 98,6°F
+B. 100°F
+C. 95°F
+D. 86°F
+E. 98
+Jawaban A
+8. Suhu air mendidih adalah 100°C. Berapa suhu tersebut jika dinyatakan dalam skala Kelvin?
+A. 273 K
+B. 373 K
+C. 173 K
+D. 0 K
+E. 73 K
+Jawaban B
+9. Suhu di dalam kulkas adalah -18°C. Berapa suhu tersebut jika dinyatakan dalam skala Fahrenheit?
+A. 0°F
+B. -1°F
+C.-9°F
+D. -0,4°F
+E. -0,5
+Jawaban D
+10. Suhu air dalam sebuah wadah adalah 80°C. Jika suhu tersebut dikonversikan ke skala Reamur, berapakah hasilnya?
+A. 48°R
+B. 56°R
+C. 64°R
+D. 72°R
+E. 80°R
+Jawaban c

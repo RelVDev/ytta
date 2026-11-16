@@ -1,0 +1,285 @@
+Nama		: Shafira Fauziatuz Zahra
+NIM		: 626108112013
+Prodi		: Sistem Informasi
+Matkul	: Fisika Dasar
+Kelas		: DI 1
+1. Massa jenis suatu zat didefinisikan sebagai...
+A. Massa zat per satuan volume
+B. Berat zat per satuan luas
+C. Gaya per satuan luas
+D. Volume zat per satuan massa
+E. Massa zat per satuan luas
+ANSWER: A
+2. Menurut prinsip Pascal, tekanan luar yang bekerja pada fluida dalam ruang tertutup akan...
+A. Diteruskan hanya searah dengan gaya
+B. Diperkecil pada bagian dasar bejana
+C. Hilang pada dinding bejana
+D. Disalurkan ke seluruh bagian fluida
+E. Diteruskan hanya ke permukaan atas fluida
+ANSWER: D
+3. Tekanan hidrostatis yang diberikan zat cair diam pada suatu titik di dalamnya bergantung pada...
+A. Luas dasar bejana
+B. Bentuk bejana
+C. Massa jenis zat cair dan kedalaman titik tersebut
+D. Volume total zat cair
+E. Massa total zat cair
+ANSWER: C
+4. Sebuah benda berada dalam keadaan terapung setimbang di permukaan zat cair. Pernyataan yang benar adalah...
+A. Gaya apung lebih besar daripada berat benda
+B. Gaya apung lebih kecil daripada berat benda
+C. Massa jenis benda lebih besar daripada massa jenis zat cair
+D. Seluruh volume benda berada di dalam zat cair
+E. Gaya apung sama dengan berat benda
+ANSWER: E
+5. Sayap pesawat dirancang agar udara di atas sayap bergerak lebih cepat daripada udara di bawahnya. Akibatnya pesawat terangkat karena tekanan udara di atas sayap...
+A. Lebih kecil daripada tekanan di bawah sayap
+B. Lebih besar daripada tekanan di bawah sayap
+C. Sama dengan tekanan di bawah sayap
+D. Sama dengan nol
+E. Bergantung pada massa pesawat saja
+ANSWER: A
+6. Seorang penyelam berada pada kedalaman 10 m di laut. Jika ? air = 1.000 kg/m³, g = 9,8 m/s², dan tekanan atmosfer P_A = 1,013 × 105 Pa, tekanan absolut yang dialami penyelam adalah...
+A. 9,8 × 104 Pa
+B. 1,013 × 105 Pa
+C. 1,993 × 105 Pa
+D. 2,013 × 105 Pa
+E. 1,0 × 106 Pa
+ANSWER: C
+7. Sebuah dongkrak hidrolik memiliki penampang kecil 20 cm² dan penampang besar 400 cm². Jika pada penampang kecil diberi gaya 100 N, gaya yang dihasilkan pada penampang besar adalah...
+A. 5 N
+B. 100 N
+C. 500 N
+D. 2.000 N
+E. 8.000 N
+ANSWER: D
+8. Sebuah batu bermassa 5 kg dan bervolume 2 × 10?³ m³ berada di dasar kolam. Jika ? air = 1.000 kg/m³ dan g = 9,8 m/s², gaya minimum yang diperlukan untuk mengangkat batu tersebut adalah...
+A. 19,6 N
+B. 29,4 N
+C. 49,0 N
+D. 68,6 N
+E. 98,0 N
+ANSWER: B
+9. Darah mengalir dalam pembuluh berbentuk tabung. Jika jari-jari pembuluh menjadi 2 kali semula, sedangkan beda tekanan, panjang pembuluh, dan viskositas darah tetap, laju aliran darah (debit) menjadi...
+A. 4 kali semula
+B. 16 kali semula
+C. 32 kali semula
+D. 64 kali semula
+E. 256 kali semula
+ANSWER: B
+10. Air (? = 1.000 kg/m³) mengalir dalam pipa mendatar. Pada bagian berpenampang 5 cm², laju air 2 m/s, kemudian pipa menyempit menjadi 2 cm². Selisih tekanan antara bagian lebar dan bagian sempit (P1 - P2) adalah...
+A. 1.000 Pa
+B. 3.000 Pa
+C. 4.500 Pa
+D. 5.250 Pa
+E. 10.500 Pa
+ANSWER: E
+11. Syarat gerak harmonik sederhana adalah percepatan benda...
+A. Konstan
+B. Sebanding dengan kuadrat simpangan
+C. Searah dengan simpangan
+D. Sebanding dengan simpangan dan berlawanan arah dengan simpangan
+E. Sebanding dengan massa benda
+ANSWER: D
+12. Banyaknya osilasi yang terjadi dalam satu sekon disebut...
+A. Frekuensi
+B. Periode
+C. Amplitudo
+D. Fase
+E. Simpangan
+ANSWER: A
+13. Dua pegas serupa diberi beban bermassa sama. Pegas pertama disimpangkan 5 cm dan pegas kedua 10 cm, lalu keduanya dilepaskan bersamaan. Pegas yang lebih dahulu mencapai titik setimbang adalah...
+A. Pegas yang disimpangkan 5 cm
+B. Pegas yang disimpangkan 10 cm
+C. Keduanya mencapai titik setimbang bersamaan
+D. Bergantung pada massa beban saja
+E. Tidak dapat ditentukan
+ANSWER: C
+14. Energi total pada gerak harmonik sederhana sebanding dengan...
+A. Amplitudo
+B. Akar amplitudo
+C. Periode
+D. Percepatan gravitasi
+E. Kuadrat amplitudo
+ANSWER: E
+15. Pada osilator teredam dengan gaya hambat yang jauh lebih kecil daripada gaya pemulih, amplitudo osilasi...
+A. Tetap konstan
+B. Berkurang secara eksponensial terhadap waktu
+C. Bertambah terhadap waktu
+D. Berubah secara periodik tanpa berkurang
+E. Selalu sama dengan nol
+ANSWER: B
+16. Sebuah benda bermassa 2 kg digantungkan secara vertikal pada sebuah pegas sehingga pegas bertambah panjang 0,2 m. Jika g = 9,8 m/s², konstanta pegas tersebut adalah...
+A. 9,8 N/m
+B. 49 N/m
+C. 98 N/m
+D. 196 N/m
+E. 980 N/m
+ANSWER: C
+17. Sebuah benda bermassa 2 kg terikat pada pegas dengan konstanta 200 N/m dan berosilasi dengan amplitudo 5 cm. Laju maksimum benda tersebut adalah...
+A. 0,25 m/s
+B. 0,5 m/s
+C. 1,0 m/s
+D. 2,0 m/s
+E. 5,0 m/s
+ANSWER: B
+18. Posisi suatu benda yang berosilasi dinyatakan oleh x = 0,08 cos(5pt) meter, dengan t dalam sekon. Periode osilasinya adalah...
+A. 0,4 s
+B. 2,5 s
+C. 5 s
+D. 2p s
+E. 5p s
+ANSWER: A
+19. Periode sebuah bandul sederhana ingin diperkecil menjadi 90% dari periode semula. Panjang tali bandul harus...
+A. Diperpanjang 10%
+B. Diperpendek 10%
+C. Diperpanjang 19%
+D. Diperpendek 19%
+E. Diperpendek 81%
+ANSWER: D
+20. Sebuah benda berosilasi harmonik dengan amplitudo A. Posisi benda (terhadap titik setimbang) pada saat lajunya sama dengan setengah laju maksimumnya adalah...
+A. A/4
+B. A/2
+C. A/v2
+D. 3A/4
+E. (v3/2) A
+ANSWER: E
+21. Gelombang yang menyebabkan bagian-bagian medium bergerak sejajar dengan arah rambatnya disebut gelombang...
+A. Longitudinal
+B. Transversal
+C. Elektromagnetik
+D. Stasioner
+E. Permukaan
+ANSWER: A
+22. Satuan taraf intensitas bunyi adalah...
+A. Watt
+B. W/m²
+C. Hertz
+D. Joule
+E. Desibel (dB)
+ANSWER: E
+23. Dua gelombang harmonik beramplitudo sama bertemu dengan beda fase 180°. Hasil superposisinya menunjukkan interferensi...
+A. Konstruktif dengan amplitudo dua kali semula
+B. Destruktif sehingga kedua gelombang saling meniadakan
+C. Konstruktif dengan amplitudo setengah kali semula
+D. Destruktif dengan amplitudo dua kali semula
+E. Tidak terjadi interferensi
+ANSWER: B
+24. Pada tali yang kedua ujungnya terikat dengan panjang L, panjang gelombang pada harmonik ke-n memenuhi...
+A. ?? = nL
+B. ?? = L/n
+C. ?? = L/2n
+D. ?? = 4L/n
+E. ?? = 2L/n
+ANSWER: E
+25. Laju gelombang bunyi dalam zat cair bergantung pada...
+A. Modulus limbak (bulk) dan massa jenis zat cair
+B. Frekuensi dan amplitudo sumber bunyi
+C. Intensitas bunyi di tempat pengamat
+D. Jarak antara sumber dan pengamat
+E. Taraf intensitas bunyi
+ANSWER: A
+26. Seutas tali digetarkan dengan frekuensi 5 Hz dan laju gelombang pada tali 20 cm/s. Bilangan gelombang (k) gelombang tersebut adalah...
+A. 5p rad/m
+B. 10p rad/m
+C. 25p rad/m
+D. 50p rad/m
+E. 100p rad/m
+ANSWER: D
+27. Seutas kawat dengan massa per satuan panjang 5,00 × 10?² kg/m diberi tegangan 80,0 N. Cepat rambat gelombang pada kawat tersebut adalah...
+A. 4 m/s
+B. 16 m/s
+C. 40 m/s
+D. 400 m/s
+E. 1.600 m/s
+ANSWER: C
+28. Seutas tali yang kedua ujungnya terikat memiliki dua frekuensi resonansi berurutan, yaitu 252 Hz dan 336 Hz. Frekuensi nada dasar tali tersebut adalah...
+A. 42 Hz
+B. 84 Hz
+C. 126 Hz
+D. 168 Hz
+E. 252 Hz
+ANSWER: B
+29. Intensitas bunyi dari sebuah mesin di tempat pekerja adalah 2,0 × 10?7 W/m². Jika dua mesin identik beroperasi bersamaan pada jarak yang sama, taraf intensitas bunyi yang diterima pekerja adalah... (I0 = 10?¹² W/m², log 2 = 0,3)
+A. 50 dB
+B. 53 dB
+C. 56 dB
+D. 59 dB
+E. 106 dB
+ANSWER: C
+30. Sebuah sumber bunyi berfrekuensi 440 Hz dalam keadaan diam. Seorang pengamat mendekati sumber dengan laju 34 m/s. Jika laju bunyi di udara 340 m/s, frekuensi bunyi yang didengar pengamat adalah...
+A. 396 Hz
+B. 400 Hz
+C. 440 Hz
+D. 484 Hz
+E. 500 Hz
+ANSWER: D
+31. Pernyataan Hukum ke-Nol Termodinamika adalah...
+A. Kalor mengalir dari benda bersuhu tinggi ke benda bersuhu rendah
+B. Energi tidak dapat diciptakan maupun dimusnahkan
+C. Tidak ada mesin kalor yang efisiensinya 100%
+D. Jika dua benda masing-masing berada dalam kesetimbangan termal dengan benda ketiga, maka kedua benda itu berada dalam kesetimbangan termal satu sama lain
+E. Entropi sistem terisolasi selalu bertambah
+ANSWER: D
+32. Pada tekanan 1 atm, titik didih air dinyatakan pada skala Fahrenheit dan Reamur berturut-turut sebesar...
+A. 100 °F dan 80 °R
+B. 180 °F dan 80 °R
+C. 212 °F dan 100 °R
+D. 32 °F dan 0 °R
+E. 212 °F dan 80 °R
+ANSWER: E
+33. Pada termometer gas volume konstan, suhu ditentukan dengan mengukur perubahan...
+A. Volume gas
+B. Massa gas
+C. Panjang kolom raksa
+D. Tekanan gas
+E. Hambatan listrik logam
+ANSWER: D
+34. Dua batang berbahan berbeda memiliki panjang awal sama, lalu dipanaskan hingga kenaikan suhu yang sama. Batang yang pertambahan panjangnya lebih besar adalah batang yang...
+A. Koefisien muai panjangnya lebih besar
+B. Koefisien muai panjangnya lebih kecil
+C. Massa jenisnya lebih besar
+D. Kalor jenisnya lebih besar
+E. Massanya lebih besar
+ANSWER: A
+35. Menurut teori kinetik gas ideal, suhu mutlak gas berbanding lurus dengan...
+A. Massa total gas
+B. Volume wadah gas
+C. Jumlah molekul gas
+D. Massa satu molekul gas
+E. Energi kinetik rerata molekul-molekulnya
+ANSWER: E
+36. Sebuah superkonduktor YBa2Cu3O7 menjadi superkonduktif pada suhu 92 K. Suhu tersebut jika dinyatakan dalam skala Celsius adalah... (T = t + 273,15)
+A. -365,15 °C
+B. -181,15 °C
+C. -92 °C
+D. 181,15 °C
+E. 365,15 °C
+ANSWER: B
+37. Bejana kaca bervolume 1 liter diisi penuh alkohol pada suhu 10 °C. Jika suhu dinaikkan menjadi 30 °C, banyaknya alkohol yang tumpah adalah... (koefisien muai panjang kaca 9 × 10?6 /°C dan koefisien muai volume alkohol 1,1 × 10?³ /°C)
+A. 0,54 cm³
+B. 21,46 cm³
+C. 22,00 cm³
+D. 22,54 cm³
+E. 220 cm³
+ANSWER: B
+38. Gas dalam sebuah wadah bersuhu tetap memiliki volume 4 liter dan tekanan 1 atm. Jika gas dimampatkan hingga volumenya menjadi 1 liter pada suhu yang sama, tekanan gas menjadi...
+A. 0,25 atm
+B. 1 atm
+C. 4 atm
+D. 5 atm
+E. 16 atm
+ANSWER: C
+39. Sebuah termometer A menunjukkan -40 °A saat es mencair dan 160 °A saat air mendidih. Jika suhu 35 °C diukur dengan termometer tersebut, angka yang ditunjukkan adalah...
+A. 30 °A
+B. 35 °A
+C. 70 °A
+D. 95 °A
+E. 120 °A
+ANSWER: A
+40. Sebuah kawat tungsten memiliki koefisien suhu hambatan jenis 0,0045 /°C. Kawat dipanaskan dari suhu 20 °C. Agar hambatan jenisnya naik 4,5%, suhu kawat harus dinaikkan hingga...
+A. 21 °C
+B. 25 °C
+C. 30 °C
+D. 45 °C
+E. 65 °C
+ANSWER: C

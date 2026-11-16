@@ -1,0 +1,319 @@
+1. Dalam SI, massa jenis zat dinyatakan dengan satuan…
+A. kg/m²
+B. kg·m
+C. kg/m³
+D. N/m²
+E. m³/kg
+ANSWER: C
+
+2. Alat yang digunakan untuk mengukur massa jenis zat cair berdasarkan hukum Archimedes adalah…
+A. Hidrometer
+B. Anemometer
+C. Seismograf
+D. Dinamometer
+E. Spidometer
+ANSWER: A
+
+3. Zat cair naik pada pipa kapiler karena…
+A. Gaya gravitasi
+B. Tekanan atmosfer saja
+C. Kohesi lebih besar daripada adhesi
+D. Adhesi lebih besar daripada kohesi
+E. Massa jenis zat padat
+ANSWER: D
+
+4. Sebuah benda dapat mengapung di dalam fluida apabila…
+A. Massa jenis benda lebih besar daripada massa jenis fluida
+B. Massa jenis benda lebih kecil daripada massa jenis fluida
+C. Volume benda lebih kecil daripada volume fluida
+D. Massa benda lebih kecil daripada massa fluida
+E. Benda tidak dapat dimampatkan
+ANSWER: B
+
+5. Berikut ini yang BUKAN merupakan ciri fluida ideal adalah…
+A. Memiliki viskositas tinggi
+B. Tidak dapat dimampatkan
+C. Alirannya tunak (steady)
+D. Tidak kental
+E. Tidak mengalami turbulensi
+ANSWER: A
+
+6. Pada dongkrak hidrolik, gaya kecil pada penghisap kecil dapat mengangkat beban besar pada penghisap besar karena…
+A. Tekanan di penghisap besar lebih besar daripada di penghisap kecil
+B. Volume fluida bertambah saat ditekan
+C. Massa jenis fluida berubah saat ditekan
+D. Gaya apung membantu mengangkat beban
+E. Tekanan diteruskan sama besar ke segala arah, sehingga penghisap yang luasnya besar menghasilkan gaya besar
+ANSWER: E
+
+7. Penghisap kecil sebuah dongkrak hidrolik memiliki luas 10 cm² dan penghisap besar 500 cm². Jika pada penghisap kecil diberi gaya 20 N, gaya yang dihasilkan pada penghisap besar adalah…
+A. 200 N
+B. 500 N
+C. 800 N
+D. 1000 N
+E. 2000 N
+ANSWER: D
+
+8. Sebuah benda bervolume 2 × 10⁻⁴ m³ tercelup seluruhnya dalam air (ρ = 1000 kg/m³, g = 10 m/s²). Gaya apung yang dialami benda adalah…
+A. 2 N
+B. 20 N
+C. 200 N
+D. 2000 N
+E. 20.000 N
+ANSWER: A
+
+9. Sebuah pipa mengalirkan 0,6 m³ air dalam waktu 2 menit. Debit aliran air dalam pipa tersebut adalah…
+A. 2,5 × 10⁻³ m³/s
+B. 5 × 10⁻³ m³/s
+C. 1,2 × 10⁻² m³/s
+D. 0,3 m³/s
+E. 1,2 m³/s
+ANSWER: B
+
+10. Sebuah balok kayu mengapung di air dengan 20% volumenya muncul di atas permukaan air. Massa jenis kayu tersebut adalah… (ρ air = 1000 kg/m³)
+A. 500 kg/m³
+B. 600 kg/m³
+C. 700 kg/m³
+D. 800 kg/m³
+E. 1000 kg/m³
+ANSWER: D
+
+11. Hubungan antara frekuensi (f) dan periode (T) pada getaran adalah…
+A. f = T
+B. f = 1/T²
+C. f = 1/T
+D. f = 2πT
+E. f = T²
+ANSWER: C
+
+12. Resonansi terjadi apabila frekuensi gaya luar yang diberikan pada suatu sistem…
+A. Sama dengan frekuensi alami sistem
+B. Dua kali frekuensi alami sistem
+C. Setengah kali frekuensi alami sistem
+D. Sama dengan nol
+E. Tak hingga
+ANSWER: A
+
+13. Simpangan terbesar yang dicapai benda yang bergetar, diukur dari titik setimbang, disebut…
+A. Amplitudo
+B. Resonansi
+C. Redaman
+D. Panjang gelombang
+E. Titik simpul
+ANSWER: A
+
+14. Pada getaran harmonik sederhana, hubungan antara percepatan dan simpangan adalah…
+A. Percepatan sebanding dengan simpangan dan searah dengan simpangan
+B. Percepatan sebanding dengan kuadrat simpangan
+C. Percepatan konstan
+D. Percepatan sebanding dengan simpangan dan arahnya berlawanan
+E. Percepatan berbanding terbalik dengan simpangan
+ANSWER: D
+
+15. Jika amplitudo getaran harmonik pada sistem pegas dijadikan 2 kali semula, energi mekanik sistem menjadi…
+A. ½ kali semula
+B. Tetap
+C. 2 kali semula
+D. 4 kali semula
+E. 8 kali semula
+ANSWER: D
+
+16. Pernyataan yang benar tentang benda yang bergetar harmonik saat melewati titik setimbang adalah…
+A. Kecepatan nol dan percepatan maksimum
+B. Kecepatan dan percepatan sama-sama maksimum
+C. Kecepatan maksimum dan percepatan nol
+D. Kecepatan dan percepatan sama-sama nol
+E. Energi potensial maksimum dan energi kinetik nol
+ANSWER: C
+
+17. Pada sebuah sistem pegas, beban 0,25 kg berosilasi dengan frekuensi 2 Hz. Konstanta pegas sistem tersebut adalah… (π² = 10)
+A. 10 N/m
+B. 20 N/m
+C. 40 N/m
+D. 80 N/m
+E. 160 N/m
+ANSWER: C
+
+18. Sebuah benda bergetar harmonik dengan persamaan simpangan y = 4 sin(10πt) cm, dengan t dalam sekon. Simpangan benda pada saat t = 1/12 s adalah…
+A. 1 cm
+B. 2 cm
+C. 2√2 cm
+D. 2√3 cm
+E. 4 cm
+ANSWER: B
+
+19. Dua pegas dengan konstanta 100 N/m dan 300 N/m disusun paralel. Konstanta pegas pengganti adalah…
+A. 100 N/m
+B. 200 N/m
+C. 300 N/m
+D. 350 N/m
+E. 400 N/m
+ANSWER: E
+
+20. Sebuah pegas dengan konstanta 200 N/m digetarkan dengan amplitudo 0,1 m. Energi total sistem adalah…
+A. 1 J
+B. 2 J
+C. 10 J
+D. 20 J
+E. 100 J
+ANSWER: A
+
+21. Intensitas bunyi dinyatakan dalam satuan…
+A. Hz
+B. dB
+C. W/m²
+D. m/s
+E. N/m
+ANSWER: C
+
+22. Bunyi pantul yang terdengar setelah bunyi asli, karena bunyi dipantulkan oleh dinding yang jauh, disebut…
+A. Gema
+B. Layangan
+C. Difraksi
+D. Polarisasi
+E. Dispersi
+ANSWER: A
+
+23. Gelombang bunyi di udara termasuk gelombang…
+A. Transversal
+B. Longitudinal
+C. Gelombang cahaya
+D. Gelombang radio
+E. Gelombang gravitasi
+ANSWER: B
+
+24. Pada gelombang stasioner dengan ujung bebas, di titik pantul akan terbentuk…
+A. Perut
+B. Simpul
+C. Amplitudo nol
+D. Perubahan fase sebesar π
+E. Gelombang berjalan
+ANSWER: A
+
+25. Jika frekuensi sebuah gelombang dijadikan 2 kali semula pada medium yang sama, panjang gelombangnya menjadi…
+A. Setengah dari semula
+B. Sama dengan semula
+C. Dua kali semula
+D. Empat kali semula
+E. Seperempat dari semula
+ANSWER: A
+
+26. Pendengar bergerak mendekati sumber bunyi yang diam. Frekuensi bunyi yang didengar pendengar…
+A. Sama dengan frekuensi sumber
+B. Lebih rendah daripada frekuensi sumber
+C. Nol
+D. Selalu setengah frekuensi sumber
+E. Lebih tinggi daripada frekuensi sumber
+ANSWER: E
+
+27. Bunyi berfrekuensi 85 Hz merambat di udara (cepat rambat 340 m/s). Jarak antara satu rapatan dan satu renggangan yang berdekatan adalah…
+A. 1 m
+B. 2 m
+C. 4 m
+D. 8 m
+E. 85 m
+ANSWER: B
+
+28. Sebuah tali bermassa per satuan panjang 0,02 kg/m ditegangkan dengan gaya 32 N. Cepat rambat gelombang pada tali adalah…
+A. 5 m/s
+B. 10 m/s
+C. 25 m/s
+D. 40 m/s
+E. 50 m/s
+ANSWER: D
+
+29. Sebuah kapal mengirim pulsa sonar ke dasar laut dan menerima pantulannya 0,8 sekon kemudian. Jika cepat rambat bunyi di air laut 1.500 m/s, kedalaman laut tersebut adalah…
+A. 300 m
+B. 600 m
+C. 1.200 m
+D. 1.875 m
+E. 2.400 m
+ANSWER: B
+
+30. Taraf intensitas bunyi dari satu sumber adalah 40 dB. Agar taraf intensitas yang terdengar menjadi 60 dB, diperlukan sumber bunyi identik sebanyak…
+A. 20
+B. 50
+C. 100
+D. 200
+E. 500
+ANSWER: C
+
+31. Hubungan antara skala Kelvin (T) dan skala Celsius (t) adalah…
+A. T = t − 273,15
+B. T = (9/5)t + 32
+C. T = t + 273,15
+D. T = (5/4)t
+E. T = (4/5)t + 273,15
+ANSWER: C
+
+32. Titik didih air pada skala Fahrenheit, Reamur, dan Kelvin berturut-turut adalah…
+A. 180°F, 80°R, 373,15 K
+B. 212°F, 100°R, 373,15 K
+C. 212°F, 80°R, 373,15 K
+D. 212°F, 80°R, 273,15 K
+E. 100°F, 80°R, 373,15 K
+ANSWER: C
+
+33. Gas sejati berperilaku mendekati gas ideal pada kondisi…
+A. Suhu rendah dan tekanan tinggi
+B. Suhu rendah dan kerapatan rendah
+C. Suhu tinggi dan kerapatan tinggi
+D. Suhu mendekati nol mutlak
+E. Suhu tinggi dan kerapatan rendah
+ANSWER: E
+
+34. Termometer gas volume konstan dijadikan standar karena…
+A. Jenis gas apa pun memberi pembacaan yang menuju nilai yang sama ketika jumlah gas di dalam termometer diperkecil
+B. Gas tidak pernah memuai
+C. Hanya dapat mengukur suhu yang sangat rendah
+D. Tidak memerlukan titik tetap sama sekali
+E. Volumenya selalu berubah-ubah
+ANSWER: A
+
+35. Pada termometer gas volume konstan, besaran yang diukur untuk menentukan suhu adalah…
+A. Volume gas
+B. Massa gas
+C. Hambatan listrik
+D. Panjang kolom raksa
+E. Tekanan gas
+ANSWER: E
+
+36. Jika benda A dan benda B masing-masing berada dalam kesetimbangan termal dengan benda C, maka benda A dan benda B…
+A. Memiliki massa yang sama
+B. Memiliki volume yang sama
+C. Berada dalam kesetimbangan termal satu sama lain
+D. Mengalami perubahan wujud
+E. Bersuhu nol
+ANSWER: C
+
+37. Termometer A menunjukkan −40°A saat es mencair dan 160°A saat air mendidih. Suhu 35°C bila dibaca pada termometer A adalah…
+A. −5°A
+B. 10°A
+C. 30°A
+D. 70°A
+E. 110°A
+ANSWER: C
+
+38. Superkonduktor YBa₂Cu₃O₇ menjadi superkonduktif pada suhu 92 K. Suhu tersebut dalam skala Fahrenheit adalah…
+A. −326,07°F
+B. −294,07°F
+C. −181,15°F
+D. −92,00°F
+E. −32,00°F
+ANSWER: B
+
+39. Suhu suatu ruangan yang diukur dengan termometer Fahrenheit menunjukkan angka lima kali angka pada termometer Celsius. Angka yang ditunjukkan termometer Reamur pada suhu itu adalah…
+A. 8°R
+B. 10°R
+C. 16°R
+D. 32°R
+E. 40°R
+ANSWER: A
+
+40. Pada suhu berapakah termometer Reamur dan termometer Fahrenheit menunjukkan angka yang sama?
+A. −40°
+B. −32°
+C. −25,6°
+D. 0°
+E. 25,6°
+ANSWER: C

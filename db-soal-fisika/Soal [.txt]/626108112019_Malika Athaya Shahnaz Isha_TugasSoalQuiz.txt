@@ -1,0 +1,444 @@
+1. Sebuah tangki berisi air setinggi 1,2 m, dan di atas air terdapat lapisan minyak (massa jenis 800 kg/m³) setinggi 0,5 m. Tekanan hidrostatis pada dasar tangki adalah… (g = 10 m/s², massa jenis air 1000 kg/m³)
+A. 4,0 × 10³ Pa
+B. 1,2 × 10⁴ Pa
+C. 1,6 × 10⁴ Pa
+D. 1,7 × 10⁴ Pa
+E. 1,16 × 10⁵ Pa
+ANSWER: C
+
+2. Sebuah balok kayu bervolume 0,075 m³ dan bermassa jenis 640 kg/m³ terapung di air. Di atas balok diletakkan sebuah beban sehingga balok tepat tenggelam seluruhnya (permukaan atas balok sejajar permukaan air). Massa beban tersebut adalah… (massa jenis air 1000 kg/m³)
+A. 9 kg
+B. 21 kg
+C. 24 kg
+D. 27 kg
+E. 48 kg
+ANSWER: D
+
+3. Air mengalir melalui pipa yang naik dari penampang bawah ke penampang atas yang lebih sempit. Selisih tinggi kedua penampang 4 m. Di penampang bawah, laju air 2 m/s dan tekanannya 2,5 × 10⁵ Pa. Di penampang atas, laju air 4 m/s. Tekanan di penampang atas adalah… (g = 10 m/s², massa jenis air 1000 kg/m³)
+A. 2,04 × 10⁵ Pa
+B. 2,10 × 10⁵ Pa
+C. 2,44 × 10⁵ Pa
+D. 2,50 × 10⁵ Pa
+E. 2,96 × 10⁵ Pa
+ANSWER: A
+
+4. Sebuah pipa U berisi air. Pada salah satu kakinya dituangkan minyak hingga tinggi kolom minyak 18 cm. Pada keadaan setimbang, tinggi permukaan air di kaki yang lain diukur dari bidang batas minyak-air adalah 15,3 cm. Massa jenis minyak tersebut adalah…
+A. 765 kg/m³
+B. 850 kg/m³
+C. 900 kg/m³
+D. 1000 kg/m³
+E. 1176 kg/m³
+ANSWER: B
+
+5. Berikut pernyataan-pernyataan tentang barometer raksa sederhana:
+(1) Tekanan atmosfer di permukaan laut setara dengan kolom raksa setinggi sekitar 76 cm
+(2) Jika pipa barometer dimiringkan, tinggi vertikal kolom raksa menjadi lebih rendah
+(3) Jika barometer dibawa ke puncak gunung, tinggi kolom raksa bertambah
+(4) Ruang di atas kolom raksa pada pipa barometer hampa udara
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1), (2), dan (3)
+C. (2) dan (3)
+D. (1) dan (4)
+E. (3) dan (4)
+ANSWER: D
+
+6. Sebuah bola kecil jatuh di dalam fluida kental hingga mencapai kecepatan terminal:
+(1) Gaya hambat Stokes sebanding dengan kecepatan bola
+(2) Pada kecepatan terminal, berat bola sama dengan jumlah gaya apung dan gaya hambat
+(3) Kecepatan terminal makin besar jika viskositas fluida makin besar
+(4) Kecepatan terminal sebanding dengan jari-jari bola
+Pernyataan yang benar adalah…
+A. Hanya (1)
+B. (1) dan (2)
+C. (1) dan (3)
+D. (2), (3), dan (4)
+E. Semua benar
+ANSWER: B
+
+7. Berikut pernyataan-pernyataan tentang tegangan permukaan zat cair:
+(1) Tegangan permukaan timbul karena gaya kohesi antarmolekul di permukaan zat cair
+(2) Tegangan permukaan air berkurang jika air dipanaskan
+(3) Penambahan deterjen menaikkan tegangan permukaan air
+(4) Serangga dapat berjalan di atas air karena adanya tegangan permukaan
+Pernyataan yang benar adalah…
+A. (1), (2), dan (3)
+B. (1), (3), dan (4)
+C. (2), (3), dan (4)
+D. (1) dan (2)
+E. (1), (2), dan (4)
+ANSWER: E
+
+8. Sebuah batu tercelup seluruhnya di dalam air, digantung pada neraca pegas, lalu diturunkan perlahan ke tempat yang lebih dalam:
+(1) Gaya apung pada batu bertambah
+(2) Tekanan hidrostatis pada batu bertambah
+(3) Gaya apung pada batu tetap
+(4) Bacaan neraca pegas tetap
+Pernyataan yang benar adalah…
+A. (2), (3), dan (4)
+B. (1), (2), dan (3)
+C. (1) dan (4)
+D. Hanya (3)
+E. Semua benar
+ANSWER: A
+
+9. Berikut pernyataan-pernyataan tentang aliran fluida:
+(1) Fluida ideal masih memiliki viskositas yang kecil
+(2) Pada aliran tunak, pola aliran tidak berubah terhadap waktu
+(3) Persamaan Bernoulli berlaku sepanjang garis arus
+(4) Aliran turbulen merupakan syarat berlakunya persamaan Bernoulli
+Pernyataan yang benar adalah…
+A. Hanya (2)
+B. (1) dan (4)
+C. (2) dan (3)
+D. (3) dan (4)
+E. (1), (2), dan (3)
+ANSWER: C
+
+10. Berikut pernyataan-pernyataan tentang bendungan air:
+(1) Dinding dasar bendungan dibuat lebih tebal karena tekanan makin besar pada kedalaman yang lebih dalam
+(2) Tekanan pada dasar bendungan bergantung pada luas permukaan waduk
+(3) Pada kedalaman yang sama, tekanan hidrostatis ke segala arah sama besar
+(4) Gaya pada dinding bendungan sama besar di semua kedalaman
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1) dan (3)
+C. (2) dan (4)
+D. (2), (3), dan (4)
+E. Semua benar
+ANSWER: B
+
+11. Dua pegas dengan konstanta 60 N/m dan 120 N/m disusun seri, lalu ujung bawahnya digantungi beban 0,9 kg. Periode getaran sistem adalah…
+A. 0,06π s
+B. 0,1π s
+C. 0,2π s
+D. 0,24π s
+E. 0,3π s
+ANSWER: E
+
+12. Sebuah bandul sederhana dengan panjang tali 0,5 m berayun dengan simpangan kecil di dalam lift yang bergerak naik dengan percepatan 2,5 m/s². Periode ayunan bandul adalah… (g = 10 m/s²)
+A. 0,4π s
+B. 0,5π s
+C. 0,6π s
+D. 0,8π s
+E. 1,0π s
+ANSWER: A
+
+13. Sebuah balok 0,4 kg dihubungkan dengan pegas berkonstanta 250 N/m pada bidang datar licin. Pegas ditarik sejauh 8 cm lalu dilepas. Laju balok saat melewati titik setimbang adalah…
+A. 1,0 m/s
+B. 1,6 m/s
+C. 2,0 m/s
+D. 2,5 m/s
+E. 3,2 m/s
+ANSWER: C
+
+14. Simpangan sebuah benda yang bergetar harmonik dinyatakan y = 0,2 sin 10t (y dalam meter, t dalam sekon). Laju benda saat simpangannya 0,12 m adalah…
+A. 0,8 m/s
+B. 1,2 m/s
+C. 1,4 m/s
+D. 1,6 m/s
+E. 2,0 m/s
+ANSWER: D
+
+15. Sebuah benda bergetar harmonik dengan simpangan y = A sin ωt:
+(1) Kecepatan mendahului simpangan dengan beda fase 90°
+(2) Percepatan sefase dengan simpangan
+(3) Percepatan mendahului kecepatan dengan beda fase 90°
+(4) Saat simpangan nol, percepatan benda maksimum
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1) dan (4)
+C. (1) dan (3)
+D. (2) dan (4)
+E. (2), (3), dan (4)
+ANSWER: C
+
+16. Dua pegas identik berkonstanta k dirangkai dengan beban yang sama, sekali secara seri dan sekali secara paralel:
+(1) Konstanta efektif susunan paralel adalah 2k
+(2) Konstanta efektif susunan seri adalah 2k
+(3) Periode susunan paralel sama dengan periode pegas tunggal
+(4) Periode susunan seri adalah √2 kali periode pegas tunggal
+Pernyataan yang benar adalah…
+A. Hanya (1)
+B. (1) dan (3)
+C. (2) dan (3)
+D. (3) dan (4)
+E. (1) dan (4)
+ANSWER: E
+
+17. Sebuah bandul sederhana berayun dengan simpangan kecil:
+(1) Kecepatan bandul maksimum saat melewati titik terendah
+(2) Tegangan tali maksimum saat bandul melewati titik terendah
+(3) Gaya pemulih bandul maksimum di titik terendah
+(4) Jika panjang tali dijadikan empat kali semula, periode menjadi dua kali semula
+Pernyataan yang benar adalah…
+A. (1), (2), dan (4)
+B. (1), (3), dan (4)
+C. (2), (3), dan (4)
+D. (1) dan (2)
+E. Semua benar
+ANSWER: A
+
+18. Sebuah sistem massa-pegas bergetar dengan amplitudo A dan energi total E:
+(1) Saat simpangan A/2, energi potensial sama dengan setengah E
+(2) Saat simpangan A/2, energi kinetik sama dengan tiga perempat E
+(3) Energi kinetik sama dengan energi potensial saat simpangan A/√2
+(4) Jika amplitudo dijadikan dua kali, energi total menjadi empat kali
+Pernyataan yang benar adalah…
+A. (1), (2), dan (3)
+B. (1), (3), dan (4)
+C. (1) dan (4)
+D. (2), (3), dan (4)
+E. Semua benar
+ANSWER: D
+
+19. Berikut pernyataan-pernyataan tentang getaran teredam:
+(1) Pada redaman kritis, benda berosilasi dengan amplitudo konstan
+(2) Pada redaman kritis, benda kembali ke posisi setimbang secepat mungkin tanpa berosilasi
+(3) Peredam kejut kendaraan bekerja berdasarkan prinsip redaman
+(4) Pada resonansi, frekuensi gaya luar jauh lebih besar daripada frekuensi alami sistem
+Pernyataan yang benar adalah…
+A. (1) dan (3)
+B. (2) dan (3)
+C. (2) dan (4)
+D. (1) dan (4)
+E. (1), (2), dan (3)
+ANSWER: B
+
+20. Simpangan suatu getaran harmonik dinyatakan y = A sin(ωt + θ₀):
+(1) Fase getaran dinyatakan dalam satuan hertz
+(2) Kecepatan getaran dinyatakan v = Aω sin(ωt + θ₀)
+(3) Percepatan maksimum getaran bernilai Aω²
+(4) Frekuensi getaran sama dengan kebalikan periodenya
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1) dan (4)
+C. (3) dan (4)
+D. Hanya (3)
+E. (2), (3), dan (4)
+ANSWER: C
+
+21. Sebuah dawai gitar sepanjang 0,6 m bermassa 12 g ditegangkan dengan gaya 18 N. Frekuensi nada atas keempat dawai tersebut adalah…
+A. 25 Hz
+B. 50 Hz
+C. 75 Hz
+D. 100 Hz
+E. 125 Hz
+ANSWER: E
+
+22. Sebuah sumber bunyi berfrekuensi 800 Hz bergerak menjauhi pendengar dengan laju 60 m/s. Pendengar bergerak mendekati sumber dengan laju 17 m/s. Frekuensi yang didengar pendengar adalah… (cepat rambat bunyi di udara 340 m/s)
+A. 680 Hz
+B. 714 Hz
+C. 760 Hz
+D. 800 Hz
+E. 850 Hz
+ANSWER: B
+
+23. Intensitas bunyi di suatu titik adalah 8 × 10⁻⁷ W/m². Jika intensitas ambang pendengaran 10⁻¹² W/m² dan log 2 = 0,3, taraf intensitas bunyi di titik tersebut adalah…
+A. 59 dB
+B. 62 dB
+C. 64 dB
+D. 69 dB
+E. 80 dB
+ANSWER: A
+
+24. Sebuah garpu tala berfrekuensi 425 Hz digetarkan di atas tabung resonansi, sementara permukaan air di dalam tabung diturunkan perlahan. Resonansi kedua terjadi ketika panjang kolom udara sebesar… (cepat rambat bunyi di udara 340 m/s)
+A. 20 cm
+B. 40 cm
+C. 60 cm
+D. 80 cm
+E. 100 cm
+ANSWER: C
+
+25. Mengenai polarisasi dan jenis gelombang:
+(1) Polarisasi hanya dapat terjadi pada gelombang transversal
+(2) Gelombang pada tali dapat terpolarisasi
+(3) Gelombang bunyi di udara dapat terpolarisasi
+(4) Gelombang longitudinal memiliki bukit dan lembah
+Pernyataan yang benar adalah…
+A. Hanya (1)
+B. (1) dan (3)
+C. (2) dan (4)
+D. (3) dan (4)
+E. (1) dan (2)
+ANSWER: E
+
+26. Mengenai pemantulan dan pembiasan gelombang air:
+(1) Saat gelombang air merambat dari perairan dalam ke perairan dangkal, panjang gelombangnya memendek
+(2) Saat gelombang air masuk ke perairan dangkal, frekuensinya berkurang
+(3) Saat gelombang air masuk ke perairan dangkal, cepat rambatnya berkurang
+(4) Pada pemantulan, sudut datang sama dengan sudut pantul
+Pernyataan yang benar adalah…
+A. (1), (3), dan (4)
+B. (1), (2), dan (3)
+C. (2), (3), dan (4)
+D. (1) dan (4)
+E. Semua benar
+ANSWER: A
+
+27. Dua garpu tala berfrekuensi 400 Hz dan 404 Hz dibunyikan bersamaan:
+(1) Terdengar 8 pelayangan tiap sekon
+(2) Frekuensi pelayangan sama dengan selisih kedua frekuensi garpu tala
+(3) Frekuensi pelayangan sebesar 804 Hz
+(4) Periode pelayangan sebesar 0,25 s
+Pernyataan yang benar adalah…
+A. (1) dan (3)
+B. (1) dan (2)
+C. (3) dan (4)
+D. (2) dan (4)
+E. Hanya (4)
+ANSWER: D
+
+28. Berikut pernyataan-pernyataan tentang gelombang pada tali:
+(1) Cepat rambat gelombang bertambah jika tegangan tali bertambah
+(2) Cepat rambat gelombang bertambah jika massa per satuan panjang tali bertambah
+(3) Cepat rambat gelombang bergantung pada frekuensi sumber
+(4) Jika frekuensi sumber dinaikkan, panjang gelombang pada tali yang sama memendek
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1) dan (4)
+C. (2) dan (3)
+D. (3) dan (4)
+E. (1), (2), dan (3)
+ANSWER: B
+
+29. Berikut pernyataan-pernyataan tentang dawai yang kedua ujungnya terikat:
+(1) Frekuensi nada dasar dinyatakan f₁ = v/2L
+(2) Frekuensi nada atas pertama sama dengan 3 kali frekuensi nada dasar
+(3) Jika tegangan dawai dinaikkan, frekuensi nada dasar bertambah
+(4) Pada nada dasar terdapat dua perut
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (2) dan (4)
+C. (1) dan (3)
+D. (3) dan (4)
+E. Hanya (4)
+ANSWER: C
+
+30. Berikut pernyataan-pernyataan tentang bunyi:
+(1) Bunyi infrasonik memiliki frekuensi di bawah 20 Hz
+(2) Bunyi ultrasonik dimanfaatkan pada USG dan sonar
+(3) Cepat rambat bunyi paling besar pada medium gas
+(4) Cepat rambat bunyi di udara bertambah jika suhu udara naik
+Pernyataan yang benar adalah…
+A. (1), (2), dan (3)
+B. (1), (3), dan (4)
+C. (2), (3), dan (4)
+D. (1), (2), dan (4)
+E. Semua benar
+ANSWER: D
+
+31. Sebuah logam bermassa 0,6 kg bersuhu 100°C dimasukkan ke dalam 0,5 kg air bersuhu 20°C dalam wadah terisolasi (kapasitas kalor wadah diabaikan). Suhu akhir campuran 30°C. Kalor jenis logam tersebut adalah… (kalor jenis air 4200 J/kg°C)
+A. 250 J/kg°C
+B. 375 J/kg°C
+C. 420 J/kg°C
+D. 500 J/kg°C
+E. 840 J/kg°C
+ANSWER: D
+
+32. Kalor yang diperlukan untuk mengubah 200 g es bersuhu −10°C menjadi air bersuhu 20°C adalah… (kalor jenis es 2100 J/kg°C, kalor lebur es 3,36 × 10⁵ J/kg, kalor jenis air 4200 J/kg°C)
+A. 4,2 kJ
+B. 67,2 kJ
+C. 71,4 kJ
+D. 84,0 kJ
+E. 88,2 kJ
+ANSWER: E
+
+33. Sebuah batang logam berpenampang 5 cm² dan panjang 0,5 m dipakai menghubungkan dua tempat yang berbeda suhu 60°C. Konduktivitas termal logam 400 W/m°C. Laju perpindahan kalor melalui batang adalah…
+A. 12 W
+B. 24 W
+C. 48 W
+D. 120 W
+E. 2400 W
+ANSWER: B
+
+34. Berikut pernyataan-pernyataan tentang skala suhu:
+(1) Suhu 100°C sama dengan 80°R
+(2) Suhu 100°C sama dengan 212°F
+(3) Titik beku air pada skala Fahrenheit adalah 0°F
+(4) Suhu 50°C sama dengan 323 K
+Pernyataan yang benar adalah…
+A. (1), (2), dan (4)
+B. (1), (2), dan (3)
+C. (2), (3), dan (4)
+D. (1) dan (3)
+E. Semua benar
+ANSWER: A
+
+35. Berikut pernyataan-pernyataan tentang kalor jenis dan kapasitas kalor:
+(1) Kapasitas kalor suatu benda bergantung pada massanya
+(2) Kalor jenis suatu zat tidak bergantung pada massa zat
+(3) Kapasitas kalor sama dengan hasil kali massa dan kalor jenis
+(4) Satuan SI kalor jenis adalah J/K
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1), (2), dan (4)
+C. (2), (3), dan (4)
+D. (3) dan (4)
+E. (1), (2), dan (3)
+ANSWER: E
+
+36. Berikut pernyataan-pernyataan tentang perubahan wujud zat:
+(1) Menyublim adalah perubahan wujud padat menjadi gas secara langsung
+(2) Selama air mendidih, suhunya terus naik
+(3) Pada proses mengembun, zat melepaskan kalor
+(4) Kalor uap air lebih kecil daripada kalor lebur es
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1) dan (4)
+C. (1) dan (3)
+D. (2) dan (3)
+E. (3) dan (4)
+ANSWER: C
+
+37. Berikut pernyataan-pernyataan tentang pemuaian:
+(1) Bimetal melengkung ketika dipanaskan karena kedua logam penyusunnya memiliki koefisien muai berbeda
+(2) Bimetal melengkung ke arah logam yang koefisien muainya lebih besar
+(3) Bimetal dimanfaatkan pada termostat
+(4) Lubang pada pelat logam membesar ketika pelat dipanaskan
+Pernyataan yang benar adalah…
+A. (1), (2), dan (3)
+B. (1) dan (3)
+C. (2), (3), dan (4)
+D. (1), (3), dan (4)
+E. Semua benar
+ANSWER: D
+
+38. Berikut pernyataan-pernyataan tentang radiasi kalor:
+(1) Benda hitam sempurna menyerap radiasi paling baik
+(2) Benda hitam sempurna juga memancarkan radiasi paling baik
+(3) Laju kalor radiasi sebanding dengan suhu mutlak
+(4) Jika suhu mutlak benda dijadikan dua kali, laju radiasi menjadi enam belas kali
+Pernyataan yang benar adalah…
+A. (1), (2), dan (3)
+B. (1), (2), dan (4)
+C. (1), (3), dan (4)
+D. (2), (3), dan (4)
+E. Semua benar
+ANSWER: B
+
+39. Berikut pernyataan-pernyataan tentang konduksi kalor:
+(1) Laju konduksi sebanding dengan luas penampang penghantar
+(2) Laju konduksi berbanding terbalik dengan panjang penghantar
+(3) Logam penghantar kalor yang baik karena memiliki elektron bebas
+(4) Udara merupakan penghantar kalor yang baik
+Pernyataan yang benar adalah…
+A. (1) dan (2)
+B. (1) dan (3)
+C. (2) dan (4)
+D. (3) dan (4)
+E. (1), (2), dan (3)
+ANSWER: E
+
+40. Berikut pernyataan-pernyataan tentang asas Black:
+(1) Asas Black tetap berlaku walaupun sebagian kalor hilang ke lingkungan
+(2) Kalor yang dilepas benda bersuhu tinggi sama dengan kalor yang diterima benda bersuhu rendah
+(3) Jika tidak terjadi perubahan wujud, suhu akhir campuran berada di antara suhu awal kedua benda
+(4) Kalor yang diterima es yang sedang melebur menaikkan suhunya
+Pernyataan yang benar adalah…
+A. (2) dan (3)
+B. (1) dan (2)
+C. (1) dan (4)
+D. (3) dan (4)
+E. (1), (2), dan (3)
+ANSWER: A

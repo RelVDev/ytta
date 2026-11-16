@@ -1,0 +1,354 @@
+1. Sebuah tangki terbuka berisi minyak setinggi 2,5 m. Jika massa jenis minyak 800 kg/m^3 dan g = 10 m/s^2, tekanan hidrostatis pada dasar tangki adalah ... Pa.
+A. 1,0 x 10^4
+B. 2,0 x 10^4
+C. 2,5 x 10^4
+D. 8,0 x 10^4
+E. 2,0 x 10^5
+ANSWER: B
+
+2. Sebuah batu bervolume 0,002 m^3 dicelupkan seluruhnya ke dalam minyak yang massa jenisnya 800 kg/m^3. Jika g = 10 m/s^2, gaya Archimedes yang dialami batu adalah ... N.
+A. 4
+B. 8
+C. 12
+D. 16
+E. 20
+ANSWER: D
+
+3. Sebuah kran berdiameter 2 cm yang dipasang pada ketinggian 3 m di atas tanah mendapat pasokan air dengan pipa saluran berdiameter 4 cm. Ketika kran dibuka, air memancar dengan kecepatan 4 m/s. Jika massa jenis air = 1000 kg/m^3, tekanan udara = 1,01 x 10^5 Pa, dan g = 10 m/s^2, maka tekanan fluida dalam pipa di permukaan tanah sebesar ... x 10^5 Pa.
+A. 1,08
+B. 1,31
+C. 1,385
+D. 4,86
+E. 8,31
+ANSWER: C
+
+4. Pernyataan berikut ini tentang hukum Pascal dan sistem hidrolik.
+1) Tekanan yang diberikan pada fluida dalam ruang tertutup diteruskan sama besar ke segala arah.
+2) Pada dongkrak hidrolik, gaya yang dihasilkan pada penghisap besar lebih besar daripada gaya yang diberikan pada penghisap kecil.
+3) Pada sistem hidrolik yang setimbang, tekanan pada penghisap kecil sama dengan tekanan pada penghisap besar.
+4) Usaha yang dilakukan pada penghisap besar lebih besar daripada usaha yang dilakukan pada penghisap kecil.
+Pernyataan yang benar adalah ....
+A. 1), 2), dan 3) saja
+B. 1) dan 3) saja
+C. 2) dan 4) saja
+D. 4) saja
+E. 1), 2), 3), dan 4)
+ANSWER: A
+
+5. Dua buah bejana A dan B memiliki ukuran yang sama serta bentuk yang sama pula. Bejana A diisi dengan alkohol dan bejana B diisi dengan air. Massa jenis alkohol = 0,8 kali massa jenis air, sedangkan volume fluida di kedua bejana sama banyak. Jika tekanan di dasar bejana A = pA dan tekanan di dasar bejana B = pB, maka perbandingan pA : pB = ....
+A. 1 : 1
+B. 1 : 8
+C. 8 : 1
+D. 4 : 5
+E. 5 : 4
+ANSWER: D
+
+6. Selaput tipis zat cair dengan tegangan permukaan 0,04 N/m terbentang pada kawat berbentuk U yang dilengkapi kawat geser sepanjang 10 cm. Selaput memiliki dua permukaan (atas dan bawah). Gaya yang diperlukan untuk menahan kawat geser agar tidak tertarik selaput adalah ... N.
+A. 2,0 x 10^-3
+B. 4,0 x 10^-3
+C. 6,0 x 10^-3
+D. 7,0 x 10^-3
+E. 8,0 x 10^-3
+ANSWER: E
+
+7. Sepotong logam diukur beratnya dengan neraca pegas. Ketika tergantung di udara, skala pada neraca menunjukkan 4,0 N; dan ketika dicelupkan seluruhnya ke dalam air (massa jenis = 1 g/cm^3), skalanya menjadi 3,5 N. Jika dicelupkan seluruhnya di dalam minyak (massa jenis = 0,8 g/cm^3), maka skala neraca menunjuk angka ... N.
+A. 4,4
+B. 3,6
+C. 3,2
+D. 2,8
+E. 0,4
+ANSWER: B
+
+8. Persamaan kontinuitas untuk fluida ideal yang mengalir dalam pipa dengan luas penampang A1 dan A2 serta laju aliran v1 dan v2 dinyatakan oleh ....
+A. A1 + v1 = A2 + v2
+B. A1 v2 = A2 v1
+C. A1 v1 = A2 v2
+D. A1 v1^2 = A2 v2^2
+E. A1^2 v1 = A2^2 v2
+ANSWER: C
+
+9. Pernyataan berikut ini tentang fluida ideal yang mengalir dalam pipa mendatar yang menyempit.
+1) Pada bagian pipa yang menyempit, laju aliran fluida bertambah.
+2) Pada bagian pipa yang menyempit, tekanan fluida berkurang.
+3) Debit aliran fluida di bagian pipa yang lebar sama dengan debit di bagian pipa yang sempit.
+4) Makin besar laju aliran fluida, makin besar tekanannya.
+Pernyataan yang benar adalah ....
+A. 1), 2), dan 3) saja
+B. 1) dan 3) saja
+C. 2) dan 4) saja
+D. 4) saja
+E. 1), 2), 3), dan 4)
+ANSWER: A
+
+10. Sebuah dongkrak hidrolik bekerja berdasarkan prinsip yang menyatakan bahwa tekanan yang diberikan pada zat cair dalam ruang tertutup akan diteruskan ke segala arah dengan sama besar. Prinsip ini dikenal sebagai ....
+A. Hukum Archimedes
+B. Hukum Pascal
+C. Azas Bernoulli
+D. Hukum Boyle
+E. Hukum Stokes
+ANSWER: B
+
+11. Suatu partikel bergerak melingkar beraturan dengan laju konstan dalam lintasan lingkaran berjari-jari A. Proyeksi bayangan partikel tersebut pada salah satu diameter lingkaran akan membentuk gerak ....
+A. Lurus beraturan
+B. Lurus berubah beraturan
+C. Harmonik sederhana
+D. Parabola
+E. Melingkar berubah beraturan
+ANSWER: C
+
+12. Pada saat benda yang berosilasi harmonik sederhana melewati titik setimbangnya (x = 0), besaran yang bernilai nol adalah ....
+A. Kecepatan dan energi kinetik
+B. Percepatan dan energi potensial
+C. Kecepatan dan percepatan
+D. Energi total dan kecepatan
+E. Energi kinetik dan percepatan
+ANSWER: B
+
+13. Sebuah benda bermassa 2 kg terikat pada pegas dengan konstanta pegas k = 200 N/m dan berosilasi harmonik sederhana. Frekuensi sudut (ω) gerak benda tersebut adalah ....
+A. 5 rad/s
+B. 100 rad/s
+C. 20 rad/s
+D. 50 rad/s
+E. 10 rad/s
+ANSWER: E
+
+14. Sistem suspensi (shock absorber) pada mobil dirancang untuk meredam getaran pegas akibat jalan bergelombang agar cepat berhenti. Pada osilasi teredam seperti ini, besaran yang terus berkurang secara eksponensial terhadap waktu adalah ....
+A. Massa dan konstanta pegas
+B. Amplitudo dan energi mekanik
+C. Konstanta redaman dan gravitasi
+D. Panjang pegas dan massa kendaraan
+E. Koefisien gesek fluida
+ANSWER: B
+
+15. Sebuah pegas berkonstanta k = 150 N/m ditarik hingga menyimpang sejauh 4 cm dari titik kesetimbangannya. Besar energi potensial elastis yang tersimpan pada pegas saat simpangan tersebut adalah ....
+A. 0,06 J
+B. 0,70 J
+C. 0,24 J
+D. 0,30 J
+E. 0,12 J
+ANSWER: E
+
+16. Pada suatu sistem osilator harmonik teredam ringan dengan massa benda m, konstanta pegas k, dan konstanta redaman b, frekuensi sudut osilasi teredam (ω) akan bernilai ....
+A. Lebih besar daripada frekuensi sudut alami tanpa redaman
+B. Sama persis dengan frekuensi sudut alami tanpa redaman
+C. Lebih kecil daripada frekuensi sudut alami tanpa redaman
+D. Selalu bernilai nol sejak awal osilasi
+E. Tidak bergantung pada massa maupun konstanta pegas
+ANSWER: C
+
+17. Sebuah benda yang melakukan gerak harmonik sederhana memiliki persamaan simpangan y(t) = 0,08 sin(10t) dalam satuan SI. Kecepatan maksimum yang dapat dicapai oleh benda tersebut adalah ....
+A. 0,80 m/s
+B. 0,08 m/s
+C. 1,25 m/s
+D. 8,00 m/s
+E. 10,0 m/s
+ANSWER: A
+
+18. Perhatikan beberapa pernyataan mengenai karakteristik Gerak Harmonik Sederhana (GHS) berikut:
+(1) Gaya pemulih selalu berlawanan arah dengan arah perpindahan benda.
+(2) Percepatan benda mencapai nilai maksimum saat benda melewati titik kesetimbangan.
+(3) Kecepatan benda bernilai nol ketika benda berada pada titik balik (simpangan maksimum).
+(4) Periode osilasi sistem pegas-massa berbanding lurus dengan amplitudo getaran.
+Pernyataan yang benar adalah ....
+A. (1) dan (2)
+B. (2) dan (4)
+C. (1) dan (3)
+D. (1), (2), dan (3)
+E. (2), (3), dan (4)
+ANSWER: C
+
+19. Sebuah bandul sederhana dibawa ke sebuah planet yang memiliki percepatan gravitasi sebesar 1/9 kali percepatan gravitasi Bumi. Jika periode ayunan bandul di Bumi adalah T, maka periode ayunan bandul tersebut di planet itu menjadi ....
+A. 1/9 T
+B. 1/3 T
+C. T
+D. 3 T
+E. 9 T
+ANSWER: D
+
+20. Perhatikan pernyataan-pernyataan berikut terkait ayunan bandul sederhana dengan sudut simpangan kecil:
+(1) Memperbesar massa beban bandul akan memperbesar periode ayunan.
+(2) Memperpanjang tali bandul menjadi empat kali semula akan membuat periodenya menjadi dua kali semula.
+(3) Frekuensi ayunan bandul bergantung pada percepatan gravitasi setempat.
+(4) Jika sudut simpangan awal diperbesar secara ekstrem (tidak lagi kecil), gerakan bandul tetap periodik namun bukan lagi gerak harmonik sederhana.
+Pernyataan yang benar adalah ....
+A. (1) dan (2)
+B. (1) dan (3)
+C. (2) dan (4)
+D. (2), (3), dan (4)
+E. Semua pernyataan benar
+ANSWER: D
+
+21. Gelombang mekanik diklasifikasikan berdasarkan arah getar partikel medium terhadap arah rambat gelombangnya. Perhatikan pernyataan berikut mengenai gelombang transversal dan longitudinal:
+(1) Pada gelombang transversal, elemen medium bergetar tegak lurus terhadap arah rambat gelombang.
+(2) Gelombang bunyi di udara merupakan contoh gelombang transversal karena memiliki puncak dan lembah.
+(3) Pada gelombang longitudinal, bagian medium bergerak sejajar dengan arah rambat gelombang membentuk rapatan dan regangan.
+(4) Gelombang pada seutas tali yang digetarkan naik turun merupakan gelombang longitudinal.
+Pernyataan yang benar ditunjukkan oleh nomor ....
+A. (1) dan (2)
+B. (1) dan (3)
+C. (2) dan (4)
+D. (1), (2), dan (3)
+E. (2), (3), dan (4)
+ANSWER: B
+
+22. Dua gelombang harmonik identik merambat pada medium yang sama dan mengalami superposisi. Interferensi destruktif total yang membuat kedua gelombang saling meniadakan terjadi apabila beda fase kedua gelombang sebesar ....
+A. 0°
+B. 45°
+C. 90°
+D. 180°
+E. 360°
+ANSWER: D
+
+23. Sebuah sumber bunyi memancarkan gelombang secara merata ke segala arah. Jika jarak pengamat ke sumber bunyi dijauhkan menjadi 2 kali jarak semula, maka intensitas bunyi yang diterima pengamat menjadi ....
+A. 4 kali semula
+B. 2 kali semula
+C. Tetap sama
+D. 1/2 kali semula
+E. 1/4 kali semula
+ANSWER: E
+
+24. Seorang pesepeda melaju dengan kecepatan 17 m/s mendekati sebuah menara sirine pabrik yang diam dan berbunyi pada frekuensi 800 Hz. Jika cepat rambat bunyi di udara 340 m/s, frekuensi bunyi sirine yang didengar oleh pesepeda tersebut adalah ....
+A. 760 Hz
+B. 780 Hz
+C. 820 Hz
+D. 840 Hz
+E. 880 Hz
+ANSWER: D
+
+25. Perhatikan faktor-faktor berikut:
+(1) Rapat massa linear tali
+(2) Kuadrat frekuensi sudut gelombang
+(3) Kuadrat amplitudo getaran
+(4) Panjang total tali
+Berdasarkan persamaan daya gelombang mekanik, besaran yang memengaruhi daya rata-rata yang dirambatkan oleh tali pada kelajuan tetap adalah ....
+A. (1), (2), dan (3)
+B. (1) dan (3)
+C. (2) dan (4)
+D. (4) saja
+E. Semua benar
+ANSWER: A
+
+26. Peristiwa perubahan frekuensi bunyi yang dirasakan oleh pengamat karena sumber bunyi dan/atau pengamat bergerak relatif satu sama lain dikenal sebagai ....
+A. Efek Rumah Kaca
+B. Efek Fotolistrik
+C. Efek Doppler
+D. Efek Venturi
+E. Resonansi
+ANSWER: C
+
+27. Yang dimaksud dengan gelombang longitudinal adalah ....
+A. Gelombang yang arah getar partikel mediumnya tegak lurus arah rambatnya
+B. Gelombang yang hanya dapat merambat pada zat padat
+C. Gelombang yang arah getar partikel mediumnya sejajar dengan arah rambatnya membentuk rapatan dan regangan
+D. Gelombang yang memiliki amplitudo selalu nol
+E. Gelombang elektromagnetik yang merambat di ruang hampa
+ANSWER: C
+
+28. Apa yang dimaksud dengan sound level meter dalam pengukuran gelombang bunyi?
+A. Alat untuk mengukur cepat rambat gelombang pada tali
+B. Alat untuk mengukur taraf intensitas bunyi atau tingkat kebisingan dalam satuan desibel (dB)
+C. Alat untuk mengukur panjang gelombang cahaya
+D. Alat untuk mengubah energi bunyi menjadi energi panas
+E. Alat untuk mengukur tekanan udara dalam tabung tertutup
+ANSWER: B
+
+29. Petugas dinas lingkungan hidup mengukur tingkat kebisingan iring-iringan truk sound horeg yang melintas di jalan raya dalam satuan desibel (dB). Alat ukur yang digunakan oleh petugas tersebut adalah ....
+A. Barometer
+B. Higrometer
+C. Venturimeter
+D. Oscilloscope
+E. Sound level meter
+ANSWER: E
+
+30. Satu unit subwoofer sound horeg menghasilkan taraf intensitas bunyi sebesar 80 dB pada jarak tertentu. Apabila 10 unit subwoofer identik dibunyikan secara bersamaan pada jarak yang sama, maka taraf intensitas bunyi totalnya mencapai ....
+A. 81 dB
+B. 90 dB
+C. 100 dB
+D. 180 dB
+E. 800 dB
+ANSWER: B
+
+31. Secangkir kopi tubruk panas bersuhu 83 °C dibiarkan di atas meja warung yang bersuhu ruang 27 °C hingga lama-kelamaan suhu kopi turun dan sama persis dengan suhu ruangan. Keadaan ketika tidak ada lagi aliran kalor antara kopi dan udara ruangan karena suhunya sudah sama disebut ....
+A. Pemuaian termal
+B. Kapasitas kalor
+C. Konduksi termal
+D. Kesetimbangan termal
+E. Kalor laten
+ANSWER: D
+
+32. Saat seorang pendaki mengalami demam ringan di pos pendakian, termometer digital menunjukkan suhu tubuhnya sebesar 39 °C. Berdasarkan hubungan skala suhu mutlak pada materi, suhu tubuh pendaki tersebut dalam skala Kelvin adalah ....
+A. 234,15 K
+B. 296,15 K
+C. 312,15 K
+D. 310,15 K
+E. 339,15 K
+ANSWER: C
+
+33. Seorang pandai besi mengukur pijar logam keris di dalam tungku pembakaran bersuhu ekstrem menggunakan pirometer optik. Perhatikan beberapa pernyataan mengenai sifat termometrik pada pengukuran suhu berikut:
+(1) Sifat termometrik adalah sifat fisis zat yang berubah karena perubahan suhu.
+(2) Pemuaian volume zat cair, perubahan tekanan gas, dan perubahan hambatan listrik termasuk sifat termometrik.
+(3) Termometer gas volume konstan memanfaatkan perubahan volume gas pada tekanan tetap.
+(4) Hukum ke-Nol Termodinamika menjadi dasar prinsip kerja termometer dalam mencapai kesetimbangan termal.
+Pernyataan yang benar ditunjukkan oleh nomor ....
+A. (1) dan (2)
+B. (1), (2), dan (4)
+C. (1) dan (3)
+D. (2), (3), dan (4)
+E. Semua benar
+ANSWER: B
+
+34. Untuk mengukur suhu permukaan logam cair di pabrik pengecoran yang mencapai ribuan °C tanpa menyentuh logam secara langsung, jenis termometer yang paling tepat digunakan berdasarkan klasifikasi alat ukur suhu pada materi adalah ....
+A. Termometer alkohol
+B. Termometer air raksa
+C. Pirometer optik
+D. Termometer klinik digital
+E. Termometer badan raksa
+ANSWER: C
+
+35. Kawat platina (koefisien suhu hambatan jenis = 0,004 /°C) dipanaskan dari suhu 13 °C menjadi 38 °C. Persentase kenaikan hambatan jenisnya adalah ....
+A. 5 %
+B. 10 %
+C. 15 %
+D. 20 %
+E. 25 %
+ANSWER: B
+
+36. Gas ideal dalam sebuah silinder bervolume 6 liter dan bertekanan 2 atm ditekan perlahan pada suhu tetap hingga volumenya menjadi 4 liter. Tekanan akhir gas adalah ... atm.
+A. 0,67
+B. 1,33
+C. 2,0
+D. 2,5
+E. 3,0
+ANSWER: E
+
+37. Benda X dan Y masing-masing setimbang termal dengan benda Z yang bersuhu 37 °C. Menurut Hukum ke-Nol Termodinamika, jika benda X dan Y ditempelkan, maka ....
+A. Kalor mengalir dari X ke Y
+B. Kalor mengalir dari Y ke X
+C. X dan Y setimbang termal pada suhu 37 °C
+D. Suhu Z naik dua kali lipat
+E. Terjadi perubahan wujud zat
+ANSWER: C
+
+38. Skala suhu yang ditetapkan sebagai skala suhu mutlak dalam sistem internasional karena titik nolnya didasarkan pada nol mutlak adalah skala ....
+A. Celcius
+B. Reamur
+C. Fahrenheit
+D. Kelvin
+E. Rankine
+ANSWER: D
+
+39. Suhu 313,15 K jika dinyatakan dalam skala Fahrenheit adalah ... °F.
+A. 40
+B. 104
+C. 130
+D. 313
+E. 568
+ANSWER: B
+
+40. Sebanyak 150 g air bersuhu 83 °C dicampur dengan 450 g air bersuhu 23 °C dalam wadah yang terisolasi sempurna. Suhu akhir campuran adalah ... °C.
+A. 33
+B. 38
+C. 43
+D. 53
+E. 68
+ANSWER: B

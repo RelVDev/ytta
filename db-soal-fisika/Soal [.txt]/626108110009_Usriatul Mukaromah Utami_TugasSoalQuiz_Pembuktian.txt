@@ -1,0 +1,382 @@
+﻿SOAL DAN JAWABAN QUIZ FISIKA DASAR (DI1)
+    1. Massa jenis air yang digunakan dalam menentukan gravitasi khusus     dalam fluida adalah…
+    A. 100 kg/m^3
+    B. 1000 g/cm^3
+    C. 1000 kg/m^3
+    D. 100 g/cm^3
+    E. 1 kg/m^3
+
+    Answer: C
+
+    2. Sebuah wadah berisi minyak sebanyak 3 m^3 . Jika massa minyak   tersebut adalah 1.800 kg, berapakah massa jenis minyak tersebut…
+    A. 600 kg/m^3
+    B. 1.200 kg/m^3 
+    C. 800 kg/m^3
+    D. 1.600 kg/m^3 
+    E. 2.100 kg/m^3
+
+    Answer: A
+
+    3. Perhatikan faktor-faktor berikut:
+    1) Massa jenis fluida
+    2) Percepatan gravitasi
+    3) Kedalaman fluida
+    4) Luas penampang dasar wadah
+    5) Bentuk wadah
+Di antara faktor-faktor di atas, yang memengaruhi besarnya tekanan  hidrostatis adalah...
+    A. (1), (2), dan (3)
+    B. (1) dan (3)
+    C. (2) dan (4)
+    D. (4) saja
+    E. Semua benar
+
+    Answer: A
+
+    4. Ketika seseorang mendaki dari daerah dataran rendah menuju puncak   gunung yang tinggi, tekanan atmosfer yang dialaminya makin berkurang. Alasan utama terjadinya penurunan tekanan atmosfer tersebut adalah...
+    A. Kecepatan angin di puncak gunung selalu lebih lambat
+    B. Gaya gravitasi di puncak gunung bersifat nol
+    C. Kerapatan dan jumlah molekul udara di atas puncak gunung semakin sedikit
+    D. Massa jenis udara di puncak gunung menjadi lebih berat
+    E. Suhu di puncak gunung lebih dingin daripada di dataran rendah
+
+    Answer: C
+
+    5. Sebuah alat hidrolik memiliki luas penampang kecil 5 cm^2  dan luas penampang besar 100 cm^2. Jika gaya yang diberikan pada penampang kecil adalah sebesar 60 N, gaya yang dihasilkan pada penampang besar adalah...
+    A. 1.000 N
+    B. 1.600 N
+    C. 600 N
+    D. 900 N
+    E. 1.200 N
+
+    Answer: E
+
+    6. Sebuah benda melayang (seluruh bagian benda tercelup tetapi tidak tenggelam ke dasar) di dalam suatu fluida cair. Hal ini terjadi karena...
+    A. Gaya apung lebih kecil dari massa benda
+    B. Massa jenis benda sama dengan massa jenis fluida
+    C. Volume benda lebih besar dibandingkan volume fluida
+    D. Massa jenis benda lebih besar dibandingkan massa jenis fluida
+    E. Volume benda sama dengan volume fluida
+
+    Answer: B
+
+    7. Air mengalir melalui pipa mendatar yang memiliki diameter berbeda. Pada bagian pipa yang berpenampang besar, laju aliran air adalah v_1 . Ketika air memasuki bagian pipa yang dimaeternya lebih kecil, yang terjadi pada laju aliran air (v_2) adalah...
+    A. Laju aliran bertambah (v_2 > v_1)
+    B. Laju aliran berkurang (v_2 < v_1)
+    C. Laju aliran tetap (v_2 = v_1)
+    D. Laju aliran menjadi nol (v_2 = 0)
+    E. Laju aliran berbalik arah (v_2 = -v_1)
+
+    Answer: A
+
+    8. Air mengalir melalui pipa. Diameter penampang pertama 12 cm dengan kecepatan 4 m/s. Pipa tersebut menyempit hingga diameternya menjadi 6 cm. Kelajuan aliran air pada bagian pipa yang menyempit tersebut adalah...
+    A. 2 m/s
+    B. 4 m/s
+    C. 8 m/s
+    D. 16 m/s
+    E. 32 m/s
+
+    Answer: D
+
+    9. Di antara berabagi peralatan teknik di bawah ini, kelompok alat yang seluruhnya bekerja berdasarkan prinsip Hukum Pascal adalah..
+    A. Sayap pesawat terbang, semprotan parfum, dan venturimeter
+    B. Rem hidrolik, mesin pengangkat mobil di bengkel, dan dongkrak hidrolik
+    C. Pipet tetes, barometer, dan monometer
+    D. Kapal selam, balon udara, dan galangan kapal
+    E. Penyeimbang kapal, hydrometer, dan kincir angin
+
+    Answer: B
+
+    10. Jika jari-jari pembuluh dalam persamaan Poiseuille menjadi dua kali lipat, sedangkan faktor lainnya tetap, debit aliran menjadi...lipat
+    A. 2 kali
+    B. 4 kali
+    C. 8 kali
+    D. 16 kali
+    E. 32 kali
+
+    Answer: D
+
+    11. Perhatikan beberapa ciri utama berikut:
+    1) Adanya simpangan pada benda
+    2) Arah gaya yang berlawanan
+    3) Besarnya gaya sebanding dengan simpangan 
+    4) Arah benda sejajar dengan arah gaya
+    5) Benda berada tepat di titik setimbangnya
+Di antara beberapa ciri-ciri di atas, manakah ciri utama suatu benda yang dikatakan mengalami gaya pemulih pada pegas...
+    A. (1), (2), dan (3)
+    B. (2) dan (4)
+    C. (1) dan (3)
+    D. (4) saja
+    E. Semua benar
+
+    Answer: A
+
+    12. Sebuah benda mempunyai frekuensi sebesar 5 Hz. Besar periode dan frekuensi sudut tersebut berturut-turut adalah...
+    A. 0,5 s dan 10 π rad/s
+    B. 0,3 s dan 8 π rad/s
+    C. 0,8 s dan 12 π rad/s
+    D. 0,5 s dan 6 π rad/s
+    E. 0,2 s dan 10 π rad/s
+
+    Answer: E
+
+    13. Sebuah pedal bergerak harmonik sederhana pada pegas. Ketika benda melewati titik setimbang (x = 0), kondisi benda tersebut yang benar adalah..
+    A. Kecepatan nol dan percepatan maksimum
+    B. Kecepatan maksimum dan percepatan nol
+    C. Kecepatan nol dan percepatan menuju arah positif
+    D. Kecepatan nol dan percepatan menuju titik setimbang
+    E. Kecepatan dan percepatan sama-sama menuju arah negatif
+
+    Answer: B
+
+    14. Pegas dengan konstanta 100 N/m mengalami getaran dengan amplitudo 0,2 m. Berapakah energi mekanik total yang terjadi pada sistem pegas tersebut...
+    A. 2 J
+    B. 1 J
+    C. 0,5 J
+    D. 0,2 J
+    E. 0,1 J
+
+    Answer: A
+
+    15. Pegas vertikal dengan konstanta 400 N/m digantungi beban 2 kg. Jika gravitasi 10 m/s^2, berapa pertambahan panjang pegas saat mencapai keseimbangan...
+    A. 0,01 m
+    B. 0,02 m
+    C. 0,05 m
+    D. 0,25 m
+    E. 0,5 m
+
+    Answer: C
+
+    16. Sebuah bandul sederhana memiliki panjang tali 0,4 m. Jika percepatan gravitasi sebesar 10 m/s^2 , frekuensi sudut ayunan bandul tersebut adalah...
+    A. 0,5 rad/s
+    B. 0,1 rad/s
+    C. 1 rad/s
+    D. 2 rad/s
+    E. 5 rad/s
+
+    Answer: E
+
+    17. Pernyataan yang tepat menunjukkan perbedaan antara bandul fisis dan bandul puntir adalah...
+    A. Bandul fisis berasal dari puntiran kawat, sedangkan bandul puntir berasal dari gaya berat
+    B. Bandul fisis berasal dari gaya berat pada benda tegar, sedangkan bandul puntir berasal dari puntiran kawat
+    C. Keduanya memiliki torsi pemulih yang berasal dari gaya magnet
+    D. Keduanya memiliki torsi pemulih yang berasal dari gaya gesek
+    E. Bandul fisis tidak memiliki torsi pemulih, sedangkan bandul puntir berasal dari gaya gravitasi
+
+    Answer: B
+
+    18. Sebuah mobil berjalan melalui jalan bergelombang. Setelah melewati gundukan, pegas dan badan mobil mengalami getaran yang amplitudonya semakin lama semakin kecil. Peristiwa tersebut merupakan contoh penerapan...
+    A. Resonansi
+    B. Osilator harmonik
+    C. Osilasi teredam
+    D. Osilator terpaksa
+    E. Gerak melingkar beraturan
+
+    Answer: C
+
+    19. Sebuah mesin bergetar ketika sedang beroperasi karena adanya gaya periodik dari komponen yang bergerak di dalamnya. Jika gaya periodik tersebut dihentikan, apa yang kemungkinan terjadi pada getaran mesin?
+    A. Getaran akan terus meningkat tanpa batas
+    B. Getaran dapat berkurang akibat adanya gaya hambat
+    C. Frekuensi getaran selalu menjadi dua kali lipat
+    D. Mesin akan mengalami resonansi secara otomatis
+    E. Amplitudo  getaran akan selalu tetap
+
+    Answer: B
+
+    20. Berikut ini merupakan beberapa contoh penerapan resonansi pada beberapa benda, kecuali...
+    A. Ayunan yang didorong secara berkala
+    B. Badan gitar
+    C. Radio 
+    D. Jembatan yang mengalami getaran
+    E. Pemuaian kereta api akibat kenaikan suhu
+
+    Answer: E
+
+    21. Gelombang longitudinal merupakan gelombang yang arah getaran partikel mediumnya...
+    A. Sejajar dengan arah rambat gelombang
+    B. Berlawanan dengan arah rambat gelombang
+    C. Tegak lurus dengan arah rambat gelombang
+    D. Selalu membentuk sudut  derajat
+    E. Tidak memiliki getaran tertentu
+
+    Answer: A
+
+    22. Besaran yang menyatakan jarak yang ditempuh gelombang setiap satuan waktu adalah... dengan simbol...
+    A. Frekuensi (f)
+    B. Panjang gelombang (λ)
+    C. Periode (T)
+    D. Bilangan gelombang (k)
+    E. Cepat rambat gelombang (v)
+
+    Answer: E
+
+    23. Ketika dua gelombang air dengan amplitudo sama bertemu, puncak gelombang pertama bertemu dengan lembah gelombang kedua sehingga permukaan air sesaat tidak mengalami kenaikan maupun penurunan. Fenomena tersebut disebut...
+    A. Interferensi konstruktif
+    B. Interferensi destruktif
+    C. Difraksi gelombang
+    D. Resonansi gelombang
+    E. Interferensi parsial
+
+    Answer: B
+
+    24. Kecepatan rambat gelombang pada tali dipengaruhi oleh tegangan tali dan massa per satuan panjangnya. Jika massa per satuan panjangnya diperbesar serta tegangan talinya tetap, maka...
+    A. Kecepatan gelombang semakin besar
+    B. Kecepatan gelombang tetap
+    C. Kecepatan gelombang semakin kecil
+    D. Frekuensi gelombang menjadi nol
+    E. Panjang tali bertambah secara otomatis
+
+    Answer: C
+
+    25. Sebuah gelombang memiliki cepat rambat 2,4 m/s dan frekuensi sebesar 6 Hz. Berapakah panjang gelombang tersebut...
+    A. 2 m
+    B. 1 m
+    C. 0,6 m
+    D. 0,4 m
+    E. 0,2 m
+
+    Answer: D
+
+    26. Sebuah tali memiliki massa jenis linear μ = 0,05 kg/m dan diberi tegangan 20 N. Berapakah kecepatan gelombang pada tali tersebut...
+    A. 20 m/s
+    B. 15 m/s
+    C. 10 m/s
+    D. 5 m/s
+    E. 2 m/s
+
+    Answer: A
+
+    27. Dua gelombang merambat pada tali yang sama dengan tegangan dan  massa persatuan panjang yang tetap. Gelombang pertama memiliki amplitudo 0,25 m dan frekuensi 10 Hz, sedangkan gelombang kedua memiliki amplitudo 0,5 m dan frekuensi 10 Hz. Jika daya rata-rata gelombang pertama adalah 3 W, bagaimana perbandingan daya kedua gelombang tersebut...  
+    A. Daya gelombang kedua tetap 3 W karena frekuensinya tetap
+    B. Daya gelombang kedua menjadi 9 W karena amplitudonya meningkat dua  kali
+    C. Daya gelombang kedua menjadi 12 W karena amplitudonya meningkat dua kali
+    D. Daya gelombang kedua menjadi 15 W karena amplitudonya meningkat dua kali
+    E. Daya gelombang kedua menjadi 18 W karena amplitudonya meningkat dua kali
+
+    Answer: C
+  
+    28. Seutas tali dengan kedua ujung terikat memiliki panjang 1 m. Tali bergetar pada harmonik kedua dengan frekuensi 72 Hz. Berapakah frekuensi dasarnya...
+    A. 27 Hz
+    B. 36 Hz
+    C. 45 Hz
+    D. 54 Hz
+    E. 63 Hz
+
+    Answer: B
+
+    29. Sebuah ambulans ambulans membunyikan sirine dengan frekuensi 32 Hz. Ambulans bergerak dengan kecepatan 3,2 m/s, sedangkan pengamat diam. Cepat rambat bunyi di udara adalah 320 m/s. Ketika ambulans mendekati pengamat, frekuensi yang terdengar lebih tinggi dibandingkan ketika ambulans menjauhi pengamat. Apa penyebab utama perbedaan tersebut...
+    A. Gelombang bunyi menjadi lebih panjang ketika ambulans mendekati pengamat
+    B. Amplitudo gelombang selalu meningkat ketika sumber bunyi bergerak
+    C. Cepat rambat bunyi bertambah ketika ambulans mendekati pengamat
+    D. Frekuensi asli sirene berubah ketika ambulans bergerak
+    E. Jarak antarmuka gelombang menjadi lebih rapat saat sumber mendekati pengamat
+
+    Answer: E
+
+    30. Sebuah sumber bunyi menghasilkan intensitas sebesar 10^(-8) W/m^2. Kemudian, intensitas bunyi meningkat menjadi 10^(-5) W/m^2 . jika intensitas ambang pendengaran adalah 10^(-12)  W/m^2, bagaimana perubahan taraf intensitas tersebut...
+    A. Taraf intensitas tetap karena sumber bunyinya tidak berubah
+    B. Taraf intesitas meningkat sebesar 10 dB
+    C. Taraf intesitas meningkat sebesar 20 dB
+    D. Taraf intesitas meningkat sebesar 30 dB
+    E. Taraf intesitas meningkat sebesar 40 dB
+
+    Answer: D
+
+    31. Jika titik didih air pada skala Celcius adalah 100^oC, maka titik didih air pada skala Reamur adalah...
+    A. 100^oR
+    B. 80^oR
+    C. 212^oR
+    D. 373,15^oR
+    E. 671,67^oR
+  
+    Answer: B
+
+    32. Pada termometer gas volume konstan, besaran yang dipertahankan tetap selama pengukuran suhu adalah...
+    A. Massa jenis gas
+    B. Energi kinetik gas
+    C. Volume gas
+    D. Tekanan gas
+    E. Jumlah molekul yang bertumbukan
+
+    Answer: C
+
+    33. Jika benda A dan B masing-masing berada dalam kesetimbangan termal dengan benda C, maka A dan B sama-sama berada dalam kesetimbangan satu sama lain. Hal ini disebutkan dalam hukum...
+    A. Hukum ke-Nol Termodinamika
+    B. Hukum Pascal
+    C. Hukum Newton
+    D. Hukum Archimedes
+    E. Hukum Bernoulli
+
+    Answer: A
+
+    34. Ketika suhu suatu bahan meningkat, perubahan resistivitas benda yang terjadi akan berbeda-beda. Hal ini disebabkan oleh...
+    A. Resistivitas tidak dipengaruhi oleh suhu
+    B. Semua bahan memiliki massa yang berbeda
+    C. Resistivitas hanya berpengaruh pada panjang bahan
+    D. Setiap bahan memiliki koefisien suhu resistivitas yang berbeda-beda
+    E. Semua bahan mengalami penurunan resistivitas
+
+    Answer: D
+
+    35. Perhatikan faktor-faktor berikut:
+    1. Suhu sangat tinggi sehingga energi kinetik molekul besar
+    2. Adanya tekanan yang sangat tinggi
+    3. Kerapatan gas rendah sehingga jarak antarmolekul besar
+    4. Gas berat dan berukuran besar
+    5. Adanya gaya antar molekul yang kuat
+Di antara faktor berikut, faktor-faktor apa saja yang dapat membuat gas sejati dapat mendekati gas ideal...
+    A. (1), (2), dan (3)
+    B. (2) dan (4)
+    C. (1) dan (3)
+    D. (4) saja
+    E. Semua benar
+
+    Answer: C
+
+    36. Sebuah benda memiliki suhu C. Jika suhu tersebut diubah ke dalam skala Fahrenheit, suhu tersebut menjadi...
+    A. 92^oF
+    B. 86^oF
+    C. 73^oF
+    D. 65^oF
+    E. 50^oF
+
+    Answer: B
+
+    37. Sebuah batang logam memiliki panjang awal 2,5 m dan koefisien panjang 5 × 10^(-5 o) C^(-1). Jika suhunya meningkat sebesar 20^oC, pertambahan panjang tersebut adalah...
+    A. 0,5 mm
+    B. 1 mm
+    C. 1,5 mm
+    D. 2 mm
+    E. 2,5 mm
+
+    Answer: E
+
+    38. Sebanyak 1 mol gas ideal berada dalam wadah bervolume 0,04 m^3 pada suhu 400 K. Jika konstanta gas umum adalah 8,314 J/mol K, tekanan gas tersebut kira-kira adalah...
+    A. 63.140 Pa
+    B. 73.140 Pa
+    C. 83.140 pa
+    D. 93.140 Pa
+    E. 103.140 Pa
+
+    Answer: C
+
+    39. Dua kelompok gas berada pada suhu yang sama, tetapi memiliki perbedaan energi sebesar 0,02 eV. Ketika suhu gas diturunkan, perbandingan jumlah molekul pada tingkat energi yang lebih tinggi terhadap tingkat energi yang lebih rendah adalah...
+    A. Semakin kecil
+    B. Tetap sama
+    C. Semakin besar
+    D. Selalu menjadi nol
+    E. Tidak dapat berubah
+
+    Answer: A
+
+    40. Suatu gas sejati memiliki perilaku yang hampir sama dengan gas    ideal ketika koefisien virial pertamanya bernilai nol. Kondisi suhu tersebut dikenal sebagai...
+    A. Suhu kamar
+    B. Suhu tripel
+    C. Suhu mutlak
+    D. Suhu kritis
+    E. Suhu Boyle
+
+    Answer: E
+
+
+
+

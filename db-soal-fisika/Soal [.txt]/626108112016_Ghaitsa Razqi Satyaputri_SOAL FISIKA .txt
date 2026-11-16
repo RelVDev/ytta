@@ -1,0 +1,334 @@
+1.Sebuah balok kayu yang volumenya 10⁻³ m³ muncul 0,6 bagian ketika dimasukkan ke dalam air yang mempunyai massa jenis 10³ kg/m³. Jika g = 10 m/s², maka besar gaya ke atas yang dialami benda adalah ...
+A.4 N
+B.6 N
+C.0,4 N
+D.60 N
+E.0,6 N
+ANSWER: A
+
+2. Segumpal es dalam keadaan terapung di laut. Volume seluruhnya 4120 dm³. Massa jenis es = 0,9 kg/dm³ dan massa jenis air laut = 1,03 kg/dm³. Volume es yang menonjol di atas permukaan air laut adalah ...
+A.360 dm³
+B.450 dm³
+C.510 dm³
+D.250 dm³
+E.520 dm³
+ANSWER: D
+
+3.Sebuah bak diisi air setinggi 26 m. Di sisi bak dibuat satu buah lubang kecil yang berjarak 8 m dari dasar bak. Jarak horizontal yang dicapai air (x) adalah ....
+A.20 m
+B.16 m
+C.24 m
+D.4 m
+E.9 m
+ANSWER: C
+
+4. Saat kita menyiram tanaman dengan menggunakan selang dan jarak tanaman jauh dari ujung selang maka yang kita lakukan adalah memencet ujung selang supaya luas permukaan ujung selang menjadi semakin kecil. Asas yang terdapat pada aktivitas tersebut adalah...
+A. Asas mekanika
+B. Asas black
+C. Asas termodinamika
+D. Asas kontinuitas
+E. Asas elastisitas
+ANSWER: D
+
+5.Berikut adalah ciri-ciri fluida dinamis, kecuali....
+
+A. Fluida dianggap tidak kompresibel
+B. Tak bergantung waktu (tunak) artinya kecepatannya konstan pada titik tertentu dan membentuk aliran laminer
+C. Aliran fluida adalah aliran stasioner
+D. Fluida dianggap bergerak tanpa gesekan walaupun ada gerakan materi
+E. Aliran fluida dinamis
+ANSWER: E
+
+6.Air mengalir melalui sebuah pipa mendatar yang memiliki dua penampang berbeda. Pada penampang pertama, luas penampang A1 = 10 cm², dengan kecepatan aliran air v1 = 2 m/s, dan tekanan P1 = 40.000 Pa. Jika luas penampang kedua A2 = 5 cm², berapakah besar kecepatan aliran pada luas penampang 2?
+
+A.2 m/s
+B.6 m/s
+C.1 m/s
+D.4 m/s
+E.8 m/s
+ANSWER: D
+
+7. Sebuah balok kayu dimasukkan ke dalam air. Volume balok tersebut adalah 0,05 m³. Jika massa jenis air adalah 1.000 kg/m³ dan percepatan gravitasi Bumi g = 10 m/s², berapakah besar gaya ke atas (gaya Archimedes) yang dialami oleh balok tersebut jika balok tercelup seluruhnya di dalam air?
+A.500 N
+B.510 N
+C.550 N
+D.50 N
+E.5 N
+ANSWER: A
+
+8. Perhatikan pernyataan-pernyataan di bawah ini mengenai konsep tenggelam, melayang, dan terapung pada suatu benda di dalam zat cair:
+ 1.Benda dikatakan tenggelam jika massa jenis benda lebih kecil daripada massa jenis zat cair
+ 2.Benda dikatakan terapung jika sebagian benda berada di permukaan dan massa jenis benda lebih kecil daripada massa jenis zat cair
+ 3.Benda dikatakan melayang jika seluruh bagian benda berada di dalam zat cair dan massa jenis benda sama dengan massa jenis zat cair
+ 4.Benda dikatakan tenggelam jika gaya ke atas lebih besar daripada berat benda
+Pernyataan yang benar adalah...
+A. 1 dan 2
+B. 1 dan 4
+C. 2 dan 3
+D. 3 dan 4
+E. 2 dan 4
+ANSWER: C
+
+9. Sebuah bak diisi air setinggi 1 m. Di sisi bak dibuat satu buah lubang kecil yang berjarak 20 cm dari dasar bak. Kelajuan air yang keluar dari lubang tersebut adalah....
+A.6 m/s
+B.4 m/s
+C.1 m/s
+D.2 m/s
+E.8 m/s
+ANSWER: B
+
+10. Titik A dan B berada dalam air. Kedalaman titik A dan B dari permukaan air masing-masing 10 cm dan 40 cm. Perbandingan tekanan hidrostatis dititik A dan titik B adalah …
+A. 1 : 5
+B. 4 : 1
+C. 3 : 2
+D. 1 : 4
+E. 1 : 1
+ANSWER: D
+
+11. Apa yang menjadi karakteristik utama dari gaya pemulih (F) pada suatu sistem gerak harmonik sederhana?
+A. Berbanding lurus dengan kuadrat simpangannya dan searah dengan arah simpangan
+B. Berbanding lurus dengan simpangannya dan berlawanan arah dengan arah simpangan
+C. Berbanding terbalik dengan kecepatan benda dan searah dengan percepatan
+D. Konstan di setiap titik lintasan osilasi
+E. Berbanding terbalik dengan kecepatan benda dan percepatan
+ANSWER: B
+ 
+12. Simpangan maksimum (jarak terjauh dari titik setimbang) pada suatu benda yang berosilasi disebut...
+A. Panjang gelombang
+B. Amplitudo
+C. Frekuensi sudut
+D. Energi kinetik
+E. Jarak tempuh
+ANSWER: B
+
+13. Sebuah pegas bergetar harmonik sederhana dan melakukan 120 getaran dalam waktu 1 menit (60 detik). Berapakah frekuensi dan periode getaran pegas tersebut secara berturut-turut?
+A. 2 Hz dan 0,5 s
+B. 0,5 Hz dan 2 s
+C. 60 Hz dan 2 s
+D. 2 Hz dan 60 s
+E. 0,5 Hz dan 1 s
+ANSWER: A
+
+14. Persamaan simpangan suatu benda yang bergerak harmonik sederhana adalah y = 0,04 sin(20πt) dengan y dalam meter dan t dalam sekon. Berapakah frekuensi getaran benda tersebut?
+A. 30 Hz
+B. 5 Hz
+C. 20 Hz
+D. 40 Hz
+E. 10 Hz
+ANSWER: E
+
+15. Perhatikan faktor-faktor berikut:
+
+ 1.Amplitudo ayunan
+ 2.Panjang tali bandul
+ 3.Massa beban bandul
+ 4.Percepatan gravitasi bumi
+
+Faktor yang memengaruhi besar periode getaran pada bandul sederhana adalah...
+A. 1 dan 3
+B. 2 dan 3
+C. 1 dan 4
+D. 2 dan 4
+E. 1 dan 2
+ANSWER: D
+
+16. Sebuah pegas dengan konstanta pegas k = 4π² N/m diberi beban bermassa m = 1 kg. Frekuensi getaran sistem tersebut adalah...
+A. 0,5 Hz
+B. 3 Hz
+C. 2 Hz
+D. 4 Hz
+E. 1 Hz
+ANSWER: E
+
+17. Gerak bolak-balik melalui suatu titik setimbang secara teratur disebut juga sebagai...
+A. Gerak lurus beraturan
+B. Gerak melingkar beraturan
+C. Gerak harmonik sederhana
+D. Gerak jatuh bebas
+E. Gerak harmonik bebas
+ANSWER: C
+
+18.Jika suatu bandul sederhana memiliki periode (T) sebesar 2 sekon, berapakah frekuensi (f) dari getaran bandul tersebut?
+A. 0,2 Hz
+B. 0,5 Hz
+C. 2 Hz
+D. 4 Hz
+E. 3 Hz
+ANSWER: B
+
+ 19. Banyaknya getaran yang terjadi dalam waktu satu sekon disebut sebagai...
+A. Periode
+B. Konstanta
+C. Amplitudo
+D. Simpangan
+E. Frekuensi
+ANSWER: E
+
+20. Sebuah benda melakukan gerak harmonik sederhana dengan amplitudo 0,1 m dan kecepatan sudut ω = 10 rad/s. Berapakah besar kecepatan maksimum benda tersebut?
+A. 0,1 m/s
+B. 1,0 m/s
+C. 10,0 m/s
+D. 100,0 m/s
+E. 1,10 m/s
+ANSWER: B
+
+21. Gelombang yang di dalam perambatannya memerlukan medium perantara disebut sebagai...
+A. Gelombang elektromagnetik
+B. Gelombang stasioner
+C. Gelombang mekanik
+D. Gelombang transversal
+E. Gelombang berjalan
+ANSWER: C
+
+22. Gelombang transversal adalah gelombang yang arah getarnya...
+A. Searah dengan arah rambatannya
+B. Membentuk sudut 45° terhadap arah rambatan
+C. Tegak lurus dengan arah rambatannya
+D. Berputar mengelilingi arah rambatan
+E. Berlawanan arah dengan rambatannya
+ANSWER: C
+
+23. Gelombang longitudinal adalah gelombang yang arah getarnya...
+A. Tegak lurus dengan arah rambatannya
+B. Berlawanan arah dengan rambatannya
+C. Membentuk sudut 90° terhadap arah rambatan
+D. Sejajar atau berimpit dengan arah rambatannya
+E. Melingkar mengikuti arah rambatan
+ANSWER: D
+
+24. Jarak antara satu bukit gelombang dan satu lembah gelombang berurutan dalam gelombang transversal setara dengan...
+A. 1/4 panjang gelombang (1/4 λ)
+B. 1/2 panjang gelombang (1/2 λ)
+C. 1 panjang gelombang (λ)
+D. 3/4 panjang gelombang (3/4 λ)
+E. 2 panjang gelombang (2λ)
+ANSWER: B
+
+25. Sebuah gelombang merambat di permukaan air dengan kecepatan 12 m/s. Jika frekuensi gelombang tersebut adalah 4 Hz, berapakah panjang gelombangnya?
+A.2 m
+B.6 m
+C.3 m
+D.1 m
+E.8 m
+ANSWER: C
+
+26. Suatu gelombang merambat sejauh 20 meter dan membentuk 4 gelombang penuh. Berapakah panjang gelombang tersebut?
+A.2 m
+B.6 m
+C.5 m
+D.10 m
+E.80 m
+ANSWER: C
+
+27. Periode suatu gelombang adalah 0,25 sekon dan panjang gelombangnya adalah 2 meter. Cepat rambat gelombang tersebut adalah...
+A.0,5 m/s
+B.1,0 m/s
+C.2,0 m/s
+D.4,0 m/s
+E.8,0 m/s
+ANSWER: E
+
+28. Perbedaan mendasar antara gelombang stasioner ujung bebas dan gelombang stasioner ujung terikat terletak pada posisi titik pantulnya, yaitu...
+A. Pada ujung bebas terbentuk simpul, sedangkan pada ujung terikat terbentuk perut
+B. Pada ujung bebas terbentuk perut, sedangkan pada ujung terikat terbentuk simpul
+C. Pada ujung bebas tidak terjadi pemantulan gelombang, sedangkan pada ujung terikat terjadi pemantulan
+D. Pada ujung bebas amplitudo di setiap titik selalu sama, sedangkan pada ujung terikat berubah-ubah
+E. Pada ujung bebas terjadi perubahan fase sebesar λ, sedangkan pada ujung terikat tidak terjadi perubahan fase
+ANSWER: B
+
+29. Sebuah gelombang berjalan memiliki persamaan simpangan y = 0,05 sin λ(20t - 0,5x), dengan x dan y dalam meter serta t dalam sekon. Cepat rambat dan arah rambat gelombang tersebut adalah...
+A. 10 m/s ke arah sumbu x positif
+B. 20 m/s ke arah sumbu x negatif
+C. 40 m/s ke arah sumbu x positif
+D. 40 m/s ke arah sumbu x negatif
+E. 100 m/s ke arah sumbu x positif
+ANSWER: C
+
+30. Seutas tali yang panjangnya 1,5 m salah satu ujungnya diikatkan pada tiang dan ujung lainnya digetarkan terus-menerus sehingga membentuk gelombang stasioner dengan panjang gelombang 0,4 m. Letak simpul ke-3 diukur dari ujung terikat adalah...
+A. 0,2 m
+B. 0,4 m
+C. 0,6 m
+D. 0,8 m
+E. 1,0 m
+ANSWER: B
+
+31. Satuan Internasional (SI) untuk besaran suhu adalah...
+A. Celcius (°C)
+B. Reamur (°R)
+C. Fahrenheit (°F)
+D. Kelvin (K)
+E. Rankine (°Ra)
+ANSWER: D
+ 
+32. Suhu nol mutlak (0 K) adalah suhu terendah yang mungkin dicapai di alam semesta, di mana partikel-partikel zat berhenti bergerak. Jika dinyatakan dalam skala Celcius, suhu 0 K setara dengan...
+A. 0°C
+B. -100°C
+C. -273°C
+D. 100°C
+E. 273°C
+ANSWER: C
+
+33.Suhu sebuah ruangan tercatat sebesar 25 °C. Jika diukur menggunakan termometer skala Reamur, suhu ruangan tersebut adalah...
+A. 15°R
+B. 20°R
+C. 25°R
+D. 30°R
+E. 45°R
+ANSWER: B
+
+34. Suhu susu panas diukur sebesar 60°R. Berapakah suhu susu tersebut jika dinyatakan dalam skala Fahrenheit?
+A. 135°F
+B. 147°F
+C. 152°F
+D. 167°F
+E. 175°F
+ANSWER: D
+
+35. Suhu di dalam lemari pembeku (freezer) adalah −10 °C. Berapakah suhu tersebut jika diukur dengan termometer Fahrenheit?
+A. 10°F
+B. 14°F
+C. 18°F
+D. 22°F
+E. 50°F
+ANSWER: B
+
+36. Sebuah termometer X memiliki titik tetap bawah 20°X dan titik tetap atas 120°X. Jika suatu benda diukur dengan termometer Celcius menunjukkan suhu 50°C, berapakah angka yang ditunjukkan oleh termometer X?
+A. 50°X
+B. 60°X
+C. 70°X
+D. 80°X
+E. 90°X
+ANSWER: C
+
+37.Alat yang digunakan untuk mengukur suhu suatu benda secara tepat adalah...
+A. Barometer
+B. Manometer
+C. Termometer
+D. Kalorimeter
+E. Higrometer
+ANSWER: C
+
+38. Prinsip kerja sebagian besar termometer zat cair (seperti termometer raksa dan alkohol) didasarkan pada sifat fisis zat, yaitu...
+
+A. Perubahan massa jenis zat akibat tekanan udara
+B. Pemuaian dan penyusutan volume zat cair akibat perubahan suhu
+C. Perubahan warna zat cair saat menyerap kalor
+D. Perubahan wujud zat cair menjadi gas pada titik didihnya
+E. Daya hantar listrik zat cair saat dipanaskan
+ANSWER: B
+
+39. Berikut ini merupakan keunggulan air raksa dibandingkan alkohol sebagai bahan pengisi termometer, kecuali...
+A. Warnanya mengilap sehingga mudah dilihat
+B. Tidak membasahi dinding kaca
+C. Pemuaiannya sangat teratur terhadap kenaikan suhu
+D. Dapat mengukur suhu yang sangat rendah hingga -100°C
+E. Cepat menyesuaikan suhu dengan benda yang diukur
+ANSWER: D
+
+40. Perbandingan jumlah skala antara titik tetap bawah dan titik tetap atas untuk termometer Celcius : Reamur : Fahrenheit : Kelvin secara berturut-turut adalah...
+A. 100 : 80 : 180 : 100
+B. 100: 80 : 212 : 273
+C. 100 : 100 : 180 : 100
+D. 80 : 100 : 180 : 273
+E. 100 : 80 : 100 : 180
+ANSWER: A

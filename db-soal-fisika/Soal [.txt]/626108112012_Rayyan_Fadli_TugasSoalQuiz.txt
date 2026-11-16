@@ -1,0 +1,326 @@
+TUGAS PEMBUATAN SOAL QUIZ FISIKA DASAR
+Nama    : Rayyan Fadli
+NIM     : 626108112012
+Kelas   : Fisika Dasar DI1
+Prodi   : Sistem Informasi
+
+
+1. Manakah pernyataan yang paling tepat mengenai fluida?
+A. Zat yang selalu memiliki bentuk tetap
+B. Zat yang dapat mengalir dan bentuknya mengikuti wadah tempat zat tersebut berada
+C. Zat yang tidak memiliki massa
+D. Zat yang hanya dapat berwujud gas
+E. Zat yang volumenya selalu berubah
+ANSWER: B
+
+2. Besaran yang menyatakan massa suatu zat per satuan volume disebut ....
+A. Tekanan
+B. Berat
+C. Massa jenis
+D. Viskositas
+E. Tegangan permukaan
+ANSWER: C
+
+3. Mengapa tekanan hidrostatis semakin besar ketika seseorang menyelam semakin dalam?
+A. Karena massa jenis air selalu bertambah
+B. Karena kedalaman fluida yang berada di atas penyelam semakin besar
+C. Karena gaya gravitasi semakin kecil
+D. Karena luas tubuh penyelam semakin besar
+E. Karena tekanan atmosfer menjadi nol
+ANSWER: B
+
+4. Sebuah benda berada pada kedalaman 2 m di dalam air. Jika massa jenis air 1.000 kg/m³ dan g = 10 m/s², tekanan hidrostatisnya adalah ....
+A. 2.000 Pa
+B. 5.000 Pa
+C. 10.000 Pa
+D. 20.000 Pa
+E. 200.000 Pa
+ANSWER: D
+
+5. Dongkrak hidrolik dapat mengangkat beban berat dengan gaya yang relatif kecil karena menerapkan ....
+A. Hukum Newton
+B. Prinsip Pascal
+C. Prinsip Archimedes
+D. Hukum Hooke
+E. Efek Doppler
+ANSWER: B
+
+6. Sebuah benda dicelupkan seluruhnya ke dalam air. Gaya apung yang dialami benda sama dengan ....
+A. Berat benda di udara
+B. Massa benda
+C. Berat air yang dipindahkan
+D. Volume benda dikali gravitasi
+E. Tekanan atmosfer dikali massa benda
+ANSWER: C
+
+7. Air mengalir melalui pipa. Luas penampang pertama 4 cm² dan penampang kedua 2 cm². Jika kecepatan air di penampang pertama 3 m/s, kecepatan di penampang kedua adalah ....
+A. 1,5 m/s
+B. 3 m/s
+C. 4,5 m/s
+D. 6 m/s
+E. 12 m/s
+ANSWER: D
+
+8. Pada aliran fluida ideal dengan ketinggian yang sama, ketika kecepatan aliran meningkat, tekanan fluida cenderung ....
+A. Meningkat
+B. Menurun
+C. Tetap nol
+D. Berubah menjadi gaya apung
+E. Tidak dapat ditentukan sama sekali
+ANSWER: B
+
+9. Ketika madu dan air dituangkan melalui wadah yang sama, madu cenderung mengalir lebih lambat dibandingkan air. Sifat fluida yang menyebabkan perbedaan tersebut adalah ....
+A. Massa jenis
+B. Tekanan hidrostatis
+C. Viskositas
+D. Tegangan permukaan
+E. Gaya apung
+ANSWER: C
+
+10. Serangga kecil dapat berdiri di atas permukaan air karena adanya ....
+A. Tekanan hidrostatis
+B. Gaya gravitasi
+C. Tegangan permukaan
+D. Prinsip Pascal
+E. Persamaan kontinuitas
+ANSWER: C
+
+11. Gerak harmonik sederhana adalah gerak bolak-balik yang ....
+A. Kecepatannya selalu tetap
+B. Gaya pemulihnya sebanding dengan simpangan dan berlawanan arah
+C. Percepatannya selalu nol
+D. Lintasannya selalu berbentuk lingkaran
+E. Tidak memiliki titik setimbang
+ANSWER: B
+
+12. Pada sistem pegas, simbol k pada hukum Hooke menyatakan ....
+A. Massa benda
+B. Amplitudo
+C. Konstanta pegas
+D. Frekuensi
+E. Periode
+ANSWER: C
+
+13. Simpangan maksimum suatu benda yang berosilasi dari titik setimbang disebut ....
+A. Periode
+B. Frekuensi
+C. Amplitudo
+D. Fase
+E. Frekuensi sudut
+ANSWER: C
+
+14. Jika frekuensi suatu osilasi semakin besar, maka periodenya akan ....
+A. Semakin besar
+B. Semakin kecil
+C. Tetap selalu 1 sekon
+D. Menjadi nol
+E. Tidak berhubungan
+ANSWER: B
+
+15. Sebuah benda melakukan 20 getaran dalam waktu 10 sekon. Frekuensi getarannya adalah ....
+A. 0,5 Hz
+B. 1 Hz
+C. 2 Hz
+D. 10 Hz
+E. 20 Hz
+ANSWER: C
+
+16. Pada gerak harmonik sederhana ideal tanpa redaman, energi mekanik total ....
+A. Selalu bertambah
+B. Selalu berkurang
+C. Tetap, karena energi kinetik dan energi potensial saling berubah bentuk
+D. Hanya berupa energi kinetik
+E. Hanya berupa energi potensial
+ANSWER: C
+
+17. Jika massa beban pada pegas diperbesar sedangkan konstanta pegas tetap, periode osilasi akan ....
+A. Berkurang
+B. Bertambah
+C. Tetap
+D. Menjadi nol
+E. Tidak terdefinisi
+ANSWER: B
+
+18. Untuk bandul sederhana dengan simpangan kecil, jika panjang tali diperbesar maka periode ayunannya ....
+A. Semakin kecil
+B. Semakin besar
+C. Tetap
+D. Selalu menjadi 2 sekon
+E. Tidak dipengaruhi panjang tali
+ANSWER: B
+
+19. Amplitudo osilasi yang semakin lama semakin kecil akibat adanya gaya hambat menunjukkan ....
+A. Osilasi terpaksa
+B. Resonansi
+C. Osilasi teredam
+D. Interferensi
+E. Gerak melingkar beraturan
+ANSWER: C
+
+20. Resonansi pada suatu sistem dapat terjadi ketika frekuensi gaya pemaksa ....
+A. Jauh lebih kecil dari frekuensi alami
+B. Sama atau sangat dekat dengan frekuensi alami sistem
+C. Selalu sama dengan nol
+D. Tidak memiliki hubungan dengan sistem
+E. Sama dengan amplitudo
+ANSWER: B
+
+21. Gelombang mekanik adalah gelombang yang ....
+A. Dapat merambat tanpa medium
+B. Memerlukan medium untuk merambat
+C. Hanya dapat merambat di ruang hampa
+D. Tidak membawa energi
+E. Selalu berupa gelombang cahaya
+ANSWER: B
+
+22. Pada gelombang transversal, arah getaran partikel medium ....
+A. Sejajar dengan arah rambat
+B. Tegak lurus dengan arah rambat
+C. Selalu berlawanan arah rambat
+D. Tidak memiliki arah
+E. Melingkar mengikuti sumber
+ANSWER: B
+
+23. Contoh gelombang longitudinal adalah ....
+A. Gelombang pada tali
+B. Gelombang cahaya
+C. Gelombang bunyi di udara
+D. Gelombang elektromagnetik
+E. Gelombang pada permukaan tali yang digetarkan ke atas-bawah
+ANSWER: C
+
+24. Panjang gelombang adalah ....
+A. Waktu untuk satu getaran
+B. Jumlah getaran tiap sekon
+C. Jarak antara dua titik berurutan yang sefase
+D. Simpangan maksimum gelombang
+E. Kecepatan maksimum partikel medium
+ANSWER: C
+
+25. Gelombang memiliki frekuensi 5 Hz dan panjang gelombang 2 m. Cepat rambat gelombangnya adalah ....
+A. 2,5 m/s
+B. 5 m/s
+C. 7 m/s
+D. 10 m/s
+E. 20 m/s
+ANSWER: D
+
+26. Gelombang merambat dari medium A ke medium B dengan frekuensi tetap. Jika panjang gelombang di medium B menjadi dua kali panjang gelombang di medium A, maka cepat rambat gelombang di medium B adalah ....
+A. Setengah kali cepat rambat di medium A
+B. Dua kali cepat rambat di medium A
+C. Empat kali cepat rambat di medium A
+D. Sama dengan cepat rambat di medium A
+E. Nol
+ANSWER: B
+
+27. Interferensi konstruktif terjadi ketika dua gelombang koheren bertemu dengan beda fase ....
+A. 0° atau kelipatan 360°
+B. 90°
+C. 180°
+D. 270°
+E. 45°
+ANSWER: A
+
+28. Gelombang berdiri pada tali dengan kedua ujung terikat terbentuk akibat ....
+A. Satu gelombang merambat tanpa pantulan
+B. Perpaduan gelombang datang dan gelombang pantul
+C. Perubahan suhu tali
+D. Gaya apung pada tali
+E. Perambatan bunyi di udara
+ANSWER: B
+
+29. Pada gelombang bunyi yang merambat di udara, partikel udara bergetar ....
+A. Tegak lurus terhadap arah rambat bunyi
+B. Sejajar dengan arah rambat bunyi
+C. Membentuk lintasan melingkar
+D. Tanpa mengalami perpindahan posisi sama sekali
+E. Selalu searah dengan gerak sumber bunyi
+ANSWER: B
+
+30. Efek Doppler adalah peristiwa ....
+A. Perubahan amplitudo karena redaman
+B. Perubahan frekuensi yang didengar akibat gerak relatif sumber dan pengamat
+C. Pemantulan gelombang pada ujung tali
+D. Perubahan panjang gelombang karena suhu saja
+E. Penggabungan dua gelombang menjadi gelombang berdiri
+ANSWER: B
+
+31. Suhu suatu benda secara mikroskopis berkaitan dengan ....
+A. Jumlah seluruh atom benda
+B. Energi kinetik rata-rata gerak tidak teratur partikel
+C. Berat benda
+D. Volume wadah
+E. Tekanan atmosfer saja
+ANSWER: B
+
+32. Alat yang digunakan untuk mengukur suhu disebut ....
+A. Barometer
+B. Manometer
+C. Termometer
+D. Higrometer
+E. Dinamometer
+ANSWER: C
+
+33. Dua benda dikatakan berada dalam kesetimbangan termal apabila ....
+A. Massanya sama
+B. Volumenya sama
+C. Suhunya sama sehingga tidak ada aliran kalor bersih di antara keduanya
+D. Warnanya sama
+E. Keduanya berada di ruang hampa
+ANSWER: C
+
+34. Hukum Ke-Nol Termodinamika menyatakan bahwa jika benda A dan B masing-masing berada dalam kesetimbangan termal dengan benda C, maka ....
+A. A dan B pasti memiliki massa sama
+B. A dan B berada dalam kesetimbangan termal satu sama lain
+C. A lebih panas daripada B
+D. C tidak memiliki suhu
+E. A dan B harus berwujud gas
+ANSWER: B
+
+35. Suhu 27°C jika dinyatakan dalam Kelvin dan dibulatkan ke bilangan bulat terdekat adalah ....
+A. 200 K
+B. 246 K
+C. 273 K
+D. 300 K
+E. 327 K
+ANSWER: D
+
+36. Suhu 20°C setara dengan .... °F.
+A. 20°F
+B. 36°F
+C. 50°F
+D. 68°F
+E. 80°F
+ANSWER: D
+
+37. Ketika batang logam dipanaskan, panjangnya umumnya bertambah. Peristiwa ini disebut ....
+A. Pemantulan
+B. Pemuaian
+C. Pengembunan
+D. Konduksi listrik
+E. Resonansi
+ANSWER: B
+
+38. Pada termometer gas volume konstan, besaran yang diamati untuk menentukan perubahan suhu adalah ....
+A. Perubahan warna gas
+B. Perubahan tekanan gas
+C. Perubahan massa gas
+D. Perubahan jenis gas
+E. Perubahan bentuk wadah
+ANSWER: B
+
+39. Suhu 40°C jika dinyatakan dalam skala Reaumur adalah ....
+A. 16°R
+B. 24°R
+C. 32°R
+D. 40°R
+E. 50°R
+ANSWER: C
+
+40. Titik tripel air merupakan keadaan ketika ....
+A. Air hanya berada dalam fase cair
+B. Es, air, dan uap air berada dalam kesetimbangan
+C. Air mencapai suhu 100°C
+D. Air berubah seluruhnya menjadi uap
+E. Tekanan air sama dengan tekanan atmosfer
+ANSWER: B
